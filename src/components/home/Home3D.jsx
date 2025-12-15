@@ -10,7 +10,6 @@ import {
   ToneMapping,
 } from "@react-three/postprocessing";
 import "./home3d.css";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 function Cyl() {
@@ -35,6 +34,7 @@ function Cyl() {
 
 export default function Home3D() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const textRef = useRef(null);
   const textEl = textRef.current;
 
   useEffect(() => {
@@ -50,27 +50,30 @@ export default function Home3D() {
 
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
-  // useGSAP(() => {
 
-  //   // Duplicate the text for infinite loop
-  //   const textContent = textEl.innerText;
-  //   textEl.innerHTML = `${textContent} ${textContent}`;
+  useEffect(() => {
+    const textEl = textRef.current;
+    if (!textEl) return;
 
-  //   // Get width of the text
-  //   const width = textEl.scrollWidth / 2;
+    // Duplicate text for seamless loop
+    const textContent = textEl.innerText;
+    textEl.innerHTML = `${textContent} — ${textContent}`;
 
-  //   // GSAP animation
-  //   gsap.fromTo(
-  //     textEl,
-  //     { x: 0 },
-  //     {
-  //       x: -width,
-  //       duration: 15,       // speed: higher = slower
-  //       ease: "linear",
-  //       repeat: -1,         // infinite
-  //     }
-  //   );
-  // }, []);
+    const width = textEl.scrollWidth / 2; // width of one copy
+
+    // Animate with GSAP
+    gsap.fromTo(
+      textEl,
+      { x: 0 },
+      {
+        x: "-100%",
+        duration: 100,  // adjust speed
+        ease: "linear",
+        repeat: -1,    // infinite
+        yoyo:true
+      }
+    );
+  }, []);
   return (
     <>
       <section className="Home3D-section">
@@ -90,7 +93,7 @@ export default function Home3D() {
         </Canvas>
       </section>
       <div className="home3d-text-container">
-        <h1 className="home3d-text-heading">
+        <h1 ref={textRef} className="home3d-text-heading">
           At Adclan, we craft bold digital experiences that blend creativity
           with strategy. From stunning visuals to seamless motion, we elevate
           your brand presence and engage your audience like never before. Let’s

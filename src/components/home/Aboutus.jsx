@@ -142,15 +142,6 @@ export default function Aboutus() {
           architecto quis cum culpa, iusto illo sequi natus quo porro? Vero,
           tempora architecto?
         </p>
-        {/* <p ref={textRef}>
-          ADCLAN is a modern creative agency focused on shaping meaningful brand
-          experiences. We combine design, strategy, technology, and storytelling
-          to help brands grow with clarity and confidence. <br />
-          Our team bridges creativity with performance, ensuring every project
-          is rooted in purpose and built for impact. Whether it’s branding,
-          digital marketing, content, production, or media strategy, we craft
-          solutions that connect with audiences and convert into results.
-        </p> */}
       </div>
     </section>
   );
