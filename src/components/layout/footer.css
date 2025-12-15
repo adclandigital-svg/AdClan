@@ -1,0 +1,150 @@
+/* FOOTER MAIN STYLE */
+.footer {
+  background: linear-gradient(135deg, #072335, #06131d);
+  padding: 60px 8%;
+  color: #dbe8f1;
+  font-family: "Raleway", sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+}
+
+/* LOGO */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 38px;
+}
+
+.logo-text {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.footer-desc {
+  margin-top: 10px;
+  line-height: 1.5;
+  max-width: 300px;
+  font-size: 14px;
+}
+
+/* TITLES */
+.footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* LINKS */
+.footer-links li {
+  list-style: none;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.footer-links li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+  color: #c4c4c4;
+  top: 3px;
+}
+
+.footer-links li a {
+  color: #dbe8f1;
+  text-decoration: none;
+}
+
+.footer-links li:hover {
+  color: #fff;
+  transform: translateX(5px);
+  transition: 0.3s;
+}
+
+/* CONTACT */
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.footer-contact li svg {
+  margin-top: 4px;
+}
+
+/* DIVIDER */
+.footer-divider {
+  margin: 40px 0 25px;
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-socials span {
+  width: 38px;
+  height: 38px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-socials span:hover {
+  transform: translateY(-5px);
+}
+
+/* UP BUTTON */
+.footer-up-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  /* background: #c6941d; */
+  color: #000;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-up-btn:hover {
+  transform: translateY(-6px);
+}
+
+/* RESPONSIVE */
+@media(max-width: 650px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

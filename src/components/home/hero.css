@@ -1,0 +1,36 @@
+.hero-section{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.hero-video-wrapper{
+    overflow: hidden;
+    height: 90%;
+    width: 95%;
+    background-color: rgb(155, 151, 151);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.hero-video-wrapper video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+@media (max-width: 768px) {
+   .hero-video-wrapper{
+    height: 60%;
+}
+
+}
