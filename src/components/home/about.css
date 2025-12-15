@@ -1,45 +1,72 @@
-.home-aboutus-section{
-    height: 600px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    /* background-color: azure; */
+.home-aboutus-section {
+  height: 600px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* background-color: azure; */
+  margin: 50px 50px;
 }
-.home-aboutus-container-left{
-    width: 50%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.home-aboutus-container-left {
+  width: 50%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
- 
-.frame-player {
-    width: 90%;
-    height: 90%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}       
 
-.home-aboutus-container-right{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    overflow: hidden;
+.frame-player {
+  width: 90%;
+  height: 90%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.home-aboutus-container-right p{
-    margin-left: 10%;
-    width: 70%;
-    font-size: 0.9rem;
-    font-weight: 700;
-    line-height: 1.6;
-    text-align: left;
-    color: rgba(0, 0, 0, 0.3);
+
+.home-aboutus-container-left-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-aboutus-container-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  /* align-items: center; */
+  overflow: hidden;
+}
+.home-aboutus-container-right p {
+  margin-left: 10%;
+  width: 70%;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1200px) {
+  .home-aboutus-section {
+    height: auto;
+    flex-direction: column;
+    margin: 50px 0px;
+    gap: 50px;
+  }
+  .home-aboutus-container-right {
+    width: 100%;
+    height: auto;
+  }
+  .home-aboutus-container-left {
+    width: auto;
+    height: auto;
+  }
+  .home-aboutus-container-right p {
+    margin-left: 10px;
+    width: auto;
+  }
 }

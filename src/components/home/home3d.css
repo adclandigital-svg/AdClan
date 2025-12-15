@@ -1,0 +1,32 @@
+.Home3D-section {
+  height: 800px;
+  width: 100%;
+  /* background-color: #000000; */
+  position: relative;
+}
+.home3d-text-container {
+  width: auto;
+  height: 100px;
+  bottom: 30px;
+  display: flex;
+  flex-shrink: none;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  /* background-color: rgb(0, 0, 0); */
+}
+.home3d-text-heading {
+  color: rgba(0, 0, 0, 0.466);
+  font-size: 60px;
+  font-weight: er;
+  margin-bottom: 20px;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add "..." if text is too long */
+}
+
+@media (max-width: 720px) {
+  .Home3D-section {
+    height: 400px;
+  }
+}
