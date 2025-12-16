@@ -66,11 +66,11 @@ export default function Home3D() {
       textEl,
       { x: 0 },
       {
-        x: "-100%",
-        duration: 100,  // adjust speed
+        x: -width,
+        duration: 50,  // adjust speed
         ease: "linear",
         repeat: -1,    // infinite
-        yoyo:true
+        // yoyo:true
       }
     );
   }, []);

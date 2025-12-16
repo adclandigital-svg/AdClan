@@ -4,6 +4,7 @@ import "./homeabout.css";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeAbout() {
@@ -91,6 +92,27 @@ export default function HomeAbout() {
     }
   }, []);
 
+  useEffect(() => {
+    if (!textRef.current || !sectionRef.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.from(textRef.current, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 20%",
+          end: "bottom top",
+          toggleActions: "play none none reset",
+        },
+      });
+    }, sectionRef);
+
+    // Cleanup on unmount
+    return () => ctx.revert();
+  }, []);
   return (
     <section className="homeabout-section">
       <div className="homeabout-container" ref={sectionRef}>

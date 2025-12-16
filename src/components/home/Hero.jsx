@@ -14,7 +14,6 @@ export default function HeroVideo() {
         >
           <source src="/Recording 2025-12-12 120853.mp4" type="video/mp4" />
         </video>
-
       </div>
     </section>
   );

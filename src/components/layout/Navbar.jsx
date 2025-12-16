@@ -8,9 +8,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   const nav = [
-    { name: 'What brings you here?', href: '/about' },
-    { name: 'What would you like?', href: '/services' },
-    { name: 'What’s going on here?', href: '/projects' },
+    { name: 'Who we were?', href: '/about' },
+    { name: 'What we do?', href: '/services' },
+    { name: 'Work study?', href: '/projects' },
   ]
 
   return (
@@ -32,7 +32,7 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <Link href="/contact" className="nav-link">Contact</Link>
+              <Link href="/contact" className="nav-link">Reach us</Link>
             </li>
           </ul>
 
@@ -70,7 +70,7 @@ export default function Navbar() {
                 className="nav-link mobile"
                 onClick={() => setOpen(false)}
               >
-                Contact
+                Reach us
               </Link>
             </li>
 

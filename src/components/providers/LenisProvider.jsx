@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import Lenis from 'lenis';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function LenisProvider({ children }) {
   const [isMobile, setIsMobile] = useState(false);
@@ -33,6 +37,29 @@ export default function LenisProvider({ children }) {
       smoothTouch: false,
       touchMultiplier: 2,
     });
+
+    // Integrate Lenis with GSAP ScrollTrigger
+    lenis.on('scroll', ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy(document.body, {
+      scrollTop(value) {
+        if (arguments.length) {
+          lenis.scrollTo(value, { immediate: true });
+        }
+        return lenis.scroll;
+      },
+      getBoundingClientRect() {
+        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+      },
+      scrollHeight() {
+        return document.body.scrollHeight;
+      },
+      clientHeight() {
+        return window.innerHeight;
+      }
+    });
+
+    ScrollTrigger.refresh();
 
     // Animation frame loop for Lenis
     function raf(time) {
