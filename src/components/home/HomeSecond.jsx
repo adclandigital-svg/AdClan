@@ -44,14 +44,14 @@ export default function HomeSecond() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef1.current,
-          start: "top 10%",
+          start: "top 5%",
           end: window.innerWidth < 768 ? "+=100%" : "+=140%",
           scrub: true,
           pin: true,
           pinSpacing: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
-          markers:true
+          // markers:true
         },
       });
 
