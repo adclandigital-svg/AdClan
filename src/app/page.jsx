@@ -11,7 +11,7 @@ const HomeThird = dynamic(() => import("@/components/home/HomeThird"), { ssr: fa
 export default function Home() {
   return (
     <>
-    {/* <LoadingScreen/> */}
+    <LoadingScreen/>
       <Suspense fallback={<div>Loading Hero...</div>}>
         <Hero />
         <HomeSecond/>
