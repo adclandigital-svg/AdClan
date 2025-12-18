@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 800px;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
 }
@@ -61,6 +61,10 @@
   top: 50%;
   transform: translateY(-50%);
   left: -350px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 
 .home-second-cards3 {
@@ -81,6 +85,10 @@
   top: 50%;
   transform: translateY(-50%);
   right: -350px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 
 .home-second-cards6 {
@@ -91,9 +99,40 @@
 }
 @media (max-width: 750px) {
   .home-second-section-main {
-    width: 100%;
+    height: 100vh;
   }
   .home-second-section-heading {
-    font-size: 80px;
+    font-size: 100px;
+    text-transform: uppercase;
+    line-height: 0.9;
+  }
+  .home-second-cards {
+    height: 120px;
+    width: 200px;
+  }
+  .home-second-cards1 {
+    top: -130px;
+    left: -150px;
+  }
+  .home-second-cards2 {
+    left: -200px;
+  }
+  .home-second-cards3 {
+    bottom: -130px;
+    left: -150px;
+  }
+  .home-second-cards4 {
+    top: -130px;
+    right: -150px;
+  }
+  .home-second-cards5 {
+    right: -200px;
+  }
+  .home-second-cards6 {
+    bottom: -130px;
+    right: -150px;
+  }
+  .home-second-cards p {
+    font-size: 20px;
   }
 }

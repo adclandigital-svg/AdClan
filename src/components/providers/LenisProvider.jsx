@@ -1,80 +1,33 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import Lenis from 'lenis';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import gsap from 'gsap';
+import { useEffect } from "react";
+import Lenis from "lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function LenisProvider({ children }) {
-  const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
-    // Check if device is mobile
-    const checkMobile = () => {
-      const isMobileDevice = window.innerWidth < 768 || /iPhone|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-      setIsMobile(isMobileDevice);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  useEffect(() => {
-    // Only enable Lenis on desktop screens
-    if (isMobile) return;
-
-    // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: 'vertical',
-      gestureDirection: 'vertical',
       smooth: true,
-      smoothTouch: false,
-      touchMultiplier: 2,
+      lerp: 0.08,
     });
 
-    // Integrate Lenis with GSAP ScrollTrigger
-    lenis.on('scroll', ScrollTrigger.update);
+    // 🔥 CRITICAL
+    lenis.on("scroll", ScrollTrigger.update);
 
-    ScrollTrigger.scrollerProxy(document.body, {
-      scrollTop(value) {
-        if (arguments.length) {
-          lenis.scrollTo(value, { immediate: true });
-        }
-        return lenis.scroll;
-      },
-      getBoundingClientRect() {
-        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-      },
-      scrollHeight() {
-        return document.body.scrollHeight;
-      },
-      clientHeight() {
-        return window.innerHeight;
-      }
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
     });
 
-    ScrollTrigger.refresh();
+    gsap.ticker.lagSmoothing(0);
 
-    // Animation frame loop for Lenis
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    const frameId = requestAnimationFrame(raf);
-
-    // Cleanup on unmount
     return () => {
-      cancelAnimationFrame(frameId);
       lenis.destroy();
+      gsap.ticker.remove(lenis.raf);
     };
-  }, [isMobile]);
+  }, []);
 
   return <>{children}</>;
 }

@@ -1,64 +1,175 @@
-import React from "react";
+// import React from "react";
+// import "./Homesecond.css";
+// import { useRef } from "react";
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useEffect } from "react";
+
+
+// export default function HomeSecond() {
+//   const sectionRef1 = useRef(null);
+//   const headingRef = useRef(null);
+//   const cards1 = useRef(null);
+//   const cards2 = useRef(null);
+//   const cards3 = useRef(null);
+//   const cards4 = useRef(null);
+//   const cards5 = useRef(null);
+//   const cards6 = useRef(null);
+//   useEffect(() => {
+//     gsap.registerPlugin(ScrollTrigger);
+
+//     if (
+//       !sectionRef1.current ||
+//       !headingRef.current ||
+//       !cards1.current ||
+//       !cards2.current ||
+//       !cards3.current ||
+//       !cards4.current ||
+//       !cards5.current ||
+//       !cards6.current
+//     )
+//       return;
+
+//     const cards = [
+//       cards1.current,
+//       cards2.current,
+//       cards3.current,
+//       cards4.current,
+//       cards5.current,
+//       cards6.current,
+//     ];
+
+//     const rotations = [-15, -8, -3, 3, 8, 15];
+
+//     const ctx = gsap.context(() => {
+//       const tl = gsap.timeline({
+//         scrollTrigger: {
+//           trigger: sectionRef1.current,
+//           start: "top 0%",
+//           end:"+=140%",
+//           scrub: 2,
+//           pin: true,
+//           pinSpacing: true,
+//           anticipatePin: 1,
+//           invalidateOnRefresh: true,
+//           // markers:true
+//         },
+//       });
+
+//       /* Heading scale */
+//       tl.to(headingRef.current, {
+//         scale: 0.5,
+//         // ease: "power3.out",
+//       });
+
+//       tl.add("cardsMove");
+
+//       /* Move cards to center */
+//       cards.forEach((card) => {
+//         tl.to(
+//           card,
+//           {
+//             left: "50%",
+//             top: "50%",
+//             xPercent: -50,
+//             yPercent: -50,
+//             // ease: "power3.out",
+//           },
+//           "cardsMove"
+//         );
+//       });
+
+//       tl.add("cardsRotate");
+
+//       /* Rotate cards */
+//       cards.forEach((card, i) => {
+//         tl.to(
+//           card,
+//           {
+//             rotation: rotations[i],
+//             // ease: "power3.out",
+//           },
+//           "cardsRotate"
+//         );
+//       });
+//     }, sectionRef1);
+
+//     // IMPORTANT for mobile
+//     ScrollTrigger.refresh();
+
+//     return () => ctx.revert();
+//   }, []);
+
+//   return (
+//     <>
+//       <div className="home-second-section-main" ref={sectionRef1}>
+//         <div className="home-second-section">
+//           <h1 className="home-second-section-heading" ref={headingRef}>
+//             Our <br />
+//             Clan
+//           </h1>
+//           <div className="home-second-cards home-second-cards1" ref={cards1}>
+//             <p>Radio</p>
+//           </div>
+//           <div className="home-second-cards home-second-cards2" ref={cards2}>
+//             <p>Print</p>
+//           </div>
+//           <div className="home-second-cards home-second-cards3" ref={cards3}>
+//             <p>Event</p>
+//           </div>
+//           <div className="home-second-cards home-second-cards4" ref={cards4}>
+//             <p>Creative</p>
+//           </div>
+//           <div className="home-second-cards home-second-cards5" ref={cards5}>
+//             <p>Digital</p>
+//           </div>
+//           <div className="home-second-cards home-second-cards6" ref={cards6}>
+//             <p>Celebrity</p>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
+
+"use client";
+
+import React, { useRef, useEffect } from "react";
 import "./Homesecond.css";
-import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeSecond() {
-  const sectionRef1 = useRef(null);
+  const sectionRef = useRef(null);
   const headingRef = useRef(null);
-  const cards1 = useRef(null);
-  const cards2 = useRef(null);
-  const cards3 = useRef(null);
-  const cards4 = useRef(null);
-  const cards5 = useRef(null);
-  const cards6 = useRef(null);
+  const cardsRef = useRef([]);
+
   useEffect(() => {
-    if (
-      !sectionRef1.current ||
-      !headingRef.current ||
-      !cards1.current ||
-      !cards2.current ||
-      !cards3.current ||
-      !cards4.current ||
-      !cards5.current ||
-      !cards6.current
-    )
-      return;
-
-    const cards = [
-      cards1.current,
-      cards2.current,
-      cards3.current,
-      cards4.current,
-      cards5.current,
-      cards6.current,
-    ];
-
-    const rotations = [-15, -8, -3, 3, 8, 15];
+    if (!sectionRef.current || !headingRef.current) return;
 
     const ctx = gsap.context(() => {
+      const cards = cardsRef.current;
+      const rotations = [-15, -8, -3, 3, 8, 15];
+
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: sectionRef1.current,
-          start: "top 5%",
-          end: window.innerWidth < 768 ? "+=100%" : "+=140%",
-          scrub: true,
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=140%",
+          scrub:true,
           pin: true,
-          pinSpacing: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
-          // markers:true
+          // markers: true,
         },
       });
 
       /* Heading scale */
       tl.to(headingRef.current, {
         scale: 0.5,
-        ease: "power3.out",
       });
 
       tl.add("cardsMove");
@@ -72,7 +183,8 @@ export default function HomeSecond() {
             top: "50%",
             xPercent: -50,
             yPercent: -50,
-            ease: "power3.out",
+            duration:4,
+            
           },
           "cardsMove"
         );
@@ -86,47 +198,43 @@ export default function HomeSecond() {
           card,
           {
             rotation: rotations[i],
-            ease: "power3.out",
           },
           "cardsRotate"
         );
       });
-    }, sectionRef1);
+    }, sectionRef);
 
-    // IMPORTANT for mobile
-    ScrollTrigger.refresh();
-
-    return () => ctx.revert();
+    return () => {
+      ctx.revert(); // ✅ SAFELY removes pin & animations
+      ScrollTrigger.getAll().forEach((st) => st.kill()); // 🔥 critical
+    };
   }, []);
 
   return (
-    <>
-      <div className="home-second-section-main" ref={sectionRef1}>
-        <div className="home-second-section">
-          <h1 className="home-second-section-heading" ref={headingRef}>
-            Our <br />
-            Clan
-          </h1>
-          <div className="home-second-cards home-second-cards1" ref={cards1}>
-            <p>Radio</p>
+    <div className="home-second-section-main" ref={sectionRef}>
+      <div className="home-second-section">
+        <h1 className="home-second-section-heading" ref={headingRef}>
+          Our <br /> Clan
+        </h1>
+
+        {[
+          "Radio",
+          "Print",
+          "Event",
+          "Creative",
+          "Digital",
+          "Celebrity",
+        ].map((text, i) => (
+          <div
+            key={i}
+            className={`home-second-cards home-second-cards${i + 1}`}
+            ref={(el) => (cardsRef.current[i] = el)}
+          >
+            <p>{text}</p>
           </div>
-          <div className="home-second-cards home-second-cards2" ref={cards2}>
-            <p>Print</p>
-          </div>
-          <div className="home-second-cards home-second-cards3" ref={cards3}>
-            <p>Event</p>
-          </div>
-          <div className="home-second-cards home-second-cards4" ref={cards4}>
-            <p>Creative</p>
-          </div>
-          <div className="home-second-cards home-second-cards5" ref={cards5}>
-            <p>Digital</p>
-          </div>
-          <div className="home-second-cards home-second-cards6" ref={cards6}>
-            <p>Celebrity</p>
-          </div>
-        </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
+
