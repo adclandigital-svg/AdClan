@@ -1,0 +1,34 @@
+.home-fifth-section {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-fifth-section-video {
+  height: auto;
+  width: 100%;
+  background-color: black;
+  border-radius: 20px;
+  transform: scale(0.6);
+  border-radius: 20px;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  overflow: hidden;
+}
+.home-fifth-section-video video {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+/* @media screen and (max-width: 1200px) {
+  .home-fifth-section {
+   margin: 50px 0px;
+  }
+} */
