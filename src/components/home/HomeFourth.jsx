@@ -37,39 +37,39 @@ export default function HomeFourth() {
     if (el && !spansRef.current.includes(el)) spansRef.current.push(el);
   };
 
-  useGSAP(
-    () => {
-      const mm = gsap.matchMedia();
+  // useGSAP(
+  //   () => {
+  //     const mm = gsap.matchMedia();
 
-      /* ================= DESKTOP (≥1200px) ================= */
-      mm.add("(min-width: 1200px)", () => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: sectionRefFour.current,
-            start: "top 10%",
-            end: "+=100%",
-            scrub: 1,
-            pin: true,
-            // markers: true, // remove in production
-          },
-        });
+  //     /* ================= DESKTOP (≥1200px) ================= */
+  //     mm.add("(min-width: 1200px)", () => {
+  //       const tl = gsap.timeline({
+  //         scrollTrigger: {
+  //           trigger: sectionRefFour.current,
+  //           start: "top 10%",
+  //           end: "+=100%",
+  //           scrub: 1,
+  //           pin: true,
+  //           // markers: true, // remove in production
+  //         },
+  //       });
 
-        tl.from(textRef.current, {
-          left: "50%",
-          right: "50%",
-          transform: "translate(-50%, -50%)",
-        })
-          .from(mediaRef1.current, { y: "-300%" }, "<")
-          .from(mediaRef2.current, { y: "300%" }, "<");
+  //       tl.from(textRef.current, {
+  //         left: "50%",
+  //         right: "50%",
+  //         transform: "translate(-50%, -50%)",
+  //       })
+  //         .from(mediaRef1.current, { y: "-300%" }, "<")
+  //         .from(mediaRef2.current, { y: "300%" }, "<");
 
-        // cleanup ONLY this timeline
-        return () => tl.kill();
-      });
+  //       // cleanup ONLY this timeline
+  //       return () => tl.kill();
+  //     });
 
-      return () => mm.revert();
-    },
-    { scope: sectionRefFour }
-  );
+  //     return () => mm.revert();
+  //   },
+  //   { scope: sectionRefFour }
+  // );
 
   const [index1, setIndex1] = useState(0);
   const [index2, setIndex2] = useState(0);
