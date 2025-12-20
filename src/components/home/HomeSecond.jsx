@@ -71,7 +71,7 @@ export default function HomeSecond() {
 
     return () => {
       ctx.revert(); // ✅ SAFELY removes pin & animations
-      ScrollTrigger.getAll().forEach((st) => st.kill()); // 🔥 critical
+      // ScrollTrigger.getAll().forEach((st) => st.kill()); // 🔥 critical
     };
   }, []);
 
