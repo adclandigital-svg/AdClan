@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeFourth() {
-  const sectionRef = useRef(null);
+  const sectionRefFour = useRef(null);
   const spansRef = useRef([]);
   const textRef = useRef(null);
   const mediaRef1 = useRef(null);
@@ -45,7 +45,7 @@ export default function HomeFourth() {
       mm.add("(min-width: 1200px)", () => {
         const tl = gsap.timeline({
           scrollTrigger: {
-            trigger: sectionRef.current,
+            trigger: sectionRefFour.current,
             start: "top 10%",
             end: "+=100%",
             scrub: 1,
@@ -68,7 +68,7 @@ export default function HomeFourth() {
 
       return () => mm.revert();
     },
-    { scope: sectionRef }
+    { scope: sectionRefFour }
   );
 
   const [index1, setIndex1] = useState(0);
@@ -102,7 +102,7 @@ export default function HomeFourth() {
   }, [index2]);
 
   return (
-    <div className="home-fouth-section-outer" ref={sectionRef}>
+    <div className="home-fouth-section-outer" ref={sectionRefFour}>
       <section className="home-fouth-section">
         <div className="home-fouth-section-div" ref={textRef}>
           {["Works", "Who", "Describe", "Our Potential"].map((text, i) => (
