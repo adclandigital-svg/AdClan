@@ -116,8 +116,8 @@ export default function HomeSix() {
       gsap.from(images, {
         scale: 0.8,
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
+        duration: 1,
+        stagger: 0.2,
         ease: "power3.out",
         scrollTrigger: {
           trigger: sectionRef.current,
