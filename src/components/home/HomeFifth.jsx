@@ -37,10 +37,6 @@ export default function HomeFifth() {
         start: "top center",
         end: "bottom center",
         // markers: true,
-        // onEnter: () => video.play(),
-        // onEnterBack: () => video.play(),
-        // onLeave: () => video.pause(),
-        // onLeaveBack: () => video.pause(),
       });
     },
     { scope: fifthSectionRef }

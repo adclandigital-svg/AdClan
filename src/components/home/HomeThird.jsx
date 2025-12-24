@@ -74,10 +74,6 @@ export default function HomeThird() {
           gsap.set(textRef.current.children, { y: 50, opacity: 0 });
         },
       });
-
-      return () => {
-        trigger.kill();
-      };
     }, sectionRef);
 
     return () => ctx.revert();
