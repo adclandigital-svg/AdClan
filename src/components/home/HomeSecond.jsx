@@ -87,8 +87,6 @@ useEffect(() => {
       end: "+=140%",
       scrub: true,
       pin: true,
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
       // markers: true,
     },
   });
@@ -133,7 +131,7 @@ useEffect(() => {
 
   return () => {
     // 🔥 IMPORTANT CLEANUP
-    tl.scrollTrigger?.kill(); // kill pin safely
+    // tl.scrollTrigger?.kill(); // kill pin safely
     tl.kill();               // kill timeline
   };
 }, []);
