@@ -101,14 +101,13 @@
 //   );
 // }
 
-
-
 "use client";
 
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef } from "react";
 import "./Homesecond.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -117,11 +116,8 @@ export default function HomeSecond() {
   const headingRef = useRef(null);
   const cardsRef = useRef([]);
 
-  useLayoutEffect(() => {
-    if (!sectionRef.current) return;
-
-    // ✅ GSAP CONTEXT — THIS IS THE KEY
-    const ctx = gsap.context(() => {
+  useGSAP(
+    () => {
       const cards = cardsRef.current;
       const rotations = [-15, -8, -3, 3, 8, 15];
 
@@ -132,7 +128,7 @@ export default function HomeSecond() {
           end: "+=140%",
           scrub: true,
           pin: true,
-          anticipatePin: 1, // smoother pin behavior
+          anticipatePin: 1,
           invalidateOnRefresh: true,
           // markers: true,
         },
@@ -175,13 +171,12 @@ export default function HomeSecond() {
           "cardsRotate"
         );
       });
-    }, sectionRef); // 👈 scope EVERYTHING to this section only
-
-    return () => {
-      // ✅ CLEAN & SAFE — kills timeline + ScrollTriggers
-      ctx.revert();
-    };
-  }, []);
+    },
+    {
+      scope: sectionRef, // ✅ this replaces gsap.context()
+      revertOnUpdate: true,
+    }
+  );
 
   return (
     <div className="home-second-section-main" ref={sectionRef}>
@@ -190,25 +185,18 @@ export default function HomeSecond() {
           Our <br /> Clan
         </h1>
 
-        {[
-          "Radio",
-          "Print",
-          "Event",
-          "Creative",
-          "Digital",
-          "Celebrity",
-        ].map((text, i) => (
-          <div
-            key={i}
-            className={`home-second-cards home-second-cards${i + 1}`}
-            ref={(el) => (cardsRef.current[i] = el)}
-          >
-            <p>{text}</p>
-          </div>
-        ))}
+        {["Radio", "Print", "Event", "Creative", "Digital", "Celebrity"].map(
+          (text, i) => (
+            <div
+              key={i}
+              className={`home-second-cards home-second-cards${i + 1}`}
+              ref={(el) => (cardsRef.current[i] = el)}
+            >
+              <p>{text}</p>
+            </div>
+          )
+        )}
       </div>
     </div>
   );
 }
-
-
