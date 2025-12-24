@@ -144,9 +144,6 @@
 //   );
 // }
 
-
-
-
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
@@ -187,41 +184,38 @@ export default function HomeFourth() {
   const [index2, setIndex2] = useState(0);
 
   /* ================= GSAP ================= */
-  // useGSAP(
-  //   () => {
-  //     const mm = gsap.matchMedia();
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
 
-  //     mm.add("(min-width: 1200px)", () => {
-  //       // GSAP OWNS transforms (no CSS translate)
-  //       const tl = gsap.timeline({
-  //         scrollTrigger: {
-  //           trigger: sectionRefFour.current,
-  //           start: "top top",
-  //           end: "+=200%",
-  //           scrub: 1,
-  //           pin: true,
-  //           pinSpacing: true,
-  //           anticipatePin: 1,
-  //           invalidateOnRefresh: true,
-  //           markers: true,
-  //         },
-  //       });
+      mm.add("(min-width: 1200px)", () => {
+        // GSAP OWNS transforms (no CSS translate)
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRefFour.current,
+            start: "top top",
+            end: "+=200%",
+            scrub: 1,
+            pin: true,
+            markers: true,
+          },
+        });
 
-  //       tl.from(textReffour.current, {
-  //         xPercent: -50,
-  //         yPercent: -50,
-  //         transform : "translate(-50%,-50%)",
-  //       })
-  //         .from(mediaRef1.current, { yPercent: -200 }, "<")
-  //         .from(mediaRef2.current, { yPercent: 200 }, "<");
+        tl.from(textReffour.current, {
+          xPercent: -50,
+          yPercent: -50,
+          transform: "translate(-50%,-50%)",
+        });
+        tl.from(mediaRef1.current, { opacity: 0, yPercent: -100 }, "<");
+        tl.from(mediaRef2.current, { opacity: 0, yPercent: 100 }, "<");
 
-  //       return () => tl.kill();
-  //     });
+        return () => tl.kill();
+      });
 
-  //     return () => mm.revert();
-  //   },
-  //   { scope: sectionRefFour }
-  // );
+      return () => mm.revert();
+    },
+    { scope: sectionRefFour }
+  );
 
   /* ================= MEDIA ROTATION ================= */
   useEffect(() => {
@@ -245,8 +239,8 @@ export default function HomeFourth() {
   }, [index2]);
 
   return (
-    <section className="home-fouth-section-outer" >
-      <div className="home-fouth-section"ref={sectionRefFour}>
+    <section className="home-fouth-section-outer">
+      <div className="home-fouth-section" ref={sectionRefFour}>
         <div className="home-fouth-section-div" ref={textReffour}>
           {["Works", "Who", "Describe", "Our Potential"].map((t, i) => (
             <span key={i}>{t}</span>
@@ -262,9 +256,7 @@ export default function HomeFourth() {
               autoPlay
               muted
               playsInline
-              onEnded={() =>
-                setIndex1((i) => (i + 1) % media1.length)
-              }
+              onEnded={() => setIndex1((i) => (i + 1) % media1.length)}
             />
           )}
         </div>
@@ -278,9 +270,7 @@ export default function HomeFourth() {
               autoPlay
               muted
               playsInline
-              onEnded={() =>
-                setIndex2((i) => (i + 1) % media2.length)
-              }
+              onEnded={() => setIndex2((i) => (i + 1) % media2.length)}
             />
           )}
         </div>
@@ -288,4 +278,3 @@ export default function HomeFourth() {
     </section>
   );
 }
-
