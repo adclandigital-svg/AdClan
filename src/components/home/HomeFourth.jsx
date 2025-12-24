@@ -70,16 +70,16 @@ export default function HomeFourth() {
   //   { scope: sectionRefFour }
   // );
 
-  // /* ================= MEDIA ROTATION ================= */
-  // useEffect(() => {
-  //   if (media1[index1].type === "image") {
-  //     const t = setTimeout(
-  //       () => setIndex1((i) => (i + 1) % media1.length),
-  //       2000
-  //     );
-  //     return () => clearTimeout(t);
-  //   }
-  // }, [index1]);
+  /* ================= MEDIA ROTATION ================= */
+  useEffect(() => {
+    if (media1[index1].type === "image") {
+      const t = setTimeout(
+        () => setIndex1((i) => (i + 1) % media1.length),
+        2000
+      );
+      return () => clearTimeout(t);
+    }
+  }, [index1]);
 
   useEffect(() => {
     if (media2[index2].type === "image") {
