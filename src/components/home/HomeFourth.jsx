@@ -48,7 +48,7 @@ export default function HomeFourth() {
           scrollTrigger: {
             trigger: sectionRefFour.current,
             start: "top 0%",
-            end: "+=200%",
+            end: "bottom 50%",
             scrub: 1,
             pin: true,
             markers: true,
