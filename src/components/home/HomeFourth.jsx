@@ -47,7 +47,7 @@ export default function HomeFourth() {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: sectionRefFour.current,
-            start: "top top",
+            start: "top 0%",
             end: "+=200%",
             scrub: 1,
             pin: true,
@@ -92,8 +92,8 @@ export default function HomeFourth() {
   }, [index2]);
 
   return (
-    <section className="home-fouth-section-outer">
-      <div className="home-fouth-section" ref={sectionRefFour}>
+    <div className="home-fouth-section-outer" ref={sectionRefFour}>
+      <div className="home-fouth-section" >
         <div className="home-fouth-section-div" ref={textReffour}>
           {["Works", "Who", "Describe", "Our Potential"].map((t, i) => (
             <span key={i}>{t}</span>
@@ -128,6 +128,6 @@ export default function HomeFourth() {
           )}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
