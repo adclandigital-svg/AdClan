@@ -216,8 +216,8 @@ export default function HomeFourth() {
           yPercent: -50,
           transform : "translate(-50%,-50%)",
         })
-          .from(mediaRef1.current, { yPercent: -300 }, "<")
-          .from(mediaRef2.current, { yPercent: 300 }, "<");
+          .from(mediaRef1.current, { yPercent: -200 }, "<")
+          .from(mediaRef2.current, { yPercent: 200 }, "<");
 
         return () => tl.kill();
       });
