@@ -12,68 +12,131 @@ export default function HomeSecond() {
   const headingRef = useRef(null);
   const cardsRef = useRef([]);
 
-  useEffect(() => {
-    if (!sectionRef.current || !headingRef.current) return;
+  // useEffect(() => {
+  //   if (!sectionRef.current || !headingRef.current) return;
 
-    const ctx = gsap.context(() => {
-      const cards = cardsRef.current;
-      const rotations = [-15, -8, -3, 3, 8, 15];
+  //   const ctx = gsap.context(() => {
+  //     const cards = cardsRef.current;
+  //     const rotations = [-15, -8, -3, 3, 8, 15];
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "+=140%",
-          scrub:true,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-          // markers: true,
-        },
-      });
+  //     const tl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: sectionRef.current,
+  //         start: "top top",
+  //         end: "+=140%",
+  //         scrub:true,
+  //         pin: true,
+  //         anticipatePin: 1,
+  //         invalidateOnRefresh: true,
+  //         // markers: true,
+  //       },
+  //     });
 
-      /* Heading scale */
-      tl.to(headingRef.current, {
-        scale: 0.5,
-      });
+  //     /* Heading scale */
+  //     tl.to(headingRef.current, {
+  //       scale: 0.5,
+  //     });
 
-      tl.add("cardsMove");
+  //     tl.add("cardsMove");
 
-      /* Move cards to center */
-      cards.forEach((card) => {
-        tl.to(
-          card,
-          {
-            left: "50%",
-            top: "50%",
-            xPercent: -50,
-            yPercent: -50,
-            duration:4,
+  //     /* Move cards to center */
+  //     cards.forEach((card) => {
+  //       tl.to(
+  //         card,
+  //         {
+  //           left: "50%",
+  //           top: "50%",
+  //           xPercent: -50,
+  //           yPercent: -50,
+  //           duration:4,
             
-          },
-          "cardsMove"
-        );
-      });
+  //         },
+  //         "cardsMove"
+  //       );
+  //     });
 
-      tl.add("cardsRotate");
+  //     tl.add("cardsRotate");
 
-      /* Rotate cards */
-      cards.forEach((card, i) => {
-        tl.to(
-          card,
-          {
-            rotation: rotations[i],
-          },
-          "cardsRotate"
-        );
-      });
-    }, sectionRef);
+  //     /* Rotate cards */
+  //     cards.forEach((card, i) => {
+  //       tl.to(
+  //         card,
+  //         {
+  //           rotation: rotations[i],
+  //         },
+  //         "cardsRotate"
+  //       );
+  //     });
+  //   }, sectionRef);
 
-    return () => {
-      ctx.revert(); // ✅ SAFELY removes pin & animations
-      // ScrollTrigger.getAll().forEach((st) => st.kill()); // 🔥 critical
-    };
-  }, []);
+  //   return () => {
+  //     ctx.revert(); // ✅ SAFELY removes pin & animations
+  //     // ScrollTrigger.getAll().forEach((st) => st.kill()); // 🔥 critical
+  //   };
+  // }, []);
+useEffect(() => {
+  if (!sectionRef.current || !headingRef.current) return;
+
+  const cards = cardsRef.current;
+  const rotations = [-15, -8, -3, 3, 8, 15];
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: sectionRef.current,
+      start: "top top",
+      end: "+=140%",
+      scrub: true,
+      pin: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      // markers: true,
+    },
+  });
+
+  /* Heading scale */
+  tl.to(headingRef.current, {
+    scale: 0.5,
+    ease: "none",
+  });
+
+  tl.add("cardsMove");
+
+  /* Move cards to center */
+  cards.forEach((card) => {
+    tl.to(
+      card,
+      {
+        left: "50%",
+        top: "50%",
+        xPercent: -50,
+        yPercent: -50,
+        duration: 4,
+        ease: "none",
+      },
+      "cardsMove"
+    );
+  });
+
+  tl.add("cardsRotate");
+
+  /* Rotate cards */
+  cards.forEach((card, i) => {
+    tl.to(
+      card,
+      {
+        rotation: rotations[i],
+        ease: "none",
+      },
+      "cardsRotate"
+    );
+  });
+
+  return () => {
+    // 🔥 IMPORTANT CLEANUP
+    tl.scrollTrigger?.kill(); // kill pin safely
+    tl.kill();               // kill timeline
+  };
+}, []);
 
   return (
     <div className="home-second-section-main" ref={sectionRef}>
