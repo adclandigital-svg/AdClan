@@ -19,7 +19,7 @@ export default function HomeSecond() {
   //     const cards = cardsRef.current;
   //     const rotations = [-15, -8, -3, 3, 8, 15];
 
-  //     const tl = gsap.timeline({
+  //     const tl1 = gsap.timeline({
   //       scrollTrigger: {
   //         trigger: sectionRef.current,
   //         start: "top top",
@@ -33,15 +33,15 @@ export default function HomeSecond() {
   //     });
 
   //     /* Heading scale */
-  //     tl.to(headingRef.current, {
+  //     tl1.to(headingRef.current, {
   //       scale: 0.5,
   //     });
 
-  //     tl.add("cardsMove");
+  //     tl1.add("cardsMove");
 
   //     /* Move cards to center */
   //     cards.forEach((card) => {
-  //       tl.to(
+  //       tl1.to(
   //         card,
   //         {
   //           left: "50%",
@@ -55,11 +55,11 @@ export default function HomeSecond() {
   //       );
   //     });
 
-  //     tl.add("cardsRotate");
+  //     tl1.add("cardsRotate");
 
   //     /* Rotate cards */
   //     cards.forEach((card, i) => {
-  //       tl.to(
+  //       tl1.to(
   //         card,
   //         {
   //           rotation: rotations[i],
@@ -80,7 +80,7 @@ useEffect(() => {
   const cards = cardsRef.current;
   const rotations = [-15, -8, -3, 3, 8, 15];
 
-  const tl = gsap.timeline({
+  const tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: sectionRef.current,
       start: "top top",
@@ -92,16 +92,16 @@ useEffect(() => {
   });
 
   /* Heading scale */
-  tl.to(headingRef.current, {
+  tl1.to(headingRef.current, {
     scale: 0.5,
     ease: "none",
   });
 
-  tl.add("cardsMove");
+  tl1.add("cardsMove");
 
   /* Move cards to center */
   cards.forEach((card) => {
-    tl.to(
+    tl1.to(
       card,
       {
         left: "50%",
@@ -115,11 +115,11 @@ useEffect(() => {
     );
   });
 
-  tl.add("cardsRotate");
+  tl1.add("cardsRotate");
 
   /* Rotate cards */
   cards.forEach((card, i) => {
-    tl.to(
+    tl1.to(
       card,
       {
         rotation: rotations[i],
@@ -131,8 +131,8 @@ useEffect(() => {
 
   return () => {
     // 🔥 IMPORTANT CLEANUP
-    // tl.scrollTrigger?.kill(); // kill pin safely
-    tl.kill();               // kill timeline
+    tl1.scrollTrigger?.kill(); // kill pin safely
+    // tl1.kill();               // kill timeline
   };
 }, []);
 
