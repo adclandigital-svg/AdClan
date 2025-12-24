@@ -14,7 +14,7 @@ const HomeSix = dynamic(()=>import("@/components/home/HomeSix"), { ssr: false })
 export default function Home() {
   return (
     <>
-    <LoadingScreen/>
+    {/* <LoadingScreen/> */}
       <Suspense fallback={<div>Loading Hero...</div>}>
         <Hero />
         {/* <HomeSecond/> */}
