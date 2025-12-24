@@ -38,37 +38,37 @@ export default function HomeFourth() {
   const [index2, setIndex2] = useState(0);
 
   /* ================= GSAP ================= */
-  useGSAP(
-    () => {
-      const mm = gsap.matchMedia();
+  // useGSAP(
+  //   () => {
+  //     const mm = gsap.matchMedia();
 
-      mm.add("(min-width: 1200px)", () => {
-        // GSAP OWNS transforms (no CSS translate)
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: sectionRefFour.current,
-            start: "top 0%",
-            end: "bottom 50%",
-            scrub: 1,
-            pin: true,
-            markers: true,
-          },
-        });
+  //     mm.add("(min-width: 1200px)", () => {
+  //       // GSAP OWNS transforms (no CSS translate)
+  //       const tl = gsap.timeline({
+  //         scrollTrigger: {
+  //           trigger: sectionRefFour.current,
+  //           start: "top 0%",
+  //           end: "bottom 50%",
+  //           scrub: 1,
+  //           pin: true,
+  //           markers: true,
+  //         },
+  //       });
 
-        tl.from(textReffour.current, {
-          xPercent: -50,
-          yPercent: -50,
-        });
-        tl.from(mediaRef1.current, { opacity: 0, yPercent: -200 }, "<");
-        tl.from(mediaRef2.current, { opacity: 0, yPercent: 200 }, "<");
+  //       tl.from(textReffour.current, {
+  //         xPercent: -50,
+  //         yPercent: -50,
+  //       });
+  //       tl.from(mediaRef1.current, { opacity: 0, yPercent: -200 }, "<");
+  //       tl.from(mediaRef2.current, { opacity: 0, yPercent: 200 }, "<");
 
-        return () => tl.kill();
-      });
+  //       return () => tl.kill();
+  //     });
 
-      return () => mm.revert();
-    },
-    { scope: sectionRefFour }
-  );
+  //     return () => mm.revert();
+  //   },
+  //   { scope: sectionRefFour }
+  // );
 
   /* ================= MEDIA ROTATION ================= */
   useEffect(() => {
