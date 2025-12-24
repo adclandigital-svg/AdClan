@@ -27,7 +27,7 @@ export default function HomeFifth() {
           start: "top center",
           end: "top 10%",
           scrub: true,
-          markers: true,
+          markers: false,
         },
       });
 

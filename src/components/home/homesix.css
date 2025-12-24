@@ -224,3 +224,18 @@
     font-size: 10px;
   }
 }
+
+/* INITIAL STATE */
+.home-six-section img {
+  opacity: 0;
+  transform: translateY(40px) scale(0.85);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ACTIVE STATE */
+.home-six-section.animate img {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}

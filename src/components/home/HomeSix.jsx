@@ -1,59 +1,44 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import "./homesix.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeSix() {
   const sixsectionRef = useRef(null);
 
-  useGSAP(
-    () => {
-      const images = sixsectionRef.current.querySelectorAll("img");
+  useEffect(() => {
+    const section = sixsectionRef.current;
+    let timeoutId = null;
 
-      let loadedCount = 0;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Cancel removal if scrolling back quickly
+          if (timeoutId) {
+            clearTimeout(timeoutId);
+            timeoutId = null;
+          }
 
-      const onImageLoad = () => {
-        loadedCount++;
-        if (loadedCount === images.length) {
-          ScrollTrigger.refresh();
-        }
-      };
-
-      images.forEach((img) => {
-        if (img.complete) {
-          onImageLoad();
+          section.classList.add("animate");
         } else {
-          img.addEventListener("load", onImageLoad);
+          // Delay removal
+          section.classList.remove("animate");
         }
-      });
+      },
+      { threshold: 0.25 }
+    );
 
-      gsap.from(images, {
-        scale: 0.85,
-        opacity: 0,
-        y: 40,
-        duration: 1,
-        stagger: 0.25,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sixsectionRef.current,
-          start: "top 75%",
-          once: true, // ✅ prevents re-trigger chaos
-        },
-      });
+    observer.observe(section);
 
-      return () => {
-        images.forEach((img) => {
-          img.removeEventListener("load", onImageLoad);
-        });
-      };
-    },
-    { scope: sixsectionRef }
-  );
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <>
