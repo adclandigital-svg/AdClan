@@ -55,13 +55,13 @@ export default function HomeFourth() {
           },
         });
 
-        // tl.from(textReffour.current, {
-        //   xPercent: -50,
-        //   yPercent: -50,
-        //   transform: "translate(-50%,-50%)",
-        // });
-        tl.from(mediaRef1.current, { opacity: 0, yPercent: -100 }, "<");
-        tl.from(mediaRef2.current, { opacity: 0, yPercent: 100 }, "<");
+        tl.from(textReffour.current, {
+          xPercent: -50,
+          yPercent: -50,
+          // transform: "translate(-50%,-50%)",
+        });
+        tl.from(mediaRef1.current, { opacity: 0, yPercent: -200 }, "<");
+        tl.from(mediaRef2.current, { opacity: 0, yPercent: 200 }, "<");
 
         return () => tl.kill();
       });
