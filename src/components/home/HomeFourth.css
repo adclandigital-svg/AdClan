@@ -7,7 +7,7 @@
 .home-fouth-section {
   height: 100%; 
   width: 1900px;
-  overflow: hidden;
+  position: relative;
 }
 .home-fouth-section-div {
   position: absolute;

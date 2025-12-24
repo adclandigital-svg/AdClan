@@ -19,10 +19,9 @@ export default function Home() {
         <Hero />
         <HomeSecond/>
         <HomeThird/>
-        
+        <HomeFourth/>
         <HomeFifth/> 
         <HomeSix/>
-        <HomeFourth/>
       </Suspense>
     </>
   );
