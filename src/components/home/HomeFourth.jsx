@@ -51,7 +51,7 @@ export default function HomeFourth() {
             end: "bottom -80%",
             scrub: 1,
             pin: true,
-            markers: true,
+            // markers: true,
           },
         });
 
@@ -59,8 +59,8 @@ export default function HomeFourth() {
           xPercent: -50,
           yPercent: -50,
         });
-        tl.from(mediaRef1.current, { opacity: 0, yPercent: -200 }, "<");
-        tl.from(mediaRef2.current, { opacity: 0, yPercent: 200 }, "<");
+        tl.from(mediaRef1.current, { opacity: 0, yPercent: -150 }, "<");
+        tl.from(mediaRef2.current, { opacity: 0, yPercent: 150 }, "<");
 
         return () => tl.kill();
       });

@@ -115,6 +115,32 @@ export default function HomeSecond() {
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
   const cardsRef = useRef([]);
+  const cards = [
+    {
+      text: "Radio",
+      bg: "https://spacial.com/wp-content/uploads/2019/05/online-radio-advertising.jpg",
+    },
+    {
+      text: "Print",
+      bg: "https://www.collateral.co.in/upload/blogimage2/202002061122244269.jpg",
+    },
+    {
+      text: "Event",
+      bg: "https://www.shutterstock.com/image-vector/events-colorful-typography-banner-260nw-1356206768.jpg",
+    },
+    {
+      text: "Creative",
+      bg: "https://img.freepik.com/premium-photo/handdrawn-creativity-concept-with-doodles-white-background-featuring-pencil-lightbulb-books-gear-paper-plane_670147-105933.jpg?semt=ais_hybrid&w=740&q=80",
+    },
+    {
+      text: "Digital",
+      bg: "https://sagartech.co.in/blogs/wp-content/uploads/2024/10/Digital-Marketing-Strategy-Feature-image-min.webp",
+    },
+    {
+      text: "Celebrity",
+      bg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2LQU887JJHF70ktU4F95QY50145ii3j0jPw&s",
+    },
+  ];
 
   useGSAP(
     () => {
@@ -124,7 +150,7 @@ export default function HomeSecond() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
+          start: "top 5%",
           end: "+=140%",
           scrub: true,
           pin: true,
@@ -185,7 +211,7 @@ export default function HomeSecond() {
           Our <br /> Clan
         </h1>
 
-        {["Radio", "Print", "Event", "Creative", "Digital", "Celebrity"].map(
+        {/* {["Radio", "Print", "Event", "Creative", "Digital", "Celebrity"].map(
           (text, i) => (
             <div
               key={i}
@@ -195,7 +221,23 @@ export default function HomeSecond() {
               <p>{text}</p>
             </div>
           )
-        )}
+        )} */}
+
+        {cards.map((card, i) => (
+          <div
+            key={i}
+            className={`home-second-cards home-second-cards${i + 1}`}
+            ref={(el) => (cardsRef.current[i] = el)}
+            style={{
+              backgroundImage: `url(${card.bg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            {/* <p>{card.text}</p> */}
+          </div>
+        ))}
       </div>
     </div>
   );
