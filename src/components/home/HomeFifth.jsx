@@ -17,33 +17,33 @@ export default function HomeFifth() {
     () => {
       const video = videoRef2.current;
 
-      // Timeline animation
-      gsap.timeline({
+      // 🔹 Scroll-based animation (NO timeline)
+      gsap.to(videoWrapperRef2.current, {
+        scale: 1,
+        borderRadius: "0px",
+        ease: "none",
         scrollTrigger: {
           trigger: fifthSectionRef.current,
           start: "top center",
           end: "top 10%",
           scrub: true,
-          // markers: true,
+          markers: true,
         },
-      }).to(videoWrapperRef2.current, {
-        scale: 1,
-        borderRadius: "0px",
-        ease: "none",
       });
 
-      // Video play / pause
-      // ScrollTrigger.create({
-      //   trigger: fifthSectionRef.current,
-      //   start: "top center",
-      //   end: "bottom center",
-      //   onEnter: () => video.play(),
-      //   onEnterBack: () => video.play(),
-      //   onLeave: () => video.pause(),
-      //   onLeaveBack: () => video.pause(),
-      // });
+      // 🔹 Normal ScrollTrigger for video play / pause
+      ScrollTrigger.create({
+        trigger: fifthSectionRef.current,
+        start: "top center",
+        end: "bottom center",
+        // markers: true,
+        // onEnter: () => video.play(),
+        // onEnterBack: () => video.play(),
+        // onLeave: () => video.pause(),
+        // onLeaveBack: () => video.pause(),
+      });
     },
-    { scope: fifthSectionRef } // 🔥 THIS IS THE KEY
+    { scope: fifthSectionRef }
   );
 
   return (
