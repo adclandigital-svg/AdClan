@@ -159,7 +159,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeFourth() {
   const sectionRefFour = useRef(null);
-  const textRef = useRef(null);
+  const textReffour = useRef(null);
   const mediaRef1 = useRef(null);
   const mediaRef2 = useRef(null);
 
@@ -193,10 +193,6 @@ export default function HomeFourth() {
 
       mm.add("(min-width: 1200px)", () => {
         // GSAP OWNS transforms (no CSS translate)
-        gsap.set([mediaRef1.current, mediaRef2.current], {
-          yPercent: -50,
-        });
-
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: sectionRefFour.current,
@@ -207,11 +203,11 @@ export default function HomeFourth() {
             pinSpacing: true,
             anticipatePin: 1,
             invalidateOnRefresh: true,
-            // markers: true,
+            markers: true,
           },
         });
 
-        tl.from(textRef.current, {
+        tl.from(textReffour.current, {
           xPercent: -50,
           yPercent: -50,
           transform : "translate(-50%,-50%)",
@@ -249,9 +245,9 @@ export default function HomeFourth() {
   }, [index2]);
 
   return (
-    <section className="home-fouth-section-outer" ref={sectionRefFour}>
-      <div className="home-fouth-section">
-        <div className="home-fouth-section-div" ref={textRef}>
+    <section className="home-fouth-section-outer" >
+      <div className="home-fouth-section"ref={sectionRefFour}>
+        <div className="home-fouth-section-div" ref={textReffour}>
           {["Works", "Who", "Describe", "Our Potential"].map((t, i) => (
             <span key={i}>{t}</span>
           ))}
