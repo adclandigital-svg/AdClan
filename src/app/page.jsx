@@ -32,7 +32,7 @@ const HomeEight = dynamic(() => import("@/components/home/HomeEight"), {
 export default function Home() {
   return (
     <>
-      {/* <LoadingScreen/> */}
+      <LoadingScreen/>
       <Suspense fallback={<div>Loading Hero...</div>}>
         <Hero />
         <HomeSecond />
