@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import LenisProvider from "@/components/providers/LenisProvider";
+import LoadingScreen from "@/components/home/loading/LoadingScreen";
 
 export const metadata = {
   title: "AdClan",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       </head>
       <body suppressHydrationWarning>
         <LenisProvider>
+          <LoadingScreen />
           <Navbar />
           {children}
           <Footer />
