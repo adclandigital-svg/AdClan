@@ -4,7 +4,6 @@ import { Suspense } from "react";
 
 const Hero = dynamic(() => import("@/components/home/Hero"), { ssr: false });
 
-
 const HomeSecond = dynamic(() => import("@/components/home/HomeSecond"), {
   ssr: false,
 });
@@ -29,18 +28,32 @@ const HomeEight = dynamic(() => import("@/components/home/HomeEight"), {
 
 export default function Home() {
   return (
+    // <>
+    //   <Suspense fallback={<div>Loading Hero...</div>}>
+    //     <Hero />
+    //     <HomeSecond />
+    //     <HomeSeven />
+
+    //     <HomeThird />
+    //     <HomeFourth />
+    //     <HomeFifth />
+    //     <HomeSix />
+    //     <HomeEight />
+    //   </Suspense>
+    // </>
+
     <>
-      <Suspense fallback={<div>Loading Hero...</div>}>
-        <Hero />
-        <HomeSecond />
-        <HomeSeven />
-       
+      <Hero />
+      <HomeSecond />
+
+      <Suspense fallback={null}>
         <HomeThird />
-        <HomeFourth />
-         <HomeFifth />
-        <HomeSix />
-        <HomeEight/>
       </Suspense>
+
+      <HomeFourth />
+      <HomeFifth />
+      <HomeSix />
+      <HomeEight />
     </>
   );
 }
