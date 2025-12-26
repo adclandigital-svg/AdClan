@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       </head>
       <body suppressHydrationWarning>
         <LenisProvider>
-          <LoadingScreen />
+          {/* <LoadingScreen /> */}
           <Navbar />
           {children}
           <Footer />
