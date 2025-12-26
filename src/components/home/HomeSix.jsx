@@ -48,7 +48,9 @@ export default function HomeSix() {
 
   return (
     <>
-      <h2 className="home-six-section-h2">Stories <br />Behind the Strategy</h2>
+      <h2 className="home-six-section-h2">
+        <span>Stories</span> Behind the Strategy
+      </h2>
 
       <section className="home-six-section" ref={sixsectionRef}>
         <div className="home-six-first-container">
@@ -71,7 +73,8 @@ export default function HomeSix() {
           <div className="home-six-first-container2">
             <div className="home-six-first-container21">
               <p>
-                Adclan Onboard Shweta Tiwari as <br />Brand Ambassador for Kidsmate
+                Adclan Onboard Shweta Tiwari as <br />
+                Brand Ambassador for Kidsmate
               </p>
               <video
                 src="/22.mp4"
@@ -86,7 +89,8 @@ export default function HomeSix() {
 
             <div className="home-six-first-container22">
               <p>
-                Adclan Media’s Triumph with Ace <br /> Hanei: Masterclass in Campaign
+                Adclan Media’s Triumph with Ace <br /> Hanei: Masterclass in
+                Campaign
               </p>
               <video
                 src="/Recording 2025-12-12 120853.mp4"
@@ -133,6 +137,9 @@ export default function HomeSix() {
             />
           </div>
         </div>
+        <a href="/case-studies" className="home-six-read-more">
+          Read More →
+        </a>
       </section>
     </>
   );

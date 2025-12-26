@@ -1,0 +1,122 @@
+.hero-eight {
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+/* Header */
+.hero-eight-header {
+  max-width: 600px;
+  margin-bottom: 70px;
+}
+
+.hero-eight-header h2 {
+  font-size: 56px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-eight-header h2 span {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.hero-eight-header p {
+  margin-top: 14px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Testimonials */
+.hero-eight-testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Card */
+.testimonial-card {
+  padding: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card::before {
+  content: "“";
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  font-size: 120px;
+  color: rgba(0, 0, 0, 0.05);
+  font-family: serif;
+}
+
+/* .testimonial-card:hover {
+  transform: translateY(-10px);
+} */
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  background: #000;
+}
+
+/* Text color on hover */
+.testimonial-card:hover .testimonial-text,
+.testimonial-card:hover h4,
+.testimonial-card:hover span {
+  color: #fff;
+}
+
+
+/* Highlighted card */
+/* .testimonial-card.highlight {
+  background: #000;
+}
+
+.testimonial-card.highlight .testimonial-text,
+.testimonial-card.highlight h4,
+.testimonial-card.highlight span {
+  color: #fff;
+} */
+
+/* Text */
+.testimonial-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
+}
+
+/* User */
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial-user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-user h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.testimonial-user span {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-eight-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-eight-header h2 {
+    font-size: 40px;
+  }
+}
