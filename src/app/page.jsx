@@ -43,17 +43,16 @@ export default function Home() {
     // </>
 
     <>
-      <Hero />
+      {/* <Hero />
       <HomeSecond />
       <HomeSeven />
       <Suspense fallback={null}>
         <HomeThird />
       </Suspense>
-
       <HomeFourth />
       <HomeFifth />
       <HomeSix />
-      <HomeEight />
+      <HomeEight /> */}
     </>
   );
 }
