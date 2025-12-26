@@ -45,7 +45,7 @@ export default function Home() {
     <>
       <Hero />
       <HomeSecond />
-
+      <HomeSeven />
       <Suspense fallback={null}>
         <HomeThird />
       </Suspense>
