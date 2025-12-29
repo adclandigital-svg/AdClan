@@ -33,7 +33,6 @@ export default function Home() {
         <Hero />
         <HomeSecond />
         <HomeSeven />
-
         <HomeThird />
         <HomeFourth />
         <HomeFifth />
