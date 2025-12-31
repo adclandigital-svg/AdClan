@@ -70,7 +70,7 @@ export default function ContactPage() {
         <div className="scroll-indicator">↓</div>
         <div className="contact-hero-video">
           <video
-            src="https://videocdn.cdnpk.net/videos/884505b6-5048-5d3a-9fbf-2862cdc83d67/horizontal/previews/clear/large.mp4?token=exp=1767097676~hmac=dfb9bfd4fb1b6fa4d21fd33d94285128c4390088bfae47945e1f5282bef7a45d" // change path if needed
+            src="/contact/phone.mp4" // change path if needed
             autoPlay
             muted
             loop
