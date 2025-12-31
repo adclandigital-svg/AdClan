@@ -42,12 +42,28 @@ export default function ProjectDetailPage() {
         });
       });
       gsap.utils.toArray(".gallery-slider").forEach((slider) => {
-        const totalWidth = slider.scrollWidth;
+        const items = slider.children;
+
+        // Clone items for seamless loop
+        Array.from(items).forEach((item) => {
+          const clone = item.cloneNode(true);
+          slider.appendChild(clone);
+        });
+
+        const totalWidth = slider.scrollWidth / 2;
+
+        gsap.set(slider, { x: 0 });
+
         gsap.to(slider, {
-          x: `-${totalWidth}px`,
-          ease: "linear",
+          x: -totalWidth,
           duration: 30,
+          ease: "linear",
           repeat: -1,
+          modifiers: {
+            x: (x) => {
+              return `${parseFloat(x) % totalWidth}px`;
+            },
+          },
         });
       });
     },
@@ -58,21 +74,22 @@ export default function ProjectDetailPage() {
     <main className="project-detail-page" ref={pageRef}>
       {/* HERO SECTION */}
       <section className="project-hero">
-         <h1 className="project-hero-title">
-          {/* {project.title.split(" ").map((word, i) => (
-            <span key={i}>{word}</span>
-          ))} */}
-          {project.title}
-        </h1>
-        <p className="project-intro">{project.intro}</p>
-        <div className="project-meta-info">
-          <span>{project.category}</span>
-          <span>{project.year}</span>
-          <span>{project.client}</span>
+        <div className="hero-text">
+          <p className="hero-text-breadcrums">
+            [ <span>Home</span> &gt; <span>Projects</span> &gt;{" "}
+            <span>{project.title}</span> ]
+          </p>
+          <h1 className="project-hero-title">{project.title}</h1>
+          <p className="project-intro">{project.intro}</p>
+
+          {/* META INFO */}
+          <div className="project-meta-info">
+            <span>[ {project.category} ]</span>
+            <span>[ {project.year} ]</span>
+            <span>[ {project.client} ]</span>
+          </div>
         </div>
-        {project.sections
-          .filter((s) => s.type === "hero")
-          .map((hero, i) =>
+        {project.sections?.filter((s) => s.type === "hero")?.map((hero, i) =>
             hero.mediaType === "image" ? (
               <div className="hero-media" key={i}>
                 <img src={hero.src} alt={project.title} />
@@ -83,7 +100,6 @@ export default function ProjectDetailPage() {
               </div>
             )
           )}
-       
       </section>
 
       {/* CONTENT SECTIONS */}
@@ -116,9 +132,9 @@ export default function ProjectDetailPage() {
                   const isEven = j % 2 === 0;
                   return (
                     <div
-                      className={`media-row-item ${hasCaption ? "split" : "full"} ${
-                        hasCaption && isEven ? "reverse" : ""
-                      }`}
+                      className={`media-row-item ${
+                        hasCaption ? "split" : "full"
+                      } ${hasCaption && isEven ? "reverse" : ""}`}
                       key={j}
                     >
                       {hasCaption && (
@@ -128,7 +144,13 @@ export default function ProjectDetailPage() {
                       )}
                       <div className="project-media">
                         {item.mediaType === "video" ? (
-                          <video src={item.src} muted loop autoPlay playsInline />
+                          <video
+                            src={item.src}
+                            muted
+                            loop
+                            autoPlay
+                            playsInline
+                          />
                         ) : (
                           <img src={item.src} alt="" />
                         )}
@@ -148,7 +170,17 @@ export default function ProjectDetailPage() {
                   {sec.items.map((item, j) => (
                     <div className="project-media" key={j}>
                       {item.mediaType === "video" ? (
-                        <video src={item.src} muted loop autoPlay playsInline />
+                        <video
+                          src={item.src}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          preload="metadata"
+                          onLoadedMetadata={(e) => {
+                            e.currentTarget.volume = 0;
+                          }}
+                        />
                       ) : (
                         <img src={item.src} alt="" />
                       )}

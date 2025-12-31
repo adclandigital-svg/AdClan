@@ -47,7 +47,7 @@ export default function HomeFourth() {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: sectionRefFour.current,
-            start: "top 0%",
+            start: "top 10%",
             end: "bottom -80%",
             scrub: 1,
             pin: true,
@@ -56,11 +56,11 @@ export default function HomeFourth() {
         });
 
         tl.from(textReffour.current, {
-          xPercent: -50,
+          xPercent: -100,
           yPercent: -50,
         });
-        tl.from(mediaRef1.current, { opacity: 0, yPercent: -150 }, "<");
-        tl.from(mediaRef2.current, { opacity: 0, yPercent: 150 }, "<");
+        tl.from(mediaRef1.current, { opacity: 0, yPercent: -200 }, "<");
+        tl.from(mediaRef2.current, { opacity: 0, yPercent: 200 }, "<");
 
         return () => tl.kill();
       });

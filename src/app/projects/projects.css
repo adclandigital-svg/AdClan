@@ -1,18 +1,17 @@
 /* BASE */
 .projects-page {
-  background: #ffffff;
   color: #0e0e0e;
-  font-family: "Inter", sans-serif;
   padding-bottom: 200px;
 }
 
 /* HERO */
 .portfolio-hero {
-  min-height: 90vh;
+  min-height: 70vh;
   padding: 0 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .portfolio-hero h1 {
@@ -30,6 +29,10 @@
   margin-top: 32px;
   font-size: 18px;
   color: #555;
+  text-align: right;
+  position: absolute;
+  right: 10%;
+  bottom: 15%;
 }
 
 /* TABS */
@@ -150,20 +153,63 @@
 
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
-  .portfolio-hero,
-  .projects-tabs,
-  .projects-grid {
-    padding-left: 6%;
-    padding-right: 6%;
+@media (max-width: 768px) {
+
+  /* HERO */
+  .portfolio-hero {
+    min-height: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
+  .portfolio-hero h1 {
+    font-size: clamp(42px, 10vw, 72px);
+  }
+
+  .portfolio-hero p {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 24px;
+    text-align: left;
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  /* TABS */
+  .projects-tabs {
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  .projects-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  /* GRID */
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 80px;
+    gap: 60px;
   }
 
-  .portfolio-hero {
-    min-height: 70vh;
+  /* CARD */
+  .project-meta h3 {
+    font-size: 20px;
+  }
+
+  .project-meta p {
+    font-size: 14px;
+  }
+
+  /* LOAD MORE */
+  .load-more-container {
+    margin-top: 60px;
   }
 }
+

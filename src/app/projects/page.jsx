@@ -4,67 +4,16 @@ import React, { useRef, useState } from "react";
 import "./projects.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { PROJECTS } from "@/data/projectData";
+import { useRouter } from "next/navigation";
 
-const TABS = ["All", "Branding", "Digital", "Film"];
-
-// initial projects
-const PROJECTS = [
-  {
-    id: 1,
-    title: "Luxury Brand Identity",
-    description:
-      "Visual identity and design language for a premium real estate brand.",
-    category: "Branding",
-    type: "image",
-    src: "https://picsum.photos/1800/1200?random=21",
-  },
-  {
-    id: 2,
-    title: "Corporate Story Film",
-    description: "Narrative-driven brand film highlighting vision and culture.",
-    category: "Film",
-    type: "video",
-    src: "https://www.w3schools.com/html/mov_bbb.mp4",
-  },
-  {
-    id: 3,
-    title: "Digital Product Launch",
-    description:
-      "Integrated digital campaign across web, social, and performance.",
-    category: "Digital",
-    type: "image",
-    src: "https://picsum.photos/1800/1200?random=22",
-  },
-  {
-    id: 4,
-    title: "Real Estate Brand Film",
-    description: "Cinematic storytelling for a landmark residential launch.",
-    category: "Film",
-    type: "video",
-    src: "https://www.w3schools.com/html/movie.mp4",
-  },
-  {
-    id: 5,
-    title: "E-commerce Branding",
-    description: "Modern brand identity for a luxury online fashion store.",
-    category: "Branding",
-    type: "image",
-    src: "https://picsum.photos/1800/1200?random=23",
-  },
-  {
-    id: 6,
-    title: "Social Media Campaign",
-    description: "Digital campaign targeting social media engagement.",
-    category: "Digital",
-    type: "image",
-    src: "https://picsum.photos/1800/1200?random=24",
-  },
-];
+const TABS = ["All", ...Array.from(new Set(PROJECTS?.map((p) => p?.category)))];
 
 export default function ProjectsPage() {
   const pageRef = useRef(null);
   const [activeTab, setActiveTab] = useState("All");
   const [visibleCount, setVisibleCount] = useState(4);
+  const router = useRouter();
 
   const filteredProjects =
     activeTab === "All"
@@ -81,7 +30,6 @@ export default function ProjectsPage() {
         opacity: 0,
         stagger: 0.15,
         duration: 0.6,
-
       });
 
       // Step 2: Animate project descriptions after hero animation
@@ -132,7 +80,10 @@ export default function ProjectsPage() {
 
         <p>
           A creative agency crafting brand identities, digital experiences, and
-          films that connect culture and commerce.
+          films that connect culture and commerce. We blend strategy,
+          storytelling, and design to build meaningful brands, create immersive
+          experiences, and deliver work that resonates across platforms,
+          audiences, and time.
         </p>
       </section>
 
@@ -151,8 +102,12 @@ export default function ProjectsPage() {
 
       {/* GRID */}
       <section className="projects-grid">
-        {filteredProjects.map((project) => (
-          <article className="project-card big" key={project.id}>
+        {filteredProjects?.map((project, key) => (
+          <article
+            className="project-card big"
+            key={key}
+            onClick={() => router.push(`/projects/${project?.slug}`)}
+          >
             <div className="project-media">
               {project.type === "video" ? (
                 <video src={project.src} muted loop autoPlay playsInline />
@@ -164,7 +119,10 @@ export default function ProjectsPage() {
             <div className="project-meta">
               <span>[ {project.category} ]</span>
               <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              <p>
+                {project.intro.split(" ").slice(0, 30).join(" ")}
+                {project.intro.split(" ").length > 30 && "..."}
+              </p>
             </div>
           </article>
         ))}

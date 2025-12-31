@@ -43,7 +43,7 @@
 }
 
 /* BEAUTIFUL HOVER EFFECT */
-.nav-link:hover {
+.nav-link:hover { 
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
@@ -100,9 +100,65 @@
   list-style: none;
 }
 
+/* SOCIAL ICONS – DESKTOP */
+.nav-socials {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-socials span {
+  cursor: pointer;
+  font-size: 18px;
+  color: #000;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.nav-socials span:hover {
+  opacity: 1;
+  transform: translateY(-3px) scale(1.1);
+}
+
+/* MOBILE SOCIALS */
+.mobile-socials {
+  padding-left: 15px;
+  margin-top: auto;
+  padding-top: 40px;
+  display: flex;
+  justify-content: left;
+  gap: 24px;
+}
+
+.mobile-socials span {
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.mobile-socials span:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 90;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .desktop { display: none; }
-  .hamburger { display: flex; }
+  .desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
+
 

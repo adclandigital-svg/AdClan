@@ -35,7 +35,8 @@
 
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -43,28 +44,31 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function LenisProvider({ children }) {
+  const lenisRef = useRef(null);
+  const pathname = usePathname();
+
+  /* INIT LENIS */
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,          // ⬅️ smoother glide
+      duration: 1.2,
       easing: (t) => 1 - Math.pow(1 - t, 3), // easeOutCubic
       smoothWheel: true,
-      smoothTouch: false,     // disable on mobile (important)
+      smoothTouch: false,
       wheelMultiplier: 1,
       touchMultiplier: 1.5,
     });
 
-    // 🔗 Sync Lenis → ScrollTrigger
+    lenisRef.current = lenis;
+
+    // Sync with ScrollTrigger
     lenis.on("scroll", ScrollTrigger.update);
 
-    // 🧠 GSAP drives Lenis RAF
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000);
     });
 
-    // 🚫 Disable GSAP lag smoothing
     gsap.ticker.lagSmoothing(0);
 
-    // 🧹 Cleanup
     return () => {
       gsap.ticker.remove((time) => {
         lenis.raf(time * 1000);
@@ -73,5 +77,15 @@ export default function LenisProvider({ children }) {
     };
   }, []);
 
+  /* 🔝 SCROLL TO TOP ON ROUTE CHANGE */
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, {
+        immediate: true, // important for route change
+      });
+    }
+  }, [pathname]);
+
   return <>{children}</>;
 }
+
