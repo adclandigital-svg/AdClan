@@ -16,39 +16,39 @@
 //       id: "01",
 //       title: "Branding & Identity",
 //       desc: "We craft strong brand identities that connect culture and commerce through strategy, design, and storytelling.",
-//       image: "https://picsum.photos/seed/branding/1600/2000",
+//       src: "https://picsum.photos/seed/branding/1600/2000",
 //     },
 //     {
 //       id: "02",
 //       title: "Creative & Marketing",
 //       desc: "Creative-led marketing campaigns designed to build awareness, engagement, and long-term brand value.",
-//       image: "https://picsum.photos/seed/creative/1600/2000",
+//       src: "https://picsum.photos/seed/creative/1600/2000",
 //       reverse: true,
 //     },
 //     {
 //       id: "03",
 //       title: "Digital Marketing",
 //       desc: "Performance-driven digital marketing across social, search, and content to scale brands online.",
-//       image: "https://picsum.photos/seed/digital/1600/2000",
+//       src: "https://picsum.photos/seed/digital/1600/2000",
 //     },
 //     {
 //       id: "04",
 //       title: "BTL Activities",
 //       desc: "On-ground activations, events, and experiential marketing that create real-world brand impact and engagement.",
-//       image: "https://picsum.photos/seed/btl/1600/2000",
+//       src: "https://picsum.photos/seed/btl/1600/2000",
 //       reverse: true,
 //     },
 //     {
 //       id: "05",
 //       title: "Production & Films",
 //       desc: "High-end film and content production that elevates brands through powerful visual storytelling.",
-//       image: "https://picsum.photos/seed/production/1600/2000",
+//       src: "https://picsum.photos/seed/production/1600/2000",
 //     },
 //     {
 //       id: "06",
 //       title: "Web Development",
 //       desc: "Modern, fast, and scalable websites built with performance, usability, and aesthetics in mind.",
-//       image: "https://picsum.photos/seed/web/1600/2000",
+//       src: "https://picsum.photos/seed/web/1600/2000",
 //       reverse: true,
 //     },
 //   ];
@@ -220,17 +220,21 @@ export default function Services() {
       });
 
       /* WHY US CARDS */
-      gsap.from(".why-card", {
-        scrollTrigger: {
-          trigger: whyRef.current,
-          start: "top 75%",
-        },
-        opacity: 0,
-        y: 120,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power3.out",
-      });
+      const whyCards = gsap.utils.toArray(".why-card");
+
+      if (whyCards.length) {
+        gsap.from(whyCards, {
+          scrollTrigger: {
+            trigger: whyRef.current,
+            start: "top 75%",
+          },
+          opacity: 0,
+          y: 120,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+        });
+      }
     },
     { scope: heroRef } // keeps animations scoped + clean
   );
@@ -240,39 +244,45 @@ export default function Services() {
       id: "01",
       title: "Branding & Identity",
       desc: "We craft strong brand identities that connect culture and commerce through strategy, design, and storytelling.",
-      image: "https://picsum.photos/seed/branding/1600/1600",
+      src: "https://videocdn.cdnpk.net/videos/af53036f-fe27-5c45-b1fe-8c085a047581/horizontal/previews/watermarked/large.mp4",
+      mediaType: "video",
     },
     {
       id: "02",
       title: "Creative & Marketing",
       desc: "Creative-led marketing campaigns designed to build awareness, engagement, and long-term brand value.",
-      image: "https://picsum.photos/seed/creative/1600/1600",
+      src: "https://videocdn.cdnpk.net/videos/81181fa2-7e77-5951-9493-32a23387b4bc/horizontal/previews/watermarked/large.mp4",
+      mediaType: "video",
       reverse: true,
     },
     {
       id: "03",
       title: "Digital Marketing",
       desc: "Performance-driven digital marketing across social, search, and content to scale brands online.",
-      image: "https://picsum.photos/seed/digital/1600/1600",
+      src: "https://videocdn.cdnpk.net/videos/289cb7b4-419e-5aca-b1da-dcea15ed7514/horizontal/previews/watermarked/large.mp4",
+      mediaType: "video",
     },
     {
       id: "04",
       title: "BTL Activities",
       desc: "On-ground activations, events, and experiential marketing that create real-world brand impact and engagement.",
-      image: "https://picsum.photos/seed/btl/1600/1600",
+      src: "https://picsum.photos/seed/btl/1600/1600",
+      mediaType: "image",
       reverse: true,
     },
     {
       id: "05",
       title: "Production & Films",
       desc: "High-end film and content production that elevates brands through powerful visual storytelling.",
-      image: "https://picsum.photos/seed/production/1600/1600",
+      src: "https://picsum.photos/seed/production/1600/1600",
+      mediaType: "image",
     },
     {
       id: "06",
       title: "Web Development",
       desc: "Modern, fast, and scalable websites built with performance, usability, and aesthetics in mind.",
-      image: "https://picsum.photos/seed/web/1600/1600",
+      src: "https://videocdn.cdnpk.net/videos/4e2937ab-58fd-5693-af4f-c2def100d8ca/horizontal/previews/watermarked/large.mp4",
+      mediaType: "video",
       reverse: true,
     },
   ];
@@ -304,7 +314,11 @@ export default function Services() {
             className={`service-row ${service.reverse ? "reverse" : ""}`}
           >
             <div className="service-image">
-              <img src={service.image} alt={service.title} />
+              {service.mediaType == "video" ? (
+                <video src={service.src} autoPlay muted loop playsInline />
+              ) : (
+                <img src={service.src} alt={service.title} />
+              )}
             </div>
 
             <div className="service-content">
@@ -321,7 +335,7 @@ export default function Services() {
 
       {/* WHY US */}
       <section className="why-us" ref={whyRef}>
-        <h2>WHY CHOOSE US</h2>
+        <h2>DESIGNED TO STAND OUT</h2>
 
         <div className="why-grid">
           <div className="why-card">

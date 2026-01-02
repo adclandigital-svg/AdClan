@@ -1,7 +1,18 @@
-import React from 'react'
+"use client";
 
-export default function page() {
+import dynamic from "next/dynamic";
+
+const MagazineBook = dynamic(
+  () => import("./components/MagazineBook"),
+  { ssr: false }
+);
+import AboutHero from "./components/Hero";
+
+export default function Page() {
   return (
-    <div>page</div>
-  )
+    <div>
+      {/* <AboutHero/> */}
+      <MagazineBook />
+    </div>
+  );
 }
