@@ -2,26 +2,13 @@
 
 import React, { useRef, useEffect, useMemo } from "react";
 import "./homesix.css";
+import { blogs } from "@/data/blogs";
+import { useRouter } from "next/navigation";
+
 
 export default function HomeSix() {
   const sixsectionRef = useRef(null);
-
-  // 🎥 Pool of videos
-  const videoPool = useMemo(
-    () => [
-      "/11.mp4",
-      "/22.mp4",
-      "/v1.mp4",
-      "/Recording 2025-12-12 120853.mp4",
-      "/9559153-sd_960_506_25fps.mp4",
-      "/11.mp4",
-    ],
-    []
-  );
-
-  // 🎲 Pick random videos (stable per render)
-  const getRandomVideo = () =>
-    videoPool[Math.floor(Math.random() * videoPool.length)];
+  const router=useRouter()
 
   useEffect(() => {
     const section = sixsectionRef.current;
@@ -54,13 +41,12 @@ export default function HomeSix() {
 
       <section className="home-six-section" ref={sixsectionRef}>
         <div className="home-six-first-container">
-          <div className="home-six-first-container1">
+          <div className="home-six-first-container1" onClick={()=>router.push(`/blogs/${blogs?.[0]?.slug}`)}>
             <p>
-              Adclan Media – The Marketing Agency <br />
-              You Were Looking For in Delhi NCR
+              {blogs?.[0]?.title}
             </p>
             <video
-              src="/11.mp4"
+              src={blogs?.[0].video}
               autoPlay
               muted
               loop
@@ -70,11 +56,10 @@ export default function HomeSix() {
             />
           </div>
 
-          <div className="home-six-first-container2">
-            <div className="home-six-first-container21">
+          <div className="home-six-first-container2" >
+            <div className="home-six-first-container21" onClick={()=>router.push(`/blogs/${blogs?.[1]?.slug}`)}>
               <p>
-                Adclan Onboard Shweta Tiwari as <br />
-                Brand Ambassador for Kidsmate
+                {blogs?.[1]?.title}
               </p>
               <video
                 src="/22.mp4"
@@ -87,10 +72,9 @@ export default function HomeSix() {
               />
             </div>
 
-            <div className="home-six-first-container22">
+            <div className="home-six-first-container22" onClick={()=>router.push(`/blogs/${blogs?.[2]?.slug}`)}>
               <p>
-                Adclan Media’s Triumph with Ace <br /> Hanei: Masterclass in
-                Campaign
+                 {blogs?.[2]?.title}
               </p>
               <video
                 src="/Recording 2025-12-12 120853.mp4"
@@ -106,9 +90,9 @@ export default function HomeSix() {
         </div>
 
         <div className="home-six-second-container">
-          <div className="home-six-second-container1">
+          <div className="home-six-second-container1" onClick={()=>router.push(`/blogs/${blogs?.[3]?.slug}`)}>
             <p>
-              Adclan Media Organizes <br /> Galaxy Group Interview
+               {blogs?.[3]?.title}
             </p>
             <video
               src="/v10.mp4"
@@ -121,10 +105,9 @@ export default function HomeSix() {
             />
           </div>
 
-          <div className="home-six-second-container1">
+          <div className="home-six-second-container1" onClick={()=>router.push(`/blogs/${blogs?.[4]?.slug}`)}>
             <p>
-              Adclan Media – The Marketing Agency You Were Looking For in Delhi
-              NCR
+               {blogs?.[4]?.title}
             </p>
             <video
               src="/9559153-sd_960_506_25fps.mp4"
@@ -137,7 +120,7 @@ export default function HomeSix() {
             />
           </div>
         </div>
-        <a href="/case-studies" className="home-six-read-more">
+        <a href="/blogs" className="home-six-read-more">
           Read More →
         </a>
       </section>

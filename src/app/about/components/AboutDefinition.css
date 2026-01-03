@@ -1,0 +1,63 @@
+.about-definition {
+  background: #fff;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.definition-container {
+  display: flex;
+  align-items: start;
+  max-width: 1200px; /* slightly wider container */
+  width: 100%;
+  gap: 5rem;
+  /* flex-wrap: wrap-reverse; */
+}
+
+/* IMAGE — takes more space */
+.definition-image {
+  flex: 0 0 50%; /* ⬅️ increase image width */
+  display: flex;
+  justify-content: center;
+}
+
+.definition-image img {
+  width: 100%;
+  max-width: 720px; /* ⬅️ larger image */
+  object-fit: cover;
+}
+
+/* TEXT — takes less space */
+.definition-text {
+  flex: 0 0 30%; /* ⬅️ reduce text width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.definition-text p {
+  font-size: 14px;
+  line-height: 2;
+  color: hsla(0, 0%, 20%, 0.76);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .definition-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .definition-text h2 {
+    font-size: 2rem;
+  }
+
+  .definition-image img {
+    max-width: 100%;
+  }
+}
+
+
+

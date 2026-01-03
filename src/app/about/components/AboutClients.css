@@ -1,0 +1,55 @@
+.about-clients {
+  background: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.clients-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.client-logo {
+  flex: 0 1 150px; /* width of each logo box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.client-logo img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .client-logo {
+    flex: 0 1 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-logo {
+    flex: 0 1 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-logo {
+    flex: 0 1 80px;
+  }
+}

@@ -1,0 +1,124 @@
+
+/* second section */
+.about-process {
+  background: #fff;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.process-wrap {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.process-wrap-div1,.process-wrap-div2,.process-wrap-div3{
+  width: 450px;
+  height: 100px;
+ /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.process-wrap-phus{
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.301);
+}
+
+.process-wrap span {
+  display: block;
+  font-size: 110px;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.301);
+  line-height: 1.2;
+  letter-spacing: 10px;
+   /* background-color: red; */
+}
+.slide-wrap{
+  height: 400%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* ========================= */
+/* Large screens (default OK) */
+/* ========================= */
+
+
+/* ========================= */
+/* Tablets (≤ 1024px) */
+/* ========================= */
+@media (max-width: 1024px) {
+  .process-wrap {
+    width: 100%;
+  }
+
+  .process-wrap-div1,
+  .process-wrap-div2,
+  .process-wrap-div3 {
+    width: 360px;
+    height: 90px;
+  }
+
+  .process-wrap span {
+    font-size: 80px;
+    letter-spacing: 6px;
+  }
+}
+
+
+/* ========================= */
+/* Mobile (≤ 768px) */
+/* ========================= */
+@media (max-width: 768px) {
+  .about-process {
+    padding: 4rem 1rem;
+  }
+
+  .process-wrap {
+    gap: 0.5rem;
+  }
+
+  .process-wrap-div1,
+  .process-wrap-div2,
+  .process-wrap-div3 {
+    width: 100%;
+    max-width: 300px;
+    height: 70px;
+  }
+
+  .process-wrap span {
+    font-size: 48px;
+    letter-spacing: 3px;
+  }
+
+  .slide-wrap {
+    height: 300%;
+  }
+}
+
+
+/* ========================= */
+/* Small Mobile (≤ 480px) */
+/* ========================= */
+@media (max-width: 480px) {
+  .process-wrap-div1,
+  .process-wrap-div2,
+  .process-wrap-div3 {
+    height: 40px;
+  }
+
+  .process-wrap span {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+}

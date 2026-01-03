@@ -1,0 +1,65 @@
+.about-founder {
+  padding: 8rem 5%;
+  /* background: #c58e8e; */
+  margin-top: -5%;
+}
+
+.founder-wrap {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.founder-img img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 12px;
+  filter: grayscale(100%);
+}
+
+.founder-content {
+  max-width: 520px;
+}
+
+.founder-role {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+}
+
+.founder-name {
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+}
+
+.founder-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .founder-wrap {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .founder-img img {
+    margin: auto;
+  }
+
+  .founder-content {
+    margin: auto;
+  }
+}

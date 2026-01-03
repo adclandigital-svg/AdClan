@@ -1,0 +1,108 @@
+/* ========================= */
+/* Staircase Section Wrapper */
+/* ========================= */
+.about-stairs {
+  background: #fff;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Container */
+.stairs-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  /* background-color: antiquewhite; */
+}
+
+/* ========================= */
+/* Each Stair Line */
+.stairs-line {
+    width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Staggered margins for staircase effect */
+.stairs-line.line1 {
+  margin-left: 0px;
+}
+.stairs-line.line2 {
+  margin-left: 400px;
+}
+.stairs-line.line3 {
+  margin-left: 800px;
+}
+
+/* Heading */
+.stairs-line h3 {
+  font-size: 20px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 5px;
+  letter-spacing: 7px;
+}
+
+/* Paragraphs */
+.stairs-line p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 0rem;
+  line-height: 1.5;
+}
+
+/* ========================= */
+/* Responsive Styles */
+/* ========================= */
+
+/* Tablets ≤ 1024px */
+@media (max-width: 1024px) {
+  .stairs-line.line2 {
+    margin-left: 2rem;
+  }
+  .stairs-line.line3 {
+    margin-left: 4rem;
+  }
+  .stairs-line h3 {
+    font-size: 2rem;
+  }
+  .stairs-line p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+/* Mobile ≤ 768px */
+@media (max-width: 768px) {
+  .about-stairs {
+    padding: 4rem 1rem;
+  }
+  .stairs-line.line1,
+  .stairs-line.line2,
+  .stairs-line.line3 {
+    margin-left: 0;
+  }
+  .stairs-line h3 {
+    font-size: 1.8rem;
+  }
+  .stairs-line p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* Small Mobile ≤ 480px */
+@media (max-width: 480px) {
+  .stairs-line h3 {
+    font-size: 1.6rem;
+  }
+  .stairs-line p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}

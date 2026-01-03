@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { PageFlip } from "page-flip";
+import "./magzine.css";
 
 export default function MagazineBook() {
   const bookRef = useRef(null);
@@ -14,7 +15,7 @@ export default function MagazineBook() {
     const init = requestAnimationFrame(() => {
       pageFlip.current = new PageFlip(bookRef.current, {
         width: 400,
-        height: 520,
+        height: 400,
         size: "stretch",
         showCover: false,
         useMouseEvents: true,
@@ -28,12 +29,12 @@ export default function MagazineBook() {
       });
 
       pageFlip.current.loadFromImages([
-        "/v1.jpg",
-        "/v2.jpg",
-        "/v3.jpg",
-        "/v4.jpg",
-        "/v5.jpg",
-        "/v6.jpg",
+        "/m1.avif",
+        "/m2.avif",
+        "/m1.avif",
+        "/m2.avif",
+        "/m1.avif",
+        "/m2.avif",
       ]);
     });
 
@@ -44,16 +45,12 @@ export default function MagazineBook() {
   }, []);
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", padding: "80px 0" }}>
-      <div
-        ref={bookRef}
-        style={{
-          width: "100%",
-          maxWidth: "900px",
-          height: "560px",
-          cursor: "grab",
-        }}
-      />
+    <div className="magazine-wrapper">
+      <div ref={bookRef} className="magazine-book" />
     </div>
   );
 }
+
+
+
+

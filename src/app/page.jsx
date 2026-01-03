@@ -13,9 +13,6 @@ const HomeThird = dynamic(() => import("@/components/home/HomeThird"), {
 const HomeFourth = dynamic(() => import("@/components/home/HomeFourth"), {
   ssr: false,
 });
-// const HomeFifth = dynamic(() => import("@/components/home/HomeFifth"), {
-//   ssr: false,
-// });
 const HomeSix = dynamic(() => import("@/components/home/HomeSix"), {
   ssr: false,
 });
@@ -35,7 +32,6 @@ export default function Home() {
         <HomeSeven />
         <HomeFourth />
         <HomeThird />
-        {/* <HomeFifth /> */}
         <HomeSix />
         <HomeEight />
       </Suspense>

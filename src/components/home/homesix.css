@@ -204,6 +204,7 @@
 .home-six-second-container2 p {
   background-color: rgba(255, 255, 255, 0);
   z-index: 2; /* ensure <p> is above image */
+  white-space: pre-line;
 }
 
 .home-six-first-container1 img,
