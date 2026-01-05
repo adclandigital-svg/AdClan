@@ -1,0 +1,59 @@
+.cookies-page {
+  background: #fff;
+  padding: 50px 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.cookies-page .cookies-container {
+  max-width: 780px;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.55;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.cookies-page h1 {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cookies-page .updated {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 16px;
+}
+
+.cookies-page h2 {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.cookies-page p,
+.cookies-page li {
+  font-size: 0.93rem;
+  margin-bottom: 10px;
+}
+
+.cookies-page ul {
+  padding-left: 16px;
+}
+
+.cookies-page a {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .cookies-page h1 {
+    text-align: left;
+  }
+
+  .cookies-page .cookies-page {
+    padding-top: 30px;
+  }
+}

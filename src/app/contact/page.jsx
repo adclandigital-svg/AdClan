@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./contact.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,6 +13,10 @@ export default function ContactPage() {
   const heroRef = useRef([]);
   const leftRef = useRef(null);
   const formRef = useRef(null);
+
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+  const [errors, setErrors] = useState({});
 
   useGSAP(
     () => {
@@ -50,6 +54,41 @@ export default function ContactPage() {
     },
     { scope: pageRef }
   );
+
+
+  /* ---------- SUBMIT ---------- */
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("");
+
+    const form = formRef.current;
+    const payload = {
+      name: form[0].value.trim(),
+      email: form[1].value.trim(),
+      company: form[2].value.trim(),
+      message: form[3].value.trim(),
+    };
+    console.log(payload);
+    setErrors({});
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+      setStatus(data.message);
+
+      if (data.success) form.reset();
+    } catch {
+      setStatus("Something went wrong. Please try again.");
+    }
+
+    setLoading(false);
+  };
 
   return (
     <main className="contact-page" ref={pageRef}>
@@ -108,12 +147,21 @@ export default function ContactPage() {
 
         {/* RIGHT */}
         <div className="contact-right">
-          <form className="contact-form" ref={formRef}>
-            <input type="text" placeholder="Your name" required />
-            <input type="email" placeholder="Email address" required />
-            <input type="text" placeholder="Company / Brand" />
+          <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
+
+            <input type="text" placeholder="Your name"  required/>
+
+            <input type="email" placeholder="Email address" required/>
+
+            <input type="text" placeholder="Company / Brand" required/>
+
             <textarea placeholder="Tell us about your project" required />
-            <button type="submit">Start the conversation →</button>
+
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Start the conversation →"}
+            </button>
+
+            {status && <p className="form-status">{status}</p>}
           </form>
         </div>
       </section>

@@ -44,7 +44,11 @@ export default function Footer() {
               <Link href="/projects">Work study?</Link>
             </li>
             <li>
-              <Link href="/projects">Read our stories</Link>
+              <Link href="/blogs">Read our stories</Link>
+            </li>
+           
+            <li>
+              <Link href="/career"> Work With Adclan</Link>
             </li>
             <li>
               <Link href="/contact">Reach us</Link>
@@ -60,7 +64,7 @@ export default function Footer() {
               <Link href="/privacy-policy">Privacy Policy</Link>
             </li>
             <li>
-              <Link href="/terms-of-service">Terms of Service</Link>
+              <Link href="/term-and-condition">Terms of Condition</Link>
             </li>
             <li>
               <Link href="/cookie-policy">Cookie Policy</Link>
