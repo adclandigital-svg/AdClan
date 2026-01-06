@@ -13,69 +13,15 @@ export default function LoadingScreen({ onComplete }) {
   const [ready, setReady] = useState(false); // enable Enter after intro
 
   useEffect(() => {
-    if (!videoWrapperRef.current) return;
+    if (!videoWrapperRef?.current) return;
 
-    const video = videoWrapperRef.current.querySelector("video");
+    const video = videoWrapperRef?.current?.querySelector("video");
     if (!video) return;
 
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
-
-      // const handleVideoEnd = () => {
-      //   // 🖥 DESKTOP
-      //   mm.add("(min-width: 1024px)", () => {
-      //     const tl = gsap.timeline({
-      //       defaults: { ease: "power3.out" },
-      //       onComplete: () => setReady(true),
-      //     });
-
-      //     tl.to(videoWrapperRef.current, {
-      //       x: "-60%",
-      //       duration: 1,
-      //       ease: "power4.inOut",
-      //     });
-
-      //     tl.fromTo(
-      //       textRef.current.children,
-      //       { opacity: 0, y: 30 },
-      //       {
-      //         opacity: 1,
-      //         y: 0,
-      //         duration: 0.9,
-      //         stagger: 0.25,
-      //       },
-      //       "-=0.3"
-      //     );
-      //   });
-
-      //   // 📱 MOBILE
-      //   mm.add("(max-width: 1023px)", () => {
-      //     const tl = gsap.timeline({
-      //       defaults: { ease: "power3.out" },
-      //       onComplete: () => setReady(true),
-      //     });
-
-      //     tl.to(videoWrapperRef.current, {
-      //       y: "-40%",
-      //       duration: 0.8,
-      //       ease: "power4.inOut",
-      //     });
-
-      //     tl.fromTo(
-      //       textRef.current.children,
-      //       { opacity: 0, y: 30 },
-      //       {
-      //         opacity: 1,
-      //         y: 0,
-      //         duration: 0.7,
-      //         stagger: 0.2,
-      //       },
-      //       "-=0.3"
-      //     );
-      //   });
-      // };
       const handleVideoEnd = () => {
-        const textChildren = textRef.current?.children;
+        const textChildren = textRef?.current?.children;
         if (!textChildren) return;
 
         mm.add("(min-width: 1024px)", () => {
@@ -84,7 +30,7 @@ export default function LoadingScreen({ onComplete }) {
             onComplete: () => setReady(true),
           });
 
-          tl.to(videoWrapperRef.current, {
+          tl.to(videoWrapperRef?.current, {
             x: "-60%",
             duration: 1,
             ease: "power4.inOut",
@@ -109,7 +55,7 @@ export default function LoadingScreen({ onComplete }) {
             onComplete: () => setReady(true),
           });
 
-          tl.to(videoWrapperRef.current, {
+          tl.to(videoWrapperRef?.current, {
             y: "-40%",
             duration: 0.8,
             ease: "power4.inOut",
