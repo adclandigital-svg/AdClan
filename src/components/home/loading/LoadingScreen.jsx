@@ -12,103 +12,26 @@ export default function LoadingScreen({ onComplete }) {
 
   const [ready, setReady] = useState(false); // enable Enter after intro
 
-  // useEffect(() => {
-  //   if (!videoWrapperRef?.current) return;
-
-  //   const video = videoWrapperRef?.current?.querySelector("video");
-  //   if (!video) return;
-
-  //   const ctx = gsap.context(() => {
-  //     const mm = gsap.matchMedia();
-  //     const handleVideoEnd = () => {
-  //       const textChildren = textRef?.current?.children;
-  //       if (!textChildren) return;
-
-  //       mm.add("(min-width: 1024px)", () => {
-  //         const tl = gsap.timeline({
-  //           defaults: { ease: "power3.out" },
-  //           onComplete: () => setReady(true),
-  //         });
-
-  //         tl.to(videoWrapperRef?.current, {
-  //           x: "-60%",
-  //           duration: 1,
-  //           ease: "power4.inOut",
-  //         });
-
-  //         tl.fromTo(
-  //           textChildren,
-  //           { opacity: 0, y: 30 },
-  //           {
-  //             opacity: 1,
-  //             y: 0,
-  //             duration: 0.9,
-  //             stagger: 0.25,
-  //           },
-  //           "-=0.3"
-  //         );
-  //       });
-
-  //       mm.add("(max-width: 1023px)", () => {
-  //         const tl = gsap.timeline({
-  //           defaults: { ease: "power3.out" },
-  //           onComplete: () => setReady(true),
-  //         });
-
-  //         tl.to(videoWrapperRef?.current, {
-  //           y: "-40%",
-  //           duration: 0.8,
-  //           ease: "power4.inOut",
-  //         });
-
-  //         tl.fromTo(
-  //           textChildren,
-  //           { opacity: 0, y: 30 },
-  //           {
-  //             opacity: 1,
-  //             y: 0,
-  //             duration: 0.7,
-  //             stagger: 0.2,
-  //           },
-  //           "-=0.3"
-  //         );
-  //       });
-  //     };
-
-  //     video.addEventListener("ended", handleVideoEnd);
-
-  //     return () => {
-  //       video.removeEventListener("ended", handleVideoEnd);
-  //       mm.revert();
-  //     };
-  //   }, containerRef);
-
-  //   return () => ctx.revert();
-  // }, []);
-
   useEffect(() => {
-    // Ensure required refs exist
-    if (!videoWrapperRef?.current || !textRef?.current) return;
+    if (typeof window === "undefined") return; // optional safety
+    if (!videoWrapperRef?.current) return;
 
-    const video = videoWrapperRef.current.querySelector("video");
+    const video = videoWrapperRef?.current?.querySelector("video");
     if (!video) return;
 
-    // Use GSAP context for scoping
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
-
       const handleVideoEnd = () => {
-        const textChildren = textRef.current?.children;
-        if (!textChildren || textChildren.length === 0) return;
+        const textChildren = textRef?.current?.children;
+        if (!textChildren) return;
 
-        // Desktop
         mm.add("(min-width: 1024px)", () => {
           const tl = gsap.timeline({
             defaults: { ease: "power3.out" },
             onComplete: () => setReady(true),
           });
 
-          tl.to(videoWrapperRef.current, {
+          tl.to(videoWrapperRef?.current, {
             x: "-60%",
             duration: 1,
             ease: "power4.inOut",
@@ -127,14 +50,13 @@ export default function LoadingScreen({ onComplete }) {
           );
         });
 
-        // Mobile
         mm.add("(max-width: 1023px)", () => {
           const tl = gsap.timeline({
             defaults: { ease: "power3.out" },
             onComplete: () => setReady(true),
           });
 
-          tl.to(videoWrapperRef.current, {
+          tl.to(videoWrapperRef?.current, {
             y: "-40%",
             duration: 0.8,
             ease: "power4.inOut",
@@ -158,12 +80,12 @@ export default function LoadingScreen({ onComplete }) {
 
       return () => {
         video.removeEventListener("ended", handleVideoEnd);
-        mm.revert(); // clean matchMedia listeners
+        mm.revert();
       };
     }, containerRef);
 
     return () => ctx.revert();
-  }, [videoWrapperRef, textRef, containerRef]);
+  }, []);
 
   // 👉 EXIT ANIMATION (ON BUTTON CLICK)
   const handleEnterClick = () => {
