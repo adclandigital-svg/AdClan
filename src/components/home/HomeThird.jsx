@@ -101,27 +101,29 @@ export default function HomeThird() {
     });
   }, []);
   return (
-    <section className="home-third-section" ref={sectionRef}>
-      <div className="home-third-content">
-        <div className="home-third-content-left" ref={textRef}>
-          <span>Name's</span>
-          <span>Who</span>
-          <span>Describe</span>
-          <span>Our Potential</span>
-          <h1>Name's Who Describe Our Potential</h1>
-        </div>
+    <section className="home-third-section-outer">
+      <section className="home-third-section" ref={sectionRef}>
+        <div className="home-third-content">
+          <div className="home-third-content-left" ref={textRef}>
+            <span>Name's</span>
+            <span>Who</span>
+            <span>Describe</span>
+            <span>Our Potential</span>
+            <h1>Name's Who Describe Our Potential</h1>
+          </div>
 
-        <div className="home-third-content-right">
-          <div className="image-focus-wrapper">
-            <img
-              key={index}
-              src={images[index]}
-              alt="focus animation"
-              className="focus-image"
-            />
+          <div className="home-third-content-right">
+            <div className="image-focus-wrapper">
+              <img
+                key={index}
+                src={images[index]}
+                alt="focus animation"
+                className="focus-image"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
   );
 }

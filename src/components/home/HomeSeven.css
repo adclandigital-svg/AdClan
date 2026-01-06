@@ -1,29 +1,39 @@
+.home-seven-outer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .home-seven {
-  padding: 0px 8%;
+  width: 1800px;
+  padding: 100px;
   background: #ffffff;
   /* background-color: rgb(201, 187, 187); */
 }
 
 /* Left aligned heading */
 .home-seven-heading {
-  font-size: 60px;
-  font-weight: 700;
-  margin-bottom: 30px;
+  letter-spacing: 2px;
+ font-size: 65px;
+  font-weight: 600;
+  margin-bottom: 50px;
   text-align: left;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.4);
   /* color: white; */
 }
 
 /* Layout */
 .home-seven-content {
+  /* padding: 0px 8%; */
   display: flex;
-  gap: 70px;
+  gap: 50px;
   align-items: flex-start;
+  justify-content: center;
 }
 
 /* Left image */
 .home-seven-left {
-  flex: 1;
+  flex: 70%;
   /* position: sticky; */
   top: 100px; /* controls where it sticks */
   align-self: flex-start;
@@ -31,14 +41,14 @@
 
 .home-seven-left img {
   width: 100%;
-  height: 480px;
+  height: auto;
   object-fit: cover;
   /* border-radius: 14px; */
 }
 
 /* Right content */
 .home-seven-right {
-  flex: 1
+  width: 30%;
 }
 
 .right-main-heading {
@@ -59,19 +69,19 @@
 }
 
 .right-sub-heading {
-  margin-top: 10PX;
-  font-size: 30px;
+  margin-top: 10px;
+  font-size: 50px;
   margin-bottom: 20px;
-   color: rgba(0, 0, 0, 0.4);
-   text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 600;
 }
 
 /* Stats - column wise */
 .home-seven-stats {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  grid-template-columns: repeat(2, 300px); /* 2 equal columns */
   gap: 60px 0px; /* row-gap | column-gap */
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 1);
 }
 
 .stat-row {
@@ -79,19 +89,20 @@
   flex-direction: column;
   align-items: left;
   gap: 0px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 1);
 }
 
 .stat-row span {
-  font-size: 90px;
-  font-weight: 700;
+  font-size: 60px;
+  font-weight: 600;
   min-width: 90px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .stat-row p {
-  font-size: 16px;
+  font-size: 18px;
   /* color: white; */
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 1);
 }
 
 /* Responsive */

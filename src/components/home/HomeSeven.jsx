@@ -16,13 +16,14 @@ export default function HomeSeven() {
   useGSAP(
     () => {
       /* IMAGE FLOAT */
-      gsap.from(imageRef.current, {
-        y: 50,
+      gsap.to(imageRef.current, {
+        y: -50,
         ease: "none",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 20%",
-          end: "top 0%",
+          start: "top 10%",
+          end: "top -20%",
+          // markers:true,
           scrub: 2,
         },
       });
@@ -52,43 +53,45 @@ export default function HomeSeven() {
   );
 
   return (
-    <section className="home-seven" ref={sectionRef}>
-      <h2 className="home-seven-heading">
-        Building Brands <br /> That Create Impact
-      </h2>
+    <section className="home-seven-outer">
+      <section className="home-seven" ref={sectionRef}>
+        <h2 className="home-seven-heading">
+          Building Brands <br /> That Create Impact
+        </h2>
 
-      <div className="home-seven-content">
-        <div className="home-seven-left">
-          <img
-            ref={imageRef}
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-            alt="Creative Team"
-          />
-        </div>
+        <div className="home-seven-content">
+          <div className="home-seven-left">
+            <img
+              ref={imageRef}
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+              alt="Creative Team"
+            />
+          </div>
 
-        <div className="home-seven-right" ref={rightRef}>
-          <h4 className="right-sub-heading">Our Achievements:</h4>
+          <div className="home-seven-right" ref={rightRef}>
+            <h4 className="right-sub-heading">Our Achievements</h4>
 
-          <div className="home-seven-stats">
-            <div className="stat-row">
-              <span>150+</span>
-              <p>Projects Delivered</p>
-            </div>
-            <div className="stat-row">
-              <span>12+</span>
-              <p>Active Clients</p>
-            </div>
-            <div className="stat-row">
-              <span>10+</span>
-              <p>Years of Experience</p>
-            </div>
-            <div className="stat-row">
-              <span>15+</span>
-              <p>Industry Collaborations</p>
+            <div className="home-seven-stats">
+              <div className="stat-row">
+                <span>150+</span>
+                <p>Projects Delivered</p>
+              </div>
+              <div className="stat-row">
+                <span>12+</span>
+                <p>Active Clients</p>
+              </div>
+              <div className="stat-row">
+                <span>10+</span>
+                <p>Years of Experience</p>
+              </div>
+              <div className="stat-row">
+                <span>15+</span>
+                <p>Collaborations</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
   );
 }

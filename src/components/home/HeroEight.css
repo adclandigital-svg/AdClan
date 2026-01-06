@@ -1,13 +1,14 @@
 .hero-eight {
-  padding: 0px 6%;
+  /* padding: 0px 6%; */
   padding-bottom: 5%;
-  /* background: #ffffff; */
 }
 
 /* Header */
 .hero-eight-header {
-  max-width: 600px;
+  max-width: 1800px;
+  margin: auto;
   margin-bottom: 70px;
+  padding: 0px 50px;
 }
 
 .hero-eight-header h2 {
@@ -28,6 +29,9 @@
 
 /* Testimonials */
 .hero-eight-testimonials {
+  max-width: 1800px;
+  margin: auto;
+  padding: 0px 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
@@ -66,7 +70,6 @@
 .testimonial-card:hover span {
   color: #fff;
 }
-
 
 /* Highlighted card */
 /* .testimonial-card.highlight {
