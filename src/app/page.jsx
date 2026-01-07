@@ -29,9 +29,9 @@ export default function Home() {
       <Suspense fallback={<div>Loading Hero...</div>}>
         <Hero />
         <HomeSecond />
-        {/* <HomeSeven /> */}
         <HomeFourth />
         <HomeThird />
+        <HomeSeven />
         <HomeSix />
         <HomeEight />
       </Suspense>
