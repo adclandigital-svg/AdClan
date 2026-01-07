@@ -9,7 +9,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeSeven() {
-  const sectionRef = useRef(null);
+  const sectionRefseven = useRef(null);
   const imageRef = useRef(null);
   const rightRef = useRef(null);
 
@@ -20,7 +20,7 @@ export default function HomeSeven() {
         y: -50,
         ease: "none",
         scrollTrigger: {
-          trigger: sectionRef.current,
+          trigger: sectionRefseven.current,
           start: "top 10%",
           end: "top -20%",
           // markers:true,
@@ -42,19 +42,19 @@ export default function HomeSeven() {
           scrollTrigger: {
             trigger: rightRef.current,
             start: "top 75%",
-            toggleActions: "play reverse play reverse",
+            // toggleActions: "play reverse play reverse",
           },
         }
       );
     },
     {
-      scope: sectionRef, // 🔥 VERY IMPORTANT
+      scope: sectionRefseven, // 🔥 VERY IMPORTANT
     }
   );
 
   return (
     <section className="home-seven-outer">
-      <section className="home-seven" ref={sectionRef}>
+      <section className="home-seven" ref={sectionRefseven}>
         <h2 className="home-seven-heading">
           Building Brands <br /> That Create Impact
         </h2>
