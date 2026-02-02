@@ -180,7 +180,7 @@ export default function HomeSecond() {
             duration: 4,
             ease: "none",
           },
-          "cardsMove"
+          "cardsMove",
         );
       });
 
@@ -194,14 +194,14 @@ export default function HomeSecond() {
             rotation: rotations[i],
             ease: "none",
           },
-          "cardsRotate"
+          "cardsRotate",
         );
       });
     },
     {
       scope: sectionRef, // ✅ this replaces gsap.context()
       revertOnUpdate: true,
-    }
+    },
   );
 
   return (
@@ -210,18 +210,6 @@ export default function HomeSecond() {
         <h1 className="home-second-section-heading" ref={headingRef}>
           Our <br /> Clan
         </h1>
-
-        {/* {["Radio", "Print", "Event", "Creative", "Digital", "Celebrity"].map(
-          (text, i) => (
-            <div
-              key={i}
-              className={`home-second-cards home-second-cards${i + 1}`}
-              ref={(el) => (cardsRef.current[i] = el)}
-            >
-              <p>{text}</p>
-            </div>
-          )
-        )} */}
 
         {cards.map((card, i) => (
           <div
@@ -234,9 +222,7 @@ export default function HomeSecond() {
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
-          >
-            {/* <p>{card.text}</p> */}
-          </div>
+          ></div>
         ))}
       </div>
     </div>

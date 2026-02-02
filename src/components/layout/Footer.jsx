@@ -46,7 +46,7 @@ export default function Footer() {
             <li>
               <Link href="/blogs">Read our stories</Link>
             </li>
-           
+
             <li>
               <Link href="/career"> Work With Adclan</Link>
             </li>
@@ -77,10 +77,11 @@ export default function Footer() {
           <h3 className="footer-title">Stay Tuned With Us</h3>
           <ul className="footer-contact">
             <li>
-              <FaPhone /> +91-9891505451, 011-49573333
+              <FaPhone /> <Link href="tel:+919891505451">+91-9891505451</Link>,
+              <Link href="tel:01149573333">011-49573333</Link>
             </li>
             <li>
-              <FaEnvelope /> info@adclan.in
+              <FaEnvelope /> <Link href="mailto:info@adclan.in">info@adclan.in</Link>
             </li>
             <li>
               <FaMapMarkerAlt />
@@ -108,7 +109,7 @@ export default function Footer() {
             onClick={() =>
               window.open(
                 "https://www.instagram.com/adclanmedia/?hl=en",
-                "_blank"
+                "_blank",
               )
             }
           >

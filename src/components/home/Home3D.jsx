@@ -35,7 +35,7 @@ function Cyl() {
 export default function Home3D() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const textRef = useRef(null);
-  const textEl = textRef.current;
+  const textAnimationRef = useRef(null);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 720px)");
@@ -55,14 +55,29 @@ export default function Home3D() {
     const textEl = textRef.current;
     if (!textEl) return;
 
+    // Store original content if not already duplicated
+    const originalContent = textEl.getAttribute("data-original");
+    let textContent;
+
+    if (!originalContent) {
+      textContent = textEl.innerText;
+      textEl.setAttribute("data-original", textContent);
+    } else {
+      textContent = originalContent;
+    }
+
     // Duplicate text for seamless loop
-    const textContent = textEl.innerText;
     textEl.innerHTML = `${textContent} — ${textContent}`;
 
     const width = textEl.scrollWidth / 2; // width of one copy
 
+    // Kill previous animation if exists
+    if (textAnimationRef.current) {
+      textAnimationRef.current.kill();
+    }
+
     // Animate with GSAP
-    gsap.fromTo(
+    textAnimationRef.current = gsap.fromTo(
       textEl,
       { x: 0 },
       {
@@ -70,9 +85,15 @@ export default function Home3D() {
         duration: 50,  // adjust speed
         ease: "linear",
         repeat: -1,    // infinite
-        // yoyo:true
       }
     );
+
+    // Cleanup
+    return () => {
+      if (textAnimationRef.current) {
+        textAnimationRef.current.kill();
+      }
+    };
   }, []);
   return (
     <>

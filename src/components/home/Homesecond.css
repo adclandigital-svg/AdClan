@@ -1,4 +1,5 @@
 .home-second-section-main {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,9 +7,10 @@
   width: 100%;
   overflow: hidden;
 }
+
 .home-second-section {
   height: 100%;
-  width:1900px;
+  width: 1900px;
   display: flex;
   align-items: center;
   justify-content: center;

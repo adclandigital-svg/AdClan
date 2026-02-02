@@ -27,16 +27,16 @@ export default function Home() {
   return (
     <>
       <Suspense fallback={<div>Loading Hero...</div>}>
-        <Hero />
-        <HomeSecond />
-        <HomeFourth />
-        <HomeThird />
-        <HomeSeven />
-        <HomeSix />
-        <HomeEight />
+        <div className="Home-page">
+          <Hero />
+          <HomeSecond />
+          <HomeFourth />
+          <HomeThird />
+          <HomeSeven />
+          <HomeSix />
+          <HomeEight />
+        </div>
       </Suspense>
     </>
-
-
   );
 }

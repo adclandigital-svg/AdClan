@@ -8,6 +8,7 @@ import "./AboutHero.css";
 export default function AboutHero() {
   const containerRef = useRef(null);
   const textRef = useRef(null);
+  const cloneRef = useRef(null);
 
   useGSAP(() => {
     const text = textRef.current;
@@ -15,8 +16,14 @@ export default function AboutHero() {
 
     if (!text || !container) return;
 
+    // Clean up any existing clone
+    if (cloneRef.current && cloneRef.current.parentNode === container) {
+      container.removeChild(cloneRef.current);
+    }
+
     // Clone text for seamless loop
     const clone = text.cloneNode(true);
+    cloneRef.current = clone;
     container.appendChild(clone);
 
     const width = text.offsetWidth;
@@ -29,6 +36,13 @@ export default function AboutHero() {
       ease: "linear",
       repeat: -1,
     });
+
+    // Cleanup on unmount
+    return () => {
+      if (cloneRef.current && cloneRef.current.parentNode === container) {
+        container.removeChild(cloneRef.current);
+      }
+    };
   }, []);
 
   return (

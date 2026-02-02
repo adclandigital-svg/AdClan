@@ -118,6 +118,7 @@
 .nav-socials span:hover {
   opacity: 1;
   transform: translateY(-3px) scale(1.1);
+  color: #17b9a9;
 }
 
 /* MOBILE SOCIALS */

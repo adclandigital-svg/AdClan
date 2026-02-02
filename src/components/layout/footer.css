@@ -60,16 +60,27 @@
   color: #c4c4c4;
   top: 3px;
 }
+.footer-links li:hover::before {
+  color: #17b9a9; /* change icon color on hover */
+}
 
 .footer-links li a {
   color: #dbe8f1;
   text-decoration: none;
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
 }
 
 .footer-links li:hover {
   color: #fff;
   transform: translateX(5px);
   transition: 0.3s;
+}
+.footer-links li:hover a {
+  color: #17b9a9;
 }
 
 /* CONTACT */
@@ -79,6 +90,15 @@
   gap: 10px;
   margin-bottom: 12px;
   line-height: 1.5;
+}
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease; /* smooth color change */
+}
+
+.footer-contact a:hover {
+  color: #17b9a9; /* change color on hover */
 }
 
 .footer-contact li svg {
@@ -120,6 +140,8 @@
 
 .footer-socials span:hover {
   transform: translateY(-5px);
+  color: white;
+  background-color: #17b9a9;
 }
 
 /* UP BUTTON */
@@ -142,7 +164,7 @@
 }
 
 /* RESPONSIVE */
-@media(max-width: 650px) {
+@media (max-width: 650px) {
   .footer-bottom {
     flex-direction: column;
     gap: 20px;

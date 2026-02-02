@@ -9,6 +9,7 @@ export default function LoadingScreen({ onComplete }) {
   const videoWrapperRef = useRef(null);
   const textRef = useRef(null);
   const exitTl = useRef(null);
+  const contextRef = useRef(null);
 
   const [ready, setReady] = useState(false); // enable Enter after intro
 
@@ -19,6 +20,7 @@ export default function LoadingScreen({ onComplete }) {
     const video = videoWrapperRef?.current?.querySelector("video");
     if (!video) return;
 
+    // Create context and store reference
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
       const handleVideoEnd = () => {
@@ -84,7 +86,13 @@ export default function LoadingScreen({ onComplete }) {
       };
     }, containerRef);
 
-    return () => ctx.revert();
+    contextRef.current = ctx;
+
+    return () => {
+      if (contextRef.current) {
+        contextRef.current.revert();
+      }
+    };
   }, []);
 
   // 👉 EXIT ANIMATION (ON BUTTON CLICK)
@@ -96,7 +104,14 @@ export default function LoadingScreen({ onComplete }) {
     mm.add("(min-width: 1024px)", () => {
       exitTl.current = gsap.timeline({
         defaults: { ease: "power4.inOut" },
-        onComplete: () => onComplete?.(),
+        onComplete: () => {
+          onComplete?.();
+          // Cleanup exit timeline
+          if (exitTl.current) {
+            exitTl.current.kill();
+            exitTl.current = null;
+          }
+        },
       });
 
       exitTl.current.to([videoWrapperRef.current, textRef.current], {
@@ -113,7 +128,14 @@ export default function LoadingScreen({ onComplete }) {
     mm.add("(max-width: 1023px)", () => {
       exitTl.current = gsap.timeline({
         defaults: { ease: "power4.inOut" },
-        onComplete: () => onComplete?.(),
+        onComplete: () => {
+          onComplete?.();
+          // Cleanup exit timeline
+          if (exitTl.current) {
+            exitTl.current.kill();
+            exitTl.current = null;
+          }
+        },
       });
 
       exitTl.current.to([videoWrapperRef.current, textRef.current], {

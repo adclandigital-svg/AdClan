@@ -11,11 +11,24 @@ export default function HomeAbout() {
   const circleRef = useRef(null);
   const sectionRef = useRef(null);
   const textRef = useRef(null);
+  const timelineRef = useRef(null);
 
-  useEffect(() => {
-    if (circleRef.current && sectionRef.current && textRef.current) {
-      // clear previous ScrollTriggers if any
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+  useGSAP(
+    () => {
+      if (!circleRef.current || !sectionRef.current || !textRef.current) return;
+
+      // Kill any existing timeline to prevent conflicts
+      if (timelineRef.current) {
+        timelineRef.current.kill();
+      }
+
+      // Clear previous ScrollTriggers to prevent duplicates
+      ScrollTrigger.getAll().forEach((t) => {
+        if (t.vars?.trigger === sectionRef.current) {
+          t.kill();
+        }
+      });
+
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -23,26 +36,26 @@ export default function HomeAbout() {
           end: "top -100%",
           scrub: 1,
           pin: true,
-          // markers: true,
         },
       });
 
+      timelineRef.current = tl;
+
       // First half: animate circle expanding and cards sliding in
-      // animate circle from scale 0 and hidden to full-screen and visible
       tl.fromTo(
         circleRef.current,
         { scale: 0 },
         { scale: 1, ease: "none" }
       );
 
-      // fade out text slightly after circle begins expanding
+      // Fade out text slightly after circle begins expanding
       tl.to(
         textRef.current,
         { autoAlpha: 0, y: -20, duration: 0.4, ease: "none" },
         0.2
       );
 
-      // animate cards inside the circle one-by-one (slide in)
+      // Animate cards inside the circle one-by-one (slide in)
       const cards = circleRef.current.querySelectorAll(
         ".homeabout-circle-container-text"
       );
@@ -61,7 +74,7 @@ export default function HomeAbout() {
         );
       }
 
-      // Second half: reverse all animations (fade out cards, shrink circle, restore text)
+      // Second half: reverse all animations
       if (cards && cards.length) {
         tl.to(
           cards,
@@ -70,32 +83,21 @@ export default function HomeAbout() {
         );
       }
 
-      // shrink circle and hide it
+      // Shrink circle and hide it
       tl.to(
         circleRef.current,
         { scale: 0, autoAlpha: 0, ease: "none" },
         "<"
       );
 
-      // bring text back
+      // Bring text back
       tl.to(
         textRef.current,
         { autoAlpha: 1, y: 0, duration: 0.4, ease: "none" },
         "<"
       );
 
-      // cleanup on unmount
-      return () => {
-        if (tl) tl.kill();
-        ScrollTrigger.getAll().forEach((t) => t.kill());
-      };
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!textRef.current || !sectionRef.current) return;
-
-    const ctx = gsap.context(() => {
+      // Animate intro text on first load
       gsap.from(textRef.current, {
         y: 100,
         opacity: 0,
@@ -108,11 +110,21 @@ export default function HomeAbout() {
           toggleActions: "play none none reset",
         },
       });
-    }, sectionRef);
 
-    // Cleanup on unmount
-    return () => ctx.revert();
-  }, []);
+      // Cleanup on unmount
+      return () => {
+        if (timelineRef.current) {
+          timelineRef.current.kill();
+        }
+        ScrollTrigger.getAll().forEach((t) => {
+          if (t.vars?.trigger === sectionRef.current) {
+            t.kill();
+          }
+        });
+      };
+    },
+    { scope: sectionRef }
+  );
   return (
     <section className="homeabout-section">
       <div className="homeabout-container" ref={sectionRef}>

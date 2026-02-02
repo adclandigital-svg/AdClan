@@ -45,6 +45,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function LenisProvider({ children }) {
   const lenisRef = useRef(null);
+  const rafRef = useRef(null);
   const pathname = usePathname();
 
   /* INIT LENIS */
@@ -63,16 +64,19 @@ export default function LenisProvider({ children }) {
     // Sync with ScrollTrigger
     lenis.on("scroll", ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
+    // Store the function reference so we can remove it later
+    const rafCallback = (time) => {
       lenis.raf(time * 1000);
-    });
+    };
+    rafRef.current = rafCallback;
 
+    gsap.ticker.add(rafCallback);
     gsap.ticker.lagSmoothing(0);
 
     return () => {
-      gsap.ticker.remove((time) => {
-        lenis.raf(time * 1000);
-      });
+      if (rafRef.current) {
+        gsap.ticker.remove(rafRef.current);
+      }
       lenis.destroy();
     };
   }, []);

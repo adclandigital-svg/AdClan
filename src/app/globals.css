@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -15,5 +15,29 @@ html {
 body {
   font-family: "Raleway", sans-serif;
 }
+a:hover {
+  color: #17b9a9;
+}
 
+/* Apply full-page background on Home-page wrapper */
+.Home-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
 
+/* Pseudo-element for background image */
+/* .Home-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+  url("https://img.freepik.com/premium-vector/abstract-white-modern-background-with-wavy-lines_745217-379.jpg?w=1800");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  z-index: -1;
+} */

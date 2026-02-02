@@ -42,14 +42,27 @@ export default function ProjectDetailPage() {
         });
       });
       gsap.utils.toArray(".gallery-slider").forEach((slider) => {
-        const items = slider.children;
+        // Safety check - ensure slider has children
+        if (!slider || !slider.children || slider.children.length === 0) {
+          return;
+        }
 
-        // Clone items for seamless loop
-        Array.from(items).forEach((item) => {
+        const items = slider.children;
+        const originalItemCount = items.length;
+
+        // Clone items for seamless loop (only clone once)
+        const clonedItems = [];
+        Array.from(items).slice(0, originalItemCount).forEach((item) => {
           const clone = item.cloneNode(true);
+          clonedItems.push(clone);
+        });
+
+        // Append all clones at once
+        clonedItems.forEach((clone) => {
           slider.appendChild(clone);
         });
 
+        // Recalculate after DOM updates
         const totalWidth = slider.scrollWidth / 2;
 
         gsap.set(slider, { x: 0 });
