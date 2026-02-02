@@ -54,6 +54,9 @@ export default function HomeSix() {
                 playsInline
                 preload="none" // 🔑 prevents loading until needed
                 loading="lazy"
+                onError={(e) => {
+                  e.target.load();
+                }}
               />
             </div>
 
@@ -71,6 +74,9 @@ export default function HomeSix() {
                   playsInline
                   preload="none" // 🔑 prevents loading until needed
                   loading="lazy"
+                  onError={(e) => {
+                    e.target.load();
+                  }}
                 />
               </div>
 
@@ -87,6 +93,9 @@ export default function HomeSix() {
                   playsInline
                   preload="none" // 🔑 prevents loading until needed
                   loading="lazy"
+                  onError={(e) => {
+                    e.target.load();
+                  }}
                 />
               </div>
             </div>
@@ -106,6 +115,9 @@ export default function HomeSix() {
                 playsInline
                 preload="none" // 🔑 prevents loading until needed
                 loading="lazy"
+                onError={(e) => {
+                  e.target.load();
+                }}
               />
             </div>
 
@@ -122,6 +134,9 @@ export default function HomeSix() {
                 playsInline
                 preload="none" // 🔑 prevents loading until needed
                 loading="lazy"
+                onError={(e) => {
+                  e.target.load();
+                }}
               />
             </div>
           </div>

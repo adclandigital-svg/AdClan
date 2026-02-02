@@ -5,8 +5,8 @@
   justify-content: center;
 }
 .home-seven {
-  width: 1800px;
-  padding: 100px;
+  width: 1900px;
+  padding: 50px;
   background: #ffffff;
   /* background-color: rgb(201, 187, 187); */
 }
@@ -14,7 +14,7 @@
 /* Left aligned heading */
 .home-seven-heading {
   letter-spacing: 2px;
- font-size: 65px;
+  font-size: 60px;
   font-weight: 600;
   margin-bottom: 50px;
   text-align: left;
@@ -51,14 +51,6 @@
   width: 30%;
 }
 
-.right-main-heading {
-  font-size: 40px;
-  margin-bottom: 16px;
-  color: rgba(0, 0, 0, 0.6);
-  /* color: white; */
-  /* text-transform: uppercase; */
-}
-
 .right-desc {
   font-size: 15px;
   line-height: 1.7;
@@ -70,7 +62,7 @@
 
 .right-sub-heading {
   margin-top: 10px;
-  font-size: 50px;
+  font-size: 35px;
   margin-bottom: 20px;
   color: rgba(0, 0, 0, 0.4);
   font-weight: 600;
@@ -79,7 +71,7 @@
 /* Stats - column wise */
 .home-seven-stats {
   display: grid;
-  grid-template-columns: repeat(2, 300px); /* 2 equal columns */
+  grid-template-columns: repeat(2, auto); /* 2 equal columns */
   gap: 60px 0px; /* row-gap | column-gap */
   color: rgba(0, 0, 0, 1);
 }
@@ -106,12 +98,71 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+/* 📱 Mobile – below 768px */
+@media (max-width: 768px) {
+  .home-seven {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .home-seven-heading {
+    font-size: 34px;
+    margin-bottom: 25px;
+  }
+
   .home-seven-content {
     flex-direction: column;
+    gap: 25px;
   }
 
   .home-seven-left img {
-    height: 300px;
+    height: auto;
+    max-height: 260px;
+    border-radius: 10px;
+  }
+
+  .home-seven-right {
+    width: 100%;
+  }
+
+  .right-sub-heading {
+    font-size: 26px;
+  }
+
+  .right-desc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .home-seven-stats {
+    grid-template-columns: 1fr 1fr; /* still 2 columns on mobile */
+    gap: 25px 10px;
+  }
+
+  .stat-row span {
+    font-size: 32px;
+  }
+
+  .stat-row p {
+    font-size: 14px;
+  }
+}
+
+/* 📱 Small mobile – below 480px */
+@media (max-width: 480px) {
+  .home-seven-heading {
+    font-size: 28px;
+  }
+
+  .home-seven-stats {
+    grid-template-columns: 1fr; /* stack stats in single column */
+  }
+
+  .stat-row span {
+    font-size: 28px;
+  }
+
+  .stat-row p {
+    font-size: 13px;
   }
 }

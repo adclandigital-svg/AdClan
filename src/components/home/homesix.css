@@ -1,4 +1,4 @@
-.home-six-section-outer{
+.home-six-section-outer {
   width: 100%;
 }
 .home-six-section-h2 {
@@ -36,7 +36,6 @@
   position: relative;
   padding: 0px 50px;
   /* background-color: aliceblue; */
-  
 }
 .home-six-first-container {
   width: 60%;
@@ -46,7 +45,6 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-
 }
 .home-six-first-container1 {
   width: 100%;
@@ -156,7 +154,6 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-
 }
 .home-six-second-container1,
 .home-six-second-container2 {
@@ -230,14 +227,15 @@
   .home-six-section-h2 {
     margin-top: 20px;
     margin-bottom: 20px;
+    padding-left: 20px;
     font-size: 25px;
     height: 60px;
   }
 
   .home-six-section {
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     height: auto;
-    width: 100%;
+    padding: 10px;
     gap: 10px;
   }
   .home-six-first-container {
@@ -295,7 +293,7 @@
   z-index: 10;
   position: absolute;
   right: 5%;
-  bottom: -7%;
+  bottom: -12%;
   transform: translateY(-50%);
   font-size: 16px;
   font-weight: 600;

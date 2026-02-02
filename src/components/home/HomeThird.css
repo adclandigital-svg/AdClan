@@ -104,13 +104,12 @@
 
 @media (max-width: 768px) {
   .home-third-section {
-    height: 60vh;
+    height: auto;
     padding: 50px 0px;
-    background-color: rgba(0, 0, 0, 0.05);
   }
   .home-third-content {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
   .home-third-content-left {
     width: 90%;
