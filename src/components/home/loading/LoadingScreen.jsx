@@ -12,6 +12,7 @@ export default function LoadingScreen({ onComplete }) {
   const contextRef = useRef(null);
 
   const [ready, setReady] = useState(false); // enable Enter after intro
+  const [isVisible, setIsVisible] = useState(true); // hidden after animation
 
   useEffect(() => {
     if (typeof window === "undefined") return; // optional safety
@@ -105,6 +106,7 @@ export default function LoadingScreen({ onComplete }) {
       exitTl.current = gsap.timeline({
         defaults: { ease: "power4.inOut" },
         onComplete: () => {
+          setIsVisible(false); // Hide component after animation
           onComplete?.();
           // Cleanup exit timeline
           if (exitTl.current) {
@@ -129,6 +131,7 @@ export default function LoadingScreen({ onComplete }) {
       exitTl.current = gsap.timeline({
         defaults: { ease: "power4.inOut" },
         onComplete: () => {
+          setIsVisible(false); // Hide component after animation
           onComplete?.();
           // Cleanup exit timeline
           if (exitTl.current) {
@@ -149,6 +152,8 @@ export default function LoadingScreen({ onComplete }) {
       });
     });
   };
+
+  if (!isVisible) return null; // Remove from DOM after animation
 
   return (
     <section className="loader-container-section" ref={containerRef}>

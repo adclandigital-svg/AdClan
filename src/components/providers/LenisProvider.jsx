@@ -50,34 +50,46 @@ export default function LenisProvider({ children }) {
 
   /* INIT LENIS */
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => 1 - Math.pow(1 - t, 3), // easeOutCubic
-      smoothWheel: true,
-      smoothTouch: false,
-      wheelMultiplier: 1,
-      touchMultiplier: 1.5,
-    });
+    // Wait for DOM to be ready before initializing Lenis
+    const timer = setTimeout(() => {
+      try {
+        const lenis = new Lenis({
+          duration: 1.2,
+          easing: (t) => 1 - Math.pow(1 - t, 3), // easeOutCubic
+          smoothWheel: true,
+          smoothTouch: false,
+          wheelMultiplier: 1,
+          touchMultiplier: 1.5,
+        });
 
-    lenisRef.current = lenis;
+        lenisRef.current = lenis;
 
-    // Sync with ScrollTrigger
-    lenis.on("scroll", ScrollTrigger.update);
+        // Sync with ScrollTrigger
+        lenis.on("scroll", ScrollTrigger.update);
 
-    // Store the function reference so we can remove it later
-    const rafCallback = (time) => {
-      lenis.raf(time * 1000);
-    };
-    rafRef.current = rafCallback;
+        // Store the function reference so we can remove it later
+        const rafCallback = (time) => {
+          if (lenisRef.current) {
+            lenis.raf(time * 1000);
+          }
+        };
+        rafRef.current = rafCallback;
 
-    gsap.ticker.add(rafCallback);
-    gsap.ticker.lagSmoothing(0);
+        gsap.ticker.add(rafCallback);
+        gsap.ticker.lagSmoothing(0);
+      } catch (error) {
+        console.error("Lenis initialization error:", error);
+      }
+    }, 100);
 
     return () => {
-      if (rafRef.current) {
+      clearTimeout(timer);
+      if (rafRef.current && lenisRef.current) {
         gsap.ticker.remove(rafRef.current);
+        lenisRef.current.destroy();
+        lenisRef.current = null;
+        rafRef.current = null;
       }
-      lenis.destroy();
     };
   }, []);
 
