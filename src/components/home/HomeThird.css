@@ -1,10 +1,9 @@
-.home-third-section-outer {
+/* .home-third-section-outer {
   width: 100%;
   height: 50vh;
   background-color: rgba(192, 192, 192, 0.1);
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   margin-top: -5%;
 }
 .home-third-section {
@@ -33,7 +32,6 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  /* background-color: aqua; */
 }
 .home-third-content-left span {
   margin-left: 0;
@@ -58,7 +56,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  /* background-color: lightcoral; */
 }
 .home-third-content-right-images {
   width: 80%;
@@ -133,7 +130,6 @@
     height: 40%;
     justify-content: center;
     align-items: center;
-    /* background-color: aqua; */
   }
   .home-third-content-right-images {
     width: 90%;
@@ -150,5 +146,210 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+  }
+} */
+
+
+.home-third-section-outer {
+  width: 100%;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 70% 50%, rgba(0, 0, 0, 0), transparent 60%),
+    linear-gradient(180deg, #fafafa, #f3f3f3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Minimal premium texture overlay */
+.home-third-section-outer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.08),
+      rgba(0,0,0,0.08) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-third-section-outer > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= CONTAINER ================= */
+
+.home-third-section {
+  margin: auto;
+  width: min(1800px, 92%);
+  padding: clamp(48px, 6vw, 80px) clamp(20px, 4vw, 40px);
+}
+
+/* ================= GRID ================= */
+
+.home-third-content {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  gap: clamp(40px, 6vw, 80px);
+}
+
+/* ================= LEFT TEXT ================= */
+
+.home-third-content-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-third-content-left span {
+  font-size: clamp(32px, 4.2vw, 56px);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1;
+}
+
+.home-third-content-left span:nth-child(1) {
+  color: rgba(0, 0, 0, 0.25);
+}
+.home-third-content-left span:nth-child(2) {
+  color: rgba(0, 0, 0, 0.45);
+}
+.home-third-content-left span:nth-child(3) {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.home-third-content-left h1 {
+  display: none;
+}
+
+/* ================= RIGHT LOGO STAGE ================= */
+
+.home-third-content-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo-stage {
+  position: relative;
+  width: clamp(260px, 32vw, 500px);
+  height: clamp(160px, 20vw, 300px);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-glow {
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.12), transparent 65%);
+  animation: glowPulse 3s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.focus-image {
+  position: relative;
+  z-index: 2;
+  width: 75%;
+  height: auto;
+  object-fit: contain;
+  animation: logoFocus 0.45s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  mix-blend-mode: multiply;
+}
+
+@keyframes logoFocus {
+  0% {
+    opacity: 0;
+    transform: scale(0.75) rotate(-6deg);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+}
+
+/* ================= LAPTOP ================= */
+@media (max-width: 1280px) {
+  .home-third-content {
+    gap: 56px;
+  }
+
+  .logo-stage {
+    border-radius: 20px;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 900px) {
+  .home-third-content {
+    grid-template-columns: 1fr;
+    gap: 44px;
+    text-align: center;
+  }
+
+  .home-third-content-left {
+    align-items: center;
+  }
+
+  .home-third-content-right {
+    justify-content: center;
+  }
+
+  .logo-stage {
+    width: 300px;
+    height: 190px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  .home-third-section {
+    padding: 36px 18px;
+  }
+
+  .home-third-content-left span {
+    font-size: 26px;
+    letter-spacing: 0.08em;
+  }
+
+  .logo-stage {
+    width: 240px;
+    height: 150px;
+    border-radius: 16px;
+  }
+  .logo-stage{
+    width: 90%;
+    height: 300px;
   }
 }
