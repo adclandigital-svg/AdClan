@@ -144,6 +144,7 @@ export default function HomeSeven() {
               className="impact-image"
               src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
               alt="Team Collaboration"
+              loading="lazy"
             />
           </div>
 

@@ -101,6 +101,7 @@
 // }
 
 
+
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import "./HomeThird.css";
@@ -143,16 +144,34 @@ export default function HomeThird() {
   const [index, setIndex] = useState(0);
   const sectionRef = useRef(null);
   const textRef = useRef(null);
+  const intervalRef = useRef(null);
 
-  /* 🔄 Logo focus animation */
+  /* 🎯 Start/stop logo rotation based on viewport */
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 1100);
-    return () => clearInterval(interval);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          if (!intervalRef.current) {
+            intervalRef.current = setInterval(() => {
+              setIndex((prev) => (prev + 1) % images.length);
+            }, 1100);
+          }
+        } else {
+          clearInterval(intervalRef.current);
+          intervalRef.current = null;
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(sectionRef.current);
+    return () => {
+      observer.disconnect();
+      clearInterval(intervalRef.current);
+    };
   }, [images.length]);
 
-  /* 🎬 Text reveal */
+  /* 🎬 Text reveal animation */
   useGSAP(() => {
     const q = gsap.utils.selector(textRef);
 
@@ -197,6 +216,8 @@ export default function HomeThird() {
                 src={images[index]}
                 alt="Client logo"
                 className="focus-image"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

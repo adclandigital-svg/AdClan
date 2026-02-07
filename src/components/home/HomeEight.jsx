@@ -28,6 +28,7 @@ export default function HomeEight() {
             <img
               src="https://i.pravatar.cc/100?img=32"
               alt="Client"
+              loading="lazy"
             />
             <div>
               <h4>Rohit Sharma</h4>
@@ -48,6 +49,7 @@ export default function HomeEight() {
             <img
               src="https://i.pravatar.cc/100?img=12"
               alt="Client"
+              loading="lazy"
             />
             <div>
               <h4>Neha Verma</h4>
@@ -68,6 +70,7 @@ export default function HomeEight() {
             <img
               src="https://i.pravatar.cc/100?img=45"
               alt="Client"
+              loading="lazy"
             />
             <div>
               <h4>Amit Kapoor</h4>
@@ -87,6 +90,7 @@ export default function HomeEight() {
             <img
               src="https://i.pravatar.cc/100?img=32"
               alt="Client"
+              loading="lazy"
             />
             <div>
               <h4>Rohit Sharma</h4>
@@ -107,6 +111,7 @@ export default function HomeEight() {
             <img
               src="https://i.pravatar.cc/100?img=12"
               alt="Client"
+              loading="lazy"
             />
             <div>
               <h4>Neha Verma</h4>
@@ -127,6 +132,7 @@ export default function HomeEight() {
             <img
               src="https://i.pravatar.cc/100?img=45"
               alt="Client"
+              loading="lazy"
             />
             <div>
               <h4>Amit Kapoor</h4>
