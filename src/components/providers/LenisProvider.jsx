@@ -46,13 +46,16 @@ gsap.registerPlugin(ScrollTrigger);
 export default function LenisProvider({ children }) {
   const lenisRef = useRef(null);
   const rafRef = useRef(null);
+  const timerRef = useRef(null);
   const pathname = usePathname();
 
   /* INIT LENIS */
   useEffect(() => {
     // Wait for DOM to be ready before initializing Lenis
-    const timer = setTimeout(() => {
+    timerRef.current = setTimeout(() => {
       try {
+        if (!document || !window) return;
+
         const lenis = new Lenis({
           duration: 1.2,
           easing: (t) => 1 - Math.pow(1 - t, 3), // easeOutCubic
@@ -65,12 +68,22 @@ export default function LenisProvider({ children }) {
         lenisRef.current = lenis;
 
         // Sync with ScrollTrigger
-        lenis.on("scroll", ScrollTrigger.update);
+        lenis.on("scroll", () => {
+          try {
+            ScrollTrigger.update();
+          } catch (e) {
+            console.warn("ScrollTrigger update error:", e);
+          }
+        });
 
         // Store the function reference so we can remove it later
         const rafCallback = (time) => {
-          if (lenisRef.current) {
-            lenis.raf(time * 1000);
+          try {
+            if (lenisRef.current) {
+              lenisRef.current.raf(time * 1000);
+            }
+          } catch (e) {
+            console.warn("RAF callback error:", e);
           }
         };
         rafRef.current = rafCallback;
@@ -83,22 +96,32 @@ export default function LenisProvider({ children }) {
     }, 100);
 
     return () => {
-      clearTimeout(timer);
-      if (rafRef.current && lenisRef.current) {
-        gsap.ticker.remove(rafRef.current);
-        lenisRef.current.destroy();
-        lenisRef.current = null;
-        rafRef.current = null;
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+      try {
+        if (rafRef.current && lenisRef.current) {
+          gsap.ticker.remove(rafRef.current);
+          lenisRef.current.destroy();
+          lenisRef.current = null;
+          rafRef.current = null;
+        }
+      } catch (error) {
+        console.error("Lenis cleanup error:", error);
       }
     };
   }, []);
 
   /* 🔝 SCROLL TO TOP ON ROUTE CHANGE */
   useEffect(() => {
-    if (lenisRef.current) {
-      lenisRef.current.scrollTo(0, {
-        immediate: true, // important for route change
-      });
+    try {
+      if (lenisRef.current) {
+        lenisRef.current.scrollTo(0, {
+          immediate: true,
+        });
+      }
+    } catch (error) {
+      console.warn("Scroll to top error:", error);
     }
   }, [pathname]);
 
