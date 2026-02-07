@@ -21,12 +21,12 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body >
-        <LenisProvider>
-          <LoadingScreen />
+        {/* <LenisProvider>
+          <LoadingScreen /> */}
           <Navbar />
           {children}
           <Footer />
-        </LenisProvider>
+        {/* </LenisProvider> */}
       </body>
     </html>
   );
