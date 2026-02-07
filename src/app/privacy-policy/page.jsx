@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./privacy.css";
 
 export const metadata = {
@@ -44,7 +45,7 @@ export default function PrivacyPage() {
           <li>Service: refers to the Website.</li>
           <li>Service Provider: any natural or legal person who processes data on behalf of the Company.</li>
           <li>Usage Data: data collected automatically from use of the Service.</li>
-          <li>Website: Adclan, accessible at <a href="https://adclan.in">https://adclan.in</a></li>
+          <li>Website: Adclan, accessible at <Link href="https://adclan.in">https://adclan.in</Link></li>
           <li>You: the individual accessing or using the Service.</li>
         </ul>
 
@@ -159,9 +160,9 @@ export default function PrivacyPage() {
 
         <h3>Contact Us</h3>
         <p>
-          Email: <a href="mailto:info@adclan.in">info@adclan.in</a>
+          Email: <Link href="mailto:info@adclan.in">info@adclan.in</Link>
           <br />
-          Contact Page: <a href="https://adclan.in/contact/">https://adclan.in/contact/</a>
+          Contact Page: <Link href="https://adclan.in/contact/">https://adclan.in/contact/</Link>
         </p>
       </div>
     </div>

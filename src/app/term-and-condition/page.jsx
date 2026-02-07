@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./terms.css";
 
 export const metadata = {
@@ -32,7 +33,7 @@ export default function TermsPage() {
           <li>Service: refers to the Website</li>
           <li>Terms and Conditions: these Terms that form the agreement between You and the Company</li>
           <li>Third-party Social Media Service: services or content provided by third parties</li>
-          <li>Website: Adclan, accessible at <a href="https://adclan.in">https://adclan.in</a></li>
+          <li>Website: Adclan, accessible at <Link href="https://adclan.in">https://adclan.in</Link></li>
           <li>You: the individual accessing or using the Service</li>
         </ul>
 
@@ -106,9 +107,9 @@ export default function TermsPage() {
 
         <h2>Contact Us</h2>
         <p>
-          Email: <a href="mailto:info@adclan.in">info@adclan.in</a>
+          Email: <Link href="mailto:info@adclan.in">info@adclan.in</Link>
           <br />
-          Contact Page: <a href="https://adclan.in/contact/">https://adclan.in/contact/</a>
+          Contact Page: <Link href="https://adclan.in/contact/">https://adclan.in/contact/</Link>
         </p>
       </div>
     </div>

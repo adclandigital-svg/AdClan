@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./cookies.css";
 
 export const metadata = {
@@ -15,7 +16,7 @@ export default function CookiesPage() {
         <p>
           This Cookies Policy explains how Adclan Digital ("we", "our", "us") uses cookies and
           similar technologies to recognize you when you visit our website at{" "}
-          <a href="https://adclan.in">https://adclan.in</a>. It explains what these technologies
+          <Link href="https://adclan.in">https://adclan.in</Link>. It explains what these technologies
           are and why we use them, as well as your rights to control our use of them.
         </p>
 
@@ -82,9 +83,9 @@ export default function CookiesPage() {
         <p>
           If you have any questions about our Cookies Policy, you can contact us:
           <br />
-          Email: <a href="mailto:info@adclan.in">info@adclan.in</a>
+          Email: <Link href="mailto:info@adclan.in">info@adclan.in</Link>
           <br />
-          Contact Page: <a href="https://adclan.in/contact/">https://adclan.in/contact/</a>
+          Contact Page: <Link href="https://adclan.in/contact/">https://adclan.in/contact/</Link>
         </p>
       </div>
     </div>

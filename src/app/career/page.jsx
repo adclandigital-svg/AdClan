@@ -74,6 +74,7 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import "./career.css";
+import Link from "next/link";
 
 export default function CareerPage() {
   const leftRef = useRef(null);
@@ -152,7 +153,7 @@ export default function CareerPage() {
 
           <div className="career-contact">
             <p>
-              Email: <a href="mailto:info@adclan.in">info@adclan.in</a>
+              Email: <Link href="mailto:info@adclan.in">info@adclan.in</Link>
             </p>
             <p>Phone: +91 9891505451</p>
           </div>
