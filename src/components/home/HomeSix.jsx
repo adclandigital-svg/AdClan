@@ -247,7 +247,6 @@ export default function HomeSix() {
             loop
             autoPlay
             playsInline
-            preload="metadata"
           />
         )}
       </div>
@@ -357,7 +356,6 @@ function MobileSlide({ blog, router }) {
           loop
           autoPlay
           playsInline
-          preload="metadata"
         />
       )}
       <p>{blog.title}</p>

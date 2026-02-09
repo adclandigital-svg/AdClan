@@ -23,7 +23,7 @@ export default function LoadingScreen({ onComplete }) {
   // Initialize animations after component mounts
   useEffect(() => {
     if (!isMounted || typeof window === "undefined") return;
-    if (!videoWrapperRef?.current) return;
+    if (!videoWrapperRef?.current || !containerRef?.current) return;
 
     try {
       const video = videoWrapperRef?.current?.querySelector("video");
@@ -35,7 +35,7 @@ export default function LoadingScreen({ onComplete }) {
 
         const handleVideoEnd = () => {
           const textChildren = textRef?.current?.children;
-          if (!textChildren) return;
+          if (!textChildren || !videoWrapperRef?.current) return;
 
           mm.add("(min-width: 1024px)", () => {
             const tl = gsap.timeline({
@@ -88,18 +88,21 @@ export default function LoadingScreen({ onComplete }) {
           });
         };
 
-        video.addEventListener("ended", handleVideoEnd);
+        // Add safety check before adding event listener
+        if (video && typeof video.addEventListener === "function") {
+          video.addEventListener("ended", handleVideoEnd);
 
-        return () => {
-          video.removeEventListener("ended", handleVideoEnd);
-          mm.revert();
-        };
+          return () => {
+            video.removeEventListener("ended", handleVideoEnd);
+            mm.revert();
+          };
+        }
       }, containerRef);
 
       contextRef.current = ctx;
 
       return () => {
-        if (contextRef.current) {
+        if (contextRef.current && typeof contextRef.current.revert === "function") {
           contextRef.current.revert();
         }
       };
@@ -112,59 +115,83 @@ export default function LoadingScreen({ onComplete }) {
   const handleEnterClick = () => {
     if (!ready || exitTl.current) return;
 
-  try {
-    const mm = gsap.matchMedia();
+    try {
+      const mm = gsap.matchMedia();
 
-    mm.add("(min-width: 1024px)", () => {
-      exitTl.current = gsap.timeline({
-        defaults: { ease: "power4.inOut" },
-        onComplete: () => {
-          setIsVisible(false);
-          onComplete?.();
-          if (exitTl.current) {
-            exitTl.current.kill();
-            exitTl.current = null;
-          }
-        },
+      mm.add("(min-width: 1024px)", () => {
+        exitTl.current = gsap.timeline({
+          defaults: { ease: "power4.inOut" },
+          onComplete: () => {
+            setIsVisible(false);
+            onComplete?.();
+            // Ensure Lenis gets a chance to initialize after loader is hidden
+            if (typeof window !== "undefined") {
+              setTimeout(() => {
+                try {
+                  if (window.scrollY !== undefined) {
+                    window.dispatchEvent(new Event("load"));
+                  }
+                } catch (e) {
+                  console.warn("Scroll event dispatch error:", e);
+                }
+              }, 100);
+            }
+            if (exitTl.current) {
+              exitTl.current.kill();
+              exitTl.current = null;
+            }
+          },
+        });
+
+        exitTl.current.to([videoWrapperRef.current, textRef.current], {
+          x: (i) => (i === 0 ? "-500%" : "500%"),
+          duration: 1,
+        });
+
+        exitTl.current.to(containerRef.current, {
+          autoAlpha: 0,
+          duration: 0.5,
+        });
       });
 
-      exitTl.current.to([videoWrapperRef.current, textRef.current], {
-        x: (i) => (i === 0 ? "-500%" : "500%"),
-        duration: 1,
-      });
+      mm.add("(max-width: 1023px)", () => {
+        exitTl.current = gsap.timeline({
+          defaults: { ease: "power4.inOut" },
+          onComplete: () => {
+            setIsVisible(false);
+            onComplete?.();
+            // Ensure Lenis gets a chance to initialize after loader is hidden
+            if (typeof window !== "undefined") {
+              setTimeout(() => {
+                try {
+                  if (window.scrollY !== undefined) {
+                    window.dispatchEvent(new Event("load"));
+                  }
+                } catch (e) {
+                  console.warn("Scroll event dispatch error:", e);
+                }
+              }, 100);
+            }
+            if (exitTl.current) {
+              exitTl.current.kill();
+              exitTl.current = null;
+            }
+          },
+        });
 
-      exitTl.current.to(containerRef.current, {
-        autoAlpha: 0,
-        duration: 0.5,
-      });
-    });
+        exitTl.current.to([videoWrapperRef.current, textRef.current], {
+          y: (i) => (i === 0 ? "-200%" : "200%"),
+          duration: 0.8,
+        });
 
-    mm.add("(max-width: 1023px)", () => {
-      exitTl.current = gsap.timeline({
-        defaults: { ease: "power4.inOut" },
-        onComplete: () => {
-          setIsVisible(false);
-          onComplete?.();
-          if (exitTl.current) {
-            exitTl.current.kill();
-            exitTl.current = null;
-          }
-        },
+        exitTl.current.to(containerRef.current, {
+          autoAlpha: 0,
+          duration: 0.4,
+        });
       });
-
-      exitTl.current.to([videoWrapperRef.current, textRef.current], {
-        y: (i) => (i === 0 ? "-200%" : "200%"),
-        duration: 0.8,
-      });
-
-      exitTl.current.to(containerRef.current, {
-        autoAlpha: 0,
-        duration: 0.4,
-      });
-    });
-  } catch (error) {
-    console.error("Exit animation error:", error);
-  }
+    } catch (error) {
+      console.error("Exit animation error:", error);
+    }
   };
 
   // Render hidden on server to avoid hydration mismatch

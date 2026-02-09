@@ -132,7 +132,6 @@
 //   );
 // }
 
-
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
@@ -198,14 +197,14 @@ export default function HomeFourth() {
 
       return () => mm.revert();
     },
-    { scope: sectionRefFour }
+    { scope: sectionRefFour },
   );
 
   /* ================= VISIBILITY ================= */
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setVisible(entry.isIntersecting),
-      { threshold: 0.35 }
+      { threshold: 0.35 },
     );
 
     observer.observe(sectionRefFour.current);
@@ -218,7 +217,7 @@ export default function HomeFourth() {
     if (media1[index1].type === "image") {
       const t = setTimeout(
         () => setIndex1((i) => (i + 1) % media1.length),
-        2000
+        2000,
       );
       return () => clearTimeout(t);
     }
@@ -229,7 +228,7 @@ export default function HomeFourth() {
     if (media2[index2].type === "image") {
       const t = setTimeout(
         () => setIndex2((i) => (i + 1) % media2.length),
-        2000
+        2000,
       );
       return () => clearTimeout(t);
     }
@@ -245,45 +244,31 @@ export default function HomeFourth() {
         </div>
 
         <div className="home-fouth-media1" ref={mediaRef1}>
-          {visible &&
-            (media1[index1].type === "image" ? (
-              <img
-                src={media1[index1].src}
-                alt=""
-                loading="lazy"
-                decoding="async"
-              />
-            ) : (
-              <video
-                src={media1[index1].src}
-                preload="metadata"
-                autoPlay
-                muted
-                playsInline
-                onEnded={() => setIndex1((i) => (i + 1) % media1.length)}
-              />
-            ))}
+          {media1[index1].type === "image" ? (
+            <img src={media1[index1].src} alt="" />
+          ) : (
+            <video
+              src={media1[index1].src}
+              autoPlay
+              muted
+              playsInline
+              onEnded={() => setIndex1((i) => (i + 1) % media1.length)}
+            />
+          )}
         </div>
 
         <div className="home-fouth-media2" ref={mediaRef2}>
-          {visible &&
-            (media2[index2].type === "image" ? (
-              <img
-                src={media2[index2].src}
-                alt=""
-                loading="lazy"
-                decoding="async"
-              />
-            ) : (
-              <video
-                src={media2[index2].src}
-                preload="metadata"
-                autoPlay
-                muted
-                playsInline
-                onEnded={() => setIndex2((i) => (i + 1) % media2.length)}
-              />
-            ))}
+          {media2[index2].type === "image" ? (
+            <img src={media2[index2].src} alt="" />
+          ) : (
+            <video
+              src={media2[index2].src}
+              autoPlay
+              muted
+              playsInline
+              onEnded={() => setIndex2((i) => (i + 1) % media2.length)}
+            />
+          )}
         </div>
       </div>
     </div>

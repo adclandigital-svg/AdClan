@@ -37,86 +37,55 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import Lenis from "lenis";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { initLenis, destroyLenis, getLenisInstance } from "@/utils/lenisInit";
 
 export default function LenisProvider({ children }) {
-  const lenisRef = useRef(null);
-  const rafRef = useRef(null);
-  const timerRef = useRef(null);
+  const initTimeoutRef = useRef(null);
   const pathname = usePathname();
 
-  /* INIT LENIS */
+  /* INIT LENIS - DELAYED UNTIL PAGE IS FULLY INTERACTIVE */
   useEffect(() => {
-    // Wait for DOM to be ready before initializing Lenis
-    timerRef.current = setTimeout(() => {
+    let isMounted = true;
+
+    const startInit = async () => {
+      if (!isMounted) return;
+
       try {
-        if (!document || !window) return;
+        // Wait extra time to ensure LoadingScreen has a chance to render
+        await new Promise((resolve) => setTimeout(resolve, 1000));
 
-        const lenis = new Lenis({
-          duration: 1.2,
-          easing: (t) => 1 - Math.pow(1 - t, 3), // easeOutCubic
-          smoothWheel: true,
-          smoothTouch: false,
-          wheelMultiplier: 1,
-          touchMultiplier: 1.5,
-        });
+        if (!isMounted) return;
 
-        lenisRef.current = lenis;
-
-        // Sync with ScrollTrigger
-        lenis.on("scroll", () => {
-          try {
-            ScrollTrigger.update();
-          } catch (e) {
-            console.warn("ScrollTrigger update error:", e);
-          }
-        });
-
-        // Store the function reference so we can remove it later
-        const rafCallback = (time) => {
-          try {
-            if (lenisRef.current) {
-              lenisRef.current.raf(time * 1000);
-            }
-          } catch (e) {
-            console.warn("RAF callback error:", e);
-          }
-        };
-        rafRef.current = rafCallback;
-
-        gsap.ticker.add(rafCallback);
-        gsap.ticker.lagSmoothing(0);
+        // Initialize Lenis with retry logic built in
+        await initLenis();
       } catch (error) {
-        console.error("Lenis initialization error:", error);
+        console.error("Failed to initialize Lenis:", error);
       }
-    }, 100);
+    };
+
+    startInit();
 
     return () => {
-      if (timerRef.current) {
-        clearTimeout(timerRef.current);
+      isMounted = false;
+      if (initTimeoutRef.current) {
+        clearTimeout(initTimeoutRef.current);
       }
-      try {
-        if (rafRef.current && lenisRef.current) {
-          gsap.ticker.remove(rafRef.current);
-          lenisRef.current.destroy();
-          lenisRef.current = null;
-          rafRef.current = null;
-        }
-      } catch (error) {
-        console.error("Lenis cleanup error:", error);
-      }
+    };
+  }, []);
+
+  /* Cleanup on unmount */
+  useEffect(() => {
+    return () => {
+      destroyLenis();
     };
   }, []);
 
   /* 🔝 SCROLL TO TOP ON ROUTE CHANGE */
   useEffect(() => {
     try {
-      if (lenisRef.current) {
-        lenisRef.current.scrollTo(0, {
+      const lenisInstance = getLenisInstance();
+      if (lenisInstance && typeof lenisInstance.scrollTo === "function") {
+        lenisInstance.scrollTo(0, {
           immediate: true,
         });
       }
