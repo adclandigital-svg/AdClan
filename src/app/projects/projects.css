@@ -1,7 +1,7 @@
 /* BASE */
 .projects-page {
   color: #0e0e0e;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 
 /* HERO */
@@ -131,15 +131,14 @@
   font-weight: 500;
   overflow: hidden;
   z-index: 1;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-/* moving background layer */
 .load-more-btn::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: #000;
+  background: #17b9a9;
   transform: translateX(-100%);
   transition: transform 0.45s ease;
   z-index: -1;
@@ -147,6 +146,7 @@
 
 .load-more-btn:hover {
   color: #fff;
+  border-color: #17b9a9; /* ✅ THIS works */
 }
 
 .load-more-btn:hover::before {

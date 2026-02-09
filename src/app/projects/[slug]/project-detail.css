@@ -212,6 +212,9 @@
 
 /* MOBILE */
 @media (max-width: 640px) {
+  .project-hero{
+    height: auto;
+  }
   .hero-media {
     height: 60vh;
   }

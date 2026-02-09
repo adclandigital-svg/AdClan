@@ -156,25 +156,26 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, border 0.3s ease;
 }
 
 .contact-form button::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: #ffffff;
+  background: #17b9a9;
   transform: translateX(-100%);
   transition: transform 0.4s ease;
   z-index: -1;
 }
 
-.contact-form button:hover::after {
-  transform: translateX(0);
+.contact-form button:hover {
+  border-color: #17b9a9;
+  color: #fff;
 }
 
-.contact-form button:hover {
-  color: #000000;
+.contact-form button:hover::after {
+  transform: translateX(0);
 }
 
 /* MAP */
