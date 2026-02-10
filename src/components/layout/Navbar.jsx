@@ -36,7 +36,7 @@ export default function Navbar() {
           {/* LOGO */}
           <div className="brand">
             <Link href="/" className="brand-name">
-              <img src="/adclan-logo-1.png" alt="adclan" />
+              <img src="/adclan-logo-1.png" alt="adclan" loading="eager" width={160} height={40} />
             </Link>
           </div>
 

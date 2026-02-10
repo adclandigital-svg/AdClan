@@ -141,7 +141,7 @@ export default function ProjectDetailPage() {
             return (
               <div className="project-block media-row" key={i}>
                 {sec.items.map((item, j) => {
-                  const hasCaption = !!item.caption;
+                  const hasCaption = !!item.desc;
                   const isEven = j % 2 === 0;
                   return (
                     <div
@@ -152,7 +152,7 @@ export default function ProjectDetailPage() {
                     >
                       {hasCaption && (
                         <div className="media-text">
-                          <p>{item.caption}</p>
+                          <p>{item.desc}</p>
                         </div>
                       )}
                       <div className="project-media">

@@ -37,10 +37,11 @@
   color: #888;
 }
 .project-hero-title {
-  font-size: clamp(60px, 8vw, 120px);
+  font-size: clamp(36px, 5vw, 72px);
+
   font-weight: 100;
   line-height: 1.05;
-  margin-bottom: 20px;
+  margin: 20px 0px;
 }
 .project-hero-title span {
   display: block;
