@@ -3,7 +3,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import "./navbar.css";
-import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -27,6 +32,10 @@ export default function Navbar() {
       icon: <FaLinkedin />,
       link: "https://in.linkedin.com/company/adclan",
     },
+    {
+      icon: <FaXTwitter />,
+      link: "https://twitter.com/adclanmedia",
+    },
   ];
 
   return (
@@ -37,8 +46,7 @@ export default function Navbar() {
           <div className="brand">
             <Link href="/" className="brand-name">
               {/* <img src="/adclan-logo-1.png" alt="adclan" loading="eager" width={160} height={40} /> */}
-               <img src="/adclan-logo-1.png" alt="adclan" />  
-               
+              <img src="/adclan-logo-1.png" alt="adclan" />
             </Link>
           </div>
 
@@ -61,10 +69,7 @@ export default function Navbar() {
           {/* DESKTOP SOCIALS */}
           <div className="nav-socials desktop">
             {socials.map((s, i) => (
-              <span
-                key={i}
-                onClick={() => window.open(s.link, "_blank")}
-              >
+              <span key={i} onClick={() => window.open(s.link, "_blank")}>
                 {s.icon}
               </span>
             ))}
@@ -109,10 +114,7 @@ export default function Navbar() {
           {/* MOBILE SOCIALS */}
           <div className="mobile-socials">
             {socials.map((s, i) => (
-              <span
-                key={i}
-                onClick={() => window.open(s.link, "_blank")}
-              >
+              <span key={i} onClick={() => window.open(s.link, "_blank")}>
                 {s.icon}
               </span>
             ))}
