@@ -97,6 +97,7 @@
   z-index: 999;
   display: flex;
   flex-direction: column;
+  justify-content:space-between;
   overflow: hidden;
   transform: translateY(20px) scale(0.95);
   opacity: 0;
