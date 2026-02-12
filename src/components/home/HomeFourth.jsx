@@ -172,6 +172,19 @@ export default function HomeFourth() {
   const [index2, setIndex2] = useState(0);
   const [visible, setVisible] = useState(false);
 
+  const imgRef1 = useRef(null);
+  const imgRef2 = useRef(null);
+
+  /* ================= PRELOAD IMAGES ================= */
+  useEffect(() => {
+    [...media1, ...media2]
+      .filter((m) => m.type === "image")
+      .forEach((m) => {
+        const img = new Image();
+        img.src = m.src;
+      });
+  }, []);
+
   /* ================= GSAP ================= */
   useGSAP(
     () => {
@@ -211,25 +224,44 @@ export default function HomeFourth() {
     return () => observer.disconnect();
   }, []);
 
+  /* ================= IMAGE FADE HELPERS ================= */
+  const fadeSwap = (imgEl, newSrc) => {
+    if (!imgEl) return;
+    gsap.to(imgEl, {
+      opacity: 0,
+      duration: 0.25,
+      onComplete: () => {
+        imgEl.src = newSrc;
+        gsap.to(imgEl, { opacity: 1, duration: 0.35 });
+      },
+    });
+  };
+
   /* ================= MEDIA ROTATION ================= */
   useEffect(() => {
     if (!visible) return;
-    if (media1[index1].type === "image") {
-      const t = setTimeout(
-        () => setIndex1((i) => (i + 1) % media1.length),
-        2000,
-      );
+    const current = media1[index1];
+
+    if (current.type === "image") {
+      const t = setTimeout(() => {
+        const next = (index1 + 1) % media1.length;
+        fadeSwap(imgRef1.current, media1[next].src);
+        setIndex1(next);
+      }, 2200);
       return () => clearTimeout(t);
     }
   }, [index1, visible]);
 
   useEffect(() => {
     if (!visible) return;
-    if (media2[index2].type === "image") {
-      const t = setTimeout(
-        () => setIndex2((i) => (i + 1) % media2.length),
-        2000,
-      );
+    const current = media2[index2];
+
+    if (current.type === "image") {
+      const t = setTimeout(() => {
+        const next = (index2 + 1) % media2.length;
+        fadeSwap(imgRef2.current, media2[next].src);
+        setIndex2(next);
+      }, 2200);
       return () => clearTimeout(t);
     }
   }, [index2, visible]);
@@ -245,7 +277,7 @@ export default function HomeFourth() {
 
         <div className="home-fouth-media1" ref={mediaRef1}>
           {media1[index1].type === "image" ? (
-            <img src={media1[index1].src} alt="" />
+            <img ref={imgRef1} src={media1[index1].src} alt="" />
           ) : (
             <video
               src={media1[index1].src}
@@ -259,7 +291,7 @@ export default function HomeFourth() {
 
         <div className="home-fouth-media2" ref={mediaRef2}>
           {media2[index2].type === "image" ? (
-            <img src={media2[index2].src} alt="" />
+            <img ref={imgRef2} src={media2[index2].src} alt="" />
           ) : (
             <video
               src={media2[index2].src}

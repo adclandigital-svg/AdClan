@@ -140,14 +140,14 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-      <a
+      {/* <a
         href="https://wa.me/919891505451"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-float"
       >
         <FaWhatsapp />
-      </a>
+      </a> */}
     </>
   );
 }
