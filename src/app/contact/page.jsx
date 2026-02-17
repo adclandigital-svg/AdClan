@@ -1,9 +1,3 @@
-// "use client";
-// import React, { useRef, useState } from "react";
-// import "./contact.css";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { useGSAP } from "@gsap/react";
 
 // gsap.registerPlugin(ScrollTrigger);
 

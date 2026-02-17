@@ -2,8 +2,24 @@ import Link from "next/link";
 import "./cookies.css";
 
 export const metadata = {
-  title: "Cookies Policy | Adclan Digital",
-  description: "Cookies Policy of Adclan Digital – Digital Marketing Agency",
+  title: "Terms and Conditions | Adclan Digital",
+  description:
+    "Terms and Conditions of Adclan Digital – Digital Marketing Agency.",
+  keywords:
+    "terms and conditions, adclan digital, website terms, user agreement",
+  authors: [{ name: "Adclan Digital" }],
+
+  openGraph: {
+    title: "Terms and Conditions | Adclan Digital",
+    description:
+      "Read the Terms and Conditions of Adclan Digital.",
+    url: "https://ad-clan.vercel.app/terms-and-conditions",
+    images: [
+      {
+        url: "/adclan-logo-1.png",
+      },
+    ],
+  },
 };
 
 export default function CookiesPage() {

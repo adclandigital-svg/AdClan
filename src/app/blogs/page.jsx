@@ -6,16 +6,20 @@ import { blogs } from "@/data/blogs";
 
 export default function BlogsPage() {
   return (
-    <section className="blogs-page">
-      <header className="blogs-hero">
+    <section className="adclan-blog-page">
+      <header className="adclan-blog-hero">
         <h1>Insights</h1>
         <p>Creative thoughts & studio experiments</p>
       </header>
 
-      <div className="blogs-list">
+      <div className="adclan-blog-list">
         {blogs.map((blog) => (
-          <Link href={`/blogs/${blog.slug}`} key={blog.id} className="blog-card">
-            <div className="video-wrapper">
+          <Link
+            href={`/blogs/${blog.slug}`}
+            key={blog.id}
+            className="adclan-blog-card"
+          >
+            <div className="adclan-blog-video-wrapper">
               <video
                 src={blog.video}
                 muted
@@ -25,10 +29,11 @@ export default function BlogsPage() {
                 onMouseLeave={(e) => e.target.pause()}
               />
             </div>
-            <div className="blog-info">
-              <span className="blog-date">{blog.date}</span>
+
+            <div className="adclan-blog-info">
+              <span className="adclan-blog-date">{blog.date}</span>
               <h2>{blog.title}</h2>
-              <span className="read-more">Read →</span>
+              <span className="adclan-blog-read-more">Read →</span>
             </div>
           </Link>
         ))}

@@ -1,9 +1,7 @@
-/* BASE */
 .services-page {
   color: #111;
 }
 
-/* HERO */
 .services-hero {
   position: relative;
   height: 90vh;
@@ -15,7 +13,6 @@
 .services-hero-feather {
   height: 100%;
   width: 100%;
-  /* background-image: url("https://img.freepik.com/premium-photo/illustration-girl-with-clock-her-head-time-is-passing_1308175-104045.jpg?w=2000"); */
   display: flex;
   align-items: start;
   justify-content: center;
@@ -38,7 +35,6 @@
   width: 90%;
   height: 80%;
   object-fit: cover;
-  /* border-radius: 20px; */
 }
 
 .services-hero h1 {
@@ -57,7 +53,6 @@
   margin-top: 10px;
 }
 
-/* SERVICES LIST */
 .services-list {
   padding: 120px 8%;
   display: flex;
@@ -81,7 +76,6 @@
   direction: ltr;
 }
 
-/* IMAGE */
 .service-image {
   overflow: hidden;
 }
@@ -104,7 +98,6 @@
 }
 
 
-/* CONTENT */
 .service-content {
   max-width: 420px;
   animation: fadeUp 0.9s ease both;
@@ -142,7 +135,6 @@
   border-bottom: 1px solid #111;
 }
 
-/* WHY US */
 .why-us {
   padding: 120px 8%;
   background: #fafafa;
@@ -195,13 +187,11 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* icon subtle highlight */
 .why-card:hover .why-icon {
   color: rgba(0, 0, 0, 0.6);
   transition: color 0.35s ease;
 }
 
-/* ANIMATIONS */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -213,7 +203,7 @@
   }
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 900px) {
 
   .services-hero-feather h2 {
