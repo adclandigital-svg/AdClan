@@ -100,8 +100,6 @@
 //   );
 // }
 
-
-
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import "./HomeThird.css";
@@ -139,6 +137,9 @@ export default function HomeThird() {
     "/client-logo/adclan-logo-26.png",
     "/client-logo/adclan-logo-27.png",
     "/client-logo/adclan-logo-28.png",
+    "/client-logo/adclan-logo-29.png",
+    "/client-logo/adclan-logo-30.png",
+    "/client-logo/adclan-logo-31.svg",
   ];
 
   const [index, setIndex] = useState(0);
@@ -161,7 +162,7 @@ export default function HomeThird() {
           intervalRef.current = null;
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
 
     observer.observe(sectionRef.current);
@@ -188,7 +189,7 @@ export default function HomeThird() {
             duration: 0.9,
             ease: "power4.out",
             stagger: 0.12,
-          }
+          },
         );
       },
       onLeaveBack: () => {

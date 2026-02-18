@@ -149,23 +149,29 @@ export default function HomeFourth() {
   const mediaRef2 = useRef(null);
 
   const media1 = [
-    { type: "image", src: "/v1.jpg" },
-    { type: "video", src: "/v1.mp4" },
-    { type: "image", src: "/v2.jpg" },
-    { type: "video", src: "/v2.mp4" },
-    { type: "image", src: "/v3.jpg" },
-    { type: "image", src: "/v4.jpg" },
-    { type: "video", src: "/v3.mp4" },
-    { type: "image", src: "/v5.jpg" },
+   { type: "image", src: "/home/creatives/1.webp" },
+   { type: "image", src: "/home/creatives/2.webp" },
+   { type: "image", src: "/home/creatives/3.webp" },
+   { type: "image", src: "/home/creatives/4.webp" },
+   { type: "video", src: "/home/creatives/5.mp4" },
+   { type: "image", src: "/home/creatives/6.jpg" },
+   { type: "image", src: "/home/creatives/7.jpg" },
+   { type: "image", src: "/home/creatives/8.jpeg" },
+   { type: "image", src: "/home/creatives/10.jpg" },
   ];
 
   const media2 = [
-    { type: "image", src: "/v6.jpg" },
-    { type: "video", src: "/v4.mp4" },
-    { type: "image", src: "/v7.jpg" },
-    { type: "video", src: "/v10.mp4" },
-    { type: "image", src: "/v8.jpg" },
-    { type: "image", src: "/v9.jpg" },
+    { type: "image", src: "/home/creatives/11.webp" },
+    { type: "image", src: "/home/creatives/12.jpg" },
+    { type: "image", src: "/home/creatives/13.jpg" },
+    { type: "video", src: "/home/creatives/14.mp4" },
+    { type: "image", src: "/home/creatives/15.jpg" },
+    { type: "image", src: "/home/creatives/16.jpeg" },
+    { type: "image", src: "/home/creatives/17.jpeg" },
+    { type: "image", src: "/home/creatives/18.webp" },
+    { type: "image", src: "/home/creatives/19.webp" },
+    { type: "image", src: "/home/creatives/20.webp" },
+    { type: "image", src: "/home/creatives/21.webp" },
   ];
 
   const [index1, setIndex1] = useState(0);
@@ -277,7 +283,7 @@ export default function HomeFourth() {
 
         <div className="home-fouth-media1" ref={mediaRef1}>
           {media1[index1].type === "image" ? (
-            <img ref={imgRef1} src={media1[index1].src} alt="" />
+            <img ref={imgRef1} src={media1[index1].src} alt=""/>
           ) : (
             <video
               src={media1[index1].src}
@@ -291,7 +297,7 @@ export default function HomeFourth() {
 
         <div className="home-fouth-media2" ref={mediaRef2}>
           {media2[index2].type === "image" ? (
-            <img ref={imgRef2} src={media2[index2].src} alt="" />
+            <img ref={imgRef2} src={media2[index2].src} alt=""  />
           ) : (
             <video
               src={media2[index2].src}

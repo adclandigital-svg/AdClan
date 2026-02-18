@@ -418,7 +418,7 @@
   font-weight: bold;
   color: #fff;
   text-align: center;
-  background-color: rgba(23, 185, 169, 0.801);
+  background-color: rgba(23, 185, 169, 0.401);
   opacity: 0;
   transform: translateY(100%);
   transition:

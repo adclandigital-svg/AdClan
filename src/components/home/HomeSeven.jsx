@@ -142,7 +142,7 @@ export default function HomeSeven() {
           <div className="home-seven-left">
             <img
               className="impact-image"
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+              src="/home/1.avif"
               alt="Team Collaboration"
               loading="lazy"
             />
@@ -152,43 +152,46 @@ export default function HomeSeven() {
           <div className="home-seven-right">
             <h4 className="impact-sub-heading">Our Global Impact</h4>
             <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              perspiciatis cum explicabo sit dignissimos sequi consectetur,
-              voluptas in voluptate.
+              Adclan Media Solution Pvt Ltd has empowered 100+ brands through
+              25+ successful campaigns, reaching over 1 lakh happy users
+              worldwide. With 7+ years of industry excellence, strategic
+              celebrity endorsements, and a robust network of media partners, we
+              deliver integrated solutions across OTT, e-commerce, and radio
+              platforms.
             </span>
 
             <div className="hex-grid">
               <div className="hex-card blue">
-                <strong>500+</strong>
-                <p>Digital Transformations</p>
-              </div>
-              <div className="hex-card green">
                 <strong>100+</strong>
-                <p>AI Solutions Deployed</p>
-              </div>
-              <div className="hex-card blue">
-                <strong>12+</strong>
-                <p>Active Clients</p>
-              </div>
-              <div className="hex-card orange">
-                <strong>20+</strong>
-                <p>Enterprise Partners</p>
-              </div>
-              <div className="hex-card blue">
-                <strong>50M+</strong>
-                <p>Users Engaged</p>
+                <p>Campaigns Executed</p>
               </div>
               <div className="hex-card green">
-                <strong>10+</strong>
-                <p>Global Innovation Hubs</p>
+                <strong>25+</strong>
+                <p>Brands Managed</p>
+              </div>
+              <div className="hex-card blue">
+                <strong>5+</strong>
+                <p>Celebrity Endorsement</p>
               </div>
               <div className="hex-card orange">
-                <strong>20+</strong>
+                <strong>1L+</strong>
+                <p>Happy Users</p>
+              </div>
+              <div className="hex-card blue">
+                <strong>7+</strong>
+                <p>Years of Excellence</p>
+              </div>
+              <div className="hex-card green">
+                <strong>5+</strong>
+                <p>Media Partners</p>
+              </div>
+              <div className="hex-card orange">
+                <strong>10+</strong>
                 <p>Enterprise Clients</p>
               </div>
               <div className="hex-card blue">
-                <strong>10+</strong>
-                <p>Enterprise Regions</p>
+                <strong>3+</strong>
+                <p>Execution Channels</p>
               </div>
             </div>
           </div>

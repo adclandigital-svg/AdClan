@@ -240,15 +240,16 @@ export default function HomeSix() {
         onClick={() => router.push(`/blogs/${blog.slug}`)}
       >
         <p>{blog.title}</p>
-        {load && (
+        {load ? 
           <video
             src={blog.video}
             muted
             loop
             autoPlay
             playsInline
-          />
-        )}
+            preload="none"   // ✅ lazy load (no preload)
+          />:""
+        }
       </div>
     );
   };
@@ -263,24 +264,24 @@ export default function HomeSix() {
       <section className="home-six-section" ref={sectionRef}>
         <div className="home-six-first-container">
           <div className="home-six-first-container1">
-            <VideoCard blog={blogs[0]} />
+            <VideoCard blog={blogs?.[0]} />
           </div>
           <div className="home-six-first-container2">
             <div className="home-six-first-container21">
-              <VideoCard blog={blogs[1]} />
+              <VideoCard blog={blogs?.[1]} />
             </div>
             <div className="home-six-first-container22">
-              <VideoCard blog={blogs[2]} />
+              <VideoCard blog={blogs?.[2]} />
             </div>
           </div>
         </div>
 
         <div className="home-six-second-container">
           <div className="home-six-second-container1">
-            <VideoCard blog={blogs[3]} />
+            <VideoCard blog={blogs?.[3]} />
           </div>
           <div className="home-six-second-container1">
-            <VideoCard blog={blogs[4]} />
+            <VideoCard blog={blogs?.[4]} />
           </div>
         </div>
 
@@ -306,13 +307,13 @@ export default function HomeSix() {
           }}
           onSlideChange={(swiper) => {
             swiper.slides.forEach((slide, i) => {
-              const video = slide.querySelector("video");
+              const video = slide?.querySelector("video");
               if (!video) return;
               i === swiper.activeIndex ? video.play() : video.pause();
             });
           }}
         >
-          {blogs.slice(0, 5).map((blog, i) => (
+          {blogs?.slice(0, 5).map((blog, i) => (
             <SwiperSlide key={i}>
               <MobileSlide blog={blog} router={router} />
             </SwiperSlide>
@@ -349,7 +350,7 @@ function MobileSlide({ blog, router }) {
       className="slide-card"
       onClick={() => router.push(`/blogs/${blog.slug}`)}
     >
-      {load && (
+      {load ?
         <video
           src={blog.video}
           muted
@@ -357,7 +358,7 @@ function MobileSlide({ blog, router }) {
           autoPlay
           playsInline
         />
-      )}
+        : ""}
       <p>{blog.title}</p>
     </div>
   );

@@ -15,27 +15,27 @@ export default function HomeSecond() {
   const cards = [
     {
       text: "Radio",
-      bg: "https://spacial.com/wp-content/uploads/2019/05/online-radio-advertising.jpg",
+      bg: "/home/radio.jpg",
     },
     {
       text: "Print",
-      bg: "https://www.collateral.co.in/upload/blogimage2/202002061122244269.jpg",
+      bg: "/home/print.jpg",
     },
     {
       text: "Event",
-      bg: "https://www.shutterstock.com/image-vector/events-colorful-typography-banner-260nw-1356206768.jpg",
+      bg: "/home/events.jpg",
     },
     {
       text: "Creative",
-      bg: "https://img.freepik.com/premium-photo/handdrawn-creativity-concept-with-doodles-white-background-featuring-pencil-lightbulb-books-gear-paper-plane_670147-105933.jpg?semt=ais_hybrid&w=740&q=80",
+      bg: "/home/creative.jpg",
     },
     {
       text: "Digital",
-      bg: "https://sagartech.co.in/blogs/wp-content/uploads/2024/10/Digital-Marketing-Strategy-Feature-image-min.webp",
+      bg: "/home/digital.webp",
     },
     {
       text: "Celebrity",
-      bg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2LQU887JJHF70ktU4F95QY50145ii3j0jPw&s",
+      bg: "/home/celebrities.jpg",
     },
   ];
 
