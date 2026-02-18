@@ -17,15 +17,21 @@
 
 /* IMAGE — takes more space */
 .definition-image {
-  flex: 0 0 50%; /* ⬅️ increase image width */
+  flex: 0 0 45%; /* ⬅️ increase image width */
   display: flex;
   justify-content: center;
 }
 
+.definition-image {
+  height: 600px;        /* important: fixed height */
+  overflow: hidden;     /* hides extra top part */
+}
+
 .definition-image img {
   width: 100%;
-  max-width: 720px; /* ⬅️ larger image */
+  height: 100%;         /* must fill container */
   object-fit: cover;
+  object-position: bottom;  /* 👈 shows bottom part */
 }
 
 /* TEXT — takes less space */

@@ -47,8 +47,9 @@ export default function AboutDefinition() {
         <div className="definition-image">
           <img
             ref={imgRef}
-            src="https://plus.unsplash.com/premium_photo-1714674731657-05fcb6a0222a?q=80&w=1374&auto=format&fit=crop"
+            src="/about/1.webp"
             alt="About company"
+            loading="lazy"
           />
         </div>
 

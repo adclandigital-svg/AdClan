@@ -140,6 +140,7 @@ export default function HomeThird() {
     "/client-logo/adclan-logo-29.png",
     "/client-logo/adclan-logo-30.png",
     "/client-logo/adclan-logo-31.svg",
+    "/client-logo/adclan-logo-32.png",
   ];
 
   const [index, setIndex] = useState(0);

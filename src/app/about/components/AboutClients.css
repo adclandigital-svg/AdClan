@@ -14,7 +14,7 @@
 }
 
 .client-logo {
-  flex: 0 1 150px; /* width of each logo box */
+  flex: 0 1 120px; /* width of each logo box */
   display: flex;
   justify-content: center;
   align-items: center;

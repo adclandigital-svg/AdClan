@@ -4,7 +4,7 @@ export default function AboutFounderSingle() {
   const founder = {
     name: "Sandeep Dubey",
     role: "Co-Founder & CEO",
-    img: "https://img.freepik.com/premium-vector/business-man-avatar-vector_1133257-2430.jpg?w=1480",
+    img: "/about/ceo2.png",
     description:
       "Visionary leader with expertise in brand strategy and digital innovation. With over 15 years of experience, John has helped brands find clarity, build strong identities, and scale with purpose. He believes creativity must be rooted in strategy, and leadership begins with listening, learning, and evolving constantly.",
   };

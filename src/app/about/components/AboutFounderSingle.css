@@ -11,13 +11,17 @@
   grid-template-columns: 1fr 1.2fr;
   gap: 5rem;
   align-items: center;
+  place-items: center;
+}
+.founder-img{
+  height: 100%;
+  width: 80%;
+  overflow: hidden;
 }
 
 .founder-img img {
+  object-fit: cover;
   width: 100%;
-  max-width: 360px;
-  border-radius: 12px;
-  filter: grayscale(100%);
 }
 
 .founder-content {

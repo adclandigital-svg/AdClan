@@ -16,7 +16,6 @@ export default function AboutClients() {
     "/client-logo/adclan-logo-11.png",
     "/client-logo/adclan-logo-12.png",
     "/client-logo/adclan-logo-13.png",
-    // "/client-logo/adclan-logo-14.png",
     "/client-logo/adclan-logo-15.png",
     "/client-logo/adclan-logo-16.png",
     "/client-logo/adclan-logo-17.png",
@@ -31,6 +30,10 @@ export default function AboutClients() {
     "/client-logo/adclan-logo-26.png",
     "/client-logo/adclan-logo-27.png",
     "/client-logo/adclan-logo-28.png",
+    "/client-logo/adclan-logo-29.png",
+    "/client-logo/adclan-logo-30.png",
+    "/client-logo/adclan-logo-31.svg",
+    "/client-logo/adclan-logo-32.png",
   ];
 
   return (
