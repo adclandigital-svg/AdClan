@@ -42,45 +42,39 @@ export default function ProjectDetailPage() {
         });
       });
       gsap.utils.toArray(".gallery-slider").forEach((slider) => {
-        // Safety check - ensure slider has children
-        if (!slider || !slider.children || slider.children.length === 0) {
-          return;
-        }
+        if (!slider || !slider.children || slider.children.length === 0) return;
 
         const items = slider.children;
         const originalItemCount = items.length;
 
-        // Clone items for seamless loop (only clone once)
+        // Clone items
         const clonedItems = [];
-        Array.from(items).slice(0, originalItemCount).forEach((item) => {
-          const clone = item.cloneNode(true);
-          clonedItems.push(clone);
+        Array.from(items).forEach((item) => {
+          clonedItems.push(item.cloneNode(true));
         });
 
-        // Append all clones at once
-        clonedItems.forEach((clone) => {
-          slider.appendChild(clone);
-        });
+        clonedItems.forEach((clone) => slider.appendChild(clone));
 
-        // Recalculate after DOM updates
         const totalWidth = slider.scrollWidth / 2;
 
         gsap.set(slider, { x: 0 });
 
+        // 🔥 AUTO SPEED CALCULATION
+        const pixelsPerSecond = 100; // adjust speed here
+        const duration = totalWidth / pixelsPerSecond;
+
         gsap.to(slider, {
           x: -totalWidth,
-          duration: 30,
-          ease: "linear",
+          duration: duration,
+          ease: "none",
           repeat: -1,
           modifiers: {
-            x: (x) => {
-              return `${parseFloat(x) % totalWidth}px`;
-            },
+            x: (x) => `${parseFloat(x) % totalWidth}px`,
           },
         });
       });
     },
-    { scope: pageRef }
+    { scope: pageRef },
   );
 
   return (
@@ -102,7 +96,9 @@ export default function ProjectDetailPage() {
             <span>[ {project.client} ]</span>
           </div>
         </div>
-        {project.sections?.filter((s) => s.type === "hero")?.map((hero, i) =>
+        {project.sections
+          ?.filter((s) => s.type === "hero")
+          ?.map((hero, i) =>
             hero.mediaType === "image" ? (
               <div className="hero-media" key={i}>
                 <img src={hero.src} alt={project.title} />
@@ -111,7 +107,7 @@ export default function ProjectDetailPage() {
               <div className="hero-media video" key={i}>
                 <video src={hero.src} autoPlay muted loop playsInline />
               </div>
-            )
+            ),
           )}
       </section>
 

@@ -51,9 +51,6 @@
 //   );
 // }
 
-
-
-
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -72,7 +69,7 @@ export default function MagazineBook() {
     const init = requestAnimationFrame(() => {
       pageFlip.current = new PageFlip(bookRef.current, {
         width: isMobile ? 360 : 700,
-        height: isMobile ? 460 : 600,
+        height: isMobile ? 460 : 700,
         size: "fixed",
         showCover: false,
         useMouseEvents: true,
@@ -87,12 +84,25 @@ export default function MagazineBook() {
       });
 
       pageFlip.current.loadFromImages([
-        "/m1.avif",
-        "/m2.avif",
-        "/m1.avif",
-        "/m2.avif",
-        "/m1.avif",
-        "/m2.avif",
+        "/about/magazine/1.jpg",
+        "/about/magazine/2.jpg",
+        "/about/magazine/3.jpg",
+        "/about/magazine/4.jpg",
+        "/about/magazine/5.jpg",
+        "/about/magazine/6.jpg",
+        "/about/magazine/7.jpg",
+        "/about/magazine/8.jpg",
+        "/about/magazine/9.jpg",
+        "/about/magazine/10.jpg",
+        "/about/magazine/11.jpg",
+        "/about/magazine/12.jpg",
+        "/about/magazine/13.jpg",
+        "/about/magazine/14.jpg",
+        "/about/magazine/15.jpg",
+        "/about/magazine/16.jpg",
+        "/about/magazine/17.jpg",
+        "/about/magazine/18.jpg",
+        "/about/magazine/19.jpg",
       ]);
     });
 

@@ -75,14 +75,14 @@ export default function Services() {
       id: "01",
       title: "Branding & Identity",
       desc: "We craft strong brand identities that connect culture and commerce through strategy, design, and storytelling.",
-      src: "https://videocdn.cdnpk.net/videos/af53036f-fe27-5c45-b1fe-8c085a047581/horizontal/previews/watermarked/large.mp4",
+      src: "/service/branding.mp4",
       mediaType: "video",
     },
     {
       id: "02",
       title: "Creative & Marketing",
       desc: "Creative-led marketing campaigns designed to build awareness, engagement, and long-term brand value.",
-      src: "https://videocdn.cdnpk.net/videos/81181fa2-7e77-5951-9493-32a23387b4bc/horizontal/previews/watermarked/large.mp4",
+      src: "/service/creative.mp4",
       mediaType: "video",
       reverse: true,
     },
@@ -90,29 +90,29 @@ export default function Services() {
       id: "03",
       title: "Digital Marketing",
       desc: "Performance-driven digital marketing across social, search, and content to scale brands online.",
-      src: "https://videocdn.cdnpk.net/videos/289cb7b4-419e-5aca-b1da-dcea15ed7514/horizontal/previews/watermarked/large.mp4",
+      src: "/service/digital marketing.mp4",
       mediaType: "video",
     },
     {
       id: "04",
       title: "BTL Activities",
       desc: "On-ground activations, events, and experiential marketing that create real-world brand impact and engagement.",
-      src: "https://picsum.photos/seed/btl/1600/1600",
-      mediaType: "image",
+      src: "/service/btl.mp4",
+      mediaType: "video",
       reverse: true,
     },
     {
       id: "05",
       title: "Production & Films",
       desc: "High-end film and content production that elevates brands through powerful visual storytelling.",
-      src: "https://picsum.photos/seed/production/1600/1600",
-      mediaType: "image",
+      src: "/service/video.mp4",
+      mediaType: "video",
     },
     {
       id: "06",
       title: "Web Development",
       desc: "Modern, fast, and scalable websites built with performance, usability, and aesthetics in mind.",
-      src: "https://videocdn.cdnpk.net/videos/4e2937ab-58fd-5693-af4f-c2def100d8ca/horizontal/previews/watermarked/large.mp4",
+      src: "/service/web.mp4",
       mediaType: "video",
       reverse: true,
     },
@@ -146,9 +146,9 @@ export default function Services() {
           >
             <div className="service-image">
               {service.mediaType == "video" ? (
-                <video src={service.src} autoPlay muted loop playsInline />
+                <video src={service.src} autoPlay muted loop playsInline preload="none"/>
               ) : (
-                <img src={service.src} alt={service.title} />
+                <img src={service.src} alt={service.title} loading="lazy"/>
               )}
             </div>
 
