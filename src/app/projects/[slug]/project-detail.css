@@ -11,6 +11,7 @@
   padding: 0px 0%;
   overflow: hidden;
   height: 150vh;
+  margin-bottom: 50px;
 }
 
 .hero-media {
@@ -100,12 +101,12 @@
   width: 100%;
   height: auto;
   margin: 100px 0px;
-  object-fit: cover;
 }
 
 .media-row-item.full .project-media img,
 .media-row-item.full .project-media video {
-  width: 100%;
+  width: auto;
+  object-fit: contain;
 }
 
 .media-row-item.split {
@@ -132,11 +133,14 @@
   flex: 1;
   height: 1000px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .media-row-item.split .project-media img,
 .media-row-item.split .project-media video {
-  width: 100%;
+  width: auto;
   height: 100%;
   object-fit: cover;
   /* object-position: top;    */

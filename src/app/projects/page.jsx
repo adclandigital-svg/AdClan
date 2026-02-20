@@ -265,8 +265,8 @@ export default function ProjectsPage() {
               <span>[ {project.category} ]</span>
               <h3>{project.title}</h3>
               <p>
-                {project.intro.split(" ").slice(0, 30).join(" ")}
-                {project.intro.split(" ").length > 30 && "..."}
+                {project.intro.split(" ").slice(0, 20).join(" ")}
+                {project.intro.split(" ").length > 20 && "..."}
               </p>
             </div>
           </article>

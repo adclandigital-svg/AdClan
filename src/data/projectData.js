@@ -60,7 +60,7 @@ export const PROJECTS = [
           },
           {
             mediaType: "image",
-           src: "/projects/right-gold/gallery/2.jpg",
+            src: "/projects/right-gold/gallery/2.jpg",
             desc: "Lifestyle ad shoot portraying aspirational luxury moments for targeted ad audiences.",
           },
           {
@@ -122,217 +122,247 @@ export const PROJECTS = [
             mediaType: "image",
             src: "/projects/right-gold/gallery/14.jpg",
             desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },{
+          },
+          {
             mediaType: "image",
             src: "/projects/right-gold/gallery/15.jpg",
             desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },{
+          },
+          {
             mediaType: "image",
             src: "/projects/right-gold/gallery/16.jpg",
             desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          }
+          },
         ],
       },
     ],
   },
-  // {
-  //   slug: "kb-west-walk",
-  //   title: "KB West Walk",
-  //   category: "Branding",
-  //   year: "2026",
-  //   client: "KB West Walk",
-  //   src: "https://kbwestwalknoida.com/img/gallery/gallery1.webp",
-  //   intro:
-  //     "Brand identity and retail design for KB West Walk shopping destination.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+  {
+    slug: "kb-west-walk",
+    title: "KB West Walk",
+    category: "Branding",
+    year: "2026",
+    client: "KB West Walk",
+    src: "/projects/kb/logo.webp",
+    intro:
+      "For KB West Walk, we executed a high-impact Instagram content strategy focused on reels, creative posts, and campaign-driven storytelling. The objective was to increase footfall, boost brand recall, and position the mall as a vibrant lifestyle destination for the new-age audience.",
 
-  // {
-  //   slug: "kb-mart",
-  //   title: "KB Mart",
-  //   category: "Branding",
-  //   year: "2026",
-  //   client: "KB Mart",
-  //   src: "https://goldendreamproperty.com/wp-content/uploads/2025/12/slider3.jpg",
-  //   intro: "Complete retail brand identity and marketing campaign for KB Mart.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   slug: "kb-complex",
-  //   title: "KB Complex",
-  //   category: "Retail Branding",
-  //   year: "2026",
-  //   client: "KB Mart",
-  //   src: "https://static.squareyards.com/resources/images/greater-noida/project-image/shree-kunj-kb-complex-project-project-large-image1.jpg",
-  //   intro:
-  //     "End-to-end retail branding and launch campaign for KB Mart and KB Complex — covering store identity, commercial property positioning, launch films, outdoor branding, and in-store experience design.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+    sections: [
+      {
+        type: "hero",
+        mediaType: "image",
+        src: "/projects/kb/bn.png",
+        title: "Scroll-Stopping Social Presence",
+        description:
+          "A visually dynamic Instagram campaign crafted to capture attention within seconds. From high-energy reels to bold static creatives, every asset was designed to maximize engagement and shareability.",
+      },
+
+      {
+        type: "mediaRow",
+        items: [
+          {
+            mediaType: "video",
+            src: "/projects/kb/9.mp4",
+            desc: "High-conversion Instagram reel highlighting mall ambience, trending stores, and lifestyle moments — optimized for reach, engagement, and algorithm performance.",
+          },
+          {
+            mediaType: "video",
+            src: "/projects/kb/2.mp4",
+            desc: "Launch reel campaign introducing KB West Walk’s retail experience with cinematic transitions, upbeat music, and fast-paced storytelling designed for maximum retention.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/kb/3.jpg",
+            desc: "Creative Instagram post designed to promote seasonal offers and brand collaborations, using bold typography and attention-grabbing visuals.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/kb/4.webp",
+            desc: "Festival campaign creative tailored for Instagram feed and stories, crafted to drive event awareness and increase in-mall participation.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/kb/5.webp",
+            desc: "Promotional post series developed for weekly engagement — combining lifestyle imagery with compelling call-to-actions to boost footfall.",
+          },
+        ],
+      },
+
+      {
+        type: "gallery",
+        items: [
+          {
+            mediaType: "image",
+            src: "/projects/kb/6.webp",
+            desc: "Instagram carousel creatives showcasing featured brands and in-store experiences.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/kb/7.webp",
+            desc: "Engagement-driven static post designed for product highlights and limited-time offers.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/kb/8.webp",
+            desc: "Event promotion creative optimized for Instagram stories and feed visibility.",
+          },
+          {
+            mediaType: "video",
+            src: "/projects/kb/9.mp4",
+            desc: "Performance-focused reel campaign engineered to increase views, shares, and overall digital reach.",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "spring-elmas-campaign-1",
+    title: "SPRING ELMAS Grand Launch",
+    category: "Branding",
+    year: "2024",
+    client: "Elmas Group",
+    src: "/projects/elmasGroup/logo.jpg",
+    intro:
+      "SPRING ELMAS marked a flagship launch by Elmas Group, executed as a complete 360° branding and marketing campaign. From outdoor dominance to magazine spreads, high-impact video production, and digital amplification, the campaign was engineered to establish strong market visibility and premium brand positioning.",
+
+    sections: [
+      {
+        type: "hero",
+        mediaType: "video",
+        src: "/projects/elmasGroup/banner.mp4",
+        title: "A Landmark Launch for Elmas Group",
+        description:
+          "A cinematic launch film crafted to introduce SPRING ELMAS as a premium real estate destination. The film blended architectural visuals, aspirational lifestyle storytelling, and strong call-to-action messaging.",
+      },
+
+      {
+        type: "mediaRow",
+        items: [
+          {
+            mediaType: "video",
+            src: "/projects/elmasGroup/1.mp4",
+            desc: "Complete visual identity system and campaign key visuals developed for consistent branding across outdoor, print, and digital platforms.",
+          },
+          {
+            mediaType: "video",
+            src: "/projects/elmasGroup/2.mp4",
+            desc: "High-production promotional video designed for social media ads, digital screens, and event presentations — focusing on luxury lifestyle and architectural excellence.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/elmasGroup/3.webp",
+            desc: "Large-scale outdoor hoardings strategically placed in high-traffic city zones to create maximum brand recall and market dominance.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/elmasGroup/4.webp",
+            desc: "Performance-driven digital ad creatives optimized for Meta and Google campaigns, generating high engagement and qualified lead inquiries.",
+          },
+        ],
+      },
+
+      {
+        type: "gallery",
+        items: [
+          {
+            mediaType: "image",
+            src: "/projects/elmasGroup/5.webp",
+            desc: "Premium magazine advertisements featured in leading lifestyle and real estate publications to enhance brand credibility.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/elmasGroup/6.webp",
+            desc: "Event branding and launch-day installations including stage backdrops, standees, and experiential brand zones.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/elmasGroup/7.webp",
+            desc: "Launch event coverage video capturing audience engagement, project unveiling, and brand positioning moments.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/elmasGroup/8.webp",
+            desc: "Campaign rollout across billboards, brochures, newspaper ads, social media creatives, and digital display networks.",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "vikram-mills-1",
+    title: "VIKRAM MILLS Brand Transformation",
+    category: "FMCG Branding & Packaging",
+    year: "2024",
+    client: "VIKRAM MILLS",
+    src: "/projects/vikram-mills/logo.jpg",
+    intro:
+      "VIKRAM MILLS underwent a comprehensive brand transformation to strengthen its presence in the competitive rice and agro-products market. The project focused on modernizing the brand identity, premiumizing packaging design, and enhancing market visibility across retail, wholesale, and distributor networks.",
+
+    sections: [
+      {
+        type: "hero",
+        mediaType: "image",
+        src: "/projects/vikram-mills/web banner 30 kg rice 2.png",
+        title: "Elevating a Trusted Rice Brand",
+        description:
+          "A refreshed visual direction designed to reflect purity, quality, and large-scale distribution strength — positioning Vikram Mills as a reliable and premium rice manufacturer.",
+      },
+
+      {
+        type: "mediaRow",
+        items: [
+          {
+            mediaType: "video",
+            src: "/projects/vikram-mills/1.mp4",
+            desc: "Complete brand identity refresh including logo refinement, typography system, packaging grid structure, and visual consistency across SKUs.",
+          },
+          {
+            mediaType: "video",
+            src: "/projects/vikram-mills/3.mp4",
+            desc: "Product showcase and promotional motion creatives highlighting grain quality, sourcing standards, and manufacturing excellence.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/4.jpg",
+            desc: "Premium 30kg and retail packaging designs crafted for strong shelf impact and clear product differentiation in wholesale markets.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/5.jpg",
+            desc: "Outdoor branding and dealer board applications to strengthen regional market recall and distributor network visibility.",
+          },
+        ],
+      },
+
+      {
+        type: "gallery",
+        items: [
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/6.jpg",
+            desc: "Retail-ready packaging variations across multiple rice categories and grain types.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/7.jpg",
+            desc: "Print collateral including brochures, rate cards, and dealer communication materials.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/8.jpg",
+            desc: "In-market activation creatives and point-of-sale branding elements.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/9.jpg",
+            desc: "Consistent visual rollout across transportation branding, sacks, and bulk distribution channels.",
+          },
+        ],
+      },
+    ],
+  },
 
   // {
   //   slug: "agropure-brand-identity-1",
@@ -1146,71 +1176,7 @@ export const PROJECTS = [
   // },
 
   // // 9. VIKRAM MILLS projects
-  // {
-  //   slug: "vikram-mills-1",
-  //   title: "VIKRAM MILLS Branding",
-  //   category: "Branding",
-  //   year: "2024",
-  //   client: "VIKRAM MILLS",
-  //   src: "https://picsum.photos/800/600?random=21",
-  //   intro: "Brand identity refresh for VIKRAM MILLS.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+
   // {
   //   slug: "vikram-mills-2",
   //   title: "VIKRAM MILLS Campaign",
