@@ -296,7 +296,7 @@ export const PROJECTS = [
     category: "FMCG Branding & Packaging",
     year: "2024",
     client: "VIKRAM MILLS",
-    src: "/projects/vikram-mills/logo.jpg",
+    src: "/projects/vikram-mills/logo-new.jpg",
     intro:
       "VIKRAM MILLS underwent a comprehensive brand transformation to strengthen its presence in the competitive rice and agro-products market. The project focused on modernizing the brand identity, premiumizing packaging design, and enhancing market visibility across retail, wholesale, and distributor networks.",
 
