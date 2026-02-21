@@ -58,14 +58,14 @@ const staticPages = [
 ];
 
 // Dynamic blog pages
-const dynamicBlogPages = blogs.map((blog) => ({
+const dynamicBlogPages = blogs?.map((blog) => ({
   url: `/blogs/${blog.slug}`,
   changeFrequency: 'monthly',
   priority: 0.8,
 }));
 
 // Dynamic project pages
-const dynamicProjectPages = PROJECTS.map((project) => ({
+const dynamicProjectPages = PROJECTS?.map((project) => ({
   url: `/projects/${project.slug}`,
   changeFrequency: 'monthly',
   priority: 0.8,
@@ -75,7 +75,7 @@ const dynamicProjectPages = PROJECTS.map((project) => ({
 const allPages = [...staticPages, ...dynamicBlogPages, ...dynamicProjectPages];
 
 export default function sitemap() {
-  return allPages.map((page) => ({
+  return allPages?.map((page) => ({
     url: `${baseUrl}${page.url}`,
     lastModified: new Date(),
     changeFrequency: page.changeFrequency,
