@@ -1,4 +1,5 @@
 export const PROJECTS = [
+  // Existing projects
   {
     slug: "right-gold",
     title: "Right Gold Ads Shoot & Campaign",
@@ -42,11 +43,6 @@ export const PROJECTS = [
             src: "/projects/right-gold/a4.JPG",
             desc: "Outdoor and print ad creatives crafted to create a bold luxury presence across hoardings, brochures, and retail branding.",
           },
-          // {
-          //   mediaType: "video",
-          //   src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-          //   desc: "Short-form ad creatives and performance-driven reels designed to increase click-through rates and maximize campaign ROI.",
-          // },
         ],
       },
 
@@ -296,7 +292,7 @@ export const PROJECTS = [
     category: "FMCG Branding & Packaging",
     year: "2024",
     client: "VIKRAM MILLS",
-    src: "/projects/vikram-mills/logo-new.jpg",
+    src: "/projects/vikram-mills/logo1.jpg",
     intro:
       "VIKRAM MILLS underwent a comprehensive brand transformation to strengthen its presence in the competitive rice and agro-products market. The project focused on modernizing the brand identity, premiumizing packaging design, and enhancing market visibility across retail, wholesale, and distributor networks.",
 
@@ -364,2356 +360,571 @@ export const PROJECTS = [
     ],
   },
 
+  // New projects extracted from HTML
   // {
-  //   slug: "agropure-brand-identity-1",
-  //   title: "AGROPURE Brand Campaign",
-  //   category: "Branding",
+  //   slug: "huma-qureshi",
+  //   title: "HUMA QURESHI",
+  //   category: "Celebrity Management",
   //   year: "2024",
-  //   client: "AGROPURE",
-  //   src: "https://tradelinker.in/upload_image/A-2%20LOGO.jpg",
-  //   intro: "Complete brand identity and marketing campaign for AGROPURE.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 2. RJ RAHUL Makin projects
-  // {
-  //   slug: "rj-rahul-makin-1",
-  //   title: "RJ RAHUL Makin Campaign",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "RJ RAHUL",
-  //   src: "https://i.ytimg.com/vi/3abpqF_r_vI/maxresdefault.jpg",
-  //   intro: "Influencer marketing campaign featuring RJ RAHUL Makin.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   client: "HUMA QURESHI",
+  //   src: "/projects/huma_qureshi/logo.jpg",
+  //   intro: "Celebrity management project featuring HUMA QURESHI.",
+  //   sections: []
   // },
   // {
-  //   slug: "rj-rahul-makin-2",
-  //   title: "RJ RAHUL Makin Series",
-  //   category: "Film",
+  //   slug: "milliand-gaba",
+  //   title: "MILLIAND GABA",
+  //   category: "Celebrity Management",
   //   year: "2024",
-  //   client: "RJ RAHUL",
-  //   src: "https://picsum.photos/800/600?random=5",
-  //   intro: "Content series featuring RJ RAHUL Makin.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 3. SPRING ELMAS projects (multiple)
-  // {
-  //   slug: "spring-elmas-campaign-1",
-  //   title: "SPRING ELMAS Launch",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "SPRING ELMAS",
-  //   src: "https://picsum.photos/800/600?random=6",
-  //   intro: "Launch campaign for SPRING ELMAS brand.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   client: "MILLIAND GABA",
+  //   src: "/projects/milliand_gaba/logo.png",
+  //   intro: "Celebrity management project featuring MILLIAND GABA.",
+  //   sections: []
   // },
   // {
-  //   slug: "spring-elmas-campaign-2",
-  //   title: "SPRING ELMAS Digital",
-  //   category: "Digital",
+  //   slug: "jassie-gill",
+  //   title: "JASSIE GILL",
+  //   category: "Celebrity Management",
   //   year: "2024",
-  //   client: "SPRING ELMAS",
-  //   src: "https://picsum.photos/800/600?random=8",
-  //   intro: "Digital campaign for SPRING ELMAS products.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   client: "JASSIE GILL",
+  //   src: "/projects/jassie_gill/logo.png",
+  //   intro: "Celebrity management project featuring JASSIE GILL.",
+  //   sections: []
   // },
   // {
-  //   slug: "spring-elmas-campaign-3",
-  //   title: "SPRING ELMAS Brand Film",
-  //   category: "Film",
+  //   slug: "bassi",
+  //   title: "BASSI",
+  //   category: "Celebrity Management",
   //   year: "2024",
-  //   client: "SPRING ELMAS",
-  //   src: "https://picsum.photos/800/600?random=10",
-  //   intro: "Brand film and visual identity for SPRING ELMAS.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   client: "BASSI",
+  //   src: "/projects/bassi/logo.png",
+  //   intro: "Celebrity management project featuring BASSI.",
+  //   sections: []
   // },
-
-  // // 4. GGIT
   // {
-  //   slug: "ggit-digital-campaign",
-  //   title: "GGIT Platform",
-  //   category: "Digital",
+  //   slug: "adah-sharma",
+  //   title: "ADAH SHARMA",
+  //   category: "Celebrity Management",
+  //   year: "2024",
+  //   client: "ADAH SHARMA",
+  //   src: "/projects/adah_sharma/logo.jpg",
+  //   intro: "Celebrity management project featuring ADAH SHARMA.",
+  //   sections: []
+  // },
+  // {
+  //   slug: "zipperminds",
+  //   title: "Zipperminds",
+  //   category: "Video Production",
+  //   year: "2024",
+  //   client: "Zipperminds",
+  //   src: "/projects/zipperminds/logo.jpeg",
+  //   intro: "Video production project for Zipperminds.",
+  //   sections: []
+  // },
+  // {
+  //   slug: "ggit",
+  //   title: "GGIT",
+  //   category: "Video Production",
   //   year: "2024",
   //   client: "GGIT",
-  //   src: "https://picsum.photos/800/600?random=11",
-  //   intro: "Digital platform campaign for GGIT.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   src: "/projects/ggit/logo.jpeg",
+  //   intro: "Video production project for GGIT.",
+  //   sections: []
   // },
-
-  // // 5. Smile train India
+  // {
+  //   slug: "smile-train",
+  //   title: "SMILE TRAIN",
+  //   category: "Video Production",
+  //   year: "2024",
+  //   client: "SMILE TRAIN",
+  //   src: "/projects/smile_train/logo.jpeg",
+  //   intro: "Video production project for SMILE TRAIN.",
+  //   sections: []
+  // },
+  // {
+  //   slug: "india-result",
+  //   title: "INDIA RESULT",
+  //   category: "Video Production",
+  //   year: "2024",
+  //   client: "INDIA RESULT",
+  //   src: "/projects/india_result/logo.jpeg",
+  //   intro: "Video production project for INDIA RESULT.",
+  //   sections: []
+  // },
+  // {
+  //   slug: "vikram-mills-2",
+  //   title: "VIKRAM MILLS",
+  //   category: "Video Production",
+  //   year: "2024",
+  //   client: "VIKRAM MILLS",
+  //   src: "/projects/vikram_mills/logo.jpeg",
+  //   intro: "Video production project for VIKRAM MILLS.",
+  //   sections: []
+  // },
+  // {
+  //   slug: "spring-elmas",
+  //   title: "SPRING ELMAS",
+  //   category: "Digital & Creatives",
+  //   year: "2024",
+  //   client: "SPRING ELMAS",
+  //   src: "/projects/spring_elmas/logo.jpeg",
+  //   intro: "Digital & creatives project for SPRING ELMAS.",
+  //   sections: []
+  // },
+  // {
+  //   slug: "tirupati",
+  //   title: "TIRUPATI",
+  //   category: "Digital & Creatives",
+  //   year: "2024",
+  //   client: "TIRUPATI",
+  //   src: "/projects/tirupati/logo.jpeg",
+  //   intro: "Digital & creatives project for TIRUPATI.",
+  //   sections: []
+  // },
+  // {
+  //   slug: "agropure",
+  //   title: "AGROPURE",
+  //   category: "Digital & Creatives",
+  //   year: "2024",
+  //   client: "AGROPURE",
+  //   src: "/projects/agropure/logo.jpeg",
+  //   intro: "Digital & creatives project for AGROPURE.",
+  //   sections: []
+  // },
+  // {
+  //   slug: "india-gate",
+  //   title: "INDIA GATE",
+  //   category: "Digital & Creatives",
+  //   year: "2024",
+  //   client: "INDIA GATE",
+  //   src: "/projects/india_gate/logo.jpeg",
+  //   intro: "Digital & creatives project for INDIA GATE.",
+  //   sections: []
+  // },
   // {
   //   slug: "smile-train-india",
   //   title: "Smile train India",
-  //   category: "Campaign",
+  //   category: "Digital & Creatives",
   //   year: "2024",
-  //   client: "Smile Train",
-  //   src: "https://picsum.photos/800/600?random=12",
-  //   intro: "Awareness campaign for Smile Train India initiative.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 6. INDIA RESULT
-  // {
-  //   slug: "india-result-platform",
-  //   title: "INDIA RESULT",
-  //   category: "Digital",
-  //   year: "2024",
-  //   client: "INDIA RESULT",
-  //   src: "https://picsum.photos/800/600?random=14",
-  //   intro: "Digital platform and campaign for INDIA RESULT.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 7. Zipperminds
-  // {
-  //   slug: "zipperminds-campaign",
-  //   title: "Zipperminds",
-  //   category: "Digital",
-  //   year: "2024",
-  //   client: "Zipperminds",
-  //   src: "https://picsum.photos/800/600?random=15",
-  //   intro: "Digital marketing campaign for Zipperminds platform.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 8. SMILE TRAIN projects
-  // {
-  //   slug: "smile-train-campaign-1",
-  //   title: "SMILE TRAIN Campaign",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "SMILE TRAIN",
-  //   src: "https://picsum.photos/800/600?random=16",
-  //   intro: "Major campaign for SMILE TRAIN organization.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   client: "Smile train India",
+  //   src: "/projects/smile_train_india/logo.png",
+  //   intro: "Digital & creatives project for Smile train India.",
+  //   sections: []
   // },
   // {
-  //   slug: "smile-train-campaign-2",
-  //   title: "SMILE TRAIN Digital",
-  //   category: "Digital",
+  //   slug: "kayna",
+  //   title: "KAYNA",
+  //   category: "Digital & Creatives",
   //   year: "2024",
-  //   client: "SMILE TRAIN",
-  //   src: "https://picsum.photos/800/600?random=18",
-  //   intro: "Digital outreach for SMILE TRAIN.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   client: "KAYNA",
+  //   src: "/projects/kayna/logo.jpeg",
+  //   intro: "Digital & creatives project for KAYNA.",
+  //   sections: []
   // },
   // {
-  //   slug: "smile-train-campaign-3",
-  //   title: "SMILE TRAIN Awareness",
-  //   category: "Campaign",
+  //   slug: "rj-tripti",
+  //   title: "RJ TRIPTI",
+  //   category: "Influencer's Video",
   //   year: "2024",
-  //   client: "SMILE TRAIN",
-  //   src: "https://picsum.photos/800/600?random=20",
-  //   intro: "Awareness campaign for SMILE TRAIN.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://www.w3schools.com/html/movie.mp4",
-  //     },
-  //   ],
-  // },
-
-  // // 9. VIKRAM MILLS projects
-
-  // {
-  //   slug: "vikram-mills-2",
-  //   title: "VIKRAM MILLS Campaign",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "VIKRAM MILLS",
-  //   src: "https://picsum.photos/800/600?random=23",
-  //   intro: "Marketing campaign for VIKRAM MILLS products.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   client: "RJ TRIPTI",
+  //   src: "/projects/rj_tripti/logo.jpeg",
+  //   intro: "Influencer video project featuring RJ TRIPTI.",
+  //   sections: []
   // },
   // {
-  //   slug: "vikram-mills-3",
-  //   title: "VIKRAM MILLS Digital",
-  //   category: "Digital",
+  //   slug: "rj-rahul-makin",
+  //   title: "RJ RAHUL Makin",
+  //   category: "Influencer's Video",
   //   year: "2024",
-  //   client: "VIKRAM MILLS",
-  //   src: "https://picsum.photos/800/600?random=25",
-  //   intro: "Digital presence for VIKRAM MILLS.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   client: "RJ RAHUL Makin",
+  //   src: "/projects/rj_rahul_makin/logo.jpeg",
+  //   intro: "Influencer video project featuring RJ RAHUL Makin.",
+  //   sections: []
   // },
   // {
-  //   slug: "vikram-mills-4",
-  //   title: "VIKRAM MILLS Corporate",
-  //   category: "Branding",
+  //   slug: "rj-naved",
+  //   title: "RJ NAVED",
+  //   category: "Influencer's Video",
   //   year: "2024",
-  //   client: "VIKRAM MILLS",
-  //   src: "https://picsum.photos/800/600?random=27",
-  //   intro: "Corporate branding for VIKRAM MILLS.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 10. TIRUPATI projects
-  // {
-  //   slug: "tirupati-1",
-  //   title: "TIRUPATI Brand Launch",
-  //   category: "Branding",
-  //   year: "2024",
-  //   client: "TIRUPATI",
-  //   src: "https://picsum.photos/800/600?random=28",
-  //   intro: "Brand launch campaign for TIRUPATI.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   client: "RJ NAVED",
+  //   src: "/projects/rj_naved/logo.jpeg",
+  //   intro: "Influencer video project featuring RJ NAVED.",
+  //   sections: []
   // },
   // {
-  //   slug: "tirupati-2",
-  //   title: "TIRUPATI Campaign",
-  //   category: "Campaign",
+  //   slug: "rj-lucky",
+  //   title: "RJ LUCKY",
+  //   category: "Influencer's Video",
   //   year: "2024",
-  //   client: "TIRUPATI",
-  //   src: "https://picsum.photos/800/600?random=30",
-  //   intro: "Marketing campaign for TIRUPATI products.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   client: "RJ LUCKY",
+  //   src: "/projects/rj_lucky/logo.jpeg",
+  //   intro: "Influencer video project featuring RJ LUCKY.",
+  //   sections: []
   // },
-  // {
-  //   slug: "tirupati-3",
-  //   title: "TIRUPATI Digital",
-  //   category: "Digital",
-  //   year: "2024",
-  //   client: "TIRUPATI",
-  //   src: "https://picsum.photos/800/600?random=32",
-  //   intro: "Digital marketing for TIRUPATI brand.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 11. Teaser Spot-ACE
   // {
   //   slug: "teaser-spot-ace",
   //   title: "Teaser Spot-ACE",
-  //   category: "Campaign",
+  //   category: "Radio Jingles",
   //   year: "2024",
-  //   client: "ACE",
-  //   src: "https://picsum.photos/800/600?random=34",
-  //   intro: "Teaser campaign for Spot-ACE product launch.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 12. KAYNA projects
-  // {
-  //   slug: "kayna-1",
-  //   title: "KAYNA Branding",
-  //   category: "Branding",
-  //   year: "2024",
-  //   client: "KAYNA",
-  //   src: "https://picsum.photos/800/600?random=35",
-  //   intro: "Brand identity for KAYNA.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   client: "Teaser Spot-ACE",
+  //   src: "/projects/teaser_spot-ace/logo.jpeg",
+  //   intro: "Radio jingle project for Teaser Spot-ACE.",
+  //   sections: []
   // },
   // {
-  //   slug: "kayna-2",
-  //   title: "KAYNA Campaign",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "KAYNA",
-  //   src: "https://picsum.photos/800/600?random=37",
-  //   intro: "Marketing campaign for KAYNA products.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 13. RJ NAVED
-  // {
-  //   slug: "rj-naved-campaign",
-  //   title: "RJ NAVED",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "RJ NAVED",
-  //   src: "https://picsum.photos/800/600?random=39",
-  //   intro: "Influencer campaign featuring RJ NAVED.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 14. INDIA GATE projects
-  // {
-  //   slug: "india-gate-1",
-  //   title: "INDIA GATE Branding",
-  //   category: "Branding",
-  //   year: "2024",
-  //   client: "INDIA GATE",
-  //   src: "https://picsum.photos/800/600?random=40",
-  //   intro: "Brand campaign for INDIA GATE products.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   slug: "india-gate-2",
-  //   title: "INDIA GATE Digital",
-  //   category: "Digital",
-  //   year: "2024",
-  //   client: "INDIA GATE",
-  //   src: "https://picsum.photos/800/600?random=42",
-  //   intro: "Digital campaign for INDIA GATE.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "image",
-  //       src: "https://picsum.photos/2000/1100?random=43",
-  //     },
-  //   ],
-  // },
-  // {
-  //   slug: "india-gate-3",
-  //   title: "INDIA GATE Campaign",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "INDIA GATE",
-  //   src: "https://picsum.photos/800/600?random=44",
-  //   intro: "Marketing campaign for INDIA GATE.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 15. ADAH SHARMA
-  // {
-  //   slug: "adah-sharma-campaign",
-  //   title: "ADAH SHARMA",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "ADAH SHARMA",
-  //   src: "https://picsum.photos/800/600?random=46",
-  //   intro: "Celebrity campaign featuring ADAH SHARMA.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 16. MILLIAND GABA
-  // {
-  //   slug: "milliand-gaba-campaign",
-  //   title: "MILLIAND GABA",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "MILLIAND GABA",
-  //   src: "https://picsum.photos/800/600?random=48",
-  //   intro: "Celebrity campaign featuring MILLIAND GABA.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 17. BASSI
-  // {
-  //   slug: "bassi-campaign",
-  //   title: "BASSI",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "BASSI",
-  //   src: "https://picsum.photos/800/600?random=50",
-  //   intro: "Celebrity campaign featuring BASSI.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 18. JASSIE GILL
-  // {
-  //   slug: "jassie-gill-campaign",
-  //   title: "JASSIE GILL",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "JASSIE GILL",
-  //   src: "https://picsum.photos/800/600?random=52",
-  //   intro: "Celebrity campaign featuring JASSIE GILL.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 19. Clear Dekho projects
-  // {
-  //   slug: "clear-dekho-1",
-  //   title: "Clear Dekho Campaign",
-  //   category: "Digital",
-  //   year: "2024",
-  //   client: "Clear Dekho",
-  //   src: "https://picsum.photos/800/600?random=54",
-  //   intro: "Digital campaign for Clear Dekho platform.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   slug: "clear-dekho-2",
-  //   title: "Clear Dekho Branding",
-  //   category: "Branding",
-  //   year: "2024",
-  //   client: "Clear Dekho",
-  //   src: "https://picsum.photos/800/600?random=55",
-  //   intro: "Brand identity for Clear Dekho.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // 20. Ramjisons
-  // {
-  //   slug: "ramjisons-campaign",
+  //   slug: "ramjisons",
   //   title: "Ramjisons",
-  //   category: "Digital",
+  //   category: "Radio Jingles",
   //   year: "2024",
   //   client: "Ramjisons",
-  //   src: "https://picsum.photos/800/600?random=56",
-  //   intro: "Digital campaign for Ramjisons.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
+  //   src: "/projects/ramjisons/logo.png",
+  //   intro: "Radio jingle project for Ramjisons.",
+  //   sections: []
   // },
+  // {
+  //   slug: "smile-train-india-radio",
+  //   title: "Smile train India",
+  //   category: "Radio Jingles",
+  //   year: "2024",
+  //   client: "Smile train India",
+  //   src: "/projects/smile_train_india/logo.png",
+  //   intro: "Radio jingle project for Smile train India.",
+  //   sections: []
+  // },
+  // {
+  //   slug: "clear-dekho",
+  //   title: "Clear Dekho",
+  //   category: "Radio Jingles",
+  //   year: "2024",
+  //   client: "Clear Dekho",
+  //   src: "/projects/clear_dekho/logo.jpeg",
+  //   intro: "Radio jingle project for Clear Dekho.",
+  //   sections: []
+  // }
 
-  // // 21. RJ TRIPTI projects
-  // {
-  //   slug: "rj-tripti-1",
-  //   title: "RJ TRIPTI Campaign",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "RJ TRIPTI",
-  //   src: "https://picsum.photos/800/600?random=57",
-  //   intro: "Influencer campaign featuring RJ TRIPTI.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   slug: "rj-tripti-2",
-  //   title: "RJ TRIPTI Series",
-  //   category: "Film",
-  //   year: "2024",
-  //   client: "RJ TRIPTI",
-  //   src: "https://picsum.photos/800/600?random=58",
-  //   intro: "Content series featuring RJ TRIPTI.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+  {
+    slug: "huma-qureshi",
+    title: "HUMA QURESHI",
+    category: "Celebrity Management",
+    year: "2024",
+    client: "HUMA QURESHI",
+    src: "/projects/huma_qureshi/logo.jpg",
+    intro:
+      "Comprehensive celebrity management for Huma Qureshi, including brand endorsements, event appearances, and strategic media outreach to amplify her public presence.",
+    sections: [
+      {
+        type: "hero",
+        mediaType: "image",
+        src: "/projects/vikram-mills/web banner 30 kg rice 2.png",
+        title: "Elevating a Trusted Rice Brand",
+        description:
+          "A refreshed visual direction designed to reflect purity, quality, and large-scale distribution strength — positioning Vikram Mills as a reliable and premium rice manufacturer.",
+      },
 
-  // // 22. RJ LUCKY
-  // {
-  //   slug: "rj-lucky-campaign",
-  //   title: "RJ LUCKY",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "RJ LUCKY",
-  //   src: "https://picsum.photos/800/600?random=59",
-  //   intro: "Influencer campaign featuring RJ LUCKY.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+      {
+        type: "mediaRow",
+        items: [
+          {
+            mediaType: "video",
+            src: "/projects/vikram-mills/1.mp4",
+            desc: "Complete brand identity refresh including logo refinement, typography system, packaging grid structure, and visual consistency across SKUs.",
+          },
+          {
+            mediaType: "video",
+            src: "/projects/vikram-mills/3.mp4",
+            desc: "Product showcase and promotional motion creatives highlighting grain quality, sourcing standards, and manufacturing excellence.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/4.jpg",
+            desc: "Premium 30kg and retail packaging designs crafted for strong shelf impact and clear product differentiation in wholesale markets.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/5.jpg",
+            desc: "Outdoor branding and dealer board applications to strengthen regional market recall and distributor network visibility.",
+          },
+        ],
+      },
 
-  // // 23. HUMA QURESHI
-  // {
-  //   slug: "huma-qureshi-campaign",
-  //   title: "HUMA QURESHI",
-  //   category: "Campaign",
-  //   year: "2024",
-  //   client: "HUMA QURESHI",
-  //   src: "https://picsum.photos/800/600?random=60",
-  //   intro: "Celebrity campaign featuring HUMA QURESHI.",
-  //   sections: [
-  //     {
-  //       type: "hero",
-  //       mediaType: "video",
-  //       src: "https://pub-a23acf44682e42368d7e030f3e6be365.r2.dev/1762764457905-1.mp4",
-  //     },
-  //     {
-  //       type: "mediaRow",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/1.png",
-  //           desc: "Primary brand visuals & identity system",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "/banner.mp4",
-  //           desc: "Motion language & brand film",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/2.png",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "/projects/3.png",
-  //           desc: "Luxury print & outdoor applications",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://videocdn.cdnpk.net/videos/7bfd4b46-38e1-5a7a-99ef-1d72a6ac2eec/horizontal/previews/watermarked/large.mp4",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       type: "gallery",
-  //       items: [
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=101",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=102",
-  //         },
-  //         {
-  //           mediaType: "video",
-  //           src: "https://www.w3schools.com/html/movie.mp4",
-  //         },
-  //         {
-  //           mediaType: "image",
-  //           src: "https://picsum.photos/2000/1200?random=103",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+      {
+        type: "gallery",
+        items: [
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/6.jpg",
+            desc: "Retail-ready packaging variations across multiple rice categories and grain types.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/7.jpg",
+            desc: "Print collateral including brochures, rate cards, and dealer communication materials.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/8.jpg",
+            desc: "In-market activation creatives and point-of-sale branding elements.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/9.jpg",
+            desc: "Consistent visual rollout across transportation branding, sacks, and bulk distribution channels.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "milliand-gaba",
+    title: "MILLIAND GABA",
+    category: "Celebrity Management",
+    year: "2024",
+    client: "MILLIAND GABA",
+    src: "/projects/milliand_gaba/logo.png",
+    intro:
+      "End-to-end celebrity management for Milliand Gaba, covering contract negotiations, public relations, and digital content strategy to enhance brand collaborations.",
+    sections: [],
+  },
+  {
+    slug: "jassie-gill",
+    title: "JASSIE GILL",
+    category: "Celebrity Management",
+    year: "2024",
+    client: "JASSIE GILL",
+    src: "/projects/jassie_gill/logo.png",
+    intro:
+      "Strategic celebrity management for Jassie Gill, focusing on talent booking, promotional campaigns, and cross-platform visibility for maximum impact.",
+    sections: [],
+  },
+  {
+    slug: "bassi",
+    title: "BASSI",
+    category: "Celebrity Management",
+    year: "2024",
+    client: "BASSI",
+    src: "/projects/bassi/logo.png",
+    intro:
+      "Full-scale celebrity management for comedian Bassi, including live event coordination, digital partnerships, and media engagement to expand his fan base.",
+    sections: [],
+  },
+  {
+    slug: "adah-sharma",
+    title: "ADAH SHARMA",
+    category: "Celebrity Management",
+    year: "2024",
+    client: "ADAH SHARMA",
+    src: "/projects/adah_sharma/logo.jpg",
+    intro:
+      "Celebrity management services for Adah Sharma, handling brand tie-ups, social media growth, and public appearances to strengthen her marketability.",
+    sections: [],
+  },
+  {
+    slug: "zipperminds",
+    title: "Zipperminds",
+    category: "Video Production",
+    year: "2024",
+    client: "Zipperminds",
+    src: "/projects/zipperminds/logo.jpeg",
+    intro:
+      "High-impact video production for Zipperminds, delivering cinematic brand films and social media content that capture the essence of innovative learning.",
+    sections: [],
+  },
+  {
+    slug: "ggit",
+    title: "GGIT",
+    category: "Video Production",
+    year: "2024",
+    client: "GGIT",
+    src: "/projects/ggit/logo.jpeg",
+    intro:
+      "Creative video production for GGIT, producing engaging promotional videos and motion graphics tailored for digital campaigns and brand storytelling.",
+    sections: [],
+  },
+  {
+    slug: "smile-train",
+    title: "SMILE TRAIN",
+    category: "Video Production",
+    year: "2024",
+    client: "SMILE TRAIN",
+    src: "/projects/smile_train/logo.jpeg",
+    intro:
+      "Heartfelt video production for Smile Train, crafting emotional narratives and awareness films to highlight the impact of cleft lip and palate surgeries.",
+    sections: [],
+  },
+  {
+    slug: "india-result",
+    title: "INDIA RESULT",
+    category: "Video Production",
+    year: "2024",
+    client: "INDIA RESULT",
+    src: "/projects/india_result/logo.jpeg",
+    intro:
+      "Dynamic video production for India Result, creating compelling ad films and explainer videos that drive engagement and communicate educational success stories.",
+    sections: [],
+  },
+  {
+    slug: "vikram-mills-2",
+    title: "VIKRAM MILLS",
+    category: "Video Production",
+    year: "2024",
+    client: "VIKRAM MILLS",
+    src: "/projects/vikram_mills/logo.jpeg",
+    intro:
+      "Professional video production for Vikram Mills, producing high-quality brand films and product showcases that highlight the purity and quality of rice products.",
+    sections: [],
+  },
+  {
+    slug: "spring-elmas",
+    title: "SPRING ELMAS",
+    category: "Digital & Creatives",
+    year: "2024",
+    client: "SPRING ELMAS",
+    src: "/projects/spring_elmas/logo.jpeg",
+    intro:
+      "Comprehensive digital and creative campaign for Spring Elmas, including social media creatives, website assets, and launch visuals for a premium real estate project.",
+    sections: [],
+  },
+  {
+    slug: "tirupati",
+    title: "TIRUPATI",
+    category: "Digital & Creatives",
+    year: "2024",
+    client: "TIRUPATI",
+    src: "/projects/tirupati/logo.jpeg",
+    intro:
+      "Digital creatives and branding materials for Tirupati, designing impactful visuals for social media, print, and outdoor advertising to strengthen brand identity.",
+    sections: [],
+  },
+  {
+    slug: "agropure",
+    title: "AGROPURE",
+    category: "Digital & Creatives",
+    year: "2024",
+    client: "AGROPURE",
+    src: "/projects/agropure/logo.jpeg",
+    intro:
+      "Creative digital assets for Agropure, including packaging design, social media graphics, and promotional content that communicate freshness and purity.",
+    sections: [],
+  },
+  {
+    slug: "india-gate",
+    title: "INDIA GATE",
+    category: "Digital & Creatives",
+    year: "2024",
+    client: "INDIA GATE",
+    src: "/projects/india_gate/logo.jpeg",
+    intro:
+      "Digital and creative campaign for India Gate, developing eye-catching visuals and ad creatives that reinforce the brand's position as a leading rice exporter.",
+    sections: [],
+  },
+  {
+    slug: "smile-train-india",
+    title: "Smile train India",
+    category: "Digital & Creatives",
+    year: "2024",
+    client: "Smile train India",
+    src: "/projects/smile_train_india/logo.png",
+    intro:
+      "Digital creatives and social media assets for Smile Train India, designed to raise awareness and drive donations through compelling storytelling and visuals.",
+    sections: [],
+  },
+  {
+    slug: "kayna",
+    title: "KAYNA",
+    category: "Digital & Creatives",
+    year: "2024",
+    client: "KAYNA",
+    src: "/projects/kayna/logo.jpeg",
+    intro:
+      "Creative branding and digital design for Kayna, producing lifestyle imagery and promotional content that reflect the brand's modern and elegant aesthetic.",
+    sections: [],
+  },
+  {
+    slug: "rj-tripti",
+    title: "RJ TRIPTI",
+    category: "Influencer's Video",
+    year: "2024",
+    client: "RJ TRIPTI",
+    src: "/projects/rj_tripti/logo.jpeg",
+    intro:
+      "Influencer video campaign featuring RJ Tripti, creating engaging branded content and social media videos that resonate with her audience and boost brand affinity.",
+    sections: [],
+  },
+  {
+    slug: "rj-rahul-makin",
+    title: "RJ RAHUL Makin",
+    category: "Influencer's Video",
+    year: "2024",
+    client: "RJ RAHUL Makin",
+    src: "/projects/rj_rahul_makin/logo.jpeg",
+    intro:
+      "Influencer-led video production with RJ Rahul Makin, crafting authentic storytelling content that drives engagement and amplifies brand messages.",
+    sections: [],
+  },
+  {
+    slug: "rj-naved",
+    title: "RJ NAVED",
+    category: "Influencer's Video",
+    year: "2024",
+    client: "RJ NAVED",
+    src: "/projects/rj_naved/logo.jpeg",
+    intro:
+      "Collaborative influencer video with RJ Naved, producing high-energy content tailored for social media platforms to maximize reach and viewer interaction.",
+    sections: [],
+  },
+  {
+    slug: "rj-lucky",
+    title: "RJ LUCKY",
+    category: "Influencer's Video",
+    year: "2024",
+    client: "RJ LUCKY",
+    src: "/projects/rj_lucky/logo.jpeg",
+    intro:
+      "Influencer marketing video featuring RJ Lucky, designed to create viral moments and strengthen brand presence through relatable, entertaining content.",
+    sections: [],
+  },
+  {
+    slug: "teaser-spot-ace",
+    title: "Teaser Spot-ACE",
+    category: "Radio Jingles",
+    year: "2024",
+    client: "Teaser Spot-ACE",
+    src: "/projects/teaser_spot-ace/logo.jpeg",
+    intro:
+      "Catchy radio jingle production for Teaser Spot-ACE, composing memorable tunes and voiceovers that enhance brand recall during prime time slots.",
+    sections: [],
+  },
+  {
+    slug: "ramjisons",
+    title: "Ramjisons",
+    category: "Radio Jingles",
+    year: "2024",
+    client: "Ramjisons",
+    src: "/projects/ramjisons/logo.png",
+    intro:
+      "Creative radio jingles for Ramjisons, blending traditional melodies with modern production to create an auditory brand identity that resonates with listeners.",
+    sections: [],
+  },
+  {
+    slug: "smile-train-india-radio",
+    title: "Smile train India",
+    category: "Radio Jingles",
+    year: "2024",
+    client: "Smile train India",
+    src: "/projects/smile_train_india/logo.png",
+    intro:
+      "Impactful radio jingle campaign for Smile Train India, using emotional storytelling and music to drive awareness and encourage donations for cleft care.",
+    sections: [],
+  },
+  {
+    slug: "clear-dekho",
+    title: "Clear Dekho",
+    category: "Radio Jingles",
+    year: "2024",
+    client: "Clear Dekho",
+    src: "/projects/clear_dekho/logo.jpeg",
+    intro:
+      "Memorable radio jingles for Clear Dekho, crafting short, catchy audio ads that effectively communicate the brand's value proposition to a mass audience.",
+    sections: [],
+  },
 ];
