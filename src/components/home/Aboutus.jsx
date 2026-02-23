@@ -71,38 +71,44 @@ export default function Aboutus() {
   useGSAP(
     () => {
       const textEl = textRef.current;
-      const words = textEl.innerText.split(" ");
+      if (!textEl) return;
 
-      // Wrap words
-      textEl.innerHTML = words
-        .map((word) => `<span class="word">${word} </span>`)
-        .join("");
+      try {
+        const words = textEl.innerText.split(" ");
 
-      const wordSpans = gsap.utils.toArray(".word");
+        // Wrap words
+        textEl.innerHTML = words
+          .map((word) => `<span class="word">${word} </span>`)
+          .join("");
 
-      // Timeline for sequential highlight
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top center",
-          end: "bottom bottom",
-          scrub: true,
-          // markers: true,
-        },
-      });
+        const wordSpans = gsap.utils.toArray(".word");
 
-      // Animate words ONE BY ONE
-      wordSpans.forEach((word, i) => {
-        tl.to(
-          word,
-          {
-            color: "rgba(0, 0, 0,0.6)",
-            duration: 1,
-            ease: "none",
+        // Timeline for sequential highlight
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top center",
+            end: "bottom bottom",
+            scrub: true,
+            // markers: true,
           },
-          i * 0.2
-        );
-      });
+        });
+
+        // Animate words ONE BY ONE
+        wordSpans.forEach((word, i) => {
+          tl.to(
+            word,
+            {
+              color: "rgba(0, 0, 0,0.6)",
+              duration: 1,
+              ease: "none",
+            },
+            i * 0.2
+          );
+        });
+      } catch (error) {
+        console.error("About Us animation error:", error);
+      }
     },
     { scope: containerRef }
   );

@@ -109,29 +109,64 @@ export default function HomeSeven() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const numbers = sectionRef.current.querySelectorAll(".hex-card strong");
+    const section = sectionRef.current;
+    if (!section) return;
 
-    numbers.forEach((el) => {
-      const raw = el.innerText;
-      const endValue = parseFloat(raw.replace(/[^0-9.]/g, ""));
-      const suffix = raw.replace(/[0-9.]/g, "");
+    try {
+      const numbers = section.querySelectorAll(".hex-card strong");
 
-      const obj = { val: 0 };
+      numbers.forEach((el) => {
+        if (!el || !el.parentElement) return;
 
-      gsap.to(obj, {
-        val: endValue,
-        duration: 1.6,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-          once: true,
-        },
-        onUpdate: () => {
-          el.innerText = Math.floor(obj.val) + suffix;
-        },
+        try {
+          const raw = el.innerText;
+          const endValue = parseFloat(raw.replace(/[^0-9.]/g, ""));
+          const suffix = raw.replace(/[0-9.]/g, "");
+
+          if (isNaN(endValue)) return;
+
+          const obj = { val: 0 };
+
+          gsap.to(obj, {
+            val: endValue,
+            duration: 1.6,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: section,
+              start: "top 75%",
+              once: true,
+            },
+            onUpdate: () => {
+              try {
+                if (el && el.parentElement) {
+                  el.innerText = Math.floor(obj.val) + suffix;
+                }
+              } catch (updateError) {
+                console.warn("Number update error:", updateError);
+              }
+            },
+          });
+        } catch (elementError) {
+          console.warn("Individual element animation error:", elementError);
+        }
       });
-    });
+    } catch (error) {
+      console.error("HomeSeven animation error:", error);
+    }
+
+    return () => {
+      try {
+        if (section) {
+          ScrollTrigger.getAll().forEach((trigger) => {
+            if (trigger.vars.trigger === section || trigger.vars.trigger?.parentElement === section) {
+              trigger.kill();
+            }
+          });
+        }
+      } catch (cleanupError) {
+        console.warn("HomeSeven cleanup error:", cleanupError);
+      }
+    };
   }, []);
 
   return (

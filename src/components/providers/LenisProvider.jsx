@@ -70,35 +70,95 @@ import Lenis from "lenis";
 import { usePathname } from "next/navigation";
 
 let lenisInstance = null;
+let isInitializing = false;
 
 export default function LenisProvider({ children }) {
   const pathname = usePathname();
   const rafRef = useRef(null);
+  const instanceRef = useRef(null);
 
   useEffect(() => {
-    if (lenisInstance) return;
+    // Prevent multiple initializations
+    if (lenisInstance || isInitializing) return;
+    
+    isInitializing = true;
 
-    lenisInstance = new Lenis({
-      smoothWheel: true,
-      smoothTouch: false,
-    });
+    try {
+      // Use a small delay to ensure DOM is ready
+      const timer = setTimeout(() => {
+        if (lenisInstance) {
+          isInitializing = false;
+          return;
+        }
 
-    const raf = (time) => {
-      lenisInstance?.raf(time);
-      rafRef.current = requestAnimationFrame(raf);
-    };
+        try {
+          lenisInstance = new Lenis({
+            smoothWheel: true,
+            smoothTouch: false,
+          });
 
-    rafRef.current = requestAnimationFrame(raf);
+          instanceRef.current = lenisInstance;
+
+          const raf = (time) => {
+            try {
+              if (lenisInstance?.raf && typeof lenisInstance.raf === "function") {
+                lenisInstance.raf(time);
+              }
+              rafRef.current = requestAnimationFrame(raf);
+            } catch (error) {
+              console.error("Lenis RAF error:", error);
+              // Continue animating even if there's an error
+              rafRef.current = requestAnimationFrame(raf);
+            }
+          };
+
+          rafRef.current = requestAnimationFrame(raf);
+          isInitializing = false;
+        } catch (error) {
+          console.error("Failed to initialize Lenis:", error);
+          lenisInstance = null;
+          instanceRef.current = null;
+          isInitializing = false;
+        }
+      }, 100);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    } catch (error) {
+      console.error("Lenis setup error:", error);
+      isInitializing = false;
+    }
 
     return () => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      lenisInstance?.destroy();
-      lenisInstance = null;
+      try {
+        if (rafRef.current) {
+          cancelAnimationFrame(rafRef.current);
+          rafRef.current = null;
+        }
+        
+        if (lenisInstance?.destroy && typeof lenisInstance.destroy === "function") {
+          lenisInstance.destroy();
+        }
+        
+        lenisInstance = null;
+        instanceRef.current = null;
+        isInitializing = false;
+      } catch (e) {
+        console.warn("Lenis cleanup error:", e);
+      }
     };
   }, []);
 
   useEffect(() => {
-    lenisInstance?.scrollTo(0, { immediate: true });
+    try {
+      const instance = lenisInstance || instanceRef.current;
+      if (instance?.scrollTo && typeof instance.scrollTo === "function") {
+        instance.scrollTo(0, { immediate: true });
+      }
+    } catch (error) {
+      console.error("Lenis scroll to top error:", error);
+    }
   }, [pathname]);
 
   return children;

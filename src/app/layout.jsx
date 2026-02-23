@@ -1,9 +1,5 @@
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import LenisProvider from "@/components/providers/LenisProvider";
-import LoadingScreen from "@/components/home/loading/LoadingScreen";
-import LeadChatbot from "@/components/layout/SmartChatbot";
+import RootLayoutClient from "@/components/providers/RootLayoutClient";
 
 export const metadata = {
   title: "Adclan Media | Creative Marketing Agency",
@@ -38,13 +34,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body suppressHydrationWarning>
-        <LenisProvider>
-          <LoadingScreen />
-          <LeadChatbot />
-          <Navbar />
+        <RootLayoutClient>
           {children}
-          <Footer />
-        </LenisProvider>
+        </RootLayoutClient>
       </body>
     </html>
   );

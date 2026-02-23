@@ -268,110 +268,181 @@ export default function LoadingScreen({ onComplete }) {
     const video = videoWrapperRef.current.querySelector("video");
     if (!video) return;
 
-    ctxRef.current = gsap.context(() => {
-      const mm = gsap.matchMedia();
+    try {
+      ctxRef.current = gsap.context(() => {
+        const mm = gsap.matchMedia();
 
-      const handleVideoEnd = () => {
-        const textChildren = textRef.current?.children;
-        if (!textChildren) return;
+        const handleVideoEnd = () => {
+          try {
+            const textChildren = textRef.current?.children;
+            if (!textChildren) return;
 
-        mm.add("(min-width: 1024px)", () => {
-          const tl = gsap.timeline({
-            defaults: { ease: "power3.out" },
-            onComplete: () => setReady(true),
-          });
+            mm.add("(min-width: 1024px)", () => {
+              const tl = gsap.timeline({
+                defaults: { ease: "power3.out" },
+                onComplete: () => setReady(true),
+              });
 
-          tl.to(videoWrapperRef.current, {
-            x: "-60%",
-            duration: 1,
-            ease: "power4.inOut",
-          }).fromTo(
-            textChildren,
-            { opacity: 0, y: 30 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.9,
-              stagger: 0.25,
-            },
-            "-=0.3",
-          );
-        });
+              tl.to(videoWrapperRef.current, {
+                x: "-60%",
+                duration: 1,
+                ease: "power4.inOut",
+              }).fromTo(
+                textChildren,
+                { opacity: 0, y: 30 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.9,
+                  stagger: 0.25,
+                },
+                "-=0.3",
+              );
+            });
 
-        mm.add("(max-width: 1023px)", () => {
-          const tl = gsap.timeline({
-            defaults: { ease: "power3.out" },
-            onComplete: () => setReady(true),
-          });
+            mm.add("(max-width: 1023px)", () => {
+              const tl = gsap.timeline({
+                defaults: { ease: "power3.out" },
+                onComplete: () => setReady(true),
+              });
 
-          tl.to(videoWrapperRef.current, {
-            y: "-40%",
-            duration: 0.8,
-            ease: "power4.inOut",
-          }).fromTo(
-            textChildren,
-            { opacity: 0, y: 30 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.7,
-              stagger: 0.2,
-            },
-            "-=0.3",
-          );
-        });
-      };
+              tl.to(videoWrapperRef.current, {
+                y: "-40%",
+                duration: 0.8,
+                ease: "power4.inOut",
+              }).fromTo(
+                textChildren,
+                { opacity: 0, y: 30 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.7,
+                  stagger: 0.2,
+                },
+                "-=0.3",
+              );
+            });
+          } catch (error) {
+            console.error("LoadingScreen handleVideoEnd error:", error);
+          }
+        };
 
-      video.addEventListener("ended", handleVideoEnd);
+        video.addEventListener("ended", handleVideoEnd);
 
-      return () => {
-        video.removeEventListener("ended", handleVideoEnd);
-        mm.revert();
-      };
-    }, containerRef);
+        return () => {
+          try {
+            video.removeEventListener("ended", handleVideoEnd);
+            mm.revert();
+          } catch (e) {
+            console.warn("LoadingScreen cleanup error:", e);
+          }
+        };
+      }, containerRef);
+    } catch (error) {
+      console.error("LoadingScreen animation setup error:", error);
+    }
 
-    return () => ctxRef.current?.revert();
+    return () => {
+      try {
+        ctxRef.current?.revert();
+      } catch (e) {
+        console.warn("LoadingScreen context revert error:", e);
+      }
+    };
   }, []);
 
   const handleEnterClick = () => {
     if (!ready || exitTl.current) return;
-
-    const mm = gsap.matchMedia();
-
-    const finish = () => {
+    
+    // Check if elements are still in DOM
+    if (!containerRef.current?.parentElement) {
       setVisible(false);
-      onComplete?.();
-      exitTl.current?.kill();
-      exitTl.current = null;
-    };
+      return;
+    }
 
-    mm.add("(min-width: 1024px)", () => {
-      exitTl.current = gsap.timeline({
-        defaults: { ease: "power4.inOut" },
-        onComplete: finish,
+    try {
+      const mm = gsap.matchMedia();
+
+      const finish = () => {
+        try {
+          setVisible(false);
+          onComplete?.();
+          exitTl.current?.kill();
+          exitTl.current = null;
+        } catch (e) {
+          console.warn("Finish callback error:", e);
+        }
+      };
+
+      mm.add("(min-width: 1024px)", () => {
+        try {
+          // Double-check elements before creating animation
+          if (!containerRef.current?.parentElement || !videoWrapperRef.current?.parentElement) {
+            finish();
+            return;
+          }
+
+          exitTl.current = gsap.timeline({
+            defaults: { ease: "power4.inOut" },
+            onComplete: finish,
+          });
+
+          const animTargets = [videoWrapperRef.current, textRef.current].filter(
+            (el) => el?.parentElement
+          );
+
+          if (animTargets.length > 0) {
+            exitTl.current
+              .to(animTargets, {
+                x: (i) => (i === 0 ? "-500%" : "500%"),
+                duration: 1,
+              })
+              .to(containerRef.current, { autoAlpha: 0, duration: 0.5 });
+          } else {
+            finish();
+          }
+        } catch (e) {
+          console.error("Exit animation desktop error:", e);
+          finish();
+        }
       });
 
-      exitTl.current
-        .to([videoWrapperRef.current, textRef.current], {
-          x: (i) => (i === 0 ? "-500%" : "500%"),
-          duration: 1,
-        })
-        .to(containerRef.current, { autoAlpha: 0, duration: 0.5 });
-    });
+      mm.add("(max-width: 1023px)", () => {
+        try {
+          // Double-check elements before creating animation
+          if (!containerRef.current?.parentElement || !videoWrapperRef.current?.parentElement) {
+            finish();
+            return;
+          }
 
-    mm.add("(max-width: 1023px)", () => {
-      exitTl.current = gsap.timeline({
-        defaults: { ease: "power4.inOut" },
-        onComplete: finish,
+          exitTl.current = gsap.timeline({
+            defaults: { ease: "power4.inOut" },
+            onComplete: finish,
+          });
+
+          const animTargets = [videoWrapperRef.current, textRef.current].filter(
+            (el) => el?.parentElement
+          );
+
+          if (animTargets.length > 0) {
+            exitTl.current
+              .to(animTargets, {
+                y: (i) => (i === 0 ? "-200%" : "200%"),
+                duration: 0.8,
+              })
+              .to(containerRef.current, { autoAlpha: 0, duration: 0.4 });
+          } else {
+            finish();
+          }
+        } catch (e) {
+          console.error("Exit animation mobile error:", e);
+          finish();
+        }
       });
-
-      exitTl.current
-        .to([videoWrapperRef.current, textRef.current], {
-          y: (i) => (i === 0 ? "-200%" : "200%"),
-          duration: 0.8,
-        })
-        .to(containerRef.current, { autoAlpha: 0, duration: 0.4 });
-    });
+    } catch (error) {
+      console.error("LoadingScreen exit handler error:", error);
+      setVisible(false);
+    }
   };
 
   if (!visible) return null;

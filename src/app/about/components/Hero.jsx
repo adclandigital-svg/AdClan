@@ -16,31 +16,39 @@ export default function AboutHero() {
 
     if (!text || !container) return;
 
-    // Clean up any existing clone
-    if (cloneRef.current && cloneRef.current.parentNode === container) {
-      container.removeChild(cloneRef.current);
+    try {
+      // Clean up any existing clone
+      if (cloneRef.current && cloneRef.current.parentNode === container) {
+        container.removeChild(cloneRef.current);
+      }
+
+      // Clone text for seamless loop
+      const clone = text.cloneNode(true);
+      cloneRef.current = clone;
+      container.appendChild(clone);
+
+      const width = text.offsetWidth;
+
+      gsap.set(container, { x: 0 });
+
+      gsap.to(container, {
+        x: -width,
+        duration: 80,      // speed (lower = faster)
+        ease: "linear",
+        repeat: -1,
+      });
+    } catch (error) {
+      console.error("About Hero animation error:", error);
     }
-
-    // Clone text for seamless loop
-    const clone = text.cloneNode(true);
-    cloneRef.current = clone;
-    container.appendChild(clone);
-
-    const width = text.offsetWidth;
-
-    gsap.set(container, { x: 0 });
-
-    gsap.to(container, {
-      x: -width,
-      duration: 80,      // speed (lower = faster)
-      ease: "linear",
-      repeat: -1,
-    });
 
     // Cleanup on unmount
     return () => {
-      if (cloneRef.current && cloneRef.current.parentNode === container) {
-        container.removeChild(cloneRef.current);
+      try {
+        if (cloneRef.current && cloneRef.current.parentNode === container) {
+          container.removeChild(cloneRef.current);
+        }
+      } catch (e) {
+        console.warn("Cleanup error:", e);
       }
     };
   }, []);
