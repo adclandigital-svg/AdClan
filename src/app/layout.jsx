@@ -1,5 +1,12 @@
+import { Raleway } from "next/font/google";
 import "./globals.css";
 import RootLayoutClient from "@/components/providers/RootLayoutClient";
+
+const raleway = Raleway({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "Adclan Media | Creative Marketing Agency",
@@ -26,14 +33,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
       </head>
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning className={raleway.className}>
         <RootLayoutClient>
           {children}
         </RootLayoutClient>
