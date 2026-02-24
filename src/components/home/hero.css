@@ -29,7 +29,7 @@
 }
 @media (max-width: 768px) {
   .hero-section {
-    height: 100vh;
+    height: 50VH;
   }
   .hero-video-wrapper {
     height: 100%;
