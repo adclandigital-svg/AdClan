@@ -6,7 +6,7 @@ export const PROJECTS = [
     category: "Video Production",
     year: "2026",
     client: "Right Gold",
-    src: "/projects/right-gold/1.jpg",
+    src: "/projects/right-gold/rifght.png",
     intro:
       "For Right Gold, we executed a high-impact ad shoot and performance-driven campaign strategy designed to position the brand as a premium jewelry destination. From cinematic product visuals to multi-platform ad rollouts, every asset was built to attract, engage, and convert.",
 
@@ -139,7 +139,7 @@ export const PROJECTS = [
     category: "Branding",
     year: "2026",
     client: "KB West Walk",
-    src: "/projects/kb/logo.webp",
+    src: "/projects/kb/Creative 3.png",
     intro:
       "For KB West Walk, we executed a high-impact Instagram content strategy focused on reels, creative posts, and campaign-driven storytelling. The objective was to increase footfall, boost brand recall, and position the mall as a vibrant lifestyle destination for the new-age audience.",
 
@@ -218,7 +218,7 @@ export const PROJECTS = [
     category: "Branding",
     year: "2024",
     client: "Elmas Group",
-    src: "/projects/elmasGroup/logo.webp",
+    src: "/projects/elmasGroup/poster 19 (2).png",
     intro:
       "SPRING ELMAS marked a flagship launch by Elmas Group, executed as a complete 360° branding and marketing campaign. From outdoor dominance to magazine spreads, high-impact video production, and digital amplification, the campaign was engineered to establish strong market visibility and premium brand positioning.",
 
@@ -292,7 +292,7 @@ export const PROJECTS = [
     category: "FMCG Branding & Packaging",
     year: "2024",
     client: "VIKRAM MILLS",
-    src: "/projects/vikram-mills/vrfmills_1765264055_3783631582696522450_15248023900.jpg",
+    src: "/projects/vikram-mills/vikram mills.png",
     intro:
       "VIKRAM MILLS underwent a comprehensive brand transformation to strengthen its presence in the competitive rice and agro-products market. The project focused on modernizing the brand identity, premiumizing packaging design, and enhancing market visibility across retail, wholesale, and distributor networks.",
 

@@ -188,7 +188,7 @@
 }
 
 .gallery-slider .project-media {
-  flex:1; /* 3 cards in view */
+  flex: 1; /* 3 cards in view */
   height: 55vh;
   overflow: hidden;
   position: relative;
@@ -306,7 +306,6 @@
     flex: 1;
     height: 42vh;
   }
-  
 
   /* Hide old hero-text section if still present */
 }
@@ -337,25 +336,32 @@
     background-color: transparent;
     color: black;
     padding: 50px 30px;
+    background: white;
   }
   .hero-text-breadcrums {
     color: black;
+    text-shadow: none;
   }
 
   .project-hero-title {
     color: black;
+    text-shadow: none;
   }
 
   .project-hero-title span {
     color: black;
+    text-shadow: none;
   }
   .project-intro {
     color: black;
+    text-shadow: none;
   }
 
   .project-meta-info {
     color: black;
+    text-shadow: none;
   }
+  
 }
 
 /* 820px ↓ (Tablet portrait) */
@@ -502,11 +508,15 @@
 .mixed-media-item {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
+  /* border-radius: 16px; */
   background: #f4f4f4;
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
 }
 
 /* Portrait takes 1 column but taller */
@@ -565,5 +575,8 @@
 
   .mixed-media-item.portrait {
     grid-row: span 1;
+  }
+  .mixed-gallery-block {
+    padding: 50px 2%;
   }
 }

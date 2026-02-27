@@ -156,10 +156,10 @@ export default function ProjectsPage() {
             <div className="project-meta">
               <span>[ {project.category} ]</span>
               <h3>{project.title}</h3>
-              <p>
+              {/* <p>
                 {project.intro.split(" ").slice(0, 20).join(" ")}
                 {project.intro.split(" ").length > 20 && "..."}
-              </p>
+              </p> */}
             </div>
           </article>
         ))}
