@@ -26,22 +26,22 @@ export const PROJECTS = [
           {
             mediaType: "image",
             orientation: "portrait",
-            src: "/projects/right-gold/a1.jpg",
+            src: "/projects/right-gold/a1.JPG",
           },
           {
             mediaType: "image",
             orientation: "portrait",
-            src: "/projects/right-gold/a2.jpg",
+            src: "/projects/right-gold/a2.JPG",
           },
           {
             mediaType: "image",
             orientation: "portrait",
-            src: "/projects/right-gold/a3.jpg",
+            src: "/projects/right-gold/a3.JPG",
           },
           {
             mediaType: "image",
             orientation: "portrait",
-            src: "/projects/right-gold/a4.jpg",
+            src: "/projects/right-gold/a4.JPG",
           },
         ],
       },

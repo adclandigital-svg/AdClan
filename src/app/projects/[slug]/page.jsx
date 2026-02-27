@@ -154,23 +154,25 @@ export default function ProjectDetailPage() {
                 <div className="mixed-gallery-grid">
                   {items.map((item, j) => {
                     const orientation = item?.orientation ?? "landscape";
+                    // determine type based on explicit mediaType or file extension of the item's src
+                    const srcValue = item?.src ?? "";
                     const mediaType =
-                      item?.mediaType ?? (/\.(mp4|webm|ogg)$/i.test(src) ? "video" : /\.(mp3|wav|m4a|ogg)$/i.test(src) ? "audio" : "image");
+                      item?.mediaType ?? (/\.(mp4|webm|ogg)$/i.test(srcValue) ? "video" : /\.(mp3|wav|m4a|ogg)$/i.test(srcValue) ? "audio" : "image");
 
                     return (
                       <div key={j} className={`mixed-media-item ${orientation}`}>
-                        {mediaType === "image" && item.src && (
-                          <img src={item.src} alt={item?.alt ?? ""} />
+                        {mediaType === "image" && srcValue && (
+                          <img src={srcValue} alt={item?.alt ?? ""} />
                         )}
 
-                        {mediaType === "video" && item.src && (
-                          <video src={item.src} autoPlay loop muted playsInline preload="metadata" />
+                        {mediaType === "video" && srcValue && (
+                          <video src={srcValue} autoPlay loop muted playsInline preload="metadata" />
                         )}
 
-                        {mediaType === "audio" && item.src && (
+                        {mediaType === "audio" && srcValue && (
                           <div className="audio-card">
                             <p>{item?.title ?? "Audio Experience"}</p>
-                            <audio controls src={item.src} />
+                            <audio controls src={srcValue} />
                           </div>
                         )}
                       </div>
