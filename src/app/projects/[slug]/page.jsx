@@ -153,25 +153,24 @@ export default function ProjectDetailPage() {
               <div className="project-block mixed-gallery-block" key={i}>
                 <div className="mixed-gallery-grid">
                   {items.map((item, j) => {
-                    const src =item.src;
                     const orientation = item?.orientation ?? "landscape";
                     const mediaType =
                       item?.mediaType ?? (/\.(mp4|webm|ogg)$/i.test(src) ? "video" : /\.(mp3|wav|m4a|ogg)$/i.test(src) ? "audio" : "image");
 
                     return (
                       <div key={j} className={`mixed-media-item ${orientation}`}>
-                        {mediaType === "image" && src && (
-                          <img src={src} alt={item?.alt ?? ""} />
+                        {mediaType === "image" && item.src && (
+                          <img src={item.src} alt={item?.alt ?? ""} />
                         )}
 
-                        {mediaType === "video" && src && (
-                          <video src={src} autoPlay loop muted playsInline preload="metadata" />
+                        {mediaType === "video" && item.src && (
+                          <video src={item.src} autoPlay loop muted playsInline preload="metadata" />
                         )}
 
-                        {mediaType === "audio" && src && (
+                        {mediaType === "audio" && item.src && (
                           <div className="audio-card">
                             <p>{item?.title ?? "Audio Experience"}</p>
-                            <audio controls src={src} />
+                            <audio controls src={item.src} />
                           </div>
                         )}
                       </div>
