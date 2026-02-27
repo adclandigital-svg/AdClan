@@ -513,10 +513,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
 }
 
 /* Portrait takes 1 column but taller */

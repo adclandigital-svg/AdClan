@@ -153,7 +153,7 @@ export default function ProjectDetailPage() {
               <div className="project-block mixed-gallery-block" key={i}>
                 <div className="mixed-gallery-grid">
                   {items.map((item, j) => {
-                    const src = item?.src ?? item?.url ?? "";
+                    const src = item.src;
                     const orientation = item?.orientation ?? "landscape";
                     const mediaType =
                       item?.mediaType ?? (/\.(mp4|webm|ogg)$/i.test(src) ? "video" : /\.(mp3|wav|m4a|ogg)$/i.test(src) ? "audio" : "image");
