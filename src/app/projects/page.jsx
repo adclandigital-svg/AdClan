@@ -1,145 +1,3 @@
-// "use client";
-
-// import React, { useRef, useState } from "react";
-// import "./projects.css";
-// import gsap from "gsap";
-// import { useGSAP } from "@gsap/react";
-// import { PROJECTS } from "@/data/projectData";
-// import { useRouter } from "next/navigation";
-
-// const TABS = ["All", ...Array.from(new Set(PROJECTS?.map((p) => p?.category)))];
-
-// export default function ProjectsPage() {
-//   const pageRef = useRef(null);
-//   const [activeTab, setActiveTab] = useState("All");
-//   const [visibleCount, setVisibleCount] = useState(4);
-//   const router = useRouter();
-
-//   const filteredProjects =
-//     activeTab === "All"
-//       ? PROJECTS.slice(0, visibleCount)
-//       : PROJECTS.filter((p) => p.category === activeTab).slice(0, visibleCount);
-
-//   useGSAP(
-//     () => {
-//       const tl = gsap.timeline();
-
-//       // Step 1: Hero text animation
-//       tl.from(".portfolio-hero span", {
-//         y: 100,
-//         opacity: 0,
-//         stagger: 0.15,
-//         duration: 0.6,
-//       });
-
-//       // Step 2: Animate project descriptions after hero animation
-//       tl.from(".portfolio-hero p", {
-//         y: 20,
-//         opacity: 0,
-//         stagger: 0.15,
-//         duration: 0.6,
-//       });
-//     },
-//     { scope: pageRef }
-//   );
-
-//   const handleTabChange = (tab) => {
-//     setActiveTab(tab);
-//     setVisibleCount(4);
-
-//     gsap.from(".project-card", {
-//       opacity: 0,
-//       y: 30,
-//       stagger: 0.1,
-//       duration: 0.5,
-//       ease: "power2.out",
-//     });
-//     gsap.from(".project-meta p", {
-//       y: 20,
-//       opacity: 0,
-//       stagger: 0.15,
-//       duration: 0.6,
-//       ease: "power2.out",
-//     });
-//   };
-
-//   const handleLoadMore = () => {
-//     setVisibleCount((prev) => prev + 4);
-//   };
-
-//   return (
-//     <main className="projects-page" ref={pageRef}>
-//       {/* HERO */}
-//       <section className="portfolio-hero">
-//         <h1>
-//           <span>We design</span>
-//           <span>brands,</span>
-//           <span>experiences</span>
-//           <span>& stories.</span>
-//         </h1>
-
-//         <p>
-//           A creative agency crafting brand identities, digital experiences, and
-//           films that connect culture and commerce. We blend strategy,
-//           storytelling, and design to build meaningful brands, create immersive
-//           experiences, and deliver work that resonates across platforms,
-//           audiences, and time.
-//         </p>
-//       </section>
-
-//       {/* TABS */}
-//       <div className="projects-tabs">
-//         {TABS.map((tab) => (
-//           <button
-//             key={tab}
-//             className={`tab-btn ${activeTab === tab ? "active" : ""}`}
-//             onClick={() => handleTabChange(tab)}
-//           >
-//             [ {tab} ]
-//           </button>
-//         ))}
-//       </div>
-
-//       {/* GRID */}
-//       <section className="projects-grid">
-//         {filteredProjects?.map((project, key) => (
-//           <article
-//             className="project-card big"
-//             key={key}
-//             onClick={() => router.push(`/projects/${project?.slug}`)}
-//           >
-//             <div className="project-media">
-//               {project.type === "video" ? (
-//                 <video src={project.src} muted loop autoPlay playsInline />
-//               ) : (
-//                 <img src={project.src} alt={project.title} />
-//               )}
-//             </div>
-
-//             <div className="project-meta">
-//               <span>[ {project.category} ]</span>
-//               <h3>{project.title}</h3>
-//               <p>
-//                 {project.intro.split(" ").slice(0, 30).join(" ")}
-//                 {project.intro.split(" ").length > 30 && "..."}
-//               </p>
-//             </div>
-//           </article>
-//         ))}
-//       </section>
-
-//       {/* LOAD MORE */}
-//       {visibleCount < filteredProjects.length && (
-//         <div className="load-more-container">
-//           <button className="load-more-btn" onClick={handleLoadMore}>
-//             Load More Projects
-//           </button>
-//         </div>
-//       )}
-//     </main>
-//   );
-// }
-
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
@@ -153,14 +11,18 @@ const TABS = ["All", ...Array.from(new Set(PROJECTS.map((p) => p.category)))];
 
 export default function ProjectsPage() {
   const pageRef = useRef(null);
+  const loaderRef = useRef(null);
   const router = useRouter();
 
   const [activeTab, setActiveTab] = useState("All");
-  const [visibleCount, setVisibleCount] = useState(4);
+  const [visibleCount, setVisibleCount] = useState(8);
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [visibleProjects, setVisibleProjects] = useState([]);
 
-  /* ---------- FILTER LOGIC ---------- */
+  // Track previous number of cards to animate only new ones
+  const prevCardCountRef = useRef(0);
+
+  // Filter projects when tab changes
   useEffect(() => {
     const result =
       activeTab === "All"
@@ -168,19 +30,42 @@ export default function ProjectsPage() {
         : PROJECTS.filter((p) => p.category === activeTab);
 
     setFilteredProjects(result);
-    setVisibleProjects(result.slice(0, 4));
-    setVisibleCount(4);
+    setVisibleProjects(result.slice(0, 8));
+    setVisibleCount(8);
+    prevCardCountRef.current = 0; // reset on tab change
   }, [activeTab]);
 
-  /* ---------- LOAD MORE ---------- */
+  // Update visible projects when count or filter changes
   useEffect(() => {
     setVisibleProjects(filteredProjects.slice(0, visibleCount));
   }, [visibleCount, filteredProjects]);
 
-  /* ---------- ANIMATIONS ---------- */
+  // Infinite scroll with IntersectionObserver
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (
+          entries[0].isIntersecting &&
+          visibleCount < filteredProjects.length
+        ) {
+          setVisibleCount((prev) => prev + 4);
+        }
+      },
+      { threshold: 0.5 } // Trigger when half of the loader is visible
+    );
+
+    if (loaderRef.current) observer.observe(loaderRef.current);
+
+    return () => {
+      if (loaderRef.current) observer.unobserve(loaderRef.current);
+    };
+  }, [visibleCount, filteredProjects]); // Re‑create when dependencies change
+
+  // Hero title animation
   useGSAP(
     () => {
       const tl = gsap.timeline();
+
       tl.from(".portfolio-hero span", {
         y: 100,
         opacity: 0,
@@ -191,7 +76,6 @@ export default function ProjectsPage() {
         {
           y: 20,
           opacity: 0,
-          stagger: 0.15,
           duration: 0.6,
         },
         "-=0.3"
@@ -200,20 +84,28 @@ export default function ProjectsPage() {
     { scope: pageRef }
   );
 
+  // Card animation – only new cards
+  useEffect(() => {
+    const currentCount = visibleProjects.length;
+    if (currentCount > prevCardCountRef.current) {
+      // Select only the newly added cards (those after the previous count)
+      const newCards = Array.from(
+        document.querySelectorAll(".project-card")
+      ).slice(prevCardCountRef.current);
+
+      gsap.from(newCards, {
+        opacity: 0,
+        y: 40,
+        stagger: 0.05,
+        duration: 0.5,
+        ease: "power2.out",
+      });
+    }
+    prevCardCountRef.current = currentCount;
+  }, [visibleProjects]);
+
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-
-    gsap.from(".project-card", {
-      opacity: 0,
-      y: 30,
-      stagger: 0.08,
-      duration: 0.5,
-      ease: "power2.out",
-    });
-  };
-
-  const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + 4);
   };
 
   return (
@@ -227,8 +119,8 @@ export default function ProjectsPage() {
           <span>& stories.</span>
         </h1>
         <p>
-          A creative agency crafting brand identities, digital experiences, and
-          films that connect culture and commerce.
+          A creative agency crafting brand identities, digital experiences,
+          and films that connect culture and commerce.
         </p>
       </section>
 
@@ -247,10 +139,10 @@ export default function ProjectsPage() {
 
       {/* GRID */}
       <section className="projects-grid">
-        {visibleProjects.map((project, key) => (
+        {visibleProjects.map((project) => (
           <article
-            className="project-card big"
-            key={key}
+            className="project-card"
+            key={project.slug} // Use unique slug instead of index
             onClick={() => router.push(`/projects/${project.slug}`)}
           >
             <div className="project-media">
@@ -273,14 +165,8 @@ export default function ProjectsPage() {
         ))}
       </section>
 
-      {/* LOAD MORE */}
-      {visibleCount < filteredProjects.length && (
-        <div className="load-more-container">
-          <button className="load-more-btn" onClick={handleLoadMore}>
-            Load More Projects
-          </button>
-        </div>
-      )}
+      {/* Infinite Scroll Loader */}
+      <div ref={loaderRef} style={{ height: "50px" }}></div>
     </main>
   );
 }

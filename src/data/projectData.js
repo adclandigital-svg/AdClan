@@ -6,7 +6,7 @@ export const PROJECTS = [
     category: "Video Production",
     year: "2026",
     client: "Right Gold",
-    src: "/projects/right-gold/1200x630wa.jpg",
+    src: "/projects/right-gold/1.jpg",
     intro:
       "For Right Gold, we executed a high-impact ad shoot and performance-driven campaign strategy designed to position the brand as a premium jewelry destination. From cinematic product visuals to multi-platform ad rollouts, every asset was built to attract, engage, and convert.",
 
@@ -21,33 +21,33 @@ export const PROJECTS = [
       },
 
       {
-        type: "mediaRow",
+        type: "mediaGallery",
         items: [
           {
             mediaType: "image",
-            src: "/projects/right-gold/a1.JPG",
-            desc: "High-end jewelry ad shoot focused on lighting precision, macro detailing, and luxury aesthetics to showcase craftsmanship and brilliance.",
+            orientation: "portrait",
+            src: "/projects/right-gold/a1.jpg",
           },
           {
             mediaType: "image",
-            src: "/projects/right-gold/a2.JPG",
-            desc: "Primary campaign film produced for social media ads, in-store displays, and digital promotions — designed to drive engagement and brand recall.",
+            orientation: "portrait",
+            src: "/projects/right-gold/a2.jpg",
           },
           {
             mediaType: "image",
-            src: "/projects/right-gold/a3.JPG",
-            desc: "Creative ad visuals developed for Meta and Google campaigns, combining emotional storytelling with premium product focus.",
+            orientation: "portrait",
+            src: "/projects/right-gold/a3.jpg",
           },
           {
             mediaType: "image",
-            src: "/projects/right-gold/a4.JPG",
-            desc: "Outdoor and print ad creatives crafted to create a bold luxury presence across hoardings, brochures, and retail branding.",
+            orientation: "portrait",
+            src: "/projects/right-gold/a4.jpg",
           },
         ],
       },
 
       {
-        type: "gallery",
+        type: "slider",
         items: [
           {
             mediaType: "image",
@@ -144,7 +144,7 @@ export const PROJECTS = [
       "For KB West Walk, we executed a high-impact Instagram content strategy focused on reels, creative posts, and campaign-driven storytelling. The objective was to increase footfall, boost brand recall, and position the mall as a vibrant lifestyle destination for the new-age audience.",
 
     sections: [
-      {
+      { 
         type: "hero",
         mediaType: "image",
         src: "/projects/kb/bn.png",
@@ -185,7 +185,7 @@ export const PROJECTS = [
       },
 
       {
-        type: "gallery",
+        type: "slider",
         items: [
           {
             mediaType: "image",
@@ -218,7 +218,7 @@ export const PROJECTS = [
     category: "Branding",
     year: "2024",
     client: "Elmas Group",
-    src: "/projects/elmasGroup/logo.jpg",
+    src: "/projects/elmasGroup/logo.webp",
     intro:
       "SPRING ELMAS marked a flagship launch by Elmas Group, executed as a complete 360° branding and marketing campaign. From outdoor dominance to magazine spreads, high-impact video production, and digital amplification, the campaign was engineered to establish strong market visibility and premium brand positioning.",
 
@@ -259,7 +259,7 @@ export const PROJECTS = [
       },
 
       {
-        type: "gallery",
+        type: "slider",
         items: [
           {
             mediaType: "image",
@@ -292,7 +292,7 @@ export const PROJECTS = [
     category: "FMCG Branding & Packaging",
     year: "2024",
     client: "VIKRAM MILLS",
-    src: "/projects/vikram-mills/logo1.jpg",
+    src: "/projects/vikram-mills/vrfmills_1765264055_3783631582696522450_15248023900.jpg",
     intro:
       "VIKRAM MILLS underwent a comprehensive brand transformation to strengthen its presence in the competitive rice and agro-products market. The project focused on modernizing the brand identity, premiumizing packaging design, and enhancing market visibility across retail, wholesale, and distributor networks.",
 
@@ -333,7 +333,7 @@ export const PROJECTS = [
       },
 
       {
-        type: "gallery",
+        type: "slider",
         items: [
           {
             mediaType: "image",
@@ -648,7 +648,7 @@ export const PROJECTS = [
       },
 
       {
-        type: "gallery",
+        type: "slider",
         items: [
           {
             mediaType: "image",
@@ -916,7 +916,7 @@ export const PROJECTS = [
       "Impactful radio jingle campaign for Smile Train India, using emotional storytelling and music to drive awareness and encourage donations for cleft care.",
     sections: [],
   },
-  
+
   {
     slug: "clear-dekho",
     title: "Clear Dekho",
