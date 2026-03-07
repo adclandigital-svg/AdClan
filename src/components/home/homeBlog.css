@@ -1,0 +1,252 @@
+/* ================= BLOG SECTION ================= */
+
+.home-blog-section {
+  padding: 100px 20px;
+  padding-top: 0;
+  background-color: #ffffff;
+  background-size: 28px 28px;
+}
+
+/* Container */
+
+.blog-container {
+  max-width: 1800px;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= HEADING ================= */
+
+.blog-heading {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.blog-heading span {
+  color: #17b9a9;
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.blog-heading h2 {
+  font-size: 42px;
+  margin-top: 10px;
+  color: #000;
+  font-weight: 700;
+}
+
+/* ================= LAYOUT ================= */
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+/* ================= FEATURED BLOG ================= */
+
+.featured-blog {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.featured-blog img {
+  width: 100%;
+  height: 570px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.8s ease;
+  -webkit-transition: transform 0.8s ease;
+  -moz-transition: transform 0.8s ease;
+  -ms-transition: transform 0.8s ease;
+  -o-transition: transform 0.8s ease;
+}
+
+.featured-blog:hover img {
+  transform: scale(1.05);
+}
+
+.featured-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+}
+
+.featured-content .date {
+  font-size: 12px;
+  background: #17b9a9;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.featured-content h3 {
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.featured-content p {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.featured-content a {
+  color: #17b9a9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ================= SIDE BLOGS ================= */
+
+.side-blogs {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.side-blog {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #eeeeee;
+  transition: 0.3s;
+}
+
+.side-blog:hover {
+  transform: translateX(6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.side-blog img {
+  width: 140px;
+  height: 140px;
+  min-width: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.side-content span {
+  font-size: 12px;
+  color: #777;
+}
+
+.side-content h4 {
+  font-size: 17px;
+  margin: 6px 0;
+  color: #000;
+}
+
+.side-content a {
+  font-size: 14px;
+  color: #17b9a9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-blog img {
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-heading h2 {
+    font-size: 34px;
+  }
+
+  .featured-content {
+    padding: 25px;
+  }
+
+  .side-blog {
+    flex-direction: column;
+  }
+
+  .side-blog img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .featured-content h3 {
+    font-size: 20px;
+    margin: 12px 0;
+  }
+}
+
+.blog-heading-left {
+  margin-bottom: 60px;
+  max-width: 500px;
+}
+
+.blog-heading-left h4 {
+  color: #777676;
+  font-size: 44px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.blog-heading-left h2 {
+  font-size: 44px;
+  color: #000;
+  font-weight: 700;
+  margin-top: 8px;
+  line-height: 1.2;
+}
+
+/* ================= MOBILE FIX ================= */
+
+@media (max-width: 1024px) {
+  .blog-heading-left h4 {
+    font-size: 36px;
+  }
+
+  .blog-heading-left h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-heading-left {
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+
+  .blog-heading-left h4 {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+
+  .blog-heading-left h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-heading-left h4 {
+    font-size: 22px;
+  }
+
+  .blog-heading-left h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}

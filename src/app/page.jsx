@@ -22,6 +22,7 @@ const HomeSeven = dynamic(() => import("@/components/home/HomeSeven"), {
 const HomeEight = dynamic(() => import("@/components/home/HomeEight"), {
   ssr: false,
 });
+import HomeBlogSection from "@/components/home/HomeBlogSection";
 
 export default function Home() {
   return (
@@ -33,7 +34,8 @@ export default function Home() {
           <HomeFourth />
           <HomeThird />
           <HomeSeven />
-          <HomeSix />
+          {/* <HomeSix /> */}
+          <HomeBlogSection/>
           <HomeEight />
         </div>
       </Suspense>
