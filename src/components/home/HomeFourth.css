@@ -23,7 +23,7 @@
 }
 .home-fouth-section-div {
   position: absolute;
-  right: 100px;
+  right: 230px;
   top: 50%;
   width: 500px;
   display: flex;
@@ -38,10 +38,10 @@
 }
 .home-fouth-media1 {
   position: absolute;
-  left: 100px;
+  left: 320px;
   top: 50%;
   transform: translateY(-50%);
-  width: 480px;
+  width: 350px;
   height: 600px;
   border-radius: 20px;
   overflow: hidden;
@@ -58,10 +58,10 @@
 
 .home-fouth-media2 {
   position: absolute;
-  left: 700px;
+  left: 750px;
   top: 50%;
   transform: translateY(-50%);
-  width: 480px;
+  width: 350px;
   height: 600px;
   border-radius: 20px;
   overflow: hidden;
@@ -100,18 +100,19 @@
   }
   .home-fouth-media1 {
     width: 300px;
-    height: 400px;
+    height: 500px;
+    left: 10%;
   }
   .home-fouth-media2 {
     transform: translateY(-50%);
     left: 40%;
     width: 300px;
-    height: 400px;
+    height: 500px;
   }
   .home-fouth-section-div span {
     font-size: 40px;
   }
-  .home-fouth-section-div {
+  .home-fouth-section-div { 
     position: absolute;
     right: 100px;
     top: 50%;
@@ -161,7 +162,7 @@
   .home-fouth-media1 {
     position: static;
     transform: translateY(0%);
-    width: 90%;
+    width: 350px;
     height: auto;
     border-radius: 0px;
     overflow: hidden;

@@ -149,29 +149,35 @@ export default function HomeFourth() {
   const mediaRef2 = useRef(null);
 
   const media1 = [
-   { type: "image", src: "/home/creatives/1.webp" },
-   { type: "image", src: "/home/creatives/2.webp" },
-   { type: "image", src: "/home/creatives/3.webp" },
-   { type: "image", src: "/home/creatives/4.webp" },
-   { type: "video", src: "/home/creatives/5.mp4" },
-   { type: "image", src: "/home/creatives/6.jpg" },
-   { type: "image", src: "/home/creatives/7.jpg" },
-   { type: "image", src: "/home/creatives/8.jpeg" },
-   { type: "image", src: "/home/creatives/10.jpg" },
+  //  { type: "image", src: "/home/creatives/1.webp" },
+  //  { type: "image", src: "/home/creatives/2.webp" },
+  //  { type: "image", src: "/home/creatives/3.webp" },
+  //  { type: "image", src: "/home/creatives/4.webp" },
+  //  { type: "video", src: "/home/creatives/5.mp4" },
+  //  { type: "image", src: "/home/creatives/6.jpg" },
+  //  { type: "image", src: "/home/creatives/7.jpg" },
+  //  { type: "image", src: "/home/creatives/8.jpeg" },
+  //  { type: "image", src: "/home/creatives/10.jpg" },
+    { type: "video", src: "/home/22.mp4" },
+    { type: "video", src: "/home/23.mp4" },
+    { type: "video", src: "/home/24.mp4" },
   ];
 
   const media2 = [
-    { type: "image", src: "/home/creatives/11.webp" },
-    { type: "image", src: "/home/creatives/12.jpg" },
-    { type: "image", src: "/home/creatives/13.jpg" },
-    { type: "video", src: "/home/creatives/14.mp4" },
-    { type: "image", src: "/home/creatives/15.jpg" },
-    { type: "image", src: "/home/creatives/16.jpeg" },
-    { type: "image", src: "/home/creatives/17.jpeg" },
-    { type: "image", src: "/home/creatives/18.webp" },
-    { type: "image", src: "/home/creatives/19.webp" },
-    { type: "image", src: "/home/creatives/20.webp" },
-    { type: "image", src: "/home/creatives/21.webp" },
+    // { type: "image", src: "/home/creatives/11.webp" },
+    // { type: "image", src: "/home/creatives/12.jpg" },
+    // { type: "image", src: "/home/creatives/13.jpg" },
+  
+    { type: "video", src: "/home/25.mp4" },
+    { type: "video", src: "/home/26.mp4" },
+    { type: "video", src: "/home/27.mp4" },
+    // { type: "image", src: "/home/creatives/15.jpg" },
+    // { type: "image", src: "/home/creatives/16.jpeg" },
+    // { type: "image", src: "/home/creatives/17.jpeg" },
+    // { type: "image", src: "/home/creatives/18.webp" },
+    // { type: "image", src: "/home/creatives/19.webp" },
+    // { type: "image", src: "/home/creatives/20.webp" },
+    // { type: "image", src: "/home/creatives/21.webp" },
   ];
 
   const [index1, setIndex1] = useState(0);
