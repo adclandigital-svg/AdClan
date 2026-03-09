@@ -1,12 +1,13 @@
+/* ================= Blog Page Wrapper ================= */
 .adclan-blog-page {
   background: #fff;
   padding: 2rem 5%;
 }
 
-/* Hero */
+/* ================= Hero Section ================= */
 .adclan-blog-hero {
   text-align: left;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .adclan-blog-hero h1 {
@@ -23,14 +24,29 @@
   letter-spacing: 5px;
 }
 
-/* Blog list */
+/* ================= Blog List Grid ================= */
+/* Max 3 columns layout */
 .adclan-blog-list {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* max 3 columns */
+  gap: 2.5rem;
 }
 
-/* Blog card */
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .adclan-blog-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 768px) {
+  .adclan-blog-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= Blog Card ================= */
 .adclan-blog-card {
   position: relative;
   display: block;
@@ -48,68 +64,67 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Video wrapper */
-.adclan-blog-video-wrapper {
+/* ================= Image Wrapper ================= */
+.adclan-blog-image-wrapper {
   width: 100%;
-  height: 620px;
+  height: 400px;
   overflow: hidden;
 }
 
-.adclan-blog-video-wrapper video {
+.adclan-blog-image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.adclan-blog-card:hover video {
+.adclan-blog-card:hover img {
   transform: scale(1.05);
 }
 
-/* Blog info overlay */
+/* ================= Blog Info ================= */
 .adclan-blog-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 1.5rem 2rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
-  color: #fff;
+  padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  background: #fff;
 }
 
 .adclan-blog-date {
   font-size: 0.85rem;
-  opacity: 0.8;
+  color: #888;
 }
 
 .adclan-blog-info h2 {
-  font-size: 1.5rem;
-  font-weight: 100;
-  line-height: 1.2;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.3;
 }
 
 .adclan-blog-read-more {
   font-size: 0.9rem;
-  opacity: 0.9;
+  color: #dbb261; /* Accent color */
   margin-top: 0.3rem;
-  transition: opacity 0.3s ease;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .adclan-blog-card:hover .adclan-blog-read-more {
-  opacity: 1;
+  color: #a8823e; /* Darker accent on hover */
 }
 
-/* Responsive */
+/* ================= Responsive Text ================= */
 @media (max-width: 768px) {
-  .adclan-blog-video-wrapper {
-    height: 220px;
+  .adclan-blog-info h2 {
+    font-size: 1rem;
   }
 
-  .adclan-blog-info h2 {
-    width: 85%;
-    font-size: 0.8rem;
+  .adclan-blog-hero h1 {
+    font-size: 3rem;
+  }
+
+  .adclan-blog-hero p {
+    font-size: 0.9rem;
   }
 }
