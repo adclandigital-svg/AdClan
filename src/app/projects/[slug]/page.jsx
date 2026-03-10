@@ -7,6 +7,10 @@ import "./project-detail.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,38 +56,31 @@ export default function ProjectDetailPage() {
 
       // Gallery slider infinite scroll
       gsap.utils.toArray(".gallery-slider").forEach((slider) => {
-        if (!slider || !slider.children || slider.children.length === 0) return;
+        const items = Array.from(slider.children);
+        if (!items.length) return;
 
-        const items = slider.children;
-        const originalItemCount = items.length;
-
-        // Clone items
-        const clonedItems = [];
-        Array.from(items).forEach((item) => {
-          clonedItems.push(item.cloneNode(true));
+        // duplicate items
+        items.forEach((item) => {
+          const clone = item.cloneNode(true);
+          slider.appendChild(clone);
         });
-        clonedItems.forEach((clone) => slider.appendChild(clone));
+
+        // constant speed
+        const pixelsPerSecond = 150;
 
         const totalWidth = slider.scrollWidth / 2;
-
-        gsap.set(slider, { x: 0 });
-
-        // Auto speed calculation
-        const pixelsPerSecond = 100; // adjust speed
         const duration = totalWidth / pixelsPerSecond;
 
         gsap.to(slider, {
           x: -totalWidth,
-          duration: duration,
           ease: "none",
+          duration: duration,
           repeat: -1,
-          modifiers: {
-            x: (x) => `${parseFloat(x) % totalWidth}px`,
-          },
+          yoyo: true,
         });
       });
     },
-    { scope: pageRef }
+    { scope: pageRef },
   );
 
   return (
@@ -101,7 +98,7 @@ export default function ProjectDetailPage() {
               <div className="hero-media video" key={i}>
                 <video src={hero.src} autoPlay muted loop playsInline />
               </div>
-            )
+            ),
           )}
 
         {/* Overlay text */}
@@ -125,8 +122,6 @@ export default function ProjectDetailPage() {
         </div>
       </section>
       {/* mediaGallery block moved into the project-content map below */}
-      
-      
 
       {/* CONTENT SECTIONS (unchanged) */}
       <section className="project-content">
@@ -157,16 +152,31 @@ export default function ProjectDetailPage() {
                     // determine type based on explicit mediaType or file extension of the item's src
                     const srcValue = item?.src ?? "";
                     const mediaType =
-                      item?.mediaType ?? (/\.(mp4|webm|ogg)$/i.test(srcValue) ? "video" : /\.(mp3|wav|m4a|ogg)$/i.test(srcValue) ? "audio" : "image");
+                      item?.mediaType ??
+                      (/\.(mp4|webm|ogg)$/i.test(srcValue)
+                        ? "video"
+                        : /\.(mp3|wav|m4a|ogg)$/i.test(srcValue)
+                          ? "audio"
+                          : "image");
 
                     return (
-                      <div key={j} className={`mixed-media-item ${orientation}`}>
+                      <div
+                        key={j}
+                        className={`mixed-media-item ${orientation}`}
+                      >
                         {mediaType === "image" && srcValue && (
                           <img src={srcValue} alt={item?.alt ?? ""} />
                         )}
 
                         {mediaType === "video" && srcValue && (
-                          <video src={srcValue} autoPlay loop muted playsInline preload="metadata" />
+                          <video
+                            src={srcValue}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            preload="metadata"
+                          />
                         )}
 
                         {mediaType === "audio" && srcValue && (
@@ -185,27 +195,36 @@ export default function ProjectDetailPage() {
           if (sec.type === "slider") {
             return (
               <div className="project-block gallery-block" key={i}>
-                <div className="gallery-slider">
+                <Swiper
+                  modules={[Autoplay]}
+                  slidesPerView="auto"
+                  spaceBetween={20}
+                  loop={true}
+                  speed={5000} // controls movement speed
+                  autoplay={{
+                    delay: 0,
+                    disableOnInteraction: false,
+                  }}
+                  allowTouchMove={false}
+                >
                   {sec.items.map((item, j) => (
-                    <div className="project-media" key={j}>
-                      {item.mediaType === "video" ? (
-                        <video
-                          src={item.src}
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          preload="metadata"
-                          onLoadedMetadata={(e) => {
-                            e.currentTarget.volume = 0;
-                          }}
-                        />
-                      ) : (
-                        <img src={item.src} alt="" />
-                      )}
-                    </div>
+                    <SwiperSlide key={j} style={{ width: "420px" }}>
+                      <div className="project-media">
+                        {item.mediaType === "video" ? (
+                          <video
+                            src={item.src}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                          />
+                        ) : (
+                          <img src={item.src} alt="" />
+                        )}
+                      </div>
+                    </SwiperSlide>
                   ))}
-                </div>
+                </Swiper>
               </div>
             );
           }

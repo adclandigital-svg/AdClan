@@ -1,9 +1,11 @@
+import { Source } from "three";
+
 export const PROJECTS = [
   // Existing projects
   {
     slug: "right-gold",
     title: "Right Gold Ads Shoot & Campaign",
-    category: "Video Production",
+    category: "Celebrity Management",
     year: "2026",
     client: "Right Gold",
     src: "/projects/right-gold/rifght.png",
@@ -28,7 +30,7 @@ export const PROJECTS = [
             orientation: "portrait",
             src: "/projects/right-gold/a2.JPG",
           },
-          
+
           {
             mediaType: "image",
             orientation: "portrait",
@@ -205,7 +207,7 @@ export const PROJECTS = [
 
   {
     slug: "spring-elmas-campaign-1",
-    title: "SPRING ELMAS Grand Launch",
+    title: "SPRING ELMAS",
     category: "Branding",
     year: "2024",
     client: "Elmas Group",
@@ -216,8 +218,8 @@ export const PROJECTS = [
     sections: [
       {
         type: "hero",
-        mediaType: "video",
-        src: "/projects/elmasGroup/banner.mp4",
+        mediaType: "image",
+        src: "/projects/elmasGroup/1.jpeg",
         title: "A Landmark Launch for Elmas Group",
         description:
           "A cinematic launch film crafted to introduce SPRING ELMAS as a premium real estate destination. The film blended architectural visuals, aspirational lifestyle storytelling, and strong call-to-action messaging.",
@@ -250,7 +252,7 @@ export const PROJECTS = [
             orientation: "portrait",
             src: "/projects/elmasGroup/11p.jpeg",
           },
-           {
+          {
             mediaType: "image",
             orientation: "landscape",
             src: "/projects/elmasGroup/5.jpeg",
@@ -320,7 +322,7 @@ export const PROJECTS = [
             mediaType: "image",
             orientation: "landscape",
             src: "/projects/elmasGroup/17.jpeg",
-          }
+          },
         ],
       },
 
@@ -353,6 +355,26 @@ export const PROJECTS = [
       {
         type: "slider",
         items: [
+          {
+            mediaType: "image",
+            src: "/projects/elmasGroup/5.webp",
+            desc: "Premium magazine advertisements featured in leading lifestyle and real estate publications to enhance brand credibility.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/elmasGroup/6.webp",
+            desc: "Event branding and launch-day installations including stage backdrops, standees, and experiential brand zones.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/elmasGroup/7.webp",
+            desc: "Launch event coverage video capturing audience engagement, project unveiling, and brand positioning moments.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/elmasGroup/8.webp",
+            desc: "Campaign rollout across billboards, brochures, newspaper ads, social media creatives, and digital display networks.",
+          },
           {
             mediaType: "image",
             src: "/projects/elmasGroup/5.webp",
@@ -447,6 +469,26 @@ export const PROJECTS = [
             src: "/projects/vikram-mills/9.jpg",
             desc: "Consistent visual rollout across transportation branding, sacks, and bulk distribution channels.",
           },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/6.jpg",
+            desc: "Retail-ready packaging variations across multiple rice categories and grain types.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/7.jpg",
+            desc: "Print collateral including brochures, rate cards, and dealer communication materials.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/8.jpg",
+            desc: "In-market activation creatives and point-of-sale branding elements.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/9.jpg",
+            desc: "Consistent visual rollout across transportation branding, sacks, and bulk distribution channels.",
+          },
         ],
       },
     ],
@@ -520,6 +562,26 @@ export const PROJECTS = [
             src: "/projects/vikram-mills/9.jpg",
             desc: "Consistent visual rollout across transportation branding, sacks, and bulk distribution channels.",
           },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/6.jpg",
+            desc: "Retail-ready packaging variations across multiple rice categories and grain types.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/7.jpg",
+            desc: "Print collateral including brochures, rate cards, and dealer communication materials.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/8.jpg",
+            desc: "In-market activation creatives and point-of-sale branding elements.",
+          },
+          {
+            mediaType: "image",
+            src: "/projects/vikram-mills/9.jpg",
+            desc: "Consistent visual rollout across transportation branding, sacks, and bulk distribution channels.",
+          },
         ],
       },
     ],
@@ -533,7 +595,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/MILLIAND GABA.png",
     intro:
       "End-to-end celebrity management for Milliand Gaba, covering contract negotiations, public relations, and digital content strategy to enhance brand collaborations.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "image",
+        src: "/projects/milliand_gaba/banner.png",
+      },
+    ],
   },
   {
     slug: "jassie-gill",
@@ -544,7 +612,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/JASSIE GILL.png",
     intro:
       "Strategic celebrity management for Jassie Gill, focusing on talent booking, promotional campaigns, and cross-platform visibility for maximum impact.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "image",
+        src: "/projects/jassie_gill/banner.png",
+      },
+    ],
   },
   {
     slug: "bassi",
@@ -555,7 +629,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/BASSI.png",
     intro:
       "Full-scale celebrity management for comedian Bassi, including live event coordination, digital partnerships, and media engagement to expand his fan base.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "image",
+        src: "/projects/bassi/bassi.png",
+      },
+    ],
   },
   {
     slug: "adah-sharma",
@@ -566,7 +646,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/ADAH SHARMA.png",
     intro:
       "Celebrity management services for Adah Sharma, handling brand tie-ups, social media growth, and public appearances to strengthen her marketability.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "image",
+        src: "/projects/adah_sharma/banner.png",
+      },
+    ],
   },
   {
     slug: "zipperminds",
@@ -577,7 +663,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/Zipperminds.png",
     intro:
       "High-impact video production for Zipperminds, delivering cinematic brand films and social media content that capture the essence of innovative learning.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "video",
+        src: "/projects/zipperminds/banner.mp4",
+      },
+    ],
   },
   {
     slug: "ggit",
@@ -588,7 +680,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/GGIT.png",
     intro:
       "Creative video production for GGIT, producing engaging promotional videos and motion graphics tailored for digital campaigns and brand storytelling.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "video",
+        src: "/projects/ggit/GGIT.mp4",
+      },
+    ],
   },
   {
     slug: "smile-train",
@@ -599,7 +697,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/SMILE TRAIN.png",
     intro:
       "Heartfelt video production for Smile Train, crafting emotional narratives and awareness films to highlight the impact of cleft lip and palate surgeries.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "video",
+        src: "/projects/smile_train/smile-train.mp4",
+      },
+    ],
   },
   {
     slug: "india-result",
@@ -610,7 +714,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/INDIA RESULT.png",
     intro:
       "Dynamic video production for India Result, creating compelling ad films and explainer videos that drive engagement and communicate educational success stories.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "video",
+        src: "https://adclan.in/wp-content/uploads/2024/09/India-Result.com_.mp4",
+      },
+    ],
   },
   {
     slug: "vikram-mills-2",
@@ -621,19 +731,25 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/VIKRAM MILLS.png",
     intro:
       "Professional video production for Vikram Mills, producing high-quality brand films and product showcases that highlight the purity and quality of rice products.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "video",
+        src: "/projects/vikram_mills/final-30-sec-logo.mp4",
+      },
+    ],
   },
-  {
-    slug: "spring-elmas",
-    title: "SPRING ELMAS",
-    category: "Digital & Creatives",
-    year: "2024",
-    client: "SPRING ELMAS",
-    src: "/projects/project-thumbnail/SPRING ELMAS.png",
-    intro:
-      "Comprehensive digital and creative campaign for Spring Elmas, including social media creatives, website assets, and launch visuals for a premium real estate project.",
-    sections: [],
-  },
+  // {
+  //   slug: "spring-elmas",
+  //   title: "SPRING ELMAS",
+  //   category: "Digital & Creatives",
+  //   year: "2024",
+  //   client: "SPRING ELMAS",
+  //   src: "/projects/project-thumbnail/SPRING ELMAS.png",
+  //   intro:
+  //     "Comprehensive digital and creative campaign for Spring Elmas, including social media creatives, website assets, and launch visuals for a premium real estate project.",
+  //   sections: [],
+  // },
   {
     slug: "tirupati",
     title: "TIRUPATI",
@@ -643,7 +759,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/TIRUPATI.png",
     intro:
       "Digital creatives and branding materials for Tirupati, designing impactful visuals for social media, print, and outdoor advertising to strengthen brand identity.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "image",
+        src: "/projects/tirupati/banner.png",
+      },
+    ],
   },
   {
     slug: "agropure",
@@ -654,7 +776,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/AGROPURE.png",
     intro:
       "Creative digital assets for Agropure, including packaging design, social media graphics, and promotional content that communicate freshness and purity.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "image",
+        src: "/projects/agropure/banner.png",
+      },
+    ],
   },
   {
     slug: "india-gate",
@@ -665,19 +793,25 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/INDIA GATE.png",
     intro:
       "Digital and creative campaign for India Gate, developing eye-catching visuals and ad creatives that reinforce the brand's position as a leading rice exporter.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "image",
+        src: "/projects/india_gate/banner.png",
+      },
+    ],
   },
-  {
-    slug: "smile-train-india",
-    title: "Smile train India",
-    category: "Digital & Creatives",
-    year: "2024",
-    client: "Smile train India",
-    src: "/projects/project-thumbnail/Smile train India..png",
-    intro:
-      "Digital creatives and social media assets for Smile Train India, designed to raise awareness and drive donations through compelling storytelling and visuals.",
-    sections: [],
-  },
+  // {
+  //   slug: "smile-train-india",
+  //   title: "Smile train India",
+  //   category: "Digital & Creatives",
+  //   year: "2024",
+  //   client: "Smile train India",
+  //   src: "/projects/project-thumbnail/Smile train India..png",
+  //   intro:
+  //     "Digital creatives and social media assets for Smile Train India, designed to raise awareness and drive donations through compelling storytelling and visuals.",
+  //   sections: [],
+  // },
   {
     slug: "kayna",
     title: "KAYNA",
@@ -687,7 +821,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/KAYNA.png",
     intro:
       "Creative branding and digital design for Kayna, producing lifestyle imagery and promotional content that reflect the brand's modern and elegant aesthetic.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "image",
+        src: "/projects/kayna/banner.png",
+      },
+    ],
   },
   {
     slug: "rj-tripti",
@@ -698,7 +838,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/RJ TRIPTI.png",
     intro:
       "Influencer video campaign featuring RJ Tripti, creating engaging branded content and social media videos that resonate with her audience and boost brand affinity.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "video",
+        src: "/projects/rj_tripti/banner.mp4",
+      },
+    ],
   },
   {
     slug: "rj-rahul-makin",
@@ -709,7 +855,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/RJ RAHUL Makin.png",
     intro:
       "Influencer-led video production with RJ Rahul Makin, crafting authentic storytelling content that drives engagement and amplifies brand messages.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "video",
+        src: "/projects/rj_rahul_makin/banner.mp4",
+      },
+    ],
   },
   {
     slug: "rj-naved",
@@ -720,7 +872,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/RJ NAVED.png",
     intro:
       "Collaborative influencer video with RJ Naved, producing high-energy content tailored for social media platforms to maximize reach and viewer interaction.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "video",
+        src: "https://adclan.in/wp-content/uploads/2024/09/RJ-Naved.mp4",
+      },
+    ],
   },
   {
     slug: "rj-lucky",
@@ -731,7 +889,13 @@ export const PROJECTS = [
     src: "/projects/project-thumbnail/RJ LUCKY.png",
     intro:
       "Influencer marketing video featuring RJ Lucky, designed to create viral moments and strengthen brand presence through relatable, entertaining content.",
-    sections: [],
+    sections: [
+      {
+        type: "hero",
+        mediaType: "video",
+        src: "/projects/rj_lucky/bannert.mp4",
+      },
+    ],
   },
   {
     slug: "teaser-spot-ace",
@@ -740,6 +904,7 @@ export const PROJECTS = [
     year: "2024",
     client: "Teaser Spot-ACE",
     src: "/projects/project-thumbnail/Teaser Spot-ACE.png",
+    Source: "/projects/radio/Teaser-Spot-ACE.mp3",
     intro:
       "Catchy radio jingle production for Teaser Spot-ACE, composing memorable tunes and voiceovers that enhance brand recall during prime time slots.",
     sections: [],
@@ -748,6 +913,7 @@ export const PROJECTS = [
     slug: "ramjisons",
     title: "Ramjisons",
     category: "Radio Jingles",
+    Source: "/projects/radio/Ramjisons.mp3",
     year: "2024",
     client: "Ramjisons",
     src: "/projects/project-thumbnail/Ramjisons.png",
@@ -759,6 +925,7 @@ export const PROJECTS = [
     slug: "smile-train-india-radio",
     title: "Smile train India",
     category: "Radio Jingles",
+    Source: "/projects/radio/RJM-Cut-Smile-train-India.mp3",
     year: "2024",
     client: "Smile train India",
     src: "/projects/project-thumbnail/Smile train India.png",
@@ -773,6 +940,7 @@ export const PROJECTS = [
     category: "Radio Jingles",
     year: "2024",
     client: "Clear Dekho",
+    Source: "/projects/radio/83-Clear-dekho-40sec-promo.mp3",
     src: "/projects/project-thumbnail/Clear Dekho.png",
     intro:
       "Memorable radio jingles for Clear Dekho, crafting short, catchy audio ads that effectively communicate the brand's value proposition to a mass audience.",

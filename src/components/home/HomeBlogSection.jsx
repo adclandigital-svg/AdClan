@@ -54,7 +54,7 @@ const blogs = [
     category: "Case Study",
     date: "September 2024",
     readTime: "4 min read",
-    img: "https://adclan.in/wp-content/uploads/2024/09/Radio-Advert.png",
+    img: "/blog/Artboard 5.png",
     link: "/blogs/5-radio-ads-strategies-for-buisness-growth",
   },
 ];

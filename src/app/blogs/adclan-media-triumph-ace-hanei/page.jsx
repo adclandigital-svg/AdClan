@@ -20,11 +20,11 @@ export default function BlogContent() {
           designed for style and elegance.
         </p>
 
-        <img
-          src="https://adclan.in/wp-content/uploads/2024/10/Untitled-2.png"
+        {/* <img
+          src="/blog/ace.png"
           alt="Adclan Media Ace Hanei Campaign"
           className="blog-image"
-        />
+        /> */}
 
         {/* Table of Contents */}
 

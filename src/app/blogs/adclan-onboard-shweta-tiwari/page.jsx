@@ -17,7 +17,7 @@ export default function BlogContent() {
         {/* Featured Image */}
 
         <img
-          src="https://adclan.in/wp-content/uploads/2025/01/WhatsApp-Image-2025-01-23-at-4.20.17-PM-1024x1024.jpeg"
+          src="/blog/sweta.jpeg"
           className="blog-image"
           alt="Shweta Tiwari Kidsmate"
         />

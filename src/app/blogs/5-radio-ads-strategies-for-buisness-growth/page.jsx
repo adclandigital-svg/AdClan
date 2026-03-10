@@ -38,7 +38,7 @@ export default function BlogContent() {
             </p>
 
             <img
-              src="https://adclan.in/wp-content/uploads/2024/09/Radio-Advert.png"
+              src="/blog/Radio-Advert.png"
               alt="Ace Hanei Project"
               className="blog-image"
             />

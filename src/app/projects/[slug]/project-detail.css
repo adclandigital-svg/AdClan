@@ -576,3 +576,13 @@
     padding: 50px 2%;
   }
 }
+
+
+/* make swiper animation linear */
+.swiper-wrapper{
+transition-timing-function: linear !important;
+}
+
+.gallery-block{
+overflow:hidden;
+}

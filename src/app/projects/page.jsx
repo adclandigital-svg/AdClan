@@ -171,14 +171,6 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
@@ -192,6 +184,7 @@ export default function ProjectsPage() {
   const pageRef = useRef(null);
   const loaderRef = useRef(null);
   const router = useRouter();
+  const [activeAudio, setActiveAudio] = useState(null);
 
   // SAFE fallback if PROJECTS undefined
   const projectsData = Array.isArray(PROJECTS) ? PROJECTS : [];
@@ -239,7 +232,7 @@ export default function ProjectsPage() {
           setVisibleCount((prev) => prev + 4);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     observer.observe(loaderRef.current);
@@ -264,10 +257,10 @@ export default function ProjectsPage() {
           opacity: 0,
           duration: 0.6,
         },
-        "-=0.3"
+        "-=0.3",
       );
     },
-    { scope: pageRef }
+    { scope: pageRef },
   );
 
   // Animate new cards
@@ -276,7 +269,7 @@ export default function ProjectsPage() {
 
     if (currentCount > prevCardCountRef.current) {
       const newCards = Array.from(
-        document.querySelectorAll(".project-card")
+        document.querySelectorAll(".project-card"),
       ).slice(prevCardCountRef.current);
 
       gsap.from(newCards, {
@@ -292,63 +285,90 @@ export default function ProjectsPage() {
   }, [visibleProjects]);
 
   return (
-    <main className="projects-page" ref={pageRef}>
-      
-      {/* HERO */}
-      <section className="portfolio-hero">
-        <h1>
-          <span>We design</span>
-          <span>brands,</span>
-          <span>experiences</span>
-          <span>& stories.</span>
-        </h1>
+    <>
+      <main className="projects-page" ref={pageRef}>
+        {/* HERO */}
+        <section className="portfolio-hero">
+          <h1>
+            <span>We design</span>
+            <span>brands,</span>
+            <span>experiences</span>
+            <span>& stories.</span>
+          </h1>
 
-        <p>
-          A creative agency crafting brand identities, digital experiences,
-          and films that connect culture and commerce.
-        </p>
-      </section>
+          <p>
+            A creative agency crafting brand identities, digital experiences,
+            and films that connect culture and commerce.
+          </p>
+        </section>
 
-      {/* TABS */}
-      <div className="projects-tabs">
-        {TABS.map((tab) => (
-          <button
-            key={tab}
-            className={`tab-btn ${activeTab === tab ? "active" : ""}`}
-            onClick={() => setActiveTab(tab)}
+        {/* TABS */}
+        <div className="projects-tabs">
+          {TABS.map((tab) => (
+            <button
+              key={tab}
+              className={`tab-btn ${activeTab === tab ? "active" : ""}`}
+              onClick={() => setActiveTab(tab)}
+            >
+              [ {tab} ]
+            </button>
+          ))}
+        </div>
+
+        {/* GRID */}
+        <section className="projects-grid">
+          {visibleProjects.map((project) => (
+            <article
+              className="project-card"
+              key={project.slug}
+              onClick={() => {
+                if (project.category == "Radio Jingles") {
+                  setActiveAudio(project);
+                } else {
+                  router.push(`/projects/${project.slug}`);
+                }
+              }}
+            >
+              <div className="project-media">
+                {project.type === "video" ? (
+                  <video src={project.src} muted loop autoPlay playsInline />
+                ) : (
+                  <img src={project.src} alt={project.title} />
+                )}
+              </div>
+
+              <div className="project-meta">
+                <span>[ {project.category} ]</span>
+                <h3>{project.title}</h3>
+              </div>
+            </article>
+          ))}
+        </section>
+
+        {/* Loader */}
+        <div ref={loaderRef} style={{ height: "50px" }}></div>
+      </main>
+      {activeAudio && (
+        <div className="audio-modal" onClick={() => setActiveAudio(null)}>
+          <div
+            className="audio-modal-content"
+            onClick={(e) => e.stopPropagation()}
           >
-            [ {tab} ]
-          </button>
-        ))}
-      </div>
+            <button
+              className="audio-close"
+              onClick={() => setActiveAudio(null)}
+            >
+              ×
+            </button>
 
-      {/* GRID */}
-      <section className="projects-grid">
-        {visibleProjects.map((project) => (
-          <article
-            className="project-card"
-            key={project.slug}
-            onClick={() => router.push(`/projects/${project.slug}`)}
-          >
-            <div className="project-media">
-              {project.type === "video" ? (
-                <video src={project.src} muted loop autoPlay playsInline />
-              ) : (
-                <img src={project.src} alt={project.title} />
-              )}
-            </div>
+            <h3>{activeAudio.title}</h3>
 
-            <div className="project-meta">
-              <span>[ {project.category} ]</span>
-              <h3>{project.title}</h3>
-            </div>
-          </article>
-        ))}
-      </section>
-
-      {/* Loader */}
-      <div ref={loaderRef} style={{ height: "50px" }}></div>
-
-    </main>
+            <audio controls autoPlay>
+              <source src={activeAudio.Source} />
+            </audio>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
