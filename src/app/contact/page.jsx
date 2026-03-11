@@ -1,4 +1,3 @@
-
 // gsap.registerPlugin(ScrollTrigger);
 
 // export default function ContactPage() {
@@ -155,8 +154,6 @@
 //   );
 // }
 
-
-
 "use client";
 import React, { useRef, useState } from "react";
 import "./contact.css";
@@ -281,22 +278,32 @@ export default function ContactPage() {
       {/* INFO CARDS */}
       <section className="contact-split">
         {[
-          { title: "Email", value: "info@adclan.in" },
           {
-            title: "Phone",
+            title: "Contact",
             value: (
               <>
-                +91-9891505451 <br /> 011-49573333
+                info@adclan.in <br />
+                +91-9891505451 <br />
+                011-49573333
               </>
             ),
           },
           {
-            title: "Studio",
+            title: "Delhi Office",
             value: (
               <>
                 D-9, Second Floor, Pushpa Bhawan <br />
                 Alaknanda Commercial Complex <br />
                 New Delhi – 110019
+              </>
+            ),
+          },
+          {
+            title: "Noida Office",
+            value: (
+              <>
+                D-77, Sector 63 <br />
+                Noida, Uttar Pradesh
               </>
             ),
           },

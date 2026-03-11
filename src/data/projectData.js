@@ -327,32 +327,6 @@ export const PROJECTS = [
       },
 
       {
-        type: "mediaRow",
-        items: [
-          {
-            mediaType: "video",
-            src: "/projects/elmasGroup/1.mp4",
-            desc: "Complete visual identity system and campaign key visuals developed for consistent branding across outdoor, print, and digital platforms.",
-          },
-          {
-            mediaType: "video",
-            src: "/projects/elmasGroup/2.mp4",
-            desc: "High-production promotional video designed for social media ads, digital screens, and event presentations — focusing on luxury lifestyle and architectural excellence.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/elmasGroup/3.webp",
-            desc: "Large-scale outdoor hoardings strategically placed in high-traffic city zones to create maximum brand recall and market dominance.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/elmasGroup/4.webp",
-            desc: "Performance-driven digital ad creatives optimized for Meta and Google campaigns, generating high engagement and qualified lead inquiries.",
-          },
-        ],
-      },
-
-      {
         type: "slider",
         items: [
           {
@@ -421,27 +395,127 @@ export const PROJECTS = [
       },
 
       {
-        type: "mediaRow",
+        type: "mediaGallery",
         items: [
           {
-            mediaType: "video",
-            src: "/projects/vikram-mills/1.mp4",
-            desc: "Complete brand identity refresh including logo refinement, typography system, packaging grid structure, and visual consistency across SKUs.",
-          },
-          {
-            mediaType: "video",
-            src: "/projects/vikram-mills/3.mp4",
-            desc: "Product showcase and promotional motion creatives highlighting grain quality, sourcing standards, and manufacturing excellence.",
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/1.png",
           },
           {
             mediaType: "image",
-            src: "/projects/vikram-mills/4.jpg",
-            desc: "Premium 30kg and retail packaging designs crafted for strong shelf impact and clear product differentiation in wholesale markets.",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/2.png",
           },
           {
             mediaType: "image",
-            src: "/projects/vikram-mills/5.jpg",
-            desc: "Outdoor branding and dealer board applications to strengthen regional market recall and distributor network visibility.",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/3.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/4.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/5.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/6.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/7.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/8.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/9.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/10.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/11.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/12.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/13.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/14.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/15.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/16.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/17.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/18.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/19.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/20.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/21.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/22.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/23.png",
+          },
+          {
+            mediaType: "image",
+            orientation: "portrait",
+            src: "/projects/vikram-mills/pkg/24.png",
           },
         ],
       },
@@ -511,32 +585,6 @@ export const PROJECTS = [
         title: "Elevating a Trusted Rice Brand",
         description:
           "A refreshed visual direction designed to reflect purity, quality, and large-scale distribution strength — positioning Vikram Mills as a reliable and premium rice manufacturer.",
-      },
-
-      {
-        type: "mediaRow",
-        items: [
-          {
-            mediaType: "video",
-            src: "/projects/vikram-mills/1.mp4",
-            desc: "Complete brand identity refresh including logo refinement, typography system, packaging grid structure, and visual consistency across SKUs.",
-          },
-          {
-            mediaType: "video",
-            src: "/projects/vikram-mills/3.mp4",
-            desc: "Product showcase and promotional motion creatives highlighting grain quality, sourcing standards, and manufacturing excellence.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/vikram-mills/4.jpg",
-            desc: "Premium 30kg and retail packaging designs crafted for strong shelf impact and clear product differentiation in wholesale markets.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/vikram-mills/5.jpg",
-            desc: "Outdoor branding and dealer board applications to strengthen regional market recall and distributor network visibility.",
-          },
-        ],
       },
 
       {
