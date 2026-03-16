@@ -4,13 +4,13 @@ export const metadata = {
     "Get in touch with Adclan Media for branding, digital marketing, and creative strategy services. Let’s build something amazing together.",
   keywords:
     "contact adclan, marketing agency contact, branding agency delhi, digital marketing agency",
-  metadataBase: new URL("https://ad-clan.vercel.app"),
+  metadataBase: new URL("https://adclan.in"),
 
   openGraph: {
     title: "Contact Us | Adclan Media",
     description:
       "Connect with Adclan Media to discuss your next creative marketing project.",
-    url: "https://ad-clan.vercel.app/contact",
+    url: "https://adclan.in/contact",
     images: [
       {
         url: "/adclan-logo-1.png",

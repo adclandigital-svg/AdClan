@@ -10,7 +10,7 @@ export const metadata = {
   openGraph: {
     title: "Privacy Policy | Adclan Digital",
     description: "Privacy Policy of Adclan Digital – Digital Marketing Agency.",
-    url: "https://ad-clan.vercel.app/privacy-policy",
+    url: "https://adclan.in/privacy-policy",
     images: [
       {
         url: "/adclan-logo-1.png",

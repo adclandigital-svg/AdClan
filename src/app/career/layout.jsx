@@ -4,13 +4,13 @@ export const metadata = {
     "Join Adclan Media and build creative marketing experiences with our team. Explore career opportunities and grow with us.",
   keywords:
     "careers, jobs, marketing agency jobs, creative agency careers, adclan",
-  metadataBase: new URL("https://ad-clan.vercel.app"),
+  metadataBase: new URL("https://adclan.in"),
 
   openGraph: {
     title: "Careers | Adclan Media",
     description:
       "Explore career opportunities at Adclan Media and grow with a creative marketing team.",
-    url: "https://ad-clan.vercel.app/career",
+    url: "https://adclan.in/career",
     images: [
       {
         url: "/adclan-logo-1.png",

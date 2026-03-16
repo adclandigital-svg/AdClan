@@ -15,12 +15,12 @@ export const metadata = {
   keywords:
     "marketing agency, branding, digital marketing, creative agency, adclan",
   authors: [{ name: "Adclan Media" }],
-  metadataBase: new URL("https://ad-clan.vercel.app"),
+  metadataBase: new URL("https://adclan.in"),
   openGraph: {
     title: "Adclan Media | Creative Marketing Agency",
     description:
       "Creative branding and marketing solutions for modern businesses.",
-    url: "https://ad-clan.vercel.app",
+    url: "https://adclan.in",
     images: [
       {
         url: "/adclan-logo-1.png",

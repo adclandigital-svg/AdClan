@@ -5,12 +5,12 @@ export const metadata = {
   keywords:
     "about adclan, marketing agency delhi, branding agency, creative team",
   authors: [{ name: "Adclan Media" }],
-  metadataBase: new URL("https://ad-clan.vercel.app"),
+  metadataBase: new URL("https://adclan.in"),
   openGraph: {
     title: "About Us | Adclan Media",
     description:
       "Meet the team behind Adclan Media and discover our creative journey.",
-    url: "https://ad-clan.vercel.app/about",
+    url: "https://adclan.in/about",
     images: [
       {
         url: "/adclan-logo-1.png",

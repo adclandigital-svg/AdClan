@@ -5,7 +5,7 @@ export const metadata = {
   keywords:
     "digital marketing services, branding agency, creative services, adclan digital",
   authors: [{ name: "Adclan Digital" }],
-  metadataBase: new URL("https://ad-clan.vercel.app"),
+  metadataBase: new URL("https://adclan.in"),
 };
 
 export default function ServicesLayout({ children }) {

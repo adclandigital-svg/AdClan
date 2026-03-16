@@ -13,7 +13,7 @@ export const metadata = {
     title: "Terms and Conditions | Adclan Digital",
     description:
       "Read the Terms and Conditions of Adclan Digital.",
-    url: "https://ad-clan.vercel.app/terms-and-conditions",
+    url: "https://adclan.in/terms-and-conditions",
     images: [
       {
         url: "/adclan-logo-1.png",
