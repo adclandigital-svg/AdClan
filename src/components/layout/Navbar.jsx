@@ -14,9 +14,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const nav = [
-    { name: "Who we were?", href: "/about" },
+    { name: "Who we are?", href: "/about" },
     { name: "What we do?", href: "/services" },
-    { name: "Work study?", href: "/projects" },
+    { name: "Work study", href: "/projects" },
   ];
 
   const socials = [
@@ -31,10 +31,6 @@ export default function Navbar() {
     {
       icon: <FaLinkedin />,
       link: "https://in.linkedin.com/company/adclan",
-    },
-    {
-      icon: <FaXTwitter />,
-      link: "https://twitter.com/adclanmedia",
     },
   ];
 

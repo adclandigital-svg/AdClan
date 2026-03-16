@@ -130,13 +130,13 @@ export default function Footer() {
             >
               <FaLinkedin />
             </span>
-            <span
+            {/* <span
               onClick={() =>
                 window.open("https://twitter.com/adclanmedia", "_blank")
               }
             >
               <FaXTwitter />
-            </span>
+            </span> */}
           </div>
         </div>
       </footer>

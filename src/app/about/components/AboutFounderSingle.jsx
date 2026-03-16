@@ -6,7 +6,7 @@ export default function AboutFounderSingle() {
     role: "Co-Founder & CEO",
     img: "/about/ceo2.png",
     description:
-      "Visionary leader with expertise in brand strategy and digital innovation. With over 15 years of experience, John has helped brands find clarity, build strong identities, and scale with purpose. He believes creativity must be rooted in strategy, and leadership begins with listening, learning, and evolving constantly.",
+      "Visionary leader with expertise in brand strategy and digital innovation. With over 15 years of experience, Sandeep Dubey has helped brands find clarity, build strong identities, and scale with purpose. He believes creativity must be rooted in strategy, and leadership begins with listening, learning, and evolving constantly.",
   };
 
   return (

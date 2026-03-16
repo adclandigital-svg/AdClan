@@ -201,7 +201,7 @@ export default function HomeSeven() {
                 <p>Campaigns Executed</p>
               </div>
               <div className="hex-card green">
-                <strong>25+</strong>
+                <strong>100+</strong>
                 <p>Brands Managed</p>
               </div>
               <div className="hex-card blue">
