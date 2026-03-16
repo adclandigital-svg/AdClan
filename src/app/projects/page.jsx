@@ -304,7 +304,7 @@ export default function ProjectsPage() {
 
         {/* TABS */}
         <div className="projects-tabs">
-          {TABS.map((tab) => (
+          {TABS?.map((tab) => (
             <button
               key={tab}
               className={`tab-btn ${activeTab === tab ? "active" : ""}`}
@@ -348,7 +348,7 @@ export default function ProjectsPage() {
         {/* Loader */}
         <div ref={loaderRef} style={{ height: "50px" }}></div>
       </main>
-      {activeAudio && (
+      {activeAudio ? (
         <div className="audio-modal" onClick={() => setActiveAudio(null)}>
           <div
             className="audio-modal-content"
@@ -368,6 +368,8 @@ export default function ProjectsPage() {
             </audio>
           </div>
         </div>
+      ) : (
+        ""
       )}
     </>
   );

@@ -519,7 +519,6 @@ export const PROJECTS = [
           },
         ],
       },
-
       {
         type: "slider",
         items: [
