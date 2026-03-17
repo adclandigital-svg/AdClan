@@ -42,13 +42,13 @@ export default function Footer() {
             <h3 className="footer-title">Quick Links</h3>
             <ul className="footer-links">
               <li>
-                <Link href="/about">Who we were?</Link>
+                <Link href="/about">Who we are?</Link>
               </li>
               <li>
                 <Link href="/services">What we do?</Link>
               </li>
               <li>
-                <Link href="/projects">Work study?</Link>
+                <Link href="/projects">Work study</Link>
               </li>
               <li>
                 <Link href="/blogs">Read our stories</Link>
