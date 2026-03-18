@@ -97,3 +97,8 @@ font-size:16px;
 }
 
 }
+
+.blog-container h2,
+.blog-container h3 {
+  scroll-margin-top: 120px; /* adjust based on navbar height */
+}

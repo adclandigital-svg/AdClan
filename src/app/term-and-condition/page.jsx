@@ -27,7 +27,7 @@ export default function TermsPage() {
     <div className="terms-page">
       <div className="terms-container">
         <h1>Terms and Conditions</h1>
-        <p className="updated">Last updated: September 11, 2024</p>
+        <p className="updated">Last updated: January, 2026</p>
 
         <p>Please read these terms and conditions carefully before using Our Service.</p>
 

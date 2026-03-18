@@ -1,5 +1,3 @@
-import { Source } from "three";
-
 export const PROJECTS = [
   // Existing projects
   {
@@ -10,7 +8,7 @@ export const PROJECTS = [
     client: "Right Gold",
     src: "/projects/right-gold/rifght.png",
     intro:
-      "For Right Gold, we executed a high-impact ad shoot and performance-driven campaign strategy designed to position the brand as a premium jewelry destination. From cinematic product visuals to multi-platform ad rollouts, every asset was built to attract, engage, and convert.",
+      "Adclan didn't just create an ad for Right Gold we built a sales engine. From concept to execution, artist management to production, everything was handled end-to-end to deliver one thing: results.",
 
     sections: [
       {

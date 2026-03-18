@@ -56,6 +56,16 @@ const blogs = [
     img: "/blog/Artboard 5.png",
     link: "/blogs/5-radio-ads-strategies-for-buisness-growth",
   },
+   {
+    id: 6,
+    title: "Vikram Mills Case Study",
+    category: "Case Study",
+    date: "18 March 2024",
+    readTime: "4 min read",
+    img: "/blog/vikram-mills.png",
+    link: "/blogs/vikram-mills-case-study",
+  },
+  
 ];
 
 export default function BlogsPage() {
