@@ -5,7 +5,25 @@ import "./blog.css";
 
 const blogs = [
   {
-    id: 1,
+    id: 7,
+    title: "Galaxy Sawasdee Heights Case Study",
+    category: "Case Study",
+    date: "23 March 2024",
+    readTime: "4 min read",
+    img: "/blog/galaxy-case-study.png",
+    link: "/blogs/galaxy-sawasdee-heights-case-study",
+  },
+  {
+    id: 6,
+    title: "Vikram Mills Case Study",
+    category: "Case Study",
+    date: "18 March 2024",
+    readTime: "4 min read",
+    img: "/blog/vikram-mills.png",
+    link: "/blogs/vikram-mills-case-study",
+  },
+  {
+    id: 5,
     title:
       "Digital Marketing Agency in Delhi NCR: Your Growth Catalyst in a Hyperconnected World",
     category: "Marketing",
@@ -18,7 +36,7 @@ const blogs = [
   },
 
   {
-    id: 2,
+    id: 4,
     title:
       "Adclan Media – The Marketing Agency You Were Looking For in Delhi NCR",
     category: "Agency",
@@ -39,7 +57,7 @@ const blogs = [
   },
 
   {
-    id: 4,
+    id: 2,
     title: "Adclan Media’s Triumph with Ace Hanei: Masterclass in Campaign",
     category: "Case Study",
     date: "October 2024",
@@ -48,7 +66,7 @@ const blogs = [
     link: "/blogs/adclan-media-triumph-ace-hanei",
   },
   {
-    id: 5,
+    id: 1,
     title: "5 Radio Ads Strategies for Business Growth",
     category: "Case Study",
     date: "September 2024",
@@ -56,16 +74,6 @@ const blogs = [
     img: "/blog/Artboard 5.png",
     link: "/blogs/5-radio-ads-strategies-for-buisness-growth",
   },
-   {
-    id: 6,
-    title: "Vikram Mills Case Study",
-    category: "Case Study",
-    date: "18 March 2024",
-    readTime: "4 min read",
-    img: "/blog/vikram-mills.png",
-    link: "/blogs/vikram-mills-case-study",
-  },
-  
 ];
 
 export default function BlogsPage() {
