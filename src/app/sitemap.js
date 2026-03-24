@@ -55,14 +55,47 @@ const staticPages = [
     changeFrequency: 'yearly',
     priority: 0.5,
   },
-];
 
-// Dynamic blog pages
-const dynamicBlogPages = blogs?.map((blog) => ({
-  url: `/blogs/${blog.slug}`,
-  changeFrequency: 'monthly',
-  priority: 0.8,
-}));
+
+
+  {
+    url: '/blogs/5-radio-ads-strategies-for-buisness-growth',
+    changeFrequency: 'yearly',
+    priority: 0.5,
+  },
+  {
+    url: '/blogs/adclan-media-marketing-agency-delhi',
+    changeFrequency: 'yearly',
+    priority: 0.5,
+  },
+  {
+    url: '/blogs/adclan-media-organizes-galaxy-group-interview',
+    changeFrequency: 'yearly',
+    priority: 0.5,
+  },
+  {
+    url: '/blogs/adclan-media-triumph-ace-hanei',
+    changeFrequency: 'yearly',
+    priority: 0.5,
+  },
+  {
+    url: '/blogs/Digital-Marketing-Agencyin-Delhi-NCR',
+    changeFrequency: 'yearly',
+    priority: 0.5,
+  },
+  {
+    url: '/blogs/galaxy-sawasdee-heights-case-study',
+    changeFrequency: 'yearly',
+    priority: 0.5,
+  },
+  {
+    url: '/blogs/vikram-mills-case-study',
+    changeFrequency: 'yearly',
+    priority: 0.5,
+  },
+
+  
+];
 
 // Dynamic project pages
 const dynamicProjectPages = PROJECTS?.map((project) => ({
@@ -72,7 +105,7 @@ const dynamicProjectPages = PROJECTS?.map((project) => ({
 }));
 
 // Combine all pages
-const allPages = [...staticPages, ...dynamicBlogPages, ...dynamicProjectPages];
+const allPages = [...staticPages, ...dynamicProjectPages];
 
 export default function sitemap() {
   return allPages?.map((page) => ({
