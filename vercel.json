@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "adclan.in" }
+      ],
+      "destination": "https://www.adclan.in/$1",
+      "permanent": true
+    }
+  ]
+}

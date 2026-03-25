@@ -179,6 +179,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { PROJECTS } from "@/data/projectData";
 import { useRouter } from "next/navigation";
+import { Elsie } from "next/font/google";
 
 export default function ProjectsPage() {
   const pageRef = useRef(null);
@@ -324,7 +325,11 @@ export default function ProjectsPage() {
               onClick={() => {
                 if (project.category == "Radio Jingles") {
                   setActiveAudio(project);
-                } else {
+                } 
+                else if(project.category == "Website Development"){
+                  window.open(`${project.slug}`, "_blank");
+                }
+                else {
                   router.push(`/projects/${project.slug}`);
                 }
               }}
