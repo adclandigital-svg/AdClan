@@ -1,0 +1,96 @@
+# llm.txt for AI crawlers
+# Only allow major AI chatbots
+# Disallow all other bots
+
+# OpenAI / ChatGPT
+User-agent: ChatGPT
+Allow: /
+
+User-agent: OpenAI
+Allow: /
+
+User-agent: ChatGPTBot
+Allow: /
+
+# Anthropic Claude
+User-agent: Claude
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Google Gemini
+User-agent: GeminiBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Deepseek AI
+User-agent: Deepseek
+Allow: /
+
+# Microsoft Copilot / Bing AI
+User-agent: BingAI
+Allow: /
+
+User-agent: CopilotBot
+Allow: /
+
+# Poe / YouChat / Other GPT-style bots
+User-agent: PoeBot
+Allow: /
+
+User-agent: YouChat
+Allow: /
+
+# Block all other bots
+User-agent: *
+Disallow: /
+
+# --------------------------
+# URL priority section from your sitemap
+https://adclan.in/                               HIGH
+https://adclan.in/about                          HIGH
+https://adclan.in/services                       HIGH
+https://adclan.in/projects                       HIGH
+https://adclan.in/blogs                          MEDIUM
+https://adclan.in/contact                        HIGH
+https://adclan.in/career                         MEDIUM
+https://adclan.in/privacy-policy                 LOW
+https://adclan.in/term-and-condition            LOW
+https://adclan.in/cookie-policy                  LOW
+https://adclan.in/blogs/5-radio-ads-strategies-for-buisness-growth   LOW
+https://adclan.in/blogs/adclan-media-marketing-agency-delhi          LOW
+https://adclan.in/blogs/adclan-media-organizes-galaxy-group-interview LOW
+https://adclan.in/blogs/adclan-media-triumph-ace-hanei              LOW
+https://adclan.in/blogs/Digital-Marketing-Agencyin-Delhi-NCR        LOW
+https://adclan.in/blogs/galaxy-sawasdee-heights-case-study          LOW
+https://adclan.in/blogs/vikram-mills-case-study                     LOW
+https://adclan.in/projects/right-gold                               MEDIUM
+https://adclan.in/projects/kb-west-walk                              MEDIUM
+https://adclan.in/projects/spring-elmas-campaign-1                  MEDIUM
+https://adclan.in/projects/vikram-mills-1                           MEDIUM
+https://adclan.in/projects/huma-qureshi                              MEDIUM
+https://adclan.in/projects/milliand-gaba                              MEDIUM
+https://adclan.in/projects/jassie-gill                                MEDIUM
+https://adclan.in/projects/bassi                                      MEDIUM
+https://adclan.in/projects/adah-sharma                                 MEDIUM
+https://adclan.in/projects/zipperminds                                 MEDIUM
+https://adclan.in/projects/ggit                                       MEDIUM
+https://adclan.in/projects/smile-train                                 MEDIUM
+https://adclan.in/projects/india-result                                MEDIUM
+https://adclan.in/projects/vikram-mills-2                              MEDIUM
+https://adclan.in/projects/tirupati                                     MEDIUM
+https://adclan.in/projects/agropure                                     MEDIUM
+https://adclan.in/projects/india-gate                                   MEDIUM
+https://adclan.in/projects/kayna                                       MEDIUM
+https://adclan.in/projects/rj-tripti                                    MEDIUM
+https://adclan.in/projects/rj-rahul-makin                               MEDIUM
+https://adclan.in/projects/rj-naved                                     MEDIUM
+https://adclan.in/projects/rj-lucky                                     MEDIUM
+https://adclan.in/projects/teaser-spot-ace                              MEDIUM
+https://adclan.in/projects/ramjisons                                     MEDIUM
+https://adclan.in/projects/smile-train-india-radio                      MEDIUM
+https://adclan.in/projects/clear-dekho                                   MEDIUM

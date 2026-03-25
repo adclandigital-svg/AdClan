@@ -33,11 +33,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="llm" href="/llm.txt" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
       </head>
       <body suppressHydrationWarning className={raleway.className}>
-        <RootLayoutClient>
-          {children}
-        </RootLayoutClient>
+        <RootLayoutClient>{children}</RootLayoutClient>
       </body>
     </html>
   );

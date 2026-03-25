@@ -7,16 +7,12 @@ const HomeSecond = dynamic(() => import("@/components/home/HomeSecond"), { ssr: 
 const HomeThird = dynamic(() => import("@/components/home/HomeThird"), { ssr: false });
 const HomeFourth = dynamic(() => import("@/components/home/HomeFourth"), { ssr: false });
 const HomeSeven = dynamic(() => import("@/components/home/HomeSeven"), { ssr: false });
-
-
-import HomeBlogSection from "@/components/home/HomeBlogSection";
+const HomeBlogSection = dynamic(() => import("@/components/home/HomeBlogSection"), { ssr: false });
 
 export default function Home() {
 
   return (
     <>
-
-
       <Suspense fallback={<div>Loading...</div>}>
         <div className="Home-page">
           <Hero />

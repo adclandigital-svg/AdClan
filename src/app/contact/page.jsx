@@ -322,10 +322,14 @@ export default function ContactPage() {
       {/* MAP */}
       <section className="contact-map">
         <iframe
-          src="https://www.google.com/maps?q=Pushpa%20Bhawan%20Alaknanda%20New%20Delhi&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.964105688411!2d77.2516698!3d28.5251386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce38dfcb0b2c9%3A0xd29f6ff4fd43fcf9!2sAdclan%20Media%20Services%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-        />
+        ></iframe>
       </section>
     </main>
   );

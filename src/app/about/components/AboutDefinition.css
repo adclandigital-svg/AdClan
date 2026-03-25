@@ -43,8 +43,8 @@
 }
 
 .definition-text p {
-  font-size: 14px;
-  line-height: 2;
+  font-size: 16px;
+  line-height: 1.8;
   color: hsla(0, 0%, 20%, 0.76);
 }
 

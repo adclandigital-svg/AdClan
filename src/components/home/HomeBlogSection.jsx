@@ -131,7 +131,7 @@ export default function HomeBlogSection() {
           {blogs.slice(1,5).map((blog) => (
             <motion.div key={blog.id} variants={item}>
               <Link href={blog.link} className="blog-card">
-                <img src={blog.img} alt="" />
+                <img src={blog.img} alt={blog.id} loading="lazy"/>
 
                 <div className="card-content">
                   <span>{blog.category}</span>

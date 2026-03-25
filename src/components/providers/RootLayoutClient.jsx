@@ -25,9 +25,9 @@ export default function RootLayoutClient({ children }) {
   }, []);
   return (
     <>
+      {showLoader ? <LoadingScreen /> : ""}
       <GsapErrorHandler />
       <LenisProvider>
-        {showLoader ? <LoadingScreen /> : ""}
         <LeadChatbot />
         <Navbar />
         {children}
