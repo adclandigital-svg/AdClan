@@ -991,70 +991,70 @@ export const PROJECTS = [
       "Memorable radio jingles for Clear Dekho, crafting short, catchy audio ads that effectively communicate the brand's value proposition to a mass audience.",
     sections: [],
   },
-  // {
-  //   slug: "https://aggarwalnamkeen.com/",
-  //   title: "Aaggarwal Namkeen Website",
-  //   category: "Website Development",
-  //   year: "2025",
-  //   client: "Aaggarwal Namkeen",
-  //   src: "/projects/website/aggarwal.jpg",
-  //   intro:
-  //     "Designed and developed a modern, user-friendly website for Aaggarwal Namkeen, showcasing their wide range of traditional snacks with an engaging interface and seamless user experience.",
-  //   sections: [],
-  // },
-  // {
-  //   slug: "https://springelmas.com/",
-  //   title: "Spring Elmas Website",
-  //   category: "Website Development",
-  //   year: "2024",
-  //   client: "Spring Elmas",
-  //   src: "/projects/website/springelmas.png",
-  //   intro:
-  //     "Built a visually appealing and responsive website for Spring Elmas, focusing on clean design, intuitive navigation, and strong brand representation to attract potential customers.",
-  //   sections: [],
-  // },
-  // {
-  //   slug: "https://elmas-group.vercel.app/",
-  //   title: "Elmas Group Website",
-  //   category: "Website Development",
-  //   year: "2026",
-  //   client: "Elmas Group",
-  //   src: "/projects/website/elmas-group.png",
-  //   intro:
-  //     "Developed a corporate website for Elmas Group that highlights their portfolio, services, and brand identity with a professional layout and smooth user experience.",
-  //   sections: [],
-  // },
-  // {
-  //   slug: "https://adore-real.vercel.app/",
-  //   title: "Adore Realtech Website",
-  //   category: "Website Development",
-  //   year: "2026",
-  //   client: "Adore Realtech",
-  //  src: "/projects/website/adore.png",
-  //   intro:
-  //     "Created a dynamic real estate website for Adore Realtech, featuring project listings, modern UI, and optimized performance to enhance user engagement and lead generation.",
-  //   sections: [],
-  // },
-  // {
-  //   slug: "https://ads.vikrammills.com/",
-  //   title: "Vikram Mills Landing Page",
-  //   category: "Website Development",
-  //   year: "2025",
-  //   client: "Vikram Mills",
-  //   src: "/projects/website/vikram-mills.png",
-  //   intro:
-  //     "Designed a high-converting landing page for Vikram Mills, focusing on clear messaging, strong visuals, and optimized call-to-actions to drive user engagement and conversions.",
-  //   sections: [],
-  // },
-  // {
-  //   slug: "https://kiloifoods.com/",
-  //   title: "Kiloi Website",
-  //   category: "Website Development",
-  //   year: "2025",
-  //   client: "Kiloi",
-  //   src: "/projects/website/kiloi.jpg",
-  //   intro:
-  //     "Developed a clean and responsive website for Kiloi, ensuring smooth navigation, fast performance, and a strong digital presence aligned with the brand’s identity.",
-  //   sections: [],
-  // }
+  {
+    slug: "https://aggarwalnamkeen.com/",
+    title: "Aaggarwal Namkeen Website",
+    category: "Website Development",
+    year: "2025",
+    client: "Aaggarwal Namkeen",
+    src: "/projects/website/aggar.png",
+    intro:
+      "Designed and developed a modern, user-friendly website for Aaggarwal Namkeen, showcasing their wide range of traditional snacks with an engaging interface and seamless user experience.",
+    sections: [],
+  },
+  {
+    slug: "https://springelmas.com/",
+    title: "Spring Elmas Website",
+    category: "Website Development",
+    year: "2024",
+    client: "Spring Elmas",
+    src: "/projects/website/springelmas.png",
+    intro:
+      "Built a visually appealing and responsive website for Spring Elmas, focusing on clean design, intuitive navigation, and strong brand representation to attract potential customers.",
+    sections: [],
+  },
+  {
+    slug: "https://elmas-group.vercel.app/",
+    title: "Elmas Group Website",
+    category: "Website Development",
+    year: "2026",
+    client: "Elmas Group",
+    src: "/projects/website/elmas-group.png",
+    intro:
+      "Developed a corporate website for Elmas Group that highlights their portfolio, services, and brand identity with a professional layout and smooth user experience.",
+    sections: [],
+  },
+  {
+    slug: "https://adore-real.vercel.app/",
+    title: "Adore Realtech Website",
+    category: "Website Development",
+    year: "2026",
+    client: "Adore Realtech",
+   src: "/projects/website/adore.png",
+    intro:
+      "Created a dynamic real estate website for Adore Realtech, featuring project listings, modern UI, and optimized performance to enhance user engagement and lead generation.",
+    sections: [],
+  },
+  {
+    slug: "https://ads.vikrammills.com/",
+    title: "Vikram Mills Landing Page",
+    category: "Website Development",
+    year: "2025",
+    client: "Vikram Mills",
+    src: "/projects/website/vikram-mills.png",
+    intro:
+      "Designed a high-converting landing page for Vikram Mills, focusing on clear messaging, strong visuals, and optimized call-to-actions to drive user engagement and conversions.",
+    sections: [],
+  },
+  {
+    slug: "https://kiloifoods.com/",
+    title: "Kiloi Website",
+    category: "Website Development",
+    year: "2025",
+    client: "Kiloi",
+    src: "/projects/website/kiloi.jpg",
+    intro:
+      "Developed a clean and responsive website for Kiloi, ensuring smooth navigation, fast performance, and a strong digital presence aligned with the brand’s identity.",
+    sections: [],
+  }
 ];

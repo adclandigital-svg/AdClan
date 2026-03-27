@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://adclan.com/sitemap.xml
+Sitemap: https://www.adclan.in/sitemap.xml
