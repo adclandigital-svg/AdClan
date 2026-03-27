@@ -5,6 +5,15 @@ import "./blog.css";
 
 const blogs = [
   {
+    id: 8,
+    title: "Right Gold – Turning Trust into Sales Through Strategic Video Marketing",
+    category: "Case Study",
+    date: "27 March 2024",
+    readTime: "5 min read",
+    img: "/blog/Right Gold.png",
+    link: "/blogs/right-gold-case-study",
+  },
+  {
     id: 7,
     title: "Galaxy Sawasdee Heights Case Study",
     category: "Case Study",

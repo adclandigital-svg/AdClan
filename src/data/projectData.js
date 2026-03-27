@@ -7,6 +7,7 @@ export const PROJECTS = [
     year: "2026",
     client: "Right Gold",
     src: "/projects/right-gold/rifght.png",
+    updatedAt: "2026-01-15",
     intro:
       "Adclan didn't just create an ad for Right Gold we built a sales engine. From concept to execution, artist management to production, everything was handled end-to-end to deliver one thing: results.",
 
@@ -136,6 +137,7 @@ export const PROJECTS = [
     year: "2026",
     client: "KB West Walk",
     src: "/projects/kb/Creative 3.png",
+    updatedAt: "2026-01-15",
     intro:
       "For KB West Walk, we executed a high-impact Instagram content strategy focused on reels, creative posts, and campaign-driven storytelling. The objective was to increase footfall, boost brand recall, and position the mall as a vibrant lifestyle destination for the new-age audience.",
 
@@ -210,6 +212,7 @@ export const PROJECTS = [
     year: "2024",
     client: "Elmas Group",
     src: "/projects/elmasGroup/poster 19 (2).png",
+    updatedAt: "2026-01-15",
     intro:
       "SPRING ELMAS marked a flagship launch by Elmas Group, executed as a complete 360° branding and marketing campaign. From outdoor dominance to magazine spreads, high-impact video production, and digital amplification, the campaign was engineered to establish strong market visibility and premium brand positioning.",
 
@@ -379,6 +382,7 @@ export const PROJECTS = [
     year: "2024",
     client: "VIKRAM MILLS",
     src: "/projects/vikram-mills/vikram mills.png",
+    updatedAt: "2026-01-15",
     intro:
       "VIKRAM MILLS underwent a comprehensive brand transformation to strengthen its presence in the competitive rice and agro-products market. The project focused on modernizing the brand identity, premiumizing packaging design, and enhancing market visibility across retail, wholesale, and distributor networks.",
 
@@ -572,6 +576,7 @@ export const PROJECTS = [
     year: "2024",
     client: "HUMA QURESHI",
     src: "/projects/project-thumbnail/HUMA QURESHI.png",
+    updatedAt: "2026-01-20",
     intro:
       "Comprehensive celebrity management for Huma Qureshi, including brand endorsements, event appearances, and strategic media outreach to amplify her public presence.",
     sections: [
@@ -638,6 +643,7 @@ export const PROJECTS = [
     year: "2024",
     client: "MILLIAND GABA",
     src: "/projects/project-thumbnail/MILLIAND GABA.png",
+    updatedAt: "2026-01-20",
     intro:
       "End-to-end celebrity management for Milliand Gaba, covering contract negotiations, public relations, and digital content strategy to enhance brand collaborations.",
     sections: [
@@ -654,6 +660,7 @@ export const PROJECTS = [
     category: "Celebrity Management",
     year: "2024",
     client: "JASSIE GILL",
+    updatedAt: "2026-01-20",
     src: "/projects/project-thumbnail/JASSIE GILL.png",
     intro:
       "Strategic celebrity management for Jassie Gill, focusing on talent booking, promotional campaigns, and cross-platform visibility for maximum impact.",
@@ -669,6 +676,7 @@ export const PROJECTS = [
     slug: "bassi",
     title: "BASSI",
     category: "Celebrity Management",
+    updatedAt: "2026-01-20",
     year: "2024",
     client: "BASSI",
     src: "/projects/project-thumbnail/BASSI.png",
@@ -686,6 +694,7 @@ export const PROJECTS = [
     slug: "adah-sharma",
     title: "ADAH SHARMA",
     category: "Celebrity Management",
+    updatedAt: "2026-02-10",
     year: "2024",
     client: "ADAH SHARMA",
     src: "/projects/project-thumbnail/ADAH SHARMA.png",
@@ -703,6 +712,7 @@ export const PROJECTS = [
     slug: "zipperminds",
     title: "Zipperminds",
     category: "Video Production",
+    updatedAt: "2026-02-10",
     year: "2024",
     client: "Zipperminds",
     src: "/projects/project-thumbnail/Zipperminds.png",
@@ -720,6 +730,7 @@ export const PROJECTS = [
     slug: "ggit",
     title: "GGIT",
     category: "Video Production",
+    updatedAt: "2026-02-10",
     year: "2024",
     client: "GGIT",
     src: "/projects/project-thumbnail/GGIT.png",
@@ -737,6 +748,7 @@ export const PROJECTS = [
     slug: "smile-train",
     title: "SMILE TRAIN",
     category: "Video Production",
+    updatedAt: "2026-02-10",
     year: "2024",
     client: "SMILE TRAIN",
     src: "/projects/project-thumbnail/SMILE TRAIN.png",
@@ -754,6 +766,7 @@ export const PROJECTS = [
     slug: "india-result",
     title: "INDIA RESULT",
     category: "Video Production",
+    updatedAt: "2026-02-10",
     year: "2024",
     client: "INDIA RESULT",
     src: "/projects/project-thumbnail/INDIA RESULT.png",
@@ -771,6 +784,7 @@ export const PROJECTS = [
     slug: "vikram-mills-2",
     title: "VIKRAM MILLS",
     category: "Video Production",
+    updatedAt: "2026-02-15",
     year: "2024",
     client: "VIKRAM MILLS",
     src: "/projects/project-thumbnail/VIKRAM MILLS.png",
@@ -799,6 +813,7 @@ export const PROJECTS = [
     slug: "tirupati",
     title: "TIRUPATI",
     category: "Digital & Creatives",
+    updatedAt: "2026-02-15",
     year: "2024",
     client: "TIRUPATI",
     src: "/projects/project-thumbnail/TIRUPATI.png",
@@ -816,6 +831,7 @@ export const PROJECTS = [
     slug: "agropure",
     title: "AGROPURE",
     category: "Digital & Creatives",
+    updatedAt: "2026-02-15",
     year: "2024",
     client: "AGROPURE",
     src: "/projects/project-thumbnail/AGROPURE.png",
@@ -835,6 +851,7 @@ export const PROJECTS = [
     category: "Digital & Creatives",
     year: "2024",
     client: "INDIA GATE",
+    updatedAt: "2026-02-15",
     src: "/projects/project-thumbnail/INDIA GATE.png",
     intro:
       "Digital and creative campaign for India Gate, developing eye-catching visuals and ad creatives that reinforce the brand's position as a leading rice exporter.",
@@ -864,6 +881,7 @@ export const PROJECTS = [
     year: "2024",
     client: "KAYNA",
     src: "/projects/project-thumbnail/KAYNA.png",
+    updatedAt: "2026-03-17",
     intro:
       "Creative branding and digital design for Kayna, producing lifestyle imagery and promotional content that reflect the brand's modern and elegant aesthetic.",
     sections: [
@@ -881,6 +899,7 @@ export const PROJECTS = [
     year: "2024",
     client: "RJ TRIPTI",
     src: "/projects/project-thumbnail/RJ TRIPTI.png",
+    updatedAt: "2026-03-17",
     intro:
       "Influencer video campaign featuring RJ Tripti, creating engaging branded content and social media videos that resonate with her audience and boost brand affinity.",
     sections: [
@@ -898,6 +917,7 @@ export const PROJECTS = [
     year: "2024",
     client: "RJ RAHUL Makin",
     src: "/projects/project-thumbnail/RJ RAHUL Makin.png",
+    updatedAt: "2026-03-17",
     intro:
       "Influencer-led video production with RJ Rahul Makin, crafting authentic storytelling content that drives engagement and amplifies brand messages.",
     sections: [
@@ -915,6 +935,7 @@ export const PROJECTS = [
     year: "2024",
     client: "RJ NAVED",
     src: "/projects/project-thumbnail/RJ NAVED.png",
+    updatedAt: "2026-03-17",
     intro:
       "Collaborative influencer video with RJ Naved, producing high-energy content tailored for social media platforms to maximize reach and viewer interaction.",
     sections: [
@@ -932,6 +953,7 @@ export const PROJECTS = [
     year: "2024",
     client: "RJ LUCKY",
     src: "/projects/project-thumbnail/RJ LUCKY.png",
+    updatedAt: "2026-03-17",
     intro:
       "Influencer marketing video featuring RJ Lucky, designed to create viral moments and strengthen brand presence through relatable, entertaining content.",
     sections: [
@@ -950,6 +972,7 @@ export const PROJECTS = [
     client: "Teaser Spot-ACE",
     src: "/projects/project-thumbnail/Teaser Spot-ACE.png",
     Source: "/projects/radio/Teaser-Spot-ACE.mp3",
+    updatedAt: "2026-03-17",
     intro:
       "Catchy radio jingle production for Teaser Spot-ACE, composing memorable tunes and voiceovers that enhance brand recall during prime time slots.",
     sections: [],
@@ -962,6 +985,7 @@ export const PROJECTS = [
     year: "2024",
     client: "Ramjisons",
     src: "/projects/project-thumbnail/Ramjisons.png",
+    updatedAt: "2026-03-17",
     intro:
       "Creative radio jingles for Ramjisons, blending traditional melodies with modern production to create an auditory brand identity that resonates with listeners.",
     sections: [],
@@ -974,6 +998,7 @@ export const PROJECTS = [
     year: "2024",
     client: "Smile train India",
     src: "/projects/project-thumbnail/Smile train India.png",
+    updatedAt: "2026-03-17",
     intro:
       "Impactful radio jingle campaign for Smile Train India, using emotional storytelling and music to drive awareness and encourage donations for cleft care.",
     sections: [],
@@ -987,6 +1012,7 @@ export const PROJECTS = [
     client: "Clear Dekho",
     Source: "/projects/radio/83-Clear-dekho-40sec-promo.mp3",
     src: "/projects/project-thumbnail/Clear Dekho.png",
+    updatedAt: "2026-03-17",
     intro:
       "Memorable radio jingles for Clear Dekho, crafting short, catchy audio ads that effectively communicate the brand's value proposition to a mass audience.",
     sections: [],
@@ -995,6 +1021,7 @@ export const PROJECTS = [
     slug: "https://aggarwalnamkeen.com/",
     title: "Aaggarwal Namkeen Website",
     category: "Website Development",
+    updatedAt: "2026-03-26",
     year: "2025",
     client: "Aaggarwal Namkeen",
     src: "/projects/website/aggar.png",
@@ -1006,6 +1033,7 @@ export const PROJECTS = [
     slug: "https://springelmas.com/",
     title: "Spring Elmas Website",
     category: "Website Development",
+    updatedAt: "2026-03-26",
     year: "2024",
     client: "Spring Elmas",
     src: "/projects/website/springelmas.png",
@@ -1017,6 +1045,7 @@ export const PROJECTS = [
     slug: "https://elmas-group.vercel.app/",
     title: "Elmas Group Website",
     category: "Website Development",
+    updatedAt: "2026-03-26",
     year: "2026",
     client: "Elmas Group",
     src: "/projects/website/elmas-group.png",
@@ -1028,9 +1057,10 @@ export const PROJECTS = [
     slug: "https://adore-real.vercel.app/",
     title: "Adore Realtech Website",
     category: "Website Development",
+    updatedAt: "2026-03-26",
     year: "2026",
     client: "Adore Realtech",
-   src: "/projects/website/adore.png",
+    src: "/projects/website/adore.png",
     intro:
       "Created a dynamic real estate website for Adore Realtech, featuring project listings, modern UI, and optimized performance to enhance user engagement and lead generation.",
     sections: [],
@@ -1039,6 +1069,7 @@ export const PROJECTS = [
     slug: "https://ads.vikrammills.com/",
     title: "Vikram Mills Landing Page",
     category: "Website Development",
+    updatedAt: "2026-03-26",
     year: "2025",
     client: "Vikram Mills",
     src: "/projects/website/vikram-mills.png",
@@ -1050,11 +1081,12 @@ export const PROJECTS = [
     slug: "https://kiloifoods.com/",
     title: "Kiloi Website",
     category: "Website Development",
+    updatedAt: "2026-03-26",
     year: "2025",
     client: "Kiloi",
     src: "/projects/website/kiloi.jpg",
     intro:
       "Developed a clean and responsive website for Kiloi, ensuring smooth navigation, fast performance, and a strong digital presence aligned with the brand’s identity.",
     sections: [],
-  }
+  },
 ];
