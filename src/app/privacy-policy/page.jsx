@@ -24,7 +24,7 @@ export default function PrivacyPage() {
     <div className="privacy-page">
       <div className="privacy-container">
         <h1>Privacy Policy</h1>
-        <p className="updated">Last updated: January 01, 2024</p>
+        <p className="updated">Last updated: January 01, 2026</p>
 
         <p>
           This Privacy Policy describes Our policies and procedures on the

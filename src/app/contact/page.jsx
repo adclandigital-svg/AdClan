@@ -292,9 +292,9 @@ export default function ContactPage() {
             title: "Delhi Office",
             value: (
               <>
-                D-9, Second Floor, Pushpa Bhawan <br />
-                Alaknanda Commercial Complex <br />
-                New Delhi – 110019
+                D-7 & 8, Second Floor, Pushpa Bhavan,<br />
+                Commercial Complex, Alaknanda Market,  <br />
+                Alaknanda, New Delhi, Delhi 110019
               </>
             ),
           },

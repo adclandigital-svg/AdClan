@@ -93,8 +93,8 @@ export default function Footer() {
               </li>
               <li>
                 <FaMapMarkerAlt />
-                D-9, Second Floor, Pushpa Bhawan, Alaknanda Commercial Complex,
-                Alaknanda, New Delhi-110019
+                D-7 & 8, Second Floor, Pushpa Bhavan, Commercial Complex,
+                Alaknanda Market, Alaknanda, New Delhi, Delhi 110019
               </li>
             </ul>
           </div>
