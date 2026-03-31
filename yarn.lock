@@ -19,7 +19,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.26.0":
+"@babel/runtime@npm:^7.26.0":
   version: 7.28.4
   resolution: "@babel/runtime@npm:7.28.4"
   checksum: 10c0/792ce7af9750fb9b93879cc9d1db175701c4689da890e6ced242ea0207c9da411ccf16dc04e689cc01158b28d7898c40d75598f4559109f761c12ce01e959bf7
@@ -498,61 +498,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/fiber@npm:^9.4.2":
-  version: 9.5.0
-  resolution: "@react-three/fiber@npm:9.5.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.17.8"
-    "@types/webxr": "npm:*"
-    base64-js: "npm:^1.5.1"
-    buffer: "npm:^6.0.3"
-    its-fine: "npm:^2.0.0"
-    react-use-measure: "npm:^2.1.7"
-    scheduler: "npm:^0.27.0"
-    suspend-react: "npm:^0.1.3"
-    use-sync-external-store: "npm:^1.4.0"
-    zustand: "npm:^5.0.3"
-  peerDependencies:
-    expo: ">=43.0"
-    expo-asset: ">=8.4"
-    expo-file-system: ">=11.0"
-    expo-gl: ">=11.0"
-    react: ">=19 <19.3"
-    react-dom: ">=19 <19.3"
-    react-native: ">=0.78"
-    three: ">=0.156"
-  peerDependenciesMeta:
-    expo:
-      optional: true
-    expo-asset:
-      optional: true
-    expo-file-system:
-      optional: true
-    expo-gl:
-      optional: true
-    react-dom:
-      optional: true
-    react-native:
-      optional: true
-  checksum: 10c0/88daa671550a4383636e41ae9358747baa45ca9b02787f4dcf427a1778faf135c5e0f328fce0a1a152c653446cb3544004260c99807c0685ed0ebc60cf1c8a51
-  languageName: node
-  linkType: hard
-
-"@react-three/postprocessing@npm:^3.0.4":
-  version: 3.0.4
-  resolution: "@react-three/postprocessing@npm:3.0.4"
-  dependencies:
-    maath: "npm:^0.6.0"
-    n8ao: "npm:^1.9.4"
-    postprocessing: "npm:^6.36.6"
-  peerDependencies:
-    "@react-three/fiber": ^9.0.0
-    react: ^19.0
-    three: ">= 0.156.0"
-  checksum: 10c0/7a9f6af37da29af6844bd8ad781ceafa2c2cee29954ccf6c41633b2afd4cf7da41eb668a62b3a942a35e400ac8c7685800394a96eed95dde9ec582decfdade5b
-  languageName: node
-  linkType: hard
-
 "@swc/helpers@npm:0.5.15":
   version: 0.5.15
   resolution: "@swc/helpers@npm:0.5.15"
@@ -583,15 +528,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-reconciler@npm:^0.28.9":
-  version: 0.28.9
-  resolution: "@types/react-reconciler@npm:0.28.9"
-  peerDependencies:
-    "@types/react": "*"
-  checksum: 10c0/9fe71fa856aab2cd4742fe0416bdd4f5c82ecc05ef6451ee7fcb65a5efdf5fa588f5820fbe2a665b15371b0da3bfc4097f28bb6d450b9a834af2d0fc00f403bd
-  languageName: node
-  linkType: hard
-
 "@types/stats.js@npm:*":
   version: 0.17.4
   resolution: "@types/stats.js@npm:0.17.4"
@@ -614,7 +550,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/webxr@npm:*, @types/webxr@npm:>=0.5.17, @types/webxr@npm:^0.5.2":
+"@types/webxr@npm:>=0.5.17, @types/webxr@npm:^0.5.2":
   version: 0.5.24
   resolution: "@types/webxr@npm:0.5.24"
   checksum: 10c0/ff59ffd390d06ca3f89ab2531d583ac10bc5e2ab82e5a01ecc40fbc365224a3375e7caa5b14649cf6141db21fb024940da7ad2bd8faa3cd497a6665257cb53b5
@@ -653,8 +589,6 @@ __metadata:
     "@biomejs/biome": "npm:2.2.0"
     "@gsap/react": "npm:^2.1.2"
     "@react-three/drei": "npm:^10.7.7"
-    "@react-three/fiber": "npm:^9.4.2"
-    "@react-three/postprocessing": "npm:^3.0.4"
     babel-plugin-react-compiler: "npm:1.0.0"
     framer-motion: "npm:^12.35.1"
     gsap: "npm:^3.14.1"
@@ -666,7 +600,6 @@ __metadata:
     react-dom: "npm:19.2.1"
     react-icons: "npm:^5.5.0"
     swiper: "npm:^12.1.0"
-    three: "npm:^0.182.0"
   languageName: unknown
   linkType: soft
 
@@ -679,29 +612,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"base64-js@npm:^1.3.1, base64-js@npm:^1.5.1":
-  version: 1.5.1
-  resolution: "base64-js@npm:1.5.1"
-  checksum: 10c0/f23823513b63173a001030fae4f2dabe283b99a9d324ade3ad3d148e218134676f1ee8568c877cd79ec1c53158dcf2d2ba527a97c606618928ba99dd930102bf
-  languageName: node
-  linkType: hard
-
 "bidi-js@npm:^1.0.2":
   version: 1.0.3
   resolution: "bidi-js@npm:1.0.3"
   dependencies:
     require-from-string: "npm:^2.0.2"
   checksum: 10c0/fdddea4aa4120a34285486f2267526cd9298b6e8b773ad25e765d4f104b6d7437ab4ba542e6939e3ac834a7570bcf121ee2cf6d3ae7cd7082c4b5bedc8f271e1
-  languageName: node
-  linkType: hard
-
-"buffer@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "buffer@npm:6.0.3"
-  dependencies:
-    base64-js: "npm:^1.3.1"
-    ieee754: "npm:^1.2.1"
-  checksum: 10c0/2a905fbbcde73cc5d8bd18d1caa23715d5f83a5935867c2329f0ac06104204ba7947be098fe1317fbd8830e26090ff8e764f08cd14fefc977bb248c3487bcbd0
   languageName: node
   linkType: hard
 
@@ -831,13 +747,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ieee754@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "ieee754@npm:1.2.1"
-  checksum: 10c0/b0782ef5e0935b9f12883a2e2aa37baa75da6e66ce6515c168697b42160807d9330de9a32ec1ed73149aea02e0d822e572bca6f1e22bdcbd2149e13b050b17bb
-  languageName: node
-  linkType: hard
-
 "immediate@npm:~3.0.5":
   version: 3.0.6
   resolution: "immediate@npm:3.0.6"
@@ -856,17 +765,6 @@ __metadata:
   version: 2.0.0
   resolution: "isexe@npm:2.0.0"
   checksum: 10c0/228cfa503fadc2c31596ab06ed6aa82c9976eec2bfd83397e7eaf06d0ccf42cd1dfd6743bf9aeb01aebd4156d009994c5f76ea898d2832c1fe342da923ca457d
-  languageName: node
-  linkType: hard
-
-"its-fine@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "its-fine@npm:2.0.0"
-  dependencies:
-    "@types/react-reconciler": "npm:^0.28.9"
-  peerDependencies:
-    react: ^19.0.0
-  checksum: 10c0/1ff1ff3257c0c7eb115c9c26cf0506eb84162edc1a63d3136780d146f7c7833298b240d0fcb46888909773f1a7d16539e0c03f2482cff1a5a502d6436686fe21
   languageName: node
   linkType: hard
 
@@ -907,16 +805,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"maath@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "maath@npm:0.6.0"
-  peerDependencies:
-    "@types/three": ">=0.144.0"
-    three: ">=0.144.0"
-  checksum: 10c0/a9b716841d225338339fbe776c94e99f98136f24360e34c06698e2f1658bffc9b09321d2463e730810940de9801b73154de9afa6647595ae1d7b7662f4da6ef6
-  languageName: node
-  linkType: hard
-
 "meshline@npm:^3.3.1":
   version: 3.3.1
   resolution: "meshline@npm:3.3.1"
@@ -946,16 +834,6 @@ __metadata:
   version: 12.29.2
   resolution: "motion-utils@npm:12.29.2"
   checksum: 10c0/8058fbb3467602e8263a8a6df0e5d318d00d30d7148415d2ebc13c78a3c7a1b0cbec0808bb62e82c34714979ecbed15b9fffb91bde654dbf3602c84b7d66a5b6
-  languageName: node
-  linkType: hard
-
-"n8ao@npm:^1.9.4":
-  version: 1.10.1
-  resolution: "n8ao@npm:1.10.1"
-  peerDependencies:
-    postprocessing: ">=6.30.0"
-    three: ">=0.137"
-  checksum: 10c0/70aa6ad350e2dd241bc2a054eb084e4f82433b63ee5d456da037e13b657ffcfcdb86b17ea39c80f4c66ec7c5048508e0daf858f674ef1092bdd37dc6b01e1ff6
   languageName: node
   linkType: hard
 
@@ -1059,7 +937,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postprocessing@npm:^6.36.6, postprocessing@npm:^6.38.0":
+"postprocessing@npm:^6.38.0":
   version: 6.38.2
   resolution: "postprocessing@npm:6.38.2"
   peerDependencies:
@@ -1102,19 +980,6 @@ __metadata:
   peerDependencies:
     react: "*"
   checksum: 10c0/a24309bfc993c19cbcbfc928157e53a137851822779977b9588f6dd41ffc4d11ebc98b447f4039b0d309a858f0a42980f6bfb4477fb19f9f2d1bc2e190fcf79c
-  languageName: node
-  linkType: hard
-
-"react-use-measure@npm:^2.1.7":
-  version: 2.1.7
-  resolution: "react-use-measure@npm:2.1.7"
-  peerDependencies:
-    react: ">=16.13"
-    react-dom: ">=16.13"
-  peerDependenciesMeta:
-    react-dom:
-      optional: true
-  checksum: 10c0/ff24130e6f95e853feb6892fb74af08dbc5aae3574b701169e3bc3adb392c3162f51a58ddfe39bb7337db13ae609bbec0bb51a9de8b5fae5420f9d17e1f8b542
   languageName: node
   linkType: hard
 
@@ -1339,13 +1204,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:^0.182.0":
-  version: 0.182.0
-  resolution: "three@npm:0.182.0"
-  checksum: 10c0/8ddb3380dc881c75a91cb9fb29a3610b1d01de7feff4b7610fb305a24efc51c98d51b8bcef6ab74e82a1af1947bc81343a9eab1dc9ebe17b504eab19a321430b
-  languageName: node
-  linkType: hard
-
 "troika-three-text@npm:^0.52.4":
   version: 0.52.4
   resolution: "troika-three-text@npm:0.52.4"
@@ -1453,7 +1311,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zustand@npm:^5.0.1, zustand@npm:^5.0.3":
+"zustand@npm:^5.0.1":
   version: 5.0.9
   resolution: "zustand@npm:5.0.9"
   peerDependencies:
