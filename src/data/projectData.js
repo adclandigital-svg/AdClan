@@ -776,7 +776,7 @@ export const PROJECTS = [
       {
         type: "hero",
         mediaType: "video",
-        src: "https://adclan.in/wp-content/uploads/2024/09/India-Result.com_.mp4",
+        src: "/projects/india_result/India Result.com.mp4",
       },
     ],
   },

@@ -17,9 +17,36 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ProjectDetailPage() {
   const pageRef = useRef(null);
   const { slug } = useParams();
+  const overlayRef = useRef(null);
 
   const project = PROJECTS.find((p) => p.slug === slug);
   if (!project) return notFound();
+
+  const handleMouseMove = (e) => {
+    const el = overlayRef.current;
+    if (!el) return;
+
+    // 🚫 Skip if hovering overlay
+    if (el.matches(":hover")) return;
+
+    el.style.animation = "none";
+    el.offsetHeight;
+
+    el.style.animation = "invisiblityAnimation 0.8s ease forwards 5s";
+  };
+  const handleMouseEnter = () => {
+    const el = overlayRef.current;
+    if (!el) return;
+
+    el.style.animationPlayState = "paused";
+  };
+
+  const handleMouseLeave = () => {
+    const el = overlayRef.current;
+    if (!el) return;
+
+    el.style.animationPlayState = "running";
+  };
 
   useGSAP(
     () => {
@@ -86,7 +113,7 @@ export default function ProjectDetailPage() {
   return (
     <main className="project-detail-page" ref={pageRef}>
       {/* HERO SECTION with overlay */}
-      <section className="project-hero">
+      <section className="project-hero" onMouseMove={handleMouseMove}>
         {project.sections
           ?.filter((s) => s.type === "hero")
           ?.map((hero, i) =>
@@ -102,9 +129,14 @@ export default function ProjectDetailPage() {
           )}
 
         {/* Overlay text */}
-        <div className="hero-overlay">
+        <div
+          className="hero-overlay"
+          ref={overlayRef}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <p className="hero-text-breadcrums">
-            [ <span>Home</span> &gt; <span>Projects</span> &gt;{" "}
+            [ <span>Home</span> &gt; <span>Work Study</span> &gt;{" "}
             <span>{project.title}</span> ]
           </p>
           <h1 className="project-hero-title">
