@@ -60,7 +60,8 @@ export default function RootLayoutClient({ children }) {
 
   useEffect(() => {
     // ✅ Only run on homepage
-    if (pathname !== "/") {
+    if (pathname != "/") {
+      showLoader && setShowLoader(false);
       sessionStorage.setItem("hasLoaded", "true");
       return;
     }
