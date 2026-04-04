@@ -19,8 +19,6 @@
 // };
 
 // export default nextConfig;
-
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactCompiler: true,
@@ -47,20 +45,51 @@ const nextConfig = {
       // ✅ WordPress old tag URLs
       {
         source: "/tag/:slug*",
-        destination: "/blog",
+        destination: "/blogs",
+        permanent: true,
+      },
+      {
+        source: "/category/:slug*",
+        destination: "/blogs",
         permanent: true,
       },
 
-      // ✅ Optional category fix
+      // ✅ Author pages (bots hit these a lot)
       {
-        source: "/category/:slug*",
-        destination: "/blog",
+        source: "/author/:slug*",
+        destination: "/blogs",
+        permanent: true,
+      },
+
+      // ✅ Wrong blog URL fix (/blog → /blogs)
+      {
+        source: "/blog",
+        destination: "/blogs",
+        permanent: true,
+      },
+
+      // ✅ Specific bad URL
+      {
+        source: "/test",
+        destination: "/",
+        permanent: true,
+      },
+
+      // ✅ Block WordPress attacks
+      {
+        source: "/wp-admin/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-login.php",
+        destination: "/",
         permanent: true,
       },
     ];
-  },
+  }, // ✅ <-- THIS COMMA WAS MISSING
 
-  // ✅ HEADERS (your existing code)
+  // ✅ HEADERS (CACHE OPTIMIZATION)
   async headers() {
     return [
       {

@@ -49,6 +49,10 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import GsapErrorHandler from "@/components/GsapErrorHandler";
 import LoadingScreen from "@/components/home/loading/LoadingScreen";
+import dynamic from "next/dynamic";
+const GTM = dynamic(() => import("@/components/layout/GTM"), {
+  ssr: false, // ✅ only load on client
+});
 
 export default function RootLayoutClient({ children }) {
   const [showLoader, setShowLoader] = useState(false);
@@ -83,6 +87,7 @@ export default function RootLayoutClient({ children }) {
         {children}
         <Footer />
       </LenisProvider>
+      <GTM/>
     </>
   );
 }
