@@ -11,19 +11,12 @@ export default function InstallPWA() {
     const handler = (e) => {
       e.preventDefault();
       setDeferredPrompt(e);
+      setShow(true); // show button only when prompt is available
     };
 
     window.addEventListener("beforeinstallprompt", handler);
 
-    // For testing: show the button after 5s even if event didn't fire
-    const timer = setTimeout(() => {
-      setShow(true);
-    }, 5000);
-
-    return () => {
-      window.removeEventListener("beforeinstallprompt", handler);
-      clearTimeout(timer);
-    };
+    return () => window.removeEventListener("beforeinstallprompt", handler);
   }, []);
 
   const handleInstallClick = async () => {

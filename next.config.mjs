@@ -86,9 +86,10 @@
 
 // export default nextConfig;
 
+// next.config.js
 import withPWAInit from "next-pwa";
 
-/** ✅ PWA CONFIG ONLY (IMPORTANT) */
+/** ✅ PWA CONFIGURATION */
 const withPWA = withPWAInit({
   dest: "public",
   register: true,
@@ -96,28 +97,27 @@ const withPWA = withPWAInit({
   disable: process.env.NODE_ENV === "development",
 });
 
-/** ✅ YOUR NEXT CONFIG */
+/** ✅ NEXT CONFIG */
 const nextConfig = {
-  reactCompiler: true,
+  reactCompiler: true, // keep React compiler enabled
 
+  /** REDIRECTS */
   async redirects() {
     return [
       { source: "/careers", destination: "/contact", permanent: true },
       { source: "/service", destination: "/services", permanent: true },
       { source: "/work", destination: "/projects", permanent: true },
-
       { source: "/tag/:slug*", destination: "/blogs", permanent: true },
       { source: "/category/:slug*", destination: "/blogs", permanent: true },
       { source: "/author/:slug*", destination: "/blogs", permanent: true },
-
       { source: "/blog", destination: "/blogs", permanent: true },
       { source: "/test", destination: "/", permanent: true },
-
       { source: "/wp-admin/:path*", destination: "/", permanent: true },
       { source: "/wp-login.php", destination: "/", permanent: true },
     ];
   },
 
+  /** HEADERS */
   async headers() {
     return [
       {
@@ -131,7 +131,10 @@ const nextConfig = {
       },
     ];
   },
+
+  /** ⚡ Optional: silence Turbopack warning (empty config) */
+  turbopack: {},
 };
 
-/** ✅ FINAL EXPORT (IMPORTANT) */
+/** ✅ EXPORT WITH PWA */
 export default withPWA(nextConfig);
