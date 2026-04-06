@@ -267,7 +267,7 @@ export default function ContactPage() {
               placeholder="Phone number"
               min="0"
               required
-              class="no-spinner"
+              className="no-spinner"
             />
             <input type="text" placeholder="Company / Brand" required />
             <textarea placeholder="Tell us about your project" required />

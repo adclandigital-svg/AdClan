@@ -9,6 +9,7 @@ const raleway = Raleway({
 });
 
 export const metadata = {
+  manifest: "/manifest.json",
   title: "Adclan Media | Creative Marketing Agency",
   description:
     "Adclan Media is a creative marketing agency helping brands grow through branding and digital marketing.",
@@ -35,6 +36,8 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="llm" href="/llm.txt" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#000000" />
       </head>
       <body suppressHydrationWarning className={raleway.className}>
         <RootLayoutClient>{children}</RootLayoutClient>

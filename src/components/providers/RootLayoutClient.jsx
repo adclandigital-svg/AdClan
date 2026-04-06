@@ -53,6 +53,9 @@ import dynamic from "next/dynamic";
 const GTM = dynamic(() => import("@/components/layout/GTM"), {
   ssr: false, // ✅ only load on client
 });
+const InstallPWA = dynamic(() => import("@/components/layout/InstallPWA"), {
+  ssr: false, // ✅ only load on client
+});
 
 export default function RootLayoutClient({ children }) {
   const [showLoader, setShowLoader] = useState(false);
@@ -89,6 +92,7 @@ export default function RootLayoutClient({ children }) {
         <Footer />
       </LenisProvider>
       <GTM/>
+      <InstallPWA/>
     </>
   );
 }
