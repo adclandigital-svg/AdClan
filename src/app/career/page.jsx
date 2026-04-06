@@ -167,8 +167,16 @@ export default function CareerPage() {
             type="email"
             placeholder="Email Address"
             required
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
           />
-          <input name="phone" type="text" placeholder="Phone Number" required />
+          <input
+            name="phone"
+            type="tel"
+            placeholder="Phone Number"
+            required
+            pattern="^(?:\+91|91|0)?[6-9][0-9]{9}$"
+            inputmode="numeric"
+          />
           <textarea
             name="message"
             placeholder="Your Message"

@@ -183,34 +183,6 @@ export default function ContactPage() {
         duration: 1.2,
         ease: "power4.out",
       });
-
-      /* CARDS — FIXED */
-      // gsap.from(cardsRef.current.filter(Boolean), {
-      //   y: 60,
-      //   opacity: 0,
-      //   stagger: 0.18,
-      //   duration: 0.9,
-      //   ease: "power3.out",
-      //   scrollTrigger: {
-      //     trigger: ".contact-split",
-      //     start: "top 75%",
-      //     once: true,
-      //   },
-      // });
-
-      /* FORM */
-      // gsap.from(formRef.current.children, {
-      //   y: 30,
-      //   opacity: 0,
-      //   stagger: 0.1,
-      //   duration: 0.7,
-      //   ease: "power3.out",
-      //   scrollTrigger: {
-      //     trigger: formRef.current,
-      //     start: "top 75%",
-      //     once: true,
-      //   },
-      // });
     },
     { scope: pageRef },
   );
@@ -224,9 +196,30 @@ export default function ContactPage() {
     const payload = {
       name: form[0].value.trim(),
       email: form[1].value.trim(),
-      company: form[2].value.trim(),
-      message: form[3].value.trim(),
+      phone: form[2].value.trim(),
+      company: form[3].value.trim(),
+      message: form[4].value.trim(),
     };
+
+    // ✅ VALIDATION
+    if (!payload.name || payload.name.length < 2) {
+      return setStatus("Please enter a valid name.");
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(payload.email)) {
+      return setStatus("Please enter a valid email address.");
+    }
+
+    const phoneRegex = /^(?:\+91|91|0)?[6-9]\d{9}$/;
+
+    if (!phoneRegex.test(payload.phone)) {
+      return setStatus("Please enter a valid Indian phone number.");
+    }
+
+    if (payload.message.length < 10) {
+      return setStatus("Message must be at least 10 characters.");
+    }
 
     setLoading(true);
 
@@ -238,13 +231,19 @@ export default function ContactPage() {
       });
 
       const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Failed to submit");
+      }
+
       setStatus(data.message || "Thanks! We'll contact you soon.");
 
-      if (data.success) form.reset();
-    } catch {
-      setStatus("Something went wrong. Please try again.");
+      if (data.success) {
+        form.reset();
+      }
+    } catch (err) {
+      setStatus(err.message || "Something went wrong. Please try again.");
     }
-
     setLoading(false);
   };
 
@@ -263,6 +262,13 @@ export default function ContactPage() {
           <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
             <input type="text" placeholder="Your name" required />
             <input type="email" placeholder="Email address" required />
+            <input
+              type="number"
+              placeholder="Phone number"
+              min="0"
+              required
+              class="no-spinner"
+            />
             <input type="text" placeholder="Company / Brand" required />
             <textarea placeholder="Tell us about your project" required />
 
@@ -292,8 +298,9 @@ export default function ContactPage() {
             title: "Delhi Office",
             value: (
               <>
-                D-7 & 8, Second Floor, Pushpa Bhavan,<br />
-                Commercial Complex, Alaknanda Market,  <br />
+                D-7 & 8, Second Floor, Pushpa Bhavan,
+                <br />
+                Commercial Complex, Alaknanda Market, <br />
                 Alaknanda, New Delhi, Delhi 110019
               </>
             ),
