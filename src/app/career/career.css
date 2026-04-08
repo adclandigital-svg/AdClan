@@ -1,14 +1,4 @@
-/* Page Setup */
-/* .career-page {
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-  padding: 40px 16px;
-  gap: 50px;
-} */
+
 
 .career-page {
   position: relative;
@@ -17,21 +7,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("https://img.freepik.com/premium-vector/white-background-with-abstract-design_336924-6615.jpg?w=2000");
+  /* background: url("https://img.freepik.com/premium-vector/white-background-with-abstract-design_336924-6615.jpg?w=2000");
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   padding: 40px 16px;
   gap: 50px;
   overflow: hidden;
 }
 
-.career-page::before {
+/* .career-page::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0); /* adjust opacity here */
+  background: rgba(255, 255, 255, 0); 
   z-index: 0;
-}
+} */
 
 .career-page > * {
   position: relative;

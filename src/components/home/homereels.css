@@ -1,0 +1,244 @@
+.reels-wrapper {
+  width: 100%;
+  height: 700px;
+  padding: 60px 40px;
+
+  display: flex;
+  justify-content: center; /* ✅ LEFT ALIGN FIX */
+  align-items: center;
+
+  overflow: hidden;
+  gap: 50px;
+}
+
+/* Swiper container */
+.mySwiper {
+  width: 1050px; /* control layout width */
+  height: 100%;
+  overflow: hidden;
+  /* background-color: rgb(14, 90, 90); */
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Each slide */
+.reel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video base (side cards) */
+.reel-video {
+  width: 300px;
+  height: auto;
+  object-fit: cover; /* ✅ IMPORTANT FIX */
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  opacity: 0.5;
+}
+
+/* Center card */
+.swiper-slide-active .reel-video {
+  width: 350px;
+  height: auto;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Clean look */
+.swiper-slide {
+  background: transparent !important;
+}
+
+/* Perfect vertical alignment */
+.swiper-wrapper {
+  align-items: center;
+}
+.reels-heading-div {
+  min-width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  margin-bottom: 20px;
+  font-size: 50px;
+  height: 80%;
+  font-weight: 700;
+}
+
+/* Pagination bullets */
+.swiper-pagination {
+  bottom: 10px !important;
+  right: 10px !important;
+  text-align: right !important;
+  padding-right: 5%;
+}
+
+.swiper-pagination-bullet {
+  background: #000000 !important;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000 !important;
+  width: 50px !important;
+  border-radius: 5px !important;
+}
+
+/* =========================
+   DEFAULT (1500px and above)
+========================= */
+.mySwiper {
+  width: 1050px;
+}
+
+/* =========================
+   <= 1400px
+========================= */
+@media (max-width: 1400px) {
+  .reels-wrapper {
+    gap: 30px;
+  }
+  .mySwiper {
+    width: 900px;
+  }
+
+  .reel-video {
+    width: 250px;
+  }
+
+  .swiper-slide-active .reel-video {
+    width: 320px;
+  }
+
+  .reels-heading-div {
+    font-size: 44px;
+  }
+}
+
+/* =========================
+   <= 1200px
+========================= */
+
+/* =========================
+   <= 992px (tablet)
+========================= */
+@media (max-width: 1200px) {
+  .reels-wrapper {
+    flex-direction: column-reverse;
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .mySwiper {
+    width: 100%;
+    height: 450px;
+  }
+
+  .reel-video {
+    width: 180px;
+  }
+
+  .swiper-slide-active .reel-video {
+    width: 240px;
+  }
+
+  .reels-heading-div {
+    min-width: 100%;
+    font-size: 34px;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+  .swiper-pagination {
+    display: none;
+  }
+  .reels-heading-div {
+    font-size: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+
+/* =========================
+   <= 768px (small tablet)
+========================= */
+@media (max-width: 768px) {
+  .mySwiper {
+    height: 420px;
+  }
+
+  .reel-video {
+    width: 160px;
+  }
+
+  .swiper-slide-active .reel-video {
+    width: 210px;
+  }
+}
+
+/* =========================
+   <= 576px (mobile)
+========================= */
+/* =========================
+   📱 MOBILE FIX
+========================= */
+@media (max-width: 576px) {
+  .reels-wrapper {
+    flex-direction: column; /* ✅ stack */
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 0px 0px;
+    gap: 0px;
+  }
+
+  /* Heading on TOP */
+  .reels-heading-div {
+    order: -1; /* ✅ move to top */
+    width: 100%;
+    min-width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Make heading SINGLE LINE */
+  .reels-heading-div span {
+    display: inline;
+    margin: 0 5px;
+  }
+
+  /* Swiper full width */
+  .mySwiper {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Video sizing */
+  .reel-video {
+    width: 100%;
+  }
+
+  .swiper-slide-active .reel-video {
+    width: 350px;
+  }
+
+  /* Center align slides */
+  .reel-slide {
+    justify-content: center;
+  }
+}

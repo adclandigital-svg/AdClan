@@ -11,30 +11,30 @@ gsap.registerPlugin(ScrollTrigger);
 export default function AboutProcess() {
   const wrapRef = useRef(null);
 
-  useGSAP(
-    () => {
-      const slides = gsap.utils.toArray(
-        wrapRef.current.querySelectorAll(".slide-wrap")
-      );
+  // useGSAP(
+  //   () => {
+  //     const slides = gsap.utils.toArray(
+  //       wrapRef.current.querySelectorAll(".slide-wrap")
+  //     );
 
-      slides.forEach((slide) => {
-        const moveY = slide.scrollHeight / 2;
+  //     slides.forEach((slide) => {
+  //       const moveY = slide.scrollHeight / 2;
 
-        gsap.to(slide, {
-          y: -moveY,
-          ease: "none",
-          scrollTrigger: {
-            trigger: wrapRef.current,
-            start: "top 60%",
-            end: "bottom 30%",
-            scrub: 1,
-            // markers: true, // remove later
-          },
-        });
-      });
-    },
-    { scope: wrapRef }
-  );
+  //       gsap.to(slide, {
+  //         y: -moveY,
+  //         ease: "none",
+  //         scrollTrigger: {
+  //           trigger: wrapRef.current,
+  //           start: "top 60%",
+  //           end: "bottom 30%",
+  //           scrub: 1,
+  //           // markers: true, // remove later
+  //         },
+  //       });
+  //     });
+  //   },
+  //   { scope: wrapRef }
+  // );
 
   return (
     <section className="about-process">

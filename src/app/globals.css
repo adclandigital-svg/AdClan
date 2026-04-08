@@ -14,6 +14,22 @@ html {
 
 body {
   font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+/* Background layer */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("https://img.freepik.com/premium-vector/modern-abstract-white-background-with-wavy-lines-business_745217-347.jpg?w=1480");
+  background-size: 70%; /* 👈 reduce size (height feel) */
+  background-position: center;
+  background-repeat: repeat;
+
+  opacity: 0.3; /* 👈 reduce visibility */
+  z-index: -1;
 }
 a:hover {
   color: #17b9a9;

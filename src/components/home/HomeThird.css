@@ -155,15 +155,15 @@
   min-height: 55vh;
   display: flex;
   align-items: center;
-  background:
+  /* background:
     radial-gradient(circle at 70% 50%, rgba(0, 0, 0, 0), transparent 60%),
-    linear-gradient(180deg, #fafafa, #f3f3f3);
+    linear-gradient(180deg, #fafafa, #f3f3f3); */
   position: relative;
   overflow: hidden;
 }
 
 /* ✨ Minimal premium texture overlay */
-.home-third-section-outer::before {
+/* .home-third-section-outer::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -183,7 +183,7 @@
 .home-third-section-outer > * {
   position: relative;
   z-index: 1;
-}
+} */
 
 /* ================= CONTAINER ================= */
 

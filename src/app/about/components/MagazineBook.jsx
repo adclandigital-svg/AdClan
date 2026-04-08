@@ -53,13 +53,15 @@
 
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PageFlip } from "page-flip";
 import "./magzine.css";
 
 export default function MagazineBook() {
   const bookRef = useRef(null);
   const pageFlip = useRef(null);
+  const [flipText, setFlipText] = useState("");
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (!bookRef.current) return;
@@ -112,9 +114,54 @@ export default function MagazineBook() {
     };
   }, []);
 
+  useEffect(() => {
+    const el = bookRef.current;
+    if (!el) return;
+
+    let timeout;
+
+    const updateText = (text) => {
+      setVisible(false); // fade out first
+
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        setFlipText(text);
+        setVisible(true); // fade in new text
+      }, 150); // smooth delay
+    };
+
+    const handleMouseMove = (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+
+      if (x < rect.width / 2) {
+        el.style.cursor = "w-resize";
+        updateText("← Click to Flip Back");
+      } else {
+        el.style.cursor = "e-resize";
+        updateText("Click to Flip →");
+      }
+    };
+
+    const handleMouseLeave = () => {
+      setVisible(false);
+    };
+
+    el.addEventListener("mousemove", handleMouseMove);
+    el.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      el.removeEventListener("mousemove", handleMouseMove);
+      el.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
+
   return (
     <div className="magazine-wrapper">
       <div ref={bookRef} className="magazine-book" />
+      {flipText && (
+        <div className={`flip-text ${visible ? "show" : ""}`}>{flipText}</div>
+      )}
     </div>
   );
 }

@@ -5,7 +5,8 @@ import { Suspense, useEffect, useState } from "react";
 const Hero = dynamic(() => import("@/components/home/Hero"), { ssr: false });
 const HomeSecond = dynamic(() => import("@/components/home/HomeSecond"), { ssr: false });
 const HomeThird = dynamic(() => import("@/components/home/HomeThird"), { ssr: false });
-const HomeFourth = dynamic(() => import("@/components/home/HomeFourth"), { ssr: false });
+const Homereels = dynamic(() => import("@/components/home/Homereels"), { ssr: false });
+// const HomeFourth = dynamic(() => import("@/components/home/HomeFourth"), { ssr: false });
 const HomeSeven = dynamic(() => import("@/components/home/HomeSeven"), { ssr: false });
 const HomeBlogSection = dynamic(() => import("@/components/home/HomeBlogSection"), { ssr: false });
 
@@ -17,7 +18,8 @@ export default function Home() {
         <div className="Home-page">
           <Hero />
           <HomeSecond />
-          <HomeFourth />
+          <Homereels/>
+          {/* <HomeFourth /> */}
           <HomeThird />
           <HomeSeven />
           <HomeBlogSection />

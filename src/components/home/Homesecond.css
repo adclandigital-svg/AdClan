@@ -8,17 +8,17 @@
   overflow: hidden;
 }
 
-.home-second-section-main::before {
+/* .home-second-section-main::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: url("https://media-public.canva.com/6yMec/MAGnEd6yMec/1/tl.png");
-  background-size: 300px auto; /* 👈 width = 200px */
-  background-repeat: repeat;  /* 👈 tile image */
+  background-size: 300px auto; 
+  background-repeat: repeat;  
   background-position: top left;
   opacity: 0.6;
   z-index: 0;
-}
+} */
 
 .home-second-section {
   position: relative;

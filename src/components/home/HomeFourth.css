@@ -4,7 +4,7 @@
   height: 100vh;
   /* overflow: hidden;  */
 }
-.home-fouth-section-outer::before {
+/* .home-fouth-section-outer::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -14,7 +14,7 @@
   background-position: top left;
   opacity: 0.6;
   z-index: 0;
-}
+} */
 .home-fouth-section {
   margin: auto;
   height: 90vh; 
