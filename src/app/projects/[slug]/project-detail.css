@@ -78,7 +78,8 @@
   align-items: flex-start;
   padding: 50px;
   /*Glassmorphismstyles*/
-  background: #777777c5;
+  background: #000000c5;
+  /* background: #777777c5; */
   /*lighttransparent*/
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
@@ -94,9 +95,10 @@
   animation: invisiblityAnimation 0.6s ease forwards;
   animation-delay: 5s; /* runs after 10 sec */
 }
-
 .hero-overlay1:hover {
-  background: #000000c5;
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(0, 0, 0, 1);
   animation-play-state: paused;
 }
 
@@ -401,7 +403,7 @@
     left: 0;
     box-shadow: none;
   }
-  .hero-overlay:hover{
+  .hero-overlay:hover {
     background: white;
   }
   .hero-text-breadcrums {

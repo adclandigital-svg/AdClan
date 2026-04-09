@@ -13,11 +13,12 @@ export default function InstallPWA() {
       setDeferredPrompt(e);
       setShow(true); // show button only when prompt is available
     };
-
-    window.addEventListener("beforeinstallprompt", handler);
+    if (deferredPrompt == null) {
+      window.addEventListener("beforeinstallprompt", handler);
+    }
 
     return () => window.removeEventListener("beforeinstallprompt", handler);
-  }, [window]);
+  }, []);
 
   const handleInstallClick = async () => {
     if (!deferredPrompt) {
