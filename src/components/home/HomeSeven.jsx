@@ -177,7 +177,7 @@ export default function HomeSeven() {
           <div className="home-seven-left">
             <img
               className="impact-image"
-              src="/home/1.avif"
+              src="/home/home-image.jpeg"
               alt="Team Collaboration"
               loading="lazy"
             />
