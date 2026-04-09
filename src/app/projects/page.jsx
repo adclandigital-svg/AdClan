@@ -179,7 +179,23 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { PROJECTS } from "@/data/projectData";
 import { useRouter } from "next/navigation";
-import { Elsie } from "next/font/google";
+
+const CATEGORY_ORDER = [
+  "Celebrity Management",
+  "Branding",
+  "FMCG Branding & Packaging",
+  "Video Production",
+  "Influencer's Video",
+  "Digital & Creatives",
+  "Radio Jingles",
+  "Website Development",
+];
+
+const sortedProjects = [...PROJECTS].sort((a, b) => {
+  return (
+    CATEGORY_ORDER.indexOf(a.category) - CATEGORY_ORDER.indexOf(b.category)
+  );
+});
 
 export default function ProjectsPage() {
   const pageRef = useRef(null);
@@ -188,7 +204,7 @@ export default function ProjectsPage() {
   const [activeAudio, setActiveAudio] = useState(null);
 
   // SAFE fallback if PROJECTS undefined
-  const projectsData = Array.isArray(PROJECTS) ? PROJECTS : [];
+  const projectsData = Array.isArray(sortedProjects) ? sortedProjects : [];
 
   const TABS = [
     "All",
@@ -325,11 +341,9 @@ export default function ProjectsPage() {
               onClick={() => {
                 if (project.category == "Radio Jingles") {
                   setActiveAudio(project);
-                } 
-                else if(project.category == "Website Development"){
+                } else if (project.category == "Website Development") {
                   window.open(`${project.slug}`, "_blank");
-                }
-                else {
+                } else {
                   router.push(`/projects/${project.slug}`);
                 }
               }}

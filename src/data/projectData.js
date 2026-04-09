@@ -375,13 +375,14 @@ export const PROJECTS = [
     ],
   },
 
-  {
+  { 
+    black:"true",
     slug: "vikram-mills-1",
     title: "VIKRAM MILLS Brand Transformation",
     category: "FMCG Branding & Packaging",
     year: "2024",
     client: "VIKRAM MILLS",
-    src: "/projects/vikram-mills/vikram mills.png",
+    src: "/projects/vikram-mills/vikram-mills.png",
     updatedAt: "2026-01-15",
     intro:
       "VIKRAM MILLS underwent a comprehensive brand transformation to strengthen its presence in the competitive rice and agro-products market. The project focused on modernizing the brand identity, premiumizing packaging design, and enhancing market visibility across retail, wholesale, and distributor networks.",
@@ -570,6 +571,7 @@ export const PROJECTS = [
   },
 
   {
+    black:"true",
     slug: "huma-qureshi",
     title: "HUMA QURESHI",
     category: "Celebrity Management",
@@ -656,6 +658,7 @@ export const PROJECTS = [
     ],
   },
   {
+    black:"true",
     slug: "jassie-gill",
     title: "JASSIE GILL",
     category: "Celebrity Management",
@@ -674,6 +677,7 @@ export const PROJECTS = [
     ],
   },
   {
+    black:"true",
     slug: "bassi",
     title: "BASSI",
     category: "Celebrity Management",
@@ -692,6 +696,7 @@ export const PROJECTS = [
     ],
   },
   {
+    black:"true",
     slug: "adah-sharma",
     title: "ADAH SHARMA",
     category: "Celebrity Management",
@@ -746,6 +751,7 @@ export const PROJECTS = [
     ],
   },
   {
+    black:"true",
     slug: "smile-train",
     title: "SMILE TRAIN",
     category: "Video Production",
@@ -943,7 +949,7 @@ export const PROJECTS = [
       {
         type: "hero",
         mediaType: "video",
-        src: "https://adclan.in/wp-content/uploads/2024/09/RJ-Naved.mp4",
+        src: "/projects/naved/RJ Naved.mp4",
       },
     ],
   },
