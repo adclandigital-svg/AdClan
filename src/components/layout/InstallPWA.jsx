@@ -17,7 +17,7 @@ export default function InstallPWA() {
     window.addEventListener("beforeinstallprompt", handler);
 
     return () => window.removeEventListener("beforeinstallprompt", handler);
-  }, []);
+  }, [window]);
 
   const handleInstallClick = async () => {
     if (!deferredPrompt) {

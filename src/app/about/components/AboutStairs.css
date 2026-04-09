@@ -22,7 +22,7 @@
 /* ========================= */
 /* Each Stair Line */
 .stairs-line {
-    width: 420px;
+    width: 520px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -41,17 +41,18 @@
 
 /* Heading */
 .stairs-line h3 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: normal;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 1);
   margin-bottom: 5px;
   letter-spacing: 7px;
+  font-weight: 600;
 }
 
 /* Paragraphs */
 .stairs-line p {
-  font-size: 15px;
-  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  color: rgba(0, 0, 0, 1);
   margin-bottom: 0rem;
   line-height: 1.4;
   
@@ -99,6 +100,9 @@
 
 /* Small Mobile ≤ 480px */
 @media (max-width: 480px) {
+  .stairs-line {
+    width: 95%;
+  }
   .stairs-line h3 {
     font-size: 1.6rem;
   }

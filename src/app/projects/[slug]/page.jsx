@@ -130,7 +130,7 @@ export default function ProjectDetailPage() {
 
         {/* Overlay text */}
         <div
-          className="hero-overlay"
+          className={project?.black?"hero-overlay1": "hero-overlay"}
           ref={overlayRef}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}

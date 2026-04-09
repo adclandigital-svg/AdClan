@@ -9,7 +9,7 @@
 .definition-container {
   display: flex;
   align-items: start;
-  max-width: 1200px; /* slightly wider container */
+  max-width: 1000px; /* slightly wider container */
   width: 100%;
   gap: 5rem;
   /* flex-wrap: wrap-reverse; */
@@ -23,7 +23,7 @@
 }
 
 .definition-image {
-  height: 600px;        /* important: fixed height */
+  height: 650px;        /* important: fixed height */
   overflow: hidden;     /* hides extra top part */
 }
 
@@ -36,16 +36,18 @@
 
 /* TEXT — takes less space */
 .definition-text {
-  flex: 0 0 30%; /* ⬅️ reduce text width */
+  flex: 0 0 40%; /* ⬅️ reduce text width */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .definition-text p {
-  font-size: 16px;
+  text-align: justify;
+  hyphens: auto;
+  font-size: 18px;
   line-height: 1.8;
-  color: hsla(0, 0%, 20%, 0.76);
+  color: rgb(0, 0, 0);
 }
 
 

@@ -51,7 +51,7 @@ export default function AboutHero() {
         console.warn("Cleanup error:", e);
       }
     };
-  }, []);
+  }, [textRef, containerRef]);
 
   return (
     <section className="about-hero">

@@ -83,6 +83,7 @@ export default function RootLayoutClient({ children }) {
     <>
       {/* ✅ Show only on homepage */}
       {pathname === "/" && showLoader && <LoadingScreen />}
+      <InstallPWA/>
 
       <GsapErrorHandler />
       <LenisProvider>
@@ -92,7 +93,7 @@ export default function RootLayoutClient({ children }) {
         <Footer />
       </LenisProvider>
       <GTM/>
-      <InstallPWA/>
+      
     </>
   );
 }

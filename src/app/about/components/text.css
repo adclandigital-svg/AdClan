@@ -28,14 +28,14 @@
 }
 .process-wrap-phus{
   font-size: 40px;
-  color: rgba(0, 0, 0, 0.301);
+  color: rgba(0, 0, 0, o.9);
 }
 
 .process-wrap span {
   display: block;
   font-size: 110px;
   font-weight: 100;
-  color: rgba(0, 0, 0, 0.301);
+  color: rgba(0, 0, 0, 0.9);
   line-height: 1.2;
   letter-spacing: 10px;
    /* background-color: red; */

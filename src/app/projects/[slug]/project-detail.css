@@ -66,6 +66,40 @@
   animation-play-state: paused;
 }
 
+.hero-overlay1 {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
+  padding: 50px;
+  /*Glassmorphismstyles*/
+  background: #777777c5;
+  /*lighttransparent*/
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: all ease 0.3s;
+
+  animation: invisiblityAnimation 0.6s ease forwards;
+  animation-delay: 5s; /* runs after 10 sec */
+}
+
+.hero-overlay1:hover {
+  background: #000000c5;
+  animation-play-state: paused;
+}
+
 .hero-text-breadcrums {
   font-size: 15px;
   color: rgba(255, 255, 255, 1);

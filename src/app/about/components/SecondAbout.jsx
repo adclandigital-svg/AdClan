@@ -47,7 +47,7 @@ export default function AboutDefinition() {
         <div className="definition-image">
           <img
             ref={imgRef}
-            src="/about/1.webp"
+            src="https://img.freepik.com/premium-photo/diverse-office-portrait-handsome-indian-man-working-desktop-computer_1313853-215683.jpg?w=740"
             alt="About company"
             loading="lazy"
           />
