@@ -1,0 +1,356 @@
+/* ================= PAGE ================= */
+.celebrity-page {
+  color: #111;
+  font-family: "Raleway", sans-serif;
+}
+
+/* ================= HERO ================= */
+.celebrity-hero {
+  max-width: 1600px;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: auto auto;
+  margin-top: 20px;
+}
+
+/* overlay */
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(0, 0, 0, 0.5)
+  );
+  z-index: 1;
+}
+
+.hero-slide {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TITLE */
+.hero-slide h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 64px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #fff;
+  text-align: center;
+
+  text-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.4),
+    0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: fadeUp 1s ease;
+}
+
+/* ================= DETAILS ================= */
+.celebrity-details {
+  display: flex;
+  justify-content: center;
+}
+
+/* GLASS CARD */
+.details-card {
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 30px;
+  padding: 60px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+/* TEXT */
+.details-card h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.meta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.meta span {
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #000000;
+  transition: 0.3s;
+  background-color: #fff;
+}
+
+.meta span:hover {
+  background: #000;
+  color: #fff;
+}
+
+.desc {
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.conclusion {
+  margin-top: 20px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  border-radius: 20px;
+
+  /* GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+
+  /* BORDER + LIGHT EDGE */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  /* SOFT SHADOW */
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+  transition: all 0.3s ease;
+}
+.conclusion-inner {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.conclusion-inner h4 {
+  font-size: 25px;
+  color: #000000;
+  font-weight: 600;
+}
+.conclusion-inner p {
+  font-size: 15px;
+  text-align: left;
+  width: 95%;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  color: #333;
+}
+/* ================= PAGINATION ================= */
+.celebrity-swiper .swiper-pagination {
+  opacity: 1 ;
+  bottom: 30px;
+}
+
+.celebrity-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.celebrity-swiper .swiper-pagination-bullet-active {
+  width: 30px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= CUSTOM BULLETS ================= */
+.swiper-pagination {
+  height: 100px !important;
+  bottom: 25px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+/* bullet container */
+/* ===== ONLY THIS SWIPER ===== */
+.celebrity-swiper .celebrity-bullet {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  outline: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* image */
+.celebrity-swiper .celebrity-bullet img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* active bullet (scoped) */
+.celebrity-swiper .swiper-pagination-bullet-active {
+  transform: scale(1.2);
+  outline: 1px solid #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* optional hover effect */
+.celebrity-swiper .celebrity-bullet:hover {
+  transform: scale(1.1);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* -------- TABLET -------- */
+@media (max-width: 1024px) {
+  .celebrity-hero {
+    height: 50vh;
+  }
+
+  .hero-slide {
+    height: 50vh;
+  }
+
+  .hero-slide h1 {
+    font-size: 48px;
+  }
+
+  .details-card {
+    padding: 40px;
+    margin: 0 15px;
+  }
+
+  .details-card h2 {
+    font-size: 34px;
+  }
+
+  .desc {
+    font-size: 16px;
+  }
+
+  /* stack conclusion */
+  .conclusion {
+    flex-direction: column;
+  }
+
+  .conclusion-inner {
+    width: 100%;
+  }
+}
+
+/* -------- MOBILE -------- */
+@media (max-width: 768px) {
+  .celebrity-hero {
+    width: 95%;
+    height: 40vh;
+    border-radius: 15px;
+  }
+
+  .hero-slide {
+    height: 40vh;
+  }
+
+  .hero-slide h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    padding: 0 10px;
+  }
+
+  .details-card {
+    padding: 25px;
+    margin: 0 10px;
+  }
+
+  .details-card h2 {
+    font-size: 26px;
+  }
+
+  .meta {
+    gap: 10px;
+  }
+
+  .meta span {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .desc {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .conclusion {
+    padding: 20px;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .conclusion-inner h4 {
+    font-size: 18px;
+  }
+
+  .conclusion-inner p {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  /* bullets smaller */
+  .custom-bullet {
+    width: 45px;
+    height: 45px;
+  }
+
+  .swiper-pagination {
+    height: 80px;
+  }
+}
+
+/* -------- SMALL MOBILE -------- */
+@media (max-width: 480px) {
+  .hero-slide h1 {
+    font-size: 24px;
+  }
+
+  .details-card h2 {
+    font-size: 22px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .custom-bullet {
+    width: 38px;
+    height: 38px;
+  }
+
+  .swiper-pagination {
+    gap: 8px;
+  }
+}

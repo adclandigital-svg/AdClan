@@ -12,23 +12,27 @@
 /* =========================
    HERO
 ========================= */
-.project-hero {
+.project-hero-image{
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-hero1 {
   text-align: center;
-  padding: 120px 20px 80px;
-  max-width: 900px;
+  padding: 50px 20px 50px;
+  max-width: 100%;
   margin: auto;
 }
 
-.project-hero h1 {
+.project-hero1 h1 {
   font-size: 56px;
   font-weight: 900;
   margin-bottom: 20px;
-
   background: linear-gradient(90deg, #000, #777, #000);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   animation: shineText 6s linear infinite;
 }
 
@@ -89,20 +93,33 @@
 /* =========================
    CARD (GLASS PREMIUM)
 ========================= */
+/* =========================
+   CARD (iOS GLASSMORPHISM)
+========================= */
 .work-card {
   position: relative;
   padding: 30px;
-  border-radius: 24px;
+  border-radius: 28px;
 
-  background: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(25px) saturate(180%);
-  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  /* 🔥 iOS Glass Background */
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.55),
+    rgba(255, 255, 255, 0.25)
+  );
 
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(35px) saturate(200%);
+  -webkit-backdrop-filter: blur(35px) saturate(200%);
 
+  /* subtle border glow */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  /* 🔥 depth shadows (important) */
   box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.12),
-    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 20px 80px rgba(0, 0, 0, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.3);
 
   overflow: hidden;
   cursor: pointer;
@@ -111,9 +128,10 @@
   text-decoration: none;
   color: #111;
 
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 0.8s ease forwards;
+  /* keep visible */
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
 }
 
 /* stagger animation */

@@ -1,6 +1,7 @@
 "use client";
 
 import "./work.css";
+import Link from "next/link";
 
 export default function ProjectPage() {
   const works = [
@@ -8,13 +9,13 @@ export default function ProjectPage() {
       title: "Celebrity Management",
       desc: "End-to-end celebrity collaborations, brand endorsements, and talent management.",
       icon: "🎤",
-      link: "/projects/celebrity-management",
+      link: "/projects/vikram-mills/celebrity-managements",
     },
     {
       title: "Branding",
       desc: "Complete brand identity creation with strategic positioning and visual storytelling.",
       icon: "🏷️",
-      link: "/projects/branding",
+      link: "/projects/vikram-mills/branding",
     },
     {
       title: "FMCG Branding & Packaging",
@@ -56,27 +57,26 @@ export default function ProjectPage() {
 
   return (
     <div className="project-page">
+      <div className="project-hero-image">
+        <img src="/projects/vikram-mills/vikram-mills-strips.png" />
+      </div>
+
       {/* HERO */}
-      <div className="project-hero">
-        {/* 🔥 Small Tag */}
-        <div className="hero-badge">FMCG Brand Transformation</div> <br />
-        {/* <img src="/projects/vikram-mills/logo1.jpg" alt="" height={300} /> */}
+      <div className="project-hero1">
+          <div className="hero-badge">FMCG Brand Transformation</div>
+          <h1>Vikram Mills</h1>
 
-        {/* 🎯 Title */}
-        <h1>Vikram Mills</h1>
+          <p className="hero-sub">
+            From a traditional rice manufacturer to a premium FMCG powerhouse —
+            we redefined Vikram Mills with modern branding, packaging, and
+            performance-driven marketing strategies.
+          </p>
 
-        {/* 💬 Subtitle */}
-        <p className="hero-sub">
-          From a traditional rice manufacturer to a premium FMCG powerhouse — we
-          redefined Vikram Mills with modern branding, packaging, and
-          performance-driven marketing strategies.
-        </p>
-        {/* 🚀 CTA */}
-        <div className="hero-actions">
-          <a href="/contact" className="btn-secondary">
-            Start Project
-          </a>
-        </div>
+          <div className="hero-actions">
+            <a href="/contact" className="btn-secondary">
+              Start Project
+            </a>
+          </div>
       </div>
 
       {/* WORK SECTION */}
@@ -85,7 +85,7 @@ export default function ProjectPage() {
 
         <div className="work-grid">
           {works.map((item, index) => (
-            <a
+            < Link
               href={item.link}
               key={index}
               className="work-card"
@@ -101,12 +101,11 @@ export default function ProjectPage() {
                 );
               }}
             >
-
               <div className="work-icon">{item.icon}</div>
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
               <div className="work-arrow">→</div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

@@ -68,14 +68,14 @@
 }
 
 /* Pagination bullets */
-.swiper-pagination {
+.mySwiper .swiper-pagination {
   bottom: 10px !important;
   right: 10px !important;
   text-align: right !important;
-  padding-right: 5%;
+  padding-right: 5% !important;
 }
 
-.swiper-pagination-bullet {
+.mySwiper .swiper-pagination-bullet {
   background: #000000 !important;
   opacity: 1;
   width: 8px;
@@ -83,7 +83,7 @@
   transition: all 0.3s ease;
 }
 
-.swiper-pagination-bullet-active {
+.mySwiper .swiper-pagination-bullet-active {
   background: #000 !important;
   width: 50px !important;
   border-radius: 5px !important;

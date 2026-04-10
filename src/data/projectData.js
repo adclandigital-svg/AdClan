@@ -375,9 +375,10 @@ export const PROJECTS = [
     ],
   },
 
-  { 
-    black:"true",
+  {
+    black: "true",
     slug: "vikram-mills-1",
+    // slug: "/vikram-mills",
     title: "VIKRAM MILLS Brand Transformation",
     category: "FMCG Branding & Packaging",
     year: "2024",
@@ -571,7 +572,7 @@ export const PROJECTS = [
   },
 
   {
-    black:"true",
+    black: "true",
     slug: "huma-qureshi",
     title: "HUMA QURESHI",
     category: "Celebrity Management",
@@ -639,7 +640,7 @@ export const PROJECTS = [
     ],
   },
   {
-    black:"true",
+    black: "true",
     slug: "milliand-gaba",
     title: "MILLIAND GABA",
     category: "Celebrity Management",
@@ -658,7 +659,7 @@ export const PROJECTS = [
     ],
   },
   {
-    black:"true",
+    black: "true",
     slug: "jassie-gill",
     title: "JASSIE GILL",
     category: "Celebrity Management",
@@ -677,7 +678,7 @@ export const PROJECTS = [
     ],
   },
   {
-    black:"true",
+    black: "true",
     slug: "bassi",
     title: "BASSI",
     category: "Celebrity Management",
@@ -696,7 +697,7 @@ export const PROJECTS = [
     ],
   },
   {
-    black:"true",
+    black: "true",
     slug: "adah-sharma",
     title: "ADAH SHARMA",
     category: "Celebrity Management",
@@ -751,7 +752,7 @@ export const PROJECTS = [
     ],
   },
   {
-    black:"true",
+    black: "true",
     slug: "smile-train",
     title: "SMILE TRAIN",
     category: "Video Production",
