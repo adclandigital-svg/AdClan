@@ -1,0 +1,278 @@
+.multi-page {
+  width: 100%;
+  color: #111111;
+  overflow-x: hidden;
+  position: relative;
+}
+.multi-page-headings {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin: 60px auto 30px;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+/* UNDERLINE */
+.multi-page-headings::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #000, #888, #000);
+  transition: 0.4s ease;
+}
+
+/* SECTION */
+.section-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 2%;
+  gap: 80px;
+  min-height: 50vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 24px;
+  max-width: 90%;
+  margin: 50px auto;
+  position: sticky;
+  top: 0px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.section-block.reverse {
+  flex-direction: row-reverse;
+}
+
+/* LEFT */
+.left {
+  flex: 1;
+  max-width: 520px;
+  height: 400px;
+}
+
+/* HEADING - Dark gradient */
+.left h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  letter-spacing: px;
+  background: linear-gradient(135deg, #111111, #555555);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* DESCRIPTION */
+.main-desc {
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  width: 95%;
+}
+
+/* GLASS CARD - Light version */
+.glass-card {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 20px;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+/* SLIDE TEXT */
+.slide-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  animation: fadeUp 0.6s ease;
+  line-height: 1.6;
+}
+
+/* RIGHT */
+.right {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+/* SWIPER */
+.right .swiper {
+  border-radius: 24px;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* SLIDE INNER */
+.slide-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.right img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: block;
+}
+
+/* OVERLAY TEXT - Dark background for readability on light images */
+.overlay-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  padding: 12px 20px;
+  border-radius: 40px;
+  display: inline-block;
+  width: auto;
+  z-index: 2;
+  text-shadow: none;
+  pointer-events: none;
+}
+
+/* HOVER EFFECT */
+.right:hover img {
+  transform: scale(1.08);
+}
+
+/* GLOW BACKGROUND - Light theme version */
+.section-block::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.02), transparent);
+  top: -200px;
+  right: -200px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section-block.reverse::before {
+  left: -200px;
+  right: auto;
+}
+
+/* PAGINATION - Dark bullets for light background */
+.swiper-pagination {
+  bottom: 20px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #ffffff;
+  opacity: 0.4;
+  width: 12px;
+  height: 12px;
+  transition: all 0.2s ease;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.3);
+  background: #ffffff;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .multi-page-headings {
+    font-size: 30px;
+  }
+
+  .section-block {
+    flex-direction: column;
+    padding: 80px 6%;
+    gap: 50px;
+  }
+
+  .section-block.reverse {
+    flex-direction: column;
+  }
+
+  .left {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .left h2 {
+    font-size: 38px;
+  }
+
+  .main-desc {
+    font-size: 16px;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .right img {
+    height: 300px;
+  }
+
+  .overlay-text {
+    font-size: 18px;
+    bottom: 20px;
+    left: 20px;
+    right: auto;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-block {
+    width: 80%;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .left h2 {
+    font-size: 32px;
+  }
+
+  .right img {
+    height: 240px;
+  }
+
+  .overlay-text {
+    font-size: 14px;
+    padding: 6px 12px;
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .glass-card {
+    padding: 16px;
+  }
+
+  .slide-text {
+    font-size: 16px;
+  }
+}

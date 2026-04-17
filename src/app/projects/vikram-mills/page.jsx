@@ -21,13 +21,13 @@ export default function ProjectPage() {
       title: "FMCG Branding & Packaging",
       desc: "Packaging design and brand transformation for high-impact retail presence.",
       icon: "📦",
-      link: "/projects/fmcg-branding",
+      link: "/projects/vikram-mills/fmcg-branding",
     },
     {
       title: "Video Production",
       desc: "Cinematic brand films, ad shoots, and high-quality video content production.",
       icon: "🎬",
-      link: "/projects/video-production",
+      link: "/projects/vikram-mills/video-production",
     },
     {
       title: "Influencer's Video",
@@ -51,7 +51,7 @@ export default function ProjectPage() {
       title: "Website Development",
       desc: "Modern, high-performance websites focused on UX, design, and conversions.",
       icon: "💻",
-      link: "/projects/web-development",
+      link: "/projects/vikram-mills/website",
     },
   ];
 

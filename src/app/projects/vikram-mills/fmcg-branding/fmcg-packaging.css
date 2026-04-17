@@ -1,0 +1,158 @@
+/* PAGE */
+.fmcg-page {
+  padding: 60px 8%;
+  background: #ffffff;
+  min-height: 100vh;
+  color: #111;
+}
+
+/* HEADER */
+.fmcg-header {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+
+/* COMPANY */
+.fmcg-company {
+  font-size: 30px;
+  color: #000000;
+  margin-top: 10px;
+}
+
+/* DESCRIPTION */
+.fmcg-desc {
+  font-size: 16px;
+  color: #666;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+/* TAGS */
+.fmcg-tags {
+  margin-top: 20px;
+}
+
+.fmcg-tags span {
+  display: inline-block;
+  padding: 8px 14px;
+  margin: 5px;
+  font-size: 14px;
+  border-radius: 20px;
+  background: #f1f1f1;
+}
+
+/* GRID */
+.fmcg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.fmcg-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: 0.4s;
+}
+
+.fmcg-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.fmcg-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: 0.6s;
+}
+
+.fmcg-card:hover img {
+  transform: scale(1.1);
+}
+
+/* OVERLAY */
+.fmcg-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(255,255,255,0.95), transparent);
+  font-size: 16px;
+}
+
+/* MODAL */
+.fmcg-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* MODAL IMAGE */
+.fmcg-modal-img {
+  width: 65%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+/* CLOSE */
+.fmcg-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* NAV BUTTONS */
+.fmcg-prev,
+.fmcg-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.fmcg-prev:hover,
+.fmcg-next:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.fmcg-prev {
+  left: 40px;
+}
+
+.fmcg-next {
+  right: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .fmcg-heading {
+    font-size: 32px;
+  }
+
+  .fmcg-modal-img {
+    width: 90%;
+  }
+}
