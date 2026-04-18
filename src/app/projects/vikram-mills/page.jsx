@@ -33,7 +33,7 @@ export default function ProjectPage() {
       title: "Influencer's Video",
       desc: "Influencer-led content designed for engagement, reach, and brand storytelling.",
       icon: "⭐",
-      link: "/projects/influencers",
+      link: "/projects/vikram-mills/influencer",
     },
     {
       title: "Digital & Creatives",
