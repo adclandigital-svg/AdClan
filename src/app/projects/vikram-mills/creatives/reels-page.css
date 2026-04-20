@@ -1,0 +1,158 @@
+.cr-showcase {
+  width: 95%;
+  margin: auto;
+  padding: 60px 0;
+}
+
+/* HERO */
+.cr-hero {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+
+}
+
+.cr-hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  position: relative;
+}
+
+.cr-hero h1::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 4px;
+  margin: 10px auto;
+  background: linear-gradient(90deg, #000, #888, #000);
+}
+
+.cr-hero-desc {
+  max-width: 600px;
+  margin: auto;
+}
+
+.cr-info-bar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cr-info-bar div {
+  background: #f5f5f5;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.cr-socials {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cr-socials a {
+  display: flex;
+  gap: 6px;
+  text-decoration: none;
+  color: black;
+}
+
+.cr-hero-cta button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: 1px solid black;
+  background: transparent;
+  cursor: pointer;
+}
+
+.cr-hero-cta button:hover {
+  background: black;
+  color: white;
+}
+
+/* SECTION */
+.crs-section {
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 60px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.crs-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.crs-header h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.crs-header h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin: 10px auto;
+  background: linear-gradient(90deg, #000, #888, #000);
+}
+
+/* SLIDER */
+.crs-card {
+  position: relative;
+  cursor: pointer;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.crs-media {
+    
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.crs-card:hover .crs-media {
+  transform: scale(1.05);
+}
+
+/* OVERLAY */
+.crs-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+/* MODAL */
+.cr-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.cr-modal-content video,
+.cr-modal-content img {
+  max-width: 90vw;
+  max-height: 80vh;
+}
+
+.cr-modal-content button {
+  position: absolute;
+  top: -40px;
+  right: 0;
+}

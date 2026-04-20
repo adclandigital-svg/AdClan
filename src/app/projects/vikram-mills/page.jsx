@@ -39,13 +39,13 @@ export default function ProjectPage() {
       title: "Digital & Creatives",
       desc: "Scroll-stopping creatives, social media designs, and digital campaign assets.",
       icon: "🎨",
-      link: "/projects/creatives",
+      link: "/projects/vikram-mills/creatives",
     },
     {
       title: "Radio Jingles",
       desc: "Catchy audio branding and radio ads crafted for maximum recall.",
       icon: "🎧",
-      link: "/projects/radio-jingles",
+      link: "/projects/vikram-mills/radio-jingles",
     },
     {
       title: "Website Development",
