@@ -1,0 +1,211 @@
+/* =========================
+   PAGE
+========================= */
+.press-page {
+  width: 95%;
+  margin:  auto;
+  margin-bottom: 50px;
+  color: #111;
+}
+
+/* =========================
+   HEADER
+========================= */
+.press-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  padding: 100px 20px;
+
+  /* background image */
+  background: url("https://img.freepik.com/premium-photo/black-white-newspaper-pages-with-dramatic-lighting-look-news-media-current-events_1074775-8383.jpg") ;
+  background-repeat: repeat;
+  background-size: cover;
+
+
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* DARK OVERLAY FOR READABILITY */
+/* .press-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)
+  );
+
+  z-index: 0;
+} */
+
+/* CONTENT ABOVE OVERLAY */
+.press-header h1,
+.press-header p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+/* TITLE */
+.press-header h1 {
+  font-size: 42px;
+  font-weight: 900;
+}
+
+/* SUBTEXT */
+.press-header p {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+/* =========================
+   GRID
+========================= */
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  border-radius: 20px;
+}
+
+/* =========================
+   CARD (GLASS)
+========================= */
+.press-card {
+  padding-top:20px ;
+  border-radius: 18px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  transition: 0.35s ease;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+.press-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   IMAGE
+========================= */
+.press-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.press-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.press-card:hover .press-image img {
+  transform: scale(1.08);
+}
+
+/* DATE BADGE */
+.press-date {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  /* glass effect */
+  background: rgba(255, 255, 255, 0.15);
+  color: #111;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  /* subtle depth */
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+  font-weight: 500;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.press-content {
+  padding: 20px;
+}
+
+.press-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.press-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.press-btn {
+  color: #000000;
+  border: none;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.3s;
+  outline: 0.5px solid black;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+}
+
+.press-btn:hover {
+  background: #000;
+  color: white;
+  transform: translate(-50%, -2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .press-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .press-header h1 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 560px) {
+  .press-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .press-header h1 {
+    font-size: 28px;
+  }
+}

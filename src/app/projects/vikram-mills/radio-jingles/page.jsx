@@ -18,7 +18,7 @@ const reels = [
     id: 1,
     title: "Main Brand Jingle",
     subtitle: "Core sonic identity for Vikram Mills",
-    audio: "/audio/vikram-main.mp3",
+    audio: "https://www.adclan.in/projects/radio/Teaser-Spot-ACE.mp3",
     description:
       "Primary radio identity jingle defining Vikram Mills across all campaigns.",
     platform: "FM Radio + Online Radio",
@@ -33,7 +33,7 @@ const reels = [
     id: 2,
     title: "Festival Jingle",
     subtitle: "Seasonal promotional campaign",
-    audio: "/audio/vikram-festival.mp3",
+    audio: "https://www.adclan.in/projects/radio/Teaser-Spot-ACE.mp3",
     description:
       "Festive radio jingle designed to increase emotional engagement.",
     platform: "FM + Seasonal Ads",
@@ -47,7 +47,7 @@ const reels = [
     id: 3,
     title: "15 Sec Ad Jingle",
     subtitle: "Short high-impact radio ad",
-    audio: "/audio/vikram-15sec.mp3",
+    audio: "https://www.adclan.in/projects/radio/Teaser-Spot-ACE.mp3",
     description:
       "Short format jingle designed for repetition-based brand recall.",
     platform: "FM Radio Spots",
@@ -71,9 +71,83 @@ export default function VikramMillsHero() {
   const handleSlideChange = (swiper) => {
     const current = reels[swiper.realIndex];
     setActive(current);
+
+    // stop all audio
+    audioRefs.current.forEach((audio) => {
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    });
+
+    // stop all video
+    videoRefs.current.forEach((video) => {
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
   };
 
   const videoRefs = useRef([]);
+  const audioRefs = useRef([]);
+  const [progress, setProgress] = useState([]);
+  const [volume, setVolume] = useState([]);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // PROGRESS
+  const updateProgress = (index) => {
+    const audio = audioRefs.current[index];
+    if (!audio) return;
+
+    const value = (audio.currentTime / audio.duration) * 100;
+
+    setProgress((prev) => {
+      const updated = [...prev];
+      updated[index] = value;
+      return updated;
+    });
+  };
+
+  // SEEK
+  const handleSeek = (e, index) => {
+    const audio = audioRefs.current[index];
+    if (!audio) return;
+
+    const value = e.target.value;
+    audio.currentTime = (value / 100) * audio.duration;
+  };
+
+  // VOLUME CHANGE
+  const handleVolume = (e, index) => {
+    const audio = audioRefs.current[index];
+    const value = e.target.value;
+
+    if (!audio) return;
+
+    audio.volume = value;
+
+    setVolume((prev) => {
+      const updated = [...prev];
+      updated[index] = value;
+      return updated;
+    });
+  };
+
+  // MUTE
+  const toggleMute = (index) => {
+    const audio = audioRefs.current[index];
+    if (!audio) return;
+
+    const newVolume = audio.volume > 0 ? 0 : 1;
+    audio.volume = newVolume;
+
+    setVolume((prev) => {
+      const updated = [...prev];
+      updated[index] = newVolume;
+      return updated;
+    });
+  };
 
   return (
     <>
@@ -112,14 +186,19 @@ export default function VikramMillsHero() {
       {/* ================= SECTION ================= */}
       <div className="vm-section">
         {/* ================= LEFT - SWIPER ================= */}
-        <div className="vm-left">
-          <Swiper
+        <div
+          className="vm-left"
+          onMouseEnter={() => swiperRef.current?.autoplay?.stop()}
+          onMouseLeave={() => swiperRef.current?.autoplay?.start()}
+        >
+          {/* <Swiper
+            className="vm-swiper"
             modules={[Pagination, Autoplay]}
             slidesPerView={3}
             centeredSlides={true}
             loop={true}
             spaceBetween={20}
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
@@ -132,38 +211,118 @@ export default function VikramMillsHero() {
               768: { slidesPerView: 1 },
               1024: { slidesPerView: 1 },
             }}
+          > */}
+          <Swiper
+            className="vm-swiper"
+            modules={[Pagination]}
+            slidesPerView={1} // ✅ IMPORTANT
+            loop={false} // ✅ REMOVE LOOP (main fix)
+            centeredSlides={false}
+            spaceBetween={20}
+            pagination={{ clickable: true }}
+            // ✅ smooth drag
+            speed={500}
+            threshold={8}
+            resistanceRatio={0.85}
+            // ✅ allow drag properly
+            simulateTouch={true}
+            touchStartPreventDefault={false}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+              handleSlideChange(swiper);
+            }}
+            onSlideChange={handleSlideChange}
           >
             {reels.map((item, index) => (
               <SwiperSlide key={item.id}>
                 <div className="vm-audio-card">
-                  <div className="vm-badge">🎧 Jingle</div>
-
                   {/* VIDEO */}
                   <video
                     ref={(el) => (videoRefs.current[index] = el)}
                     className="vm-video"
-                    src="https://videocdn.cdnpk.net/videos/f250584a-cbc9-5d72-bd9e-030677bf5b9d/horizontal/previews/watermarked/large.mp4"
+                    src="/projects/vikram-mills/sound-wave.mov"
                     muted
                     loop
                     playsInline
                   />
 
-                  {/* AUDIO (CONTROLLED SYNC) */}
-                  <audio
-                    className="vm-audio"
-                    controls
-                    onPlay={() => {
-                      videoRefs.current[index]?.play();
-                    }}
-                    onPause={() => {
-                      videoRefs.current[index]?.pause();
-                    }}
-                    onEnded={() => {
-                      videoRefs.current[index]?.pause();
-                    }}
-                  >
-                    <source src={item.audio} type="audio/mp3" />
-                  </audio>
+                  <div className="vm-audio">
+                    {/* PLAY BUTTON */}
+                    <button
+                      className="vm-play"
+                      onClick={() => {
+                        const audio = audioRefs.current[index];
+                        const video = videoRefs.current[index];
+
+                        if (!audio) return;
+
+                        if (audio.paused) {
+                          // ▶ PLAY
+                          audio.play();
+                          video?.play();
+
+                          // 🛑 STOP SLIDER
+                          swiperRef.current?.autoplay?.stop();
+                        } else {
+                          // ❚❚ PAUSE
+                          audio.pause();
+                          video?.pause();
+
+                          // ▶ RESUME SLIDER
+                          swiperRef.current?.autoplay?.start();
+                        }
+                      }}
+                    >
+                      {audioRefs.current[index]?.paused ? "▶" : "❚❚"}
+                    </button>
+
+                    {/* PROGRESS */}
+                    <input
+                      type="range"
+                      className="vm-progress"
+                      min="0"
+                      max="100"
+                      value={progress[index] || 0}
+                      onChange={(e) => handleSeek(e, index)}
+                    />
+
+                    {/* VOLUME ICON */}
+                    <button
+                      className="vm-volume-btn"
+                      onClick={() => toggleMute(index)}
+                    >
+                      {volume[index] === 0 ? "🔇" : "🔊"}
+                    </button>
+
+                    {/* VOLUME SLIDER */}
+                    <input
+                      type="range"
+                      min="0"
+                      max="1"
+                      step="0.01"
+                      value={volume[index] ?? 1}
+                      onChange={(e) => handleVolume(e, index)}
+                      className="vm-volume"
+                    />
+
+                    {/* AUDIO */}
+                    <audio
+                      ref={(el) => (audioRefs.current[index] = el)}
+                      src={item.audio}
+                      onTimeUpdate={() => updateProgress(index)}
+                      onEnded={() => {
+                        const video = videoRefs.current[index];
+
+                        // stop video
+                        video?.pause();
+
+                        // 👉 GO NEXT SLIDE
+                        swiperRef.current?.slideNext();
+                        // ▶ resume autoplay
+                        swiperRef.current?.autoplay?.start();
+                      }}
+                    />
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
@@ -174,14 +333,17 @@ export default function VikramMillsHero() {
         <div className="vm-right">
           {/* HEADER */}
           <div className="vm-title-block">
-            <h2>{active.title}</h2>
-            <span className="vm-tag">Radio Jingle Case Study</span>
+            <div>
+              <h2>{active.title}</h2>
+              <p className="vm-sub">{active.subtitle}</p>
+            </div>
+            <span className="vm-tag">🎧 Radio Case Study</span>
           </div>
 
           {/* DESCRIPTION */}
           <p className="vm-desc">{active.description}</p>
 
-          {/* METRICS CARDS */}
+          {/* METRICS */}
           <div className="vm-metrics">
             <div className="vm-metric-card">
               <span>📻 Platform</span>
@@ -199,17 +361,17 @@ export default function VikramMillsHero() {
             </div>
 
             <div className="vm-metric-card">
-              <span>⏱️ Duration</span>
+              <span>⏱ Duration</span>
               <p>{active.duration}</p>
             </div>
 
-            <div className="vm-metric-card full">
+            <div className="vm-metric-card full highlight">
               <span>🏢 Client</span>
               <p>{active.client}</p>
             </div>
           </div>
 
-          {/* RESULT HIGHLIGHT BOX */}
+          {/* RESULT */}
           <div className="vm-result-card">
             <h4>📌 Campaign Result</h4>
             <p>{active.result}</p>

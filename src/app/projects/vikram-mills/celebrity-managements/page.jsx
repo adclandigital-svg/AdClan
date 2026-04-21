@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
-import "./celebrity.css";
+import styles from "./celebrity.module.css";
 
 const celebrities = [
   {
@@ -48,11 +48,11 @@ export default function CelebrityPage() {
   const activeData = celebrities[activeIndex];
 
   return (
-    <div className="celebrity-page">
+    <div className={styles.celebrityPage}>
       {/* HERO */}
-      <section className="celebrity-hero">
+      <section className={styles.celebrityHero}>
         <Swiper
-          className="celebrity-swiper"
+          className={styles.celebritySwiper}
           modules={[EffectFade, Pagination]}
           effect="fade"
           loop={true}
@@ -60,10 +60,10 @@ export default function CelebrityPage() {
             clickable: true,
             renderBullet: (index, className) => {
               return `
-        <span class="${className} celebrity-bullet">
-          <img src="${celebrities[index].image}" />
-        </span>
-      `;
+                <span class="${className} ${styles.celebrityBullet}">
+                  <img src="${celebrities[index].image}" />
+                </span>
+              `;
             },
           }}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -71,10 +71,8 @@ export default function CelebrityPage() {
           {celebrities.map((item, index) => (
             <SwiperSlide key={index}>
               <div
-                className="hero-slide"
-                style={{
-                  backgroundImage: `url(${item.image})`,
-                }}
+                className={styles.heroSlide}
+                style={{ backgroundImage: `url(${item.image})` }}
               ></div>
             </SwiperSlide>
           ))}
@@ -82,21 +80,22 @@ export default function CelebrityPage() {
       </section>
 
       {/* DETAILS */}
-      <section className="celebrity-details">
-        <div className="details-card key-animate">
+      <section className={styles.celebrityDetails}>
+        <div className={styles.detailsCard}>
           <h2>{activeData.name}</h2>
 
-          <div className="meta">
+          <div className={styles.meta}>
             <span>📅 {activeData.year}</span>
             <span>⏳ {activeData.duration}</span>
           </div>
 
-          <div className="conclusion">
-            <div className="conclusion-inner">
+          <div className={styles.conclusion}>
+            <div className={styles.conclusionInner}>
               <h4>Description</h4>
               <p>{activeData.desc}</p>
             </div>
-            <div className="conclusion-inner">
+
+            <div className={styles.conclusionInner}>
               <h4>Conclusion</h4>
               <p>{activeData.conclusion}</p>
             </div>

@@ -1,0 +1,160 @@
+/* =========================
+   PAGE WRAPPER
+========================= */
+.clients-page {
+  padding: 60px 6%;
+  color: #111;
+  min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+.clients-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.clients-header h1 {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.clients-header h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+
+  width: 100px;
+  height: 4px;
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #000000, #9c9c9c,#000000);
+}
+.clients-header p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* =========================
+   SECTION WRAPPER
+========================= */
+.clients-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* =========================
+   CATEGORY TITLE
+========================= */
+.client-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.client-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 4px;
+  height: 18px;
+  background: #000000;
+  border-radius: 2px;
+}
+
+/* =========================
+   LOGO GRID
+========================= */
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+
+  padding: 25px;
+  border-radius: 18px;
+
+  /* GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  /* SOFT DEPTH */
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* =========================
+   LOGO CARD
+========================= */
+.client-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 15px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+.client-card img {
+  max-width: 100%;
+  max-height: 70px;
+  object-fit: contain;
+  /* filter: grayscale(100%); */
+  transition: 0.3s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.client-card:hover img {
+  /* filter: grayscale(0%); */
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .client-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .client-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .client-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clients-header h1 {
+    font-size: 32px;
+  }
+}
