@@ -171,9 +171,6 @@ export default function VikramMillsHero() {
           <div className="vm-info-item">
             <Clock size={16} /> 15–30 Days Execution
           </div>
-          <div className="vm-info-item">
-            <Sparkles size={16} /> Custom Sonic Identity
-          </div>
         </div>
 
         <div className="vm-cta">

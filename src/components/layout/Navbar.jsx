@@ -17,6 +17,7 @@ export default function Navbar() {
     { name: "Who we are?", href: "/about" },
     { name: "What we do?", href: "/services" },
     { name: "Our work", href: "/projects" },
+     { name: "Our clients", href: "/clients" },
   ];
 
   const socials = [

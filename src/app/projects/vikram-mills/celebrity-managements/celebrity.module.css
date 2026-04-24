@@ -1,13 +1,7 @@
-/* ================= PAGE ================= */
-.celebrityPage {
-  color: #111;
-  font-family: "Raleway", sans-serif;
-}
-
 /* ================= HERO ================= */
 .celebrityHero {
-  max-width: 1600px;
-  height: 60vh;
+  background-color: #422525;
+  max-width: 1200px;
   position: relative;
   overflow: hidden;
   border-radius: 20px;
@@ -16,7 +10,7 @@
 }
 
 /* overlay */
-.heroSlide::before {
+/* .heroSlide::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -26,16 +20,19 @@
     rgba(0, 0, 0, 0.5)
   );
   z-index: 1;
-}
+} */
 
 .heroSlide {
-  height: 60vh;
+  height: auto;
   background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.heroSlide img {
+  width: 100%;
 }
 
 /* ================= DETAILS ================= */
@@ -131,8 +128,8 @@
 }
 
 .celebritySwiper :global(.swiper-pagination-bullet) {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   background: rgba(255, 255, 255, 0.5);
   opacity: 1;
   transition: all 0.3s ease;
@@ -170,11 +167,11 @@
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
   .celebrityHero {
-    height: 50vh;
+    /* height: 50vh; */
   }
 
   .heroSlide {
-    height: 50vh;
+    /* height: 50vh; */
   }
 
   .detailsCard {
@@ -193,11 +190,11 @@
 @media (max-width: 768px) {
   .celebrityHero {
     width: 95%;
-    height: 40vh;
+    /* height: 40vh; */
   }
 
   .heroSlide {
-    height: 40vh;
+    /* height: 40vh; */
   }
 
   .detailsCard {
@@ -220,8 +217,12 @@
     font-size: 18px;
   }
   .celebritySwiper :global(.swiper-pagination-bullet) {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
+  }
+  .celebritySwiper :global(.swiper-pagination) {
+    height: 50px !important;
+    bottom: 0px;
   }
 }
 

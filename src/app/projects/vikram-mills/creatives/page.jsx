@@ -95,7 +95,7 @@ const showcaseData = [
     src: "https://images.unsplash.com/photo-1503602642458-232111445657",
   },
   {
-    id: 1,
+    id: 9,
     category: "Reels",
     title: "Fashion Campaign",
     type: "video",
@@ -105,7 +105,7 @@ const showcaseData = [
     src: "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
   },
   {
-    id: 2,
+    id: 10,
     category: "Reels",
     title: "Product Reel",
     type: "video",
@@ -115,7 +115,7 @@ const showcaseData = [
     src: "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
   },
   {
-    id: 3,
+    id: 11,
     category: "Creatives",
     title: "Instagram Ad",
     type: "image",
@@ -125,7 +125,7 @@ const showcaseData = [
     src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
   },
   {
-    id: 4,
+    id: 12,
     category: "Creatives",
     title: "Brand Poster",
     type: "image",
@@ -135,7 +135,7 @@ const showcaseData = [
     src: "https://images.unsplash.com/photo-1503602642458-232111445657",
   },
   {
-    id: 5,
+    id: 13,
     category: "Reels",
     title: "Fashion Campaign",
     type: "video",
@@ -145,7 +145,7 @@ const showcaseData = [
     src: "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
   },
   {
-    id: 6,
+    id: 14,
     category: "Reels",
     title: "Product Reel",
     type: "video",
@@ -155,7 +155,7 @@ const showcaseData = [
     src: "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
   },
   {
-    id: 7,
+    id: 15,
     category: "Creatives",
     title: "Instagram Ad",
     type: "image",
@@ -165,7 +165,7 @@ const showcaseData = [
     src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
   },
   {
-    id: 8,
+    id: 16,
     category: "Creatives",
     title: "Brand Poster",
     type: "image",
@@ -292,7 +292,7 @@ function Section({ title, data, setActiveItem }) {
             1024: { slidesPerView: 5 },
           }}
         >
-          {data.map((item) => (
+          {data?.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="crs-card" onClick={() => setActiveItem(item)}>
                 {item.type === "video" ? (

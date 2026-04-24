@@ -58,7 +58,7 @@ export default function ProjectPage() {
   return (
     <div className="project-page">
       <div className="project-hero-image">
-        <img src="/projects/vikram-mills/vikram-mills-strips.png" />
+        <img src="/projects/vikram-mills/banner-strips.png" />
       </div>
 
       {/* HERO */}

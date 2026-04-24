@@ -19,9 +19,9 @@
   padding: 100px 20px;
 
   /* background image */
-  background: url("https://img.freepik.com/premium-photo/black-white-newspaper-pages-with-dramatic-lighting-look-news-media-current-events_1074775-8383.jpg") ;
+  background: url("https://img.freepik.com/free-photo/top-view-old-french-newspaper-pieces_23-2149318857.jpg") ;
   background-repeat: repeat;
-  background-size: cover;
+  background-size: contain;
 
 
   border-radius: 20px;
@@ -29,19 +29,19 @@
 }
 
 /* DARK OVERLAY FOR READABILITY */
-/* .press-header::before {
+.press-header::before {
   content: "";
   position: absolute;
   inset: 0;
 
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.1)
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.6)
   );
 
   z-index: 0;
-} */
+}
 
 /* CONTENT ABOVE OVERLAY */
 .press-header h1,

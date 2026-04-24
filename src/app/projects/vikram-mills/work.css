@@ -13,9 +13,12 @@
    HERO
 ========================= */
 .project-hero-image{
-  height: 500px;
+  height: auto;
   width: 100%;
   overflow: hidden;
+}
+.project-hero-image img{
+  width: 100%;
 }
 
 .project-hero1 {
