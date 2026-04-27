@@ -1097,4 +1097,29 @@ export const PROJECTS = [
       "Developed a clean and responsive website for Kiloi, ensuring smooth navigation, fast performance, and a strong digital presence aligned with the brand’s identity.",
     sections: [],
   },
+  {
+    // slug: "ims-noida/",
+    slug: "ims-noida/radio-jingles",
+    title: "IMS Noida Campaign",
+    category: "Branding",
+    updatedAt: "2026-03-26",
+    year: "2025",
+    client: "IMS Noida",
+    src: "/projects/ims-noida/ims.png",
+    intro:
+      "Executed a high-impact radio jingle campaign for IMS Noida, focused on strengthening brand recall, student engagement, and regional awareness through strategic audio storytelling.",
+    sections: [],
+  },
+  {
+    slug: "hyundai/radio-jingles",
+    title: "Hyundai Radio Campaign",
+    category: "Branding",
+    updatedAt: "2026-03-26",
+    year: "2025",
+    client: "Hyundai",
+    src: "/projects/hyundai/hydai.png",
+    intro:
+      "Executed a high-impact radio campaign for Hyundai, designed to amplify brand recall, drive showroom visits, and promote key vehicle launches through engaging audio storytelling and strategic media placement.",
+    sections: [],
+  },
 ];

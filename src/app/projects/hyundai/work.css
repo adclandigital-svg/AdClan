@@ -1,0 +1,359 @@
+/* =========================
+   PAGE (TRANSPARENT)
+========================= */
+.project-page {
+  background: transparent;
+  color: #111;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  font-family: "Raleway", sans-serif;
+}
+
+/* =========================
+   HERO
+========================= */
+.project-hero-image{
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+.project-hero-image img{
+  width: 100%;
+}
+
+.project-hero1 {
+  text-align: center;
+  padding: 50px 20px 50px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.project-hero1 h1 {
+  font-size: 56px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #000, #777, #000);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineText 6s linear infinite;
+}
+
+@keyframes shineText {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* =========================
+   WORK SECTION
+========================= */
+.project-works {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* optional glass container */
+.project-works-inner {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 40px 20px;
+}
+
+.project-works h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #111;
+  position: relative;
+  /* display: inline-block;  */
+}
+
+/* Underline */
+.project-works h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px; /* distance from text */
+  transform: translateX(-50%);
+  width: 100px; /* length of underline */
+  height: 3px; /* thickness of underline */
+  background: #000;
+  border-radius: 2px;
+}
+
+/* =========================
+   GRID
+========================= */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 4));
+  justify-content: center; /* 🔥 centers items */
+  gap: 30px;
+}
+
+/* =========================
+   CARD (GLASS PREMIUM)
+========================= */
+/* =========================
+   CARD (iOS GLASSMORPHISM)
+========================= */
+.work-card {
+  position: relative;
+  padding: 30px;
+  border-radius: 28px;
+
+  /* 🔥 iOS Glass Background */
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.55),
+    rgba(255, 255, 255, 0.25)
+  );
+
+  backdrop-filter: blur(35px) saturate(200%);
+  -webkit-backdrop-filter: blur(35px) saturate(200%);
+
+  /* subtle border glow */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  /* 🔥 depth shadows (important) */
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 20px 80px rgba(0, 0, 0, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  text-decoration: none;
+  color: #111;
+
+  /* keep visible */
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
+}
+
+/* stagger animation */
+.work-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.work-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.work-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.work-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* =========================
+   HOVER EFFECT
+========================= */
+.work-card:hover {
+  transform: translateY(-15px) scale(1.04);
+
+  background: rgba(255, 255, 255, 0.65);
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.25),
+    0 0 60px rgba(255, 255, 255, 0.6);
+}
+
+/* =========================
+   ICON
+========================= */
+.work-icon {
+  font-size: 42px;
+  margin-bottom: 20px;
+  transition: 0.4s;
+}
+
+/* =========================
+   TEXT
+========================= */
+.work-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: 700;
+}
+
+.work-card p {
+  font-size: 14px;
+  color: #000000;
+}
+
+/* =========================
+   ARROW
+========================= */
+.work-arrow {
+  margin-top: 20px;
+  font-size: 18px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+/* =========================
+   INTERACTIONS
+========================= */
+.work-card:hover .work-icon {
+  transform: scale(1.2) rotate(6deg);
+}
+
+.work-card:hover .work-arrow {
+  transform: translateX(10px);
+  opacity: 1;
+}
+
+/* =========================
+   SHINE EFFECT
+========================= */
+.shine {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+
+  transform: rotate(25deg);
+  transition: 0.6s;
+}
+
+.work-card:hover .shine {
+  top: 100%;
+  left: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .project-hero h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-hero {
+    padding: 80px 20px 50px;
+  }
+
+  .project-hero h1 {
+    font-size: 32px;
+  }
+
+  .project-hero p {
+    font-size: 15px;
+  }
+
+  .work-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-hero h1 {
+    font-size: 26px;
+  }
+
+  .project-works h2 {
+    font-size: 24px;
+  }
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-radius: 20px;
+
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Subtitle */
+.hero-sub {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+/* Stats */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-stats h3 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.hero-stats span {
+  font-size: 13px;
+  color: #000000;
+}
+
+/* Buttons */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 12px 26px;
+  border-radius: 30px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: 1px solid #000;
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #000;
+  color: #fff;
+}
