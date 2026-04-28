@@ -1,0 +1,81 @@
+.magazine-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #ffffff; */
+}
+
+/* WRAPPER FULL WIDTH */
+.magazine-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BOOK */
+.magazine-book {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* OVERLAY */
+.flip-overlay {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.flip-overlay.show {
+  opacity: 1;
+}
+
+.flip-overlay.right {
+  right: 0;
+}
+
+.flip-overlay.left {
+  left: 0;
+}
+.flip-overlay span {
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-size: 20px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .flip-overlay {
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  .flip-overlay span {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  .stf__parent canvas {
+    width: 96% !important;
+    left: 2% !important;
+  }
+}
+
+.stf__parent canvas {
+  box-shadow: 30px 50px 50px rgba(0, 0, 0, 0.4);
+}

@@ -38,8 +38,9 @@ export default function Footer() {
           </div>
 
           {/* Column 2 */}
+          {/* Column 2 */}
           <div className="footer-col">
-            <h3 className="footer-title">Quick Links</h3>
+            <h3 className="footer-title">Explore Adclan</h3>
             <ul className="footer-links">
               <li>
                 <Link href="/about">Who we are?</Link>
@@ -56,20 +57,28 @@ export default function Footer() {
               <li>
                 <Link href="/blogs">Read our stories</Link>
               </li>
-
               <li>
-                <Link href="/career"> Work With Adclan</Link>
-              </li>
-              <li>
-                <Link href="/contact">Reach us</Link>
+                <Link
+                  href="/portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Our Portfolio
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Column 3 */}
           <div className="footer-col">
-            <h3 className="footer-title">Policies</h3>
+            <h3 className="footer-title">Connect & Policies</h3>
             <ul className="footer-links">
+              <li>
+                <Link href="/career">Work With Adclan</Link>
+              </li>
+              <li>
+                <Link href="/contact">Reach us</Link>
+              </li>
               <li>
                 <Link href="/privacy-policy">Privacy Policy</Link>
               </li>

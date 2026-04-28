@@ -37,7 +37,6 @@
 //   );
 // }
 
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -58,6 +57,7 @@ import InstallPWA from "@/components/layout/InstallPWA";
 export default function RootLayoutClient({ children }) {
   const [showLoader, setShowLoader] = useState(false);
   const pathname = usePathname();
+  const isPortfolio = pathname.startsWith("/portfolio");
 
   useEffect(() => {
     // ✅ Only run on homepage
@@ -81,18 +81,19 @@ export default function RootLayoutClient({ children }) {
     <>
       {/* ✅ Show only on homepage */}
       {pathname === "/" && showLoader && <LoadingScreen />}
+
       
-      <InstallPWA/>
+      {!isPortfolio && <InstallPWA />}
 
       <GsapErrorHandler />
       <LenisProvider>
-        <LeadChatbot />
-        <Navbar />
+        {!isPortfolio && <LeadChatbot />}
+
+        {!isPortfolio && <Navbar />}
         {children}
-        <Footer />
+        {!isPortfolio && <Footer />}
       </LenisProvider>
-      <GTM/>
-      
+      <GTM />
     </>
   );
 }
