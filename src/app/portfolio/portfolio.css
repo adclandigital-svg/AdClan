@@ -1,6 +1,6 @@
 .magazine-section {
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +10,7 @@
 /* WRAPPER FULL WIDTH */
 .magazine-wrapper {
   width: 100%;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   display: flex;
   justify-content: center;
   align-items: center;

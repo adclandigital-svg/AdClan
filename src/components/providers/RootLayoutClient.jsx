@@ -82,16 +82,18 @@ export default function RootLayoutClient({ children }) {
       {/* ✅ Show only on homepage */}
       {pathname === "/" && showLoader && <LoadingScreen />}
 
-      
-      {!isPortfolio && <InstallPWA />}
+      {/* {!isPortfolio && <InstallPWA />} */}
+      <InstallPWA />
 
       <GsapErrorHandler />
       <LenisProvider>
-        {!isPortfolio && <LeadChatbot />}
-
-        {!isPortfolio && <Navbar />}
+        {/* {!isPortfolio && <LeadChatbot />} */}
+        <LeadChatbot />
+        <Navbar />
+        {/* {!isPortfolio && <Navbar />} */}
         {children}
-        {!isPortfolio && <Footer />}
+        {/* {!isPortfolio && <Footer />} */}
+        <Footer />
       </LenisProvider>
       <GTM />
     </>

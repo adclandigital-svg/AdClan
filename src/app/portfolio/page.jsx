@@ -12,13 +12,13 @@ export default function MagazineBook() {
   const getSize = () => {
     const screenWidth = window.innerWidth;
 
-    const containerWidth = Math.min(screenWidth * 0.9, 1400);
+    const containerWidth = Math.min(screenWidth * 0.9, 1800);
 
     // ✅ ONLY LARGE SCREENS (>=1200) → DOUBLE
     if (screenWidth >= 1200) {
       return {
         width: containerWidth / 2,
-        height: (containerWidth / 2) * 1.1,
+        height: (containerWidth / 2) * 0.8,
         mode: "double",
       };
     }
