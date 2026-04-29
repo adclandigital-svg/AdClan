@@ -182,32 +182,22 @@
 }
 
 @media (max-width: 574px) {
+  .magazine-section {
+    min-height: auto;
+    
+  }
   .tab-button {
     padding: 6px 16px;
     font-size: 0.8rem;
   }
   .content-container {
-    margin-top: 60px;
+    margin-top: 100px;
+    margin-bottom: 60px;
   }
   .pdf-embed {
     height: 70vh;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .tabs-container {
   position: absolute;
@@ -229,7 +219,7 @@
   padding: 4px;
   backdrop-filter: blur(12px);
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 /* Sliding background */
@@ -272,3 +262,14 @@
 .tab-btn.active {
   color: #fff;
 }
+
+
+
+/* @media (max-width: 768px) {
+  .stf__parent canvas {
+    width: auto !important;
+    height: auto !important;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+} */

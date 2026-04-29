@@ -40,8 +40,10 @@ export default function MagazineBook() {
   // =========================
   const getSize = () => {
     const screenWidth = window.innerWidth;
+
     const containerWidth = Math.min(screenWidth * 0.9, 1800);
 
+    // ✅ ONLY LARGE SCREENS (>=1200) → DOUBLE
     if (screenWidth >= 1200) {
       return {
         width: containerWidth / 2,
@@ -50,13 +52,22 @@ export default function MagazineBook() {
       };
     }
 
+    // ✅ EVERYTHING BELOW 1200 → SINGLE
+    if (screenWidth >= 574) {
+      return {
+        width: screenWidth * 1, // ✅ correct replacement for 90%
+        height: containerWidth * 1.1,
+        mode: "single",
+      };
+    }
+
+    // ✅ MOBILE
     return {
-      width: screenWidth * 0.95,
+      width: screenWidth * 1,
       height: containerWidth * 1,
       mode: "single",
     };
   };
-
   // =========================
   // FLIPBOOK INIT
   // =========================
@@ -74,6 +85,7 @@ export default function MagazineBook() {
 
       const size = getSize();
       pageFlip.current?.destroy();
+      console.log(size)
 
       const flip = new PageFlip(bookRef.current, {
         width: size.width,
@@ -81,8 +93,8 @@ export default function MagazineBook() {
         size: "fixed",
         showCover: false,
         useMouseEvents: true,
-        mobileScrollSupport: false,
-        maxShadowOpacity: 0.7,
+        mobileScrollSupport: true,
+        maxShadowOpacity: 1,
         drawShadow: true,
         flippingTime: 700,
         swipeDistance: 30,
@@ -143,7 +155,6 @@ export default function MagazineBook() {
 
       {/* CONTENT */}
       <div className="content-container">
-        {/* BOOK */}
         {activeTab === "book" && (
           <div className="magazine-wrapper">
             <div ref={bookRef} className="magazine-book" />
@@ -158,7 +169,6 @@ export default function MagazineBook() {
           </div>
         )}
 
-        {/* PDF */}
         {activeTab === "pdf" && <PdfViewer />}
       </div>
     </div>
