@@ -85,7 +85,6 @@ export default function MagazineBook() {
 
       const size = getSize();
       pageFlip.current?.destroy();
-      console.log(size)
 
       const flip = new PageFlip(bookRef.current, {
         width: size.width,
@@ -146,7 +145,15 @@ export default function MagazineBook() {
 
           <button
             className={`tab-btn ${activeTab === "pdf" ? "active" : ""}`}
-            onClick={() => setActiveTab("pdf")}
+            onClick={() => {
+              const isMobile = window.innerWidth <= 768;
+
+              if (isMobile) {
+                window.open("/adclan-portfolio-compressed.pdf", "_blank", "noopener,noreferrer");
+              } else {
+                setActiveTab("pdf"); // desktop shows viewer
+              }
+            }}
           >
             PDF Preview
           </button>
