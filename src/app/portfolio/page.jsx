@@ -2,19 +2,46 @@
 
 import { useEffect, useRef, useState } from "react";
 import { PageFlip } from "page-flip";
+import dynamic from "next/dynamic";
 import "./portfolio.css";
+
+// PDF Viewer (client only)
+const PdfViewer = dynamic(() => import("./components/PdfViewer"), {
+  ssr: false,
+});
 
 export default function MagazineBook() {
   const bookRef = useRef(null);
   const pageFlip = useRef(null);
-  const [step, setStep] = useState(0);
 
+  const [step, setStep] = useState(0);
+  const [activeTab, setActiveTab] = useState("book");
+  const [isClient, setIsClient] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // =========================
+  // INIT CLIENT + RESPONSIVE
+  // =========================
+  useEffect(() => {
+    setIsClient(true);
+
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
+
+  // =========================
+  // SIZE CONFIG
+  // =========================
   const getSize = () => {
     const screenWidth = window.innerWidth;
-
     const containerWidth = Math.min(screenWidth * 0.9, 1800);
 
-    // ✅ ONLY LARGE SCREENS (>=1200) → DOUBLE
     if (screenWidth >= 1200) {
       return {
         width: containerWidth / 2,
@@ -23,32 +50,30 @@ export default function MagazineBook() {
       };
     }
 
-    // ✅ EVERYTHING BELOW 1200 → SINGLE
-    if (screenWidth >= 574) {
-      return {
-        width: screenWidth * 1, // ✅ correct replacement for 90%
-        height: containerWidth * 1.1,
-        mode: "single",
-      };
-    }
-
-    // ✅ MOBILE
     return {
-      width: screenWidth * 1,
+      width: screenWidth * 0.95,
       height: containerWidth * 1,
       mode: "single",
     };
   };
 
+  // =========================
+  // FLIPBOOK INIT
+  // =========================
   useEffect(() => {
-    if (!bookRef.current) return;
+    if (!isClient) return;
 
-    const initFlip = () => {
+    if (activeTab !== "book") {
+      pageFlip.current?.destroy();
+      pageFlip.current = null;
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      if (!bookRef.current) return;
+
       const size = getSize();
-
-      if (pageFlip.current) {
-        pageFlip.current.destroy();
-      }
+      pageFlip.current?.destroy();
 
       const flip = new PageFlip(bookRef.current, {
         width: size.width,
@@ -66,85 +91,76 @@ export default function MagazineBook() {
         mode: size.mode,
       });
 
-      flip.loadFromImages([
-        "/portfolio-image/Adclan Portfolio_page-0001.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0002.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0003.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0004.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0005.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0006.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0007.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0008.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0009.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0010.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0011.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0012.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0013.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0014.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0015.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0016.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0017.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0018.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0019.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0020.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0021.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0022.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0023.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0024.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0025.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0026.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0027.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0028.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0029.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0030.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0031.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0032.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0033.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0034.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0035.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0036.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0037.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0038.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0039.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0040.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0041.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0042.jpg",
-        "/portfolio-image/Adclan Portfolio_page-0043.jpg",
-      ]);
+      const images = Array.from({ length: 43 }, (_, i) => {
+        const num = String(i + 1).padStart(4, "0");
+        return `/portfolio-image/Adclan Portfolio_page-${num}.jpg`;
+      });
+
+      flip.loadFromImages(images);
 
       flip.on("flip", () => {
-        setStep((prev) => {
-          if (prev === 0) return 1;
-          if (prev === 1) return 2;
-          return prev;
-        });
+        setStep((prev) => (prev === 0 ? 1 : prev === 1 ? 2 : prev));
       });
 
       pageFlip.current = flip;
-    };
+    }, 0);
 
-    initFlip();
+    return () => clearTimeout(timer);
+  }, [activeTab, isClient]);
 
-    const handleResize = () => initFlip();
-    window.addEventListener("resize", handleResize);
+  // =========================
+  // LOADING
+  // =========================
+  if (!isClient) {
+    return <div className="magazine-section" style={{ minHeight: "90vh" }} />;
+  }
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      pageFlip.current?.destroy();
-    };
-  }, []);
-
+  // =========================
+  // UI
+  // =========================
   return (
     <div className="magazine-section">
-      <div className="magazine-wrapper">
-        <div ref={bookRef} className="magazine-book" />
+      {/* TABS (ALWAYS VISIBLE) */}
+      <div className="tabs-container">
+        <div className="tabs-slider">
+          <div className={`slider ${activeTab === "pdf" ? "pdf" : ""}`} />
+
+          <button
+            className={`tab-btn ${activeTab === "book" ? "active" : ""}`}
+            onClick={() => setActiveTab("book")}
+          >
+            Book View
+          </button>
+
+          <button
+            className={`tab-btn ${activeTab === "pdf" ? "active" : ""}`}
+            onClick={() => setActiveTab("pdf")}
+          >
+            PDF Preview
+          </button>
+        </div>
       </div>
 
-      {step !== 2 && (
-        <div className={`flip-overlay ${step === 0 ? "right" : "left"} show`}>
-          <span>{step === 0 ? "Click to Flip →" : "← Flip Back"}</span>
-        </div>
-      )}
+      {/* CONTENT */}
+      <div className="content-container">
+        {/* BOOK */}
+        {activeTab === "book" && (
+          <div className="magazine-wrapper">
+            <div ref={bookRef} className="magazine-book" />
+
+            {step !== 2 && (
+              <div
+                className={`flip-overlay ${step === 0 ? "right" : "left"} show`}
+              >
+                <span>{step === 0 ? "Click to Flip →" : "← Flip Back"}</span>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* PDF */}
+        {activeTab === "pdf" && <PdfViewer />}
+      </div>
     </div>
   );
 }

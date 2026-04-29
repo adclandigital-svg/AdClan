@@ -7,13 +7,20 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./homereels.css";
 
+// const reels = [
+//   { src: "/home/25.mp4" },
+//   { src: "/home/26.mp4" },
+//   { src: "/home/27.mp4" },
+//   { src: "/home/22.mp4" },
+//   { src: "/home/23.mp4" },
+//   { src: "/home/24.mp4" },
+// ];
 const reels = [
-  { src: "/home/25.mp4" },
-  { src: "/home/26.mp4" },
-  { src: "/home/27.mp4" },
-  { src: "/home/22.mp4" },
-  { src: "/home/23.mp4" },
-  { src: "/home/24.mp4" },
+  { src: "/home/reels/aggarwal.mp4" },
+  { src: "/home/reels/jaipurjewellers.mp4" },
+  { src: "/home/reels/kb-mart.mp4" },
+  { src: "/home/reels/smile train video ad 2.mp4" },
+  { src: "/home/reels/vikram-mills.mp4" },
 ];
 
 export default function Homereels() {
