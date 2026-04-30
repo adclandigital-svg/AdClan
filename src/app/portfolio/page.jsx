@@ -104,7 +104,7 @@ export default function MagazineBook() {
 
       const images = Array.from({ length: 43 }, (_, i) => {
         const num = String(i + 1).padStart(4, "0");
-        return `/portfolio-image/Adclan Portfolio_page-${num}.jpg`;
+        return `/portfolio-img/Adclan Portfolio_page-${num}.jpg`;
       });
 
       flip.loadFromImages(images);

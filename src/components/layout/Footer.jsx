@@ -62,6 +62,12 @@ export default function Footer() {
                   href="/portfolio"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => {
+                    if (window.innerWidth < 768) {
+                      e.preventDefault(); // stop default link
+                      window.open("/adclan-portfolio-compressed.pdf", "_blank"); // open PDF on mobile
+                    }
+                  }}
                 >
                   Our Portfolio
                 </Link>
