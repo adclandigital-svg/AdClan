@@ -293,11 +293,12 @@
 .modal-details {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .modal-details div {
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.5;
   padding: 10px;
   border-radius: 8px;
   background: rgba(0,0,0,0.04);
