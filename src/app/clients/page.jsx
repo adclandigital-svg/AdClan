@@ -100,6 +100,17 @@ const clientData = [
       "/client-logo/adclan-logo-30.png",
       "/client-logo/adclan-logo-32.png",
       "/client-logo/adclan-logo-25.png",
+      "/new-clients/2.webp",
+      "/new-clients/3.webp",
+      "/new-clients/4.webp",
+      "/new-clients/6.webp",
+      "/new-clients/8.webp",
+      "/new-clients/13.webp",
+      "/new-clients/14.webp",
+      "/new-clients/16.webp",
+      "/new-clients/17.webp",
+      "/new-clients/20.webp",
+      "/new-clients/22.webp",
     ],
   },
   {
@@ -108,6 +119,8 @@ const clientData = [
       "/client-logo/adclan-logo-3.png",
       "/client-logo/adclan-logo-4.png",
       "/client-logo/adclan-logo-8.png", // eyewear moved here
+      "/new-clients/7.webp",
+      "/new-clients/24.webp",
     ],
   },
   {
@@ -117,6 +130,7 @@ const clientData = [
       "/client-logo/adclan-logo-27.png",
       "/client-logo/adclan-logo-29.png",
       "/client-logo/adclan-logo-14.png", // ethnic wear merged
+      "/new-clients/15.webp",
     ],
   },
   {
@@ -125,6 +139,7 @@ const clientData = [
       "/client-logo/adclan-logo-2.png",
       "/client-logo/adclan-logo-5.png",
       "/client-logo/adclan-logo-23.png",
+      "/new-clients/5.webp",
     ],
   },
   {
@@ -132,11 +147,16 @@ const clientData = [
     logos: [
       "/client-logo/adclan-logo-16.png",
       "/client-logo/adclan-logo-26.png",
+      "/new-clients/10.webp",
+      "/new-clients/21.webp",
     ],
   },
   {
     title: "Technology & Electronics",
-    logos: ["/client-logo/adclan-logo-21.png","/client-logo/adclan-logo-31.svg"],
+    logos: [
+      "/client-logo/adclan-logo-21.png",
+      "/client-logo/adclan-logo-31.svg",
+    ],
   },
   {
     title: "Consulting & Services",
@@ -144,8 +164,11 @@ const clientData = [
       "/client-logo/adclan-logo-12.png", // advisory
       "/client-logo/adclan-logo-1.png", // welfare
       "/client-logo/adclan-logo-6.png", // astrology
-      
     ],
+  },
+  {
+    title: "Institutes & Education",
+    logos: ["/new-clients/11.webp", "/new-clients/19.webp","/new-clients/23.webp",],
   },
 ];
 export default function ClientsPage() {
