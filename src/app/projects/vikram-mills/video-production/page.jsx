@@ -20,58 +20,13 @@ export default function Page() {
   const project = {
     slides: [
       {
-        title: "Right Gold Ads Shoot & Campaign",
-        category: "Celebrity Management",
-        year: "2026",
-        client: "Right Gold",
+        title: "Vikram Mills Rice Brand Film & Product Campaign",
+        category: "Video Production",
+        year: "2024",
+        client: "VIKRAM MILLS",
         intro:
-          "Adclan didn't just create an ad for Right Gold — we built a sales engine.",
-        src: "/projects/right-gold/banner.mov",
-      },
-      {
-        title: "Right Gold Ads Shoot & Campaign",
-        category: "Celebrity Management",
-        year: "2026",
-        client: "Right Gold",
-        intro:
-          "Adclan didn't just create an ad for Right Gold — we built a sales engine.",
-        src: "/projects/right-gold/banner.mov",
-      },
-      {
-        title: "Right Gold Ads Shoot & Campaign",
-        category: "Celebrity Management",
-        year: "2026",
-        client: "Right Gold",
-        intro:
-          "Adclan didn't just create an ad for Right Gold — we built a sales engine.",
-        src: "/projects/right-gold/banner.mov",
-      },
-      {
-        title: "Right Gold Ads Shoot & Campaign",
-        category: "Celebrity Management",
-        year: "2026",
-        client: "Right Gold",
-        intro:
-          "Adclan didn't just create an ad for Right Gold — we built a sales engine.",
-        src: "/projects/right-gold/banner.mov",
-      },
-      {
-        title: "Right Gold Ads Shoot & Campaign",
-        category: "Celebrity Management",
-        year: "2026",
-        client: "Right Gold",
-        intro:
-          "Adclan didn't just create an ad for Right Gold — we built a sales engine.",
-        src: "/projects/right-gold/banner.mov",
-      },
-      {
-        title: "Right Gold Ads Shoot & Campaign",
-        category: "Celebrity Management",
-        year: "2026",
-        client: "Right Gold",
-        intro:
-          "Adclan didn't just create an ad for Right Gold — we built a sales engine.",
-        src: "/projects/right-gold/banner.mov",
+          "Professional video production for Vikram Mills, producing high-quality brand films and product showcases that highlight the purity and quality of rice products.",
+        src: "/projects/vikram-mills/Untitled design.mp4",
       },
     ],
   };
@@ -85,15 +40,16 @@ export default function Page() {
   ];
 
   const caseStudy = {
-    title: "Right Gold Ads Campaign",
-    subtitle: "Celebrity Management & Performance Marketing",
+    title: "Vikram Mills Food Products Brand Campaign",
+    subtitle: "Brand Film Production & Digital Marketing",
     description:
-      "Adclan executed a full-scale celebrity-driven campaign for Right Gold, combining cinematic storytelling with performance-driven ad strategy to maximize conversions and brand recall.",
+      "Adclan executed a complete video production and digital branding campaign for Vikram Mills, creating premium visual content and promotional assets that highlighted the purity, quality, and trust of the rice brand.",
     duration: "3 Months",
-    client: "Right Gold",
-    services: ["Video Production", "Celebrity Management", "Paid Ads"],
-    result: "180% increase in brand visibility & 3X ROI on ad spend",
-    video: "/projects/right-gold/banner.mov",
+    client: "Vikram Mills",
+    services: ["Video Production", "Brand Campaign", "Digital Marketing"],
+    result:
+      "Boosted brand awareness, customer engagement, and digital reach across multiple platforms.",
+    video: "/projects/vikram-mills/banner.mov",
   };
 
   const isHovering = useRef(false);
@@ -154,6 +110,8 @@ export default function Page() {
                 >
                   <div className="video-meta">
                     <span>{slide.client}</span>
+
+                    <span>{slide.category}</span>
                     <span>{slide.year}</span>
                   </div>
                   {/* <p className="category">{slide.category}</p> */}
@@ -166,7 +124,7 @@ export default function Page() {
           ))}
         </Swiper>
       </section>
-      <section className="vp-cards-section">
+      {/* <section className="vp-cards-section">
         {project.slides.map((data, i) => (
           <div
             key={i}
@@ -182,7 +140,7 @@ export default function Page() {
             </div>
           </div>
         ))}
-      </section>
+      </section> */}
 
       <section className="cs-section">
         <div className="cs-card">
@@ -218,7 +176,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section
+      {/* <section
         className="image-slider-section"
         onMouseEnter={() => swiperRef.current?.autoplay?.stop()}
         onMouseLeave={() => swiperRef.current?.autoplay?.start()}
@@ -267,7 +225,7 @@ export default function Page() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </section>
+      </section> */}
 
       {showPopup && (
         <div className="cs-popup-overlay" onClick={() => setShowPopup(false)}>

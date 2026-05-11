@@ -16,9 +16,11 @@
   height: auto;
   width: 100%;
   overflow: hidden;
+
 }
 .project-hero-image img{
   width: 100%;
+  object-fit: cover;
 }
 
 .project-hero1 {
@@ -174,6 +176,7 @@
    ICON
 ========================= */
 .work-icon {
+  text-align: center;
   font-size: 42px;
   margin-bottom: 20px;
   transition: 0.4s;
@@ -183,6 +186,7 @@
    TEXT
 ========================= */
 .work-card h3 {
+  text-align: center;
   font-size: 22px;
   margin-bottom: 10px;
   color: #000;
@@ -190,18 +194,22 @@
 }
 
 .work-card p {
+  text-align: center;
   font-size: 14px;
   color: #000000;
+  hyphens: auto;
 }
 
 /* =========================
    ARROW
 ========================= */
 .work-arrow {
+  text-align: center;
   margin-top: 20px;
   font-size: 18px;
   opacity: 1;
   transition: 0.3s;
+  
 }
 
 /* =========================

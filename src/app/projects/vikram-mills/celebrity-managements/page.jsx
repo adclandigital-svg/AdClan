@@ -20,19 +20,8 @@ const celebrities = [
     conclusion:
       "The campaign successfully elevated Vikram Mills’ brand perception, strengthening its positioning as a premium and stylish textile choice. It drove higher engagement across digital platforms, increased product visibility, and built a strong aspirational connect with the target audience.",
 
-    image: "/projects/vikram-mills/cb-banner.png",
-  },
-  {
-    name: "Adah Sharma",
-    year: "2022",
-    duration: "12 Months Campaign",
-    desc: "We executed a premium fashion-led campaign for Vikram Mills, focusing on elegant storytelling and fabric-centric visuals. The strategy highlighted the versatility and quality of Vikram Mills textiles through curated photoshoots, styled content, and platform-specific creatives. By aligning the brand’s aesthetic with Adah Sharma’s graceful and expressive persona, we created visually engaging content that resonated with modern audiences.",
-
-    conclusion:
-      "The campaign successfully elevated Vikram Mills’ brand perception, strengthening its positioning as a premium and stylish textile choice. It drove higher engagement across digital platforms, increased product visibility, and built a strong aspirational connect with the target audience.",
-
-    image: "/projects/vikram-mills/cb-banner.png",
-  },
+    image: "/projects/vikram-mills/Vikram-mills-celeb.png",
+  }
 ];
 
 export default function CelebrityPage() {

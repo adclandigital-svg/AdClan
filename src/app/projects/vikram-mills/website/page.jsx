@@ -7,14 +7,32 @@ export default function ProjectPage() {
 
   const project = {
     name: "Vikram Mills",
+
     tagline:
       "Vikram Mills is a landmark redevelopment project that transforms a historic textile mill into a vibrant commercial and lifestyle destination. The digital experience was crafted to reflect its legacy while showcasing modern architecture, premium retail spaces, and dynamic business environments.",
+
     website: "https://vikrammills.com/",
 
     description:
       "Vikram Mills is a landmark redevelopment project that transforms a historic textile mill into a vibrant commercial and lifestyle destination. The digital experience was crafted to reflect its legacy while showcasing modern architecture, premium retail spaces, and dynamic business environments.",
 
-    tech: ["Next.js", "React", "GSAP", "Three.js", "CSS"],
+    tech: [
+      "Next.js",
+      "React",
+      "GSAP",
+      "Three.js",
+      "CSS",
+      "AMP",
+      "Font Awesome 4.7.0",
+      "PHP 8.3.30",
+      "Bootstrap 3.4.1",
+      "jQuery 3.5.1",
+      "OWL Carousel",
+      "Masonry",
+      "LazySizes",
+      "Isotope",
+      "core-js 3.32.2",
+    ],
 
     features: [
       "Cinematic Visual Experience",
@@ -22,9 +40,14 @@ export default function ProjectPage() {
       "Interactive Layouts",
       "High Performance Optimization",
       "Responsive Design",
+      "Facebook Pixel Integration",
+      "Google AdSense",
+      "Cloudflare CDN",
+      "Apache HTTP Server",
+      "Lazy Loading Optimization",
     ],
 
-    hosting: "Vercel (Edge Deployment)",
+    hosting: "Apache HTTP Server with Cloudflare CDN",
 
     work: [
       "Designed modern UI inspired by architectural layouts",
@@ -32,12 +55,18 @@ export default function ProjectPage() {
       "Implemented smooth animations using GSAP",
       "Optimized performance and loading speed",
       "Created responsive design for all devices",
+      "Integrated Facebook Pixel",
+      "Configured Google AdSense",
+      "Implemented LazySizes optimization",
+      "Integrated OWL Carousel and Masonry layouts",
     ],
 
     challenges: [
       "Balancing heritage feel with modern UI",
       "Handling heavy visuals without performance loss",
       "Maintaining smooth animation experience",
+      "Optimizing third-party libraries and scripts",
+      "Improving overall frontend performance",
     ],
 
     result:
@@ -61,9 +90,14 @@ export default function ProjectPage() {
             <span></span>
           </div>
 
-          <div className={`website-iframe-container ${activePreview ? "website-active" : ""}`}>
+          <div
+            className={`website-iframe-container ${activePreview ? "website-active" : ""}`}
+          >
             {!activePreview && (
-              <div className="website-overlay" onClick={() => setActivePreview(true)}>
+              <div
+                className="website-overlay"
+                onClick={() => setActivePreview(true)}
+              >
                 <div className="website-overlay-content">
                   <div className="website-play-icon">▶</div>
                   <p>Click to Preview</p>
@@ -75,7 +109,6 @@ export default function ProjectPage() {
           </div>
         </div>
       </section>
-
 
       <section className="website-details">
         <div className="website-card">
