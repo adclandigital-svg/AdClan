@@ -17,162 +17,183 @@ const showcaseData = [
   {
     id: 1,
     category: "Reels",
-    title: "Fashion Campaign",
+    title: "Vikram Mills Product Reel",
     type: "video",
-    client: "Right Gold",
+    client: "Vikram Mills",
     platform: "Instagram",
     duration: "45 Days",
-    src: "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
+    src: "/projects/vikram-mills/creatives/1.mp4",
   },
   {
     id: 2,
     category: "Reels",
-    title: "Product Reel",
+    title: "Vikram Mills Brand Reel",
     type: "video",
-    client: "Glow Skin",
-    platform: "Instagram / YouTube",
-    duration: "30 Days",
-    src: "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
+    client: "Vikram Mills",
+    platform: "Instagram",
+    duration: "45 Days",
+    src: "/projects/vikram-mills/creatives/2.mp4",
   },
   {
     id: 3,
-    category: "Creatives",
-    title: "Instagram Ad",
-    type: "image",
-    client: "Nike",
+    category: "Reels",
+    title: "Vikram Mills Campaign Reel",
+    type: "video",
+    client: "Vikram Mills",
     platform: "Instagram",
-    duration: "15 Days",
-    src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+    duration: "45 Days",
+    src: "/projects/vikram-mills/creatives/3.mp4",
   },
   {
     id: 4,
-    category: "Creatives",
-    title: "Brand Poster",
-    type: "image",
-    client: "Adidas",
-    platform: "Facebook",
-    duration: "20 Days",
-    src: "https://images.unsplash.com/photo-1503602642458-232111445657",
+    category: "Reels",
+    title: "Vikram Mills Rice Reel",
+    type: "video",
+    client: "Vikram Mills",
+    platform: "Instagram",
+    duration: "45 Days",
+    src: "/projects/vikram-mills/creatives/4.mp4",
   },
   {
     id: 5,
     category: "Reels",
-    title: "Fashion Campaign",
+    title: "Vikram Mills Wheat Reel",
     type: "video",
-    client: "Right Gold",
+    client: "Vikram Mills",
     platform: "Instagram",
     duration: "45 Days",
-    src: "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
+    src: "/projects/vikram-mills/creatives/5.mp4",
   },
   {
     id: 6,
     category: "Reels",
-    title: "Product Reel",
+    title: "Vikram Mills Social Reel",
     type: "video",
-    client: "Glow Skin",
-    platform: "Instagram / YouTube",
-    duration: "30 Days",
-    src: "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
+    client: "Vikram Mills",
+    platform: "Instagram",
+    duration: "45 Days",
+    src: "/projects/vikram-mills/creatives/6.mp4",
   },
   {
     id: 7,
-    category: "Creatives",
-    title: "Instagram Ad",
-    type: "image",
-    client: "Nike",
+    category: "Reels",
+    title: "Vikram Mills Premium Reel",
+    type: "video",
+    client: "Vikram Mills",
     platform: "Instagram",
-    duration: "15 Days",
-    src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+    duration: "45 Days",
+    src: "/projects/vikram-mills/creatives/7.mp4",
   },
   {
     id: 8,
-    category: "Creatives",
-    title: "Brand Poster",
-    type: "image",
-    client: "Adidas",
-    platform: "Facebook",
-    duration: "20 Days",
-    src: "https://images.unsplash.com/photo-1503602642458-232111445657",
-  },
-  {
-    id: 9,
     category: "Reels",
-    title: "Fashion Campaign",
+    title: "Vikram Mills Creative Reel",
     type: "video",
-    client: "Right Gold",
+    client: "Vikram Mills",
     platform: "Instagram",
     duration: "45 Days",
-    src: "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
+    src: "/projects/vikram-mills/creatives/8.mp4",
   },
-  {
-    id: 10,
-    category: "Reels",
-    title: "Product Reel",
-    type: "video",
-    client: "Glow Skin",
-    platform: "Instagram / YouTube",
-    duration: "30 Days",
-    src: "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
-  },
+
   {
     id: 11,
     category: "Creatives",
-    title: "Instagram Ad",
+    title: "Vikram Mills Creative Post",
     type: "image",
-    client: "Nike",
+    client: "Vikram Mills",
     platform: "Instagram",
-    duration: "15 Days",
-    src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+    duration: "20 Days",
+    src: "/projects/vikram-mills/creatives/1.jpg",
   },
   {
     id: 12,
     category: "Creatives",
-    title: "Brand Poster",
+    title: "Vikram Mills Brand Poster",
     type: "image",
-    client: "Adidas",
-    platform: "Facebook",
+    client: "Vikram Mills",
+    platform: "Instagram",
     duration: "20 Days",
-    src: "https://images.unsplash.com/photo-1503602642458-232111445657",
+    src: "/projects/vikram-mills/creatives/2.jpg",
   },
   {
     id: 13,
-    category: "Reels",
-    title: "Fashion Campaign",
-    type: "video",
-    client: "Right Gold",
+    category: "Creatives",
+    title: "Vikram Mills Product Poster",
+    type: "image",
+    client: "Vikram Mills",
     platform: "Instagram",
-    duration: "45 Days",
-    src: "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
+    duration: "20 Days",
+    src: "/projects/vikram-mills/creatives/3.jpg",
   },
   {
     id: 14,
-    category: "Reels",
-    title: "Product Reel",
-    type: "video",
-    client: "Glow Skin",
-    platform: "Instagram / YouTube",
-    duration: "30 Days",
-    src: "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
+    category: "Creatives",
+    title: "Vikram Mills Marketing Creative",
+    type: "image",
+    client: "Vikram Mills",
+    platform: "Instagram",
+    duration: "20 Days",
+    src: "/projects/vikram-mills/creatives/4.jpg",
   },
   {
     id: 15,
     category: "Creatives",
-    title: "Instagram Ad",
+    title: "Vikram Mills Social Creative",
     type: "image",
-    client: "Nike",
+    client: "Vikram Mills",
     platform: "Instagram",
-    duration: "15 Days",
-    src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+    duration: "20 Days",
+    src: "/projects/vikram-mills/creatives/5.jpg",
   },
   {
     id: 16,
     category: "Creatives",
-    title: "Brand Poster",
+    title: "Vikram Mills Poster Design",
     type: "image",
-    client: "Adidas",
-    platform: "Facebook",
+    client: "Vikram Mills",
+    platform: "Instagram",
     duration: "20 Days",
-    src: "https://images.unsplash.com/photo-1503602642458-232111445657",
+    src: "/projects/vikram-mills/creatives/6.jpg",
+  },
+  {
+    id: 17,
+    category: "Creatives",
+    title: "Vikram Mills Product Creative",
+    type: "image",
+    client: "Vikram Mills",
+    platform: "Instagram",
+    duration: "20 Days",
+    src: "/projects/vikram-mills/creatives/7.jpg",
+  },
+  {
+    id: 18,
+    category: "Creatives",
+    title: "Vikram Mills Campaign Poster",
+    type: "image",
+    client: "Vikram Mills",
+    platform: "Instagram",
+    duration: "20 Days",
+    src: "/projects/vikram-mills/creatives/8.jpg",
+  },
+  {
+    id: 19,
+    category: "Creatives",
+    title: "Vikram Mills Food Creative",
+    type: "image",
+    client: "Vikram Mills",
+    platform: "Instagram",
+    duration: "20 Days",
+    src: "/projects/vikram-mills/creatives/9.jpg",
+  },
+  {
+    id: 20,
+    category: "Creatives",
+    title: "Vikram Mills Branding Creative",
+    type: "image",
+    client: "Vikram Mills",
+    platform: "Instagram",
+    duration: "20 Days",
+    src: "/projects/vikram-mills/creatives/10.jpg",
   },
 ];
 
@@ -196,49 +217,53 @@ export default function Page() {
 
         <div className="cr-info-bar">
           <div>
-            <Users size={16} /> 25+ Clients
+            <Users size={16} /> Food Brand Campaigns
           </div>
+
           <div>
-            <BarChart3 size={16} /> 10M+ Reach
+            <BarChart3 size={16} /> High Engagement Reels
           </div>
+
           <div>
-            <Clock size={16} /> 15–60 Days
+            <Clock size={16} /> Trusted Brand Collaboration Over The Years
           </div>
+
           <div>
-            <Sparkles size={16} /> Performance Creative
+            <Sparkles size={16} /> Instagram Creatives
           </div>
         </div>
 
         <div className="cr-socials">
           <a href="#">
-            <FaInstagram /> Instagram
+            <FaInstagram /> Instagram Reels
           </a>
+
           <a href="#">
-            <FaYoutube /> YouTube
+            <FaYoutube /> Video Campaigns
           </a>
+
           <a href="#">
-            <FaLinkedin /> LinkedIn
+            <FaLinkedin /> Brand Marketing
           </a>
         </div>
 
         <div className="cr-hero-cta">
           <button onClick={() => router.push("/contact")}>
-            Start Project →
+            Start Campaign →
           </button>
         </div>
       </div>
+      {/* 🎨 CREATIVES */}
+      <Section
+        title="Creative Designs"
+        data={creatives}
+        setActiveItem={setActiveItem}
+      />
 
       {/* 🎬 REELS */}
       <Section
         title="Reels Showcase"
         data={reels}
-        setActiveItem={setActiveItem}
-      />
-
-      {/* 🎨 CREATIVES */}
-      <Section
-        title="Creative Designs"
-        data={creatives}
         setActiveItem={setActiveItem}
       />
 
