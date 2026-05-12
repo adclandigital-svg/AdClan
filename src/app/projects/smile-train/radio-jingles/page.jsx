@@ -19,27 +19,27 @@ const reels = [
   {
     id: 1,
 
-    title: "Ace Run FM Radio Teaser",
+    title: "Smile Train India – Radio Awareness Campaign",
 
-    subtitle: "Real Estate Audio Promotion Campaign",
+    subtitle: "Healthcare Awareness Audio Campaign",
 
-    audio: "/projects/ace/Teaser-Spot-ACE.mp3",
+    audio: "/projects/smile_train/RJM-Cut-Smile-train-India.mp3",
 
     description:
-      "A high-impact radio teaser campaign created for Ace Run to build excitement, improve local brand awareness, and generate audience interest through energetic voiceovers, catchy scripting, and strategic FM radio placements.",
+      "A meaningful radio awareness campaign created for Smile Train India focused on spreading awareness about cleft treatment and inspiring communities through emotional storytelling, impactful messaging, and engaging FM radio outreach.",
 
-    platform: "FM Radio Advertising",
+    platform: "FM Radio & Public Awareness Broadcasting",
 
-    reach: "Delhi NCR & Regional Audience",
+    reach: "Regional & Urban Communities",
 
-    impact: "Strong Local Brand Recall",
+    impact: "Increased Awareness & Social Engagement",
 
-    duration: "Teaser Marketing Campaign",
+    duration: "Public Awareness Campaign",
 
-    client: "Ace Run",
+    client: "Smile Train India",
 
     result:
-      "The radio advertisement successfully boosted campaign visibility and created strong audience curiosity through repeated audio exposure and engaging promotional messaging.",
+      "The campaign successfully improved public awareness and audience engagement by delivering emotionally driven messaging and memorable radio storytelling across multiple listener groups.",
   },
 ];
 
@@ -158,31 +158,32 @@ export default function AceRunRadioCampaign() {
       {/* ================= HERO ================= */}
 
       <div className="vm-hero">
-        <h1>Ace Run – Radio Advertising Campaign</h1>
+        <h1>Smile Train India – Radio Awareness Campaign</h1>
 
         <p className="vm-hero-desc">
-          We produced a professional radio advertisement campaign for Ace Run
-          focused on building strong brand recall, improving audience reach, and
-          creating impactful audio engagement through strategic radio marketing.
+          We created an impactful radio awareness campaign for Smile Train India
+          focused on spreading awareness, building emotional connection, and
+          encouraging community engagement through meaningful audio storytelling
+          and FM radio outreach.
         </p>
 
         <div className="vm-info-bar">
           <div className="vm-info-item">
-            <Users size={16} /> Brand Awareness Campaign
+            <Users size={16} /> Social Awareness Campaign
           </div>
 
           <div className="vm-info-item">
-            <BarChart3 size={16} /> FM Radio Promotion
+            <BarChart3 size={16} /> FM Radio Broadcasting
           </div>
 
           <div className="vm-info-item">
-            <Clock size={16} /> Promotional Audio Campaign
+            <Clock size={16} /> Public Awareness Drive
           </div>
         </div>
 
         <div className="vm-cta">
           <button onClick={() => router.push("/contact")}>
-            Start Your Radio Campaign →
+            Start Your Audio Campaign →
           </button>
         </div>
       </div>

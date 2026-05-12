@@ -23,7 +23,7 @@ export default function ProjectPage() {
     ],
 
     features: [
-      "Single Landing Page Design",
+      "Single Landing Page Design", 
       "Responsive Layout",
       "Fast Loading Experience",
       "Swiper Slider Integration",

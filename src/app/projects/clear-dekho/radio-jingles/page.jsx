@@ -18,28 +18,33 @@ import "./radio.css";
 const reels = [
   {
     id: 1,
-
-    title: "Ace Run FM Radio Teaser",
-
-    subtitle: "Real Estate Audio Promotion Campaign",
-
-    audio: "/projects/ace/Teaser-Spot-ACE.mp3",
-
+    title: "Clear Dekho – Affordable Eyewear Radio Campaign",
+    subtitle: "FM Radio Brand Promotion",
+    audio: "/projects/clear_dekho/83-Clear-dekho-40sec-promo.mp3",
     description:
-      "A high-impact radio teaser campaign created for Ace Run to build excitement, improve local brand awareness, and generate audience interest through energetic voiceovers, catchy scripting, and strategic FM radio placements.",
-
-    platform: "FM Radio Advertising",
-
-    reach: "Delhi NCR & Regional Audience",
-
-    impact: "Strong Local Brand Recall",
-
-    duration: "Teaser Marketing Campaign",
-
-    client: "Ace Run",
-
+      "A high-energy radio advertising campaign developed for Clear Dekho to promote affordable and stylish eyewear solutions across regional and metro audiences. The campaign focused on strong recall, catchy audio storytelling, engaging voiceovers, and repeated FM radio exposure to drive customer attention and brand recognition.",
+    platform: "FM Radio & Audio Advertising",
+    reach: "Delhi NCR & North India Audience",
+    impact: "High Brand Recall & Promotional Awareness",
+    duration: "40 Seconds Radio Commercial",
+    client: "Clear Dekho",
     result:
-      "The radio advertisement successfully boosted campaign visibility and created strong audience curiosity through repeated audio exposure and engaging promotional messaging.",
+      "The radio campaign successfully boosted audience engagement and strengthened Clear Dekho’s local market presence through impactful audio branding, memorable promotional messaging, and consistent FM radio visibility.",
+  },
+  {
+    id: 2,
+    title: "Clear Dekho – Trendy Eyewear Jingle",
+    subtitle: "Short Retail Promo",
+    audio: "/projects/clear_dekho/Cleardekho-New-retail.mp3",
+    description:
+      "A crisp 15-second Hindi radio jingle promoting Clear Dekho stores. It highlights trendy, cool, and affordable glasses & sunglasses with a strong call-to-action to visit the store.",
+    platform: "FM Radio Jingle",
+    reach: "Pan-India Retail Audience",
+    impact: "High Recall & Store Footfall",
+    duration: "15.6 Seconds Jingle",
+    client: "Clear Dekho",
+    result:
+      "Short and catchy jingle designed for high rotation on FM radio to drive immediate store visits and reinforce brand positioning as affordable & stylish eyewear destination.",
   },
 ];
 
@@ -158,31 +163,32 @@ export default function AceRunRadioCampaign() {
       {/* ================= HERO ================= */}
 
       <div className="vm-hero">
-        <h1>Ace Run – Radio Advertising Campaign</h1>
+        <h1>Clear Dekho – Radio Advertising Campaign</h1>
 
         <p className="vm-hero-desc">
-          We produced a professional radio advertisement campaign for Ace Run
-          focused on building strong brand recall, improving audience reach, and
-          creating impactful audio engagement through strategic radio marketing.
+          We produced a performance-driven radio advertising campaign for Clear
+          Dekho focused on improving eyewear brand awareness, increasing
+          audience engagement, and promoting affordable stylish eyewear through
+          strategic FM radio promotions and memorable audio storytelling.
         </p>
 
         <div className="vm-info-bar">
           <div className="vm-info-item">
-            <Users size={16} /> Brand Awareness Campaign
+            <Users size={16} /> Eyewear Brand Promotion
           </div>
 
           <div className="vm-info-item">
-            <BarChart3 size={16} /> FM Radio Promotion
+            <BarChart3 size={16} /> FM Radio Advertising
           </div>
 
           <div className="vm-info-item">
-            <Clock size={16} /> Promotional Audio Campaign
+            <Clock size={16} /> 40 Sec Promotional Campaign
           </div>
         </div>
 
         <div className="vm-cta">
           <button onClick={() => router.push("/contact")}>
-            Start Your Radio Campaign →
+            Launch Your Radio Campaign →
           </button>
         </div>
       </div>

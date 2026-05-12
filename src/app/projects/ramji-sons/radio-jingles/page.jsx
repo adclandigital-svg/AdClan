@@ -19,27 +19,27 @@ const reels = [
   {
     id: 1,
 
-    title: "Ace Run FM Radio Teaser",
+    title: "Ramji Sons – Radio Jingle Campaign",
 
-    subtitle: "Real Estate Audio Promotion Campaign",
+    subtitle: "Jewellery Brand Audio Promotion",
 
-    audio: "/projects/ace/Teaser-Spot-ACE.mp3",
+    audio: "/projects/ramjisons/Ramjisons.mp3",
 
     description:
-      "A high-impact radio teaser campaign created for Ace Run to build excitement, improve local brand awareness, and generate audience interest through energetic voiceovers, catchy scripting, and strategic FM radio placements.",
+      "A professionally produced radio jingle campaign developed for Ramji Sons to strengthen jewellery brand recognition and audience engagement through memorable audio branding, emotional storytelling, and high-frequency FM radio promotions.",
 
-    platform: "FM Radio Advertising",
+    platform: "FM Radio & Audio Advertising",
 
-    reach: "Delhi NCR & Regional Audience",
+    reach: "Delhi NCR Audience",
 
-    impact: "Strong Local Brand Recall",
+    impact: "Improved Brand Recall & Customer Awareness",
 
-    duration: "Teaser Marketing Campaign",
+    duration: "Seasonal Promotional Campaign",
 
-    client: "Ace Run",
+    client: "Ramji Sons",
 
     result:
-      "The radio advertisement successfully boosted campaign visibility and created strong audience curiosity through repeated audio exposure and engaging promotional messaging.",
+      "The campaign successfully enhanced local brand visibility and created a strong emotional connection with listeners through catchy music composition, premium voiceovers, and repeated radio exposure.",
   },
 ];
 
@@ -158,31 +158,32 @@ export default function AceRunRadioCampaign() {
       {/* ================= HERO ================= */}
 
       <div className="vm-hero">
-        <h1>Ace Run – Radio Advertising Campaign</h1>
+        <h1>Ramji Sons – Radio Jingle Campaign</h1>
 
         <p className="vm-hero-desc">
-          We produced a professional radio advertisement campaign for Ace Run
-          focused on building strong brand recall, improving audience reach, and
-          creating impactful audio engagement through strategic radio marketing.
+          We created a premium radio jingle campaign for Ramji Sons focused on
+          improving jewellery brand visibility, strengthening customer recall,
+          and creating emotional audience engagement through impactful audio
+          storytelling and FM radio advertising.
         </p>
 
         <div className="vm-info-bar">
           <div className="vm-info-item">
-            <Users size={16} /> Brand Awareness Campaign
+            <Users size={16} /> Jewellery Brand Promotion
           </div>
 
           <div className="vm-info-item">
-            <BarChart3 size={16} /> FM Radio Promotion
+            <BarChart3 size={16} /> FM Radio Advertising
           </div>
 
           <div className="vm-info-item">
-            <Clock size={16} /> Promotional Audio Campaign
+            <Clock size={16} /> Seasonal Audio Campaign
           </div>
         </div>
 
         <div className="vm-cta">
           <button onClick={() => router.push("/contact")}>
-            Start Your Radio Campaign →
+            Launch Your Radio Campaign →
           </button>
         </div>
       </div>

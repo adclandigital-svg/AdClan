@@ -699,57 +699,43 @@ export const PROJECTS = [
     ],
   },
   {
-    slug: "teaser-spot-ace",
+    slug: "ace/radio-jingles",
     title: "Teaser Spot-ACE",
     category: "Radio Jingles",
     year: "2024",
     client: "Teaser Spot-ACE",
-    src: "/projects/project-thumbnail/Teaser Spot-ACE.png",
-    Source: "/projects/radio/Teaser-Spot-ACE.mp3",
+    src: "/projects/ace/logo.png",
     updatedAt: "2026-03-17",
-    intro:
-      "Catchy radio jingle production for Teaser Spot-ACE, composing memorable tunes and voiceovers that enhance brand recall during prime time slots.",
-    sections: [],
   },
   {
-    slug: "ramjisons",
+    slug: "ramji-sons/radio-jingles",
     title: "Ramjisons",
     category: "Radio Jingles",
-    Source: "/projects/radio/Ramjisons.mp3",
     year: "2024",
     client: "Ramjisons",
-    src: "/projects/project-thumbnail/Ramjisons.png",
+    src: "/projects/ramjisons/logo.png",
     updatedAt: "2026-03-17",
-    intro:
-      "Creative radio jingles for Ramjisons, blending traditional melodies with modern production to create an auditory brand identity that resonates with listeners.",
-    sections: [],
+   
   },
   {
-    slug: "smile-train-india-radio",
+    slug: "smile-train/radio-jingles",
     title: "Smile train India",
     category: "Radio Jingles",
-    Source: "/projects/radio/RJM-Cut-Smile-train-India.mp3",
     year: "2024",
     client: "Smile train India",
-    src: "/projects/project-thumbnail/Smile train India.png",
+    src: "/projects/smile_train/logo.png",
     updatedAt: "2026-03-17",
-    intro:
-      "Impactful radio jingle campaign for Smile Train India, using emotional storytelling and music to drive awareness and encourage donations for cleft care.",
-    sections: [],
+    
   },
 
   {
-    slug: "clear-dekho",
+    slug: "clear-dekho/radio-jingles",
     title: "Clear Dekho",
     category: "Radio Jingles",
     year: "2024",
     client: "Clear Dekho",
-    Source: "/projects/radio/83-Clear-dekho-40sec-promo.mp3",
-    src: "/projects/project-thumbnail/Clear Dekho.png",
+    src: "/projects/clear_dekho/logo.png",
     updatedAt: "2026-03-17",
-    intro:
-      "Memorable radio jingles for Clear Dekho, crafting short, catchy audio ads that effectively communicate the brand's value proposition to a mass audience.",
-    sections: [],
   },
   {
     slug: "https://aggarwalnamkeen.com/",
