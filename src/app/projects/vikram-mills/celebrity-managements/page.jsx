@@ -12,16 +12,16 @@ import styles from "./celebrity.module.css";
 
 const celebrities = [
   {
-    name: "Adah Sharma",
-    year: "2022",
-    duration: "12 Months Campaign",
-    desc: "We executed a premium fashion-led campaign for Vikram Mills, focusing on elegant storytelling and fabric-centric visuals. The strategy highlighted the versatility and quality of Vikram Mills textiles through curated photoshoots, styled content, and platform-specific creatives. By aligning the brand’s aesthetic with Adah Sharma’s graceful and expressive persona, we created visually engaging content that resonated with modern audiences.",
+    name: "Huma Qureshi",
+    year: "Recent Campaign",
+    duration: "Brand Collaboration",
+    desc: "We executed a premium branding and advertising campaign for Vikram Mills featuring Huma Qureshi, focusing on authentic storytelling and high-quality visuals that highlighted the brand’s range of rice, wheat, and FMCG food products. The campaign blended cinematic production, lifestyle-oriented creatives, and platform-specific content to create a strong emotional connection with consumers while emphasizing purity, trust, and product quality.",
 
     conclusion:
-      "The campaign successfully elevated Vikram Mills’ brand perception, strengthening its positioning as a premium and stylish textile choice. It drove higher engagement across digital platforms, increased product visibility, and built a strong aspirational connect with the target audience.",
+      "The campaign significantly enhanced Vikram Mills’ brand visibility and strengthened its positioning as a trusted household food brand. Through impactful visuals and celebrity-driven engagement, the campaign increased audience reach, improved digital engagement, and created a strong premium perception across social media and advertising platforms.",
 
     image: "/projects/vikram-mills/Vikram-mills-celeb.png",
-  }
+  },
 ];
 
 export default function CelebrityPage() {
@@ -51,10 +51,9 @@ export default function CelebrityPage() {
         >
           {celebrities.map((item, index) => (
             <SwiperSlide key={index}>
-              <div
-                className={styles.heroSlide}
-                
-              ><img src={item.image} alt="" /></div>
+              <div className={styles.heroSlide}>
+                <img src={item.image} alt="" />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

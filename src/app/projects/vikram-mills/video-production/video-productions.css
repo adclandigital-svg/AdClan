@@ -464,16 +464,18 @@
 @media (max-width: 600px) {
   /* HERO VIDEO */
   .project-showcase {
+    margin-top: 10px;
     padding-top: 0;
   }
 
 
   .bg-video {
-    height: 60vh;
+    height: auto;
   }
 
   /* INFO CARD */
   .info-card {
+    display: none;
     left: 15px;
     right: 15px;
     bottom: 15px;

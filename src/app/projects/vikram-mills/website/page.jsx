@@ -6,71 +6,51 @@ export default function ProjectPage() {
   const [activePreview, setActivePreview] = useState(false);
 
   const project = {
-    name: "Vikram Mills",
+    name: "Vikram Mills Ads Landing Page",
 
     tagline:
-      "Vikram Mills is a landmark redevelopment project that transforms a historic textile mill into a vibrant commercial and lifestyle destination. The digital experience was crafted to reflect its legacy while showcasing modern architecture, premium retail spaces, and dynamic business environments.",
+      "Single landing page designed for Vikram Mills advertising campaigns with optimized performance, responsive layouts, and modern frontend integrations.",
 
-    website: "https://vikrammills.com/",
+    website: "https://ads.vikrammills.com/",
 
     description:
-      "Vikram Mills is a landmark redevelopment project that transforms a historic textile mill into a vibrant commercial and lifestyle destination. The digital experience was crafted to reflect its legacy while showcasing modern architecture, premium retail spaces, and dynamic business environments.",
+      "A campaign-focused landing page developed for Vikram Mills to support digital advertising and product promotion. The website delivers a clean user experience with fast-loading frontend architecture and modern web integrations.",
 
     tech: [
-      "Next.js",
-      "React",
-      "GSAP",
-      "Three.js",
-      "CSS",
-      "AMP",
-      "Font Awesome 4.7.0",
-      "PHP 8.3.30",
-      "Bootstrap 3.4.1",
-      "jQuery 3.5.1",
-      "OWL Carousel",
-      "Masonry",
-      "LazySizes",
-      "Isotope",
-      "core-js 3.32.2",
+      "Google Font API",
+      "Font Awesome 6.5.0",
+      "Swiper",
     ],
 
     features: [
-      "Cinematic Visual Experience",
-      "Smooth Scroll Animations",
-      "Interactive Layouts",
-      "High Performance Optimization",
-      "Responsive Design",
-      "Facebook Pixel Integration",
-      "Google AdSense",
-      "Cloudflare CDN",
-      "Apache HTTP Server",
-      "Lazy Loading Optimization",
+      "Single Landing Page Design",
+      "Responsive Layout",
+      "Fast Loading Experience",
+      "Swiper Slider Integration",
+      "Modern Typography",
+      "CDN Optimization",
     ],
 
-    hosting: "Apache HTTP Server with Cloudflare CDN",
+    hosting: "Vercel",
 
     work: [
-      "Designed modern UI inspired by architectural layouts",
-      "Developed full website using Next.js",
-      "Implemented smooth animations using GSAP",
-      "Optimized performance and loading speed",
-      "Created responsive design for all devices",
-      "Integrated Facebook Pixel",
-      "Configured Google AdSense",
-      "Implemented LazySizes optimization",
-      "Integrated OWL Carousel and Masonry layouts",
+      "Developed responsive landing page",
+      "Integrated Swiper functionality",
+      "Configured modern font systems",
+      "Optimized frontend performance",
+      "Implemented responsive campaign layout",
+      "Integrated CDN delivery optimization",
     ],
 
     challenges: [
-      "Balancing heritage feel with modern UI",
-      "Handling heavy visuals without performance loss",
-      "Maintaining smooth animation experience",
-      "Optimizing third-party libraries and scripts",
-      "Improving overall frontend performance",
+      "Maintaining smooth performance",
+      "Optimizing responsive layouts",
+      "Handling fast-loading media delivery",
+      "Creating clean campaign-focused UI",
     ],
 
     result:
-      "Delivered a premium, high-performance website that enhances brand presence and creates a strong digital impression for commercial users and investors.",
+      "Delivered a fast, responsive, and modern advertising landing page experience for Vikram Mills campaigns.",
   };
 
   return (
@@ -91,7 +71,9 @@ export default function ProjectPage() {
           </div>
 
           <div
-            className={`website-iframe-container ${activePreview ? "website-active" : ""}`}
+            className={`website-iframe-container ${
+              activePreview ? "website-active" : ""
+            }`}
           >
             {!activePreview && (
               <div
@@ -113,6 +95,7 @@ export default function ProjectPage() {
       <section className="website-details">
         <div className="website-card">
           <h3>Features:</h3>
+
           {project.features.map((f, i) => (
             <p key={i}>{f}</p>
           ))}
@@ -120,6 +103,7 @@ export default function ProjectPage() {
 
         <div className="website-card">
           <h3>Tech Stack:</h3>
+
           {project.tech.map((t, i) => (
             <p key={i}>{t}</p>
           ))}
@@ -127,6 +111,7 @@ export default function ProjectPage() {
 
         <div className="website-card website-highlight">
           <h3>Hosting:</h3>
+
           <p>{project.hosting}</p>
         </div>
       </section>
@@ -136,6 +121,7 @@ export default function ProjectPage() {
         <div className="website-work-grid">
           <div>
             <h3>What I Did ?</h3>
+
             <ul>
               {project.work.map((item, i) => (
                 <li key={i}>{item}</li>
@@ -145,6 +131,7 @@ export default function ProjectPage() {
 
           <div>
             <h3>Challenges:</h3>
+
             <ul>
               {project.challenges.map((item, i) => (
                 <li key={i}>{item}</li>
@@ -154,6 +141,7 @@ export default function ProjectPage() {
 
           <div>
             <h3>Result:</h3>
+
             <p>{project.result}</p>
           </div>
         </div>

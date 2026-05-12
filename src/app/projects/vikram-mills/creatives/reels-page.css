@@ -156,3 +156,165 @@
   top: -40px;
   right: 0;
 }
+
+@media (max-width: 768px) {
+  .cr-showcase {
+    width: 90%;
+    padding: 40px 15px;
+  }
+
+  /* HERO */
+  .cr-hero {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    padding: 0 10px;
+  }
+
+  .cr-hero h1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .cr-hero h1::after {
+    width: 120px;
+    height: 3px;
+  }
+
+  .cr-hero-desc {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 15px;
+  }
+
+  .cr-info-bar {
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .cr-info-bar div {
+    padding: 10px 14px;
+    font-size: 13px;
+    border-radius: 30px;
+  }
+
+  .cr-socials {
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+  }
+
+  .cr-socials a {
+    font-size: 14px;
+  }
+
+  .cr-hero-cta button {
+    width: 100%;
+    max-width: 260px;
+    padding: 14px 18px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  /* SECTION */
+  .crs-section {
+    padding: 18px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+  }
+
+  .crs-header {
+    margin-bottom: 30px;
+  }
+
+  .crs-header h2 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .crs-header h2::after {
+    width: 70px;
+  }
+
+  /* CARD */
+  .crs-card {
+    border-radius: 12px;
+    margin-bottom: 25px;
+  }
+
+  .crs-media {
+    border-radius: 12px;
+  }
+
+  .crs-overlay {
+    padding: 12px;
+  }
+
+  .crs-overlay h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .crs-overlay p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* MODAL */
+  .cr-modal {
+    padding: 15px;
+  }
+
+  .cr-modal-content video,
+  .cr-modal-content img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 12px;
+  }
+
+  .cr-modal-content button {
+    top: -45px;
+    right: 0;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cr-hero h1 {
+    font-size: 24px;
+  }
+
+  .cr-hero-desc {
+    font-size: 14px;
+  }
+
+  .cr-info-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cr-info-bar div {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cr-socials {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .crs-header h2 {
+    font-size: 20px;
+  }
+
+  .crs-overlay h3 {
+    font-size: 15px;
+  }
+
+  .crs-overlay p {
+    font-size: 12px;
+  }
+}

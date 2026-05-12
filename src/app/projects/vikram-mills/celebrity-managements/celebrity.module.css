@@ -1,7 +1,7 @@
 /* ================= HERO ================= */
 .celebrityHero {
   background-color: #422525;
-  max-width:98%;
+  max-width: 98%;
   position: relative;
   overflow: hidden;
   border-radius: 20px;
@@ -33,7 +33,7 @@
 }
 .heroSlide img {
   width: 100%;
-  height: 700px;
+  height: auto;
 }
 
 /* ================= DETAILS ================= */
@@ -167,12 +167,9 @@
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
-  .celebrityHero {
-    /* height: 50vh; */
-  }
-
-  .heroSlide {
-    /* height: 50vh; */
+  .heroSlide img {
+    width: 100%;
+    height: auto;
   }
 
   .detailsCard {
