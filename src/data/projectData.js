@@ -264,15 +264,15 @@ export const PROJECTS = [
   },
   {
     black: "true",
-    slug: "milliand-gaba",
-    title: "MILLIAND GABA",
+    slug: "millind-gaba",
+    title: "MILLIND GABA",
     category: "Celebrity Management",
     year: "2024",
-    client: "MILLIAND GABA",
+    client: "MILLIND GABA",
     src: "/projects/project-thumbnail/MILLIAND GABA.png",
     updatedAt: "2026-01-20",
     intro:
-      "End-to-end celebrity management for Milliand Gaba, covering contract negotiations, public relations, and digital content strategy to enhance brand collaborations.",
+      "End-to-end celebrity management for Millind Gaba, covering contract negotiations, public relations, campaign coordination, and digital content strategy to strengthen brand collaborations and audience engagement.",
     sections: [
       {
         type: "hero",

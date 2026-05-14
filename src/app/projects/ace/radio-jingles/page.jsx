@@ -19,14 +19,14 @@ const reels = [
   {
     id: 1,
 
-    title: "Ace Run FM Radio Teaser",
+    title: "Ace Group - Run FM Radio Teaser",
 
     subtitle: "Real Estate Audio Promotion Campaign",
 
     audio: "/projects/ace/Teaser-Spot-ACE.mp3",
 
     description:
-      "A high-impact radio teaser campaign created for Ace Run to build excitement, improve local brand awareness, and generate audience interest through energetic voiceovers, catchy scripting, and strategic FM radio placements.",
+      "A high-impact radio teaser campaign created for Ace Group to build excitement, improve local brand awareness, and generate audience interest through energetic voiceovers, catchy scripting, and strategic FM radio placements.",
 
     platform: "FM Radio Advertising",
 
@@ -36,7 +36,7 @@ const reels = [
 
     duration: "Teaser Marketing Campaign",
 
-    client: "Ace Run",
+    client: "Ace Group",
 
     result:
       "The radio advertisement successfully boosted campaign visibility and created strong audience curiosity through repeated audio exposure and engaging promotional messaging.",
@@ -158,10 +158,10 @@ export default function AceRunRadioCampaign() {
       {/* ================= HERO ================= */}
 
       <div className="vm-hero">
-        <h1>Ace Run – Radio Advertising Campaign</h1>
+        <h1>Ace Group – Run  Radio Advertising Campaign</h1>
 
         <p className="vm-hero-desc">
-          We produced a professional radio advertisement campaign for Ace Run
+          We produced a professional radio advertisement campaign for Ace Group
           focused on building strong brand recall, improving audience reach, and
           creating impactful audio engagement through strategic radio marketing.
         </p>

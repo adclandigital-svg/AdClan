@@ -6,51 +6,72 @@ export default function ProjectPage() {
   const [activePreview, setActivePreview] = useState(false);
 
   const project = {
-    name: "Vikram Mills Ads Landing Page",
+    name: "Kiloi Foods Website",
 
     tagline:
-      "Single landing page designed for Vikram Mills advertising campaigns with optimized performance, responsive layouts, and modern frontend integrations.",
+      "Modern corporate website developed for Kiloi Foods with WordPress CMS, SEO optimization, responsive UI, and performance-focused frontend architecture.",
 
-    website: "https://ads.vikrammills.com/",
+    website: "https://kiloifoods.com/",
 
     description:
-      "A campaign-focused landing page developed for Vikram Mills to support digital advertising and product promotion. The website delivers a clean user experience with fast-loading frontend architecture and modern web integrations.",
+      "A professionally designed corporate food industry website created for Kiloi Foods to showcase products, company presence, and digital branding. The platform combines responsive design, SEO optimization, lightweight frontend performance, and scalable WordPress management systems.",
 
     tech: [
-      "Google Font API",
-      "Font Awesome 6.5.0",
+      "WordPress",
+      "PHP",
+      "MySQL",
       "Swiper",
+      "jQuery",
+      "Lightbox",
+      "Masonry",
+      "LazySizes",
+      "particles.js",
+      "Apache Server",
+      "Ubuntu",
     ],
 
     features: [
-      "Single Landing Page Design", 
-      "Responsive Layout",
-      "Fast Loading Experience",
-      "Swiper Slider Integration",
-      "Modern Typography",
-      "CDN Optimization",
+      "Corporate Website Development",
+      "Responsive WordPress Design",
+      "SEO Optimized Architecture",
+      "Elementor Page Builder",
+      "Google Analytics Integration",
+      "GA4 Tracking Setup",
+      "Google Tag Manager Integration",
+      "Contact Form Integration",
+      "Performance Optimization",
+      "Lazy Loading Media",
+      "Modern UI & Typography",
+      "Secure reCAPTCHA Integration",
     ],
 
-    hosting: "Vercel",
+    hosting: "Apache HTTP Server 2.4.58 / Ubuntu",
 
     work: [
-      "Developed responsive landing page",
-      "Integrated Swiper functionality",
-      "Configured modern font systems",
+      "Developed responsive corporate website",
+      "Integrated WordPress CMS",
+      "Configured Elementor page builder",
+      "Implemented RankMath SEO setup",
+      "Integrated Google Analytics & GA4",
+      "Configured Google Tag Manager",
       "Optimized frontend performance",
-      "Implemented responsive campaign layout",
-      "Integrated CDN delivery optimization",
+      "Implemented Lazy Loading assets",
+      "Integrated Contact Form 7",
+      "Configured responsive Swiper sliders",
+      "Implemented Open Graph optimization",
+      "Configured reCAPTCHA security",
     ],
 
     challenges: [
-      "Maintaining smooth performance",
-      "Optimizing responsive layouts",
-      "Handling fast-loading media delivery",
-      "Creating clean campaign-focused UI",
+      "Optimizing website loading performance",
+      "Maintaining responsive consistency across devices",
+      "Handling large media assets efficiently",
+      "Balancing SEO optimization with UI performance",
+      "Managing lightweight frontend rendering",
     ],
 
     result:
-      "Delivered a fast, responsive, and modern advertising landing page experience for Vikram Mills campaigns.",
+      "Successfully delivered a fast, scalable, SEO-optimized, and responsive corporate website experience for Kiloi Foods with improved digital presence and performance-focused architecture.",
   };
 
   return (
