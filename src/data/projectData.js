@@ -6,129 +6,8 @@ export const PROJECTS = [
     category: "Celebrity Management",
     year: "2026",
     client: "Right Gold",
-    src: "/projects/right-gold/rifght.png",
+    src: "/projects/right-gold/logo.png",
     updatedAt: "2026-01-15",
-    intro:
-      "Adclan didn't just create an ad for Right Gold we built a sales engine. From concept to execution, artist management to production, everything was handled end-to-end to deliver one thing: results.",
-
-    sections: [
-      {
-        type: "hero",
-        mediaType: "video",
-        src: "/projects/right-gold/banner.mov",
-        title: "Luxury Captured. Campaign Engineered.",
-        description:
-          "A cinematic ad film crafted to highlight the elegance, detailing, and brilliance of Right Gold’s collections — optimized for digital ads, reels, and premium brand positioning.",
-      },
-
-      {
-        type: "mediaGallery",
-        items: [
-          {
-            mediaType: "image",
-            orientation: "portrait",
-            src: "/projects/right-gold/a2.JPG",
-          },
-
-          {
-            mediaType: "image",
-            orientation: "portrait",
-            src: "/projects/right-gold/a4.JPG",
-          },
-          {
-            mediaType: "image",
-            orientation: "portrait",
-            src: "/projects/right-gold/a3.JPG",
-          },
-        ],
-      },
-
-      {
-        type: "slider",
-        items: [
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/1.jpg",
-            desc: "Product-focused campaign visuals highlighting gold purity and intricate craftsmanship.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/2.jpg",
-            desc: "Lifestyle ad shoot portraying aspirational luxury moments for targeted ad audiences.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/3.jpg",
-            desc: "Behind-the-scenes production of the ad shoot showcasing lighting setup and creative direction.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/4.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/5.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/6.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/7.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/8.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/9.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/10.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/11.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/12.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/13.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/14.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/15.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/right-gold/gallery/16.jpg",
-            desc: "Final campaign creatives deployed across digital, outdoor, and social advertising channels.",
-          },
-        ],
-      },
-    ],
   },
   {
     slug: "kb-west-walk",
@@ -496,25 +375,6 @@ export const PROJECTS = [
     ],
   },
   {
-    black: "true",
-    slug: "smile-train",
-    title: "SMILE TRAIN",
-    category: "Video Production",
-    updatedAt: "2026-02-10",
-    year: "2024",
-    client: "SMILE TRAIN",
-    src: "/projects/project-thumbnail/SMILE TRAIN.png",
-    intro:
-      "Heartfelt video production for Smile Train, crafting emotional narratives and awareness films to highlight the impact of cleft lip and palate surgeries.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "video",
-        src: "/projects/smile_train/smile-train.mp4",
-      },
-    ],
-  },
-  {
     slug: "india-result",
     title: "INDIA RESULT",
     category: "Video Production",
@@ -532,17 +392,6 @@ export const PROJECTS = [
       },
     ],
   },
-  // {
-  //   slug: "spring-elmas",
-  //   title: "SPRING ELMAS",
-  //   category: "Digital & Creatives",
-  //   year: "2024",
-  //   client: "SPRING ELMAS",
-  //   src: "/projects/project-thumbnail/SPRING ELMAS.png",
-  //   intro:
-  //     "Comprehensive digital and creative campaign for Spring Elmas, including social media creatives, website assets, and launch visuals for a premium real estate project.",
-  //   sections: [],
-  // },
   {
     slug: "tirupati",
     title: "TIRUPATI",
@@ -597,17 +446,6 @@ export const PROJECTS = [
       },
     ],
   },
-  // {
-  //   slug: "smile-train-india",
-  //   title: "Smile train India",
-  //   category: "Digital & Creatives",
-  //   year: "2024",
-  //   client: "Smile train India",
-  //   src: "/projects/project-thumbnail/Smile train India..png",
-  //   intro:
-  //     "Digital creatives and social media assets for Smile Train India, designed to raise awareness and drive donations through compelling storytelling and visuals.",
-  //   sections: [],
-  // },
   {
     slug: "kayna",
     title: "KAYNA",
@@ -715,17 +553,15 @@ export const PROJECTS = [
     client: "Ramjisons",
     src: "/projects/ramjisons/logo.png",
     updatedAt: "2026-03-17",
-   
   },
   {
-    slug: "smile-train/radio-jingles",
+    slug: "smile-train",
     title: "Smile train India",
     category: "Radio Jingles",
     year: "2024",
     client: "Smile train India",
     src: "/projects/smile_train/logo.png",
     updatedAt: "2026-03-17",
-    
   },
 
   {
@@ -783,18 +619,6 @@ export const PROJECTS = [
     src: "/projects/website/adore.png",
     intro:
       "Created a dynamic real estate website for Adore Realtech, featuring project listings, modern UI, and optimized performance to enhance user engagement and lead generation.",
-    sections: [],
-  },
-  {
-    slug: "https://ads.vikrammills.com/",
-    title: "Vikram Mills Landing Page",
-    category: "Website Development",
-    updatedAt: "2026-03-26",
-    year: "2025",
-    client: "Vikram Mills",
-    src: "/projects/website/vikram-mills.png",
-    intro:
-      "Designed a high-converting landing page for Vikram Mills, focusing on clear messaging, strong visuals, and optimized call-to-actions to drive user engagement and conversions.",
     sections: [],
   },
   {

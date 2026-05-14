@@ -580,15 +580,58 @@
 
 /* OPTIONAL FOR EXTRA SMOOTHNESS */
 
-.smooth-swiper {
+/* .smooth-swiper {
   overflow: hidden;
 }
-/* In your video-productions.css */
+
 .smooth-swiper .swiper-wrapper {
   transition-timing-function: linear !important;
 }
 
-/* Optional: Better hover feel */
 .smooth-swiper:hover {
   cursor: pointer;
+} */
+
+
+.smooth-swiper {
+  overflow: hidden;
+}
+
+.smooth-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.smooth-slide {
+  width: 320px !important;
+}
+
+
+.smooth-swiper-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.smooth-swiper-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.smooth-swiper-track:hover {
+  animation-play-state: paused;
+}
+
+.smooth-slide {
+  flex-shrink: 0;
+  width: 300px; /* Adjust as needed */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

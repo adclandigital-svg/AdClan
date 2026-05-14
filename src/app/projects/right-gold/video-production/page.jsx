@@ -27,15 +27,15 @@ export default function Page() {
     "/projects/right-gold/gallery/5.jpg",
     "/projects/right-gold/gallery/6.jpg",
     "/projects/right-gold/gallery/7.jpg",
-    "/projects/right-gold/gallery/8.jpg",
-    "/projects/right-gold/gallery/9.jpg",
-    "/projects/right-gold/gallery/10.jpg",
-    "/projects/right-gold/gallery/11.jpg",
-    "/projects/right-gold/gallery/12.jpg",
-    "/projects/right-gold/gallery/13.jpg",
-    "/projects/right-gold/gallery/14.jpg",
-    "/projects/right-gold/gallery/15.jpg",
-    "/projects/right-gold/gallery/16.jpg",
+    // "/projects/right-gold/gallery/8.jpg",
+    // "/projects/right-gold/gallery/9.jpg",
+    // "/projects/right-gold/gallery/10.jpg",
+    // "/projects/right-gold/gallery/11.jpg",
+    // "/projects/right-gold/gallery/12.jpg",
+    // "/projects/right-gold/gallery/13.jpg",
+    // "/projects/right-gold/gallery/14.jpg",
+    // "/projects/right-gold/gallery/15.jpg",
+    // "/projects/right-gold/gallery/16.jpg",
   ];
 
   const project = {
@@ -201,50 +201,57 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section
+      {/* <section
         className="image-slider-section"
-        onMouseEnter={() => swiperRef.current?.autoplay?.stop()}
-        onMouseLeave={() => swiperRef.current?.autoplay?.start()}
+        onMouseEnter={() => {
+          if (!swiperRef.current) return;
+
+          const swiper = swiperRef.current;
+
+          // freeze smoothly at exact current position
+          const currentTranslate = swiper.getTranslate();
+
+          swiper.setTranslate(currentTranslate);
+
+          swiper.wrapperEl.style.transitionDuration = "0ms";
+        }}
+        onMouseLeave={() => {
+          if (!swiperRef.current) return;
+
+          const swiper = swiperRef.current;
+
+          // continue smoothly from same point
+          swiper.wrapperEl.style.transitionTimingFunction = "linear";
+
+          swiper.slideTo(swiper.activeIndex + 1, 5000, false);
+        }}
       >
         <h2 className="section-title">Behind the Story</h2>
+
         <Swiper
           modules={[Autoplay]}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
           slidesPerView={"auto"}
           spaceBetween={20}
           loop={true}
-          speed={5000} // smooth continuous speed
+          loopAdditionalSlides={imageSlider.length}
           allowTouchMove={false}
           freeMode={true}
+          speed={5000}
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
             pauseOnMouseEnter: false,
           }}
-          breakpoints={{
-            320: {
-              slidesPerView: 1.2,
-            },
-
-            768: {
-              slidesPerView: 2.5,
-            },
-
-            1024: {
-              slidesPerView: 4,
-            },
-          }}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
           className="smooth-swiper"
         >
-          {imageSlider.map((img, i) => (
+          {[...imageSlider, ...imageSlider].map((img, i) => (
             <SwiperSlide
               key={i}
-              onClick={() => {
-                if (mainSwiperRef.current) {
-                  mainSwiperRef.current.slideToLoop(i);
-                }
-                setShowPopup(true); // 🔥 open popup
-              }}
+              className="smooth-slide"
+              onClick={() => setShowPopup(true)}
             >
               <div className="image-card">
                 <img src={img} alt="gallery" />
@@ -252,6 +259,34 @@ export default function Page() {
             </SwiperSlide>
           ))}
         </Swiper>
+      </section> */}
+
+      <section className="image-slider-section">
+        <h2 className="section-title">Behind the Story</h2>
+
+        <div
+          className="smooth-swiper-container"
+          onMouseEnter={(e) => {
+            e.currentTarget.style.animationPlayState = "paused";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.animationPlayState = "running";
+          }}
+        >
+          <div className="smooth-swiper-track">
+            {[...imageSlider, ...imageSlider].map((img, i) => (
+              <div
+                key={i}
+                className="smooth-slide"
+                onClick={() => setShowPopup(true)}
+              >
+                <div className="image-card">
+                  <img src={img} alt="gallery" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {showPopup && (

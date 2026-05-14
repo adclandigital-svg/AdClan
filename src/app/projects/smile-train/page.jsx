@@ -22,7 +22,7 @@ export default function ProjectPage() {
   return (
     <div className="project-page">
       <div className="project-hero-image">
-        <img src="/projects/smile-train/smile-train-banner.png" />
+        <img src="/projects/smile_train/smile train.png" />
       </div>
 
       {/* HERO */}
