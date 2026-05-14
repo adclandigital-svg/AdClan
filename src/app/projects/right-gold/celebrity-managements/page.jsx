@@ -12,18 +12,18 @@ import styles from "./celebrity.module.css";
 
 const celebrities = [
   {
-    name: "Seher Bamba",
+    name: "Sahher Bambba",
 
     year: "2026 Campaign",
 
     duration: "End-to-End Celebrity Campaign Management",
 
-    desc: "Adclan executed a complete end-to-end advertising campaign for Right Gold featuring actress Seher Bamba. From campaign strategy, script writing, celebrity coordination, production planning, shoot management, creative direction, and on-set execution to post-production and final delivery, every stage was managed by our team. We also handled the creation of all campaign assets including ad films, promotional creatives, social media content, branding visuals, and digital marketing materials designed to build a strong luxury jewellery brand presence. The campaign focused on cinematic storytelling, premium fashion aesthetics, and high-impact visual communication to strengthen audience engagement and brand positioning.",
+    desc: "Adclan executed a complete end-to-end advertising campaign for Right Gold featuring actress Sahher Bambba. From campaign strategy, script writing, celebrity coordination, production planning, shoot management, creative direction, and on-set execution to post-production and final delivery, every stage was managed by our team. We also handled the creation of all campaign assets including ad films, promotional creatives, social media content, branding visuals, and digital marketing materials designed to build a strong luxury jewellery brand presence. The campaign focused on cinematic storytelling, premium fashion aesthetics, and high-impact visual communication to strengthen audience engagement and brand positioning.",
 
     conclusion:
-      "The Right Gold campaign successfully elevated the brand’s luxury identity through celebrity-led storytelling, premium ad film production, and professionally managed campaign execution. Featuring Seher Bamba helped increase audience attention, strengthen digital engagement, and create a powerful premium perception across advertising, social media, and promotional platforms.",
+      "The Right Gold campaign successfully elevated the brand’s luxury identity through celebrity-led storytelling, premium ad film production, and professionally managed campaign execution. Featuring Sahher Bambba helped increase audience attention, strengthen digital engagement, and create a powerful premium perception across advertising, social media, and promotional platforms.",
 
-    image: "/projects/right-gold/banner1.png",
+    image: "/projects/right-gold/banner11.png",
   },
 ];
 
