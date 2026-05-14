@@ -169,7 +169,11 @@ export default function ProjectsPage() {
                 if (project.category == "Radio Jingles") {
                   router.push(`/projects/${project.slug}`);
                 } else if (project.category == "Website Development") {
-                  window.open(`${project.slug}`, "_blank");
+                  if (project.slug.startsWith("http")) {
+                    window.open(`${project.slug}`, "_blank");
+                  } else {
+                    router.push(`/projects/${project.slug}`);
+                  }
                 } else {
                   router.push(`/projects/${project.slug}`);
                 }

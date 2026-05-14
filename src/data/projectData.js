@@ -586,16 +586,13 @@ export const PROJECTS = [
     sections: [],
   },
   {
-    slug: "https://springelmas.com/",
+    slug: "spring-elmas/website",
     title: "Spring Elmas Website",
     category: "Website Development",
     updatedAt: "2026-03-26",
     year: "2024",
     client: "Spring Elmas",
-    src: "/projects/website/springelmas.png",
-    intro:
-      "Built a visually appealing and responsive website for Spring Elmas, focusing on clean design, intuitive navigation, and strong brand representation to attract potential customers.",
-    sections: [],
+    src: "/projects/spring_elmas/logo.png",
   },
   {
     slug: "https://elmas-group.vercel.app/",
@@ -610,28 +607,23 @@ export const PROJECTS = [
     sections: [],
   },
   {
-    slug: "https://adore-real.vercel.app/",
+    slug: "adore/website",
     title: "Adore Realtech Website",
     category: "Website Development",
     updatedAt: "2026-03-26",
     year: "2026",
     client: "Adore Realtech",
-    src: "/projects/website/adore.png",
-    intro:
-      "Created a dynamic real estate website for Adore Realtech, featuring project listings, modern UI, and optimized performance to enhance user engagement and lead generation.",
-    sections: [],
+    src: "/projects/adore/logo.png",
+  
   },
   {
-    slug: "https://kiloifoods.com/",
+    slug: "kiloi-food/website",
     title: "Kiloi Website",
     category: "Website Development",
     updatedAt: "2026-03-26",
     year: "2025",
     client: "Kiloi",
-    src: "/projects/website/kiloi.jpg",
-    intro:
-      "Developed a clean and responsive website for Kiloi, ensuring smooth navigation, fast performance, and a strong digital presence aligned with the brand’s identity.",
-    sections: [],
+    src: "/projects/kiloi/logo.png",
   },
   {
     // slug: "ims-noida/",
