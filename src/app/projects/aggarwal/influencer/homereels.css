@@ -1,0 +1,519 @@
+.reels-wrapper {
+  width: 95%;
+  height: 800px;
+  padding: 60px 40px;
+
+  display: flex;
+  justify-content: center; /* ✅ LEFT ALIGN FIX */
+  align-items: center;
+}
+
+/* Swiper container */
+.mySwiper {
+  width: 1050px; /* control layout width */
+  height: 100%;
+  overflow: hidden;
+  /* background-color: rgb(14, 90, 90); */
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Each slide */
+.reel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video base (side cards) */
+.reel-video {
+  width: 300px;
+  height: auto;
+  object-fit: cover; /* ✅ IMPORTANT FIX */
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  opacity: 0.5;
+}
+
+/* Center card */
+.swiper-slide-active .reel-video {
+  width: 350px;
+  height: auto;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Clean look */
+.swiper-slide {
+  background: transparent;
+}
+
+/* Perfect vertical alignment */
+.swiper-wrapper {
+  align-items: center;
+}
+.reels-heading-div {
+  min-width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  margin-bottom: 20px;
+  font-size: 50px;
+  height: 80%;
+  font-weight: 700;
+}
+
+/* Pagination bullets */
+.mySwiper .swiper-pagination {
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  padding-right: 5%;
+}
+
+.mySwiper .swiper-pagination-bullet {
+  background: black;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  transition: all 0.3s ease;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background: black;
+  width: 50px;
+  border-radius: 5px;
+}
+
+/* =========================
+   DEFAULT (1500px and above)
+========================= */
+.mySwiper {
+  width: 1050px;
+}
+
+/* =========================
+   LARGE LAPTOP (<= 1500px)
+========================= */
+@media (max-width: 1500px) {
+  .reels-wrapper {
+    gap: 40px;
+    padding: 50px 30px;
+  }
+
+  .mySwiper {
+    width: 950px;
+  }
+
+  .reel-video {
+    width: 260px;
+  }
+
+  .swiper-slide-active .reel-video {
+    width: 330px;
+  }
+
+  /* RIGHT SIDE */
+  .reels-right {
+    padding: 50px 40px;
+  }
+
+  .project-title {
+    font-size: 42px;
+  }
+
+  .project-desc {
+    font-size: 16px;
+    max-width: 90%;
+  }
+}
+
+/* =========================
+   LAPTOP (<= 1400px)
+========================= */
+@media (max-width: 1400px) {
+  .reels-wrapper {
+    gap: 30px;
+  }
+
+  .mySwiper {
+    width: 780px;
+  }
+
+  .reel-video {
+    width: 240px;
+  }
+
+  .swiper-slide-active .reel-video {
+    width: 310px;
+  }
+
+  /* RIGHT SIDE */
+  .reels-right {
+    padding: 40px 30px;
+    gap: 18px;
+  }
+
+  .project-title {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .project-desc {
+    font-size: 15px;
+  }
+
+  .info-grid div {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   SMALL LAPTOP (<= 1200px)
+========================= */
+@media (max-width: 1200px) {
+  .reels-wrapper {
+    flex-direction: column-reverse;
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .mySwiper {
+    width: 100%;
+    height: 450px;
+  }
+
+  .reel-video {
+    width: 200px;
+  }
+
+  .swiper-slide-active .reel-video {
+    width: 260px;
+  }
+
+  /* RIGHT SIDE FULL WIDTH */
+  .reels-right {
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .project-title {
+    font-size: 32px;
+  }
+
+  .project-desc {
+    max-width: 100%;
+  }
+
+  .info-grid {
+    align-items: center;
+  }
+}
+/* =========================
+   <= 768px (small tablet)
+========================= */
+@media (max-width: 768px) {
+  .mySwiper {
+    height: 420px;
+  }
+
+  .reel-video {
+    width: 160px;
+  }
+
+  .swiper-slide-active .reel-video {
+    width: 210px;
+  }
+}
+
+/* =========================
+   <= 576px (mobile)
+========================= */
+/* =========================
+   📱 MOBILE FIX
+========================= */
+@media (max-width: 576px) {
+  .reels-wrapper {
+    flex-direction: column; /* ✅ stack */
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 0px 0px;
+    gap: 0px;
+  }
+
+  /* Heading on TOP */
+  .reels-heading-div {
+    order: -1; /* ✅ move to top */
+    width: 100%;
+    min-width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Make heading SINGLE LINE */
+  .reels-heading-div span {
+    display: inline;
+    margin: 0 5px;
+  }
+
+  /* Swiper full width */
+  .mySwiper {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Video sizing */
+  .reel-video {
+    width: 100%;
+  }
+
+  .swiper-slide-active .reel-video {
+    width: 300px;
+  }
+
+  /* Center align slides */
+  .reel-slide {
+    justify-content: center;
+  }
+}
+
+.reels-right {
+  flex: 1;
+
+  padding: 60px 50px;
+
+  position: relative;
+
+  background: transparent;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 22px;
+
+  animation: fadeIn 0.6s ease;
+}
+
+/* TAG / BADGE */
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* BIG TITLE (EDITORIAL STYLE) */
+.project-title {
+  font-size: 48px;
+  font-weight: 800;
+
+  color: black;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  max-width: 90%;
+}
+
+/* INFO LIST (PURE TEXT STYLE) */
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-top: 10px;
+}
+
+.info-grid div {
+  font-size: 15px;
+
+  color: #444;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: 0.3s ease;
+}
+
+.info-grid div span {
+  color: #000000;
+  font-weight: 700;
+}
+
+/* DESCRIPTION (MAGAZINE STYLE) */
+.project-desc {
+  font-size: 18px;
+  line-height: 1.6;
+
+  color: #555;
+
+  max-width: 85%;
+
+  margin-top: 8px;
+}
+
+/* CTA BUTTON (TEXT LINK STYLE) */
+.project-btn {
+  width: 180px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #000000;
+
+  border: 1px solid #000000;
+  background: transparent;
+
+  cursor: pointer;
+  position: relative;
+
+  padding: 15px;
+
+  transition: all 0.25s ease;
+}
+
+.project-btn:hover {
+  background: #000000;
+  color: #fff;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.thumb-slide-outer {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 70px 10px;
+  flex-wrap: wrap;
+  background-color: #fff;
+  margin-bottom: 50px;
+  border-radius: 20px;
+
+  /* ✅ Shadow */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* DEFAULT (DESKTOP) */
+.thumb-slide {
+  width: 180px;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: all 0.35s ease;
+}
+
+.thumb-slide.active-thumb {
+  opacity: 1;
+  transform: scale(1.08);
+  z-index: 2;
+}
+
+.thumb-video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* CONTENT */
+.thumb-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  color: #fff;
+}
+
+.thumb-title {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.thumb-subtitle {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .thumb-slide {
+    width: 150px;
+  }
+
+  .thumb-slide-outer {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .thumb-slide {
+    width: 130px;
+  }
+
+  .thumb-slide-outer {
+    gap: 20px;
+    padding: 50px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .thumb-slide-outer {
+    flex-wrap: nowrap; /* ❗ switch to scroll */
+    overflow-x: auto;
+    justify-content: flex-start; /* scroll from left */
+    gap: 15px;
+    padding: 30px 10px;
+  }
+
+  .thumb-slide {
+    width: 110px;
+  }
+
+  /* hide scrollbar (optional) */
+  .thumb-slide-outer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reels-right {
+    padding: 60px 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .thumb-slide {
+    width: 95px;
+  }
+}

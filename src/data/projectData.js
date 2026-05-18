@@ -574,13 +574,13 @@ export const PROJECTS = [
     updatedAt: "2026-03-17",
   },
   {
-    slug: "https://aggarwalnamkeen.com/",
+    slug: "aggarwal",
     title: "Aaggarwal Namkeen Website",
     category: "Website Development",
     updatedAt: "2026-03-26",
     year: "2025",
     client: "Aaggarwal Namkeen",
-    src: "/projects/website/aggar.png",
+    src: "/projects/aggarwal/logo.png",
     intro:
       "Designed and developed a modern, user-friendly website for Aaggarwal Namkeen, showcasing their wide range of traditional snacks with an engaging interface and seamless user experience.",
     sections: [],
