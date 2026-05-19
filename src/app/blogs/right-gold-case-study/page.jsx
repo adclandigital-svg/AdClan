@@ -131,7 +131,7 @@ export default function CaseStudyPage() {
             </p>
 
             <h4>Concept Development</h4>
-            <blockquote style={{marginBottom:"20px"}}>
+            <blockquote style={{ marginBottom: "20px" }}>
               Gold that represents trust, purity, and smart buying
             </blockquote>
 
@@ -235,6 +235,17 @@ export default function CaseStudyPage() {
               Adclan helped Right Gold transform that trust into a compelling
               visual narrative that not only connects emotionally but drives
               real business results.
+            </p>
+          </section>
+          {/* FAQ */}
+          <section className="cs-faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <h4>How can video marketing help jewellery brands?</h4>
+
+            <p>
+              Video marketing helps jewellery brands build trust, showcase
+              craftsmanship, and improve customer engagement.
             </p>
           </section>
         </div>

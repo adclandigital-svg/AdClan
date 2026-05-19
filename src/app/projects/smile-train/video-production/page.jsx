@@ -35,7 +35,7 @@ export default function Page() {
         intro:
           "Professional awareness-focused video production for Smile Train, creating emotional storytelling films and impactful visual campaigns that highlight healthcare support, hope, and life-changing cleft treatment initiatives.",
 
-        src: "/projects/smile_train/smile-train.mp4",
+        src: "/projects/smile_train/final.mp4",
       },
     ],
   };
@@ -62,7 +62,7 @@ export default function Page() {
     result:
       "Successfully increased awareness, audience engagement, and emotional connection through powerful storytelling and impactful visual campaign execution.",
 
-    video: "/projects/smile_train/smile-train.mp4",
+    video: "/projects/smile_train/final.mp4",
   };
 
   const isHovering = useRef(false);

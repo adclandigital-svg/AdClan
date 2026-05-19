@@ -1,0 +1,231 @@
+/* ================= HERO ================= */
+.celebrityHero {
+  background-color: #422525;
+  max-width: 98%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* overlay */
+/* .heroSlide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(0, 0, 0, 0.5)
+  );
+  z-index: 1;
+} */
+
+.heroSlide {
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heroSlide img {
+  width: 100%;
+  height: auto;
+}
+
+/* ================= DETAILS ================= */
+.celebrityDetails {
+  display: flex;
+  justify-content: center;
+}
+
+.detailsCard {
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 30px;
+  padding: 60px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.detailsCard h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.meta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.meta span {
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #000;
+  transition: 0.3s;
+  background-color: #fff;
+}
+
+.meta span:hover {
+  background: #000;
+  color: #fff;
+}
+
+.conclusion {
+  margin-top: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border-radius: 20px;
+  /* background: rgba(255, 255, 255, 0.2); */
+  /* backdrop-filter: blur(20px); */
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.conclusionInner {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.conclusionInner h4 {
+  font-size: 25px;
+  color: #000;
+  font-weight: 600;
+}
+
+.conclusionInner p {
+  font-size: 15px;
+  text-align: left;
+  width: 95%;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* ================= SWIPER BULLETS ================= */
+.celebritySwiper :global(.swiper-pagination) {
+  opacity: 1;
+  bottom: 30px;
+  height: 100px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.celebritySwiper :global(.swiper-pagination-bullet) {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.celebritySwiper :global(.swiper-pagination-bullet-active) {
+  background: #fff;
+  transform: scale(1.2);
+  outline: 1px solid white;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/* custom bullet */
+.celebrityBullet {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  outline: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.celebrityBullet img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* active */
+.celebritySwiper :global(.swiper-pagination-bullet-active) .celebrityBullet {
+  transform: scale(1.2);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .heroSlide img {
+    width: 100%;
+    height: auto;
+  }
+
+  .detailsCard {
+    padding: 40px;
+  }
+
+  .conclusion {
+    flex-direction: column;
+  }
+
+  .conclusionInner {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .celebrityHero {
+    width: 95%;
+    /* height: 40vh; */
+  }
+
+  .heroSlide {
+    /* height: 40vh; */
+  }
+
+  .detailsCard {
+    padding: 25px;
+  }
+
+  .detailsCard h2 {
+    font-size: 26px;
+  }
+
+  .meta span {
+    font-size: 12px;
+  }
+
+  .conclusion {
+    flex-direction: column;
+  }
+
+  .conclusionInner h4 {
+    font-size: 18px;
+  }
+  .celebritySwiper :global(.swiper-pagination-bullet) {
+    width: 20px;
+    height: 20px;
+  }
+  .celebritySwiper :global(.swiper-pagination) {
+    height: 50px !important;
+    bottom: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detailsCard h2 {
+    font-size: 22px;
+  }
+}
