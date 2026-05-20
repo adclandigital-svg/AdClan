@@ -12,24 +12,20 @@ import styles from "./celebrity.module.css";
 
 const celebrities = [
   {
-    name: "Sahher Bambba",
-
-    year: "2026 Campaign",
-
-    duration: "End-to-End Celebrity Campaign Management",
-
-    desc: "Adclan executed a complete end-to-end advertising campaign for Right Gold featuring actress Sahher Bambba. From campaign strategy, script writing, celebrity coordination, production planning, shoot management, creative direction, and on-set execution to post-production and final delivery, every stage was managed by our team. We also handled the creation of all campaign assets including ad films, promotional creatives, social media content, branding visuals, and digital marketing materials designed to build a strong luxury jewellery brand presence. The campaign focused on cinematic storytelling, premium fashion aesthetics, and high-impact visual communication to strengthen audience engagement and brand positioning.",
+    name: "JASSIE GILL",
+    year: "2024",
+    duration: "Celebrity Management",
+    desc: "Adclan executed a strategic celebrity management and promotional campaign for Jassie Gill, focusing on talent visibility, digital promotions, and high-impact brand collaborations. The campaign combined premium visual production, audience-focused storytelling, and cross-platform marketing strategies to strengthen Jassie Gill’s digital presence and audience engagement across entertainment and social media platforms.",
 
     conclusion:
-      "The Right Gold campaign successfully elevated the brand’s luxury identity through celebrity-led storytelling, premium ad film production, and professionally managed campaign execution. Featuring Sahher Bambba helped increase audience attention, strengthen digital engagement, and create a powerful premium perception across advertising, social media, and promotional platforms.",
+      "The campaign successfully enhanced Jassie Gill’s brand visibility, audience engagement, and digital reach through impactful promotional strategies, celebrity branding, and visually engaging content tailored for modern entertainment and social media audiences.",
 
-    image: "/projects/right-gold/1.png",
+    image: "/projects/savier-park/banner.png",
   },
 ];
 
 export default function CelebrityPage() {
   const [activeIndex, setActiveIndex] = useState(0);
-
   const activeData = celebrities[activeIndex];
 
   return (
@@ -70,20 +66,17 @@ export default function CelebrityPage() {
 
           <div className={styles.meta}>
             <span>📅 {activeData.year}</span>
-
             <span>⏳ {activeData.duration}</span>
           </div>
 
           <div className={styles.conclusion}>
             <div className={styles.conclusionInner}>
               <h4>Description</h4>
-
               <p>{activeData.desc}</p>
             </div>
 
             <div className={styles.conclusionInner}>
               <h4>Conclusion</h4>
-
               <p>{activeData.conclusion}</p>
             </div>
           </div>

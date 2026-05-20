@@ -33,7 +33,9 @@
 }
 .heroSlide img {
   width: 100%;
-  height: auto;
+  max-height: 700px;
+  object-fit: fill;
+  object-position: center;
 }
 
 /* ================= DETAILS ================= */
@@ -120,7 +122,7 @@
 /* ================= SWIPER BULLETS ================= */
 .celebritySwiper :global(.swiper-pagination) {
   opacity: 1;
-  bottom: 5px;
+  bottom: 30px;
   height: 100px !important;
   display: flex;
   justify-content: center;
@@ -141,8 +143,6 @@
   transform: scale(1.2);
   outline: 1px solid white;
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
-  outline: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
 }
 
 /* custom bullet */
@@ -151,12 +151,9 @@
   height: 60px;
   border-radius: 50%;
   overflow: hidden;
+  outline: 1px solid rgba(255, 255, 255, 0.5);
   cursor: pointer;
   transition: all 0.3s ease;
-
-  /* SHADOW */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-  outline: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .celebrityBullet img {

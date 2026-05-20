@@ -12,24 +12,21 @@ import styles from "./celebrity.module.css";
 
 const celebrities = [
   {
-    name: "Sahher Bambba",
+    name: "Adah Sharma",
+    year: "2024",
+    duration: "Special Appearance Management",
 
-    year: "2026 Campaign",
-
-    duration: "End-to-End Celebrity Campaign Management",
-
-    desc: "Adclan executed a complete end-to-end advertising campaign for Right Gold featuring actress Sahher Bambba. From campaign strategy, script writing, celebrity coordination, production planning, shoot management, creative direction, and on-set execution to post-production and final delivery, every stage was managed by our team. We also handled the creation of all campaign assets including ad films, promotional creatives, social media content, branding visuals, and digital marketing materials designed to build a strong luxury jewellery brand presence. The campaign focused on cinematic storytelling, premium fashion aesthetics, and high-impact visual communication to strengthen audience engagement and brand positioning.",
+    desc: "Adclan managed the special appearance and celebrity coordination for Adah Sharma at the BIG FM Big Impact Awards 2024. The campaign focused on event management, celebrity handling, media visibility, and premium brand presentation while ensuring seamless coordination throughout the event experience. The collaboration highlighted elegance, professionalism, and strong audience engagement through high-visibility event coverage and promotional branding.",
 
     conclusion:
-      "The Right Gold campaign successfully elevated the brand’s luxury identity through celebrity-led storytelling, premium ad film production, and professionally managed campaign execution. Featuring Sahher Bambba helped increase audience attention, strengthen digital engagement, and create a powerful premium perception across advertising, social media, and promotional platforms.",
+      "The event successfully enhanced brand visibility and audience engagement through Adah Sharma’s appearance at the BIG Impact Awards 2024. With strategic celebrity management, smooth event coordination, and premium presentation, Adclan delivered a strong entertainment and media impact across digital and on-ground platforms.",
 
-    image: "/projects/right-gold/1.png",
+    image: "/projects/big-fm/banner.png",
   },
 ];
 
 export default function CelebrityPage() {
   const [activeIndex, setActiveIndex] = useState(0);
-
   const activeData = celebrities[activeIndex];
 
   return (
@@ -70,20 +67,17 @@ export default function CelebrityPage() {
 
           <div className={styles.meta}>
             <span>📅 {activeData.year}</span>
-
             <span>⏳ {activeData.duration}</span>
           </div>
 
           <div className={styles.conclusion}>
             <div className={styles.conclusionInner}>
               <h4>Description</h4>
-
               <p>{activeData.desc}</p>
             </div>
 
             <div className={styles.conclusionInner}>
               <h4>Conclusion</h4>
-
               <p>{activeData.conclusion}</p>
             </div>
           </div>

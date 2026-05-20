@@ -20,7 +20,7 @@ const celebrities = [
     conclusion:
       "The campaign significantly increased Vikram Mills’ digital visibility and audience engagement. Through celebrity-led promotions, high-quality visuals, and platform-specific marketing strategies, the campaign strengthened brand awareness and established a modern and premium image among consumers.",
 
-    image: "/projects/vikram-mills/Vikram-mills-celeb.png",
+    image: "/projects/samridhi/2.png",
   },
   {
     name: "Anubhav Singh Bassi",
@@ -31,7 +31,7 @@ const celebrities = [
     conclusion:
       "The campaign successfully boosted audience interaction and improved Vikram Mills’ online brand presence. By combining entertainment-focused content with strategic marketing creatives, the campaign generated higher engagement, stronger consumer recall, and a more relatable brand identity across social media platforms.",
 
-    image: "/projects/vikram-mills/Vikram-mills-celeb.png",
+     image: "/projects/samridhi/4.png",
   },
 ];
 

@@ -264,133 +264,60 @@ export const PROJECTS = [
   },
   {
     black: "true",
-    slug: "millind-gaba",
-    title: "MILLIND GABA",
+    slug: "samridhi/celebrity-managements",
+    title: "SAMRIDHI",
     category: "Celebrity Management",
     year: "2024",
-    client: "MILLIND GABA",
-    src: "/projects/project-thumbnail/MILLIAND GABA.png",
+    client: "SAMRIDHI",
+    src: "/projects/samridhi/logo.png",
     updatedAt: "2026-01-20",
-    intro:
-      "End-to-end celebrity management for Millind Gaba, covering contract negotiations, public relations, campaign coordination, and digital content strategy to strengthen brand collaborations and audience engagement.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "image",
-        src: "/projects/milliand_gaba/banner.png",
-      },
-    ],
   },
   {
     black: "true",
-    slug: "jassie-gill",
+    slug: "saviour-park/celebrity-managements",
     title: "JASSIE GILL",
     category: "Celebrity Management",
     year: "2024",
     client: "JASSIE GILL",
     updatedAt: "2026-01-20",
-    src: "/projects/project-thumbnail/JASSIE GILL.png",
-    intro:
-      "Strategic celebrity management for Jassie Gill, focusing on talent booking, promotional campaigns, and cross-platform visibility for maximum impact.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "image",
-        src: "/projects/jassie_gill/banner.png",
-      },
-    ],
+    src: "/projects/savier-park/logo.png",
   },
   {
     black: "true",
-    slug: "bassi",
-    title: "BASSI",
-    category: "Celebrity Management",
-    updatedAt: "2026-01-20",
-    year: "2024",
-    client: "BASSI",
-    src: "/projects/project-thumbnail/BASSI.png",
-    intro:
-      "Full-scale celebrity management for comedian Bassi, including live event coordination, digital partnerships, and media engagement to expand his fan base.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "image",
-        src: "/projects/bassi/bassi.png",
-      },
-    ],
-  },
-  {
-    black: "true",
-    slug: "adah-sharma",
+    slug: "big-fm/celebrity-managements",
     title: "ADAH SHARMA",
     category: "Celebrity Management",
     updatedAt: "2026-02-10",
     year: "2024",
     client: "ADAH SHARMA",
-    src: "/projects/project-thumbnail/ADAH SHARMA.png",
-    intro:
-      "Celebrity management services for Adah Sharma, handling brand tie-ups, social media growth, and public appearances to strengthen her marketability.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "image",
-        src: "/projects/adah_sharma/banner.png",
-      },
-    ],
+    src: "/projects/big-fm/logo.png",
   },
   {
-    slug: "zipperminds",
+    slug: "zipper-mind/video-production",
     title: "Zipperminds",
     category: "Video Production",
     updatedAt: "2026-02-10",
     year: "2024",
     client: "Zipperminds",
-    src: "/projects/project-thumbnail/Zipperminds.png",
-    intro:
-      "High-impact video production for Zipperminds, delivering cinematic brand films and social media content that capture the essence of innovative learning.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "video",
-        src: "/projects/zipperminds/banner.mp4",
-      },
-    ],
+    src: "/projects/zipperminds/logo.png",
   },
   {
-    slug: "ggit",
+    slug: "ggit/video-production",
     title: "GGIT",
     category: "Video Production",
     updatedAt: "2026-02-10",
     year: "2024",
     client: "GGIT",
-    src: "/projects/project-thumbnail/GGIT.png",
-    intro:
-      "Creative video production for GGIT, producing engaging promotional videos and motion graphics tailored for digital campaigns and brand storytelling.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "video",
-        src: "/projects/ggit/GGIT.mp4",
-      },
-    ],
+    src: "/projects/ggit/logo.png",
   },
   {
-    slug: "india-result",
+    slug: "india-result/video-production",
     title: "INDIA RESULT",
     category: "Video Production",
     updatedAt: "2026-02-10",
     year: "2024",
     client: "INDIA RESULT",
-    src: "/projects/project-thumbnail/INDIA RESULT.png",
-    intro:
-      "Dynamic video production for India Result, creating compelling ad films and explainer videos that drive engagement and communicate educational success stories.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "video",
-        src: "/projects/india_result/India Result.com.mp4",
-      },
-    ],
+    src: "/projects/india_result/logo.png",
   },
   {
     slug: "tirupati",
@@ -614,7 +541,6 @@ export const PROJECTS = [
     year: "2026",
     client: "Adore Realtech",
     src: "/projects/adore/logo.png",
-  
   },
   {
     slug: "kiloi-food/website",

@@ -20,7 +20,7 @@ const celebrities = [
     conclusion:
       "The campaign significantly enhanced Vikram Mills’ brand visibility and strengthened its positioning as a trusted household food brand. Through impactful visuals and celebrity-driven engagement, the campaign increased audience reach, improved digital engagement, and created a strong premium perception across social media and advertising platforms.",
 
-    image: "/projects/vikram-mills/Vikram-mills-celeb.png",
+    image: "/projects/vikram-mills/6.png",
   },
 ];
 
