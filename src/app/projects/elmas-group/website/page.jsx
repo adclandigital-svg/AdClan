@@ -11,7 +11,7 @@ export default function ProjectPage() {
     tagline:
       "Modern corporate website developed for Elmas Group with smooth animations, optimized frontend architecture, responsive layouts, and premium user experience.",
 
-    website: "https://elmas-group.vercel.app/",
+    website: "https://elmasgroup.in/",
 
     description:
       "A modern business website designed and developed for Elmas Group to showcase corporate services, brand identity, and digital presence. The project focused on premium UI/UX, smooth page transitions, responsive performance, and modern frontend technologies for an engaging user experience across all devices.",

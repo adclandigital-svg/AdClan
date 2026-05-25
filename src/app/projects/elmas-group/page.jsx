@@ -6,73 +6,43 @@ import Link from "next/link";
 export default function ProjectPage() {
   const works = [
     {
-      title: "Celebrity Management",
-      desc: "End-to-end celebrity collaborations, brand endorsements, and talent management.",
-      icon: "🎤",
-      link: "/projects/vikram-mills/celebrity-managements",
-    },
-    {
       title: "Branding",
       desc: "Complete brand identity creation with strategic positioning and visual storytelling.",
       icon: "🏷️",
-      link: "/projects/vikram-mills/branding",
+      link: "/projects/elmas-group/branding",
     },
-    // {
-    //   title: "FMCG Branding & Packaging",
-    //   desc: "Packaging design and brand transformation for high-impact retail presence.",
-    //   icon: "📦",
-    //   link: "/projects/vikram-mills/fmcg-branding",
-    // },
-    {
-      title: "Video Production",
-      desc: "Cinematic brand films, ad shoots, and high-quality video content production.",
-      icon: "🎬",
-      link: "/projects/vikram-mills/video-production",
-    },
-    // {
-    //   title: "Influencer's Video",
-    //   desc: "Influencer-led content designed for engagement, reach, and brand storytelling.",
-    //   icon: "⭐",
-    //   link: "/projects/vikram-mills/influencer",
-    // },
     {
       title: "Digital & Creatives",
       desc: "Scroll-stopping creatives, social media designs, and digital campaign assets.",
       icon: "🎨",
-      link: "/projects/vikram-mills/creatives",
-    },
-    {
-      title: "Radio Jingles",
-      desc: "Catchy audio branding and radio ads crafted for maximum recall.",
-      icon: "🎧",
-      link: "/projects/vikram-mills/radio-jingles",
+      link: "/projects/elmas-group/creatives",
     },
     {
       title: "Website Development",
       desc: "Modern, high-performance websites focused on UX, design, and conversions.",
       icon: "💻",
-      link: "/projects/vikram-mills/website",
+      link: "/projects/elmas-group/website",
     },
   ];
 
   return (
     <div className="project-page">
-      {/* <div className="project-hero-image">
-        <img src="/projects/elmas-group/banner.png" />
-      </div> */}
+      <div className="project-hero-image">
+        <img src="/projects/elmasGroup/banner.png" />
+      </div>
 
       {/* HERO */}
       <div className="project-hero1">
-        <div className="hero-badge">Modern Corporate Website Experience</div>
+        <div className="hero-badge">Premium Real Estate Experience</div>
 
         <h1>Elmas Group</h1>
 
         <p className="hero-sub">
-          A premium corporate website experience designed and developed with
-          modern UI/UX, smooth animations, responsive layouts, and
-          high-performance frontend architecture powered by Next.js and GSAP.
+          Elmas Group offers premium senior-friendly residences, luxury living
+          spaces, modern real estate developments, elegant community
+          experiences, and thoughtfully designed environments focused on
+          comfort, wellness, and modern lifestyles.
         </p>
-
         <div className="hero-actions">
           <a href="/contact" className="btn-secondary">
             Start Project
