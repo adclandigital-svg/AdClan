@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./branding.css";
 
 export default function Page() {
@@ -47,19 +47,98 @@ export default function Page() {
 
       {/* POPUP */}
       {selectedImage && (
-        <div className="popup">
-          {/* CLOSE BUTTON */}
-          <button
-            className="popup-close"
-            onClick={() => setSelectedImage(null)}
-          >
-            ×
-          </button>
-
-          {/* IMAGE */}
-          <img src={selectedImage} alt="preview" />
-        </div>
+        <ImagePopup
+          image={selectedImage}
+          onClose={() => setSelectedImage(null)}
+        />
       )}
+    </div>
+  );
+}
+
+/* ========================= */
+/* IMAGE POPUP */
+/* ========================= */
+
+function ImagePopup({ image, onClose }) {
+  const imageRef = useRef(null);
+
+  const [scale, setScale] = useState(1);
+
+  // =========================
+  // CTRL + SCROLL FIX
+  // =========================
+
+  useEffect(() => {
+    const preventBrowserZoom = (e) => {
+      if (e.ctrlKey) {
+        e.preventDefault();
+      }
+    };
+
+    window.addEventListener("wheel", preventBrowserZoom, {
+      passive: false,
+    });
+
+    return () => {
+      window.removeEventListener("wheel", preventBrowserZoom);
+    };
+  }, []);
+
+  // =========================
+  // SCROLL ZOOM
+  // =========================
+
+  const handleWheel = (e) => {
+    e.preventDefault();
+
+    let newScale = scale + e.deltaY * -0.002;
+
+    newScale = Math.min(Math.max(1, newScale), 5);
+
+    setScale(newScale);
+  };
+
+  // =========================
+  // DOUBLE CLICK ZOOM
+  // =========================
+
+  const handleDoubleClick = () => {
+    if (scale > 1) {
+      setScale(1);
+    } else {
+      setScale(2.5);
+    }
+  };
+
+  return (
+    <div className="popup" onClick={onClose}>
+      {/* CLOSE */}
+      <button
+        className="popup-close"
+        onClick={onClose}
+      >
+        ×
+      </button>
+
+      {/* IMAGE WRAPPER */}
+      <div
+        className="popup-image-wrapper"
+        onClick={(e) => e.stopPropagation()}
+        onWheel={handleWheel}
+      >
+        <img
+          ref={imageRef}
+          src={image}
+          alt="preview"
+          className="popup-image"
+          onDoubleClick={handleDoubleClick}
+          draggable={false}
+          style={{
+            transform: `scale(${scale})`,
+          }}
+        />
+      </div>
     </div>
   );
 }

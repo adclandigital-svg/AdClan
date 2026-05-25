@@ -7,42 +7,41 @@ export default function ProjectPage() {
   const works = [
     {
       title: "Branding",
-      desc: "Complete brand identity creation with strategic positioning and visual storytelling.",
+      desc: "Luxury mall branding, premium identity design, and modern visual communication for KB West Walk.",
       icon: "🏷️",
-      link: "/projects/elmas-group/branding",
+      link: "/projects/kb-westwalk/branding",
     },
+
     {
       title: "Digital & Creatives",
-      desc: "Scroll-stopping creatives, social media designs, and digital campaign assets.",
+      desc: "High-end promotional creatives, launch campaigns, social media posts, and cinematic digital content.",
       icon: "🎨",
-      link: "/projects/elmas-group/creatives",
-    },
-    {
-      title: "Website Development",
-      desc: "Modern, high-performance websites focused on UX, design, and conversions.",
-      icon: "💻",
-      link: "/projects/elmas-group/website",
+      link: "/projects/kb-westwalk/creatives",
     },
   ];
 
   return (
     <div className="project-page">
       <div className="project-hero-image">
-        <img src="/projects/elmasGroup/banner1.png" />
+        <img src="/projects/kb/banner.png" />
       </div>
 
       {/* HERO */}
-      <div className="project-hero1">
-        <div className="hero-badge">Premium Real Estate Experience</div>
 
-        <h1>Elmas Group</h1>
+      <div className="project-hero1">
+        <div className="hero-badge">
+          Premium Commercial Destination
+        </div>
+
+        <h1>KB West Walk</h1>
 
         <p className="hero-sub">
-          Elmas Group offers premium senior-friendly residences, luxury living
-          spaces, modern real estate developments, elegant community
-          experiences, and thoughtfully designed environments focused on
-          comfort, wellness, and modern lifestyles.
+          KB West Walk is a premium commercial and lifestyle destination
+          designed to deliver luxury shopping, modern architecture,
+          entertainment spaces, vibrant retail experiences, and a
+          contemporary urban environment for businesses and visitors.
         </p>
+
         <div className="hero-actions">
           <a href="/contact" className="btn-secondary">
             Start Project
@@ -51,6 +50,7 @@ export default function ProjectPage() {
       </div>
 
       {/* WORK SECTION */}
+
       <div className="project-works" id="works">
         <h2>Work We Did</h2>
 
@@ -65,12 +65,12 @@ export default function ProjectPage() {
 
                 e.currentTarget.style.setProperty(
                   "--x",
-                  `${e.clientX - rect.left}px`,
+                  `${e.clientX - rect.left}px`
                 );
 
                 e.currentTarget.style.setProperty(
                   "--y",
-                  `${e.clientY - rect.top}px`,
+                  `${e.clientY - rect.top}px`
                 );
               }}
             >
