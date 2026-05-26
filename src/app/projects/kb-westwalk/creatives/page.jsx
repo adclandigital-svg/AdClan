@@ -3,7 +3,7 @@
 import React, { useState, useRef } from "react";
 import "./reels-page.css";
 
-import { FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 import { Users, BarChart3, Clock, Sparkles } from "lucide-react";
 
@@ -16,7 +16,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 /* =========================================
-   ELMAS GROUP SHOWCASE DATA
+   KB WEST WALK SHOWCASE DATA
 ========================================= */
 
 const showcaseData = [
@@ -25,189 +25,198 @@ const showcaseData = [
   {
     id: 1,
     category: "Reels",
-    title: "Luxury Residence Reel",
+    title: "",
     type: "video",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
-    duration: "60 Days",
-    src: "/projects/elmasGroup/creatives/v1.mp4",
+    duration: "45 Days",
+    src: "/projects/kb/creative/v1.mp4",
   },
 
   {
     id: 2,
     category: "Reels",
-    title: "Premium Lifestyle Campaign",
+    title: "",
     type: "video",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
-    duration: "60 Days",
-    src: "/projects/elmasGroup/creatives/v2.mp4",
+    duration: "45 Days",
+    src: "/projects/kb/creative/v2.mp4",
   },
 
   {
     id: 3,
     category: "Reels",
-    title: "Modern Living Experience",
+    title: "",
     type: "video",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
-    duration: "60 Days",
-    src: "/projects/elmasGroup/creatives/v3.mp4",
+    duration: "45 Days",
+    src: "/projects/kb/creative/v3.mp4",
   },
 
   {
     id: 4,
     category: "Reels",
-    title: "Senior Friendly Residence",
+    title: "",
     type: "video",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
-    duration: "60 Days",
-    src: "/projects/elmasGroup/creatives/v4.mp4",
+    duration: "45 Days",
+    src: "/projects/kb/creative/v4.mp4",
   },
 
   {
     id: 5,
     category: "Reels",
-    title: "Architectural Showcase",
+    title: "",
     type: "video",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
-    duration: "60 Days",
-    src: "/projects/elmasGroup/creatives/v5.mp4",
+    duration: "45 Days",
+    src: "/projects/kb/creative/v5.mp4",
   },
-
   {
-    id: 6,
+    id: 21,
     category: "Reels",
-    title: "Luxury Interior Tour",
+    title: "",
     type: "video",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
-    duration: "60 Days",
-    src: "/projects/elmasGroup/creatives/v6.mp4",
+    duration: "45 Days",
+    src: "/projects/kb/creative/v1.mp4",
   },
 
   {
-    id: 7,
+    id: 22,
     category: "Reels",
-    title: "Real Estate Brand Film",
+    title: "",
     type: "video",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
-    duration: "60 Days",
-    src: "/projects/elmasGroup/creatives/v7.mp4",
+    duration: "45 Days",
+    src: "/projects/kb/creative/v2.mp4",
   },
 
   {
-    id: 8,
+    id: 23,
     category: "Reels",
-    title: "Investment Opportunity Reel",
+    title: "",
     type: "video",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
-    duration: "60 Days",
-    src: "/projects/elmasGroup/creatives/v8.mp4",
+    duration: "45 Days",
+    src: "/projects/kb/creative/v3.mp4",
   },
 
-  /* ================= CREATIVES ================= */
+  {
+    id: 24,
+    category: "Reels",
+    title: "",
+    type: "video",
+    client: "KB West Walk",
+    platform: "Instagram",
+    duration: "45 Days",
+    src: "/projects/kb/creative/v4.mp4",
+  },
 
   {
-    id: 11,
-    category: "Creatives",
-    title: "Luxury Residence Creative",
-    type: "image",
-    client: "Elmas Group",
+    id: 25,
+    category: "Reels",
+    title: "",
+    type: "video",
+    client: "KB West Walk",
     platform: "Instagram",
-    duration: "30 Days",
-    src: "/projects/elmasGroup/creatives/t11.png",
+    duration: "45 Days",
+    src: "/projects/kb/creative/v5.mp4",
   },
 
   {
     id: 12,
     category: "Creatives",
-    title: "Premium Living Poster",
+    title: "",
     type: "image",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
     duration: "30 Days",
-    src: "/projects/elmasGroup/creatives/t12.png",
+    src: "/projects/kb/creative/3.jpg",
   },
 
   {
     id: 13,
     category: "Creatives",
-    title: "Luxury Apartment Campaign",
+    title: "",
     type: "image",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
     duration: "30 Days",
-    src: "/projects/elmasGroup/creatives/t13.png",
+    src: "/projects/kb/creative/11.webp",
   },
 
   {
     id: 14,
     category: "Creatives",
-    title: "Modern Interior Creative",
+    title: "",
     type: "image",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
     duration: "30 Days",
-    src: "/projects/elmasGroup/creatives/t21.png",
+    src: "/projects/kb/creative/4.webp",
   },
 
   {
     id: 15,
     category: "Creatives",
-    title: "Elite Lifestyle Branding",
+    title: "",
     type: "image",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
     duration: "30 Days",
-     src: "/projects/elmasGroup/creatives/t22.png",
+    src: "/projects/kb/creative/5.webp",
   },
 
   {
     id: 16,
     category: "Creatives",
-    title: "Residential Project Poster",
+    title: "",
     type: "image",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
     duration: "30 Days",
-    src: "/projects/elmasGroup/creatives/t23.png",
+    src: "/projects/kb/creative/6.webp",
   },
 
   {
     id: 17,
     category: "Creatives",
-    title: "Investment Campaign Creative",
+    title: "",
     type: "image",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
     duration: "30 Days",
-     src: "/projects/elmasGroup/creatives/t31.png",
+    src: "/projects/kb/creative/7.webp",
   },
 
   {
     id: 18,
     category: "Creatives",
-    title: "Luxury Brand Campaign",
+    title: "",
     type: "image",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
     duration: "30 Days",
-    src: "/projects/elmasGroup/creatives/t32.gif",
+    src: "/projects/kb/creative/8.webp",
   },
+
   {
     id: 19,
     category: "Creatives",
-    title: "Premium Property Creative",
+    title: "",
     type: "image",
-    client: "Elmas Group",
+    client: "KB West Walk",
     platform: "Instagram",
     duration: "30 Days",
-    src: "/projects/elmasGroup/creatives/t33.gif",
+    src: "/projects/kb/creative/10.png",
   },
 ];
 
@@ -226,16 +235,15 @@ export default function Page() {
 
   return (
     <div className="cr-showcase">
-      {/* =========================================
-          HERO
-      ========================================= */}
+      {/* HERO */}
 
       <div className="cr-hero">
-        <h1>Elmas Group Media</h1>
+        <h1>KB West Walk Media</h1>
 
         <p className="cr-hero-desc">
-          Premium Instagram reels and luxury creatives crafted for modern real
-          estate branding and engagement.
+          Premium Instagram reels and commercial creatives designed for modern
+          retail branding, luxury shopping experiences and investment-focused
+          marketing.
         </p>
 
         {/* INFO BAR */}
@@ -243,12 +251,12 @@ export default function Page() {
         <div className="cr-info-bar">
           <div>
             <Users size={16} />
-            Luxury Branding
+            Commercial Branding
           </div>
 
           <div>
             <BarChart3 size={16} />
-            Instagram Growth
+            Retail Marketing
           </div>
 
           <div>
@@ -277,7 +285,7 @@ export default function Page() {
 
           <a href="#">
             <FaInstagram />
-            Brand Content
+            Brand Campaigns
           </a>
         </div>
 
@@ -290,29 +298,23 @@ export default function Page() {
         </div>
       </div>
 
-      {/* =========================================
-          CREATIVES
-      ========================================= */}
+      {/* CREATIVES */}
 
       <Section
-        title="Luxury Creative Designs"
+        title="Commercial Creative Designs"
         data={creatives}
         setActiveItem={setActiveItem}
       />
 
-      {/* =========================================
-          REELS
-      ========================================= */}
+      {/* REELS */}
 
       <Section
-        title="Luxury Reels Showcase"
+        title="Retail Reels Showcase"
         data={reels}
         setActiveItem={setActiveItem}
       />
 
-      {/* =========================================
-          MODAL
-      ========================================= */}
+      {/* MODAL */}
 
       {activeItem && (
         <div className="cr-modal" onClick={() => setActiveItem(null)}>
@@ -347,8 +349,8 @@ function Section({ title, data, setActiveItem }) {
         <h2>{title}</h2>
 
         <p>
-          Premium visuals designed for luxury branding, engagement and real
-          estate marketing.
+          Premium visuals designed for commercial branding, engagement and
+          luxury retail marketing.
         </p>
       </div>
 

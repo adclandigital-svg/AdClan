@@ -10,78 +10,14 @@ export const PROJECTS = [
     updatedAt: "2026-01-15",
   },
   {
-    slug: "kb-west-walk",
+    slug: "kb-westwalk",
     title: "KB West Walk",
     category: "Branding",
     year: "2026",
     client: "KB West Walk",
-    src: "/projects/kb/Creative 3.png",
+    src: "/projects/kb/logo.png",
     updatedAt: "2026-01-15",
-    intro:
-      "For KB West Walk, we executed a high-impact Instagram content strategy focused on reels, creative posts, and campaign-driven storytelling. The objective was to increase footfall, boost brand recall, and position the mall as a vibrant lifestyle destination for the new-age audience.",
-
-    sections: [
-      {
-        type: "hero",
-        mediaType: "image",
-        src: "/projects/kb/bn1.webp",
-        title: "Scroll-Stopping Social Presence",
-        description:
-          "A visually dynamic Instagram campaign crafted to capture attention within seconds. From high-energy reels to bold static creatives, every asset was designed to maximize engagement and shareability.",
-      },
-
-      {
-        type: "mediaGallery",
-        items: [
-          {
-            mediaType: "image",
-            orientation: "landscape",
-            src: "/projects/kb/westwalk1.jpeg",
-          },
-          {
-            mediaType: "image",
-            orientation: "landscape",
-            src: "/projects/kb/westwalk2.jpeg",
-          },
-        ],
-      },
-
-      {
-        type: "slider",
-        items: [
-          {
-            mediaType: "image",
-            src: "/projects/kb/6.webp",
-            desc: "Instagram carousel creatives showcasing featured brands and in-store experiences.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/kb/7.webp",
-            desc: "Engagement-driven static post designed for product highlights and limited-time offers.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/kb/8.webp",
-            desc: "Event promotion creative optimized for Instagram stories and feed visibility.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/kb/6.webp",
-            desc: "Instagram carousel creatives showcasing featured brands and in-store experiences.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/kb/7.webp",
-            desc: "Engagement-driven static post designed for product highlights and limited-time offers.",
-          },
-          {
-            mediaType: "image",
-            src: "/projects/kb/8.webp",
-            desc: "Event promotion creative optimized for Instagram stories and feed visibility.",
-          },
-        ],
-      },
-    ],
+    
   },
 
   {
