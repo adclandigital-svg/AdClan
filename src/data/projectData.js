@@ -297,18 +297,18 @@ export const PROJECTS = [
     client: "Spring Elmas",
     src: "/projects/spring_elmas/logo.png",
   },
-  {
-    slug: "https://elmas-group.vercel.app/",
-    title: "Elmas Group Website",
-    category: "Website Development",
-    updatedAt: "2026-03-26",
-    year: "2026",
-    client: "Elmas Group",
-    src: "/projects/website/elmas-group.png",
-    intro:
-      "Developed a corporate website for Elmas Group that highlights their portfolio, services, and brand identity with a professional layout and smooth user experience.",
-    sections: [],
-  },
+  // {
+  //   slug: "https://elmas-group.vercel.app/",
+  //   title: "Elmas Group Website",
+  //   category: "Website Development",
+  //   updatedAt: "2026-03-26",
+  //   year: "2026",
+  //   client: "Elmas Group",
+  //   src: "/projects/website/elmas-group.png",
+  //   intro:
+  //     "Developed a corporate website for Elmas Group that highlights their portfolio, services, and brand identity with a professional layout and smooth user experience.",
+  //   sections: [],
+  // },
   {
     slug: "adore/website",
     title: "Adore Realtech Website",
