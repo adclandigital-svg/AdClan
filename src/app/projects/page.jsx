@@ -5,7 +5,7 @@ import "./projects.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { PROJECTS } from "@/data/projectData";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const CATEGORY_ORDER = [
   "Celebrity Management",
@@ -18,52 +18,105 @@ const CATEGORY_ORDER = [
   "Website Development",
 ];
 
+/* =========================
+   SORT PROJECTS
+========================= */
 const sortedProjects = [...PROJECTS].sort((a, b) => {
-  return (
-    CATEGORY_ORDER.indexOf(a.category) - CATEGORY_ORDER.indexOf(b.category)
+  const aIndex = Math.min(
+    ...a.category.map((cat) => CATEGORY_ORDER.indexOf(cat)),
   );
+
+  const bIndex = Math.min(
+    ...b.category.map((cat) => CATEGORY_ORDER.indexOf(cat)),
+  );
+
+  return aIndex - bIndex;
 });
 
 export default function ProjectsPage() {
   const pageRef = useRef(null);
   const loaderRef = useRef(null);
+
   const router = useRouter();
-  const [activeAudio, setActiveAudio] = useState(null);
+  const searchParams = useSearchParams();
 
-  // SAFE fallback if PROJECTS undefined
-  const projectsData = Array.isArray(sortedProjects) ? sortedProjects : [];
+  /* =========================
+     ACTIVE TAB FROM URL
+  ========================= */
+  const initialTab = searchParams.get("category") || "All";
 
-  const TABS = [
-    "All",
-    ...Array.from(new Set(projectsData.map((p) => p.category))),
-  ];
+  const [activeTab, setActiveTab] = useState(initialTab);
 
-  const [activeTab, setActiveTab] = useState("All");
   const [visibleCount, setVisibleCount] = useState(8);
+
   const [filteredProjects, setFilteredProjects] = useState([]);
+
   const [visibleProjects, setVisibleProjects] = useState([]);
 
   const prevCardCountRef = useRef(0);
 
-  // Filter projects
+  const projectsData = Array.isArray(sortedProjects) ? sortedProjects : [];
+
+  /* =========================
+     TABS
+  ========================= */
+  const TABS = [
+    "All",
+    ...Array.from(new Set(projectsData.flatMap((p) => p.category))),
+  ];
+
+  /* =========================
+     URL TAB SYNC
+  ========================= */
+  useEffect(() => {
+    const category = searchParams.get("category") || "All";
+
+    setActiveTab(category);
+  }, [searchParams]);
+
+  /* =========================
+     TAB CHANGE
+  ========================= */
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+
+    const url =
+      tab === "All"
+        ? "/projects"
+        : `/projects?category=${encodeURIComponent(tab)}`;
+
+    /* ✅ NO REFRESH */
+    window.history.pushState({}, "", url);
+  };
+
+  /* =========================
+     FILTER PROJECTS
+  ========================= */
   useEffect(() => {
     const result =
       activeTab === "All"
         ? projectsData
-        : projectsData.filter((p) => p.category === activeTab);
+        : projectsData.filter((p) => p.category.includes(activeTab));
 
     setFilteredProjects(result);
+
     setVisibleProjects(result.slice(0, 8));
+
     setVisibleCount(8);
+
     prevCardCountRef.current = 0;
   }, [activeTab]);
 
-  // Update visible projects
+  /* =========================
+     UPDATE VISIBLE
+  ========================= */
   useEffect(() => {
     setVisibleProjects(filteredProjects.slice(0, visibleCount));
   }, [visibleCount, filteredProjects]);
 
-  // Infinite scroll
+  /* =========================
+     INFINITE SCROLL
+  ========================= */
   useEffect(() => {
     if (!loaderRef.current) return;
 
@@ -84,7 +137,9 @@ export default function ProjectsPage() {
     return () => observer.disconnect();
   }, [visibleCount, filteredProjects]);
 
-  // Hero animation
+  /* =========================
+     HERO ANIMATION
+  ========================= */
   useGSAP(
     () => {
       const tl = gsap.timeline();
@@ -107,7 +162,9 @@ export default function ProjectsPage() {
     { scope: pageRef },
   );
 
-  // Animate new cards
+  /* =========================
+     CARD ANIMATION
+  ========================= */
   useEffect(() => {
     const currentCount = visibleProjects.length;
 
@@ -129,75 +186,97 @@ export default function ProjectsPage() {
   }, [visibleProjects]);
 
   return (
-    <>
-      <main className="projects-page" ref={pageRef}>
-        {/* HERO */}
-        <section className="portfolio-hero">
-          <h1>
-            <span>We design</span>
-            <span>brands,</span>
-            <span>experiences</span>
-            <span>& stories.</span>
-          </h1>
+    <main className="projects-page" ref={pageRef}>
+      {/* =========================
+          HERO
+      ========================= */}
+      <section className="portfolio-hero">
+        <h1>
+          <span>We design</span>
+          <span>brands,</span>
+          <span>experiences</span>
+          <span>& stories.</span>
+        </h1>
 
-          <p>
-            A creative agency crafting brand identities, digital experiences,
-            and films that connect culture and commerce.
-          </p>
-        </section>
+        <p>
+          A creative agency crafting brand identities, digital experiences and
+          campaigns that connect brands with audiences.
+        </p>
+      </section>
 
-        {/* TABS */}
-        <div className="projects-tabs">
-          {TABS?.map((tab) => (
-            <button
-              key={tab}
-              className={`tab-btn ${activeTab === tab ? "active" : ""}`}
-              onClick={() => setActiveTab(tab)}
-            >
-              [ {tab} ]
-            </button>
-          ))}
-        </div>
+      {/* =========================
+          TABS
+      ========================= */}
+      <div className="projects-tabs">
+        {TABS?.map((tab) => (
+          <button
+            key={tab}
+            className={`tab-btn ${activeTab === tab ? "active" : ""}`}
+            onClick={() => handleTabChange(tab)}
+          >
+            [ {tab} ]
+          </button>
+        ))}
+      </div>
 
-        {/* GRID */}
-        <section className="projects-grid">
-          {visibleProjects.map((project) => (
-            <article
-              className="project-card"
-              key={project.slug}
-              onClick={() => {
-                if (project.category == "Radio Jingles") {
-                  router.push(`/projects/${project.slug}`);
-                } else if (project.category == "Website Development") {
-                  if (project.slug.startsWith("http")) {
-                    window.open(`${project.slug}`, "_blank");
-                  } else {
-                    router.push(`/projects/${project.slug}`);
-                  }
+      {/* =========================
+          PROJECT GRID
+      ========================= */}
+      <section className="projects-grid">
+        {visibleProjects.map((project) => (
+          <article
+            className="project-card"
+            key={project.slug}
+            onClick={() => {
+              const currentCategory =
+                activeTab !== "All"
+                  ? `?category=${encodeURIComponent(activeTab)}`
+                  : "";
+
+              if (project.category.includes("Website Development")) {
+                if (project.slug.startsWith("http")) {
+                  window.open(project.slug, "_blank");
                 } else {
                   router.push(`/projects/${project.slug}`);
                 }
-              }}
-            >
-              <div className="project-media">
-                {project.type === "video" ? (
-                  <video src={project.src} muted loop autoPlay playsInline />
-                ) : (
-                  <img src={project.src} alt={project.title} />
-                )}
-              </div>
+              } else {
+                router.push(`/projects/${project.slug}`);
+              }
+            }}
+          >
+            {/* MEDIA */}
+            <div className="project-media">
+              {project.type === "video" ? (
+                <video src={project.src} muted loop autoPlay playsInline />
+              ) : (
+                <img src={project.src} alt={project.title} />
+              )}
+            </div>
 
-              <div className="project-meta">
-                <span>[ {project.category} ]</span>
-                <h3>{project.title}</h3>
-              </div>
-            </article>
-          ))}
-        </section>
+            {/* META */}
+            <div className="project-meta">
+              {/* <span>
+                [
+                {project.category.map((cat, i) => (
+                  <React.Fragment key={i}>
+                    {cat}
+                    {i !== project.category.length - 1 &&
+                      " • "}
+                  </React.Fragment>
+                ))}
+                ]
+              </span> */}
 
-        {/* Loader */}
-        <div ref={loaderRef} style={{ height: "50px" }}></div>
-      </main>
-    </>
+              <h3>{project.title}</h3>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      {/* =========================
+          LOADER
+      ========================= */}
+      <div ref={loaderRef} style={{ height: "50px" }}></div>
+    </main>
   );
 }

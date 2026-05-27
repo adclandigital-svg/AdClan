@@ -1,105 +1,108 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 // import "./homereels.css";
 
 const projects = [
+ 
+
   {
     id: 1,
-    title: "Ayesha Khan x Right Gold",
-    subtitle: "Influencer Collaboration & Social Commerce",
+    title: "RJ Lucky x Vikram Mills",
+    subtitle: "Digital Branding & Influencer Promotion",
     description:
-      "We partnered with a lifestyle influencer to create a high-converting reels campaign.",
-    video:
-      "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
+      "A modern influencer collaboration campaign designed to strengthen Vikram Mills digital branding through creative storytelling and high-engagement video promotions.",
+    video: "/projects/vikram-mills/influencer/compressed/lucky.mp4",
     platform: "Instagram",
-    followers: "2.4M+",
-    engagement: "8.7%",
-    duration: "45 Days",
-    client: "Right Gold",
-    services: ["Influencer Strategy", "Reels"],
-    result: "3.2M+ Views • 2.8X Sales Growth",
+    followers: "410K+",
+    engagement: "6.4%",
+    duration: "35 Days",
+    client: "Vikram Mills",
+    services: ["Brand Promotion", "Video Campaigns"],
+    result: "1.1M+ Views • Premium Brand Reach",
+  },
+
+   {
+    id: 2,
+    title: "RJ Tripti x Vikram Mills",
+    subtitle: "Influencer Collaboration & Social Media Campaign",
+    description:
+      "A premium influencer reels campaign created for Vikram Mills to boost audience engagement, lifestyle branding and digital reach through engaging short-form content.",
+    video: "/projects/vikram-mills/influencer/compressed/tripty.mp4",
+    platform: "Instagram",
+    followers: "320K+",
+    engagement: "5.9%",
+    duration: "28 Days",
+    client: "Vikram Mills",
+    services: ["Influencer Marketing", "Instagram Reels"],
+    result: "840K+ Views • Strong Audience Reach",
   },
   {
     id: 2,
-    title: "Riya Sharma x Glow Skin",
-    subtitle: "Beauty Influencer Campaign",
-    description: "Beauty campaign focused on tutorials & UGC.",
-    video:
-      "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
-    platform: "Instagram, YouTube",
-    followers: "1.8M+",
-    engagement: "9.2%",
-    duration: "30 Days",
-    client: "Glow Skin",
-    services: ["UGC", "Tutorials"],
-    result: "2.1M+ Views • 2.3X Sales Growth",
-  },
-  {
-    id: 3,
-    title: "Arjun Mehta x FitFuel",
-    subtitle: "Fitness Influencer Campaign",
-    description: "Fitness campaign with reels + challenges.",
-    video:
-      "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
-    platform: "Instagram Reels",
-    followers: "3.1M+",
-    engagement: "7.5%",
-    duration: "60 Days",
-    client: "FitFuel",
-    services: ["Fitness Content"],
-    result: "4.5M+ Views • 3.5X ROI",
-  },
-  {
-    id: 4,
-    title: "Ayesha Khan x Right Gold",
-    subtitle: "Influencer Collaboration & Social Commerce",
+    title: "RJ Lucky x Vikram Mills",
+    subtitle: "Digital Branding & Influencer Promotion",
     description:
-      "We partnered with a lifestyle influencer to create a high-converting reels campaign.",
-    video:
-      "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
+      "A modern influencer collaboration campaign designed to strengthen Vikram Mills digital branding through creative storytelling and high-engagement video promotions.",
+    video: "/projects/vikram-mills/influencer/compressed/lucky.mp4",
     platform: "Instagram",
-    followers: "2.4M+",
-    engagement: "8.7%",
-    duration: "45 Days",
-    client: "Right Gold",
-    services: ["Influencer Strategy", "Reels"],
-    result: "3.2M+ Views • 2.8X Sales Growth",
+    followers: "410K+",
+    engagement: "6.4%",
+    duration: "35 Days",
+    client: "Vikram Mills",
+    services: ["Brand Promotion", "Video Campaigns"],
+    result: "1.1M+ Views • Premium Brand Reach",
+  },
+
+   {
+    id: 3,
+    title: "RJ Tripti x Vikram Mills",
+    subtitle: "Influencer Collaboration & Social Media Campaign",
+    description:
+      "A premium influencer reels campaign created for Vikram Mills to boost audience engagement, lifestyle branding and digital reach through engaging short-form content.",
+    video: "/projects/vikram-mills/influencer/compressed/tripty.mp4",
+    platform: "Instagram",
+    followers: "320K+",
+    engagement: "5.9%",
+    duration: "28 Days",
+    client: "Vikram Mills",
+    services: ["Influencer Marketing", "Instagram Reels"],
+    result: "840K+ Views • Strong Audience Reach",
   },
   {
     id: 5,
-    title: "Riya Sharma x Glow Skin",
-    subtitle: "Beauty Influencer Campaign",
-    description: "Beauty campaign focused on tutorials & UGC.",
-    video:
-      "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
-    platform: "Instagram, YouTube",
-    followers: "1.8M+",
-    engagement: "9.2%",
-    duration: "30 Days",
-    client: "Glow Skin",
-    services: ["UGC", "Tutorials"],
-    result: "2.1M+ Views • 2.3X Sales Growth",
+    title: "RJ Lucky x Vikram Mills",
+    subtitle: "Digital Branding & Influencer Promotion",
+    description:
+      "A modern influencer collaboration campaign designed to strengthen Vikram Mills digital branding through creative storytelling and high-engagement video promotions.",
+    video: "/projects/vikram-mills/influencer/compressed/lucky.mp4",
+    platform: "Instagram",
+    followers: "410K+",
+    engagement: "6.4%",
+    duration: "35 Days",
+    client: "Vikram Mills",
+    services: ["Brand Promotion", "Video Campaigns"],
+    result: "1.1M+ Views • Premium Brand Reach",
   },
-  {
+
+   {
     id: 6,
-    title: "Arjun Mehta x FitFuel",
-    subtitle: "Fitness Influencer Campaign",
-    description: "Fitness campaign with reels + challenges.",
-    video:
-      "https://videocdn.cdnpk.net/videos/f2dc8650-74a4-51dc-b90f-eda22ebf9ec5/vertical/previews/watermarked/large.mp4",
-    platform: "Instagram Reels",
-    followers: "3.1M+",
-    engagement: "7.5%",
-    duration: "60 Days",
-    client: "FitFuel",
-    services: ["Fitness Content"],
-    result: "4.5M+ Views • 3.5X ROI",
+    title: "RJ Tripti x Vikram Mills",
+    subtitle: "Influencer Collaboration & Social Media Campaign",
+    description:
+      "A premium influencer reels campaign created for Vikram Mills to boost audience engagement, lifestyle branding and digital reach through engaging short-form content.",
+    video: "/projects/vikram-mills/influencer/compressed/tripty.mp4",
+    platform: "Instagram",
+    followers: "320K+",
+    engagement: "5.9%",
+    duration: "28 Days",
+    client: "Vikram Mills",
+    services: ["Influencer Marketing", "Instagram Reels"],
+    result: "840K+ Views • Strong Audience Reach",
   },
+  
 ];
 
 export default function Homereels() {
@@ -135,12 +138,17 @@ export default function Homereels() {
     <>
       <div className="reels-wrapper">
         <Swiper
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
           slidesPerView={3}
           centeredSlides={true}
           loop={true}
           spaceBetween={20}
-          speed={250} // ✅ faster transition
+          speed={600}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
             handleSlideChange(swiper);
@@ -161,7 +169,7 @@ export default function Homereels() {
                 src={item.video}
                 muted
                 playsInline
-                preload="metadata"
+                preload="auto"
                 className="reel-video"
                 onCanPlay={(e) => {
                   if (index === swiperRef.current?.realIndex) {
@@ -198,12 +206,12 @@ export default function Homereels() {
 
           <div className="project-result">{activeProject.result}</div>
 
-          <button className="project-btn">View Video →</button>
+          {/* <button className="project-btn">View Video →</button> */}
         </div>
       </div>
 
       {/* 🔻 Thumbnail Grid */}
-      <div className="thumb-slide-outer">
+      {/* <div className="thumb-slide-outer">
         {projects.map((item, index) => (
           <div
             key={index}
@@ -220,7 +228,7 @@ export default function Homereels() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
       <style>
         {`
           .reels-wrapper {

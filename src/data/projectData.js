@@ -1,29 +1,28 @@
 export const PROJECTS = [
-  // Existing projects
   {
     slug: "right-gold",
     title: "Right Gold Ads Shoot & Campaign",
-    category: "Celebrity Management",
+    category: ["Celebrity Management", "Video Production"],
     year: "2026",
     client: "Right Gold",
     src: "/projects/right-gold/logo.png",
     updatedAt: "2026-01-15",
   },
+
   {
     slug: "kb-westwalk",
     title: "KB West Walk",
-    category: "Branding",
+    category: ["Branding", "Digital & Creatives"],
     year: "2026",
     client: "KB West Walk",
     src: "/projects/kb/logo.png",
     updatedAt: "2026-01-15",
-    
   },
 
   {
     slug: "elmas-group",
     title: "Elmas Group",
-    category: "Branding",
+    category: ["Branding", "Website Development", "Digital & Creatives"],
     year: "2024",
     client: "Elmas Group",
     src: "/projects/elmasGroup/logo.png",
@@ -34,75 +33,91 @@ export const PROJECTS = [
     black: "true",
     slug: "/vikram-mills",
     title: "VIKRAM MILLS Brand Transformation",
-    category: "FMCG Branding & Packaging",
+    category: [
+      "Celebrity Management",
+      "Branding",
+      "FMCG Branding & Packaging",
+      "Video Production",
+      "Influencer's Video",
+      "Digital & Creatives",
+      "Radio Jingles",
+      "Website Development",
+    ],
     src: "/projects/vikram-mills/vikram-mills.png",
     updatedAt: "2026-01-15",
   },
+
   {
     black: "true",
     slug: "samridhi/celebrity-managements",
     title: "SAMRIDHI",
-    category: "Celebrity Management",
+    category: ["Celebrity Management"],
     year: "2024",
     client: "SAMRIDHI",
     src: "/projects/samridhi/logo.png",
     updatedAt: "2026-01-20",
   },
+
   {
     black: "true",
     slug: "saviour-park/celebrity-managements",
-    title: "JASSIE GILL",
-    category: "Celebrity Management",
+    title: "Saviour Park Elite",
+    category: ["Celebrity Management"],
     year: "2024",
-    client: "JASSIE GILL",
+    client: "Saviour Park Elite",
     updatedAt: "2026-01-20",
     src: "/projects/savier-park/logo.png",
   },
+
   {
     black: "true",
     slug: "big-fm/celebrity-managements",
-    title: "ADAH SHARMA",
-    category: "Celebrity Management",
+    title: "Big FM",
+    category: ["Celebrity Management"],
     updatedAt: "2026-02-10",
     year: "2024",
-    client: "ADAH SHARMA",
+    client: "Big FM",
     src: "/projects/big-fm/logo.png",
   },
+
   {
     slug: "zipper-mind/video-production",
     title: "Zipperminds",
-    category: "Video Production",
+    category: ["Video Production"],
     updatedAt: "2026-02-10",
     year: "2024",
     client: "Zipperminds",
     src: "/projects/zipperminds/logo.png",
   },
+
   {
     slug: "ggit/video-production",
     title: "GGIT",
-    category: "Video Production",
+    category: ["Video Production"],
     updatedAt: "2026-02-10",
     year: "2024",
     client: "GGIT",
     src: "/projects/ggit/logo.png",
   },
+
   {
     slug: "india-result/video-production",
     title: "INDIA RESULT",
-    category: "Video Production",
+    category: ["Video Production"],
     updatedAt: "2026-02-10",
     year: "2024",
     client: "INDIA RESULT",
     src: "/projects/india_result/logo.png",
   },
+
   {
     slug: "tirupati",
     title: "TIRUPATI",
-    category: "Digital & Creatives",
+    category: ["Digital & Creatives"],
     updatedAt: "2026-02-15",
     year: "2024",
     client: "TIRUPATI",
-    src: "/projects/project-thumbnail/TIRUPATI.png",
+    src: "/projects/logo/tirupati.png",
     intro:
       "Digital creatives and branding materials for Tirupati, designing impactful visuals for social media, print, and outdoor advertising to strengthen brand identity.",
     sections: [
@@ -113,14 +128,15 @@ export const PROJECTS = [
       },
     ],
   },
+
   {
     slug: "agropure",
     title: "AGROPURE",
-    category: "Digital & Creatives",
+    category: ["Digital & Creatives"],
     updatedAt: "2026-02-15",
     year: "2024",
     client: "AGROPURE",
-    src: "/projects/project-thumbnail/AGROPURE.png",
+    src: "/projects/logo/agropure.png",
     intro:
       "Creative digital assets for Agropure, including packaging design, social media graphics, and promotional content that communicate freshness and purity.",
     sections: [
@@ -131,31 +147,24 @@ export const PROJECTS = [
       },
     ],
   },
+
   {
-    slug: "india-gate",
+    slug: "india_gate/creatives",
     title: "INDIA GATE",
-    category: "Digital & Creatives",
+    category: ["Digital & Creatives"],
     year: "2024",
     client: "INDIA GATE",
     updatedAt: "2026-02-15",
-    src: "/projects/project-thumbnail/INDIA GATE.png",
-    intro:
-      "Digital and creative campaign for India Gate, developing eye-catching visuals and ad creatives that reinforce the brand's position as a leading rice exporter.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "image",
-        src: "/projects/india_gate/banner.png",
-      },
-    ],
+    src: "/projects/india_gate/logo1.png",
   },
+
   {
     slug: "kayna",
     title: "KAYNA",
-    category: "Digital & Creatives",
+    category: ["Digital & Creatives"],
     year: "2024",
     client: "KAYNA",
-    src: "/projects/project-thumbnail/KAYNA.png",
+    src: "/projects/logo/kayna.png",
     updatedAt: "2026-03-17",
     intro:
       "Creative branding and digital design for Kayna, producing lifestyle imagery and promotional content that reflect the brand's modern and elegant aesthetic.",
@@ -167,100 +176,41 @@ export const PROJECTS = [
       },
     ],
   },
+
   {
-    slug: "rj-tripti",
-    title: "RJ TRIPTI",
-    category: "Influencer's Video",
+    slug: "classic-fitness/video-production",
+    title: "Classic Fitness Academy",
+    category: ["Video Production"],
     year: "2024",
-    client: "RJ TRIPTI",
-    src: "/projects/project-thumbnail/RJ TRIPTI.png",
+    client: "CLASSIC FITNESS ACADEMY",
+    src: "/projects/logo/classic-fitness academy.png",
     updatedAt: "2026-03-17",
-    intro:
-      "Influencer video campaign featuring RJ Tripti, creating engaging branded content and social media videos that resonate with her audience and boost brand affinity.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "video",
-        src: "/projects/rj_tripti/banner.mp4",
-      },
-    ],
   },
-  {
-    slug: "rj-rahul-makin",
-    title: "RJ RAHUL Makin",
-    category: "Influencer's Video",
-    year: "2024",
-    client: "RJ RAHUL Makin",
-    src: "/projects/project-thumbnail/RJ RAHUL Makin.png",
-    updatedAt: "2026-03-17",
-    intro:
-      "Influencer-led video production with RJ Rahul Makin, crafting authentic storytelling content that drives engagement and amplifies brand messages.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "video",
-        src: "/projects/rj_rahul_makin/banner.mp4",
-      },
-    ],
-  },
-  {
-    slug: "rj-naved",
-    title: "RJ NAVED",
-    category: "Influencer's Video",
-    year: "2024",
-    client: "RJ NAVED",
-    src: "/projects/project-thumbnail/RJ NAVED.png",
-    updatedAt: "2026-03-17",
-    intro:
-      "Collaborative influencer video with RJ Naved, producing high-energy content tailored for social media platforms to maximize reach and viewer interaction.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "video",
-        src: "/projects/naved/RJ Naved.mp4",
-      },
-    ],
-  },
-  {
-    slug: "rj-lucky",
-    title: "RJ LUCKY",
-    category: "Influencer's Video",
-    year: "2024",
-    client: "RJ LUCKY",
-    src: "/projects/project-thumbnail/RJ LUCKY.png",
-    updatedAt: "2026-03-17",
-    intro:
-      "Influencer marketing video featuring RJ Lucky, designed to create viral moments and strengthen brand presence through relatable, entertaining content.",
-    sections: [
-      {
-        type: "hero",
-        mediaType: "video",
-        src: "/projects/rj_lucky/bannert.mp4",
-      },
-    ],
-  },
+
   {
     slug: "ace/radio-jingles",
-    title: "Teaser Spot-ACE",
-    category: "Radio Jingles",
+    title: "ACE",
+    category: ["Radio Jingles"],
     year: "2024",
-    client: "Teaser Spot-ACE",
+    client: "ACE",
     src: "/projects/ace/logo.png",
     updatedAt: "2026-03-17",
   },
+
   {
     slug: "ramji-sons/radio-jingles",
     title: "Ramjisons",
-    category: "Radio Jingles",
+    category: ["Radio Jingles"],
     year: "2024",
     client: "Ramjisons",
     src: "/projects/ramjisons/logo.png",
     updatedAt: "2026-03-17",
   },
+
   {
     slug: "smile-train",
     title: "Smile train India",
-    category: "Radio Jingles",
+    category: ["Radio Jingles"],
     year: "2024",
     client: "Smile train India",
     src: "/projects/smile_train/logo.png",
@@ -270,16 +220,17 @@ export const PROJECTS = [
   {
     slug: "clear-dekho/radio-jingles",
     title: "Clear Dekho",
-    category: "Radio Jingles",
+    category: ["Radio Jingles"],
     year: "2024",
     client: "Clear Dekho",
     src: "/projects/clear_dekho/logo.png",
     updatedAt: "2026-03-17",
   },
+
   {
     slug: "aggarwal",
     title: "Aaggarwal Namkeen Website",
-    category: "Website Development",
+    category: ["Website Development","Digital & Creatives",],
     updatedAt: "2026-03-26",
     year: "2025",
     client: "Aaggarwal Namkeen",
@@ -288,68 +239,55 @@ export const PROJECTS = [
       "Designed and developed a modern, user-friendly website for Aaggarwal Namkeen, showcasing their wide range of traditional snacks with an engaging interface and seamless user experience.",
     sections: [],
   },
+
   {
     slug: "spring-elmas/website",
     title: "Spring Elmas Website",
-    category: "Website Development",
+    category: ["Website Development"],
     updatedAt: "2026-03-26",
     year: "2024",
     client: "Spring Elmas",
     src: "/projects/spring_elmas/logo.png",
   },
-  // {
-  //   slug: "https://elmas-group.vercel.app/",
-  //   title: "Elmas Group Website",
-  //   category: "Website Development",
-  //   updatedAt: "2026-03-26",
-  //   year: "2026",
-  //   client: "Elmas Group",
-  //   src: "/projects/website/elmas-group.png",
-  //   intro:
-  //     "Developed a corporate website for Elmas Group that highlights their portfolio, services, and brand identity with a professional layout and smooth user experience.",
-  //   sections: [],
-  // },
+
   {
     slug: "adore/website",
     title: "Adore Realtech Website",
-    category: "Website Development",
+    category: ["Website Development"],
     updatedAt: "2026-03-26",
     year: "2026",
     client: "Adore Realtech",
     src: "/projects/adore/logo.png",
   },
+
   {
     slug: "kiloi-food/website",
     title: "Kiloi Website",
-    category: "Website Development",
+    category: ["Website Development"],
     updatedAt: "2026-03-26",
     year: "2025",
     client: "Kiloi",
     src: "/projects/kiloi/logo.png",
   },
+
   {
-    // slug: "ims-noida/",
     slug: "ims-noida/radio-jingles",
     title: "IMS Noida Campaign",
-    category: "Branding",
+    category: ["Branding","Radio Jingles"],
     updatedAt: "2026-03-26",
     year: "2025",
     client: "IMS Noida",
     src: "/projects/ims-noida/ims.png",
-    intro:
-      "Executed a high-impact radio jingle campaign for IMS Noida, focused on strengthening brand recall, student engagement, and regional awareness through strategic audio storytelling.",
-    sections: [],
   },
+
   {
     slug: "hyundai/radio-jingles",
     title: "Hyundai Radio Campaign",
-    category: "Branding",
+    category: ["Branding","Radio Jingles"],
     updatedAt: "2026-03-26",
     year: "2025",
     client: "Hyundai",
     src: "/projects/hyundai/hydai.png",
-    intro:
-      "Executed a high-impact radio campaign for Hyundai, designed to amplify brand recall, drive showroom visits, and promote key vehicle launches through engaging audio storytelling and strategic media placement.",
-    sections: [],
   },
 ];
+

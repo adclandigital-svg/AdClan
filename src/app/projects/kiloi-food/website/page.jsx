@@ -141,7 +141,7 @@ export default function ProjectPage() {
       <section className="website-work">
         <div className="website-work-grid">
           <div>
-            <h3>What I Did ?</h3>
+            <h3>What We Did ?</h3>
 
             <ul>
               {project.work.map((item, i) => (

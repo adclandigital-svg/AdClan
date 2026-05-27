@@ -29,12 +29,12 @@ export default function ProjectPage() {
       icon: "🎬",
       link: "/projects/vikram-mills/video-production",
     },
-    // {
-    //   title: "Influencer's Video",
-    //   desc: "Influencer-led content designed for engagement, reach, and brand storytelling.",
-    //   icon: "⭐",
-    //   link: "/projects/vikram-mills/influencer",
-    // },
+    {
+      title: "Influencer's Video",
+      desc: "Influencer-led content designed for engagement, reach, and brand storytelling.",
+      icon: "⭐",
+      link: "/projects/vikram-mills/influencer",
+    },
     {
       title: "Digital & Creatives",
       desc: "Scroll-stopping creatives, social media designs, and digital campaign assets.",
