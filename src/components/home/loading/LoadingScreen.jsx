@@ -458,7 +458,7 @@ export default function LoadingScreen({ onComplete }) {
       <div className="loader-text" ref={textRef}>
         <span>Step Into The Clan</span>
         <span>Of Communication Integrated</span>
-        <span>Integrated Marketing Agency</span>
+        <span>Marketing Agency</span>
 
         <button
           className={`loader-text-button ${ready ? "active" : ""}`}
