@@ -95,7 +95,7 @@
 //     <div className="home-fouth-section-outer" ref={sectionRefFour}>
 //       <div className="home-fouth-section"  >
 //         <div className="home-fouth-section-div" ref={textReffour}>
-//           {["Works test", "Who", "Describe", "Our Potential"].map((t, i) => (
+//           {["Works", "Who", "Describe", "Our Potential"].map((t, i) => (
 //             <span key={i}>{t}</span>
 //           ))}
 //         </div>

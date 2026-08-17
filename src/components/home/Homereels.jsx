@@ -87,7 +87,7 @@ export default function Homereels() {
       </Swiper>
 
       <div className="reels-heading-div">
-        {["Works", "Who", "Describe", "Our Potential"].map((t, i) => (
+        {["Works Test", "Who", "Describe", "Our Potential"].map((t, i) => (
           <span key={i}>{t}</span>
         ))}
       </div>
