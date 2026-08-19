@@ -10,7 +10,7 @@ const blogs = [
     category: "Case Study",
     date: "27 March 2024",
     readTime: "5 min read",
-    img: "/blog/Right Gold.png",
+    img: "/blog/Right Gold.webp",
     link: "/blogs/right-gold-case-study",
   },
   {

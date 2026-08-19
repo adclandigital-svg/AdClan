@@ -22,7 +22,7 @@ export default function ProjectPage() {
   return (
     <div className="project-page">
       <div className="project-hero-image">
-        <img src="/projects/right-gold/right gold.png" />
+        <img src="/projects/right-gold/right gold.webp" />
       </div>
 
       {/* HERO */}
