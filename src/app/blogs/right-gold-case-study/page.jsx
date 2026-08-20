@@ -33,7 +33,7 @@ export default function CaseStudyPage() {
       {/* HERO */}
       <div className="cs-hero">
         <img
-          src="/blog/right-gold-strips.png"
+          src="/blog/right-gold-strips.webp"
           alt="Right Gold Case Study"
           className="cs-img"
         />

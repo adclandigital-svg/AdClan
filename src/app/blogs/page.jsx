@@ -19,7 +19,7 @@ const blogs = [
     category: "Case Study",
     date: "23 March 2024",
     readTime: "4 min read",
-    img: "/blog/galaxy-case-study.png",
+    img: "/blog/galaxy-case-study.webp",
     link: "/blogs/galaxy-sawasdee-heights-case-study",
   },
   {
@@ -28,7 +28,7 @@ const blogs = [
     category: "Case Study",
     date: "18 March 2024",
     readTime: "4 min read",
-    img: "/blog/vikram-mills.png",
+    img: "/blog/vikram-mills.webp",
     link: "/blogs/vikram-mills-case-study",
   },
   {
@@ -40,7 +40,7 @@ const blogs = [
     author: "Adclan Media",
     date: "March 2026",
     readTime: "5 min read",
-    img: "/blog/Artboard 1.png",
+    img: "/blog/artboard-1.webp",
     link: "/blogs/Digital-Marketing-Agencyin-Delhi-NCR",
   },
 
@@ -51,7 +51,7 @@ const blogs = [
     category: "Agency",
     date: "April 2025",
     readTime: "4 min read",
-    img: "/blog/Artboard 3.png",
+    img: "/blog/artboard-3.webp",
     link: "/blogs/adclan-media-marketing-agency-delhi",
   },
 
@@ -61,7 +61,7 @@ const blogs = [
     category: "Brand Campaign",
     date: "January 2025",
     readTime: "3 min read",
-    img: "/blog/Artboard 2.png",
+    img: "/blog/artboard-2.webp",
     link: "/blogs/adclan-onboard-shweta-tiwari",
   },
 
@@ -71,7 +71,7 @@ const blogs = [
     category: "Case Study",
     date: "October 2024",
     readTime: "4 min read",
-    img: "/blog/Artboard 4.png",
+    img: "/blog/artboard-4.webp",
     link: "/blogs/adclan-media-triumph-ace-hanei",
   },
   {
@@ -80,7 +80,7 @@ const blogs = [
     category: "Case Study",
     date: "September 2024",
     readTime: "4 min read",
-    img: "/blog/Artboard 5.png",
+    img: "/blog/artboard-5.webp",
     link: "/blogs/5-radio-ads-strategies-for-buisness-growth",
   },
 ];

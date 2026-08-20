@@ -17,7 +17,7 @@ export default function BlogContent() {
         {/* Featured Image */}
 
         <img
-          src="/blog/sweta.jpeg"
+          src="/blog/sweta.webp"
           className="blog-image"
           alt="Shweta Tiwari Kidsmate"
         />

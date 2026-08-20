@@ -11,7 +11,7 @@
   position: fixed;
   inset: 0;
 
-  background-image: url("/blog/pattern1.jpg");
+  background-image: url("/blog/pattern1.webp");
   background-repeat: repeat; /* 🔥 keep pattern repeating */
   background-position: center;
 

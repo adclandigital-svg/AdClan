@@ -34,7 +34,7 @@ export default function CaseStudyPage() {
       {/* HERO */}
       <div className="cs-hero">
         <img
-          src="/blog/vikram-mills-strips.png"
+          src="/blog/vikram-mills-strips.webp"
           alt="Vikram Mills"
           className="cs-img"
         />

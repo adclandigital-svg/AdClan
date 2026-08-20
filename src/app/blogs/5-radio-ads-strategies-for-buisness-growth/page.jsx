@@ -38,7 +38,7 @@ export default function BlogContent() {
             </p>
 
             <img
-              src="/blog/Radio-Advert.png"
+              src="/blog/Radio-Advert.webp"
               alt="Ace Hanei Project"
               className="blog-image"
             />

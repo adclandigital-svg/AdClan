@@ -32,7 +32,7 @@ export default function CaseStudyPage() {
       {/* HERO IMAGE */}
       <div className="cs-hero">
         <img
-          src="/blog/galaxy-strip.png"
+          src="/blog/galaxy-strip.webp"
           alt="Galaxy Sawasdee Heights"
           className="cs-img"
         />

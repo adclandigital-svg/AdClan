@@ -21,7 +21,7 @@ export default function BlogContent() {
         </p>
 
         {/* <img
-          src="/blog/ace.png"
+          src="/blog/ace.webp"
           alt="Adclan Media Ace Hanei Campaign"
           className="blog-image"
         /> */}
