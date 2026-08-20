@@ -13,7 +13,7 @@ export default function HeroVideo() {
           playsInline
           preload="metadata"   // ✅ Only small initial chunk
         >
-          <source src="/banner-new.mp4" type="video/mp4" />
+          <source src="/banner-new.webm" type="video/webm" />
         </video>
       </div>
     </section>
