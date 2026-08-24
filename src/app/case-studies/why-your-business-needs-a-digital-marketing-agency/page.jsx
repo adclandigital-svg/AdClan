@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import "./blog-detail.css";
+import "./inner-case-study.css";
 
 export default function CaseStudyPage() {
   const sections = {
@@ -34,7 +34,7 @@ export default function CaseStudyPage() {
       {/* HERO */}
       <div className="cs-hero">
         <img
-          src="/blog/why-your-business-strip.webp"
+          src="/case-studies/why-your-business-strip.webp"
           alt="Why Your Business"
           className="cs-img"
         />

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import "./caseStudy.css";
+import "./inner-case-study.css";
 
 export default function CaseStudyPage() {
   const sections = {
@@ -32,7 +32,7 @@ export default function CaseStudyPage() {
       {/* HERO IMAGE */}
       <div className="cs-hero">
         <img
-          src="/blog/galaxy-strip.webp"
+          src="/case-studies/galaxy-strip.webp"
           alt="Galaxy Sawasdee Heights"
           className="cs-img"
         />

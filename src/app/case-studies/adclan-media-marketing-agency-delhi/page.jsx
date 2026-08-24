@@ -1,6 +1,6 @@
 "use client";
 
-import "./blog.css";
+import "./inner-case-study.css";
 
 export default function BlogPage() {
   return (

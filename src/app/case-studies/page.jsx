@@ -10,7 +10,7 @@ const blogs = [
     category: "Case Study",
     date: "27 March 2024",
     readTime: "5 min read",
-    img: "/blog/Right Gold.webp",
+    img: "/case-studies/Right Gold.webp",
     link: "/case-studies/right-gold-case-study",
   },
   {
@@ -19,7 +19,7 @@ const blogs = [
     category: "Case Study",
     date: "23 March 2024",
     readTime: "4 min read",
-    img: "/blog/galaxy-case-study.webp",
+    img: "/case-studies/galaxy-case-study.webp",
     link: "/case-studies/galaxy-sawasdee-heights-case-study",
   },
   {
@@ -28,7 +28,7 @@ const blogs = [
     category: "Case Study",
     date: "18 March 2024",
     readTime: "4 min read",
-    img: "/blog/vikram-mills.webp",
+    img: "/case-studies/vikram-mills.webp",
     link: "/case-studies/vikram-mills-case-study",
   },
   {
@@ -40,7 +40,7 @@ const blogs = [
     author: "Adclan Media",
     date: "March 2026",
     readTime: "5 min read",
-    img: "/blog/artboard-1.webp",
+    img: "/case-studies/artboard-1.webp",
     link: "/case-studies/Digital-Marketing-Agencyin-Delhi-NCR",
   },
 
@@ -51,7 +51,7 @@ const blogs = [
     category: "Agency",
     date: "April 2025",
     readTime: "4 min read",
-    img: "/blog/artboard-3.webp",
+    img: "/case-studies/artboard-3.webp",
     link: "/case-studies/adclan-media-marketing-agency-delhi",
   },
 
@@ -61,7 +61,7 @@ const blogs = [
     category: "Brand Campaign",
     date: "January 2025",
     readTime: "3 min read",
-    img: "/blog/artboard-2.webp",
+    img: "/case-studies/artboard-2.webp",
     link: "/case-studies/adclan-onboard-shweta-tiwari",
   },
 
@@ -71,7 +71,7 @@ const blogs = [
     category: "Case Study",
     date: "October 2024",
     readTime: "4 min read",
-    img: "/blog/artboard-4.webp",
+    img: "/case-studies/artboard-4.webp",
     link: "/case-studies/adclan-media-triumph-ace-hanei",
   },
   {
@@ -80,7 +80,7 @@ const blogs = [
     category: "Case Study",
     date: "September 2024",
     readTime: "4 min read",
-    img: "/blog/artboard-5.webp",
+    img: "/case-studies/artboard-5.webp",
     link: "/case-studies/5-radio-ads-strategies-for-buisness-growth",
   },
 ];

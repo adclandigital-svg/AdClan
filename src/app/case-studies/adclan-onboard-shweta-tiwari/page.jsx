@@ -1,6 +1,6 @@
 "use client";
 
-import "./blog.css";
+import "./inner-case-study.css";
 
 export default function BlogContent() {
   return (
@@ -17,7 +17,7 @@ export default function BlogContent() {
         {/* Featured Image */}
 
         <img
-          src="/blog/sweta.webp"
+          src="/case-studies/sweta.webp"
           className="blog-image"
           alt="Shweta Tiwari Kidsmate"
         />

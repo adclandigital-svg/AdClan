@@ -1,6 +1,6 @@
 "use client";
 
-import "./blog.css";
+import "./inner-case-study.css";
 
 export default function BlogContent() {
   return (
@@ -21,7 +21,7 @@ export default function BlogContent() {
         </p>
 
         {/* <img
-          src="/blog/ace.webp"
+          src="/case-studies/ace.webp"
           alt="Adclan Media Ace Hanei Campaign"
           className="blog-image"
         /> */}

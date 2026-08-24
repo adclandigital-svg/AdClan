@@ -1,4 +1,4 @@
-import "./blog.css"
+import "./inner-case-study.css"
 
 export default function BlogContent() {
   return (
@@ -38,7 +38,7 @@ export default function BlogContent() {
             </p>
 
             <img
-              src="/blog/Radio-Advert.webp"
+              src="/case-studies/Radio-Advert.webp"
               alt="Ace Hanei Project"
               className="blog-image"
             />
