@@ -116,195 +116,135 @@
 
 
 
-.cs {
-  position: relative;
-  color: #111;
-  font-family: "Inter", sans-serif;
-  /* ❌ removed overflow hidden (was breaking sticky) */
+/* Inner blog single page styling  */
+/* PAGE */
+
+.blog-page{
+background:#fff;
+padding:80px 20px;
 }
 
-/* BACKGROUND PATTERN */
-.cs::before {
-  content: "";
-  position: fixed;
-  inset: 0;
+/* CONTAINER */
 
-  background-image: url("/blog/pattern1.webp");
-  background-repeat: repeat; /* 🔥 keep pattern repeating */
-  background-position: center;
-
-  background-size: 600px auto; /* 👈 controls width */
-
-  opacity: 0.03;
-  z-index: -1;
+.blog-container{
+max-width:900px;
+margin:auto;
+font-size:18px;
+line-height:1.7;
+color:#333;
 }
 
-/* HERO */
-.cs-hero {
-  position: relative;
+/* HEADER */
+
+.blog-header{
+margin-bottom:30px;
 }
 
-.cs-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.blog-header h1{
+font-size:40px;
+line-height:1.3;
+margin-bottom:10px;
 }
 
-/* LAYOUT */
-.cs-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 220px auto;
-  gap: 80px;
-  padding: 80px 20px;
-
-  align-items: center; /* 🔥 FIX for sticky */
-  place-content: center;
+.blog-meta{
+display:flex;
+gap:20px;
+color:#777;
+font-size:14px;
 }
 
-/* ================= TOC DESKTOP ================= */
-.cs-toc {
-  position: sticky;
-  top: 120px;
-  align-self: start; /* 🔥 FIX */
+/* HEADINGS */
 
-  height: fit-content;
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 10px;
+.blog-container h2{
+margin-top:45px;
+font-size:28px;
 }
 
-.cs-toc p {
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 14px;
-  color: #777;
-  transition: 0.3s;
+.blog-container h3{
+margin-top:25px;
+font-size:22px;
 }
 
-.cs-toc p:hover {
-  color: #000;
-  transform: translateX(4px);
+.blog-container h4{
+margin-top:20px;
+font-size:18px;
 }
 
-/* CONTENT */
-.cs-content {
-  max-width: 800px;
-  margin: 0 auto;
+/* LIST */
+
+.blog-container ul{
+padding-left:20px;
+margin-top:10px;
 }
 
-.cs-content section {
-  margin-bottom: 100px;
+/* TABLE */
+
+.blog-table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
 }
 
-.cs-content h1 {
-  font-size: 45px;
-  font-weight: 500;
-  margin-bottom: 10px;
+.blog-table th,
+.blog-table td{
+border:1px solid #eee;
+padding:12px;
 }
 
-.cs-sub {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 30px;
+.blog-table th{
+background:#f6f6f6;
 }
 
-.cs-content h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-.cs-content h4{
-  margin-bottom: 10px;
-}
+/* TABLE OF CONTENT */
 
-.cs-content p {
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 20px;
+.toc{
+background:#f8f8f8;
+padding:22px;
+border-radius:10px;
+margin:30px 0;
 }
 
-.cs-content ul {
-  padding-left: 20px;
+.toc h3{
+margin-bottom:10px;
 }
 
-.cs-content li {
-  margin-bottom: 10px;
-  font-size: 17px;
+.toc ul{
+list-style:none;
+padding:0;
 }
 
-/* QUOTE */
-blockquote {
-  font-size: 20px;
-  font-style: italic;
-  border-left: 2px solid #000;
-  padding-left: 20px;
-  margin-top: 20px;
+.toc li{
+margin:8px 0;
 }
 
-/* ================= MOBILE ================= */
-
-@media (max-width: 900px) {
-  .cs-container {
-    padding: 0px 20px;
-
-    align-items: start; /* 🔥 FIX for sticky */
-  }
-
-  .cs-container {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  /* 🔥 TOC becomes horizontal sticky bar */
-  .cs-toc {
-    position: sticky;
-    top: 80px;
-    z-index: 10;
-
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    border-radius: 0;
-  }
-
-  .cs-toc p {
-    white-space: nowrap;
-    font-size: 13px;
-    padding: 6px 12px;
-    background: #f2f2f2;
-    border-radius: 20px;
-  }
-
-  .cs-toc p:hover {
-    transform: none;
-  }
-
-  /* hide scrollbar */
-  .cs-toc::-webkit-scrollbar {
-    display: none;
-  }
-
-  .cs-content {
-    max-width: 100%;
-  }
-
-  .cs-content h1 {
-    font-size: 32px;
-  }
-
-  .cs-content h2 {
-    font-size: 24px;
-  }
-
-  .cs-content p {
-    font-size: 16px;
-  }
+.toc a{
+text-decoration:none;
+color:#17b9a9;
+font-weight:500;
 }
 
+.toc a:hover{
+text-decoration:underline;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.blog-header h1{
+font-size:30px;
+}
+
+.blog-container{
+font-size:16px;
+}
+
+}
+
+.blog-container h2,
+.blog-container h3 {
+  scroll-margin-top: 120px; /* adjust based on navbar height */
+}
 
 /* ================= Responsive Text ================= */
 @media (max-width: 768px) {
