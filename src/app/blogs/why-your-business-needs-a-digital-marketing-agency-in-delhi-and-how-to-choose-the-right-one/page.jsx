@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import "../blogs.css";
+import "../blog.css";
 
 export default function CaseStudyPage() {
   const sections = {
