@@ -76,12 +76,12 @@ const blogs = [
   // },
   {
     id: 1,
-    title: "5 Radio Ads Strategies for Business Growth",
-    category: "Case Study",
-    date: "September 2024",
-    readTime: "4 min read",
-    img: "/blog/artboard-5.webp",
-    link: "/blogs/5-radio-ads-strategies-for-buisness-growth",
+    title: "Why Your Business Needs a Digital Marketing Agency in Delhi",
+    category: "Blog",
+    date: "August 2026",
+    // readTime: "4 min read",
+    img: "/blog/why-your-business-strip.webp",
+    link: "/blogs/why-your-business-needs-a-digital-marketing-agency-in-delhi-and-how-to-choose-the-right-one",
   },
 ];
 
