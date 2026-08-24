@@ -1,0 +1,129 @@
+/* ================= Blog Page Wrapper ================= */
+.adclan-blog-page {
+  padding: 2rem 5%;
+}
+
+/* ================= Hero Section ================= */
+.adclan-blog-hero {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.adclan-blog-hero h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 100;
+  margin-bottom: 0.5rem;
+  color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 10px;
+}
+
+.adclan-blog-hero p {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 5px;
+}
+
+/* ================= Blog List Grid ================= */
+/* Max 3 columns layout */
+.adclan-blog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* max 3 columns */
+  gap: 2.5rem;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .adclan-blog-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 768px) {
+  .adclan-blog-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= Blog Card ================= */
+.adclan-blog-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.adclan-blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= Image Wrapper ================= */
+.adclan-blog-image-wrapper {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.adclan-blog-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.adclan-blog-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ================= Blog Info ================= */
+.adclan-blog-info {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #fff;
+}
+
+.adclan-blog-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.adclan-blog-info h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.adclan-blog-read-more {
+  font-size: 0.9rem;
+  color: #dbb261; /* Accent color */
+  margin-top: 0.3rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.adclan-blog-card:hover .adclan-blog-read-more {
+  color: #a8823e; /* Darker accent on hover */
+}
+
+/* ================= Responsive Text ================= */
+@media (max-width: 768px) {
+  .adclan-blog-info h2 {
+    font-size: 1rem;
+  }
+
+  .adclan-blog-hero h1 {
+    font-size: 3rem;
+  }
+
+  .adclan-blog-hero p {
+    font-size: 0.9rem;
+  }
+}
