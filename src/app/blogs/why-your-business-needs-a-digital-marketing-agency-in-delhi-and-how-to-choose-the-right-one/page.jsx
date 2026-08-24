@@ -29,227 +29,239 @@ export default function CaseStudyPage() {
   };
 
   return (
-    <section className="cs">
-      {/* HERO */}
-      <div className="cs-hero">
-        <img
-          src="/blog/right-gold-strips.webp"
-          alt="Right Gold Case Study"
-          className="cs-img"
-        />
-      </div>
+    <article className="blog-page">
+      <div className="blog-container">
 
-      <div className="cs-container">
-        {/* TOC */}
-        <aside className="cs-toc">
-          <p onClick={() => scrollTo(sections.overview)}>Overview</p>
-          <p onClick={() => scrollTo(sections.client)}>Client</p>
-          <p onClick={() => scrollTo(sections.objectives)}>Objectives</p>
-          <p onClick={() => scrollTo(sections.strategy)}>Strategy</p>
-          <p onClick={() => scrollTo(sections.video)}>Video</p>
-          <p onClick={() => scrollTo(sections.execution)}>Execution</p>
-          <p onClick={() => scrollTo(sections.results)}>Results</p>
-          <p onClick={() => scrollTo(sections.about)}>Key Takeaway</p>
-        </aside>
+        {/* BLOG HEADER */}
 
-        {/* CONTENT */}
-        <div className="cs-content">
-          {/* OVERVIEW */}
-          <section ref={sections.overview}>
-            <h1>
-              Case Study: Right Gold – Turning Trust into Sales Through
-              Strategic Video Marketing
-            </h1>
-            <p className="cs-sub">
-              Turning Trust into Sales Through Strategic Video Marketing
-            </p>
+        <header className="blog-header">
+          <h1>
+            Why Your Business Needs a Digital Marketing Agency in Delhi (And How to Choose the Right One)
+          </h1>
 
-            <p>
-              Right Gold is a jewellery brand specializing in 99.9% purity gold
-              coins and ornaments, offering flexible making charges across 24K,
-              22K, 18K, and 14K gold.
-            </p>
+          <div className="blog-meta">
+            <span>Adclan Media</span>
+            <span>August 2026</span>
+            <span>5 min read</span>
+          </div>
+        </header>
 
-            <p>
-              Adclan partnered with Right Gold to build a strong brand presence
-              and drive conversions through a full-scale creative campaign.
-            </p>
-          </section>
+        {/* INTRO */}
 
-          {/* CLIENT */}
-          <section ref={sections.client}>
-            <h2>Client Background</h2>
+        <p>
+          The Delhi National Capital Region (NCR) isn’t just India’s economic
+          powerhouse—it’s a digital battleground where brands compete for
+          attention across search engines, social platforms, and emerging
+          channels.
+        </p>
 
-            <ul>
-              <li>
-                <strong>Client Name:</strong> Right Gold
-              </li>
-              <li>
-                <strong>Industry:</strong> Jewellery
-              </li>
-              <li>
-                <strong>Core Offering:</strong> Gold coins & jewellery
-              </li>
-              <li>
-                <strong>USP:</strong> Making charges starting from 5%
-              </li>
-            </ul>
+        <p>
+          A specialized digital marketing agency in Delhi NCR acts as your
+          strategic ally, blending localized expertise with global best
+          practices to drive measurable business outcomes.
+        </p>
 
-            <p>
-              Right Gold aimed to position itself as a trustworthy, modern gold
-              brand in a competitive and trust-driven market.
-            </p>
-          </section>
+        {/* TABLE OF CONTENTS */}
 
-          {/* OBJECTIVES */}
-          <section ref={sections.objectives}>
-            <h2>Objectives</h2>
+        <div className="toc">
+          <h3>Table of Contents</h3>
 
-            <ul>
-              <li>Increase brand awareness</li>
-              <li>Build trust & credibility</li>
-              <li>Drive product inquiries & sales</li>
-              <li>Create premium brand perception</li>
-            </ul>
+          <ul>
+            <li>
+              <a href="#hyperlocal">
+                Why Delhi NCR Businesses Need a Hyperlocal Digital Strategy
+              </a>
+            </li>
 
-            <h4>Challenges</h4>
-            <ul>
-              <li>Highly saturated and trust-sensitive market</li>
-              <li>Low differentiation</li>
-              <li>Lack of strong visual storytelling</li>
-              <li>Difficulty communicating purity + affordability</li>
-            </ul>
-          </section>
+            <li>
+              <a href="#framework">
+                The 5-Pillar Framework Top Agencies Use
+              </a>
+            </li>
 
-          {/* STRATEGY */}
-          <section ref={sections.strategy}>
-            <h2>Adclan’s Approach</h2>
+            <li>
+              <a href="#case-study">
+                Real-World Case Study
+              </a>
+            </li>
 
-            <p>
-              We executed an end-to-end creative campaign combining emotional
-              storytelling with performance-driven content.
-            </p>
+            <li>
+              <a href="#channels">
+                Emerging Channels Worth Your Budget in 2026
+              </a>
+            </li>
 
-            <h4>Concept Development</h4>
-            <blockquote style={{ marginBottom: "20px" }}>
-              Gold that represents trust, purity, and smart buying
-            </blockquote>
+            <li>
+              <a href="#vet-agencies">
+                How to Vet Agencies
+              </a>
+            </li>
 
-            <h4>Script Strategy</h4>
-            <ul>
-              <li>Emotion + logic storytelling</li>
-              <li>Highlight purity (99.9%)</li>
-              <li>Communicate affordability</li>
-              <li>Occasion-based buying triggers</li>
-            </ul>
-          </section>
+            <li>
+              <a href="#faq">
+                FAQs
+              </a>
+            </li>
 
-          {/* VIDEO */}
-          <section ref={sections.video}>
-            <h2>Video Production Strategy</h2>
-
-            <p>
-              We produced 4 high-quality ad films structured across two
-              strategic pillars:
-            </p>
-
-            <h4>Brand Awareness Films</h4>
-            <ul>
-              <li>Family-driven storytelling</li>
-              <li>Emotional connection with gold</li>
-              <li>Trust & cultural value</li>
-              <li>Warm cinematic visuals</li>
-            </ul>
-
-            <h4>Sales-Focused Films</h4>
-            <ul>
-              <li>Making charges from 5%</li>
-              <li>Multiple karat options</li>
-              <li>Clear CTA for conversions</li>
-              <li>Product-focused visuals</li>
-            </ul>
-
-            <p>
-              This dual approach ensured both brand building and direct
-              performance.
-            </p>
-          </section>
-
-          {/* EXECUTION */}
-          <section ref={sections.execution}>
-            <h2>Execution & Production</h2>
-
-            <h4>Execution Highlights</h4>
-            <ul>
-              <li>Premium cinematic visuals</li>
-              <li>Close-up jewellery shots</li>
-              <li>Luxury + relatability balance</li>
-              <li>Consistent brand identity</li>
-            </ul>
-
-            <h4>Celebrity Management</h4>
-            <p>
-              Talent was selected based on brand alignment — elegant,
-              trustworthy, and modern.
-            </p>
-
-            <h4>End-to-End Execution</h4>
-            <ul>
-              <li>Creative direction</li>
-              <li>Production & shoot</li>
-              <li>Styling</li>
-              <li>Editing & delivery</li>
-            </ul>
-          </section>
-
-          {/* RESULTS */}
-          <section ref={sections.results}>
-            <h2>Results & Impact</h2>
-
-            <ul>
-              <li>Strong brand recall improvement</li>
-              <li>Higher engagement on video content</li>
-              <li>Improved trust perception</li>
-              <li>Increase in inquiries & interest</li>
-            </ul>
-
-            <h4>What Made This Campaign Successful</h4>
-            <ul>
-              <li>Clear positioning strategy</li>
-              <li>Strong storytelling</li>
-              <li>End-to-end creative control</li>
-              <li>Trust + value communication</li>
-            </ul>
-          </section>
-
-          {/* TAKEAWAY */}
-          <section ref={sections.about}>
-            <h2>Key Takeaway</h2>
-
-            <p>
-              In industries like jewellery, people don’t just buy products —
-              they buy trust.
-            </p>
-
-            <p>
-              Adclan helped Right Gold transform that trust into a compelling
-              visual narrative that not only connects emotionally but drives
-              real business results.
-            </p>
-          </section>
-          {/* FAQ */}
-          <section className="cs-faq">
-            <h2>Frequently Asked Questions</h2>
-
-            <h4>How can video marketing help jewellery brands?</h4>
-
-            <p>
-              Video marketing helps jewellery brands build trust, showcase
-              craftsmanship, and improve customer engagement.
-            </p>
-          </section>
+            <li>
+              <a href="#future">
+                The Road Ahead
+              </a>
+            </li>
+          </ul>
         </div>
+
+        {/* SECTION 1 */}
+
+        <h2 id="hyperlocal">
+          Why Delhi NCR Businesses Need a Hyperlocal Digital Strategy
+        </h2>
+
+        <p>
+          Delhi NCR’s digital landscape mirrors its cultural diversity:
+          multilingual, fragmented across platforms, and driven by
+          mobile-first users.
+        </p>
+
+        <ul>
+          <li>
+            Search behavior varies between Gurugram, Noida, and Faridabad
+          </li>
+          <li>
+            LinkedIn dominates B2B hubs while Instagram performs better for
+            younger audiences
+          </li>
+          <li>
+            Festive marketing campaigns begin earlier than most Indian regions
+          </li>
+        </ul>
+
+        {/* SECTION 2 */}
+
+        <h2 id="framework">
+          The 5-Pillar Framework Top Agencies Use
+        </h2>
+
+        <h3>1. Intent Mapping Before Keyword Targeting</h3>
+
+        <p>
+          Leading agencies reverse-engineer campaigns around the buyer journey:
+          awareness, consideration, decision, and loyalty.
+        </p>
+
+        <h3>2. Platform-Agnostic Performance Attribution</h3>
+
+        <p>
+          With privacy changes and cookie deprecation, agencies rely on
+          probabilistic modeling and multi-touch attribution.
+        </p>
+
+        <h3>3. Creative That Breaks Through Algorithmic Noise</h3>
+
+        <p>
+          Delhi NCR’s information overload demands engaging creatives such as
+          interactive tools, voice search content, and AR-based experiences.
+        </p>
+
+        {/* SECTION 3 */}
+
+        <h2 id="case-study">
+          Real-World Case: How a D2C Ayurveda Brand Scaled 5X
+        </h2>
+
+        <p>
+          A Noida-based skincare startup increased conversions dramatically by
+          improving checkout UX, repurposing content, and launching WhatsApp
+          commerce campaigns.
+        </p>
+
+        {/* SECTION 4 */}
+
+        <h2 id="channels">
+          Emerging Channels Worth Your Budget in 2026
+        </h2>
+
+        <table className="blog-table">
+
+          <thead>
+            <tr>
+              <th>Channel</th>
+              <th>Delhi NCR Adoption</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>Conversational AI Bots</td>
+              <td>38% of e-commerce</td>
+              <td>High-intent queries</td>
+            </tr>
+
+            <tr>
+              <td>Programmatic DOOH</td>
+              <td>12% YoY growth</td>
+              <td>Branding near metro stations</td>
+            </tr>
+
+            <tr>
+              <td>Telegram Communities</td>
+              <td>210% surge</td>
+              <td>Niche launches</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+        {/* SECTION 5 */}
+
+        <h2 id="vet-agencies">
+          How to Vet Agencies
+        </h2>
+
+        <ul>
+          <li>Transparency in analytics reporting</li>
+          <li>Strong marketing tech stack</li>
+          <li>Industry-specific expertise</li>
+          <li>Flexible contracts</li>
+          <li>Crisis management capability</li>
+        </ul>
+
+        {/* SECTION 6 */}
+
+        <h2 id="faq">
+          FAQs
+        </h2>
+
+        <h4>What’s the cost difference in Delhi NCR?</h4>
+
+        <p>
+          Agencies in Delhi NCR typically charge 15-20% more than other metros
+          due to higher talent costs.
+        </p>
+
+        <h4>How long does SEO take?</h4>
+
+        <p>
+          Competitive keywords may take 6-9 months, while informational queries
+          can rank in 60-90 days.
+        </p>
+
+        {/* SECTION 7 */}
+
+        <h2 id="future">
+          The Road Ahead
+        </h2>
+
+        <p>
+          The future of digital marketing in Delhi NCR will rely heavily on
+          AI-driven creative optimization, first-party data strategies, and
+          hyper-local targeting.
+        </p>
+
       </div>
-    </section>
+    </article>
   );
 }

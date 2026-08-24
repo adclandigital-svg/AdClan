@@ -1,12 +1,12 @@
 export const metadata = {
-  title: "Blog | Adclan Media",
+  title: "Why Your Business Needs a Digital Marketing Agency in Delhi (And How to Choose the Right One)",
   description:
-    "Read marketing insights, branding tips, and creative strategies from Adclan Media.",
+    "Why Your Business Needs a Digital Marketing Agency in Delhi (And How to Choose the Right One) Delhi's digital landscape is a battlefield. With over 30 million",
   metadataBase: new URL("https://adclan.in"),
   openGraph: {
-    title: "Blog | Adclan Media",
+    title: "Why Your Business Needs a Digital Marketing Agency in Delhi (And How to Choose the Right One)",
     description:
-      "Marketing insights and creative strategies from Adclan Media.",
+      "Why Your Business Needs a Digital Marketing Agency in Delhi (And How to Choose the Right One) Delhi's digital landscape is a battlefield. With over 30 million",
     url: "https://adclan.in/blogs",
     images: [
       {
