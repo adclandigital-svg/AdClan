@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import "../blog.css";
+import "./case-study.css";
 
 export default function CaseStudyPage() {
   const sections = {
@@ -472,4 +472,3 @@ export default function CaseStudyPage() {
     </article>
   );
 }
-```
