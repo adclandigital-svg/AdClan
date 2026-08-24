@@ -1,3 +1,7 @@
+*{
+      scroll-behavior: smooth;
+}
+
 /* ================= Blog Page Wrapper ================= */
 .adclan-blog-page {
   padding: 2rem 5%;
