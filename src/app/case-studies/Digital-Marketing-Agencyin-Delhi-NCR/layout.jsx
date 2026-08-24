@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Blog Details | Adclan Media",
+  title: "Case Study Details | Adclan Media",
   description:
     "Read detailed insights, strategies, and creative stories from Adclan Media.",
   metadataBase: new URL("https://adclan.in"),
