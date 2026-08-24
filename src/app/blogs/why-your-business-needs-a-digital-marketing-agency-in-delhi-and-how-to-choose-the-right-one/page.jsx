@@ -36,15 +36,13 @@ export default function CaseStudyPage() {
           <ul>
             <li>
               <a href="#digital-advantage">
-                The Delhi Digital Advantage: Local Expertise Meets Global
-                Strategies
+                The Delhi Digital Advantage: Local Expertise Meets Global Strategies
               </a>
             </li>
 
             <li>
               <a href="#services">
-                Services That Actually Move the Needle (Beyond Generic
-                Packages)
+                Services That Actually Move the Needle (Beyond Generic Packages)
               </a>
             </li>
 
@@ -56,8 +54,7 @@ export default function CaseStudyPage() {
 
             <li>
               <a href="#campaign">
-                Real-World Campaign Breakdown: How We Revived a Fading Delhi
-                Brand
+                Real-World Campaign Breakdown: How We Revived a Fading Delhi Brand
               </a>
             </li>
 
