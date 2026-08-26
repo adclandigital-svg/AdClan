@@ -59,6 +59,9 @@ export default function Footer() {
                 <Link href="/press">Our Media Presence</Link>
               </li>
               <li>
+                <Link href="/case-studies">Case Studies</Link>
+              </li>
+              <li>
                 <Link href="/blogs">Read our stories</Link>
               </li>
               <li>
