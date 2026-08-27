@@ -166,7 +166,7 @@ export default function Footer() {
         </div>
       </footer>
 
-      <script src="http://digitalmarketingai.classofachievers.in/static/chatbot-widget.js" data-bot-id="bf9aa7b1-bbd3-476b-a5d5-a081464d7f93"></script>
+
       {/* <a
         href="https://wa.me/919891505451"
         target="_blank"
