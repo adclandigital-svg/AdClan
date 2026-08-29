@@ -352,15 +352,15 @@ export default function CaseStudyPage() {
 
             <ul>
               <li>
-                (i) Audit campaign performance in real-time
+                Audit campaign performance in real-time
               </li>
 
               <li>
-                (ii) Meet their dedicated account managers
+                Meet their dedicated account managers
               </li>
 
               <li>
-                (iii) Review physical samples of OOH creatives
+                Review physical samples of OOH creatives
               </li>
             </ul>
           </li>
@@ -384,11 +384,11 @@ export default function CaseStudyPage() {
 
             <ul>
               <li>
-                (i) Food delivery ads during evening hunger pangs
+                Food delivery ads during evening hunger pangs
               </li>
 
               <li>
-                (ii) Service bookings when users plan next-day activities
+                Service bookings when users plan next-day activities
               </li>
             </ul>
           </li>
@@ -403,16 +403,16 @@ export default function CaseStudyPage() {
 
             <ul>
               <li>
-                (i) Switching outdoor workout ads to "Gym-to-Home" service
+                Switching outdoor workout ads to "Gym-to-Home" service
                 promotions
               </li>
 
               <li>
-                (ii) Creating "Air Purifier Workout Zones" content
+                Creating "Air Purifier Workout Zones" content
               </li>
 
               <li>
-                (iii) Targeting pollution mask users with special offers
+                Targeting pollution mask users with special offers
               </li>
             </ul>
           </li>
