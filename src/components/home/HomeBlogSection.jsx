@@ -14,8 +14,8 @@ const blogs = [
     author: "Adclan Media",
     date: "March 2026",
     readTime: "5 min read",
-    img: "/blog/artboard-1.webp",
-    link: "/blogs/Digital-Marketing-Agencyin-Delhi-NCR",
+    img: "/case-studies/artboard-1.webp",
+    link: "/case-studies/Digital-Marketing-Agencyin-Delhi-NCR",
   },
 
   {
@@ -25,8 +25,8 @@ const blogs = [
     category: "Agency",
     date: "April 2025",
     readTime: "4 min read",
-    img: "/blog/artboard-3.webp",
-    link: "/blogs/adclan-media-marketing-agency-delhi",
+    img: "/case-studies/artboard-3.webp",
+    link: "/case-studies/adclan-media-marketing-agency-delhi",
   },
 
   {
@@ -35,8 +35,8 @@ const blogs = [
     category: "Brand Campaign",
     date: "January 2025",
     readTime: "3 min read",
-    img: "/blog/artboard-2.webp",
-    link: "/blogs/adclan-onboard-shweta-tiwari",
+    img: "/case-studies/artboard-2.webp",
+    link: "/case-studies/adclan-onboard-shweta-tiwari",
   },
 
   {
@@ -45,8 +45,8 @@ const blogs = [
     category: "Case Study",
     date: "October 2024",
     readTime: "4 min read",
-    img: "/blog/artboard-4.webp",
-    link: "/blogs/adclan-media-triumph-ace-hanei",
+    img: "/case-studies/artboard-4.webp",
+    link: "/case-studies/adclan-media-triumph-ace-hanei",
   },
   {
     id: 5,
@@ -54,8 +54,8 @@ const blogs = [
     category: "Case Study",
     date: "September 2024",
     readTime: "4 min read",
-    img: "/blog/artboard-5.webp",
-    link: "/blogs/5-radio-ads-strategies-for-buisness-growth",
+    img: "/case-studies/artboard-5.webp",
+    link: "/case-studies/5-radio-ads-strategies-for-buisness-growth",
   },
 ];
 
@@ -128,10 +128,10 @@ export default function HomeBlogSection() {
           whileInView="show"
           viewport={{ once: true }}
         >
-          {blogs.slice(1,5).map((blog) => (
+          {blogs.slice(1, 5).map((blog) => (
             <motion.div key={blog.id} variants={item}>
               <Link href={blog.link} className="blog-card">
-                <img src={blog.img} alt={blog.id} loading="lazy"/>
+                <img src={blog.img} alt={blog.id} loading="lazy" />
 
                 <div className="card-content">
                   <span>{blog.category}</span>

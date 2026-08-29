@@ -115,7 +115,7 @@ export default function CaseStudyPage() {
         <h2 id="services">
           Services That Actually Move the Needle (Beyond Generic Packages)
         </h2>
-        <ul>
+        <ol>
           <li>
             <h3>1. Geo-Targeted Performance Marketing</h3>
 
@@ -180,7 +180,7 @@ export default function CaseStudyPage() {
               </li>
             </ul>
           </li>
-        </ul>
+        </ol>
 
 
 
@@ -344,7 +344,7 @@ export default function CaseStudyPage() {
 
         <ol>
           <li>
-            <h3>1. Physical Office Verification</h3>
+            <h3>Physical Office Verification</h3>
 
             <p>
               Many "Delhi-based" agencies operate remotely. Visit their location—our Dwarka office (see map) hosts monthly strategy workshops where clients can:
@@ -365,7 +365,7 @@ export default function CaseStudyPage() {
             </ul>
           </li>
           <li>
-            <h3>2. Portfolio Diversity</h3>
+            <h3>Portfolio Diversity</h3>
 
             <p>
               Can they handle both Delhi's traditional businesses (like our Ramji
@@ -375,7 +375,7 @@ export default function CaseStudyPage() {
           </li>
 
           <li>
-            <h3>3. Transit-Time Understanding</h3>
+            <h3>Transit-Time Understanding</h3>
 
             <p>
               Do their social media posting schedules align with Delhi's peak
@@ -395,7 +395,7 @@ export default function CaseStudyPage() {
 
           <li>
 
-            <h3>4. Crisis Response</h3>
+            <h3>Crisis Response</h3>
 
             <p>
               When Delhi's air quality drops, can they pivot campaigns like we did for <a href="https://adclan.in/projects/classic-fitness/video-production" target="_blank">Classic Fitness</a> by:
