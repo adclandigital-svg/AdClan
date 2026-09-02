@@ -43,7 +43,6 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 import LenisProvider from "@/components/providers/LenisProvider";
-import LeadChatbot from "@/components/layout/SmartChatbot";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import GsapErrorHandler from "@/components/GsapErrorHandler";
@@ -87,12 +86,8 @@ export default function RootLayoutClient({ children }) {
 
       <GsapErrorHandler />
       <LenisProvider>
-        {/* {!isPortfolio && <LeadChatbot />} */}
-        <LeadChatbot />
         <Navbar />
-        {/* {!isPortfolio && <Navbar />} */}
         {children}
-        {/* {!isPortfolio && <Footer />} */}
         <Footer />
       </LenisProvider>
       <GTM />
