@@ -55,25 +55,25 @@ const blogs = [
   //   link: "/blogs/adclan-media-marketing-agency-delhi",
   // },
 
-  // {
-  //   id: 3,
-  //   title: "Adclan Onboard Shweta Tiwari as Brand Ambassador for Kidsmate",
-  //   category: "Brand Campaign",
-  //   date: "January 2025",
-  //   readTime: "3 min read",
-  //   img: "/blog/artboard-2.webp",
-  //   link: "/blogs/adclan-onboard-shweta-tiwari",
-  // },
+  {
+    id: 3,
+    title: "How to Choose the Right Digital Marketing Agency in Delhi NCR: A Strategic Guide",
+    category: "Blog",
+    date: "August 2026",
+    // readTime: "3 min read",
+    img: "/blog/how-to-choose-the-right-digital-marketing-agency-in-delhi-ncr.webp",
+    link: "/blogs/how-to-choose-the-right-digital-marketing-agency-in-delhi-ncr",
+  },
 
-  // {
-  //   id: 2,
-  //   title: "Adclan Media’s Triumph with Ace Hanei: Masterclass in Campaign",
-  //   category: "Case Study",
-  //   date: "October 2024",
-  //   readTime: "4 min read",
-  //   img: "/blog/artboard-4.webp",
-  //   link: "/blogs/adclan-media-triumph-ace-hanei",
-  // },
+  {
+    id: 2,
+    title: "Performance Marketing Agency in Delhi: The Catalyst for Business Growth in India’s Digital Landscape",
+    category: "Blog",
+    date: "August 2026",
+    // readTime: "4 min read",
+    img: "/blog/performance-marketing-agency-in-delhi-the-catalyst-for-business-growth-in-indias-digital-landscape.webp",
+    link: "/blogs/performance-marketing-agency-in-delhi-the-catalyst-for-business-growth-in-indias-digital-landscape",
+  },
   {
     id: 1,
     title: "Why Your Business Needs a Digital Marketing Agency in Delhi",
