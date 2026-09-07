@@ -132,7 +132,7 @@ export default function PerformanceMarketingPage() {
           <a href="https://adclan.in/projects/right-gold" target="_blank">
             Right Gold
           </a>{" "}
-          and KB Westwalk, we've seen CTRs improve by 40% when combining
+          and <a href="https://adclan.in/projects/kb-westwalk" target="_blank">KB Westwalk</a>, we've seen CTRs improve by 40% when combining
           regional dialects with dynamic ad placements.
         </p>
 
@@ -146,7 +146,7 @@ export default function PerformanceMarketingPage() {
 
         <ol>
           <li>
-            <h3>1. Hyper-Local Expertise</h3>
+            <h3>Hyper-Local Expertise</h3>
 
             <ul>
               <li>
@@ -171,7 +171,7 @@ export default function PerformanceMarketingPage() {
           </li>
 
           <li>
-            <h3>2. Advanced Attribution Models</h3>
+            <h3>Advanced Attribution Models</h3>
 
             <p>
               Generic agencies often credit conversions to the last click.
@@ -206,7 +206,7 @@ export default function PerformanceMarketingPage() {
           </li>
 
           <li>
-            <h3>3. Creative Performance Synergy</h3>
+            <h3>Creative Performance Synergy</h3>
 
             <p>
               Performance isn't just about numbers—it's about storytelling
@@ -233,7 +233,7 @@ export default function PerformanceMarketingPage() {
 
         <ol>
           <li>
-            <h3>1. Search &amp; Social Ads</h3>
+            <h3>Search &amp; Social Ads</h3>
 
             <ul>
               <li>
@@ -255,42 +255,32 @@ export default function PerformanceMarketingPage() {
           </li>
 
           <li>
-            <h3>2. Programmatic Advertising</h3>
+            <h3>Programmatic Advertising</h3>
 
             <p>
-              Real-time bidding (RTB) on platforms like DV360 ensures ads
-              reach users browsing relevant content.
+              Real-time bidding (RTB) on platforms like DV360 ensures ads reach users browsing relevant content.
               <br />
-              Targeting Hack: Place contextual bids on websites with "saree
-              buying guide" content for ethnic wear brands, achieving 35%
-              lower CPC than broad category targeting.
+              Targeting Hack: Place contextual bids on websites with "saree buying guide" content for ethnic wear brands, achieving 35% lower CPC than broad category targeting.
             </p>
           </li>
 
           <li>
-            <h3>3. Affiliate &amp; Influencer Marketing</h3>
+            <h3>Affiliate &amp; Influencer Marketing</h3>
 
             <p>
-              Performance-based partnerships with micro-influencers
-              (50K–100K followers) often yield better results than
-              celebrities in India.
+              Performance-based partnerships with micro-influencers (50K–100K followers) often yield better results than celebrities in India.
               <br />
-              Metric That Matters: Track "cost per engaged follower" (CPEF)
-              —micro-influencers average ₹50–80 vs. ₹500+ for
-              macro-influencers.
+              Metric That Matters: Track "cost per engaged follower" (CPEF) - micro-influencers average ₹50–80 vs. ₹500+ for macro-influencers.
             </p>
           </li>
 
           <li>
-            <h3>4. Conversion Rate Optimization (CRO)</h3>
+            <h3>Conversion Rate Optimization (CRO)</h3>
 
             <p>A/B testing landing pages for Indian users' preferences:</p>
 
             <ul>
-              <li>
-                Testimonials with local faces (e.g., "Rahul from Gurugram
-                saved ₹12,000")
-              </li>
+              <li>Testimonials with local faces (e.g., "Rahul from Gurugram saved ₹12,000")</li>
               <li>Payment badges like "Razorpay Secure" above fold</li>
               <li>Hinglish CTAs ("Aage badho!" vs. "Proceed")</li>
             </ul>
