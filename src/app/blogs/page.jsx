@@ -44,16 +44,16 @@ const blogs = [
   //   link: "/blogs/Digital-Marketing-Agencyin-Delhi-NCR",
   // },
 
-  // {
-  //   id: 4,
-  //   title:
-  //     "Adclan Media – The Marketing Agency You Were Looking For in Delhi NCR",
-  //   category: "Agency",
-  //   date: "April 2025",
-  //   readTime: "4 min read",
-  //   img: "/blog/artboard-3.webp",
-  //   link: "/blogs/adclan-media-marketing-agency-delhi",
-  // },
+  {
+    id: 4,
+    title:
+      "Best Digital Marketing Services for Small Businesses in Delhi: A Strategic Approach",
+    category: "Agency",
+    date: "September 202",
+    readTime: "4 min read",
+    img: "/blog/best-digital-marketing-services-for-small-businesses-in-delhi-a-strategic-approach.webp",
+    link: "/blogs/best-digital-marketing-services-for-small-businesses-in-delhi-a-strategic-approach",
+  },
 
   {
     id: 3,

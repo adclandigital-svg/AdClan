@@ -250,6 +250,17 @@ font-size:16px;
   scroll-margin-top: 120px; /* adjust based on navbar height */
 }
 
+
+.blog-container p{
+  margin-bottom: 15px;
+}
+
+.blog-container ul, .blog-container ol{
+  margin-bottom: 15px;
+  margin-top: 0;
+  padding: revert;
+}
+
 /* ================= Responsive Text ================= */
 @media (max-width: 768px) {
   .adclan-blog-info h2 {
@@ -264,3 +275,5 @@ font-size:16px;
     font-size: 0.9rem;
   }
 }
+
+

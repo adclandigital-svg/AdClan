@@ -117,7 +117,7 @@ export default function CaseStudyPage() {
         </h2>
         <ol>
           <li>
-            <h3>1. Geo-Targeted Performance Marketing</h3>
+            <h3>Geo-Targeted Performance Marketing</h3>
 
             <p>
               Most agencies offer generic PPC campaigns. Top-tier Delhi
@@ -151,7 +151,7 @@ export default function CaseStudyPage() {
           </li>
 
           <li>
-            <h3>2. Hyperlocal Content Ecosystems</h3>
+            <h3>Hyperlocal Content Ecosystems</h3>
 
             <p>
               Instead of isolated blog posts, we build interconnected content
