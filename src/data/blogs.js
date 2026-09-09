@@ -47,4 +47,12 @@ export const blogs = [
     content:
       "Reiterating our commitment to delivering outstanding marketing solutions in Delhi NCR, this video showcases the breadth of services and campaigns executed by Adclan Media.",
   },
+  {
+    id: 6,
+    slug: "how-much-does-digital-marketing-cost-in-delhi-ncr-in-2026-a-realistic-breakdown",
+    title: "How Much Does Digital Marketing Cost in Delhi NCR in 2026? A Realistic Breakdown",
+    date: "September 2026",
+    video: "/home/creatives/Untitled design.mp4",
+    content: "Digital marketing isn't a one-size-fits-all expense—it's a tailored investment that varies dramatically based on your business goals, industry competition, and the specific channels you prioritize.",
+  },
 ];

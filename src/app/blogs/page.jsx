@@ -45,11 +45,21 @@ const blogs = [
   // },
 
   {
+    id: 5,
+    title: "How Much Does Digital Marketing Cost in Delhi NCR in 2026? A Realistic Breakdown",
+    category: "Blog",
+    date: "September 2026",
+    // readTime: "5 min read",
+    img: "/blog/how-much-does-digital-marketing-cost-in-delhi-ncr-in-2026-a-realistic-breakdown.webp",
+    link: "/blogs/how-much-does-digital-marketing-cost-in-delhi-ncr-in-2026-a-realistic-breakdown",
+  },
+
+  {
     id: 4,
     title:
       "Best Digital Marketing Services for Small Businesses in Delhi: A Strategic Approach",
     category: "Agency",
-    date: "September 202",
+    date: "September 2026",
     readTime: "4 min read",
     img: "/blog/best-digital-marketing-services-for-small-businesses-in-delhi-a-strategic-approach.webp",
     link: "/blogs/best-digital-marketing-services-for-small-businesses-in-delhi-a-strategic-approach",
