@@ -55,4 +55,12 @@ export const blogs = [
     video: "/home/creatives/Untitled design.mp4",
     content: "Digital marketing isn't a one-size-fits-all expense—it's a tailored investment that varies dramatically based on your business goals, industry competition, and the specific channels you prioritize.",
   },
+  {
+    id: 7,
+    slug: "digital-marketing-strategy-for-businesses-in-delhi-ncr-a-data-driven-blueprint",
+    title: "Digital Marketing Strategy for Businesses in Delhi NCR: A Data-Driven Blueprint",
+    date: "September 2026",
+    video: "/home/creatives/Untitled design.mp4",
+    content: "Delhi NCR’s hyper-competitive business landscape demands more than generic digital marketing tactics. With over 30 million residents and a GDP rivaling entire countries, the region requires strategies tailored to its unique consumer behavior, infrastructure challenges, and industry clusters.",
+  },
 ];

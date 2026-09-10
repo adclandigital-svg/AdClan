@@ -31,18 +31,17 @@ const blogs = [
   //   img: "/blog/vikram-mills.webp",
   //   link: "/blogs/vikram-mills-case-study",
   // },
-  // {
-  //   id: 5,
-  //   title:
-  //     "Digital Marketing Agency in Delhi NCR: Your Growth Catalyst in a Hyperconnected World",
-  //   category: "Marketing",
-  //   desc: "The Delhi National Capital Region (NCR) isn’t just India’s economic powerhouse—it’s a digital battleground where brands compete for attention across search engines, social platforms, and emerging channels. A specialized digital marketing agency in Delhi NCR acts as your strategic ally, blending localized expertise with global best practices to drive measurable business outcomes.  ",
-  //   author: "Adclan Media",
-  //   date: "March 2026",
-  //   readTime: "5 min read",
-  //   img: "/blog/artboard-1.webp",
-  //   link: "/blogs/Digital-Marketing-Agencyin-Delhi-NCR",
-  // },
+  {
+    id: 6,
+    title:
+      "Digital Marketing Strategy for Businesses in Delhi NCR: A Data-Driven Blueprint",
+    category: "Blog",
+    desc: "Digital Marketing Strategy for Businesses in Delhi NCR: A Data-Driven Blueprint Delhi NCR’s hyper-competitive business landscape demands more than generic digital marketing tactics. ",
+    author: "Adclan Media",
+    date: "September 2026",
+    img: "/blog/digital-marketing-strategy-for-businesses-in-delhi-ncr-a-data-driven-blueprint.webp",
+    link: "/blogs/digital-marketing-strategy-for-businesses-in-delhi-ncr-a-data-driven-blueprint",
+  },
 
   {
     id: 5,
