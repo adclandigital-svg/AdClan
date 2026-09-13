@@ -22,19 +22,7 @@ export default function BlogPage() {
 
         <p>See top-performing Indian radio ad examples with breakdowns of why they convert. Learn how to craft spots that drive results in the Indian market.</p>
 
-        {/* TABLE OF CONTENTS */}
-        <div className="toc">
-          <h3>Table of Contents</h3>
-          <ul>
-            <li><a href="#key-takeaways-1">Key Takeaways</a></li>
-            <li><a href="#what-makes-radio-work-in-india">What Makes Radio Work in India?</a></li>
-            <li><a href="#5-indian-radio-ads-that-moved-the-needle">5 Indian Radio Ads That Moved the Needle</a></li>
-            <li><a href="#common-mistakes-in-indian-radio-ads">Common Mistakes in Indian Radio Ads</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
-        </div>
-
-        <h2 id="key-takeaways-1">Key Takeaways</h2>
+        <h3 id="key-takeaways-1">Key Takeaways</h3>
         <ul>
           <li>5 Indian radio ads that outperformed benchmarks by 30-70%</li>
           <li>Why humor + regional dialects dominate India&apos;s radio landscape</li>
@@ -42,6 +30,20 @@ export default function BlogPage() {
         </ul>
 
         <p>Radio reaches 99% of India&apos;s population weekly - more than TV or smartphones. But most marketers waste this potential with generic scripts. Here&apos;s what actually works in the Indian context, backed by campaign data from Mumbai to Chennai. Unlike Western markets where radio serves as passive background, Indian listeners actively engage with stations - 73% can recall at least one ad heard yesterday (Indian Radio Audience Survey 2023). This makes radio India&apos;s most underrated performance marketing channel.</p>
+
+        {/* TABLE OF CONTENTS */}
+        <div className="toc">
+          <h3>Table of Contents</h3>
+          <ul>
+            <li><a href="#key-takeaways-2">Key Takeaways</a></li>
+            <li><a href="#what-makes-radio-work-in-india">What Makes Radio Work in India?</a></li>
+            <li><a href="#5-indian-radio-ads-that-moved-the-needle">5 Indian Radio Ads That Moved the Needle</a></li>
+            <li><a href="#common-mistakes-in-indian-radio-ads">Common Mistakes in Indian Radio Ads</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+
 
         <h2 id="key-takeaways-2">Key Takeaways</h2>
         <ul>
