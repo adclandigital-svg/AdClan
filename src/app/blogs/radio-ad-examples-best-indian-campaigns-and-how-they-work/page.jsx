@@ -20,7 +20,6 @@ export default function BlogPage() {
           </div>
         </header>
 
-        <h2 id="radio-advertisement-examples">Radio Advertisement Examples: The Definitive Indian Guide</h2>
         <p>See top-performing Indian radio ad examples with breakdowns of why they convert. Learn how to craft spots that drive results in the Indian market.</p>
 
         {/* TABLE OF CONTENTS */}
