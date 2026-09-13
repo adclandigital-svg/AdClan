@@ -27,9 +27,41 @@ export default function BlogPage() {
           Delhi NCR’s hyper-competitive business landscape demands more than generic digital marketing tactics. With over 30 million residents and a GDP rivaling entire countries, the region requires strategies tailored to its unique consumer behavior, infrastructure challenges, and industry clusters. Having audited 47 Delhi-based campaigns in 2026, we’ve identified the critical gaps most agencies overlook—and how to fix them.
         </p>
 
+        {/* TABLE OF CONTENTS */}
+
+        <div className="toc">
+          <h3>Table of Contents</h3>
+
+          <ul>
+            <li>
+              <a href="#why-delhi-ncr-ecosystem-demands-custom-strategies">
+                Why Delhi NCR’s Digital Ecosystem Demands Custom Strategies
+              </a>
+            </li>
+
+            <li>
+              <a href="#the-4-pillar-framework">
+                The 4-Pillar Framework for Delhi NCR Success
+              </a>
+            </li>
+
+            <li>
+              <a href="#the-delhi-ncr-content-matrix">
+                The Delhi NCR Content Matrix
+              </a>
+            </li>
+
+            <li>
+              <a href="#budget-allocation-hidden-costs">
+                Budget Allocation: Delhi’s Hidden Cost Levers
+              </a>
+            </li>
+          </ul>
+        </div>
+
         {/* SECTION 1 */}
 
-        <h2>Why Delhi NCR’s Digital Ecosystem Demands Custom Strategies</h2>
+        <h2 id="why-delhi-ncr-ecosystem-demands-custom-strategies">Why Delhi NCR’s Digital Ecosystem Demands Custom Strategies</h2>
         
         <p>Unlike other Indian metros, Delhi NCR exhibits three distinctive traits:</p>
 
@@ -49,7 +81,7 @@ export default function BlogPage() {
 
         {/* SECTION 2 */}
 
-        <h2>The 4-Pillar Framework for Delhi NCR Success</h2>
+        <h2 id="the-4-pillar-framework">The 4-Pillar Framework for Delhi NCR Success</h2>
 
         <h3>Pillar 1: Geo-Layered SEO</h3>
         
@@ -113,7 +145,7 @@ export default function BlogPage() {
 
         {/* SECTION 3 */}
 
-        <h2>The Delhi NCR Content Matrix</h2>
+        <h2 id="the-delhi-ncr-content-matrix">The Delhi NCR Content Matrix</h2>
 
         <p>Most brands fail to align content with the region’s consumption rhythms:</p>
 
@@ -159,7 +191,7 @@ export default function BlogPage() {
 
         {/* SECTION 4 */}
 
-        <h2>Budget Allocation: Delhi’s Hidden Cost Levers</h2>
+        <h2 id="budget-allocation-hidden-costs">Budget Allocation: Delhi’s Hidden Cost Levers</h2>
 
         <p>Typical agency recommendations waste spend on:</p>
 

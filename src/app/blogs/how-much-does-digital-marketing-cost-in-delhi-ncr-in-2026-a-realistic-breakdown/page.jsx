@@ -27,9 +27,47 @@ export default function BlogPage() {
           Digital marketing isn&apos;t a one-size-fits-all expense—it&apos;s a tailored investment that varies dramatically based on your business goals, industry competition, and the specific channels you prioritize. In Delhi NCR, where the digital landscape is fiercely competitive, understanding these cost variables can mean the difference between wasting budgets and driving measurable growth.
         </p>
 
+        {/* TABLE OF CONTENTS */}
+
+        <div className="toc">
+          <h3>Table of Contents</h3>
+
+          <ul>
+            <li>
+              <a href="#core-factors-budget">
+                The Core Factors That Shape Your Digital Marketing Budget
+              </a>
+            </li>
+
+            <li>
+              <a href="#channel-specific-cost-breakdown">
+                Channel-Specific Cost Breakdown for Delhi NCR Market
+              </a>
+            </li>
+
+            <li>
+              <a href="#critical-cost-factors">
+                Two Critical Cost Factors Most Businesses Overlook
+              </a>
+            </li>
+
+            <li>
+              <a href="#optimizing-spend-2026">
+                How Delhi NCR Businesses Are Optimizing Spend in 2026
+              </a>
+            </li>
+
+            <li>
+              <a href="#faq">
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </div>
+
         {/* SECTION 1 */}
 
-        <h2>The Core Factors That Shape Your Digital Marketing Budget</h2>
+        <h2 id="core-factors-budget">The Core Factors That Shape Your Digital Marketing Budget</h2>
 
         <h3>Business Objectives Define Budget Allocation</h3>
         <p>
@@ -61,7 +99,7 @@ export default function BlogPage() {
 
         {/* SECTION 2 */}
 
-        <h2>Channel-Specific Cost Breakdown for Delhi NCR Market</h2>
+        <h2 id="channel-specific-cost-breakdown">Channel-Specific Cost Breakdown for Delhi NCR Market</h2>
 
         <h3>Search Engine Marketing (SEM/PPC)</h3>
         <p>Google Ads management typically runs ₹15,000–₹35,000/month in agency fees plus ad spend:</p>
@@ -112,7 +150,7 @@ export default function BlogPage() {
 
         {/* SECTION 3 */}
 
-        <h2>Two Critical Cost Factors Most Businesses Overlook</h2>
+        <h2 id="critical-cost-factors">Two Critical Cost Factors Most Businesses Overlook</h2>
 
         <h3>Creative Production Costs</h3>
         <p>Professional photo/video shoots in Delhi NCR add:</p>
@@ -143,7 +181,7 @@ export default function BlogPage() {
 
         {/* SECTION 4 */}
 
-        <h2>How Delhi NCR Businesses Are Optimizing Spend in 2026</h2>
+        <h2 id="optimizing-spend-2026">How Delhi NCR Businesses Are Optimizing Spend in 2026</h2>
         <p>We&apos;ve observed three emerging strategies:</p>
 
         <ol>
@@ -181,7 +219,7 @@ export default function BlogPage() {
 
         {/* SECTION 5 */}
 
-        <h2>FAQ</h2>
+        <h2 id="faq">FAQ</h2>
         
         <p><b>Q: Is digital marketing worth the cost for small businesses in Delhi NCR?</b></p>
         <p>A: Absolutely, when targeted correctly. We&apos;ve seen Delhi-based home chefs gain 300+ orders/month through ₹25,000 Instagram ad budgets, and local clinics fill consultation slots with ₹40,000 SEO investments. The key is focusing on high-intent micro-audiences rather than broad awareness campaigns.</p>

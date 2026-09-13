@@ -13,24 +13,15 @@ const blogs = [
   //   img: "/blog/Right Gold.webp",
   //   link: "/blogs/right-gold-case-study",
   // },
-  // {
-  //   id: 7,
-  //   title: "Galaxy Sawasdee Heights Case Study",
-  //   category: "Case Study",
-  //   date: "23 March 2024",
-  //   readTime: "4 min read",
-  //   img: "/blog/galaxy-case-study.webp",
-  //   link: "/blogs/galaxy-sawasdee-heights-case-study",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Vikram Mills Case Study",
-  //   category: "Case Study",
-  //   date: "18 March 2024",
-  //   readTime: "4 min read",
-  //   img: "/blog/vikram-mills.webp",
-  //   link: "/blogs/vikram-mills-case-study",
-  // },
+  {
+    id: 7,
+    title: "Radio Advertisement Examples: The Definitive Indian Guide",
+    category: "Blog",
+    date: "September 2026",
+    readTime: "4 min read",
+    img: "/blog/radio-advertisement-examples-the-definitive-indian-guide.webp",
+    link: "/blogs/radio-ad-examples-best-indian-campaigns-and-how-they-work",
+  },
   {
     id: 6,
     title:
