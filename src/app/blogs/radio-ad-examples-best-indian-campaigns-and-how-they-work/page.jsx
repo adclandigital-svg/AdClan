@@ -210,57 +210,6 @@ export default function BlogPage() {
           })
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "How much should we budget for radio ads in India?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Stations like Radio Mirchi and Red FM charge ₹8,000-₹25,000 per 10-second spot in metros. Tier-2 cities average ₹3,000-₹8,000. Always negotiate package deals - buying 20+ spots weekly cuts costs by 40%. For a balanced campaign: - 60% budget on morning drive slots - 20% on targeted evening programming - 20% on weekend specialty shows"
-                }
-              },
-              {
-                "@type": "Question",
-                name: "What's the ideal ad length for Indian audiences?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "12-15 seconds converts best. Our heat mapping shows attention peaks at second 7 and plummets after 17. Exception: Story-driven categories like insurance perform better with 25-second narratives. Always: - Place key message at 6-8 second mark - Repeat brand name at start and end - Use sonic branding (distinct sound effects)"
-                }
-              },
-              {
-                "@type": "Question",
-                name: "Should we use jingles or spoken ads?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Data shows jingles work for impulse categories (food delivery, e-commerce). Service brands (banks, insurance) see 23% better recall with conversational scripts featuring local dialect words like \"yaar\" or \"arre\". For jingles: - Keep musical hooks under 5 seconds - Use regional instruments (dholak in North, mridangam in South) - Test with focus groups before airing"
-                }
-              },
-              {
-                "@type": "Question",
-                name: "How often should we rotate ad creatives?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Refresh creatives every 3-4 weeks to combat listener fatigue. A/B testing reveals: - **Retention drops 18% after 5 exposures/week** - **Variants with alternate voiceovers boost CTR by 12%** Pro tip: Repurpose top-performing scripts into multilingual versions (e.g., Hindi + regional language mixes)."
-                }
-              },
-              {
-                "@type": "Question",
-                name: "Which regions respond best to humor in ads?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Metro cities (Mumbai, Delhi, Bengaluru) show 31% higher engagement with witty scripts, while Tier 2/3 audiences prefer relatable scenarios. Avoid sarcasm—stick to slapstick or wordplay."
-                }
-              }
-            ]
-          })
-        }}
-      />
     </article>
   );
 }
