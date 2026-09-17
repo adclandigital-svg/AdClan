@@ -4,15 +4,30 @@ import Link from "next/link";
 import "./blog.css";
 
 const blogs = [
-  // {
-  //   id: 8,
-  //   title: "Right Gold – Turning Trust into Sales Through Strategic Video Marketing",
-  //   category: "Case Study",
-  //   date: "27 March 2024",
-  //   readTime: "5 min read",
-  //   img: "/blog/Right Gold.webp",
-  //   link: "/blogs/right-gold-case-study",
-  // },
+  {
+    id: 10,
+    title: "How to Generate Quality Leads Through Digital Marketing",
+    category: "Blog",
+    date: "September 2026",
+    img: "/blog/how-to-generate-quality-leads-through-digital-marketing.webp",
+    link: "/blogs/how-to-generate-quality-leads-through-digital-marketing",
+  },
+  {
+    id: 9,
+    title: "How Long Does SEO Take to Show Results in India? (2026 Guide)",
+    category: "Blog",
+    date: "September 2026",
+    img: "/blog/how-long-does-seo-take-to-show-results-in-india-2026-guide.webp",
+    link: "/blogs/how-long-does-seo-take-to-show-results-in-india-2026-guide",
+  },
+  {
+    id: 8,
+    title: "Google Ads vs Meta Ads: Which Is Better for Lead Generation?",
+    category: "Blog",
+    date: "September 2026",
+    img: "/blog/google-ads-vs-meta-ads-which-is-better-for-lead-generation.webp",
+    link: "/blogs/google-ads-vs-meta-ads-which-is-better-for-lead-generation",
+  },
   {
     id: 7,
     title: "Radio Advertisement Examples: The Definitive Indian Guide",

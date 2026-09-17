@@ -63,4 +63,28 @@ export const blogs = [
     video: "/home/creatives/Untitled design.mp4",
     content: "Delhi NCR’s hyper-competitive business landscape demands more than generic digital marketing tactics. With over 30 million residents and a GDP rivaling entire countries, the region requires strategies tailored to its unique consumer behavior, infrastructure challenges, and industry clusters.",
   },
+  {
+    id: 8,
+    slug: "google-ads-vs-meta-ads-which-is-better-for-lead-generation",
+    title: "Google Ads vs Meta Ads: Which Performs Better for Leads?",
+    date: "September 2026",
+    video: "/home/creatives/Untitled design.mp4",
+    content: "Comparing Google Ads and Meta Ads for lead generation in India. Discover which platform works best for your business goals and budget.",
+  },
+  {
+    id: 9,
+    slug: "how-long-does-seo-take-to-show-results-in-india-2026-guide",
+    title: "How Long Does SEO Take to Show Results in India? (2026 Guide)",
+    date: "September 2026",
+    video: "/home/creatives/Untitled design.mp4",
+    content: "Realistic SEO timelines for Indian businesses: when to expect first rankings, traffic growth, and full impact based on competition and strategy.",
+  },
+  {
+    id: 10,
+    slug: "how-to-generate-quality-leads-through-digital-marketing",
+    title: "How to Generate Quality Leads Through Digital Marketing",
+    date: "September 2026",
+    video: "/home/creatives/Untitled design.mp4",
+    content: "Discover proven strategies for lead generation through digital marketing that deliver real business results. Learn actionable techniques used by top agencies.",
+  },
 ];
