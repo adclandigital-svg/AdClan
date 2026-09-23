@@ -203,15 +203,20 @@ export default function GenerateQualityLeadsPage() {
         <p>Score leads based on: - Engagement level (pages visited, time spent) - Demographic match (ideal customer criteria) - Behavioral triggers (pricing page visits, demo requests)</p>
 
         <h2 id="faq">FAQ</h2>
-        <p><b>Q: How long until we see results from digital lead generation?</b> A: It depends on your starting point. Existing websites typically see first leads within 30 days. New sites may take 60-90 days to gain traction. Paid campaigns can deliver immediate leads, but quality improves as we refine targeting.</p>
-        
-        <p><b>Q: What budget should we allocate for lead generation?</b> A: Our <Link href="/blogs/how-much-does-digital-marketing-cost-in-delhi-ncr-in-2026-a-realistic-breakdown">cost breakdown for Delhi businesses</Link> shows most SMEs invest ₹15,000-50,000 monthly for sustainable results. The key is consistent investment - sporadic spending delivers poor returns.</p>
-        
-        <p><b>Q: How do we handle lead quality issues?</b> A: Implement lead scoring from day one. We categorize leads as Hot/Warm/Cold based on engagement level and buying signals. This prevents sales teams wasting time on unqualified prospects.</p>
-        
-        <p><b>Q: What's the most overlooked lead gen tactic?</b> A: Chatbot conversations. Properly configured chatbots on your website can qualify leads 24/7 and book appointments directly in your calendar. We've seen 25% of total leads come through this channel for some clients.</p>
-        
-        <p><b>Q: How important is mobile optimization?</b> A: Critical. 78% of our clients' leads come from mobile devices. Every landing page, form, and content piece must be mobile-first designed with thumb-friendly CTAs and fast load times under 3 seconds.</p>
+        <p><b>Q: How long until we see results from digital lead generation?</b> </p>
+        <p>A: It depends on your starting point. Existing websites typically see first leads within 30 days. New sites may take 60-90 days to gain traction. Paid campaigns can deliver immediate leads, but quality improves as we refine targeting.</p>
+
+        <p><b>Q: What budget should we allocate for lead generation?</b></p>
+        <p>A: Our <Link href="/blogs/how-much-does-digital-marketing-cost-in-delhi-ncr-in-2026-a-realistic-breakdown">cost breakdown for Delhi businesses</Link> shows most SMEs invest ₹15,000-50,000 monthly for sustainable results. The key is consistent investment - sporadic spending delivers poor returns.</p>
+
+        <p><b>Q: How do we handle lead quality issues?</b></p>
+        <p>A: Implement lead scoring from day one. We categorize leads as Hot/Warm/Cold based on engagement level and buying signals. This prevents sales teams wasting time on unqualified prospects.</p>
+
+        <p><b>Q: What's the most overlooked lead gen tactic?</b></p>
+        <p>A: Chatbot conversations. Properly configured chatbots on your website can qualify leads 24/7 and book appointments directly in your calendar. We've seen 25% of total leads come through this channel for some clients.</p>
+
+        <p><b>Q: How important is mobile optimization?</b></p>
+        <p>A: Critical. 78% of our clients' leads come from mobile devices. Every landing page, form, and content piece must be mobile-first designed with thumb-friendly CTAs and fast load times under 3 seconds.</p>
 
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: `

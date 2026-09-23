@@ -220,7 +220,7 @@ export default function HowLongDoesSeoTakePage() {
           <li>Months 7+: 90% SEO, 10% PPC</li>
         </ul>
 
-        <h3>The Balanced Approach: SEO + Performance Marketing</h3>
+        <h4>The Balanced Approach: SEO + Performance Marketing</h4>
         <p>This hybrid strategy ensures immediate visibility through paid channels while building organic equity. Track blended ROI by: - Comparing branded vs. non-branded search growth (organic should dominate by Month 9) - Monitoring "PPC-assisted conversions" in Google Analytics (healthy SEO maturity shows &gt;30% reduction in PPC dependency by Month 6)</p>
 
         <h2 id="actionable-takeaways">Actionable Takeaways for Indian Businesses</h2>
@@ -236,13 +236,17 @@ export default function HowLongDoesSeoTakePage() {
         </ol>
 
         <h2 id="faq-2">FAQ</h2>
-        <p><b>Q: Why does SEO take longer in India versus Western markets?</b> A: Three key factors: 1) Higher mobile bounce rates (63% vs 41% US average) delay engagement signals 2) Backlink acquisition is slower due to fewer quality .in domains 3) Google's India data centers process algorithm updates 2-3 weeks later than North America</p>
+        <p><b>Q: Why does SEO take longer in India versus Western markets?</b></p>
+        <p>A: Three key factors: 1) Higher mobile bounce rates (63% vs 41% US average) delay engagement signals 2) Backlink acquisition is slower due to fewer quality .in domains 3) Google's India data centers process algorithm updates 2-3 weeks later than North America</p>
 
-        <p><b>Q: Can I rank faster by targeting long-tail keywords only?</b> A: Partially true. While long-tails show movement in 2-3 months, our Delhi case study proved pages need 5-8 mid-tail rankings to sustain traffic growth (87% of quick-win long-tail rankings faded without supporting mid-tail authority).</p>
+        <p><b>Q: Can I rank faster by targeting long-tail keywords only?</b></p>
+        <p>A: Partially true. While long-tails show movement in 2-3 months, our Delhi case study proved pages need 5-8 mid-tail rankings to sustain traffic growth (87% of quick-win long-tail rankings faded without supporting mid-tail authority).</p>
 
-        <p><b>Q: How do monsoon seasonality and festivals impact SEO timelines?</b> A: Significant fluctuations occur: - Diwali period (Oct-Nov) sees 22% faster indexation but 17% slower ranking movements due to SERP volatility - July-August monsoon months show the highest CTR for "near me" searches (optimize local packs accordingly)</p>
+        <p><b>Q: How do monsoon seasonality and festivals impact SEO timelines?</b></p>
+        <p>A: Significant fluctuations occur: - Diwali period (Oct-Nov) sees 22% faster indexation but 17% slower ranking movements due to SERP volatility - July-August monsoon months show the highest CTR for "near me" searches (optimize local packs accordingly)</p>
 
-        <p><b>Q: Should I switch agencies if results take &gt;6 months?</b> A: Not necessarily. Request their tracking dashboard showing: ✓ Monthly crawl budget utilization ✓ Domain Authority growth trajectory (aim for +3/month) ✓ Featured snippet ownership rate (should be &gt;15% of target KWs by Month 6)</p>
+        <p><b>Q: Should I switch agencies if results take &gt;6 months?</b></p>
+        <p>A: Not necessarily. Request their tracking dashboard showing: ✓ Monthly crawl budget utilization ✓ Domain Authority growth trajectory (aim for +3/month) ✓ Featured snippet ownership rate (should be &gt;15% of target KWs by Month 6)</p>
 
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: `

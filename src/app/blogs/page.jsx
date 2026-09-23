@@ -5,6 +5,22 @@ import "./blog.css";
 
 const blogs = [
   {
+    id: 12,
+    title: "How Much Should a Business Spend on Digital Marketing in India?",
+    category: "Blog",
+    date: "September 2026",
+    img: "/blog/digital-marketing-budget-for-business.webp",
+    link: "/blogs/digital-marketing-budget-for-business",
+  },
+  {
+    id: 11,
+    title: "SEO vs Google Ads: Which Is Better for Indian Businesses in 2026?",
+    category: "Blog",
+    date: "September 2026",
+    img: "/blog/seo-vs-google-ads-which-is-better-for-indian-businesses-in-2026.webp",
+    link: "/blogs/seo-vs-google-ads-which-is-better-for-indian-businesses",
+  },
+  {
     id: 10,
     title: "How to Generate Quality Leads Through Digital Marketing",
     category: "Blog",
