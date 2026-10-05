@@ -4,60 +4,7 @@ import "./homeBlog.css";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const blogs = [
-  {
-    id: 1,
-    title:
-      "Digital Marketing Agency in Delhi NCR: Your Growth Catalyst in a Hyperconnected World",
-    category: "Marketing",
-    desc: "The Delhi National Capital Region (NCR) isn’t just India’s economic powerhouse—it’s a digital battleground where brands compete for attention across search engines, social platforms, and emerging channels. A specialized digital marketing agency in Delhi NCR acts as your strategic ally, blending localized expertise with global best practices to drive measurable business outcomes.  ",
-    author: "Adclan Media",
-    date: "March 2026",
-    readTime: "5 min read",
-    img: "/case-studies/artboard-1.webp",
-    link: "/case-studies/Digital-Marketing-Agencyin-Delhi-NCR",
-  },
-
-  {
-    id: 2,
-    title:
-      "Adclan Media – The Marketing Agency You Were Looking For in Delhi NCR",
-    category: "Agency",
-    date: "April 2025",
-    readTime: "4 min read",
-    img: "/case-studies/artboard-3.webp",
-    link: "/case-studies/adclan-media-marketing-agency-delhi",
-  },
-
-  {
-    id: 3,
-    title: "Adclan Onboard Shweta Tiwari as Brand Ambassador for Kidsmate",
-    category: "Brand Campaign",
-    date: "January 2025",
-    readTime: "3 min read",
-    img: "/case-studies/artboard-2.webp",
-    link: "/case-studies/adclan-onboard-shweta-tiwari",
-  },
-
-  {
-    id: 4,
-    title: "Adclan Media’s Triumph with Ace Hanei: Masterclass in Campaign",
-    category: "Case Study",
-    date: "October 2024",
-    readTime: "4 min read",
-    img: "/case-studies/artboard-4.webp",
-    link: "/case-studies/adclan-media-triumph-ace-hanei",
-  },
-  {
-    id: 5,
-    title: "5 Radio Ads Strategies for Business Growth",
-    category: "Case Study",
-    date: "September 2024",
-    readTime: "4 min read",
-    img: "/case-studies/artboard-5.webp",
-    link: "/case-studies/5-radio-ads-strategies-for-buisness-growth",
-  },
-];
+import { blogListData as blogs } from "../../data/blogListData";
 
 const container = {
   hidden: {},
@@ -108,13 +55,13 @@ export default function HomeBlogSection() {
 
           <div className="featured-content">
             <div>
-              <span className="tag">{blogs[0].category}</span>&nbsp;
-              <span className="tag">{blogs[0].author}</span>&nbsp;
+              <span className="tag">{blogs[0].category || "Blog"}</span>&nbsp;
+              {blogs[0].author && <><span className="tag">{blogs[0].author}</span>&nbsp;</>}
               <span className="tag">{blogs[0].date}</span>
             </div>
 
             <h3>{blogs[0].title}</h3>
-            <p>{blogs[0].desc}</p>
+            {blogs[0].desc && <p>{blogs[0].desc}</p>}
 
             <Link href={blogs[0].link}>Read Article →</Link>
           </div>

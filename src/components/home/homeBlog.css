@@ -181,7 +181,7 @@
 
 .blog-card img {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/8;
   object-fit: cover;
   transition: 1s;
 }
