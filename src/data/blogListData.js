@@ -1,5 +1,16 @@
 export const blogListData = [
   {
+    id: 13,
+    title: "10 Digital Marketing Mistakes Indian Businesses Should Avoid in 2026",
+    category: "Blog",
+    desc: "Learn the top digital marketing pitfalls Indian companies face in 2026 and practical solutions to fix them. Boost your online presence effectively.",
+    author: "Adclan Media",
+    date: "September 2026",
+    readTime: "5 min read",
+    img: "/blog/10-digital-marketing-mistakes.webp",
+    link: "/blogs/10-digital-marketing-mistakes-indian-businesses-should-avoid-in-2026",
+  },
+  {
     id: 12,
     title: "How Much Should a Business Spend on Digital Marketing in India?",
     category: "Blog",
