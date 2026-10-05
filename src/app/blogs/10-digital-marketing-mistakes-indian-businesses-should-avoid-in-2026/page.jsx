@@ -83,7 +83,7 @@ export default function DigitalMarketingMistakesPage() {
           </ul>
         </div>
 
-        <h2 id="mistake-1">Key Takeaways</h2>
+        <h2 id="key-takeaways">Key Takeaways</h2>
         <ul>
           <li>
             Mobile optimization isn't optional - 73% of Indian users access content via smartphones, with rural areas showing 89% mobile-only usage
