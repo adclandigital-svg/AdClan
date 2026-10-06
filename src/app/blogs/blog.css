@@ -262,6 +262,20 @@ font-size:16px;
   padding: revert;
 }
 
+.blog-container p a, 
+.blog-container li a {
+  color: #17b9a9;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.blog-container p a:hover, 
+.blog-container li a:hover {
+  color: #118c80;
+  text-decoration: none;
+}
+
 /* ================= Responsive Text ================= */
 @media (max-width: 768px) {
   .adclan-blog-info h2 {
