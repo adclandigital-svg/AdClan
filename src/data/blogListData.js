@@ -1,5 +1,16 @@
 export const blogListData = [
   {
+    id: 16,
+    title: "Radio Advertising Examples: The Definitive Guide & Best Options",
+    category: "Blog",
+    desc: "Explore proven radio advertising examples and strategies that deliver results. Learn how top Indian brands use radio ads effectively.",
+    author: "Adclan Media",
+    date: "October 2026",
+    readTime: "5 min read",
+    img: "/blog/radio-advertising-examples-2026.webp",
+    link: "/blogs/radio-advertising-examples-guide-best-practices",
+  },
+  {
     id: 15,
     title: "Growth Marketing Agency in Delhi: The Strategic Advantage for Indian Businesses",
     category: "Blog",
