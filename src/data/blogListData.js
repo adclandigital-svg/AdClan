@@ -1,5 +1,27 @@
 export const blogListData = [
   {
+    id: 18,
+    title: "Integrated Marketing Agency in Delhi: Why Unified Strategies Win",
+    category: "Blog",
+    desc: "Looking for an integrated marketing agency in Delhi? Discover how full-service solutions can amplify your brand's digital presence and drive measurable growth.",
+    author: "Adclan Media",
+    date: "October 2026",
+    readTime: "5 min read",
+    img: "/blog/integrated-marketing-agency-in-delhi-why-unified-strategies-win.webp",
+    link: "/blogs/integrated-marketing-agency-in-delhi-why-unified-strategies-win",
+  },
+  {
+    id: 17,
+    title: "Digital Advertising Agency in Delhi: Your Growth Partner in India's Competitive Market",
+    category: "Blog",
+    desc: "Discover how Delhi's leading digital advertising agency drives measurable results through targeted campaigns, performance marketing, and ROI-focused strategies",
+    author: "Adclan Media",
+    date: "October 2026",
+    readTime: "5 min read",
+    img: "/blog/digital-advertising-agency-in-delhi-your-growth-partner-in-indias-competitive-market.webp",
+    link: "/blogs/digital-advertising-agency-in-delhi-your-growth-partner-in-indias-competitive-market",
+  },
+  {
     id: 16,
     title: "Radio Advertising Examples: The Definitive Guide & Best Options",
     category: "Blog",
