@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { background: #000; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; gap: 40px; }
+    svg { border: 1px solid #333; }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <script type="module">
+    import { ADCLAN_FULL_LOGO_PATH, ADCLAN_MONOGRAM_PATH } from '../src/components/home/adclanLogoPaths.js';
+    
+    document.getElementById('container').innerHTML = `
+      <h2>Full Logo:</h2>
+      <svg viewBox="0 0 1200 264" width="800" fill="#FFFFFF">
+        <path d="${ADCLAN_FULL_LOGO_PATH}" fill="#FFFFFF" />
+      </svg>
+      <h2>Monogram:</h2>
+      <svg viewBox="0 0 220 264" width="200" fill="#FFFFFF">
+        <path d="${ADCLAN_MONOGRAM_PATH}" fill="#FFFFFF" />
+      </svg>
+    `;
+  </script>
+</body>
+</html>

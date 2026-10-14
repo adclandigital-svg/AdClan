@@ -1,0 +1,307 @@
+/* ==========================================================================
+   ADCLAN INTRO HERO (MADISON INDIA EXACT REFERENCE EFFECT)
+   - Pure black background (#000000)
+   - Left-side giant subtle logo watermark (matches Madison left "M")
+   - Centered razor-sharp solid white vector AdClan logo (NO blur, inline vector)
+   - Zoom-through aperture centered on monogram loop (matches Madison "O" zoom)
+   - Changing words underneath animating LEFT TO RIGHT
+   - Header completely hidden during intro display (reveals on scroll past)
+   - 100% scroll-speed dependent zoom animation
+   - Smooth, non-sticky reverse scroll in both directions
+   ========================================================================== */
+
+/* Navbar header handling on home-v2:
+   Hidden by default during intro, smoothly drops down after scroll past intro.
+   Uses transform + opacity (never display:none) to eliminate layout reflows! */
+body.home-v2-active .nav-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(-100%) !important;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  z-index: 100 !important;
+  background: rgba(8, 8, 12, 0.94) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.home-v2-active .nav-header .nav-link {
+  color: #ffffff !important;
+}
+
+body.home-v2-active .nav-header .brand-name img {
+  filter: brightness(0) invert(1) !important;
+}
+
+body.home-v2-active .nav-header .nav-socials span {
+  color: #ffffff !important;
+}
+
+body.home-v2-active .nav-header .hamburger .line {
+  background: #ffffff !important;
+}
+
+/* Ensure home-v2 page wrapper has visible overflow so CSS position: sticky works 100% reliably */
+body.home-v2-active .Home-page,
+body.home-v2-active .home-v2-page {
+  overflow: visible !important;
+}
+
+/* Once scrolled past the intro into actual homepage: header slides down smoothly */
+body.home-v2-active.past-intro .nav-header {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+
+/* Scroll track wrapper (240vh scroll distance for luxurious, fluid zoom scrub) */
+.madison-intro-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240vh;
+  background-color: #000000;
+  z-index: 30;
+}
+
+/* Sticky Stage that stays fixed in viewport while user scrolls through the track */
+.madison-intro-stage {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #000000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  will-change: transform, opacity;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   LEFT-SIDE WATERMARK (matches Madison India's left "M" brandmark)
+   ========================================================================== */
+.adclan-left-watermark {
+  position: absolute;
+  top: 50%;
+  left: -2vw;
+  transform: translateY(-50%);
+  height: 94vh;
+  width: auto;
+  max-width: 48vw;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  will-change: transform, opacity;
+}
+
+.adclan-watermark-svg {
+  height: 90vh;
+  width: auto;
+  max-width: 44vw;
+  object-fit: contain;
+  filter: drop-shadow(0 0 45px rgba(255, 255, 255, 0.08));
+}
+
+/* Ambient Radial Glow in center */
+.madison-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 650px;
+  height: 650px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  filter: blur(140px);
+  opacity: 0.18;
+  background: radial-gradient(circle, rgba(23, 185, 169, 0.35) 0%, rgba(99, 102, 241, 0.12) 50%, transparent 70%);
+}
+
+/* Center Content Box: Vector Logo + Left-to-Right Changing Words */
+.madison-center-box {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  will-change: transform, opacity;
+  padding: 0 20px;
+}
+
+/* Main Logo Box:
+   transform-origin: 8.833% 49.24% targets the exact center of the monogram circular loop,
+   creating the EXACT zoom-through aperture effect seen in Madison India's "O"! */
+.madison-logo-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform-origin: 8.833% 49.24%;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.madison-vector-svg-logo {
+  height: clamp(80px, 11vw, 130px);
+  width: auto;
+  max-width: 86vw;
+  display: block;
+  filter: drop-shadow(0 6px 28px rgba(255, 255, 255, 0.14));
+}
+
+/* Changing Word Box (Positioned absolute below logo so logo is at pixel-perfect dead center) */
+.madison-changing-word-box {
+  position: absolute;
+  top: calc(50% + clamp(52px, 8vh, 80px));
+  left: 50%;
+  transform: translateX(-50%);
+  height: clamp(38px, 6vh, 52px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-width: 280px;
+  padding: 0 20px;
+  z-index: 6;
+  will-change: opacity, transform;
+}
+
+/* Changing Word Text - ANIMATING LEFT TO RIGHT */
+.madison-changing-word {
+  font-size: clamp(19px, 3.2vw, 34px);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: inline-block;
+  white-space: nowrap;
+  animation: wordSlideLeftToRight 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Keyframes: Smooth transition from Left to Right */
+@keyframes wordSlideLeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+    filter: blur(4px);
+  }
+  16% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+  84% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(40px);
+    filter: blur(4px);
+  }
+}
+
+/* Bottom: Scroll Down Indicator */
+.madison-scroll-down {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  will-change: opacity, transform;
+}
+
+.madison-scroll-down:hover {
+  transform: translateX(-50%) translateY(3px);
+}
+
+.madison-scroll-down span {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: inherit;
+}
+
+.madison-chevron-arrow {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+  animation: bounceDown 1.8s infinite ease-in-out;
+}
+
+@keyframes bounceDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Actual Homepage Content Sections:
+   Negative margin-top pulls HomeSecond up so it arrives at top: 0 exactly as the intro completes,
+   eliminating any blank gap and revealing HomeSecond directly through the zoom aperture! */
+.actual-home-content {
+  position: relative;
+  z-index: 20;
+  margin-top: -100vh;
+  background: transparent;
+  width: 100%;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .madison-intro-wrapper {
+    height: 200vh;
+  }
+
+  .adclan-left-watermark {
+    left: -12vw;
+    height: 70vh;
+    opacity: 0.14;
+  }
+
+  .adclan-watermark-svg {
+    height: 65vh;
+    max-width: 55vw;
+  }
+
+  .madison-vector-svg-logo {
+    height: 56px;
+  }
+
+  .madison-changing-word {
+    font-size: 18px;
+    letter-spacing: 0.12em;
+  }
+
+  .madison-scroll-down {
+    bottom: 25px;
+  }
+}
