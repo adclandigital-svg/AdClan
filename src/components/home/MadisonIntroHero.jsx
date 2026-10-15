@@ -12,14 +12,20 @@ if (typeof window !== "undefined") {
 }
 
 const CYCLING_WORDS = [
-  "PERFORMANCE MARKETING",
-  "BRAND STRATEGY",
-  "CREATIVE PRODUCTION",
-  "INFLUENCER MARKETING",
-  "DIGITAL MEDIA",
-  "PUBLIC RELATIONS",
-  "SEO & CONTENT",
-  "INTEGRATED CAMPAIGNS",
+  "Creatives",
+  "Digital",
+  "OTT",
+  "TV",
+  "Radio",
+  "Print",
+  "Outdoor",
+  "Influencer",
+  "Celebrity",
+  "PR",
+  "Online Reputation Management",
+  "Events",
+  "BTL",
+  "IT",
 ];
 
 export default function MadisonIntroHero() {
@@ -31,12 +37,19 @@ export default function MadisonIntroHero() {
   const leftWatermarkRef = useRef(null);
 
   const [wordIndex, setWordIndex] = useState(0);
+  const [fadeClass, setFadeClass] = useState("fade-in");
 
-  // 1. Cycle words every 1.5 seconds (Left to Right transition)
+  // 1. Cycle words every 2 seconds with smooth fade right-to-left
   useEffect(() => {
     const timer = setInterval(() => {
-      setWordIndex((prev) => (prev + 1) % CYCLING_WORDS.length);
-    }, 1500);
+      // Start fade-out
+      setFadeClass("fade-out");
+      // After fade-out completes (600ms), switch word and fade-in
+      setTimeout(() => {
+        setWordIndex((prev) => (prev + 1) % CYCLING_WORDS.length);
+        setFadeClass("fade-in");
+      }, 600);
+    }, 2000);
 
     return () => clearInterval(timer);
   }, []);
@@ -53,9 +66,9 @@ export default function MadisonIntroHero() {
       const watermarkEl = leftWatermarkRef.current;
       const trackEl = wrapperRef.current;
 
-      // Target exact center of monogram circular loop (x: 9.8%, y: 49.6%)
+      // Zoom from the exact center of the logo
       gsap.set(logoEl, {
-        transformOrigin: "9.8% 49.6%",
+        transformOrigin: "50% 50%",
         willChange: "transform",
       });
 
@@ -63,15 +76,26 @@ export default function MadisonIntroHero() {
         scrollTrigger: {
           trigger: trackEl,
           start: "top top",
-          end: "bottom bottom",
-          scrub: 0.5, // 1:1 direct coupling with scroll speed
+          end: "+=100%", // Single viewport height = completes in one scroll gesture
+          pin: true, // Pin the section while animating
+          pinSpacing: false, // Prevents dead scroll gap and prevents spacer stacking issues
+          scrub: 0.3, // Snappy, near-instant response to scroll
           onUpdate: (self) => {
-            const isPast = self.progress > 0.82;
+            const isPast = self.progress > 0.85;
             if (typeof document !== "undefined") {
               if (isPast) {
                 document.body.classList.add("past-intro");
               } else {
                 document.body.classList.remove("past-intro");
+              }
+            }
+            if (trackEl && stageEl) {
+              if (self.progress >= 0.92) {
+                trackEl.style.pointerEvents = "none";
+                stageEl.style.pointerEvents = "none";
+              } else {
+                trackEl.style.pointerEvents = "auto";
+                stageEl.style.pointerEvents = "auto";
               }
             }
           },
@@ -83,14 +107,13 @@ export default function MadisonIntroHero() {
         [wordEl, scrollDownEl],
         {
           opacity: 0,
-          x: 50,
           ease: "power2.out",
           duration: 0.12,
         },
         0
       );
 
-      // Step 2: Left giant watermark slides left & fades (0% -> 45% scroll)
+      // Step 2: Left giant watermark slides left & fades (0% -> 40% scroll)
       if (watermarkEl) {
         tl.to(
           watermarkEl,
@@ -99,51 +122,46 @@ export default function MadisonIntroHero() {
             x: -200,
             opacity: 0,
             ease: "power1.inOut",
-            duration: 0.45,
+            duration: 0.4,
           },
           0
         );
       }
 
-      // Step 3A: Phase 1 Zoom (0% -> 48% scroll):
-      // Logo scales from 1x to 10x while translating to center the monogram loop in viewport.
-      // At ~48% scroll, loop fills ~80% of screen (Matches Screenshot 3!)
+      // Step 3A: Phase 1 Zoom (0% -> 50% scroll):
+      // Logo scales from 1x to 12x from center
       tl.to(
         logoEl,
         {
-          scale: 10,
-          x: () => 0.402 * logoEl.offsetWidth,
+          scale: 12,
           ease: "power1.inOut",
-          duration: 0.48,
+          duration: 0.5,
         },
         0
       );
 
-      // Step 3B: Phase 2 Zoom (48% -> 92% scroll):
-      // Loop expands from 10x to 65x, stretching past screen edges (Matches Screenshot 4!)
+      // Step 3B: Phase 2 Zoom (50% -> 95% scroll):
+      // Logo expands from 12x to 80x, stretching past screen edges
       tl.to(
         logoEl,
         {
-          scale: 65,
+          scale: 80,
           ease: "power2.in",
-          duration: 0.44,
+          duration: 0.45,
         },
-        0.48
+        0.5
       );
 
-      // Step 4: Stage dissolves cleanly as loop expands (60% -> 92% scroll)
+      // Step 4: Stage and wrapper dissolve cleanly as logo expands past viewport (75% -> 100% scroll)
       tl.to(
-        stageEl,
+        [stageEl, trackEl],
         {
           opacity: 0,
           ease: "power1.inOut",
-          duration: 0.32,
+          duration: 0.25,
         },
-        0.6
+        0.75
       );
-
-      // Disable pointer events on stage after dissolve so HomeSecond is interactive
-      tl.set(stageEl, { pointerEvents: "none" }, 0.88);
 
       ScrollTrigger.refresh();
 
@@ -157,10 +175,9 @@ export default function MadisonIntroHero() {
 
   // 3. Scroll Down click handler
   const handleScrollDown = useCallback(() => {
-    if (!wrapperRef.current) return;
-    const targetY = wrapperRef.current.offsetTop + wrapperRef.current.offsetHeight - window.innerHeight + 10;
+    // With pin: true and end: "+=100%", total scroll distance through intro is ~2 viewport heights
     window.scrollTo({
-      top: targetY,
+      top: window.innerHeight * 2 + 10,
       behavior: "smooth",
     });
   }, []);
@@ -206,7 +223,7 @@ export default function MadisonIntroHero() {
 
         {/* Changing Word Underneath Logo (Positioned absolute so logo is dead center) */}
         <div ref={wordBoxRef} className="madison-changing-word-box">
-          <span key={wordIndex} className="madison-changing-word">
+          <span key={wordIndex} className={`madison-changing-word ${fadeClass}`}>
             {CYCLING_WORDS[wordIndex]}
           </span>
         </div>

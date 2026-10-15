@@ -3,13 +3,15 @@
 import dynamic from "next/dynamic";
 import { Suspense, useEffect } from "react";
 import MadisonIntroHero from "@/components/home/MadisonIntroHero";
+import "@/components/home-v2/homeV2Sections.css";
+import "./homeV2Beautify.css";
 
-// Dynamic imports for home components (Hero section removed as requested)
-const HomeSecond = dynamic(() => import("@/components/home/HomeSecond"), { ssr: false });
-const HomeThird = dynamic(() => import("@/components/home/HomeThird"), { ssr: false });
-const Homereels = dynamic(() => import("@/components/home/Homereels"), { ssr: false });
-const HomeSeven = dynamic(() => import("@/components/home/HomeSeven"), { ssr: false });
-const HomeBlogSection = dynamic(() => import("@/components/home/HomeBlogSection"), { ssr: false });
+// Dynamic imports for luxury V2 home sections
+const ReelsSectionV2 = dynamic(() => import("@/components/home-v2/ReelsSectionV2"), { ssr: false });
+const ClientsSectionV2 = dynamic(() => import("@/components/home-v2/ClientsSectionV2"), { ssr: false });
+const ImpactSectionV2 = dynamic(() => import("@/components/home-v2/ImpactSectionV2"), { ssr: false });
+const BlogSectionV2 = dynamic(() => import("@/components/home-v2/BlogSectionV2"), { ssr: false });
+const CtaSectionV2 = dynamic(() => import("@/components/home-v2/CtaSectionV2"), { ssr: false });
 
 export default function HomeV2() {
   useEffect(() => {
@@ -31,11 +33,12 @@ export default function HomeV2() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            background: "#000",
+            background: "#06070a",
             color: "#fff",
+            fontFamily: "Outfit, sans-serif",
           }}
         >
-          Loading AdClan Preview...
+          Loading AdClan Luxury Experience...
         </div>
       }
     >
@@ -43,21 +46,25 @@ export default function HomeV2() {
         {/* =========================================================================
             MADISON INDIA REFERENCE EFFECT (ADCLAN CUSTOMIZED):
             1. Pure Black Background (#000000)
-            2. Left-Side Subtle AdClan Monogram Watermark (matches Madison's left "M")
+            2. Left-Side Subtle AdClan Monogram Watermark
             3. Razor-Sharp Vector AdClan Logo (Zero Blur)
-            4. Changing Words Underneath animating LEFT TO RIGHT every 1.5s
+            4. Changing Words fade right-to-left
             5. Header completely hidden during intro display
             6. Scroll zoom directly tied to scroll speed (forward & reverse butter-smooth)
             ========================================================================= */}
         <MadisonIntroHero />
 
-        {/* Subsequent Homepage Sections (Hero video removed as requested) */}
+        {/* Subsequent High-Impact V2 Homepage Sections */}
         <main id="actual-home-content" className="actual-home-content">
-          <HomeSecond />
-          <Homereels />
-          <HomeThird />
-          <HomeSeven />
-          <HomeBlogSection />
+          <ReelsSectionV2 />
+          <div className="v2-section-divider" />
+          <ClientsSectionV2 />
+          <div className="v2-section-divider" />
+          <ImpactSectionV2 />
+          <div className="v2-section-divider" />
+          <BlogSectionV2 />
+          <div className="v2-section-divider" />
+          <CtaSectionV2 />
         </main>
       </div>
     </Suspense>

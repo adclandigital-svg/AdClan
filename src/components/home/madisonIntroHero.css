@@ -52,6 +52,15 @@ body.home-v2-active .home-v2-page {
   overflow: visible !important;
 }
 
+/* Prevent horizontal scrollbar from GSAP pin-spacer */
+body.home-v2-active {
+  overflow-x: hidden !important;
+}
+
+html:has(body.home-v2-active) {
+  overflow-x: hidden !important;
+}
+
 /* Once scrolled past the intro into actual homepage: header slides down smoothly */
 body.home-v2-active.past-intro .nav-header {
   opacity: 1 !important;
@@ -63,14 +72,14 @@ body.home-v2-active.past-intro .nav-header {
 .madison-intro-wrapper {
   position: relative;
   width: 100%;
-  height: 240vh;
+  height: 100vh;
   background-color: #000000;
   z-index: 30;
 }
 
-/* Sticky Stage that stays fixed in viewport while user scrolls through the track */
+/* Stage that fills viewport — GSAP pin: true on the wrapper handles the sticking */
 .madison-intro-stage {
-  position: sticky;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -152,7 +161,7 @@ body.home-v2-active.past-intro .nav-header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform-origin: 8.833% 49.24%;
+  transform-origin: 50% 50%;
   will-change: transform;
   cursor: pointer;
 }
@@ -182,7 +191,7 @@ body.home-v2-active.past-intro .nav-header {
   will-change: opacity, transform;
 }
 
-/* Changing Word Text - ANIMATING LEFT TO RIGHT */
+/* Changing Word Text - SMOOTH FADE RIGHT TO LEFT */
 .madison-changing-word {
   font-size: clamp(19px, 3.2vw, 34px);
   font-weight: 800;
@@ -191,32 +200,22 @@ body.home-v2-active.past-intro .nav-header {
   color: #ffffff;
   display: inline-block;
   white-space: nowrap;
-  animation: wordSlideLeftToRight 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Keyframes: Smooth transition from Left to Right */
-@keyframes wordSlideLeftToRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-40px);
-    filter: blur(4px);
-  }
-  16% {
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0);
-  }
-  84% {
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(40px);
-    filter: blur(4px);
-  }
+/* Fade in: appears from right */
+.madison-changing-word.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade out: dissolves to left */
+.madison-changing-word.fade-out {
+  opacity: 0;
+  transform: translateX(-30px);
 }
 
 /* Bottom: Scroll Down Indicator */
@@ -265,12 +264,11 @@ body.home-v2-active.past-intro .nav-header {
 }
 
 /* Actual Homepage Content Sections:
-   Negative margin-top pulls HomeSecond up so it arrives at top: 0 exactly as the intro completes,
-   eliminating any blank gap and revealing HomeSecond directly through the zoom aperture! */
+   Normal document flow following the intro hero.
+   No negative margin so sections are never hidden or obscured. */
 .actual-home-content {
   position: relative;
-  z-index: 20;
-  margin-top: -100vh;
+  z-index: 10;
   background: transparent;
   width: 100%;
 }
@@ -278,7 +276,7 @@ body.home-v2-active.past-intro .nav-header {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   .madison-intro-wrapper {
-    height: 200vh;
+    height: 100vh;
   }
 
   .adclan-left-watermark {

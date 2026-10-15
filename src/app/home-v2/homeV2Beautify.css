@@ -1,0 +1,351 @@
+/* ==========================================================================
+   HOME V2 — PREMIUM BEAUTIFICATION (Scoped to body.home-v2-active only)
+   Dark luxurious theme with glassmorphism, gradients, micro-animations
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ================= GLOBAL V2 OVERRIDES ================= */
+body.home-v2-active {
+  background: #060608 !important;
+  color: #f0f0f5 !important;
+  font-family: 'Outfit', 'Inter', -apple-system, sans-serif !important;
+}
+
+body.home-v2-active .actual-home-content {
+  background: #060608;
+}
+
+/* ===============================================================
+   REELS SECTION — Cinematic dark wrapper with glow accents
+   =============================================================== */
+body.home-v2-active .reels-wrapper {
+  background: linear-gradient(180deg, #060608 0%, #0c0e14 50%, #060608 100%);
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ambient glow behind reels */
+body.home-v2-active .reels-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(23, 185, 169, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.home-v2-active .reels-heading-div {
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+body.home-v2-active .reels-heading-div span {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Reel videos — glassmorphism border */
+body.home-v2-active .reel-video {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+body.home-v2-active .swiper-slide-active .reel-video {
+  border-color: rgba(23, 185, 169, 0.3);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(23, 185, 169, 0.08);
+}
+
+/* Pagination bullets */
+body.home-v2-active .mySwiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+body.home-v2-active .mySwiper .swiper-pagination-bullet-active {
+  background: #17b9a9 !important;
+}
+
+/* ===============================================================
+   HOME THIRD (CLIENT LOGOS) — Dark glassmorphic card
+   =============================================================== */
+body.home-v2-active .home-third-section-outer {
+  background: linear-gradient(180deg, #060608 0%, #0a0c12 100%);
+  position: relative;
+}
+
+/* Decorative subtle grid pattern */
+body.home-v2-active .home-third-section-outer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.home-v2-active .home-third-section {
+  position: relative;
+  z-index: 1;
+}
+
+body.home-v2-active .home-third-content-left span {
+  color: rgba(255, 255, 255, 0.15) !important;
+}
+
+body.home-v2-active .home-third-content-left span:nth-child(1) {
+  color: rgba(255, 255, 255, 0.12) !important;
+}
+
+body.home-v2-active .home-third-content-left span:nth-child(2) {
+  color: rgba(255, 255, 255, 0.22) !important;
+}
+
+body.home-v2-active .home-third-content-left span:nth-child(3) {
+  color: rgba(255, 255, 255, 0.38) !important;
+}
+
+body.home-v2-active .home-third-content-left span:nth-child(4) {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Logo stage — glassmorphism dark card */
+body.home-v2-active .logo-stage {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  border-radius: 28px;
+}
+
+body.home-v2-active .logo-glow {
+  background: radial-gradient(circle, rgba(23, 185, 169, 0.15), transparent 65%);
+}
+
+body.home-v2-active .focus-image {
+  mix-blend-mode: normal;
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* ===============================================================
+   HOME SEVEN (IMPACT STATS) — Premium dark layout
+   =============================================================== */
+body.home-v2-active .home-seven-outer {
+  background: linear-gradient(180deg, #0a0c12 0%, #0d1017 50%, #0a0c12 100%);
+  position: relative;
+}
+
+/* Subtle diagonal accent */
+body.home-v2-active .home-seven-outer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(ellipse at 80% 30%, rgba(23, 185, 169, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+body.home-v2-active .home-seven {
+  color: #f0f0f5;
+  position: relative;
+  z-index: 1;
+}
+
+body.home-v2-active .home-seven-heading {
+  color: #ffffff;
+}
+
+body.home-v2-active .impact-sub-heading {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #ffffff 30%, #17b9a9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.home-v2-active .home-seven-right span {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+}
+
+/* Image — cinematic border glow */
+body.home-v2-active .home-seven-left img {
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(23, 185, 169, 0.05);
+}
+
+/* Hex cards — elevated glass style */
+body.home-v2-active .hex-card {
+  background: rgba(23, 185, 169, 0.12);
+  border: none;
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+body.home-v2-active .hex-card::before {
+  background: linear-gradient(135deg, #17b9a9 0%, #0f8a7e 100%);
+  opacity: 0.85;
+}
+
+body.home-v2-active .hex-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow:
+    0 16px 50px rgba(23, 185, 169, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.home-v2-active .hex-card strong {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+body.home-v2-active .hex-card p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===============================================================
+   BLOG SECTION — Dark editorial design
+   =============================================================== */
+body.home-v2-active .visual-blog {
+  background: linear-gradient(180deg, #0a0c12 0%, #060608 100%);
+}
+
+body.home-v2-active .visual-heading span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+body.home-v2-active .visual-heading h2 {
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffffff 40%, rgba(255,255,255,0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Featured blog — glass card dark */
+body.home-v2-active .featured-blog {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+body.home-v2-active .featured-blog:hover {
+  border-color: rgba(23, 185, 169, 0.15);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(23, 185, 169, 0.04);
+}
+
+body.home-v2-active .featured-image {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body.home-v2-active .featured-content .tag {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.home-v2-active .featured-content h3 {
+  color: #ffffff;
+}
+
+body.home-v2-active .featured-content p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+body.home-v2-active .featured-content a {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.home-v2-active .featured-content a::before {
+  background: linear-gradient(135deg, #17b9a9, #0f8a7e);
+}
+
+body.home-v2-active .featured-content a:hover {
+  border-color: transparent;
+}
+
+/* Blog cards — dark glass tiles */
+body.home-v2-active .blog-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.home-v2-active .blog-card:hover {
+  border-color: rgba(23, 185, 169, 0.15);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(23, 185, 169, 0.04);
+  transform: translateY(-8px);
+}
+
+body.home-v2-active .card-content span {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+body.home-v2-active .card-content h4 {
+  color: #ffffff;
+}
+
+body.home-v2-active .card-content p {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ===============================================================
+   SCROLLBAR — Minimal dark theme
+   =============================================================== */
+body.home-v2-active::-webkit-scrollbar {
+  width: 6px;
+}
+
+body.home-v2-active::-webkit-scrollbar-track {
+  background: #060608;
+}
+
+body.home-v2-active::-webkit-scrollbar-thumb {
+  background: rgba(23, 185, 169, 0.3);
+  border-radius: 3px;
+}
+
+body.home-v2-active::-webkit-scrollbar-thumb:hover {
+  background: rgba(23, 185, 169, 0.5);
+}
+
+/* ===============================================================
+   FOOTER OVERRIDE — Keep footer dark-themed on v2
+   =============================================================== */
+body.home-v2-active footer,
+body.home-v2-active .footer {
+  background: #060608 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
