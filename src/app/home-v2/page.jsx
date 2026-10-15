@@ -13,6 +13,12 @@ const ImpactSectionV2 = dynamic(() => import("@/components/home-v2/ImpactSection
 const BlogSectionV2 = dynamic(() => import("@/components/home-v2/BlogSectionV2"), { ssr: false });
 const CtaSectionV2 = dynamic(() => import("@/components/home-v2/CtaSectionV2"), { ssr: false });
 
+// Dynamic import for live Client Theme & RGB Color Customizer Studio
+const ThemeCustomizerFloating = dynamic(
+  () => import("@/components/home-v2/ThemeCustomizerFloating"),
+  { ssr: false }
+);
+
 export default function HomeV2() {
   useEffect(() => {
     // Add scoped class to body only for this duplicate page
@@ -21,6 +27,7 @@ export default function HomeV2() {
     return () => {
       document.body.classList.remove("home-v2-active");
       document.body.classList.remove("past-intro");
+      document.body.classList.remove("theme-light");
     };
   }, []);
 
@@ -66,6 +73,9 @@ export default function HomeV2() {
           <div className="v2-section-divider" />
           <CtaSectionV2 />
         </main>
+
+        {/* Floating Real-Time Theme & Color Studio for Client Approval */}
+        <ThemeCustomizerFloating />
       </div>
     </Suspense>
   );

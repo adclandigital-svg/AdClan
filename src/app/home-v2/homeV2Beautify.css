@@ -10,11 +10,50 @@ body.home-v2-active {
   background: #060608 !important;
   color: #f0f0f5 !important;
   font-family: 'Outfit', 'Inter', -apple-system, sans-serif !important;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 body.home-v2-active .actual-home-content {
   background: #060608;
+  transition: background-color 0.4s ease;
 }
+
+/* Light Theme Overrides */
+body.home-v2-active.theme-light {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+body.home-v2-active.theme-light .actual-home-content {
+  background: #f8fafc !important;
+}
+
+body.home-v2-active.theme-light .nav-header {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.home-v2-active.theme-light .nav-header .nav-link,
+body.home-v2-active.theme-light .nav-header .nav-socials span {
+  color: #0f172a !important;
+}
+
+body.home-v2-active.theme-light .nav-header .brand-name img {
+  filter: none !important;
+}
+
+body.home-v2-active.theme-light .nav-header .hamburger .line {
+  background: #0f172a !important;
+}
+
+body.home-v2-active.theme-light footer,
+body.home-v2-active.theme-light .footer {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
 
 /* ===============================================================
    REELS SECTION — Cinematic dark wrapper with glow accents
