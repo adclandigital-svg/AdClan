@@ -191,11 +191,11 @@ export default function MadisonIntroHero() {
           <svg
             className="adclan-watermark-svg"
             viewBox="0 0 220 264"
-            fill="#FFFFFF"
+            fill="currentColor"
             shapeRendering="geometricPrecision"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d={ADCLAN_MONOGRAM_PATH} fill="#FFFFFF" />
+            <path d={ADCLAN_MONOGRAM_PATH} fill="currentColor" />
           </svg>
         </div>
 
@@ -212,11 +212,11 @@ export default function MadisonIntroHero() {
             <svg
               className="madison-vector-svg-logo"
               viewBox="0 0 1200 264"
-              fill="#FFFFFF"
+              fill="currentColor"
               shapeRendering="geometricPrecision"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d={ADCLAN_FULL_LOGO_PATH} fill="#FFFFFF" />
+              <path d={ADCLAN_FULL_LOGO_PATH} fill="currentColor" />
             </svg>
           </div>
         </div>

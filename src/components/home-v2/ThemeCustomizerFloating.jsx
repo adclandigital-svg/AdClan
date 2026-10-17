@@ -55,7 +55,7 @@ function adjustBrightness(hex, percent) {
 
 export default function ThemeCustomizerFloating() {
   const [isOpen, setIsOpen] = useState(false);
-  const [themeMode, setThemeMode] = useState("dark"); // "dark" | "light"
+  const [themeMode, setThemeMode] = useState("light"); // "light" (Default) | "dark"
   const [accentHex, setAccentHex] = useState("#17b9a9");
   const [rgbState, setRgbState] = useState({ r: 23, g: 185, b: 169 });
   const [copied, setCopied] = useState(false);
@@ -84,22 +84,25 @@ export default function ThemeCustomizerFloating() {
     root.style.setProperty("--v2-accent-dark", darkHex);
     body.style.setProperty("--v2-accent-dark", darkHex);
 
-    if (mode === "light") {
-      document.body.classList.add("theme-light");
-    } else {
+    if (mode === "dark") {
       document.body.classList.remove("theme-light");
+      document.body.classList.add("theme-dark");
+    } else {
+      document.body.classList.add("theme-light");
+      document.body.classList.remove("theme-dark");
     }
 
     try {
       localStorage.setItem("adclan_v2_accent", hex);
+      localStorage.setItem("adclan_v2_theme_mode", mode);
       localStorage.setItem("adclan_v2_theme", mode);
     } catch (_) {}
   }, []);
 
-  // Initialize from localStorage
+  // Initialize from localStorage (Defaults to Crisp Light)
   useEffect(() => {
     try {
-      const savedTheme = localStorage.getItem("adclan_v2_theme") || "dark";
+      const savedTheme = localStorage.getItem("adclan_v2_theme_mode") || "light";
       const savedHex = localStorage.getItem("adclan_v2_accent") || "#17b9a9";
 
       setThemeMode(savedTheme);
@@ -107,7 +110,7 @@ export default function ThemeCustomizerFloating() {
       setRgbState(hexToRgb(savedHex));
       applyStyles(savedHex, savedTheme);
     } catch (_) {
-      applyStyles("#17b9a9", "dark");
+      applyStyles("#17b9a9", "light");
     }
   }, [applyStyles]);
 
@@ -136,10 +139,10 @@ export default function ThemeCustomizerFloating() {
     applyStyles(accentHex, mode);
   };
 
-  // Reset to default AdClan settings
+  // Reset to default AdClan settings (Light Theme Default)
   const handleReset = () => {
     const defaultHex = "#17b9a9";
-    const defaultMode = "dark";
+    const defaultMode = "light";
     setAccentHex(defaultHex);
     setRgbState({ r: 23, g: 185, b: 169 });
     setThemeMode(defaultMode);

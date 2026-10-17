@@ -1,0 +1,175 @@
+/* ==========================================================================
+   HERO BANNER SLIDER V2 — FULL-WIDTH PURE IMAGE SLIDER
+   - 100% Edge-to-edge panoramic display
+   - Single pure campaign image slide (no text/content overlay)
+   - Sleek floating frosted navigation arrows (prev/next)
+   - Centered bottom pagination dots with glow & active pill morphing
+   - Butter-smooth transitions & responsive viewport clamping
+   ========================================================================== */
+
+.v2-fullwidth-hero-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #06070a;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Slider Track Viewport */
+.v2-hero-slider-track-wrap {
+  width: 100%;
+  height: clamp(340px, 42vw, 640px);
+  min-height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .v2-hero-slider-track-wrap {
+    height: clamp(210px, 48vw, 360px);
+    min-height: 200px;
+  }
+}
+
+.v2-hero-slider-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Individual Pure Image Slide */
+.v2-hero-banner-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #090a0f;
+}
+
+.v2-hero-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  pointer-events: none;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.v2-fullwidth-hero-slider:hover .v2-hero-banner-slide.is-active .v2-hero-banner-image {
+  transform: scale(1.015);
+}
+
+/* Navigation Arrow Controls */
+.v2-hero-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(10, 12, 18, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.v2-hero-slider-arrow:hover {
+  background: var(--v2-accent, #17b9a9);
+  border-color: var(--v2-accent, #17b9a9);
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 0 35px rgba(23, 185, 169, 0.65);
+}
+
+.v2-hero-slider-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.v2-hero-slider-arrow-prev {
+  left: 28px;
+}
+
+.v2-hero-slider-arrow-next {
+  right: 28px;
+}
+
+@media (max-width: 768px) {
+  .v2-hero-slider-arrow {
+    width: 42px;
+    height: 42px;
+  }
+  .v2-hero-slider-arrow-prev {
+    left: 12px;
+  }
+  .v2-hero-slider-arrow-next {
+    right: 12px;
+  }
+}
+
+/* Centered Bottom Pagination Dots */
+.v2-hero-slider-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  background: rgba(8, 10, 15, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .v2-hero-slider-dots {
+    bottom: 14px;
+    padding: 6px 14px;
+    gap: 8px;
+  }
+}
+
+.v2-hero-slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.v2-hero-slider-dot:hover {
+  background: rgba(255, 255, 255, 0.75);
+  transform: scale(1.2);
+}
+
+.v2-hero-slider-dot.is-active {
+  width: 32px;
+  height: 10px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--v2-accent, #17b9a9), #5eead4);
+  box-shadow: 0 0 16px rgba(23, 185, 169, 0.8);
+}
