@@ -1,5 +1,40 @@
 export const blogListData = [
   {
+    id: 21,
+    title:
+      "Creative Advertising Agency in Delhi: What Makes the Best Stand Out",
+    category: "Blog",
+    desc: "Discover how a leading creative advertising agency in Delhi crafts impactful campaigns. Learn what sets top agencies apart and how to choose the right partner.",
+    author: "Adclan Media",
+    date: "October 2026",
+    readTime: "5 min read",
+    img: "/blog/creative-advertising-agency-in-delhi-what-makes-the-best-stand-out.webp",
+    link: "/blogs/top-creative-advertising-agency-in-delhi",
+  },
+  {
+    id: 20,
+    title:
+      "Advertising Agency in Delhi: Navigating India's Marketing Powerhouse",
+    category: "Blog",
+    desc: "Discover how choosing the right advertising agency in Delhi can transform your business. Get expert insights on services, costs, and top performers.",
+    author: "Adclan Media",
+    date: "October 2026",
+    readTime: "5 min read",
+    img: "/blog/top-advertising-agencies-in-delhi-find-your-growth-partner.webp",
+    link: "/blogs/top-advertising-agencies-in-delhi-find-your-growth-partner",
+  },
+  {
+    id: 19,
+    title: "Branding Agency in Delhi NCR: Your Partner for Market Leadership",
+    category: "Blog",
+    desc: "Find the best branding agency in Delhi NCR to build trust, identity & market presence. Discover how strategic branding drives business success.",
+    author: "Adclan Media",
+    date: "October 2026",
+    readTime: "5 min read",
+    img: "/blog/top-branding-agency-in-delhi-ncr-for-business-growth.webp",
+    link: "/blogs/top-branding-agency-in-delhi-ncr-for-business-growth",
+  },
+  {
     id: 18,
     title: "Integrated Marketing Agency in Delhi: Why Unified Strategies Win",
     category: "Blog",
@@ -12,7 +47,8 @@ export const blogListData = [
   },
   {
     id: 17,
-    title: "Digital Advertising Agency in Delhi: Your Growth Partner in India's Competitive Market",
+    title:
+      "Digital Advertising Agency in Delhi: Your Growth Partner in India's Competitive Market",
     category: "Blog",
     desc: "Discover how Delhi's leading digital advertising agency drives measurable results through targeted campaigns, performance marketing, and ROI-focused strategies",
     author: "Adclan Media",
@@ -34,7 +70,8 @@ export const blogListData = [
   },
   {
     id: 15,
-    title: "Growth Marketing Agency in Delhi: The Strategic Advantage for Indian Businesses",
+    title:
+      "Growth Marketing Agency in Delhi: The Strategic Advantage for Indian Businesses",
     category: "Blog",
     desc: "Need a growth marketing agency in Delhi? Our performance-driven strategies deliver measurable business growth. Get a free consultation today.",
     author: "Adclan Media",
@@ -45,7 +82,8 @@ export const blogListData = [
   },
   {
     id: 14,
-    title: "Full-Service Digital Marketing Agency in Delhi: What Businesses Really Need",
+    title:
+      "Full-Service Digital Marketing Agency in Delhi: What Businesses Really Need",
     category: "Blog",
     desc: "AdClan delivers proven digital marketing strategies for Delhi businesses. Get measurable growth with our full-service agency expertise. Schedule a free consultation",
     author: "Adclan Media",
@@ -56,7 +94,8 @@ export const blogListData = [
   },
   {
     id: 13,
-    title: "10 Digital Marketing Mistakes Indian Businesses Should Avoid in 2026",
+    title:
+      "10 Digital Marketing Mistakes Indian Businesses Should Avoid in 2026",
     category: "Blog",
     desc: "Learn the top digital marketing pitfalls Indian companies face in 2026 and practical solutions to fix them. Boost your online presence effectively.",
     author: "Adclan Media",
@@ -129,7 +168,8 @@ export const blogListData = [
   },
   {
     id: 5,
-    title: "How Much Does Digital Marketing Cost in Delhi NCR in 2026? A Realistic Breakdown",
+    title:
+      "How Much Does Digital Marketing Cost in Delhi NCR in 2026? A Realistic Breakdown",
     category: "Blog",
     date: "September 2026",
     img: "/blog/how-much-does-digital-marketing-cost-in-delhi-ncr-in-2026-a-realistic-breakdown.webp",
@@ -147,7 +187,8 @@ export const blogListData = [
   },
   {
     id: 3,
-    title: "How to Choose the Right Digital Marketing Agency in Delhi NCR: A Strategic Guide",
+    title:
+      "How to Choose the Right Digital Marketing Agency in Delhi NCR: A Strategic Guide",
     category: "Blog",
     date: "August 2026",
     img: "/blog/how-to-choose-the-right-digital-marketing-agency-in-delhi-ncr.webp",
@@ -155,7 +196,8 @@ export const blogListData = [
   },
   {
     id: 2,
-    title: "Performance Marketing Agency in Delhi: The Catalyst for Business Growth in India’s Digital Landscape",
+    title:
+      "Performance Marketing Agency in Delhi: The Catalyst for Business Growth in India’s Digital Landscape",
     category: "Blog",
     date: "August 2026",
     img: "/blog/performance-marketing-agency-in-delhi-the-catalyst-for-business-growth-in-indias-digital-landscape.webp",

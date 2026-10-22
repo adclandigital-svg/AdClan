@@ -114,6 +114,80 @@ const nextConfig = {
       { source: "/test", destination: "/", permanent: true },
       { source: "/wp-admin/:path*", destination: "/", permanent: true },
       { source: "/wp-login.php", destination: "/", permanent: true },
+      {
+        source: "/blogs/top-branding-agency-in-delhi-ncr",
+        destination:
+          "/blogs/top-branding-agency-in-delhi-ncr-for-business-growth",
+        permanent: true,
+      },
+      {
+        source: "/blogs/branding-agency-in-delhi-ncr",
+        destination:
+          "/blogs/top-branding-agency-in-delhi-ncr-for-business-growth",
+        permanent: true,
+      },
+      {
+        source:
+          "/blogs/branding-agency-in-delhi-ncr-your-partner-for-market-leadership",
+        destination:
+          "/blogs/top-branding-agency-in-delhi-ncr-for-business-growth",
+        permanent: true,
+      },
+      {
+        source: "/blogs/galaxy-sawasdee-heights-case-study",
+        destination: "/case-studies/galaxy-sawasdee-heights-case-study",
+        permanent: true,
+      },
+      {
+        source: "/blogs/right-gold-case-study",
+        destination: "/case-studies/right-gold-case-study",
+        permanent: true,
+      },
+      {
+        source: "/blogs/vikram-mills-case-study",
+        destination: "/case-studies/vikram-mills-case-study",
+        permanent: true,
+      },
+      {
+        source: "/blogs/top-advertising-agencies-in-delhi",
+        destination:
+          "/blogs/top-advertising-agencies-in-delhi-find-your-growth-partner",
+        permanent: true,
+      },
+      {
+        source: "/blogs/advertising-agency-in-delhi",
+        destination:
+          "/blogs/top-advertising-agencies-in-delhi-find-your-growth-partner",
+        permanent: true,
+      },
+      {
+        source:
+          "/blogs/advertising-agency-in-delhi-navigating-indias-marketing-powerhouse",
+        destination:
+          "/blogs/top-advertising-agencies-in-delhi-find-your-growth-partner",
+        permanent: true,
+      },
+      {
+        source: "/blogs/5-radio-ads-strategies-for-buisness_growth",
+        destination: "/case-studies/5-radio-ads-strategies-for-buisness-growth",
+        permanent: true,
+      },
+      {
+        source: "/blogs/5-radio-ads-strategies-for-buisness-growth",
+        destination: "/case-studies/5-radio-ads-strategies-for-buisness-growth",
+        permanent: true,
+      },
+      {
+        source: "/blogs/creative-advertising-agency-in-delhi",
+        destination: "/blogs/top-creative-advertising-agency-in-delhi",
+        permanent: true,
+      },
+      {
+        source:
+          "/blogs/creative-advertising-agency-in-delhi-what-makes-the-best-stand-out",
+        destination: "/blogs/top-creative-advertising-agency-in-delhi",
+        permanent: true,
+      },
     ];
   },
 
