@@ -1,5 +1,17 @@
 export const blogListData = [
   {
+    id: 22,
+    title:
+      "Marketing Agency in Noida: Your Growth Partner in India's Competitive Market",
+    category: "Blog",
+    desc: "Discover how a leading marketing agency in Noida can transform your business with data-driven strategies, SEO, and social media expertise. Get measurable result",
+    author: "Adclan Media",
+    date: "October 2026",
+    readTime: "5 min read",
+    img: "/blog/top-marketing-agency-in-noida.webp",
+    link: "/blogs/top-marketing-agency-in-noida",
+  },
+  {
     id: 21,
     title:
       "Creative Advertising Agency in Delhi: What Makes the Best Stand Out",
