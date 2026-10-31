@@ -23,33 +23,38 @@ export default function HomeV3Navbar() {
         <span className="v3-brand-wordmark">AdClan</span>
       </Link>
 
-      {/* 2. Middle: Navigation Links (IDENTITY, WORK, EXPERTISE) */}
+      {/* 2. Middle: Navigation Links (NARRATIVE, EXPERTISE, WORK, BRANDS) */}
       <nav className="v3-nav-desktop" aria-label="Main Navigation">
         <ul className="v3-nav-center">
           <li className="v3-nav-item">
-            <Link href="/about" className="v3-nav-link">
-              IDENTITY
-            </Link>
+            <a href="#narrative" className="v3-nav-link">
+              NARRATIVE
+            </a>
           </li>
           <li className="v3-nav-item">
-            <Link href="/projects" className="v3-nav-link">
-              WORK
-            </Link>
-          </li>
-          <li className="v3-nav-item">
-            <Link href="/services" className="v3-nav-link">
+            <a href="#expertise" className="v3-nav-link">
               EXPERTISE
-            </Link>
+            </a>
+          </li>
+          <li className="v3-nav-item">
+            <a href="#work" className="v3-nav-link">
+              WORK
+            </a>
+          </li>
+          <li className="v3-nav-item">
+            <a href="#brands" className="v3-nav-link">
+              BRANDS
+            </a>
           </li>
         </ul>
       </nav>
 
-      {/* 3. Right: CTA ("— LET'S TALK") */}
+      {/* 3. Right: CTA ("— REACH US") */}
       <div className="v3-nav-right">
-        <Link href="/contact" className="v3-lets-talk-btn">
+        <a href="#reach-us" className="v3-lets-talk-btn">
           <span className="v3-dash-line" aria-hidden="true" />
-          <span>LET'S TALK</span>
-        </Link>
+          <span>REACH US</span>
+        </a>
       </div>
 
       {/* Mobile Drawer Toggle */}
@@ -78,39 +83,47 @@ export default function HomeV3Navbar() {
             gap: "32px",
           }}
         >
-          <Link
-            href="/about"
+          <a
+            href="#narrative"
             className="v3-nav-link"
             style={{ fontSize: "16px" }}
             onClick={() => setMobileMenuOpen(false)}
           >
-            IDENTITY
-          </Link>
-          <Link
-            href="/projects"
-            className="v3-nav-link"
-            style={{ fontSize: "16px" }}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            WORK
-          </Link>
-          <Link
-            href="/services"
+            NARRATIVE
+          </a>
+          <a
+            href="#expertise"
             className="v3-nav-link"
             style={{ fontSize: "16px" }}
             onClick={() => setMobileMenuOpen(false)}
           >
             EXPERTISE
-          </Link>
-          <Link
-            href="/contact"
+          </a>
+          <a
+            href="#work"
+            className="v3-nav-link"
+            style={{ fontSize: "16px" }}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            WORK
+          </a>
+          <a
+            href="#brands"
+            className="v3-nav-link"
+            style={{ fontSize: "16px" }}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            BRANDS
+          </a>
+          <a
+            href="#reach-us"
             className="v3-lets-talk-btn"
             style={{ fontSize: "16px", marginTop: "16px" }}
             onClick={() => setMobileMenuOpen(false)}
           >
             <span className="v3-dash-line" />
-            LET'S TALK
-          </Link>
+            REACH US
+          </a>
         </div>
       )}
     </header>

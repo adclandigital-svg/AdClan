@@ -43,17 +43,17 @@ export default function Footer() {
             <h3 className="footer-title">Explore Adclan</h3>
             <ul className="footer-links">
               <li>
-                <Link href="/about">Who we are?</Link>
+                <Link href="/about">Narrative</Link>
               </li>
               <li>
-                <Link href="/services">What we do?</Link>
+                <Link href="/services">Expertise</Link>
               </li>
               <li>
-                <Link href="/projects">Work study</Link>
+                <Link href="/projects">Work</Link>
               </li>
 
               <li>
-                <Link href="/clients">Our clients</Link>
+                <Link href="/clients">Brands</Link>
               </li>
               <li>
                 <Link href="/press">Our Media Presence</Link>

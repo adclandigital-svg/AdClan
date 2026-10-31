@@ -14,10 +14,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const nav = [
-    { name: "Who we are?", href: "/about" },
-    { name: "What we do?", href: "/services" },
-    { name: "Our work", href: "/projects" },
-     { name: "Our clients", href: "/clients" },
+    { name: "Narrative", href: "/about" },
+    { name: "Expertise", href: "/services" },
+    { name: "Work", href: "/projects" },
+    { name: "Brands", href: "/clients" },
   ];
 
   const socials = [

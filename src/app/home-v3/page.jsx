@@ -4,7 +4,17 @@ import React, { useEffect } from "react";
 import HomeV3Navbar from "@/components/home-v3/HomeV3Navbar";
 import HeroBannerSliderV3 from "@/components/home-v3/HeroBannerSliderV3";
 import BottomServicesBarV3 from "@/components/home-v3/BottomServicesBarV3";
+import NarrativeSectionV3 from "@/components/home-v3/NarrativeSectionV3";
+import ExpertiseSectionV3 from "@/components/home-v3/ExpertiseSectionV3";
+import WorkSectionV3 from "@/components/home-v3/WorkSectionV3";
+import BrandsSectionV3 from "@/components/home-v3/BrandsSectionV3";
+import HomeBlogSectionV3 from "@/components/home-v3/HomeBlogSectionV3";
+import ReachUsSectionV3 from "@/components/home-v3/ReachUsSectionV3";
+import HomeV3Footer from "@/components/home-v3/HomeV3Footer";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 import "@/components/home-v3/homeV3.css";
+import "@/components/home-v3/homeV3Sections.css";
 
 export default function HomeV3Page() {
   useEffect(() => {
@@ -17,70 +27,58 @@ export default function HomeV3Page() {
   }, []);
 
   return (
-    <main className="home-v3-page-wrapper">
-      {/* Background Architectural Decorative Arc / Sweep matching Screenshot */}
-      <div className="home-v3-bg-decor" aria-hidden="true">
-        <svg
-          className="home-v3-bg-curve-svg"
-          viewBox="0 0 1440 900"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <filter
-              id="arcDropShadow"
-              x="-20%"
-              y="-10%"
-              width="150%"
-              height="120%"
-            >
-              <feGaussianBlur stdDeviation="22" result="blur" />
-              <feOffset dx="-14" dy="0" result="offsetBlur" />
-              <feFlood floodColor="#1a1712" floodOpacity="0.09" result="color" />
-              <feComposite in="color" in2="offsetBlur" operator="in" result="shadow" />
-              <feMerge>
-                <feMergeNode in="shadow" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-            <linearGradient
-              id="arcSurfaceGrad"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="80%"
-            >
-              <stop offset="0%" stopColor="#f8f6f1" />
-              <stop offset="40%" stopColor="#f5f3ed" />
-              <stop offset="100%" stopColor="#f0ede7" />
-            </linearGradient>
-          </defs>
-          {/*
-            True circular arc matching reference screenshot:
-            - A giant circle centered roughly at (200, -600) with radius ~1250
-            - The arc enters the viewport near the top at x≈780, y=0
-            - It sweeps convexly to the right, exiting at x≈1440, y≈580
-            - Everything to the right of / inside the arc is the lighter warm panel
-          */}
-          <path
-            d="M 720 0 Q 400 450 1440 900 L 1440 0 Z"
-            fill="url(#arcSurfaceGrad)"
-            filter="url(#arcDropShadow)"
-          />
-        </svg>
+    <div className="home-v3-full-flow">
+      {/* =========================================================================
+          HERO SCREEN (EXACTLY AS USER DESIGNED & STYLED IN homeV3.css)
+          - Keeps exact background gradient, architectural circle, and slider
+          ========================================================================= */}
+      <section className="home-v3-page-wrapper">
+        <div className="home-v3-bg-decor" aria-hidden="true">
+          <svg
+            className="home-v3-bg-curve-svg"
+            viewBox="0 0 1440 900"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M 720 0 Q 400 450 1440 900 L 1440 0 Z" />
+          </svg>
+          <div className="home-v3-grain" />
+        </div>
 
-        {/* Ambient ultra-fine grain texture */}
-        <div className="home-v3-grain" />
-      </div>
+        {/* 1. Exact Reference Top Navigation Bar (NARRATIVE, EXPERTISE, WORK, BRANDS, REACH US) */}
+        <HomeV3Navbar />
 
-      {/* 1. Exact Reference Top Navigation Bar */}
-      <HomeV3Navbar />
+        {/* 2. Exact Reference Hero Section with Synchronized 3D Card Slider */}
+        <HeroBannerSliderV3 />
 
-      {/* 2. Exact Reference Hero Section with Synchronized 3D Card Slider & Left Text */}
-      <HeroBannerSliderV3 />
+        {/* 3. Exact Reference Bottom Services Strip with Crisp Iconography */}
+        <BottomServicesBarV3 />
+      </section>
 
-      {/* 3. Exact Reference Bottom Services Strip with Crisp Iconography */}
-      <BottomServicesBarV3 />
-    </main>
+      {/* =========================================================================
+          SUBSEQUENT SECTIONS IN MATCHING HOME-V3 WARM EDITORIAL AESTHETIC
+          ========================================================================= */}
+      
+      {/* 4. Narrative Section ("Who we are" -> "Narrative", Global Impact + Founder & CEO) */}
+      <NarrativeSectionV3 />
+
+      {/* 5. Expertise Section ("What we do" -> "Expertise") */}
+      <ExpertiseSectionV3 />
+
+      {/* 6. Work Section ("Our work" -> "Work", Cinematic Reels + Case Studies) */}
+      <WorkSectionV3 />
+
+      {/* 7. Brands Section ("Our clients" -> "Brands", Dual Infinite Marquee) */}
+      <BrandsSectionV3 />
+
+      {/* 8. The Journal / Blog Section ("Stories Behind the Strategy") */}
+      <HomeBlogSectionV3 />
+
+      {/* 9. Reach Us Section ("reach us" remains same) */}
+      <ReachUsSectionV3 />
+
+      {/* 10. Ultra-Premium Bespoke Home-v3 Footer */}
+      <HomeV3Footer />
+    </div>
   );
 }
