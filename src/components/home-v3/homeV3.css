@@ -67,6 +67,7 @@ body.home-v3-active::before {
   justify-content: space-between;
   overflow: hidden;
   box-sizing: border-box;
+  
 }
 
 /* Background Architectural Sweep / Arc matching exact prototype */
