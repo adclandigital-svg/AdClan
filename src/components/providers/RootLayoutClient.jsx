@@ -57,6 +57,7 @@ export default function RootLayoutClient({ children }) {
   const [showLoader, setShowLoader] = useState(false);
   const pathname = usePathname();
   const isPortfolio = pathname.startsWith("/portfolio");
+  const isHomeV3 = pathname?.startsWith("/home-v3");
 
   useEffect(() => {
     // ✅ Only run on homepage
@@ -82,13 +83,13 @@ export default function RootLayoutClient({ children }) {
       {pathname === "/" && showLoader && <LoadingScreen />}
 
       {/* {!isPortfolio && <InstallPWA />} */}
-      <InstallPWA />
+      {!isHomeV3 && <InstallPWA />}
 
       <GsapErrorHandler />
       <LenisProvider>
-        <Navbar />
+        {!isHomeV3 && <Navbar />}
         {children}
-        <Footer />
+        {!isHomeV3 && <Footer />}
       </LenisProvider>
       <GTM />
     </>

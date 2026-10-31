@@ -1,0 +1,1081 @@
+/* ==========================================================================
+   ADCLAN HOME-V3 DESIGN SYSTEM & EXACT PIXEL-PERFECT STYLING
+   Reference: Attached High-End Agency Screenshot & Exact Slider Prototype
+   Aesthetics: Warm Stone / Alabaster Cream, Architectural Sweep,
+               Playfair Display High-Contrast Editorial Serif (Non-clipped),
+               Exact Stacked Card Slider with Skyline Silhouette & Nav
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Jost:wght@300;400;600&display=swap");
+
+:root {
+  --bg1: #f3f1ee;
+  --bg2: #dedad4;
+  --curve: #ece9e4;
+  --ink: #1c1c1c;
+  --muted: #8a8680;
+  --ease: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur: 0.8s;
+}
+
+/* Global Body Overrides when on Home-v3 */
+body.home-v3-active {
+  background-color: #e9e7e3 !important;
+  color: #121212 !important;
+  font-family: "Outfit", sans-serif !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important;
+  min-height: 100vh !important;
+}
+
+/* Hide default global navbar & footer from RootLayout */
+body.home-v3-active .nav-header,
+body.home-v3-active .footer,
+body.home-v3-active .footer-container,
+body.home-v3-active .install-pwa-button {
+  display: none !important;
+}
+
+/* Hide floating chatbot widgets and other overlays on Home-v3 */
+body.home-v3-active .chat-float,
+body.home-v3-active .chat-float-wrapper,
+body.home-v3-active .chat-box,
+body.home-v3-active .chat-modal,
+body.home-v3-active #smart-lead-chatbot {
+  display: none !important;
+}
+
+/* Hide background pseudo element from globals.css */
+body.home-v3-active::before {
+  display: none !important;
+}
+
+/* ==========================================================================
+   ROOT PAGE CONTAINER
+   ========================================================================== */
+.home-v3-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #e9e7e3;
+  background:
+    radial-gradient(ellipse 60% 70% at 30% 45%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(135deg, #efede9 0%, #e8e5e0 55%, #e2dfd9 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Background Architectural Sweep / Arc matching exact prototype */
+.home-v3-bg-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Purana SVG curve hide (screenshot wala circle neeche ::before se aata hai) */
+.home-v3-bg-curve-svg {
+  display: none !important;
+}
+
+/* Large right-side circle */
+.home-v3-bg-decor::before {
+      content: "";
+    aspect-ratio: 1;
+    background: radial-gradient(circle at 12%, #ffffff59 0%, #fff0 55%), linear-gradient(90deg, #eae7e2 0%, #e4e0da 100%);
+    border-radius: 50%;
+    width: 90%;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translateY(-50%);
+    box-shadow: -22px 0 60px #00000012, -2px 0 10px #0000000a, inset 16px 0 40px #ffffff73;
+}
+
+/* Ambient grain (halka kar diya) */
+.home-v3-grain {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 22px 22px;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* ==========================================================================
+   TOP NAVIGATION BAR
+   ========================================================================== */
+.v3-navbar {
+  position: relative;
+  z-index: 50;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 34px 72px 10px 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand / Logo Stacked */
+.v3-brand-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #0d0d0d;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease;
+  user-select: none;
+}
+
+.v3-brand-lockup:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.v3-monogram-svg {
+  width: 32px;
+  height: 38px;
+  display: block;
+}
+
+.v3-brand-wordmark {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #0d0d0d;
+  margin-top: -3px;
+  line-height: 1;
+}
+
+/* Navigation Links (Center) */
+.v3-nav-center {
+  display: flex;
+  align-items: center;
+  gap: 58px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.v3-nav-item {
+  position: relative;
+}
+
+.v3-nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.25s ease;
+  position: relative;
+  padding: 6px 0;
+  display: inline-block;
+}
+
+.v3-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #1a1a1a;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.v3-nav-link:hover {
+  color: #000000;
+}
+
+.v3-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Right CTA ("— LET'S TALK") */
+.v3-nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.v3-lets-talk-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 6px 0;
+}
+
+.v3-dash-line {
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background-color: #333333;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.v3-lets-talk-btn:hover {
+  color: #000000;
+}
+
+.v3-lets-talk-btn:hover .v3-dash-line {
+  width: 44px;
+  background-color: #000000;
+}
+
+/* Mobile Toggle Hamburger */
+.v3-mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #111111;
+  z-index: 60;
+}
+
+/* ==========================================================================
+   HERO BANNER MAIN SECTION
+   ========================================================================== */
+.v3-hero-section {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px 72px 20px 72px;
+  box-sizing: border-box;
+}
+
+.v3-hero-container {
+  width: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 36% 64%;
+  align-items: center;
+  gap: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   LEFT COLUMN: DYNAMIC TEXT UPDATING WITH SLIDER
+   -------------------------------------------------------------------------- */
+.v3-hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+/* Eyebrow / Tagline */
+.v3-eyebrow-wrap {
+  margin-bottom: 22px;
+}
+
+.v3-eyebrow {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #767069;
+  margin: 0;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Giant Display Headline: 3 Lines with Periods (Playfair Display)
+   CRITICAL FIX: Zero clipping on ascenders/descenders */
+.v3-headline-wrap {
+  margin-bottom: 26px;
+  overflow: visible !important;
+}
+
+.v3-headline {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(52px, 5.6vw, 86px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  color: #111111;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: visible !important;
+}
+
+.v3-headline-line {
+  display: block;
+  overflow: visible !important;
+  padding: 2px 0 4px 0;
+}
+
+.v3-headline-text {
+  display: inline-block;
+  overflow: visible !important;
+  line-height: 1.12;
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease;
+  will-change: transform, opacity;
+}
+
+/* Subtitle Description */
+.v3-description-wrap {
+  margin-bottom: 38px;
+  max-width: 440px;
+}
+
+.v3-description {
+  font-family: "Outfit", "Raleway", sans-serif;
+  font-size: 15.5px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #6d6760;
+  margin: 0;
+  white-space: pre-line;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Explore CTA Link */
+.v3-cta-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.v3-explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #121212;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.v3-cta-dash {
+  display: inline-block;
+  width: 36px;
+  height: 1px;
+  background-color: #6d6760;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.v3-cta-arrow {
+  display: inline-block;
+  font-size: 14px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.v3-explore-link:hover {
+  color: #000000;
+}
+
+.v3-explore-link:hover .v3-cta-dash {
+  width: 48px;
+  background-color: #000000;
+}
+
+.v3-explore-link:hover .v3-cta-arrow {
+  transform: translateX(6px);
+}
+
+/* Animation states for text updates */
+.v3-text-animating-out {
+  opacity: 0 !important;
+  transform: translateY(-8px) !important;
+}
+
+.v3-text-animating-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: STACKED CARD SLIDER (USER'S EXACT HTML CODEBASE LAYOUT)
+   ========================================================================== */
+.v3-hero-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Exact Stage from prototype */
+.stage {
+  position: relative;
+  width: min(1120px, 100%);
+  height: min(490px, 60vh);
+  min-height: 340px;
+  perspective: 1400px;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+/* Exact Card from prototype */
+.card {
+  position: absolute;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transform-origin: left center;
+  box-shadow: 0 24px 50px -18px rgba(0, 0, 0, 0.45);
+  transition:
+    left var(--dur) var(--ease),
+    top var(--dur) var(--ease),
+    width var(--dur) var(--ease),
+    height var(--dur) var(--ease),
+    opacity var(--dur) var(--ease),
+    transform var(--dur) var(--ease),
+    filter var(--dur) var(--ease);
+}
+
+/* Exact Card Positional Layout Math from Prototype */
+.card[data-pos="0"] {
+  left: 0;
+  top: 0;
+  width: 62%;
+  height: 100%;
+  z-index: 6;
+  cursor: default;
+}
+
+.card[data-pos="1"] {
+  left: 60%;
+  top: 3%;
+  width: 19%;
+  height: 94%;
+  z-index: 5;
+  transform: rotateY(-7deg);
+  filter: brightness(0.92);
+}
+
+.card[data-pos="2"] {
+  left: 78%;
+  top: 9%;
+  width: 15%;
+  height: 82%;
+  z-index: 4;
+  transform: rotateY(-9deg);
+  filter: brightness(0.8);
+}
+
+.card[data-pos="3"] {
+  left: 92%;
+  top: 16%;
+  width: 12%;
+  height: 68%;
+  z-index: 3;
+  transform: rotateY(-11deg);
+  filter: brightness(0.65);
+}
+
+.card[data-pos="4"],
+.card[data-pos="5"] {
+  left: 104%;
+  top: 22%;
+  width: 10%;
+  height: 56%;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Media photo layer */
+.card-media-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Exact Prototype Gradient Background & Skyline Silhouette */
+.bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at var(--sx, 70%) var(--sy, 30%),
+      var(--a),
+      transparent 46%
+    ), linear-gradient(165deg, var(--b), var(--c));
+  mix-blend-mode: hard-light;
+  opacity: 0.82;
+}
+
+.bg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 46%;
+  background: linear-gradient(#0b0b0c, #050505);
+  clip-path: polygon(
+    0 38%,
+    6% 38%,
+    6% 18%,
+    14% 18%,
+    14% 44%,
+    22% 44%,
+    22% 8%,
+    29% 8%,
+    29% 30%,
+    38% 30%,
+    38% 52%,
+    47% 52%,
+    47% 22%,
+    55% 22%,
+    55% 40%,
+    63% 40%,
+    63% 12%,
+    71% 12%,
+    71% 36%,
+    80% 36%,
+    80% 48%,
+    88% 48%,
+    88% 20%,
+    95% 20%,
+    95% 34%,
+    100% 34%,
+    100% 100%,
+    0 100%
+  );
+  opacity: 0.82;
+}
+
+/* Exact Prototype Shade */
+.shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.08) 60%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.45), transparent 40%);
+}
+
+/* Exact Prototype Caption */
+.cap {
+  position: absolute;
+  left: 12%;
+  right: 8%;
+  bottom: 9%;
+  color: #fff;
+  font-family: "Jost", "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: clamp(11px, 1.5vw, 17px);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: opacity 0.4s;
+  z-index: 4;
+}
+
+.card[data-pos="0"] .cap {
+  opacity: 0;
+}
+
+/* Exact Prototype Headline Copy */
+.copy {
+  position: absolute;
+  left: clamp(24px, 4.4vw, 56px);
+  top: clamp(26px, 5vw, 60px);
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-16px);
+  transition:
+    opacity 0.4s,
+    transform 0.4s;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.card[data-pos="0"] .copy {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.7s 0.45s,
+    transform 0.7s 0.45s;
+  pointer-events: auto;
+}
+
+.copy h2 {
+  font-family: "Jost", "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: clamp(13px, 1.35vw, 17px);
+  letter-spacing: 0.42em;
+  line-height: 2.1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.copy h2 span {
+  display: block;
+}
+
+.copy i {
+  display: block;
+  width: 62px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.7);
+  margin-top: 14px;
+}
+
+/* Exact Prototype Play Button */
+.play {
+  position: absolute;
+  left: clamp(24px, 6vw, 84px);
+  bottom: clamp(50px, 16%, 100px);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0;
+  transition:
+    opacity 0.7s 0.55s,
+    transform 0.3s,
+    background 0.3s;
+  z-index: 6;
+}
+
+.card[data-pos="0"] .play {
+  opacity: 1;
+}
+
+.play:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.play svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 3px;
+}
+
+/* Exact Prototype Navigation Controls (< 01 / 06 >) */
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+  z-index: 10;
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-top: 16px;
+  padding-right: 28px;
+  user-select: none;
+}
+
+.nav b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.nav button {
+  all: unset;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink);
+  transition:
+    background 0.25s,
+    transform 0.2s;
+}
+
+.nav button:hover {
+  background: rgba(128, 128, 128, 0.18);
+  transform: scale(1.08);
+}
+
+.nav button:active {
+  transform: scale(0.92);
+}
+
+.nav button:focus-visible,
+.card:focus-visible {
+  outline: 2px solid #4c8dff;
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   BOTTOM SERVICES / DOMAIN BAR
+   ========================================================================== */
+.v3-bottom-strip {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background: #ebe9e5;
+  padding: 0 40px;
+}
+
+.v3-bottom-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+}
+
+.v3-service-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Vertical Divider Line between items */
+.v3-service-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 28%;
+  height: 44%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.v3-service-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.25s ease;
+}
+
+.v3-service-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.v3-service-item:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.v3-service-item:hover .v3-service-icon-wrap {
+  transform: translateY(-2px);
+  color: #000000;
+}
+
+.v3-service-item:hover .v3-service-label {
+  color: #000000;
+}
+
+/* ==========================================================================
+   VIDEO MODAL (Interactive agency reel on play click)
+   ========================================================================== */
+.v3-video-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+  animation: v3FadeIn 0.3s ease forwards;
+}
+
+.v3-video-modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+  background: #000000;
+  aspect-ratio: 16 / 9;
+}
+
+.v3-video-modal-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.v3-video-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+}
+
+.v3-video-close-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: scale(1.08);
+}
+
+@keyframes v3FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .v3-navbar {
+    padding: 24px 40px 10px 40px;
+  }
+
+  .v3-hero-section {
+    padding: 10px 40px 20px 40px;
+  }
+
+  .v3-hero-container {
+    grid-template-columns: 38% 62%;
+    gap: 24px;
+  }
+
+  .stage {
+    height: 420px;
+  }
+
+  .v3-bottom-strip {
+    padding: 0 20px;
+  }
+
+  .v3-service-label {
+    font-size: 10.5px;
+    letter-spacing: 0.15em;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-v3-page-wrapper {
+    min-height: auto;
+    overflow-y: auto;
+  }
+
+  .v3-navbar {
+    padding: 20px 24px;
+  }
+
+  .v3-nav-center {
+    display: none;
+  }
+
+  .v3-mobile-toggle {
+    display: flex;
+  }
+
+  .v3-hero-section {
+    padding: 20px 24px 36px 24px;
+  }
+
+  .v3-hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .v3-hero-left {
+    padding-right: 0;
+    max-width: 600px;
+  }
+
+  .stage {
+    width: 100%;
+    height: 380px;
+  }
+
+  .nav {
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+
+  /* Bottom Strip in 3x2 Grid */
+  .v3-bottom-strip {
+    padding: 0 16px;
+  }
+
+  .v3-bottom-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: auto;
+  }
+
+  .v3-service-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .v3-service-item:nth-child(3n)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .v3-navbar {
+    padding: 16px 20px;
+  }
+
+  .v3-monogram-svg {
+    width: 28px;
+    height: 34px;
+  }
+
+  .v3-brand-wordmark {
+    font-size: 17px;
+  }
+
+  .v3-lets-talk-btn {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+
+  .v3-hero-section {
+    padding: 12px 20px 28px 20px;
+  }
+
+  .v3-eyebrow {
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+  }
+
+  .v3-headline {
+    font-size: 42px;
+    line-height: 1.14;
+  }
+
+  .v3-description {
+    font-size: 14.5px;
+  }
+
+  /* Exact Mobile Adjustments from Prototype */
+  .stage {
+    height: min(440px, 60vh);
+  }
+
+  .card[data-pos="0"] {
+    width: 84%;
+  }
+
+  .card[data-pos="1"] {
+    left: 82%;
+    width: 30%;
+    top: 6%;
+    height: 88%;
+  }
+
+  .card[data-pos="2"],
+  .card[data-pos="3"] {
+    left: 108%;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .play {
+    width: 58px;
+    height: 58px;
+  }
+
+  /* Bottom Strip in 2 columns */
+  .v3-bottom-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .v3-service-item:nth-child(3n)::after {
+    display: block;
+  }
+
+  .v3-service-item:nth-child(2n)::after {
+    display: none;
+  }
+
+  .v3-service-label {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .copy,
+  .play {
+    transition-duration: 0.01s !important;
+    transition-delay: 0s !important;
+  }
+}
