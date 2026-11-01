@@ -17,7 +17,7 @@ export default function HomeBlogSectionV3() {
           <div className="col-12 col-lg-10 col-xl-8">
             <div className="v3-section-eyebrow-wrap">
               <span className="v3-eyebrow-dash" />
-              <span className="v3-section-eyebrow">05 / PERSPECTIVES</span>
+              <span className="v3-section-eyebrow">06 / PERSPECTIVES</span>
             </div>
             <h2 className="v3-editorial-headline">
               Stories Behind <br />

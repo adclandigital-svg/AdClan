@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowUp, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowUp, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { FaInstagram, FaLinkedin, FaFacebookF } from "react-icons/fa";
 
 export default function HomeV3Footer() {
@@ -20,7 +20,7 @@ export default function HomeV3Footer() {
               <svg
                 className="v3-footer-monogram"
                 viewBox="0 0 52 66"
-                fill="#ffffff"
+                fill="currentColor"
                 shapeRendering="geometricPrecision"
                 aria-hidden="true"
               >
@@ -51,18 +51,18 @@ export default function HomeV3Footer() {
 
         {/* Structured Columns via Bootstrap row & col-md / col-lg */}
         <div className="row g-4 g-lg-5 pb-5 mb-4 v3-footer-columns-grid">
-          {/* Column 1: Navigation (Rule 6 updated names) */}
+          {/* Column 1: Navigation */}
           <div className="col-6 col-md-3 col-lg-2 v3-footer-col">
             <h5 className="v3-col-title">NAVIGATION</h5>
             <ul className="v3-footer-link-list">
+              <li>
+                <a href="#craft">Our Craft</a>
+              </li>
               <li>
                 <a href="#narrative">Narrative</a>
               </li>
               <li>
                 <a href="#expertise">Expertise</a>
-              </li>
-              <li>
-                <a href="#work">Work</a>
               </li>
               <li>
                 <a href="#brands">Brands</a>

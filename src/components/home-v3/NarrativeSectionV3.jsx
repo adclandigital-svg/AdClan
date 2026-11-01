@@ -1,54 +1,10 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Quote } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function NarrativeSectionV3() {
-  const impactRef = useRef(null);
-
-  // Smooth counter animation for Global Impact numbers
-  useEffect(() => {
-    const section = impactRef.current;
-    if (!section) return;
-
-    try {
-      const numbers = section.querySelectorAll(".v3-stat-number");
-
-      numbers.forEach((el) => {
-        if (!el) return;
-        const raw = el.innerText;
-        const endValue = parseFloat(raw.replace(/[^0-9.]/g, ""));
-        const suffix = raw.replace(/[0-9.]/g, "");
-
-        if (isNaN(endValue)) return;
-
-        const obj = { val: 0 };
-        gsap.to(obj, {
-          val: endValue,
-          duration: 1.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 75%",
-            once: true,
-          },
-          onUpdate: () => {
-            if (el) {
-              el.innerText = Math.floor(obj.val) + suffix;
-            }
-          },
-        });
-      });
-    } catch (err) {
-      console.warn("Impact counter error:", err);
-    }
-  }, []);
-
   return (
     <section className="v3-narrative-section" id="narrative">
       <div className="container-fluid v3-section-container px-3 px-md-5 px-xl-5">
@@ -60,7 +16,7 @@ export default function NarrativeSectionV3() {
           <div className="col-12 col-lg-10 col-xl-8">
             <div className="v3-section-eyebrow-wrap">
               <span className="v3-eyebrow-dash" />
-              <span className="v3-section-eyebrow">01 / NARRATIVE</span>
+              <span className="v3-section-eyebrow">02 / NARRATIVE</span>
             </div>
 
             <h2 className="v3-editorial-headline">
@@ -201,95 +157,9 @@ export default function NarrativeSectionV3() {
         </div>
 
         {/* =====================================================================
-            3. GLOBAL IMPACT (Moved into Narrative above Founder & CEO per Rule 4)
+            3. AGENCY LEADERSHIP / FOUNDER & CEO SECTION
             ===================================================================== */}
-        <div className="v3-impact-editorial-module mb-5" ref={impactRef}>
-          <div className="row mb-4">
-            <div className="col-12 col-lg-8">
-              <div className="v3-section-eyebrow-wrap">
-                <span className="v3-eyebrow-dash" />
-                <span className="v3-section-eyebrow">MEASURABLE MOMENTUM</span>
-              </div>
-              <h3 className="v3-impact-headline">Our Global Impact.</h3>
-              <p className="v3-impact-lead-text">
-                Adclan Media Solution Pvt Ltd has empowered 100+ brands through 25+ successful
-                campaigns, reaching over 1 lakh happy users worldwide. With strategic celebrity
-                endorsements and a robust network of tier-1 media partners, we engineer market leaders.
-              </p>
-            </div>
-          </div>
-
-          <div className="row g-3 g-md-4">
-            <div className="col-6 col-md-4 col-lg-3">
-              <div className="v3-impact-stat-item h-100">
-                <strong className="v3-stat-number">100+</strong>
-                <span className="v3-stat-title">Campaigns Executed</span>
-                <p className="v3-stat-detail">High-voltage digital & ATL deployments</p>
-              </div>
-            </div>
-
-            <div className="col-6 col-md-4 col-lg-3">
-              <div className="v3-impact-stat-item h-100">
-                <strong className="v3-stat-number">100+</strong>
-                <span className="v3-stat-title">Brands Managed</span>
-                <p className="v3-stat-detail">Spanning D2C, B2B & corporate leaders</p>
-              </div>
-            </div>
-
-            <div className="col-6 col-md-4 col-lg-3">
-              <div className="v3-impact-stat-item h-100">
-                <strong className="v3-stat-number">5+</strong>
-                <span className="v3-stat-title">Celebrity Endorsements</span>
-                <p className="v3-stat-detail">A-list talent & cultural influencers</p>
-              </div>
-            </div>
-
-            <div className="col-6 col-md-4 col-lg-3">
-              <div className="v3-impact-stat-item h-100">
-                <strong className="v3-stat-number">1L+</strong>
-                <span className="v3-stat-title">Happy Users</span>
-                <p className="v3-stat-detail">Organic reach across all consumer touchpoints</p>
-              </div>
-            </div>
-
-            <div className="col-6 col-md-4 col-lg-3">
-              <div className="v3-impact-stat-item h-100">
-                <strong className="v3-stat-number">7+</strong>
-                <span className="v3-stat-title">Years of Excellence</span>
-                <p className="v3-stat-detail">Consistent innovation since 2018</p>
-              </div>
-            </div>
-
-            <div className="col-6 col-md-4 col-lg-3">
-              <div className="v3-impact-stat-item h-100">
-                <strong className="v3-stat-number">5+</strong>
-                <span className="v3-stat-title">Media Partners</span>
-                <p className="v3-stat-detail">Top broadcast, radio & print networks</p>
-              </div>
-            </div>
-
-            <div className="col-6 col-md-4 col-lg-3">
-              <div className="v3-impact-stat-item h-100">
-                <strong className="v3-stat-number">10+</strong>
-                <span className="v3-stat-title">Enterprise Clients</span>
-                <p className="v3-stat-detail">Conglomerate & pan-India retainers</p>
-              </div>
-            </div>
-
-            <div className="col-6 col-md-4 col-lg-3">
-              <div className="v3-impact-stat-item h-100">
-                <strong className="v3-stat-number">3+</strong>
-                <span className="v3-stat-title">Execution Channels</span>
-                <p className="v3-stat-detail">Traditional, OTT & Digital Growth</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* =====================================================================
-            4. FOUNDER & CEO SECTION (Directly below Global Impact per Rule 4)
-            ===================================================================== */}
-        <div className="v3-founder-editorial-section">
+        <div className="v3-founder-editorial-section pt-3">
           <div className="row g-4 g-lg-5 align-items-center">
             {/* Left: Portrait in Architectural Framing */}
             <div className="col-12 col-md-5 col-lg-5">
@@ -338,5 +208,3 @@ export default function NarrativeSectionV3() {
     </section>
   );
 }
-
-

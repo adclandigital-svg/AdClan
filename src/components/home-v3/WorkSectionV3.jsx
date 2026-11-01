@@ -123,10 +123,10 @@ export default function WorkSectionV3() {
           <div className="col-12 col-lg-10 col-xl-8">
             <div className="v3-section-eyebrow-wrap">
               <span className="v3-eyebrow-dash" />
-              <span className="v3-section-eyebrow">03 / WORK</span>
+              <span className="v3-section-eyebrow">04 / PRODUCTION REELS</span>
             </div>
             <h2 className="v3-editorial-headline">
-              Crafting Moments. <br />
+              Cinematic Moments. <br />
               <span>Defining Cultural Conversations.</span>
             </h2>
             <p className="v3-editorial-subtext">

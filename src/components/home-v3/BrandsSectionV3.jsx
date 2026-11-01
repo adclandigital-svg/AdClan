@@ -51,7 +51,7 @@ export default function BrandsSectionV3() {
           <div className="col-12 col-lg-10 col-xl-8">
             <div className="v3-section-eyebrow-wrap">
               <span className="v3-eyebrow-dash" />
-              <span className="v3-section-eyebrow">04 / BRANDS</span>
+              <span className="v3-section-eyebrow">05 / BRANDS</span>
             </div>
             <h2 className="v3-editorial-headline">
               Trusted by the Names <br />

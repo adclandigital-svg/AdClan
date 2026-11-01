@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import HomeV3Navbar from "@/components/home-v3/HomeV3Navbar";
 import HeroBannerSliderV3 from "@/components/home-v3/HeroBannerSliderV3";
 import BottomServicesBarV3 from "@/components/home-v3/BottomServicesBarV3";
+import OurCraftSectionV3 from "@/components/home-v3/OurCraftSectionV3";
 import NarrativeSectionV3 from "@/components/home-v3/NarrativeSectionV3";
 import ExpertiseSectionV3 from "@/components/home-v3/ExpertiseSectionV3";
 import WorkSectionV3 from "@/components/home-v3/WorkSectionV3";
@@ -45,7 +46,7 @@ export default function HomeV3Page() {
           <div className="home-v3-grain" />
         </div>
 
-        {/* 1. Exact Reference Top Navigation Bar (NARRATIVE, EXPERTISE, WORK, BRANDS, REACH US) */}
+        {/* 1. Exact Reference Top Navigation Bar (OUR CRAFT, NARRATIVE, EXPERTISE, BRANDS, REACH US) */}
         <HomeV3Navbar />
 
         {/* 2. Exact Reference Hero Section with Synchronized 3D Card Slider */}
@@ -59,10 +60,13 @@ export default function HomeV3Page() {
           SUBSEQUENT SECTIONS IN MATCHING HOME-V3 WARM EDITORIAL AESTHETIC
           ========================================================================= */}
       
-      {/* 4. Narrative Section ("Who we are" -> "Narrative", Global Impact + Founder & CEO) */}
+      {/* 4. NEW SECTION: "Our Craft" (Combined portfolio placed immediately after Hero Banner per Section 3 instructions) */}
+      <OurCraftSectionV3 />
+
+      {/* 5. Narrative Section ("The Art of Listening", Methodology + Founder & CEO) */}
       <NarrativeSectionV3 />
 
-      {/* 5. Expertise Section ("What we do" -> "Expertise") */}
+      {/* 6. Expertise Section (Redesigned "What We Do" -> "Expertise") */}
       <ExpertiseSectionV3 />
 
       {/* 6. Work Section ("Our work" -> "Work", Cinematic Reels + Case Studies) */}

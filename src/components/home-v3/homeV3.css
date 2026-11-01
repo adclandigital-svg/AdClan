@@ -9,19 +9,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Jost:wght@300;400;600&display=swap");
 
 :root {
-  --bg1: #f3f1ee;
-  --bg2: #dedad4;
-  --curve: #ece9e4;
-  --ink: #1c1c1c;
-  --muted: #8a8680;
+  --bg1: #ffffff;
+  --bg2: #f0f0f4;
+  --curve: #f8f8fb;
+  --ink: #111111;
+  --muted: #777777;
   --ease: cubic-bezier(0.65, 0, 0.35, 1);
   --dur: 0.8s;
 }
 
 /* Global Body Overrides when on Home-v3 */
 body.home-v3-active {
-  background-color: #e9e7e3 !important;
-  color: #121212 !important;
+  background-color: #ffffff !important;
+  color: #111111 !important;
   font-family: "Outfit", sans-serif !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -58,16 +58,16 @@ body.home-v3-active::before {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background-color: #e9e7e3;
+  background-color: #ffffff;
   background:
-    radial-gradient(ellipse 60% 70% at 30% 45%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 70%),
-    linear-gradient(135deg, #efede9 0%, #e8e5e0 55%, #e2dfd9 100%);
+    radial-gradient(ellipse 60% 70% at 30% 45%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(135deg, #ffffff 0%, #fbfbfc 55%, #f2f3f7 100%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
   box-sizing: border-box;
-  
+  padding-top: 85px;
 }
 
 /* Background Architectural Sweep / Arc matching exact prototype */
@@ -84,50 +84,63 @@ body.home-v3-active::before {
   display: none !important;
 }
 
-/* Large right-side circle */
+/* Large right-side circle in clean subtle monochromatic tone */
 .home-v3-bg-decor::before {
-      content: "";
-    aspect-ratio: 1;
-    background: radial-gradient(circle at 12%, #ffffff59 0%, #fff0 55%), linear-gradient(90deg, #eae7e2 0%, #e4e0da 100%);
-    border-radius: 50%;
-    width: 90%;
-    position: absolute;
-    top: 30%;
-    left: 70%;
-    transform: translateY(-50%);
-    box-shadow: -22px 0 60px #00000012, -2px 0 10px #0000000a, inset 16px 0 40px #ffffff73;
+  content: "";
+  aspect-ratio: 1;
+  background: radial-gradient(circle at 12%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 55%), linear-gradient(90deg, #f2f3f7 0%, #e6e7ec 100%);
+  border-radius: 50%;
+  width: 90%;
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  transform: translateY(-50%);
+  box-shadow: -22px 0 60px rgba(0, 0, 0, 0.04), -2px 0 10px rgba(0, 0, 0, 0.02), inset 16px 0 40px rgba(255, 255, 255, 0.9);
 }
 
-/* Ambient grain (halka kar diya) */
+/* Ambient grain */
 .home-v3-grain {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.015) 1px, transparent 1px);
   background-size: 22px 22px;
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.25;
 }
 
 /* ==========================================================================
-   TOP NAVIGATION BAR
+   TOP NAVIGATION BAR (STICKY WITH LOGO COLLAPSE TRANSFORMATION)
    ========================================================================== */
 .v3-navbar {
-  position: relative;
-  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   width: 100%;
   box-sizing: border-box;
-  padding: 34px 72px 10px 72px;
+  padding: 24px 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: transparent;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Brand / Logo Stacked */
+.v3-navbar.is-sticky {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  padding: 12px 72px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Brand / Logo Lockup (Horizontal Side-by-Side: Monogram + ADCLAN Wordmark) */
 .v3-brand-lockup {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  gap: 12px;
   text-decoration: none;
   color: #0d0d0d;
   transition:
@@ -142,19 +155,40 @@ body.home-v3-active::before {
 }
 
 .v3-monogram-svg {
-  width: 32px;
-  height: 38px;
+  width: 28px;
+  height: 35px;
   display: block;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.v3-navbar.is-sticky .v3-monogram-svg {
+  width: 28px;
+  height: 35px;
 }
 
 .v3-brand-wordmark {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 19px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
   color: #0d0d0d;
-  margin-top: -3px;
   line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 160px;
+  opacity: 1;
+  overflow: hidden;
+  transform-origin: left center;
+  transition: max-width 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, transform 0.3s ease, margin 0.3s ease;
+}
+
+.v3-brand-wordmark.is-hidden {
+  max-width: 0;
+  opacity: 0;
+  transform: scaleX(0);
+  margin-left: -12px;
+  pointer-events: none;
 }
 
 /* Navigation Links (Center) */
@@ -752,9 +786,9 @@ body.home-v3-active::before {
   position: relative;
   z-index: 20;
   width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
-  background: #ebe9e5;
+  background: #ffffff;
   padding: 0 40px;
 }
 

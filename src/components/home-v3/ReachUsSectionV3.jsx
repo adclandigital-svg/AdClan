@@ -13,7 +13,7 @@ export default function ReachUsSectionV3() {
           <div className="col-12 col-lg-10 col-xl-8">
             <div className="v3-section-eyebrow-wrap">
               <span className="v3-eyebrow-dash" />
-              <span className="v3-section-eyebrow">06 / REACH US</span>
+              <span className="v3-section-eyebrow">07 / REACH US</span>
             </div>
 
             <h2 className="v3-editorial-headline">
