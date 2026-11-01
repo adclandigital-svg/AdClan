@@ -41,7 +41,7 @@ export default function HomeV3Navbar() {
         </span>
       </Link>
 
-      {/* 2. Middle: Navigation Links (OUR CRAFT, NARRATIVE, EXPERTISE, BRANDS) */}
+      {/* 2. Middle: Navigation Links (OUR CRAFT, NARRATIVE, EXPERTISE, WORK, BRANDS) */}
       <nav className="v3-nav-desktop" aria-label="Main Navigation">
         <ul className="v3-nav-center">
           <li className="v3-nav-item">
@@ -57,6 +57,11 @@ export default function HomeV3Navbar() {
           <li className="v3-nav-item">
             <a href="#expertise" className="v3-nav-link">
               EXPERTISE
+            </a>
+          </li>
+          <li className="v3-nav-item">
+            <a href="#work" className="v3-nav-link">
+              WORK
             </a>
           </li>
           <li className="v3-nav-item">
@@ -124,6 +129,14 @@ export default function HomeV3Navbar() {
             onClick={() => setMobileMenuOpen(false)}
           >
             EXPERTISE
+          </a>
+          <a
+            href="#work"
+            className="v3-nav-link"
+            style={{ fontSize: "16px" }}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            WORK
           </a>
           <a
             href="#brands"
