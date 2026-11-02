@@ -6,8 +6,12 @@ import { ArrowUpRight, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const CRAFT_PROJECTS = [
   // =========================================================================
-  // 1. VIKRAM MILLS — FMCG, Packaging & TVC (9 CARDS)
+  // 27 TOTAL PROJECTS (EXACTLY 9 VIKRAM MILLS, 9 RIGHT GOLD, 9 BIG FM)
+  // Perfectly interleaved across 3 slides of 9 cards each for "All Work"
   // =========================================================================
+
+  // --- SLIDE 1 MIX (Cards 1-9) ---
+  // 1. Vikram Mills (1/9)
   {
     id: "vm-1",
     client: "Vikram Mills",
@@ -20,9 +24,41 @@ const CRAFT_PROJECTS = [
     logoAlt: "Vikram Mills Logo",
     link: "/projects/vikram-mills",
     tags: ["Packaging Design", "FMCG Brand", "Heritage"],
-    effectType: "logo-reveal",
     badgeText: "HERITAGE FMCG",
   },
+  // 2. Right Gold (1/9)
+  {
+    id: "rg-1",
+    client: "Right Gold",
+    clientId: "right-gold",
+    category: "High Jewellery & TVC",
+    title: "Imperial Bridal Jewellery Commercial Shoot",
+    excerpt: "Cinematic broadcast film and high-concept campaign for Right Gold luxury bridal collection.",
+    image: "/projects/right-gold/banner2.png",
+    clientLogo: "/projects/right-gold/logo.png",
+    logoAlt: "Right Gold Logo",
+    link: "/projects/right-gold",
+    tags: ["Commercial Shoot", "High Jewellery", "TVC Film"],
+    badgeText: "LUXURY TVC",
+  },
+  // 3. Big FM (1/9)
+  {
+    id: "bfm-1",
+    client: "Big FM",
+    clientId: "big-fm",
+    category: "Celebrity & Radio Management",
+    title: "RJ Naved — The Voice of Delhi-NCR Primetime Campaign",
+    excerpt: "Massive citywide celebrity endorsement and experiential radio campaign driving millions of listeners.",
+    image: "/projects/project-thumbnail/RJ NAVED.png",
+    clientLogo: "/projects/big-fm/logo.png",
+    logoAlt: "BIG FM Logo",
+    link: "/projects/big-fm/celebrity-managements",
+    tags: ["RJ Naved", "Radio Star", "Celebrity Campaign"],
+    badgeText: "CELEBRITY STAR",
+    celebrityName: "RJ Naved",
+  },
+
+  // 4. Vikram Mills (2/9)
   {
     id: "vm-2",
     client: "Vikram Mills",
@@ -30,363 +66,34 @@ const CRAFT_PROJECTS = [
     category: "Commercial Advertising",
     title: "National Television Commercial & Digital TVC",
     excerpt: "Broadcast TVC capturing warm family moments, heritage milling purity, and pan-India trust.",
-    image: "/projects/vikram-mills/cb-banner.png",
-    clientLogo: "/projects/vikram-mills/logo1.jpg",
-    logoAlt: "Vikram Mills Logo",
-    link: "/projects/vikram-mills",
-    tags: ["TV Commercial", "Broadcast Media", "FMCG"],
-    effectType: "logo-reveal",
-    badgeText: "TVC CAMPAIGN",
-  },
-  {
-    id: "vm-3",
-    client: "Vikram Mills",
-    clientId: "vikram-mills",
-    category: "Retail Packaging Design",
-    title: "Maida & Fine Flour Retail Packaging Architecture",
-    excerpt: "Vibrant shelf packaging series designed for maximum shelf presence in modern retail aisles.",
-    image: "/projects/vikram-mills/creatives/1.jpg",
-    clientLogo: "/projects/vikram-mills/logo1.jpg",
-    logoAlt: "Vikram Mills Logo",
-    link: "/projects/vikram-mills",
-    tags: ["Retail Packaging", "FMCG Essentials", "Shelf Appeal"],
-    effectType: "logo-reveal",
-    badgeText: "RETAIL PACKAGING",
-  },
-  {
-    id: "vm-4",
-    client: "Vikram Mills",
-    clientId: "vikram-mills",
-    category: "Packaging Architecture",
-    title: "Chakki Atta Premium Golden Harvest 5KG Pack",
-    excerpt: "High-contrast packaging design communicating 100% whole wheat grain nutrition and freshness.",
     image: "/projects/vikram-mills/creatives/2.jpg",
     clientLogo: "/projects/vikram-mills/logo1.jpg",
     logoAlt: "Vikram Mills Logo",
     link: "/projects/vikram-mills",
-    tags: ["Whole Wheat", "Consumer Pack", "FMCG"],
-    effectType: "logo-reveal",
-    badgeText: "PACKAGING SUITE",
+    tags: ["TV Commercial", "Broadcast Media", "FMCG"],
+    badgeText: "TVC CAMPAIGN",
   },
-  {
-    id: "vm-5",
-    client: "Vikram Mills",
-    clientId: "vikram-mills",
-    category: "FMCG Brand Extension",
-    title: "Fine Sooji & Kitchen Staples Design Series",
-    excerpt: "Complete packaging suite for staple culinary grains maintaining brand visual coherence.",
-    image: "/projects/vikram-mills/creatives/3.jpg",
-    clientLogo: "/projects/vikram-mills/logo1.jpg",
-    logoAlt: "Vikram Mills Logo",
-    link: "/projects/vikram-mills",
-    tags: ["Culinary Staples", "Product Line", "Brand System"],
-    effectType: "logo-reveal",
-    badgeText: "PRODUCT LAUNCH",
-  },
-  {
-    id: "vm-6",
-    client: "Vikram Mills",
-    clientId: "vikram-mills",
-    category: "Healthy Living Packaging",
-    title: "Nutritious Roasted Dalia Family Pack",
-    excerpt: "Packaging refresh targeting health-conscious modern families and fitness-oriented kitchens.",
-    image: "/projects/vikram-mills/creatives/4.jpg",
-    clientLogo: "/projects/vikram-mills/logo1.jpg",
-    logoAlt: "Vikram Mills Logo",
-    link: "/projects/vikram-mills",
-    tags: ["Health & Nutrition", "Dalia Pack", "Modern Consumer"],
-    effectType: "logo-reveal",
-    badgeText: "HEALTH & WELLNESS",
-  },
-  {
-    id: "vm-7",
-    client: "Vikram Mills",
-    clientId: "vikram-mills",
-    category: "Heritage FMCG Series",
-    title: "Pure Gram Flour (Besan) Visual Identity",
-    excerpt: "Heritage-inspired golden yellow packaging for festive and daily Indian culinary preparation.",
-    image: "/projects/vikram-mills/creatives/5.jpg",
-    clientLogo: "/projects/vikram-mills/logo1.jpg",
-    logoAlt: "Vikram Mills Logo",
-    link: "/projects/vikram-mills",
-    tags: ["Festive Staples", "Besan Pack", "FMCG"],
-    effectType: "logo-reveal",
-    badgeText: "FMCG ESSENTIALS",
-  },
-  {
-    id: "vm-8",
-    client: "Vikram Mills",
-    clientId: "vikram-mills",
-    category: "Bulk & Retail Packaging",
-    title: "Modern Retail Shelf 10KG Master Pack",
-    excerpt: "Durable multilayer consumer packaging engineered for high-volume modern trade environments.",
-    image: "/projects/vikram-mills/pkg/1.png",
-    clientLogo: "/projects/vikram-mills/logo1.jpg",
-    logoAlt: "Vikram Mills Logo",
-    link: "/projects/vikram-mills",
-    tags: ["Multilayer Pack", "Modern Trade", "Master Pack"],
-    effectType: "logo-reveal",
-    badgeText: "SHELF PRESENCE",
-  },
-  {
-    id: "vm-9",
-    client: "Vikram Mills",
-    clientId: "vikram-mills",
-    category: "OOH & Outdoor Print",
-    title: "National Print & Hoarding Campaign",
-    excerpt: "Impactful outdoor billboard advertising establishing Vikram Mills as North India's trusted choice.",
-    image: "/projects/vikram-mills/pkg/2.png",
-    clientLogo: "/projects/vikram-mills/logo1.jpg",
-    logoAlt: "Vikram Mills Logo",
-    link: "/projects/vikram-mills",
-    tags: ["Outdoor Hoardings", "Print Campaign", "OOH"],
-    effectType: "logo-reveal",
-    badgeText: "OUTDOOR CAMPAIGN",
-  },
-
-  // =========================================================================
-  // 2. RIOT GOLD — Fine Jewellery & TVC Shoot (9 CARDS)
-  // =========================================================================
-  {
-    id: "rg-1",
-    client: "Riot Gold",
-    clientId: "riot-gold",
-    category: "High Jewellery & TVC",
-    title: "Imperial Bridal Jewellery Commercial Shoot",
-    excerpt: "Cinematic broadcast film and high-concept campaign for Riot Gold luxury bridal collection.",
-    image: "/projects/right-gold/banner2.png",
-    clientLogo: "/projects/right-gold/logo.png",
-    logoAlt: "Riot Gold Logo",
-    link: "/projects/right-gold",
-    tags: ["Commercial Shoot", "High Jewellery", "TVC Film"],
-    effectType: "logo-reveal",
-    badgeText: "LUXURY JEWELLERY",
-  },
+  // 5. Right Gold (2/9)
   {
     id: "rg-2",
-    client: "Riot Gold",
-    clientId: "riot-gold",
-    category: "Creative Direction & Print",
+    client: "Right Gold",
+    clientId: "right-gold",
+    category: "Luxury Brand Identity",
     title: "Royal Solitaire & Festive Gold Visual Suite",
     excerpt: "Comprehensive editorial visual identity, print catalog, and luxury digital media assets.",
     image: "/projects/right-gold/banner11.png",
     clientLogo: "/projects/right-gold/logo.png",
-    logoAlt: "Riot Gold Logo",
+    logoAlt: "Right Gold Logo",
     link: "/projects/right-gold",
     tags: ["Print Suite", "Art Direction", "Fine Gold"],
-    effectType: "logo-reveal",
     badgeText: "FINE JEWELLERY",
   },
-  {
-    id: "rg-3",
-    client: "Riot Gold",
-    clientId: "riot-gold",
-    category: "Video & Photography",
-    title: "Atelier Craftsmanship Stills & Digital Campaign",
-    excerpt: "High-definition macro photography capturing the precision and opulence of gold craftsmanship.",
-    image: "/projects/right-gold/gallery/1.jpg",
-    clientLogo: "/projects/right-gold/logo.png",
-    logoAlt: "Riot Gold Logo",
-    link: "/projects/right-gold",
-    tags: ["Macro Photography", "Digital Campaign", "Craftsmanship"],
-    effectType: "logo-reveal",
-    badgeText: "ATELIER SERIES",
-  },
-  {
-    id: "rg-4",
-    client: "Riot Gold",
-    clientId: "riot-gold",
-    category: "Bridal Jewellery Campaign",
-    title: "Kundan Polki Heritage Bridal Choker",
-    excerpt: "Regal bridal adornment editorial captured with cinematic lighting and timeless royal styling.",
-    image: "/projects/right-gold/gallery/2.jpg",
-    clientLogo: "/projects/right-gold/logo.png",
-    logoAlt: "Riot Gold Logo",
-    link: "/projects/right-gold",
-    tags: ["Kundan Polki", "Bridal Choker", "Royal Heritage"],
-    effectType: "logo-reveal",
-    badgeText: "HERITAGE BRIDAL",
-  },
-  {
-    id: "rg-5",
-    client: "Riot Gold",
-    clientId: "riot-gold",
-    category: "High Jewellery Collection",
-    title: "Imperial Emerald & Gold Statement Suite",
-    excerpt: "Signature jewelry campaign showcasing exquisite Colombian emeralds set in hand-carved gold.",
-    image: "/projects/right-gold/gallery/3.jpg",
-    clientLogo: "/projects/right-gold/logo.png",
-    logoAlt: "Riot Gold Logo",
-    link: "/projects/right-gold",
-    tags: ["Emerald Suite", "Statement Piece", "High Jewellery"],
-    effectType: "logo-reveal",
-    badgeText: "SIGNATURE PIECE",
-  },
-  {
-    id: "rg-6",
-    client: "Riot Gold",
-    clientId: "riot-gold",
-    category: "Fine Diamond Collection",
-    title: "Diamond Solitaire Contemporary Elegance",
-    excerpt: "Sleek, modern fine jewelry storytelling designed for contemporary luxury connoisseurs.",
-    image: "/projects/right-gold/gallery/4.jpg",
-    clientLogo: "/projects/right-gold/logo.png",
-    logoAlt: "Riot Gold Logo",
-    link: "/projects/right-gold",
-    tags: ["Solitaire Ring", "Fine Diamonds", "Modern Luxury"],
-    effectType: "logo-reveal",
-    badgeText: "SOLITAIRE ATELIER",
-  },
-  {
-    id: "rg-7",
-    client: "Riot Gold",
-    clientId: "riot-gold",
-    category: "Traditional Craftsmanship",
-    title: "Handcrafted Temple Gold Jhumkas & Maang Tikka",
-    excerpt: "Intricate antique gold finish campaign honoring South and North Indian temple artisan roots.",
-    image: "/projects/right-gold/gallery/5.jpg",
-    clientLogo: "/projects/right-gold/logo.png",
-    logoAlt: "Riot Gold Logo",
-    link: "/projects/right-gold",
-    tags: ["Temple Jewellery", "Antique Gold", "Artisan Stills"],
-    effectType: "logo-reveal",
-    badgeText: "TEMPLE JEWELLERY",
-  },
-  {
-    id: "rg-8",
-    client: "Riot Gold",
-    clientId: "riot-gold",
-    category: "Occasion & Wedding",
-    title: "Royal Rajputana Hathphool & Bangles",
-    excerpt: "Grand destination wedding visual assets highlighting opulent Rajasthani bridal jewelry.",
-    image: "/projects/right-gold/gallery/6.jpg",
-    clientLogo: "/projects/right-gold/logo.png",
-    logoAlt: "Riot Gold Logo",
-    link: "/projects/right-gold",
-    tags: ["Destination Wedding", "Hathphool", "Bridal Luxury"],
-    effectType: "logo-reveal",
-    badgeText: "OCCASION WEAR",
-  },
-  {
-    id: "rg-9",
-    client: "Riot Gold",
-    clientId: "riot-gold",
-    category: "Prêt Luxury Series",
-    title: "Modern Minimalist 22K Everyday Luxury",
-    excerpt: "Lightweight architectural gold collection created for the new generation of luxury buyers.",
-    image: "/projects/right-gold/gallery/7.jpg",
-    clientLogo: "/projects/right-gold/logo.png",
-    logoAlt: "Riot Gold Logo",
-    link: "/projects/right-gold",
-    tags: ["Prêt Gold", "Everyday Luxury", "Minimalist"],
-    effectType: "logo-reveal",
-    badgeText: "EVERYDAY LUXURY",
-  },
-
-  // =========================================================================
-  // 3. BIG FM — Celebrity Appearances & Stars (9 CARDS)
-  // =========================================================================
-  {
-    id: "bfm-1",
-    client: "Big FM",
-    clientId: "big-fm",
-    category: "Celebrity Management",
-    title: "Adah Sharma — BIG FM Big Impact Awards 2024",
-    excerpt: "Special appearance management, VIP coordination, and multi-channel media coverage.",
-    image: "/projects/project-thumbnail/ADAH SHARMA.png",
-    clientLogo: "/projects/big-fm/logo.png",
-    logoAlt: "BIG FM Logo",
-    link: "/projects/big-fm/celebrity-managements",
-    tags: ["Big Impact Awards", "Adah Sharma", "Celebrity PR"],
-    effectType: "celebrity-snapshot",
-    badgeText: "CELEBRITY APPEARANCE",
-    celebrityName: "Adah Sharma",
-  },
+  // 6. Big FM (2/9)
   {
     id: "bfm-2",
     client: "Big FM",
     clientId: "big-fm",
-    category: "Celebrity Management",
-    title: "Anubhav Singh Bassi — Live Celebrity Feature",
-    excerpt: "Mass-audience engagement, media coordination, and on-ground talent handling with Big FM.",
-    image: "/projects/project-thumbnail/BASSI.png",
-    clientLogo: "/projects/big-fm/logo.png",
-    logoAlt: "BIG FM Logo",
-    link: "/projects/big-fm/celebrity-managements",
-    tags: ["Anubhav Singh Bassi", "Live Event", "Radio PR"],
-    effectType: "celebrity-snapshot",
-    badgeText: "CELEBRITY APPEARANCE",
-    celebrityName: "Anubhav Singh Bassi",
-  },
-  {
-    id: "bfm-3",
-    client: "Big FM",
-    clientId: "big-fm",
-    category: "Celebrity Management",
-    title: "Jassie Gill — Star Feature & Musical Night",
-    excerpt: "Star talent integration, on-air promotional bursts, and entertainment PR management.",
-    image: "/projects/project-thumbnail/JASSIE GILL.png",
-    clientLogo: "/projects/big-fm/logo.png",
-    logoAlt: "BIG FM Logo",
-    link: "/projects/big-fm/celebrity-managements",
-    tags: ["Jassie Gill", "Star Feature", "Music & Radio"],
-    effectType: "celebrity-snapshot",
-    badgeText: "CELEBRITY APPEARANCE",
-    celebrityName: "Jassie Gill",
-  },
-  {
-    id: "bfm-4",
-    client: "Big FM",
-    clientId: "big-fm",
-    category: "Celebrity Management",
-    title: "Millind Gaba — Youth Pop Icon Radio Concert",
-    excerpt: "High-octane concert coordination, digital amplification, and celebrity media relations.",
-    image: "/projects/project-thumbnail/MILLIAND GABA.png",
-    clientLogo: "/projects/big-fm/logo.png",
-    logoAlt: "BIG FM Logo",
-    link: "/projects/big-fm/celebrity-managements",
-    tags: ["Millind Gaba", "Pop Icon", "Radio Integration"],
-    effectType: "celebrity-snapshot",
-    badgeText: "CELEBRITY APPEARANCE",
-    celebrityName: "Millind Gaba",
-  },
-  {
-    id: "bfm-5",
-    client: "Big FM",
-    clientId: "big-fm",
-    category: "Celebrity Management",
-    title: "Huma Qureshi — Cinema & Brand Spotlight",
-    excerpt: "Exclusive movie promotional interview, studio media handling, and cross-platform PR.",
-    image: "/projects/project-thumbnail/HUMA QURESHI.png",
-    clientLogo: "/projects/big-fm/logo.png",
-    logoAlt: "BIG FM Logo",
-    link: "/projects/big-fm/celebrity-managements",
-    tags: ["Huma Qureshi", "Bollywood Cinema", "Media Handling"],
-    effectType: "celebrity-snapshot",
-    badgeText: "CELEBRITY APPEARANCE",
-    celebrityName: "Huma Qureshi",
-  },
-  {
-    id: "bfm-6",
-    client: "Big FM",
-    clientId: "big-fm",
-    category: "Celebrity & Radio Management",
-    title: "RJ Naved — Delhi-NCR Iconic Radio Campaign",
-    excerpt: "Strategic radio campaign and viral storytelling reaching millions across North India.",
-    image: "/projects/project-thumbnail/RJ NAVED.png",
-    clientLogo: "/projects/big-fm/logo.png",
-    logoAlt: "BIG FM Logo",
-    link: "/projects/big-fm/celebrity-managements",
-    tags: ["RJ Naved", "Radio Icon", "92.7 BIG FM"],
-    effectType: "celebrity-snapshot",
-    badgeText: "RADIO STAR CAMPAIGN",
-    celebrityName: "RJ Naved",
-  },
-  {
-    id: "bfm-7",
-    client: "Big FM",
-    clientId: "big-fm",
-    category: "Celebrity & Radio Management",
+    category: "Radio Jingles & Shows",
     title: "RJ Lucky — Primetime Drive Radio Show",
     excerpt: "Dynamic radio show branding, on-air client sponsorship integrations, and live digital activations.",
     image: "/projects/project-thumbnail/RJ LUCKY.png",
@@ -394,198 +101,355 @@ const CRAFT_PROJECTS = [
     logoAlt: "BIG FM Logo",
     link: "/projects/big-fm/celebrity-managements",
     tags: ["RJ Lucky", "Drive Show", "Radio Sponsorship"],
-    effectType: "celebrity-snapshot",
-    badgeText: "RADIO SHOW INTEGRATION",
+    badgeText: "RADIO SHOW",
     celebrityName: "RJ Lucky",
   },
+
+  // 7. Vikram Mills (3/9)
   {
-    id: "bfm-8",
+    id: "vm-3",
+    client: "Vikram Mills",
+    clientId: "vikram-mills",
+    category: "Masterbrand Strategy",
+    title: "53-Year Milling Legacy & Pan-India Corporate Campaign",
+    excerpt: "Large-scale masterbrand corporate campaign marking half a century of milling leadership.",
+    image: "/projects/vikram-mills/Vikram mills Banner.png",
+    clientLogo: "/projects/vikram-mills/logo1.jpg",
+    logoAlt: "Vikram Mills Logo",
+    link: "/projects/vikram-mills",
+    tags: ["Brand Strategy", "Corporate Identity", "Leadership"],
+    badgeText: "CORPORATE",
+  },
+  // 8. Right Gold (3/9)
+  {
+    id: "rg-3",
+    client: "Right Gold",
+    clientId: "right-gold",
+    category: "Bridal Editorial",
+    title: "Heritage Polki & Kundan Royal Bridal Lookbook",
+    excerpt: "Opulent royal bridal visual campaign featuring handcrafted polki necklaces and heritage jadau craftsmanship.",
+    image: "/projects/right-gold/1.jpg",
+    clientLogo: "/projects/right-gold/logo.png",
+    logoAlt: "Right Gold Logo",
+    link: "/projects/right-gold",
+    tags: ["Polki Heritage", "Bridal Lookbook", "Kundan"],
+    badgeText: "ROYAL BRIDAL",
+  },
+  // 9. Big FM (3/9)
+  {
+    id: "bfm-3",
     client: "Big FM",
     clientId: "big-fm",
-    category: "Celebrity & Radio Management",
+    category: "Radio Jingles & Shows",
     title: "RJ Rahul Makin — Late Night Relationship Show",
-    excerpt: "Late-night flagship radio show amplification, digital podcasts, and brand association campaigns.",
+    excerpt: "Late-night flagship radio show amplification, digital podcasts, and emotional brand association campaigns.",
     image: "/projects/project-thumbnail/RJ RAHUL Makin.png",
     clientLogo: "/projects/big-fm/logo.png",
     logoAlt: "BIG FM Logo",
     link: "/projects/big-fm/celebrity-managements",
     tags: ["RJ Rahul Makin", "Midnight Talk", "Brand Integration"],
-    effectType: "celebrity-snapshot",
-    badgeText: "TALK RADIO SERIES",
+    badgeText: "RADIO SHOW",
     celebrityName: "RJ Rahul Makin",
   },
+
+  // --- SLIDE 2 MIX (Cards 10-18) ---
+  // 10. Vikram Mills (4/9)
   {
-    id: "bfm-9",
+    id: "vm-4",
+    client: "Vikram Mills",
+    clientId: "vikram-mills",
+    category: "Celebrity Endorsement",
+    title: "Star Celebrity Campaign & Festive Brand Film",
+    excerpt: "High-impact celebrity brand ambassador campaign driving consumer loyalty and premium recall.",
+    image: "/projects/vikram-mills/Vikram-mills-celeb.png",
+    clientLogo: "/projects/vikram-mills/logo1.jpg",
+    logoAlt: "Vikram Mills Logo",
+    link: "/projects/vikram-mills",
+    tags: ["Celebrity Face", "Festive TVC", "Consumer Trust"],
+    badgeText: "CELEBRITY TVC",
+  },
+  // 11. Right Gold (4/9)
+  {
+    id: "rg-4",
+    client: "Right Gold",
+    clientId: "right-gold",
+    category: "Haute Joaillerie",
+    title: "Festive Bridal Haute Joaillerie Visual Campaign",
+    excerpt: "High-glamour festive couture jewellery photography showcasing intricate yellow gold and gemstone bridal sets.",
+    image: "/projects/right-gold/a2.JPG",
+    clientLogo: "/projects/right-gold/logo.png",
+    logoAlt: "Right Gold Logo",
+    link: "/projects/right-gold",
+    tags: ["Haute Joaillerie", "Festive Sets", "Editorial"],
+    badgeText: "GOLD SUITE",
+  },
+  // 12. Big FM (4/9)
+  {
+    id: "bfm-4",
     client: "Big FM",
     clientId: "big-fm",
-    category: "Celebrity & Radio Management",
-    title: "RJ Tripti — Morning Fresh Radio Hour",
-    excerpt: "High-energy morning radio show campaign engaging city commuters with engaging daily brand segments.",
+    category: "Morning Drive & Vibe",
+    title: "RJ Tripti — Breakfast Morning City Show",
+    excerpt: "High-octane morning rush show branding connecting local advertisers with affluent commuter demographics.",
     image: "/projects/project-thumbnail/RJ TRIPTI.png",
     clientLogo: "/projects/big-fm/logo.png",
     logoAlt: "BIG FM Logo",
     link: "/projects/big-fm/celebrity-managements",
-    tags: ["RJ Tripti", "Morning Drive", "City Commute"],
-    effectType: "celebrity-snapshot",
-    badgeText: "MORNING FLAGSHIP",
+    tags: ["RJ Tripti", "Morning Show", "Commuter Audience"],
+    badgeText: "MORNING SHOW",
     celebrityName: "RJ Tripti",
   },
 
-  // =========================================================================
-  // 4. COMMERCIALS & TVCs (9 CARDS)
-  // =========================================================================
+  // 13. Vikram Mills (5/9)
   {
-    id: "comm-1",
+    id: "vm-5",
     client: "Vikram Mills",
-    clientId: "commercials",
-    category: "Commercial Advertising",
-    title: "Vikram Mills — National TVC Broadcast Film",
-    excerpt: "Prime-time national television commercial capturing pure wholesome grain milling heritage.",
-    image: "/projects/vikram-mills/cb-banner.png",
+    clientId: "vikram-mills",
+    category: "FMCG Retail Packaging",
+    title: "Premium Maida & Fine Flour Retail Consumer Pack",
+    excerpt: "High-barrier consumer retail pouch design reflecting culinary perfection and pure wheat freshness.",
+    image: "/projects/vikram-mills/1.png",
     clientLogo: "/projects/vikram-mills/logo1.jpg",
     logoAlt: "Vikram Mills Logo",
     link: "/projects/vikram-mills",
-    tags: ["National TVC", "Broadcast Film", "FMCG"],
-    effectType: "logo-reveal",
-    badgeText: "BROADCAST TVC",
+    tags: ["Retail Pack", "Fine Flour", "Shelf Visibility"],
+    badgeText: "RETAIL PACKAGING",
   },
+  // 14. Right Gold (5/9)
   {
-    id: "comm-2",
-    client: "Riot Gold",
-    clientId: "commercials",
-    category: "Commercial Advertising",
-    title: "Riot Gold — Imperial Jewellery TV Commercial",
-    excerpt: "Broadcast fashion film celebrating bridal glamour with multi-camera cinematic lighting.",
-    image: "/projects/right-gold/banner2.png",
+    id: "rg-5",
+    client: "Right Gold",
+    clientId: "right-gold",
+    category: "Contemporary Fine Gold",
+    title: "Contemporary Lightweight Rose Gold Collection",
+    excerpt: "Minimalist everyday luxury jewellery branding targeted at modern urban women and young professionals.",
+    image: "/projects/right-gold/a3.JPG",
     clientLogo: "/projects/right-gold/logo.png",
-    logoAlt: "Riot Gold Logo",
+    logoAlt: "Right Gold Logo",
     link: "/projects/right-gold",
-    tags: ["Luxury TVC", "High Jewellery", "Fashion Film"],
-    effectType: "logo-reveal",
-    badgeText: "LUXURY TVC",
+    tags: ["Rose Gold", "Everyday Luxury", "Modern"],
+    badgeText: "CONTEMPORARY",
   },
+  // 15. Big FM (5/9)
   {
-    id: "comm-3",
-    client: "Clear Dekho",
-    clientId: "commercials",
-    category: "Commercial Advertising",
-    title: "Clear Dekho — Eyewear Retail Commercial",
-    excerpt: "High-energy youth commercial campaign driving omnichannel optical retail footfalls.",
-    image: "/projects/project-thumbnail/Clear Dekho.png",
-    clientLogo: "/projects/clear_dekho/logo.png",
-    logoAlt: "Clear Dekho Logo",
-    link: "/projects/clear-dekho",
-    tags: ["Commercial Ad", "Eyewear Retail", "Omnichannel"],
-    effectType: "logo-reveal",
-    badgeText: "COMMERCIAL AD",
+    id: "bfm-5",
+    client: "Big FM",
+    clientId: "big-fm",
+    category: "Grand Awards & Media",
+    title: "BIG Impact Awards Nationwide Gala & Media Activation",
+    excerpt: "Pan-India award property honoring visionary entrepreneurs, celebrities, and industry changemakers.",
+    image: "/projects/big-fm/banner.png",
+    clientLogo: "/projects/big-fm/logo.png",
+    logoAlt: "BIG FM Logo",
+    link: "/projects/big-fm/celebrity-managements",
+    tags: ["Impact Awards", "Gala Event", "National PR"],
+    badgeText: "GALA AWARDS",
   },
+
+  // 16. Vikram Mills (6/9)
   {
-    id: "comm-4",
-    client: "India Gate",
-    clientId: "commercials",
-    category: "Commercial Advertising",
-    title: "India Gate — Heritage Basmati Commercial",
-    excerpt: "Premium food commercial highlighting long-grain aromatic perfection and royal hospitality.",
-    image: "/projects/project-thumbnail/INDIA GATE.png",
-    clientLogo: "/projects/india_gate/logo1.png",
-    logoAlt: "India Gate Logo",
-    link: "/projects/india-gate",
-    tags: ["National TVC", "Basmati Rice", "Heritage"],
-    effectType: "logo-reveal",
-    badgeText: "NATIONAL TVC",
+    id: "vm-6",
+    client: "Vikram Mills",
+    clientId: "vikram-mills",
+    category: "Commercial Bulk Packaging",
+    title: "Commercial Food Service 30KG Rice Pack Architecture",
+    excerpt: "Industrial-grade packaging design for bulk food service supply chains and national distribution.",
+    image: "/projects/vikram-mills/web banner 30 kg rice 2.png",
+    clientLogo: "/projects/vikram-mills/logo1.jpg",
+    logoAlt: "Vikram Mills Logo",
+    link: "/projects/vikram-mills",
+    tags: ["Bulk Packaging", "B2B Supply", "Distribution"],
+    badgeText: "B2B PACKAGING",
   },
+  // 17. Right Gold (6/9)
   {
-    id: "comm-5",
-    client: "Spring Elmas",
-    clientId: "commercials",
-    category: "Commercial Advertising",
-    title: "Spring Elmas — Ultra Luxury Real Estate Film",
-    excerpt: "Architectural lifestyle commercial bringing to life prime luxury residential living.",
-    image: "/projects/project-thumbnail/SPRING ELMAS.png",
-    clientLogo: "/projects/spring_elmas/logo.png",
-    logoAlt: "Spring Elmas Logo",
-    link: "/projects/spring-elmas",
-    tags: ["Realty Film", "Luxury Estate", "Architecture"],
-    effectType: "logo-reveal",
-    badgeText: "REALTY FILM",
+    id: "rg-6",
+    client: "Right Gold",
+    clientId: "right-gold",
+    category: "Temple Heritage",
+    title: "Temple Jewellery Grand Legacy Collection",
+    excerpt: "Sacred South Indian temple motifs reinterpreted with modern goldsmith artistry and divine aesthetics.",
+    image: "/projects/right-gold/a4.JPG",
+    clientLogo: "/projects/right-gold/logo.png",
+    logoAlt: "Right Gold Logo",
+    link: "/projects/right-gold",
+    tags: ["Temple Gold", "Heritage Art", "Legacy"],
+    badgeText: "TEMPLE GOLD",
   },
+  // 18. Big FM (6/9)
   {
-    id: "comm-6",
-    client: "Teaser Spot ACE",
-    clientId: "commercials",
-    category: "Commercial Advertising",
-    title: "Teaser Spot ACE — High Impact Teaser TVC",
-    excerpt: "Mysterious teaser spot campaign creating unmatched suspense before national product unveil.",
-    image: "/projects/project-thumbnail/Teaser Spot-ACE.png",
-    clientLogo: "/projects/teaser_spot-ace/logo.jpeg",
-    logoAlt: "Teaser Spot ACE Logo",
-    link: "/projects/teaser-spot-ace",
-    tags: ["Teaser Campaign", "Broadcast Spot", "Automotive"],
-    effectType: "logo-reveal",
-    badgeText: "TEASER CAMPAIGN",
+    id: "bfm-6",
+    client: "Big FM",
+    clientId: "big-fm",
+    category: "Celebrity Management",
+    title: "Adah Sharma — Big Impact Awards Star Coordination",
+    excerpt: "Red carpet celebrity handling, stage appearance management, and nationwide entertainment PR.",
+    image: "/projects/project-thumbnail/ADAH SHARMA.png",
+    clientLogo: "/projects/big-fm/logo.png",
+    logoAlt: "BIG FM Logo",
+    link: "/projects/big-fm/celebrity-managements",
+    tags: ["Adah Sharma", "Red Carpet", "Star Handling"],
+    badgeText: "CELEBRITY STAR",
+    celebrityName: "Adah Sharma",
   },
+
+  // --- SLIDE 3 MIX (Cards 19-27) ---
+  // 19. Vikram Mills (7/9)
   {
-    id: "comm-7",
-    client: "Tirupati Group",
-    clientId: "commercials",
-    category: "Commercial Advertising",
-    title: "Tirupati Group — Corporate Identity Commercial",
-    excerpt: "Panoramic corporate commercial capturing industrial scale, engineering, and trust.",
-    image: "/projects/project-thumbnail/TIRUPATI.png",
-    clientLogo: "/projects/tirupati/logo.jpeg",
-    logoAlt: "Tirupati Logo",
-    link: "/projects/tirupati",
-    tags: ["Corporate TVC", "Engineering", "Industrial"],
-    effectType: "logo-reveal",
-    badgeText: "CORPORATE TVC",
+    id: "vm-7",
+    client: "Vikram Mills",
+    clientId: "vikram-mills",
+    category: "FMCG Branding & Packaging",
+    title: "Whole Wheat Suji & Sooji Visual Identity",
+    excerpt: "Vibrant yellow kitchen staple packaging crafted to dominate modern trade and mom-and-pop stores.",
+    image: "/projects/vikram-mills/2.png",
+    clientLogo: "/projects/vikram-mills/logo1.jpg",
+    logoAlt: "Vikram Mills Logo",
+    link: "/projects/vikram-mills",
+    tags: ["Suji Pack", "Modern Trade", "Shelf Impact"],
+    badgeText: "FMCG PACK",
   },
+  // 20. Right Gold (7/9)
   {
-    id: "comm-8",
-    client: "Smile Train India",
-    clientId: "commercials",
-    category: "Commercial Advertising",
-    title: "Smile Train India — Cause Marketing Film",
-    excerpt: "Emotionally evocative documentary commercial creating widespread awareness and donor engagement.",
-    image: "/projects/project-thumbnail/Smile train India.png",
-    clientLogo: "/projects/smile_train_india/logo.png",
-    logoAlt: "Smile Train Logo",
-    link: "/projects/smile-train",
-    tags: ["Cause Marketing", "Emotional TVC", "Documentary"],
-    effectType: "logo-reveal",
-    badgeText: "CAUSE MARKETING",
+    id: "rg-7",
+    client: "Right Gold",
+    clientId: "right-gold",
+    category: "Artisanal Film",
+    title: "Master Goldsmith At Work — Brand Heritage Film",
+    excerpt: "Behind-the-scenes documentary cinematography capturing the generational craftsmanship behind each ornament.",
+    image: "/projects/right-gold/gallery/1.jpg",
+    clientLogo: "/projects/right-gold/logo.png",
+    logoAlt: "Right Gold Logo",
+    link: "/projects/right-gold",
+    tags: ["Craftsmanship", "Heritage Film", "Atelier"],
+    badgeText: "BRAND FILM",
   },
+  // 21. Big FM (7/9)
   {
-    id: "comm-9",
-    client: "Agropure",
-    clientId: "commercials",
-    category: "Commercial Advertising",
-    title: "Agropure — Agricultural Commodity TVC",
-    excerpt: "Television commercial celebrating farming dedication and farm-to-table consumer reliability.",
-    image: "/projects/project-thumbnail/AGROPURE.png",
-    clientLogo: "/projects/agropure/logo.jpeg",
-    logoAlt: "Agropure Logo",
-    link: "/projects/agropure",
-    tags: ["Agriculture AD", "Farm-to-Table", "Commodity TVC"],
-    effectType: "logo-reveal",
-    badgeText: "AGRICULTURE AD",
+    id: "bfm-7",
+    client: "Big FM",
+    clientId: "big-fm",
+    category: "Celebrity Endorsement",
+    title: "Huma Qureshi — Luxury Brand Feature & Media Event",
+    excerpt: "A-list Bollywood star coordination, brand sponsorship integration, and multi-city digital buzz.",
+    image: "/projects/project-thumbnail/HUMA QURESHI.png",
+    clientLogo: "/projects/big-fm/logo.png",
+    logoAlt: "BIG FM Logo",
+    link: "/projects/big-fm/celebrity-managements",
+    tags: ["Huma Qureshi", "Bollywood", "VIP Handling"],
+    badgeText: "BOLLYWOOD STAR",
+    celebrityName: "Huma Qureshi",
+  },
+
+  // 22. Vikram Mills (8/9)
+  {
+    id: "vm-8",
+    client: "Vikram Mills",
+    clientId: "vikram-mills",
+    category: "Health & Nutrition Range",
+    title: "Multigrain & Diabetic-Friendly Flour Architecture",
+    excerpt: "Contemporary health-forward packaging communicating nutrition, dietary fiber, and pure wellness.",
+    image: "/projects/vikram-mills/3.png",
+    clientLogo: "/projects/vikram-mills/logo1.jpg",
+    logoAlt: "Vikram Mills Logo",
+    link: "/projects/vikram-mills",
+    tags: ["Multigrain", "Health Range", "Wellness"],
+    badgeText: "HEALTH FOOD",
+  },
+  // 23. Right Gold (8/9)
+  {
+    id: "rg-8",
+    client: "Right Gold",
+    clientId: "right-gold",
+    category: "Precious Diamonds",
+    title: "Eternity Diamond Solitaire & Engagement Campaign",
+    excerpt: "Ultra-high-definition macro jewellery imagery highlighting certified solitaire diamonds and rare clarity.",
+    image: "/projects/right-gold/gallery/2.jpg",
+    clientLogo: "/projects/right-gold/logo.png",
+    logoAlt: "Right Gold Logo",
+    link: "/projects/right-gold",
+    tags: ["Diamond Solitaire", "Engagement", "Macro Film"],
+    badgeText: "DIAMOND SUITE",
+  },
+  // 24. Big FM (8/9)
+  {
+    id: "bfm-8",
+    client: "Big FM",
+    clientId: "big-fm",
+    category: "Experiential Comedy Tour",
+    title: "Anubhav Singh Bassi — Live Arena Tour & Radio Blitz",
+    excerpt: "Massive auditorium comedy tour partnership, on-air ticket drops, and viral social clips.",
+    image: "/projects/project-thumbnail/BASSI.png",
+    clientLogo: "/projects/big-fm/logo.png",
+    logoAlt: "BIG FM Logo",
+    link: "/projects/big-fm/celebrity-managements",
+    tags: ["Bassi", "Standup Comedy", "Arena Tour"],
+    badgeText: "COMEDY STAR",
+    celebrityName: "Anubhav Singh Bassi",
+  },
+
+  // 25. Vikram Mills (9/9)
+  {
+    id: "vm-9",
+    client: "Vikram Mills",
+    clientId: "vikram-mills",
+    category: "National Brand Campaign",
+    title: "Purity from the Ground Up — Integrated Media Suite",
+    excerpt: "Omnichannel brand rollout across print advertising, outdoor hoardings, and digital display assets.",
+    image: "/projects/project-thumbnail/VIKRAM MILLS.png",
+    clientLogo: "/projects/vikram-mills/logo1.jpg",
+    logoAlt: "Vikram Mills Logo",
+    link: "/projects/vikram-mills",
+    tags: ["Omnichannel", "Print Suite", "Brand Presence"],
+    badgeText: "INTEGRATED",
+  },
+  // 26. Right Gold (9/9)
+  {
+    id: "rg-9",
+    client: "Right Gold",
+    clientId: "right-gold",
+    category: "Retail Experience",
+    title: "Flagship Luxury Jewellery In-Store Showroom Experience",
+    excerpt: "Ambient retail visual merchandising, premium vitrine displays, and bespoke customer consultation suite.",
+    image: "/projects/right-gold/gallery/3.jpg",
+    clientLogo: "/projects/right-gold/logo.png",
+    logoAlt: "Right Gold Logo",
+    link: "/projects/right-gold",
+    tags: ["Retail Branding", "Showroom", "Luxury VM"],
+    badgeText: "RETAIL ARCHITECTURE",
+  },
+  // 27. Big FM (9/9)
+  {
+    id: "bfm-9",
+    client: "Big FM",
+    clientId: "big-fm",
+    category: "Musical Radio Tour",
+    title: "Jassie Gill — Live Musical Radio Showcase & Concert",
+    excerpt: "Star music concert series, acoustic radio room sessions, and Youth Festival activations across North India.",
+    image: "/projects/project-thumbnail/JASSIE GILL.png",
+    clientLogo: "/projects/big-fm/logo.png",
+    logoAlt: "BIG FM Logo",
+    link: "/projects/big-fm/celebrity-managements",
+    tags: ["Jassie Gill", "Live Music", "Youth Concert"],
+    badgeText: "MUSIC STAR",
+    celebrityName: "Jassie Gill",
   },
 ];
 
 const FILTERS = [
   { id: "all", label: "All Work" },
   { id: "vikram-mills", label: "Vikram Mills" },
-  { id: "riot-gold", label: "Riot Gold" },
-  { id: "big-fm", label: "Big FM Celebrities" },
-  { id: "commercials", label: "Commercials & TVCs" },
+  { id: "right-gold", label: "Right Gold" },
+  { id: "big-fm", label: "Big FM" },
 ];
 
-const CARDS_PER_SLIDE = 9; // 3x3 Grid per slide on home page only
+const CARDS_PER_SLIDE = 9; // 3x3 Grid per slide on home page
 
 export default function OurCraftSectionV3() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Filter projects according to tab
+  // Filter projects according to client tab
   const filteredProjects =
     activeFilter === "all"
       ? CRAFT_PROJECTS
@@ -620,18 +484,18 @@ export default function OurCraftSectionV3() {
     <section className="v3-craft-section" id="craft" data-anchor="work">
       <div className="container-fluid v3-section-container px-3 px-md-5 px-xl-5">
         {/* =====================================================================
-            SECTION HEADER (EDITORIAL OGILVY AESTHETIC — PURE WHITE THEME)
+            SECTION HEADER (CLEAN LIVE WEBSITE RALWAY TYPOGRAPHY — PURE WHITE THEME)
+            Heading: exactly "OUR CRAFT", tagline removed as instructed
             ===================================================================== */}
         <div className="row mb-4 align-items-end justify-content-between g-4">
           <div className="col-12 col-lg-8">
             <div className="v3-section-eyebrow-wrap">
               <span className="v3-eyebrow-dash" />
-              <span className="v3-section-eyebrow">01 / OUR CRAFT</span>
+              <span className="v3-section-eyebrow">WORK SHOWCASE</span>
             </div>
 
-            <h2 className="v3-editorial-headline">
-              Our Craft. <br />
-              <span>Where Vision Meets Cultural Resonance.</span>
+            <h2 className="v3-craft-heading">
+              OUR CRAFT
             </h2>
 
             <p className="v3-editorial-subtext">
@@ -642,7 +506,7 @@ export default function OurCraftSectionV3() {
           </div>
 
           <div className="col-12 col-lg-4 text-lg-end">
-            <Link href="/projects" className="v3-craft-all-link">
+            <Link href="/home-v3/work" className="v3-craft-all-link">
               <span>EXPLORE FULL ARCHIVE</span>
               <ArrowUpRight size={16} />
             </Link>
@@ -650,7 +514,7 @@ export default function OurCraftSectionV3() {
         </div>
 
         {/* =====================================================================
-            CLIENT & DISCIPLINARY FILTER TABS + CAROUSEL CONTROLS
+            CLIENT FILTER TABS (All Work, Vikram Mills, Right Gold, Big FM)
             ===================================================================== */}
         <div className="v3-craft-filters-bar mb-4">
           <div className="v3-craft-filters-track">
@@ -709,9 +573,9 @@ export default function OurCraftSectionV3() {
 
         {/* =====================================================================
             3X3 GRID CAROUSEL STAGE (MAX 9 CARDS PER SLIDE ON HOME PAGE)
-            - Respects client filter: Vikram Mills (9), Riot Gold (9), Big FM (9), Commercials (9)
-            - If client has fewer cards, cleanly renders without breaking the grid
-            - Retains thumbnail-to-client-logo reveal & celebrity snapshots
+            - Category-based filtering with real creative thumbnails
+            - Mix-and-match presentation in All Work
+            - Ogilvy-inspired luxury hover effect & direct project link
             ===================================================================== */}
         <div className="v3-craft-carousel-viewport">
           <div className="row g-4 v3-craft-grid">
@@ -798,14 +662,21 @@ export default function OurCraftSectionV3() {
                       </div>
 
                       <h3 className="v3-craft-card-headline">{project.title}</h3>
-                      <p className="v3-craft-card-desc">{project.excerpt}</p>
+                      <p className="v3-craft-card-excerpt">{project.excerpt}</p>
 
-                      <div className="v3-craft-tags-strip">
-                        {project.tags.map((tag) => (
-                          <span key={tag} className="v3-craft-micro-tag">
-                            {tag}
-                          </span>
-                        ))}
+                      <div className="v3-craft-card-footer">
+                        <div className="v3-craft-tags-row">
+                          {project.tags.map((tag, tIdx) => (
+                            <span key={`tag-${tIdx}`} className="v3-craft-tag-pill">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        <div className="v3-craft-view-link">
+                          <span>VIEW</span>
+                          <ArrowUpRight size={13} />
+                        </div>
                       </div>
                     </div>
                   </Link>
@@ -815,32 +686,15 @@ export default function OurCraftSectionV3() {
           </div>
         </div>
 
-        {/* Carousel Pagination Dots at Bottom */}
-        {totalSlides > 1 && (
-          <div className="v3-craft-dots-wrap mt-4 d-flex justify-content-center align-items-center gap-2">
-            {Array.from({ length: totalSlides }).map((_, idx) => (
-              <button
-                key={idx}
-                type="button"
-                onClick={() => setCurrentSlide(idx)}
-                className={`v3-craft-dot ${idx === safeSlideIndex ? "is-active" : ""}`}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
-          </div>
-        )}
-
         {/* =====================================================================
-            BOTTOM SIGNATURE ACTION BAR
+            BOTTOM VIEW ALL LINK TO SEPARATE WORK PAGE
             ===================================================================== */}
-        <div className="row justify-content-center text-center mt-5 pt-2">
+        <div className="row justify-content-center text-center mt-5 pt-3">
           <div className="col-auto">
-            <Link href="/projects" className="v3-editorial-cta-link">
+            <Link href="/home-v3/work" className="v3-editorial-cta-link">
               <span className="v3-cta-dash" aria-hidden="true" />
-              <span>EXPLORE ALL ADCLAN PORTFOLIO & REELS</span>
-              <span className="v3-cta-arrow" aria-hidden="true">
-                →
-              </span>
+              <span>EXPLORE COMPLETE WORK PORTFOLIO</span>
+              <span className="v3-cta-arrow" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

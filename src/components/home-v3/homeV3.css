@@ -20,9 +20,8 @@
 
 /* Global Body Overrides when on Home-v3 */
 body.home-v3-active {
-  background-color: #ffffff !important;
+  background-color: transparent !important;
   color: #111111 !important;
-  font-family: "Outfit", sans-serif !important;
   margin: 0 !important;
   padding: 0 !important;
   overflow-x: hidden !important;
@@ -46,22 +45,35 @@ body.home-v3-active #smart-lead-chatbot {
   display: none !important;
 }
 
-/* Hide background pseudo element from globals.css */
-body.home-v3-active::before {
+/* Disable old fixed overlay elements */
+.home-v3-fixed-overlay {
   display: none !important;
 }
 
+/* User's exact requested background overlay on body:before */
+body.home-v3-active:before,
+body.home-v3-active::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/home/home-page-overlay.webp") !important;
+  background-size: 70%;
+  background-position: 50%;
+  background-repeat: repeat;
+  opacity: .3;
+  z-index: -1;
+  display: block !important;
+}
+
 /* ==========================================================================
-   ROOT PAGE CONTAINER (RESTORED SIGNATURE WARM ARCHITECTURAL STONE THEME)
+   ROOT PAGE CONTAINER (PROPER WHITE TOP HERO SECTION)
    ========================================================================== */
 .home-v3-page-wrapper {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background-color: #e9e7e3;
-  background:
-    radial-gradient(ellipse 60% 70% at 30% 45%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 70%),
-    linear-gradient(135deg, #efede9 0%, #e8e5e0 55%, #e2dfd9 100%);
+  background-color: #ffffff !important;
+  background: #ffffff !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -70,42 +82,11 @@ body.home-v3-active::before {
   padding-top: 85px;
 }
 
-/* Background Architectural Sweep / Arc matching exact prototype */
-.home-v3-bg-decor {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-}
-
-/* Purana SVG curve hide (screenshot wala circle neeche ::before se aata hai) */
+/* Remove decorative grey circles & gradients for pure white top section */
+.home-v3-bg-decor,
+.home-v3-grain,
 .home-v3-bg-curve-svg {
   display: none !important;
-}
-
-/* Large right-side architectural circle in bespoke warm tone */
-.home-v3-bg-decor::before {
-  content: "";
-  aspect-ratio: 1;
-  background: radial-gradient(circle at 12%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 55%), linear-gradient(90deg, #eae7e2 0%, #e4e0da 100%);
-  border-radius: 50%;
-  width: 90%;
-  position: absolute;
-  top: 30%;
-  left: 70%;
-  transform: translateY(-50%);
-  box-shadow: -22px 0 60px rgba(0, 0, 0, 0.08), -2px 0 10px rgba(0, 0, 0, 0.04), inset 16px 0 40px rgba(255, 255, 255, 0.45);
-}
-
-/* Ambient grain */
-.home-v3-grain {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px);
-  background-size: 22px 22px;
-  pointer-events: none;
-  opacity: 0.35;
 }
 
 /* ==========================================================================
@@ -118,20 +99,21 @@ body.home-v3-active::before {
   z-index: 1000;
   width: 100%;
   box-sizing: border-box;
-  padding: 24px 72px;
+  padding: 20px 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: transparent;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    padding 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .v3-navbar.is-sticky {
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  padding: 12px 72px;
+  background: #ffffff !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07) !important;
+  padding: 17px 72px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -140,7 +122,7 @@ body.home-v3-active::before {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  gap: 12px;
+  gap: 0;
   text-decoration: none;
   color: #0d0d0d;
   transition:
@@ -168,27 +150,37 @@ body.home-v3-active::before {
 }
 
 .v3-brand-wordmark {
-  font-family: "Montserrat", sans-serif;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 900 !important;
   letter-spacing: 0.16em;
   color: #0d0d0d;
   line-height: 1;
   display: inline-block;
   white-space: nowrap;
-  max-width: 160px;
+  margin-left: 12px;
+  max-width: 150px;
   opacity: 1;
+  filter: blur(0px);
   overflow: hidden;
-  transform-origin: left center;
-  transition: max-width 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, transform 0.3s ease, margin 0.3s ease;
+  will-change: opacity, filter, max-width, margin-left;
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    max-width 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    margin-left 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .v3-brand-wordmark.is-hidden {
-  max-width: 0;
   opacity: 0;
-  transform: scaleX(0);
-  margin-left: -12px;
+  filter: blur(4px);
+  max-width: 0;
+  margin-left: 0;
   pointer-events: none;
+  transition:
+    opacity 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+    filter 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+    max-width 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.04s,
+    margin-left 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.04s;
 }
 
 /* Navigation Links (Center) */
@@ -206,10 +198,9 @@ body.home-v3-active::before {
 }
 
 .v3-nav-link {
-  font-family: "Montserrat", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.24em;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #1a1a1a;
   text-decoration: none;
@@ -248,10 +239,9 @@ body.home-v3-active::before {
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.24em;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #1a1a1a;
   text-decoration: none;
@@ -329,19 +319,18 @@ body.home-v3-active::before {
 }
 
 .v3-eyebrow {
-  font-family: "Montserrat", sans-serif;
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #767069;
+  color: #666666;
   margin: 0;
   transition:
     opacity 0.4s ease,
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Giant Display Headline: 3 Lines with Periods (Playfair Display)
+/* Giant Display Headline: 3 Lines with Periods (Clean Bold Raleway matching live website identity)
    CRITICAL FIX: Zero clipping on ascenders/descenders */
 .v3-headline-wrap {
   margin-bottom: 26px;
@@ -349,16 +338,16 @@ body.home-v3-active::before {
 }
 
 .v3-headline {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(52px, 5.6vw, 86px);
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -0.012em;
-  color: #111111;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  overflow: visible !important;
+      letter-spacing: -.02em;
+    color: #111;
+    flex-direction: column;
+    margin: 0;
+    font-size: clamp(50px, 5.4vw, 80px);
+    font-weight: 800;
+    line-height: 1.1;
+    display: flex;
+    overflow: visible !important;
+    text-transform: uppercase;
 }
 
 .v3-headline-line {
@@ -370,7 +359,7 @@ body.home-v3-active::before {
 .v3-headline-text {
   display: inline-block;
   overflow: visible !important;
-  line-height: 1.12;
+  line-height: 1.1;
   transition:
     transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
     opacity 0.35s ease;
@@ -384,11 +373,10 @@ body.home-v3-active::before {
 }
 
 .v3-description {
-  font-family: "Outfit", "Raleway", sans-serif;
-  font-size: 15.5px;
-  font-weight: 400;
-  line-height: 1.55;
-  color: #6d6760;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #555555;
   margin: 0;
   white-space: pre-line;
   transition:
@@ -407,9 +395,8 @@ body.home-v3-active::before {
   align-items: center;
   gap: 16px;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  font-size: 11.5px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #121212;
@@ -629,7 +616,6 @@ body.home-v3-active::before {
   right: 8%;
   bottom: 9%;
   color: #fff;
-  font-family: "Jost", "Montserrat", sans-serif;
   font-weight: 600;
   font-size: clamp(11px, 1.5vw, 17px);
   line-height: 1.1;
@@ -668,7 +654,6 @@ body.home-v3-active::before {
 }
 
 .copy h2 {
-  font-family: "Jost", "Montserrat", sans-serif;
   font-weight: 300;
   font-size: clamp(13px, 1.35vw, 17px);
   letter-spacing: 0.42em;
@@ -736,7 +721,6 @@ body.home-v3-active::before {
   justify-content: flex-end;
   gap: 22px;
   z-index: 10;
-  font-family: "Jost", sans-serif;
   font-size: 14px;
   letter-spacing: 0.08em;
   color: var(--muted);
@@ -780,15 +764,15 @@ body.home-v3-active::before {
 }
 
 /* ==========================================================================
-   BOTTOM SERVICES / DOMAIN BAR (ORIGINAL WARM ARCHITECTURAL TONE)
+   BOTTOM SERVICES / DOMAIN BAR (CLEAN WHITE THEME)
    ========================================================================== */
 .v3-bottom-strip {
   position: relative;
   z-index: 20;
   width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
-  background: #ebe9e5;
+  background: #ffffff;
   padding: 0 40px;
 }
 
@@ -837,10 +821,9 @@ body.home-v3-active::before {
 }
 
 .v3-service-label {
-  font-family: "Montserrat", sans-serif;
   font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #1a1a1a;
   transition: color 0.25s ease;

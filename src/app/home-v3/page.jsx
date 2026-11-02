@@ -30,8 +30,8 @@ export default function HomeV3Page() {
   return (
     <div className="home-v3-full-flow">
       {/* =========================================================================
-          HERO SCREEN (EXACTLY AS USER DESIGNED & STYLED IN homeV3.css)
-          - Keeps exact background gradient, architectural circle, and slider
+          1. MAIN HERO BANNER (PURE WHITE THEME & BODY WAVE OVERLAY)
+          - Keeps exact slider layout, 3D cards, and crisp live website typography
           ========================================================================= */}
       <section className="home-v3-page-wrapper">
         <div className="home-v3-bg-decor" aria-hidden="true">
@@ -46,42 +46,48 @@ export default function HomeV3Page() {
           <div className="home-v3-grain" />
         </div>
 
-        {/* 1. Exact Reference Top Navigation Bar (OUR CRAFT, NARRATIVE, EXPERTISE, BRANDS, REACH US) */}
+        {/* Top Navigation Bar */}
         <HomeV3Navbar />
 
-        {/* 2. Exact Reference Hero Section with Synchronized 3D Card Slider */}
+        {/* Hero Section with Synchronized 3D Card Slider */}
         <HeroBannerSliderV3 />
 
-        {/* 3. Exact Reference Bottom Services Strip with Crisp Iconography */}
+        {/* Bottom Services Strip with Crisp Iconography */}
         <BottomServicesBarV3 />
       </section>
 
       {/* =========================================================================
-          SUBSEQUENT SECTIONS IN MATCHING HOME-V3 WARM EDITORIAL AESTHETIC
+          HOMEPAGE – FINAL SECTION STRUCTURE (PER SECTION 3 INSTRUCTIONS)
+          1. Main Hero Banner – Above
+          2. Our Craft – Immediately following Hero Banner
+          3. Case Studies – Optional section for future use
+          4. Articles – Existing content and design same
+          5. Footer – New light/white design
           ========================================================================= */}
       
-      {/* 4. NEW SECTION: "Our Craft" (Combined portfolio placed immediately after Hero Banner per Section 3 instructions) */}
+      {/* 2. Our Craft (Work showcase with category filters & real project images) */}
       <OurCraftSectionV3 />
 
-      {/* 5. Narrative Section ("The Art of Listening", Methodology + Founder & CEO) */}
-      <NarrativeSectionV3 />
-
-      {/* 6. Expertise Section (Redesigned "What We Do" -> "Expertise") */}
-      <ExpertiseSectionV3 />
-
-      {/* 6. Work Section ("Our work" -> "Work", Cinematic Reels + Case Studies) */}
+      {/* 3. Case Studies (Optional section for future use — Cinematic Reels & Studies) */}
       <WorkSectionV3 />
 
-      {/* 7. Brands Section ("Our clients" -> "Brands", Dual Infinite Marquee) */}
-      <BrandsSectionV3 />
-
-      {/* 8. The Journal / Blog Section ("Stories Behind the Strategy") */}
+      {/* 4. Articles ("Stories Behind the Strategy" — Unchanged content & design) */}
       <HomeBlogSectionV3 />
 
-      {/* 9. Reach Us Section ("reach us" remains same) */}
-      <ReachUsSectionV3 />
+      {/* =========================================================================
+          SECTIONS PRESERVED FOR DEDICATED SEPARATE PAGES (PER SECTION 6)
+          Hidden from Homepage, preserved intact for individual routes:
+          - Narrative & Founder: /home-v3/narrative & /home-v3/founder
+          - Expertise: /home-v3/expertise
+          - D3 Pillars / Brands: /home-v3/pillars & /home-v3/brands
+          - Connect: /home-v3/connect
+          ========================================================================= */}
+      {/* <NarrativeSectionV3 /> */}
+      {/* <ExpertiseSectionV3 /> */}
+      {/* <BrandsSectionV3 /> */}
+      {/* <ReachUsSectionV3 /> */}
 
-      {/* 10. Ultra-Premium Bespoke Home-v3 Footer */}
+      {/* 5. Ultra-Clean Light/White Home-v3 Footer */}
       <HomeV3Footer />
     </div>
   );

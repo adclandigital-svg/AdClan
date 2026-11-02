@@ -51,15 +51,14 @@ export default function BrandsSectionV3() {
           <div className="col-12 col-lg-10 col-xl-8">
             <div className="v3-section-eyebrow-wrap">
               <span className="v3-eyebrow-dash" />
-              <span className="v3-section-eyebrow">05 / BRANDS</span>
+              <span className="v3-section-eyebrow">PARTNERSHIPS</span>
             </div>
-            <h2 className="v3-editorial-headline">
-              Trusted by the Names <br />
-              <span>That Shape the Nation.</span>
+            <h2 className="v3-craft-heading">
+              BRANDS
             </h2>
             <p className="v3-editorial-subtext">
-              From iconic consumer staples to modern high-growth pioneers, leaders across
-              diverse industries rely on AdClan to build commanding market authority.
+              From iconic consumer staples to modern enterprise innovators, leading brands across
+              diverse industries partner with AdClan to command attention and create lasting market impact.
             </p>
           </div>
         </div>
@@ -109,8 +108,8 @@ export default function BrandsSectionV3() {
 
           <div className="col-12 col-md-4">
             <div className="v3-brands-strip-item h-100">
-              <span className="v3-strip-highlight">99.4% RETENTION</span>
-              <span className="v3-strip-caption">Continuous multi-year growth partnerships</span>
+              <span className="v3-strip-highlight">99.4% ATTENTION</span>
+              <span className="v3-strip-caption">High-impact recall and consumer engagement</span>
             </div>
           </div>
 

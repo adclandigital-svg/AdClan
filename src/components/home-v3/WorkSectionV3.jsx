@@ -123,11 +123,10 @@ export default function WorkSectionV3() {
           <div className="col-12 col-lg-10 col-xl-8">
             <div className="v3-section-eyebrow-wrap">
               <span className="v3-eyebrow-dash" />
-              <span className="v3-section-eyebrow">04 / PRODUCTION REELS</span>
+              <span className="v3-section-eyebrow">CASE STUDIES</span>
             </div>
             <h2 className="v3-editorial-headline">
-              Cinematic Moments. <br />
-              <span>Defining Cultural Conversations.</span>
+              Case Studies
             </h2>
             <p className="v3-editorial-subtext">
               Every campaign we launch is engineered to stand out in crowded feeds and urban spaces,
@@ -286,7 +285,7 @@ export default function WorkSectionV3() {
         {/* Explore All Work Link matching Section 1 Signature CTA */}
         <div className="row justify-content-center text-center pt-2">
           <div className="col-auto">
-            <Link href="/projects" className="v3-editorial-cta-link">
+            <Link href="/home-v3/work" className="v3-editorial-cta-link">
               <span className="v3-cta-dash" aria-hidden="true" />
               <span>EXPLORE FULL ARCHIVE & CAMPAIGNS</span>
               <span className="v3-cta-arrow" aria-hidden="true">→</span>

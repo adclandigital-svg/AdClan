@@ -10,7 +10,10 @@ export default function HomeV3Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
+      const currentScrollY =
+        window.scrollY || document.documentElement.scrollTop || 0;
+
+      if (currentScrollY > 35) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -50,34 +53,34 @@ export default function HomeV3Navbar() {
             </a>
           </li>
           <li className="v3-nav-item">
-            <a href="#narrative" className="v3-nav-link">
-              NARRATIVE
-            </a>
-          </li>
-          <li className="v3-nav-item">
-            <a href="#expertise" className="v3-nav-link">
-              EXPERTISE
-            </a>
-          </li>
-          <li className="v3-nav-item">
-            <a href="#work" className="v3-nav-link">
+            <Link href="/home-v3/work" className="v3-nav-link">
               WORK
-            </a>
+            </Link>
           </li>
           <li className="v3-nav-item">
-            <a href="#brands" className="v3-nav-link">
+            <Link href="/home-v3/narrative" className="v3-nav-link">
+              NARRATIVE
+            </Link>
+          </li>
+          <li className="v3-nav-item">
+            <Link href="/home-v3/expertise" className="v3-nav-link">
+              EXPERTISE
+            </Link>
+          </li>
+          <li className="v3-nav-item">
+            <Link href="/home-v3/brands" className="v3-nav-link">
               BRANDS
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
 
       {/* 3. Right: CTA ("— REACH US") */}
       <div className="v3-nav-right">
-        <a href="#reach-us" className="v3-lets-talk-btn">
+        <Link href="/home-v3/connect" className="v3-lets-talk-btn">
           <span className="v3-dash-line" aria-hidden="true" />
           <span>REACH US</span>
-        </a>
+        </Link>
       </div>
 
       {/* Mobile Drawer Toggle */}
@@ -114,47 +117,47 @@ export default function HomeV3Navbar() {
           >
             OUR CRAFT
           </a>
-          <a
-            href="#narrative"
-            className="v3-nav-link"
-            style={{ fontSize: "16px" }}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            NARRATIVE
-          </a>
-          <a
-            href="#expertise"
-            className="v3-nav-link"
-            style={{ fontSize: "16px" }}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            EXPERTISE
-          </a>
-          <a
-            href="#work"
+          <Link
+            href="/home-v3/work"
             className="v3-nav-link"
             style={{ fontSize: "16px" }}
             onClick={() => setMobileMenuOpen(false)}
           >
             WORK
-          </a>
-          <a
-            href="#brands"
+          </Link>
+          <Link
+            href="/home-v3/narrative"
+            className="v3-nav-link"
+            style={{ fontSize: "16px" }}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            NARRATIVE
+          </Link>
+          <Link
+            href="/home-v3/expertise"
+            className="v3-nav-link"
+            style={{ fontSize: "16px" }}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            EXPERTISE
+          </Link>
+          <Link
+            href="/home-v3/brands"
             className="v3-nav-link"
             style={{ fontSize: "16px" }}
             onClick={() => setMobileMenuOpen(false)}
           >
             BRANDS
-          </a>
-          <a
-            href="#reach-us"
+          </Link>
+          <Link
+            href="/home-v3/connect"
             className="v3-lets-talk-btn"
             style={{ fontSize: "16px", marginTop: "16px" }}
             onClick={() => setMobileMenuOpen(false)}
           >
             <span className="v3-dash-line" />
             REACH US
-          </a>
+          </Link>
         </div>
       )}
     </header>
