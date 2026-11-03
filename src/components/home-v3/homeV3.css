@@ -836,11 +836,11 @@ body.home-v3-active::before {
 
 .v3-service-item:hover .v3-service-icon-wrap {
   transform: translateY(-2px);
-  color: #8c7355;
+  color: #1e498b;
 }
 
 .v3-service-item:hover .v3-service-label {
-  color: #8c7355;
+  color: #1e498b;
 }
 
 /* ==========================================================================

@@ -54,7 +54,7 @@ body.home-v3-active {
   display: inline-block;
   width: 28px;
   height: 1px;
-  background-color: #8c7355;
+  background-color: #1e498b;
 }
 
 .v3-section-eyebrow {
@@ -63,7 +63,7 @@ body.home-v3-active {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #666666;
+  color: #1e498b;
 }
 
 .v3-editorial-headline {
@@ -197,17 +197,17 @@ body.home-v3-active {
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 30px;
-  background: #faf8f5;
-  border: 1px solid rgba(197, 168, 128, 0.4);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .v3-craft-all-link:hover {
-  background: #121212;
+  background: #1e498b;
   color: #ffffff;
-  border-color: #121212;
+  border-color: #1e498b;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 25px -8px rgba(30, 73, 139, 0.35);
 }
 
 /* Category & Client Filters Bar + Carousel Navigation */
@@ -229,8 +229,8 @@ body.home-v3-active {
 }
 
 .v3-craft-filter-btn {
-  background: #f7f5f0;
-  border: 1px solid rgba(197, 168, 128, 0.3);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 30px;
   padding: 10px 22px;
   font-family: "Montserrat", sans-serif;
@@ -246,17 +246,17 @@ body.home-v3-active {
 }
 
 .v3-craft-filter-btn:hover {
-  background: #ede8e1;
-  color: #121212;
-  border-color: #c5a880;
+  background: #f0f4fa;
+  color: #1e498b;
+  border-color: #1e498b;
   transform: translateY(-1px);
 }
 
 .v3-craft-filter-btn.is-active {
-  background: #121212;
+  background: #1e498b;
   color: #ffffff;
-  border-color: #121212;
-  box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.25);
+  border-color: #1e498b;
+  box-shadow: 0 6px 18px -4px rgba(30, 73, 139, 0.35);
 }
 
 .v3-craft-count-pill {
@@ -264,8 +264,8 @@ body.home-v3-active {
   font-weight: 700;
   padding: 2px 7px;
   border-radius: 10px;
-  background: rgba(140, 115, 85, 0.14);
-  color: #766650;
+  background: rgba(30, 73, 139, 0.1);
+  color: #1e498b;
   transition: all 0.2s ease;
 }
 
@@ -311,8 +311,8 @@ body.home-v3-active {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #faf8f5;
-  border: 1px solid rgba(197, 168, 128, 0.35);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   color: #0a0b0e;
   display: inline-flex;
   align-items: center;
@@ -322,11 +322,11 @@ body.home-v3-active {
 }
 
 .v3-craft-nav-arrow:hover {
-  background: #121212;
+  background: #1e498b;
   color: #ffffff;
-  border-color: #121212;
+  border-color: #1e498b;
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(30, 73, 139, 0.25);
 }
 
 /* Carousel Viewport & 3x3 Grid Stage */
@@ -354,330 +354,173 @@ body.home-v3-active {
 .v3-craft-dot.is-active {
   width: 28px;
   border-radius: 14px;
-  background: #8c7355;
+  background: #1e498b;
 }
 
-/* Craft Portfolio Cards (Solid Crisp White Cards Siting Over Wave Section Background) */
-.v3-craft-card {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  background: #ffffff !important;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
-  padding: 16px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
+/* ==========================================================================
+   OGILVY-STYLE WORK MASONRY (True 4-Column Continuous Flow Masonry)
+   - 4 Continuous Columns on desktop with 16px gap
+   - Cards stack vertically with ZERO row gaps / zero empty holes
+   - Every image displays 100% complete at its natural aspect ratio (ZERO CROPPING)
+   - ZERO BLACK BARS: Cards hug images tightly with natural auto height
+   - Royal Sapphire (#1e498b) minimal hover overlay with Title & Client Pill
+   ========================================================================== */
+.work__grid {
+  column-count: 4 !important;
+  column-gap: 16px !important;
+  display: block !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
 }
 
-.v3-craft-card:hover {
-  background: #ffffff !important;
-  border-color: #111111;
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.09);
+@media (max-width: 1200px) {
+  .work__grid {
+    column-count: 3 !important;
+    column-gap: 14px !important;
+  }
 }
 
-/* Media Frame (Strict 16:11 Consistent Ratio) */
-.v3-craft-media-frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 11;
-  border-radius: 14px;
-  overflow: hidden;
-  background-color: #ede8e1;
+@media (max-width: 768px) {
+  .work__grid {
+    column-count: 2 !important;
+    column-gap: 12px !important;
+  }
 }
 
-/* Default View: Actual Colorful Campaign Creative / Snapshot */
-.v3-craft-creative-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+@media (max-width: 480px) {
+  .work__grid {
+    column-count: 1 !important;
+    column-gap: 12px !important;
+  }
 }
 
-.v3-craft-card:hover .v3-craft-creative-img {
-  transform: scale(1.06);
-  filter: brightness(0.7) contrast(1.05);
+/* Individual Work Card */
+.work__item {
+  display: inline-block !important;
+  width: 100% !important;
+  margin-bottom: 16px !important;
+  break-inside: avoid !important;
+  -webkit-column-break-inside: avoid !important;
+  page-break-inside: avoid !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  background-color: transparent !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  vertical-align: top !important;
 }
 
-/* Subtle Corner Badge for Category */
-.v3-craft-corner-badge {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  padding: 5px 12px;
-  border-radius: 20px;
-  background: rgba(18, 18, 18, 0.75);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  z-index: 2;
-  transition: opacity 0.3s ease;
+.work__item:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16) !important;
 }
 
-.v3-craft-card:hover .v3-craft-corner-badge {
-  opacity: 0;
+/* Card Outer Link */
+.work__item a {
+  display: block !important;
+  width: 100% !important;
+  position: relative !important;
+  overflow: hidden !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* Hover Overlay Layer — Centered Luxury Agency Presentation */
-.v3-craft-hover-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(14, 15, 18, 0.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  opacity: 0;
-  pointer-events: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px 20px;
-  z-index: 3;
-  text-align: center;
-  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+/* Media Box */
+.work__item-media {
+  position: relative !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  background-color: transparent !important;
+  border-radius: 8px !important;
 }
 
-.v3-craft-card:hover .v3-craft-hover-overlay {
-  opacity: 1;
-  pointer-events: auto;
+/* Card Image — 100% UNCROPPED NATURAL DISPLAY (ZERO CROPPING / ZERO BLACK BARS) */
+.work__item img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  border-radius: 8px !important;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-.v3-craft-hover-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+.work__item a:hover img {
+  transform: scale(1.04) !important;
 }
 
-/* Client Official Brand Logo Box — Centered, Spacious & High Legibility */
-.v3-craft-logo-circle {
-  width: 176px;
-  height: 90px;
-  border-radius: 18px;
-  background: #ffffff;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
-  margin-bottom: 12px;
-  transform: scale(0.85);
-  opacity: 0;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+/* Deep Royal Sapphire (#1e498b) Minimal Hover Overlay */
+.work__item-title {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 1.5rem 1.25rem !important;
+  background-color: #1e498b !important; /* EXACT requested color code #1e498b */
+  color: #ffffff !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.28s !important;
+  margin: 0 !important;
+  z-index: 4 !important;
+  box-sizing: border-box !important;
+  border-radius: 8px !important;
 }
 
-.v3-craft-card:hover .v3-craft-logo-circle {
-  transform: scale(1);
-  opacity: 1;
+.work__item a:hover .work__item-title,
+.work__item a:focus .work__item-title,
+.work__item a.is-active .work__item-title {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-.v3-craft-client-logo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transform: scale(1.75);
-  transform-origin: center center;
-  display: block;
+/* Refined Typography (Clean, modern, readable at a glance) */
+.work__item-title > span {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  text-align: center !important;
+  max-width: 90% !important;
 }
 
-.v3-craft-hover-meta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 8px;
+.work__item-headline {
+  display: block !important;
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: clamp(14px, 1.1vw, 17px) !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.01em !important;
+  color: #ffffff !important;
 }
 
-.v3-craft-client-eyebrow {
-  font-family: "Raleway", sans-serif;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #ffffff;
+.work__item--large .work__item-headline {
+  font-size: clamp(17px, 1.4vw, 22px) !important;
 }
 
-.v3-craft-discipline-pill {
-  font-family: "Raleway", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  padding: 2px 10px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #e5b96a;
-  border: 1px solid rgba(229, 185, 106, 0.3);
-}
-
-.v3-craft-hover-title {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.35;
-  color: #ffffff;
-  margin: 0 0 10px 0;
-  max-width: 90%;
-  text-align: center;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.v3-craft-celeb-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 12px;
-  border-radius: 16px;
-  background: rgba(212, 175, 55, 0.2);
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  color: #ffd700;
-  font-family: "Raleway", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  margin-bottom: 10px;
-}
-
-.v3-craft-hover-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 20px;
-  border-radius: 30px;
-  background: #ffffff;
-  color: #111111;
-  font-family: "Raleway", sans-serif;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  transition: all 0.25s ease;
-  margin-top: 4px;
-}
-
-.v3-craft-hover-cta:hover {
-  background: #17b9a9;
-  color: #ffffff;
-  transform: translateY(-2px);
-}
-
-/* Caption Strip Below Card */
-.v3-craft-caption {
-  padding: 18px 8px 6px 8px;
-}
-
-.v3-craft-caption-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.v3-craft-meta-category {
-  font-family: "Montserrat", sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #8c7355;
-}
-
-.v3-craft-meta-client {
-  font-family: "Outfit", sans-serif;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: #2b2824;
-}
-
-.v3-craft-card-headline {
-  font-family: "Raleway", sans-serif !important;
-  font-size: 18.5px;
-  font-weight: 700;
-  line-height: 1.35;
-  color: #121212;
-  margin: 0 0 10px 0;
-  transition: color 0.3s ease;
-}
-
-.v3-craft-card:hover .v3-craft-card-headline {
-  color: #17b9a9;
-}
-
-.v3-craft-card-excerpt,
-.v3-craft-card-desc {
-  font-family: "Raleway", sans-serif;
-  font-size: 13.5px;
-  line-height: 1.55;
-  color: #555555;
-  margin: 0 0 14px 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.v3-craft-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: auto;
-  padding-top: 14px;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.v3-craft-tags-row,
-.v3-craft-tags-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
-}
-
-.v3-craft-tag-pill,
-.v3-craft-micro-tag {
-  font-family: "Raleway", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 12px;
-  background: #f3f0ea;
-  color: #4a453e;
-  letter-spacing: 0.02em;
-  display: inline-block;
-  white-space: nowrap;
-}
-
-.v3-craft-view-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-family: "Raleway", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: #111111;
-  text-transform: uppercase;
-  flex-shrink: 0;
-  transition: color 0.25s ease, transform 0.25s ease;
-}
-
-.v3-craft-card:hover .v3-craft-view-link {
-  color: #17b9a9;
-  transform: translateX(2px);
+.work__item-client {
+  display: inline-block !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  background: rgba(255, 255, 255, 0.16) !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  padding: 4px 14px !important;
+  border-radius: 20px !important;
 }
 
 /* ==========================================================================
@@ -695,13 +538,13 @@ body.home-v3-active {
 
 .v3-narrative-section .v3-section-eyebrow,
 .v3-narrative-section .v3-sub-eyebrow {
-  color: #8c7355;
+  color: #1e498b;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
 
 .v3-narrative-section .v3-eyebrow-dash {
-  background-color: #8c7355;
+  background-color: #1e498b;
 }
 
 .v3-narrative-section .v3-editorial-headline {
@@ -960,107 +803,445 @@ body.home-v3-active {
 }
 
 /* ==========================================================================
-   4. FOUNDER & CEO SECTION
+   4. AGENCY LEADERSHIP (EXACT OGILVY TEAM ARCHITECTURE - IN-PLACE SLIDING STAGE)
+   Inspired by ogilvy.com/team
+   - 3-column portrait cards row
+   - Hover state: Card turns solid #1e498b with white name, italic title, and '+' icon
+   - Click state:
+     * Card 1 stays in Column 1
+     * Card 2 (Center) photo slides left into Column 1
+     * Card 3 (Right) photo slides left into Column 1
+     * Content/Details panel displays in Columns 2 & 3
+   - Close state (✕):
+     * Active photo slides back to its original column
+     * Other cards fade back in
    ========================================================================== */
-.v3-founder-editorial-section {
+.v3-team-section {
   position: relative;
-  padding: 10px 0;
+  padding: 20px 0 0 0;
 }
 
-.v3-founder-portrait-frame {
+.v3-team-stage {
   position: relative;
-  border-radius: 22px;
-  padding: 12px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
-}
-
-.v3-founder-portrait-img {
   width: 100%;
-  aspect-ratio: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  --grid-gap: 24px;
+  gap: var(--grid-gap);
+  align-items: stretch;
+}
+
+/* Base Card Slot */
+.v3-team-card-slot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 4;
+  min-height: 480px;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.4s ease,
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+/* Explicit Desktop Grid Placement for 3 columns */
+@media (min-width: 992px) {
+  .v3-team-card-slot.slot-0 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .v3-team-card-slot.slot-1 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .v3-team-card-slot.slot-2 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  /* SLIDING MECHANICS:
+     - Slot 0: stays in Column 1 (translateX(0))
+     - Slot 1: slides left 1 column distance into Column 1 (translateX(-100% - gap))
+     - Slot 2: slides left 2 columns distance into Column 1 (translateX(-200% - 2*gap))
+  */
+  .v3-team-stage.is-expanded .v3-team-card-slot.slot-0.is-active {
+    transform: translateX(0);
+    z-index: 10;
+  }
+
+  .v3-team-stage.is-expanded .v3-team-card-slot.slot-1.is-active {
+    transform: translateX(calc(-100% - var(--grid-gap)));
+    z-index: 10;
+  }
+
+  .v3-team-stage.is-expanded .v3-team-card-slot.slot-2.is-active {
+    transform: translateX(calc(-200% - (2 * var(--grid-gap))));
+    z-index: 10;
+  }
+
+  /* When closing: active card smoothly slides back to 0 */
+  .v3-team-stage.is-closing .v3-team-card-slot.is-active {
+    transform: translateX(0) !important;
+  }
+
+  /* Inactive cards fade out when a card is expanded */
+  .v3-team-stage.is-expanded .v3-team-card-slot.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Inactive cards fade back in when closing */
+  .v3-team-stage.is-closing .v3-team-card-slot.is-hidden {
+    opacity: 1 !important;
+    pointer-events: auto;
+    transition: opacity 0.4s ease 0.1s;
+  }
+}
+
+/* Card Container & Portrait */
+.v3-team-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f0f2f5;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.v3-team-card-slot:hover .v3-team-card {
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+}
+
+.v3-team-portrait {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 14px;
+  object-position: center top;
   display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.v3-founder-corner-badge {
+.v3-team-card-slot:hover .v3-team-portrait {
+  transform: scale(1.04);
+}
+
+/* Hover overlay: active card disables hover overlay so clean photo is visible sliding */
+.v3-team-hover-overlay {
   position: absolute;
-  top: 26px;
-  left: 26px;
-  padding: 7px 16px;
-  border-radius: 30px;
-  background: #111111;
+  inset: 0;
+  background-color: #1e498b;
   color: #ffffff;
-  border: none;
-  font-family: "Raleway", sans-serif;
-  font-size: 9.5px;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-}
-
-.v3-founder-bio-col {
+  padding: 34px 28px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.28s;
+  z-index: 2;
 }
 
-.v3-founder-display-name {
-  font-family: "Raleway", sans-serif;
-  font-size: clamp(34px, 3.8vw, 50px);
-  font-weight: 800;
-  color: #111111;
-  margin: 0 0 6px 0;
+.v3-team-card-slot:not(.is-active):hover .v3-team-hover-overlay {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.v3-founder-official-title {
-  font-family: "Raleway", sans-serif;
-  font-size: 11.5px;
+/* When card is active, hide hover overlay completely so photo is shown */
+.v3-team-card-slot.is-active .v3-team-hover-overlay {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.v3-team-card-slot.is-active .v3-team-portrait {
+  transform: none !important;
+}
+
+/* Overlay Typography */
+.v3-team-overlay-name {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(24px, 1.8vw, 32px);
   font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #666666;
-  margin-bottom: 22px;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.01em;
+}
+
+.v3-team-overlay-name span {
+  display: block;
+  font-weight: 700;
+}
+
+.v3-team-overlay-title {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: clamp(18px, 1.35vw, 23px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+.v3-team-overlay-title span {
   display: block;
 }
 
-.v3-founder-biography {
-  font-family: "Raleway", sans-serif;
-  font-size: 15.5px;
-  line-height: 1.72;
-  color: #555555;
-  margin: 0 0 26px 0;
+.v3-team-overlay-plus {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
 }
 
-.v3-founder-callout-quote {
-  padding-left: 22px;
-  border-left: 2px solid #111111;
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.55;
-  color: #111111;
-  margin: 0 0 28px 0;
+.v3-team-card-slot:hover .v3-team-overlay-plus {
+  transform: scale(1.15);
 }
 
-.v3-founder-sign-off {
+/* ==========================================================================
+   DETAILS PANEL: Occupies Columns 2 & 3 in the same row
+   ========================================================================== */
+.v3-team-details-panel {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 44px 48px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 220px 1fr 200px;
+  gap: 32px;
+  align-items: start;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.4s ease 0.12s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.12s;
+  animation: ogilvyDetailsIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes ogilvyDetailsIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.v3-team-details-panel.is-closing {
+  opacity: 0 !important;
+  transform: translateX(20px) !important;
+  pointer-events: none !important;
+  transition: opacity 0.25s ease, transform 0.25s ease !important;
+}
+
+@media (min-width: 992px) {
+  .v3-team-details-panel {
+    grid-column: 2 / span 2;
+    grid-row: 1;
+    height: 100%;
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+  .v3-team-details-panel {
+    grid-template-columns: 190px 1fr 180px;
+    gap: 24px;
+    padding: 36px 36px;
+  }
+}
+
+/* Location Badge */
+.v3-team-location-badge {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: "Raleway", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #1e498b;
+  text-transform: uppercase;
+  background: rgba(30, 73, 139, 0.15);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+/* Detail Panel Typography */
+.v3-ogilvy-col-identity {
   display: flex;
   flex-direction: column;
 }
 
-.v3-signature-rendered {
-  font-family: "Raleway", sans-serif;
-  font-size: 22px;
+.v3-ogilvy-drawer-name {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(22px, 1.8vw, 28px);
   font-weight: 700;
-  font-style: normal;
-  color: #111111;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.01em;
 }
 
-.v3-sign-title {
-  font-family: "Raleway", sans-serif;
-  font-size: 13px;
-  color: #777777;
+.v3-ogilvy-drawer-title {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: clamp(17px, 1.3vw, 21px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
 }
+
+.v3-ogilvy-drawer-bio {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 12px;
+}
+
+/* Custom minimal scrollbar for bio */
+.v3-ogilvy-drawer-bio::-webkit-scrollbar {
+  width: 4px;
+}
+.v3-ogilvy-drawer-bio::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.v3-ogilvy-drawer-bio p {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.68;
+  color: #d1d1d1;
+  margin-bottom: 14px;
+}
+
+.v3-ogilvy-drawer-bio p:last-child {
+  margin-bottom: 0;
+}
+
+.v3-ogilvy-drawer-meta-section {
+  margin-bottom: 22px;
+}
+
+.v3-ogilvy-drawer-meta-section:last-child {
+  margin-bottom: 0;
+}
+
+.v3-ogilvy-drawer-meta-title {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.v3-ogilvy-drawer-meta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.v3-ogilvy-drawer-meta-list li {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #b5b5b5;
+  margin-bottom: 10px;
+}
+
+.v3-ogilvy-drawer-meta-link {
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 6px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.v3-ogilvy-drawer-meta-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  transform: translateX(2px);
+}
+
+.v3-ogilvy-drawer-arrow {
+  color: #ffffff;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.v3-ogilvy-drawer-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 20;
+}
+
+.v3-ogilvy-drawer-close:hover {
+  background: #1e498b;
+  border-color: #1e498b;
+  color: #ffffff;
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 4px 14px rgba(30, 73, 139, 0.4);
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE (<= 991px)
+   ========================================================================== */
+@media (max-width: 991px) {
+  .v3-team-stage {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .v3-team-card-slot {
+    aspect-ratio: 3 / 4;
+    min-height: 380px;
+    transform: none !important;
+  }
+
+  .v3-team-stage.is-expanded .v3-team-card-slot.is-hidden {
+    display: none;
+  }
+
+  .v3-team-details-panel {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 30px 24px 60px 24px;
+    margin-top: 10px;
+  }
+
+  .v3-ogilvy-drawer-bio {
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
 
 /* ==========================================================================
    2. EXPERTISE SECTION (#expertise) — REDESIGNED WHAT WE DO
@@ -1097,11 +1278,11 @@ body.home-v3-active {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background: #faf8f5;
-  border: 1px solid rgba(214, 203, 190, 0.6);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 24px;
   border-radius: 24px;
-  box-shadow: 0 4px 20px rgba(140, 115, 85, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 .v3-expertise-nav-header {
@@ -1109,7 +1290,7 @@ body.home-v3-active {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 14px;
-  border-bottom: 1px solid rgba(214, 203, 190, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   margin-bottom: 6px;
 }
 
@@ -1118,7 +1299,7 @@ body.home-v3-active {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.16em;
-  color: #8c7355;
+  color: #1e498b;
 }
 
 .v3-expertise-tab-item {
@@ -1127,7 +1308,7 @@ body.home-v3-active {
   padding: 16px 20px;
   border-radius: 16px;
   background: #ffffff;
-  border: 1px solid rgba(214, 203, 190, 0.45);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1136,17 +1317,17 @@ body.home-v3-active {
 }
 
 .v3-expertise-tab-item:hover {
-  background: #ede8e1;
+  background: #f0f4fa;
   transform: translateX(4px);
-  border-color: #c5a880;
-  box-shadow: 0 8px 24px -8px rgba(197, 168, 128, 0.25);
+  border-color: #1e498b;
+  box-shadow: 0 8px 24px -8px rgba(30, 73, 139, 0.2);
 }
 
 .v3-expertise-tab-item.is-active {
-  background: #f4efe7;
-  border-color: #c5a880;
-  border-left: 4px solid #8c7355;
-  box-shadow: 0 12px 30px -10px rgba(140, 115, 85, 0.18);
+  background: #eef4fc;
+  border-color: #1e498b;
+  border-left: 4px solid #1e498b;
+  box-shadow: 0 12px 30px -10px rgba(30, 73, 139, 0.18);
 }
 
 .v3-tab-item-left {
@@ -1159,7 +1340,7 @@ body.home-v3-active {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   font-weight: 800;
-  color: #8c7355;
+  color: #1e498b;
   min-width: 28px;
 }
 
@@ -1193,22 +1374,22 @@ body.home-v3-active {
 }
 
 .v3-expertise-tab-item:hover .v3-tab-item-arrow {
-  color: #8c7355;
+  color: #1e498b;
   transform: translateX(3px);
 }
 
 .v3-expertise-tab-item.is-active .v3-tab-item-arrow {
-  color: #8c7355;
+  color: #1e498b;
   transform: translateX(4px);
 }
 
 /* Right: Active Discipline Spotlight Card */
 .v3-expertise-spotlight-card {
-  background: #faf8f5;
-  border: 1px solid rgba(214, 203, 190, 0.7);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 24px;
   padding: 44px 40px;
-  box-shadow: 0 16px 45px -15px rgba(140, 115, 85, 0.12);
+  box-shadow: 0 16px 45px -15px rgba(0, 0, 0, 0.06);
   position: sticky;
   top: 110px;
 }
@@ -1218,7 +1399,7 @@ body.home-v3-active {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(214, 203, 190, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   margin-bottom: 24px;
 }
 
@@ -1226,7 +1407,7 @@ body.home-v3-active {
   font-family: "Raleway", sans-serif;
   font-size: 28px;
   font-weight: 800;
-  color: #8c7355;
+  color: #1e498b;
 }
 
 .v3-spotlight-discipline {
@@ -1245,9 +1426,9 @@ body.home-v3-active {
   letter-spacing: 0.16em;
   padding: 4px 12px;
   border-radius: 20px;
-  background: #ede8e1;
-  border: 1px solid rgba(197, 168, 128, 0.35);
-  color: #766650;
+  background: #eef4fc;
+  border: 1px solid rgba(30, 73, 139, 0.2);
+  color: #1e498b;
 }
 
 .v3-spotlight-title {
@@ -1293,21 +1474,21 @@ body.home-v3-active {
   gap: 6px;
   padding: 6px 14px;
   border-radius: 20px;
-  background: #ede8e1;
-  border: 1px solid rgba(197, 168, 128, 0.35);
+  background: #f0f4fa;
+  border: 1px solid rgba(30, 73, 139, 0.15);
   font-family: "Outfit", sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: #3c3833;
+  color: #121212;
   transition: all 0.25s ease;
   cursor: default;
 }
 
 .v3-spotlight-tag-pill:hover {
   background: #ffffff;
-  border-color: #c5a880;
+  border-color: #1e498b;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(197, 168, 128, 0.2);
+  box-shadow: 0 6px 16px rgba(30, 73, 139, 0.2);
 }
 
 .v3-tag-check-icon {
@@ -1362,7 +1543,7 @@ body.home-v3-active {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
-  border-top: 1px solid rgba(214, 203, 190, 0.6);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding-top: 16px;
 }
 
@@ -1383,9 +1564,9 @@ body.home-v3-active {
 }
 
 .v3-expertise-view-projects-btn:hover {
-  background: #8c7355;
+  background: #1e498b;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -8px rgba(140, 115, 85, 0.35);
+  box-shadow: 0 10px 25px -8px rgba(30, 73, 139, 0.35);
   color: #ffffff;
 }
 
@@ -1431,13 +1612,13 @@ body.home-v3-active {
 
 .v3-work-section .v3-section-eyebrow,
 .v3-work-section .v3-work-sub-eyebrow {
-  color: #8c7355;
+  color: #1e498b;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
 
 .v3-work-section .v3-eyebrow-dash {
-  background-color: #8c7355;
+  background-color: #1e498b;
 }
 
 .v3-work-section .v3-editorial-headline {
@@ -1621,7 +1802,7 @@ body.home-v3-active {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #e5b96a;
+  color: #1e498b;
   margin-bottom: 6px;
   display: block;
 }
@@ -1682,8 +1863,8 @@ body.home-v3-active {
 }
 
 .v3-study-card:hover .v3-study-image-wrapper {
-  border-color: #111111;
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
+  border-color: #1e498b;
+  box-shadow: 0 18px 42px rgba(30, 73, 139, 0.15);
 }
 
 .v3-study-img {
@@ -1723,7 +1904,7 @@ body.home-v3-active {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
-  color: #8c7355;
+  color: #1e498b;
   margin-bottom: 8px;
 }
 
@@ -1738,7 +1919,7 @@ body.home-v3-active {
 }
 
 .v3-study-card:hover .v3-study-title {
-  color: #17b9a9;
+  color: #1e498b;
 }
 
 .v3-study-cta-link {
@@ -1754,11 +1935,7 @@ body.home-v3-active {
 }
 
 .v3-study-card:hover .v3-study-cta-link {
-  color: #17b9a9;
-}
-
-.v3-study-card:hover .v3-study-cta-link {
-  color: #c9a96e;
+  color: #1e498b;
 }
 
 .v3-work-footer-cta {
@@ -1772,7 +1949,7 @@ body.home-v3-active {
 }
 
 .v3-work-footer-cta .v3-editorial-cta-link .v3-cta-dash {
-  background-color: #c9a96e;
+  background-color: #1e498b;
 }
 
 /* ==========================================================================
@@ -1859,21 +2036,21 @@ body.home-v3-active {
   height: 90px;
   padding: 16px 24px;
   border-radius: 16px;
-  background: #faf8f5;
-  border: 1px solid rgba(214, 203, 190, 0.6);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 6px 20px -8px rgba(140, 115, 85, 0.06);
+  box-shadow: 0 6px 20px -8px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
 }
 
 .v3-floating-logo-item:hover {
   background: #ffffff;
-  border-color: #c5a880;
+  border-color: #1e498b;
   transform: translateY(-4px);
-  box-shadow: 0 16px 36px -10px rgba(197, 168, 128, 0.25);
+  box-shadow: 0 16px 36px -10px rgba(30, 73, 139, 0.25);
 }
 
 .v3-prestigious-logo {
@@ -1916,7 +2093,7 @@ body.home-v3-active {
   top: 15%;
   height: 70%;
   width: 1px;
-  background-color: rgba(214, 203, 190, 0.7);
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .v3-strip-highlight {
@@ -1951,26 +2128,26 @@ body.home-v3-active {
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  background: #faf8f5;
-  border: 1px solid rgba(214, 203, 190, 0.65);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 12px 35px -12px rgba(140, 115, 85, 0.06);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .v3-journal-card:hover {
   transform: translateY(-6px);
   background: #ffffff;
-  border-color: #c5a880;
-  box-shadow: 0 22px 50px -15px rgba(197, 168, 128, 0.22);
+  border-color: #1e498b;
+  box-shadow: 0 22px 50px -15px rgba(30, 73, 139, 0.22);
 }
 
 .v3-journal-media-frame {
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: #ede8e1;
+  background: #f0f4fa;
 }
 
 .v3-journal-card-img {
@@ -2039,7 +2216,7 @@ body.home-v3-active {
 }
 
 .v3-journal-card:hover .v3-journal-card-title {
-  color: #8c7355;
+  color: #1e498b;
 }
 
 .v3-journal-card-excerpt {
@@ -2070,7 +2247,7 @@ body.home-v3-active {
 }
 
 .v3-journal-card:hover .v3-journal-card-cta {
-  color: #8c7355;
+  color: #1e498b;
 }
 
 .v3-journal-footer-cta {
@@ -2092,13 +2269,13 @@ body.home-v3-active {
 }
 
 .v3-reach-section .v3-section-eyebrow {
-  color: #8c7355;
+  color: #1e498b;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
 
 .v3-reach-section .v3-eyebrow-dash {
-  background-color: #8c7355;
+  background-color: #1e498b;
 }
 
 .v3-reach-section .v3-editorial-headline {
@@ -2134,7 +2311,7 @@ body.home-v3-active {
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.22em;
-  color: #8c7355;
+  color: #1e498b;
   text-transform: uppercase;
   margin-bottom: 12px;
   display: block;
@@ -2186,10 +2363,10 @@ body.home-v3-active {
 }
 
 .v3-reach-signature-btn:hover {
-  background: #17b9a9;
+  background: #1e498b;
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(23, 185, 169, 0.25);
+  box-shadow: 0 14px 32px rgba(30, 73, 139, 0.35);
 }
 
 .v3-reach-signature-btn:hover .v3-cta-dash {
@@ -2212,7 +2389,7 @@ body.home-v3-active {
 }
 
 .v3-reach-secondary-link:hover {
-  color: #17b9a9;
+  color: #1e498b;
 }
 
 .v3-reach-guarantee-row {
@@ -2261,17 +2438,17 @@ body.home-v3-active {
 
 .v3-desk-item:hover {
   background: #ffffff;
-  border-color: #111111;
+  border-color: #1e498b;
   transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 32px rgba(30, 73, 139, 0.12);
 }
 
 .v3-desk-icon {
   width: 46px;
   height: 46px;
   border-radius: 12px;
-  background: #f4efe7;
-  color: #111111;
+  background: #eef4fc;
+  color: #1e498b;
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -2279,7 +2456,7 @@ body.home-v3-active {
 }
 
 .v3-desk-item:hover .v3-desk-icon {
-  background: #111111;
+  background: #1e498b;
   color: #ffffff;
 }
 
@@ -2289,7 +2466,7 @@ body.home-v3-active {
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.18em;
-  color: #8c7355;
+  color: #1e498b;
   margin-bottom: 6px;
 }
 
@@ -2309,7 +2486,7 @@ body.home-v3-active {
 }
 
 .v3-desk-val:hover {
-  color: #17b9a9;
+  color: #1e498b;
 }
 
 .v3-desk-sep {
@@ -2333,26 +2510,213 @@ body.home-v3-active {
 }
 
 /* ==========================================================================
-   7. LIGHT & WHITE FOOTER — MATCHING WHITE-AND-WAVE IDENTITY
+   7. ULTRA-PREMIUM LUXURY FOOTER — PURE JET-BLACK OBSIDIAN & RAZOR-SHARP CONTRAST
    ========================================================================== */
 .v3-footer {
   position: relative;
-  background-color: transparent !important;
-  background: transparent !important;
-  color: #111111;
-  padding: 80px 0 44px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: #000000 !important; /* Pure pitch-black obsidian — ZERO FADE / ZERO MILKY HAZE */
+  background: #000000 !important;
+  color: #ffffff !important;
+  padding: 85px 0 32px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* Remove milky blurry ambient haze */
+.v3-footer-glow-1,
+.v3-footer-glow-2 {
+  display: none !important;
 }
 
 .v3-footer-inner {
+  position: relative;
+  z-index: 2;
   width: 100%;
   max-width: 1720px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-.v3-footer-brand-bar {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+/* ==========================================================================
+   HERO CALL-TO-ACTION BANNER (Deep Rich Midnight Obsidian Card, Ultra-High Contrast)
+   ========================================================================== */
+.v3-footer-hero-cta {
+  background: linear-gradient(180deg, #0e1424 0%, #060911 100%) !important; /* Deep solid rich midnight obsidian */
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-top: 1px solid #1e498b !important; /* Brand Blue Rim */
+  border-radius: 20px !important;
+  padding: 50px 48px !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.v3-footer-hero-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(30, 73, 139, 0.3) 25%, #1e498b 50%, rgba(30, 73, 139, 0.3) 75%, transparent 100%);
+}
+
+.v3-footer-cta-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #1e498b !important; /* Brand Blue */
+  margin-bottom: 16px;
+}
+
+.v3-footer-cta-heading {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(24px, 2.7vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #ffffff !important; /* Pure brilliant crisp white */
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+.v3-footer-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+@media (min-width: 992px) {
+  .v3-footer-cta-actions {
+    justify-content: flex-end;
+  }
+}
+
+.v3-footer-cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 30px;
+  border-radius: 30px;
+  background: #ffffff !important;
+  color: #000000 !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.v3-footer-cta-btn-primary:hover {
+  background: #1e498b !important; /* Brand Blue */
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(30, 73, 139, 0.55);
+}
+
+.v3-btn-arrow-wrap {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #000000;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  transition: transform 0.3s ease;
+}
+
+.v3-footer-cta-btn-primary:hover .v3-btn-arrow-wrap {
+  transform: rotate(45deg);
+  background: #ffffff;
+  color: #1e498b;
+}
+
+.v3-footer-cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 26px;
+  border-radius: 30px;
+  background: #0e1424 !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.v3-footer-cta-btn-secondary:hover {
+  background: #1e498b !important;
+  border-color: #1e498b !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(30, 73, 139, 0.4);
+}
+
+/* ==========================================================================
+   KINETIC MARQUEE RIBBON (Solid Deep Pitch-Black, Razor-Sharp)
+   ========================================================================== */
+.v3-footer-marquee-strip {
+  width: 100%;
+  overflow: hidden;
+  background: #05070c !important; /* Solid deep obsidian strip */
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 15px 0;
+}
+
+.v3-footer-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  white-space: nowrap;
+  animation: v3FooterMarquee 38s linear infinite;
+  width: max-content;
+}
+
+@keyframes v3FooterMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.v3-footer-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.9) !important; /* Crisp silver white */
+}
+
+.v3-marquee-sparkle {
+  color: #1e498b !important; /* Brand Blue */
+}
+
+/* ==========================================================================
+   MAIN 4 ARCHITECTURAL COLUMNS
+   ========================================================================== */
+.v3-footer-columns-grid {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09) !important;
+  padding-bottom: 40px !important;
 }
 
 .v3-footer-logo-lockup {
@@ -2360,84 +2724,76 @@ body.home-v3-active {
   align-items: center;
   gap: 14px;
   text-decoration: none;
-  color: #111111;
-  margin-bottom: 18px;
+  color: #ffffff !important;
+  margin-bottom: 20px;
 }
 
 .v3-footer-monogram {
-  width: 34px;
-  height: 42px;
-  fill: #111111;
+  width: 36px;
+  height: 44px;
+  fill: #ffffff !important;
+  filter: drop-shadow(0 0 14px rgba(30, 73, 139, 0.7));
 }
 
 .v3-footer-brand-name {
   font-family: "Raleway", sans-serif;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   text-transform: uppercase !important;
-  color: #111111;
+  color: #ffffff !important;
 }
 
 .v3-footer-tagline {
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
-  line-height: 1.6;
-  color: #555555;
-  max-width: 620px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.76) !important; /* High contrast */
+  max-width: 420px;
   margin: 0;
 }
 
-.v3-footer-top-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
+.v3-footer-badge {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  color: #111111;
-  font-family: "Raleway", sans-serif;
-  font-size: 11px;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #080d1a !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.2em;
-  padding: 10px 0;
-  transition: opacity 0.3s ease;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
-.v3-footer-top-btn:hover {
-  opacity: 0.8;
-}
-
-.v3-top-icon-circle {
-  width: 44px;
-  height: 44px;
+.v3-badge-pulse {
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  display: grid;
-  place-items: center;
-  color: #111111;
-  background: #ffffff;
-  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  background-color: #00e676 !important;
+  box-shadow: 0 0 12px #00e676 !important;
+  animation: v3PulseGlow 2s infinite ease-in-out;
 }
 
-.v3-footer-top-btn:hover .v3-top-icon-circle {
-  transform: translateY(-3px);
-  background: #111111;
-  color: #ffffff;
-  border-color: #111111;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.v3-footer-columns-grid {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+@keyframes v3PulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
 }
 
 .v3-col-title {
-  font-family: "Raleway", sans-serif;
-  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.18em;
-  color: #111111;
+  letter-spacing: 0.22em;
+  color: #1e498b !important; /* Brand Blue */
   margin: 0 0 24px 0;
   text-transform: uppercase;
 }
@@ -2448,154 +2804,280 @@ body.home-v3-active {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 13px;
 }
 
 .v3-footer-link-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: "Raleway", sans-serif;
   font-size: 14.5px;
   font-weight: 500;
-  color: #555555;
+  color: rgba(255, 255, 255, 0.76) !important; /* Clear, sharp, readable */
   text-decoration: none;
-  transition: color 0.25s ease, transform 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.v3-link-dash {
   display: inline-block;
+  width: 0;
+  height: 1px;
+  background: #1e498b; /* Brand Blue */
+  transition: width 0.25s ease;
 }
 
 .v3-footer-link-list a:hover {
-  color: #17b9a9;
+  color: #ffffff !important;
   transform: translateX(4px);
 }
 
-.v3-footer-contact-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.v3-footer-link-list a:hover .v3-link-dash {
+  width: 14px;
+}
+
+/* ==========================================================================
+   DIRECT CONCIERGE CARDS (Solid, Deep, High-Contrast)
+   ========================================================================== */
+.v3-desk-cards-wrap {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 12px;
 }
 
-.v3-footer-contact-list li {
+.v3-desk-contact-card {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #555555;
-}
-
-.v3-f-icon {
-  color: #17b9a9;
-  margin-top: 3px;
-  flex-shrink: 0;
-}
-
-.v3-footer-contact-list a {
-  color: #555555;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #080d1a !important; /* Solid dark obsidian card */
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
   text-decoration: none;
-  transition: color 0.25s ease;
+  color: inherit;
+  transition: all 0.3s ease;
 }
 
-.v3-footer-contact-list a:hover {
-  color: #17b9a9;
+.v3-desk-contact-card:hover {
+  background: #0d1428 !important;
+  border-color: #1e498b !important; /* Brand Blue */
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6) !important;
 }
 
-.v3-f-sep {
-  color: #aaaaaa;
+.v3-desk-icon-box {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #111a33 !important;
+  border: 1px solid rgba(30, 73, 139, 0.6) !important;
+  display: grid;
+  place-items: center;
+  color: #1e498b !important; /* Brand Blue */
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.v3-connect-note {
+.v3-desk-contact-card:hover .v3-desk-icon-box {
+  background: #1e498b !important;
+  color: #ffffff !important;
+}
+
+.v3-desk-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #1e498b !important; /* Brand Blue */
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.v3-desk-val {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
-  line-height: 1.55;
-  color: #555555;
-  margin: 0 0 20px 0;
+  font-weight: 700;
+  color: #ffffff !important;
+}
+
+.v3-desk-sub {
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.v3-desk-address {
+  font-family: "Raleway", sans-serif;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.76) !important;
 }
 
 .v3-footer-social-row {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 24px;
 }
 
 .v3-f-social-btn {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  background: #080d1a !important;
   display: grid;
   place-items: center;
-  color: #111111;
+  color: rgba(255, 255, 255, 0.9) !important;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .v3-f-social-btn:hover {
-  background: #111111;
-  color: #ffffff;
-  border-color: #111111;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background: #ffffff !important;
+  color: #030509 !important;
+  border-color: #ffffff !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
 }
 
-.v3-footer-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  border-radius: 20px;
-  background: #f7f7f7;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  font-family: "Raleway", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: #333333;
+/* ==========================================================================
+   ARCHITECTURAL GHOST WATERMARK (Proper Proportion & Clean Spacing)
+   ========================================================================== */
+.v3-footer-watermark-row {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding: 32px 0 46px 0;
+  margin: 0;
+  user-select: none;
+  pointer-events: none;
 }
 
-.v3-badge-pulse {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #52c41a;
-  box-shadow: 0 0 8px #52c41a;
+.v3-footer-watermark-text {
+  font-size: clamp(30px, 4.6vw, 80px); /* Perfectly proportioned, smaller, elegant */
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.12) !important;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
+/* ==========================================================================
+   BOTTOM LEGAL, LIVE TIME & TOP BAR
+   ========================================================================== */
 .v3-footer-bottom-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.09) !important;
   font-family: "Raleway", sans-serif;
-  font-size: 13.5px;
-  color: #666666;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6) !important;
+  padding-top: 24px !important;
 }
 
 .v3-copy-text {
-  margin: 0;
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 13px;
+}
+
+.v3-footer-live-clock {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #080d1a !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #ffffff !important; /* Pure White as requested */
+}
+
+.v3-footer-live-clock span {
+  color: #ffffff !important; /* Pure White as requested */
+}
+
+.v3-clock-icon {
+  color: #ffffff !important; /* Pure White clock icon */
+}
+
+.v3-footer-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .v3-footer-bottom-actions {
+    justify-content: flex-end;
+  }
 }
 
 .v3-legal-links {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   gap: 12px;
 }
 
 .v3-legal-links a {
-  color: #666666;
+  color: rgba(255, 255, 255, 0.6) !important;
   text-decoration: none;
+  font-size: 12.5px;
   transition: color 0.25s ease;
 }
 
 .v3-legal-links a:hover {
-  color: #111111;
+  color: #ffffff !important;
 }
 
 .v3-legal-dot {
-  color: #cccccc;
+  color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.v3-footer-top-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  padding: 6px 0;
+  transition: all 0.3s ease;
+}
+
+.v3-footer-top-btn:hover {
+  color: #ffffff !important;
+}
+
+.v3-top-icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  display: grid;
+  place-items: center;
+  color: #ffffff !important;
+  background: #080d1a !important;
+  transition: all 0.3s ease;
+}
+
+.v3-footer-top-btn:hover .v3-top-icon-circle {
+  transform: translateY(-3px);
+  background: #ffffff !important;
+  color: #030509 !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.35);
 }
 
 /* ==========================================================================
@@ -2682,4 +3164,129 @@ body.home-v3-active {
   .v3-desk-item {
     padding: 22px 20px;
   }
+}
+
+/* ==========================================================================
+   WORK PORTFOLIO PAGE (/home-v3/work)
+   Clean white background, #1e498b contrast accents, 4-column masonry
+   ========================================================================== */
+.v3-work-portfolio-page {
+  background-color: #ffffff !important;
+  min-height: 100vh;
+}
+
+.v3-work-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #1e498b !important;
+  transition: all 0.25s ease;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(30, 73, 139, 0.06);
+  border: 1px solid rgba(30, 73, 139, 0.14);
+}
+
+.v3-work-back-link:hover {
+  background: #1e498b;
+  color: #ffffff !important;
+  transform: translateX(-3px);
+}
+
+.v3-work-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 30px;
+  padding: 8px 18px;
+  transition: all 0.25s ease;
+}
+
+.v3-work-search-box:focus-within {
+  border-color: #1e498b;
+  box-shadow: 0 0 0 3px rgba(30, 73, 139, 0.14);
+}
+
+.v3-work-search-box .search-icon {
+  color: #1e498b;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.v3-work-search-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111111;
+  outline: none;
+}
+
+.v3-work-search-input::placeholder {
+  color: #888888;
+  font-weight: 400;
+}
+
+.v3-work-search-clear {
+  border: none;
+  background: transparent;
+  color: #888888;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.v3-work-search-clear:hover {
+  color: #1e498b;
+}
+
+.v3-work-count-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Raleway", sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #1e498b;
+  background: rgba(30, 73, 139, 0.08);
+  border: 1px solid rgba(30, 73, 139, 0.18);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.v3-work-empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.v3-work-empty-state h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.v3-work-empty-state p {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 24px;
 }

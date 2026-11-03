@@ -1,17 +1,138 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { Quote } from "lucide-react";
+import { Quote, Plus, X } from "lucide-react";
+
+const LEADERSHIP_TEAM = [
+  {
+    id: "sandeep-dubey",
+    firstName: "Sandeep",
+    lastName: "Dubey",
+    role: "Founder & Chief Executive Officer",
+    roleLines: ["Founder & Chief", "Executive Officer"],
+    location: "New Delhi Headquarters",
+    image: "/about/ceo2.png",
+    bio: [
+      "Sandeep Dubey is a recognized leader known for leveraging the transformative power of creativity, not just to solve complex challenges and drive significant business impact, but to actively shape the future of marketing for the world's most iconic and heartland brands. As Founder & CEO of AdClan, he leads one of India's fastest-growing creative networks, delivering seamless solutions at the intersection of its diverse marketing capabilities spanning broadcast advertising, PR, social & influence, customer engagement, consulting, and digital performance.",
+      "Over the past 15 years, Sandeep has proven his exceptional ability to assemble world-class talent and deliver creative impact at an unprecedented scale. He masterfully integrates creative, media, influencer, commerce, PR, data and technology into a cohesive marketing ecosystem that is innovative at its core and tailored to support marketing transformations for iconic enterprises across FMCG, retail, broadcasting, and luxury sectors.",
+      "Beyond his commercial achievements, Sandeep is deeply committed to strategic empathy. He believes true creative breakthroughs happen not in isolation, but by listening closely to real people, understanding market dynamics, and executing with obsessive attention to craft.",
+    ],
+    press: [
+      {
+        title: "Sandeep Dubey on Leading AdClan's FMCG & Media Transformations",
+        url: "/home-v3/work",
+      },
+      {
+        title: "Keynote: The Power of Heartland Brand Storytelling",
+        url: "/home-v3/work",
+      },
+    ],
+    contact: [
+      { label: "LinkedIn", url: "https://www.linkedin.com" },
+      { label: "Email", url: "mailto:sandeep@adclan.in" },
+    ],
+  },
+  {
+    id: "pooja-sharma",
+    firstName: "Pooja",
+    lastName: "Sharma",
+    role: "Chief Creative Officer & Partner",
+    roleLines: ["Chief Creative", "Officer & Partner"],
+    location: "New Delhi Headquarters",
+    image: "/about/leader-cco.jpg",
+    bio: [
+      "Pooja Sharma serves as Chief Creative Officer & Partner at AdClan, directing the agency’s multifaceted creative atelier across brand design, commercial film production, and high-fashion visual narratives. Her work seamlessly balances commercial precision with artistic audacity, driving unforgettable brand recall across consumer touchpoints.",
+      "With over 12 years of experience leading creative teams at premier national agencies, Pooja has directed commercial shoots for high-jewellery collections, iconic bridal campaigns, and fast-moving consumer packaged goods. She champions visual authenticity and cinematic grandeur in every frame, ensuring each brand narrative commands emotional resonance.",
+      "Pooja holds a master's degree in Communication Design and actively mentors emerging visual artists and creative strategists across the Indian creative landscape.",
+    ],
+    press: [
+      {
+        title: "Pooja Sharma Directs Imperial Jewellery TVC Broadcast Campaign",
+        url: "/home-v3/work",
+      },
+      {
+        title: "AdClan Atelier: The Intersection of Haute Joaillerie & High Art",
+        url: "/home-v3/work",
+      },
+    ],
+    contact: [
+      { label: "LinkedIn", url: "https://www.linkedin.com" },
+      { label: "Email", url: "mailto:pooja@adclan.in" },
+    ],
+  },
+  {
+    id: "rahul-verma",
+    firstName: "Rahul",
+    lastName: "Verma",
+    role: "Chief Strategy Officer & Media Head",
+    roleLines: ["Chief Strategy", "Officer & Media Head"],
+    location: "New Delhi Headquarters",
+    image: "/about/leader-cso.jpg",
+    bio: [
+      "Rahul Verma leads Strategy and Media Orchestration at AdClan, uniting deep consumer behavioral insights with surgical media buying across television, radio, digital channels, and experiential activations.",
+      "Having architected multi-crore media strategies for major retail chains, FM radio flagship networks, and direct-to-consumer innovators, Rahul specializes in turning creative ambition into measurable commercial velocity through precision audience segmentation and attribution modeling.",
+      "A data-driven strategist with a passion for emerging technologies, Rahul oversees AdClan's performance intelligence frameworks, ensuring clients achieve unparalleled reach, engagement, and sustainable market share.",
+    ],
+    press: [
+      {
+        title: "Rahul Verma on Omnichannel Media Synergy & Primetime Radio Reach",
+        url: "/home-v3/work",
+      },
+      {
+        title: "Performance Intelligence & Audience Modeling Frameworks",
+        url: "/home-v3/work",
+      },
+    ],
+    contact: [
+      { label: "LinkedIn", url: "https://www.linkedin.com" },
+      { label: "Email", url: "mailto:rahul@adclan.in" },
+    ],
+  },
+];
 
 export default function NarrativeSectionV3() {
+  const [activeLeaderId, setActiveLeaderId] = useState(null);
+  const [isClosing, setIsClosing] = useState(false);
+  const stageRef = useRef(null);
+
+  const activeLeader = LEADERSHIP_TEAM.find((l) => l.id === activeLeaderId);
+
+  const handleSelectLeader = (leaderId) => {
+    if (isClosing) return;
+    if (activeLeaderId === leaderId) {
+      handleClose();
+      return;
+    }
+    setIsClosing(false);
+    setActiveLeaderId(leaderId);
+  };
+
+  const handleClose = () => {
+    if (!activeLeaderId || isClosing) return;
+    setIsClosing(true);
+    setTimeout(() => {
+      setActiveLeaderId(null);
+      setIsClosing(false);
+    }, 480);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && activeLeaderId && !isClosing) {
+        handleClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [activeLeaderId, isClosing]);
+
   return (
     <section className="v3-narrative-section" id="narrative">
       <div className="container-fluid v3-section-container px-3 px-md-5 px-xl-5">
         {/* =====================================================================
             1. EDITORIAL SPREAD: MANIFESTO & PHILOSOPHY
             ===================================================================== */}
-        {/* Section Header using Bootstrap row & col */}
         <div className="row mb-5">
           <div className="col-12 col-lg-10 col-xl-8">
             <div className="v3-section-eyebrow-wrap">
@@ -102,7 +223,7 @@ export default function NarrativeSectionV3() {
         {/* =====================================================================
             2. METHODOLOGY: THINK. CREATE. DELIVER. (ARCHITECTURAL STRIP)
             ===================================================================== */}
-        <div className="v3-methodology-section mb-5">
+        <div className="v3-methodology-section mb-5 pb-3">
           <div className="row mb-4">
             <div className="col-12">
               <span className="v3-sub-eyebrow">OUR METHODOLOGY</span>
@@ -157,51 +278,186 @@ export default function NarrativeSectionV3() {
         </div>
 
         {/* =====================================================================
-            3. AGENCY LEADERSHIP / FOUNDER & CEO SECTION
+            3. AGENCY LEADERSHIP (EXACT OGILVY TEAM ARCHITECTURE - IN-PLACE SLIDING STAGE)
+            - 3-column portrait grid with solid #1e498b on hover
+            - In-place sliding mechanism:
+              * Card 1 stays in Column 1, Details in Columns 2 & 3
+              * Card 2 (Center) photo slides left to Column 1, Details in Columns 2 & 3
+              * Card 3 (Right) photo slides left to Column 1, Details in Columns 2 & 3
+              * Close (✕) smoothly slides active photo back to its column
             ===================================================================== */}
-        <div className="v3-founder-editorial-section pt-3">
-          <div className="row g-4 g-lg-5 align-items-center">
-            {/* Left: Portrait in Architectural Framing */}
-            <div className="col-12 col-md-5 col-lg-5">
-              <div className="v3-founder-portrait-frame">
-                <img
-                  src="/about/ceo2.png"
-                  alt="Sandeep Dubey - Founder & CEO"
-                  className="v3-founder-portrait-img"
-                  loading="lazy"
-                />
-                <div className="v3-founder-corner-badge">
-                  <span>FOUNDER & CEO</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Right: Leadership Philosophy & Bio */}
-            <div className="col-12 col-md-7 col-lg-7">
+        <div className="v3-team-section pt-4 mt-2" id="leadership" ref={stageRef}>
+          <div className="row mb-4 align-items-end justify-content-between g-4">
+            <div className="col-12 col-lg-8">
               <div className="v3-section-eyebrow-wrap">
                 <span className="v3-eyebrow-dash" />
                 <span className="v3-section-eyebrow">AGENCY LEADERSHIP</span>
               </div>
 
-              <h3 className="v3-founder-display-name">Sandeep Dubey.</h3>
-              <span className="v3-founder-official-title">Founder & Chief Executive Officer • AdClan</span>
-
-              <p className="v3-founder-biography">
-                Visionary leader with expertise in brand strategy and digital innovation. With over
-                15 years of industry experience, Sandeep Dubey has helped brands find clarity, build
-                enduring market identities, and scale with purpose across Indian and global markets.
-              </p>
-
-              <blockquote className="v3-founder-callout-quote">
-                “Creativity must never be art for art’s sake — it must be rooted in strategic
-                empathy. When you listen genuinely, the path to market leadership becomes undeniable.”
-              </blockquote>
-
-              <div className="v3-founder-sign-off">
-                <span className="v3-signature-rendered">Sandeep Dubey</span>
-                <span className="v3-sign-title">New Delhi Headquarters</span>
-              </div>
+              <h2 className="v3-editorial-headline mb-0">
+                Our Leadership.
+              </h2>
             </div>
+
+            <div className="col-12 col-lg-4 text-lg-end">
+              <span
+                style={{
+                  fontFamily: "Raleway",
+                  fontSize: "12px",
+                  fontWeight: "700",
+                  letterSpacing: "0.16em",
+                  color: "#1e498b",
+                  textTransform: "uppercase",
+                }}
+              >
+                EXECUTIVE PARTNERS • ADCLAN
+              </span>
+            </div>
+          </div>
+
+          {/* In-Place 3-Column Sliding Stage */}
+          <div
+            className={`v3-team-stage ${activeLeader ? "is-expanded" : ""} ${
+              isClosing ? "is-closing" : ""
+            }`}
+          >
+            {LEADERSHIP_TEAM.map((leader, index) => {
+              const isActive = activeLeader?.id === leader.id;
+              const isOther = activeLeader && !isActive;
+
+              return (
+                <div
+                  key={leader.id}
+                  className={`v3-team-card-slot slot-${index} ${
+                    isActive ? "is-active" : ""
+                  } ${isOther ? "is-hidden" : ""}`}
+                  onClick={() => (isActive ? handleClose() : handleSelectLeader(leader.id))}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`${leader.firstName} ${leader.lastName} - ${leader.role}`}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      isActive ? handleClose() : handleSelectLeader(leader.id);
+                    }
+                  }}
+                >
+                  <div className="v3-team-card">
+                    {/* Clean Studio Portrait */}
+                    <img
+                      src={leader.image}
+                      alt={`${leader.firstName} ${leader.lastName}`}
+                      className="v3-team-portrait"
+                      loading="lazy"
+                    />
+
+                    {/* Solid #1e498b Card Hover Overlay */}
+                    <div className="v3-team-hover-overlay">
+                      <h3 className="v3-team-overlay-name">
+                        {leader.firstName}
+                        <span>{leader.lastName}</span>
+                      </h3>
+
+                      <p className="v3-team-overlay-title">
+                        {leader.roleLines.map((line, i) => (
+                          <span key={i}>{line}</span>
+                        ))}
+                      </p>
+
+                      <div className="v3-team-overlay-plus" aria-hidden="true">
+                        <Plus size={26} strokeWidth={1.4} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+
+            {/* In-Place Details Panel Spanning Columns 2 & 3 */}
+            {activeLeader && (
+              <div
+                className={`v3-team-details-panel ${
+                  isClosing ? "is-closing" : ""
+                }`}
+              >
+                {/* Column 1: Identity */}
+                <div className="v3-ogilvy-col-identity">
+                  <h3 className="v3-ogilvy-drawer-name">
+                    {activeLeader.firstName}
+                    <span className="d-block">{activeLeader.lastName}</span>
+                  </h3>
+                  <p className="v3-ogilvy-drawer-title">
+                    {activeLeader.roleLines.map((line, i) => (
+                      <span key={i} className="d-block">
+                        {line}
+                      </span>
+                    ))}
+                  </p>
+                  <span className="v3-team-location-badge">
+                    {activeLeader.location}
+                  </span>
+                </div>
+
+                {/* Column 2: Biographical Narrative */}
+                <div className="v3-ogilvy-drawer-bio">
+                  {activeLeader.bio.map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
+                </div>
+
+                {/* Column 3: Recent Press & Contact */}
+                <div className="v3-ogilvy-col-meta">
+                  <div className="v3-ogilvy-drawer-meta-section">
+                    <h5 className="v3-ogilvy-drawer-meta-title">Recent Press</h5>
+                    <ul className="v3-ogilvy-drawer-meta-list">
+                      {activeLeader.press.map((item, i) => (
+                        <li key={i}>
+                          <a
+                            href={item.url}
+                            className="v3-ogilvy-drawer-meta-link"
+                          >
+                            <span className="v3-ogilvy-drawer-arrow">→</span>
+                            <span>{item.title}</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="v3-ogilvy-drawer-meta-section">
+                    <h5 className="v3-ogilvy-drawer-meta-title">Contact</h5>
+                    <ul className="v3-ogilvy-drawer-meta-list">
+                      {activeLeader.contact.map((c, i) => (
+                        <li key={i}>
+                          <a
+                            href={c.url}
+                            target={c.url.startsWith("http") ? "_blank" : undefined}
+                            rel={c.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                            className="v3-ogilvy-drawer-meta-link"
+                          >
+                            <span className="v3-ogilvy-drawer-arrow">→</span>
+                            <span>{c.label}</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Close Icon in Bottom Right */}
+                <button
+                  type="button"
+                  className="v3-ogilvy-drawer-close"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleClose();
+                  }}
+                  aria-label="Close biography drawer"
+                >
+                  <X size={22} />
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>

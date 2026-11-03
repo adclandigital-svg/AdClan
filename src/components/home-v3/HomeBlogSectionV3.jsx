@@ -20,13 +20,13 @@ export default function HomeBlogSectionV3() {
               <span className="v3-section-eyebrow">PERSPECTIVES</span>
             </div>
             <h2 className="v3-editorial-headline">
-              Stories Behind <br />
-              <span>The Strategy.</span>
+              Stories Behind
+              <span> The Strategy.</span>
             </h2>
-            <p className="v3-editorial-subtext">
+            {/* <p className="v3-editorial-subtext">
               Dispatches on brand architecture, media disruption, creative technology,
               and the modern psychology of consumer choice.
-            </p>
+            </p> */}
           </div>
         </div>
 

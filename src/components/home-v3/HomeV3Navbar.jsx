@@ -44,14 +44,9 @@ export default function HomeV3Navbar() {
         </span>
       </Link>
 
-      {/* 2. Middle: Navigation Links (OUR CRAFT, NARRATIVE, EXPERTISE, WORK, BRANDS) */}
+      {/* 2. Middle: Navigation Links (WORK, NARRATIVE, EXPERTISE, BRANDS) */}
       <nav className="v3-nav-desktop" aria-label="Main Navigation">
         <ul className="v3-nav-center">
-          <li className="v3-nav-item">
-            <a href="#craft" className="v3-nav-link">
-              OUR CRAFT
-            </a>
-          </li>
           <li className="v3-nav-item">
             <Link href="/home-v3/work" className="v3-nav-link">
               WORK
@@ -109,14 +104,6 @@ export default function HomeV3Navbar() {
             gap: "32px",
           }}
         >
-          <a
-            href="#craft"
-            className="v3-nav-link"
-            style={{ fontSize: "16px" }}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            OUR CRAFT
-          </a>
           <Link
             href="/home-v3/work"
             className="v3-nav-link"

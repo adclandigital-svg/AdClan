@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
-import { ArrowUpRight, ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Search, X, Sparkles } from "lucide-react";
 import HomeV3Navbar from "@/components/home-v3/HomeV3Navbar";
 import HomeV3Footer from "@/components/home-v3/HomeV3Footer";
 
@@ -12,68 +12,72 @@ import "@/components/home-v3/homeV3Sections.css";
 
 const CATEGORIES = [
   "All Work",
+  "FMCG",
+  "High Jewellery",
   "Celebrity Management",
   "Video Production",
-  "Branding",
-  "FMCG",
-  "Influencer",
-  "Digital",
-  "Creative",
   "Radio",
+  "Branding",
+  "Influencer",
+  "Digital & Creative",
   "Website Development",
 ];
 
-// Rich Portfolio of real projects mix-and-matched across clients and categories
+// Curated 36 real portfolio projects spanning all disciplines and client partners
 const PORTFOLIO_PROJECTS = [
   {
     id: "vm-atta",
     title: "Chakki Fresh Atta Heritage Packaging & Rebrand",
     client: "Vikram Mills",
-    categories: ["Branding", "FMCG", "Creative"],
-    thumbnail: "/projects/vikram-mills/pr-banner.png",
+    categories: ["Branding", "FMCG", "Digital & Creative"],
+    thumbnail: "/projects/vikram-mills/pr-banner1.png",
     link: "/projects/vikram-mills",
     year: "2024",
-    excerpt: "Complete consumer packaging architecture, grain purity positioning, and pan-India retail identity.",
   },
   {
-    id: "rg-shoot",
-    title: "Imperial Bridal Jewellery TV Commercial Shoot",
-    client: "Riot Gold",
-    categories: ["Video Production", "Celebrity Management", "Creative"],
-    thumbnail: "/projects/right-gold/banner2.png",
+    id: "rg-choker",
+    title: "22K Royal Gold Bridal Choker & Necklace Suite",
+    client: "Right Gold",
+    categories: ["High Jewellery", "Branding", "Digital & Creative"],
+    thumbnail: "/projects/right-gold/1.jpg",
     link: "/projects/right-gold",
     year: "2024",
-    excerpt: "Cinematic broadcast production showcasing high-jewellery craftsmanship, bridal opulence, and star presence.",
   },
   {
     id: "bfm-naved",
     title: "RJ Naved — Voice of Delhi-NCR Primetime Campaign",
     client: "Big FM",
-    categories: ["Celebrity Management", "Radio", "Creative"],
+    categories: ["Celebrity Management", "Radio", "Digital & Creative"],
     thumbnail: "/projects/project-thumbnail/RJ NAVED.png",
     link: "/projects/big-fm/celebrity-managements",
     year: "2024",
-    excerpt: "Citywide celebrity endorsement, on-air brand integrations, and viral social media engagement.",
+  },
+  {
+    id: "rg-shoot",
+    title: "Imperial Bridal Jewellery TV Commercial Shoot",
+    client: "Right Gold",
+    categories: ["High Jewellery", "Video Production", "Celebrity Management"],
+    thumbnail: "/projects/right-gold/banner2.png",
+    link: "/projects/right-gold",
+    year: "2024",
   },
   {
     id: "st-film",
     title: "Smile Train India — Hope Heals Awareness Film",
     client: "Smile Train",
-    categories: ["Video Production", "Creative"],
+    categories: ["Video Production", "Digital & Creative"],
     thumbnail: "/projects/project-thumbnail/Smile train India.png",
     link: "/projects/smile-train/video-production",
     year: "2024",
-    excerpt: "Emotionally evocative awareness documentary driving donor empathy and healthcare community recall.",
   },
   {
-    id: "vm-tvc",
-    title: "National Broadcast Television Commercial (TVC)",
+    id: "vm-legacy",
+    title: "53-Year Milling Legacy & Pan-India Corporate Campaign",
     client: "Vikram Mills",
-    categories: ["Video Production", "FMCG", "Creative"],
-    thumbnail: "/projects/vikram-mills/cb-banner.png",
+    categories: ["Branding", "FMCG", "Digital & Creative"],
+    thumbnail: "/projects/vikram-mills/Vikram-mills-celeb.png",
     link: "/projects/vikram-mills",
     year: "2024",
-    excerpt: "Prime-time broadcast film capturing traditional milling heritage, familial warmth, and golden grain purity.",
   },
   {
     id: "bfm-lucky",
@@ -83,27 +87,33 @@ const PORTFOLIO_PROJECTS = [
     thumbnail: "/projects/project-thumbnail/RJ LUCKY.png",
     link: "/projects/big-fm/celebrity-managements",
     year: "2024",
-    excerpt: "High-voltage commuter radio show sponsorship, dynamic audio spots, and on-ground activations.",
   },
   {
     id: "cd-retail",
     title: "Clear Dekho — Youth Eyewear Omnichannel Commercial",
     client: "Clear Dekho",
-    categories: ["Video Production", "Digital", "Creative"],
+    categories: ["Video Production", "Digital & Creative"],
     thumbnail: "/projects/project-thumbnail/Clear Dekho.png",
     link: "/projects/clear-dekho",
     year: "2024",
-    excerpt: "Fast-paced retail commercial engineered to drive in-store footfalls and digital ecommerce conversion.",
+  },
+  {
+    id: "rg-seher",
+    title: "Seher Bamba Luxury Polki & Kundan Editorial",
+    client: "Right Gold",
+    categories: ["High Jewellery", "Celebrity Management", "Digital & Creative"],
+    thumbnail: "/projects/right-gold/gallery/2.jpg",
+    link: "/projects/right-gold",
+    year: "2024",
   },
   {
     id: "rg-solitaire",
     title: "Royal Solitaire & Festive Fine Gold Visual Suite",
-    client: "Riot Gold",
-    categories: ["Branding", "Creative"],
+    client: "Right Gold",
+    categories: ["High Jewellery", "Branding", "Digital & Creative"],
     thumbnail: "/projects/right-gold/banner11.png",
     link: "/projects/right-gold",
     year: "2024",
-    excerpt: "Bespoke print catalog, luxury lookbook, and high-fashion digital art direction for festive collections.",
   },
   {
     id: "ig-basmati",
@@ -111,9 +121,8 @@ const PORTFOLIO_PROJECTS = [
     client: "India Gate",
     categories: ["Video Production", "FMCG", "Branding"],
     thumbnail: "/projects/project-thumbnail/INDIA GATE.png",
-    link: "/projects/india-gate",
+    link: "/projects/india_gate/creatives",
     year: "2024",
-    excerpt: "Mouthwatering food cinematography highlighting long-grain perfection and royal culinary hospitality.",
   },
   {
     id: "bfm-rahul",
@@ -123,17 +132,24 @@ const PORTFOLIO_PROJECTS = [
     thumbnail: "/projects/project-thumbnail/RJ RAHUL Makin.png",
     link: "/projects/big-fm/celebrity-managements",
     year: "2024",
-    excerpt: "Late-night conversational radio flagship amplified across digital podcasts and corporate brand segments.",
   },
   {
     id: "st-radio",
     title: "Smile Train — Pan-India Awareness Audio Jingles",
     client: "Smile Train",
-    categories: ["Radio", "Creative"],
+    categories: ["Radio", "Digital & Creative"],
     thumbnail: "/projects/smile_train/smile train.png",
     link: "/projects/smile-train/radio-jingles",
     year: "2024",
-    excerpt: "Heart-touching radio jingles recorded in regional languages to reach underserved families across India.",
+  },
+  {
+    id: "vm-creatives",
+    title: "Pure Wholesome Nutrition & Farm Fresh Goodness",
+    client: "Vikram Mills",
+    categories: ["FMCG", "Digital & Creative"],
+    thumbnail: "/projects/vikram-mills/creatives/1.jpg",
+    link: "/projects/vikram-mills",
+    year: "2024",
   },
   {
     id: "vm-sooji",
@@ -143,17 +159,51 @@ const PORTFOLIO_PROJECTS = [
     thumbnail: "/projects/vikram-mills/creatives/3.jpg",
     link: "/projects/vikram-mills",
     year: "2024",
-    excerpt: "Cohesive packaging identity across daily pantry essentials ensuring clear shelf demarcation.",
   },
   {
     id: "elmas-web",
     title: "Elmas Group — Enterprise Corporate Website & Brand",
     client: "Elmas Group",
-    categories: ["Website Development", "Branding", "Digital"],
-    thumbnail: "/projects/website/elmas.png",
+    categories: ["Website Development", "Branding", "Digital & Creative"],
+    thumbnail: "/projects/website/elmas-group.png",
     link: "/projects/elmas-group",
     year: "2024",
-    excerpt: "Responsive high-performance corporate web portal with interactive portfolio and investor dashboards.",
+  },
+  {
+    id: "adore-web",
+    title: "Adore Realtech — High-Conversion Real Estate Portal",
+    client: "Adore Realtech",
+    categories: ["Website Development", "Branding", "Digital & Creative"],
+    thumbnail: "/projects/website/adore.png",
+    link: "/projects/adore/website",
+    year: "2024",
+  },
+  {
+    id: "spring-web",
+    title: "Spring Elmas — Luxury Architectural Web Experience",
+    client: "Spring Elmas",
+    categories: ["Website Development", "Digital & Creative"],
+    thumbnail: "/projects/website/springelmas.png",
+    link: "/projects/spring-elmas/website",
+    year: "2024",
+  },
+  {
+    id: "vm-web",
+    title: "Vikram Mills — Interactive Consumer & Corporate Hub",
+    client: "Vikram Mills",
+    categories: ["Website Development", "FMCG", "Digital & Creative"],
+    thumbnail: "/projects/website/vikram-mills.png",
+    link: "/projects/vikram-mills/website",
+    year: "2024",
+  },
+  {
+    id: "aggarwal-web",
+    title: "Aggarwal Heritage — E-Commerce & Retail Portal",
+    client: "Aggarwal Heritage",
+    categories: ["Website Development", "FMCG", "Digital & Creative"],
+    thumbnail: "/projects/website/aggar.png",
+    link: "/projects/aggarwal/website",
+    year: "2024",
   },
   {
     id: "bfm-tripti",
@@ -163,7 +213,6 @@ const PORTFOLIO_PROJECTS = [
     thumbnail: "/projects/project-thumbnail/RJ TRIPTI.png",
     link: "/projects/big-fm/celebrity-managements",
     year: "2024",
-    excerpt: "Engaging morning radio drive engaging listeners with lively brand segments and live contests.",
   },
   {
     id: "spring-film",
@@ -171,49 +220,62 @@ const PORTFOLIO_PROJECTS = [
     client: "Spring Elmas",
     categories: ["Video Production", "Branding"],
     thumbnail: "/projects/project-thumbnail/SPRING ELMAS.png",
-    link: "/projects/spring-elmas",
+    link: "/projects/spring-elmas/website",
     year: "2024",
-    excerpt: "CGI-integrated architectural lifestyle film unveiling ultra-premium residential towers.",
   },
   {
     id: "inf-millind",
     title: "Millind Gaba — Youth Pop Star Brand Campaign",
     client: "Celebrity Partnership",
     categories: ["Celebrity Management", "Influencer", "Video Production"],
-    thumbnail: "/projects/project-thumbnail/miliand.png",
+    thumbnail: "/projects/project-thumbnail/MILLIAND GABA.png",
     link: "/projects",
     year: "2024",
-    excerpt: "Music star endorsement and influencer video series generating viral reach across Gen-Z audiences.",
   },
   {
     id: "inf-bassi",
     title: "Anubhav Singh Bassi — Humour Driven Commercial Video",
     client: "Celebrity Partnership",
     categories: ["Influencer", "Celebrity Management", "Video Production"],
-    thumbnail: "/projects/project-thumbnail/bassi.png",
+    thumbnail: "/projects/project-thumbnail/BASSI.png",
     link: "/projects",
     year: "2024",
-    excerpt: "Relatable stand-up brand integration driving exponential organic sharing and recall on digital channels.",
   },
   {
     id: "inf-huma",
     title: "Huma Qureshi — Luxury Fashion & Glamour Campaign",
     client: "Celebrity Partnership",
     categories: ["Celebrity Management", "Influencer", "Branding"],
-    thumbnail: "/projects/project-thumbnail/huma.png",
+    thumbnail: "/projects/project-thumbnail/HUMA QURESHI.png",
     link: "/projects",
     year: "2024",
-    excerpt: "Bollywood star endorsement shoot establishing high-fashion credentials and premium brand authority.",
   },
   {
     id: "inf-adah",
     title: "Adah Sharma — High Energy Social Brand Shoot",
     client: "Celebrity Partnership",
-    categories: ["Celebrity Management", "Influencer", "Digital"],
-    thumbnail: "/projects/project-thumbnail/adah.png",
+    categories: ["Celebrity Management", "Influencer", "Digital & Creative"],
+    thumbnail: "/projects/project-thumbnail/ADAH SHARMA.png",
     link: "/projects",
     year: "2024",
-    excerpt: "Multi-platform video activations delivering authentic influencer resonance and brand advocacy.",
+  },
+  {
+    id: "inf-jassie",
+    title: "Jassie Gill — Punjabi Music Icon Endorsement",
+    client: "Celebrity Partnership",
+    categories: ["Celebrity Management", "Influencer", "Video Production"],
+    thumbnail: "/projects/project-thumbnail/JASSIE GILL.png",
+    link: "/projects",
+    year: "2024",
+  },
+  {
+    id: "kayna-beauty",
+    title: "Kayna — Youth Cosmetics & Skincare Commercial",
+    client: "Kayna Beauty",
+    categories: ["Video Production", "Digital & Creative", "Branding"],
+    thumbnail: "/projects/project-thumbnail/KAYNA.png",
+    link: "/projects",
+    year: "2024",
   },
   {
     id: "agropure-ad",
@@ -221,19 +283,26 @@ const PORTFOLIO_PROJECTS = [
     client: "Agropure",
     categories: ["FMCG", "Video Production", "Branding"],
     thumbnail: "/projects/project-thumbnail/AGROPURE.png",
-    link: "/projects/agropure",
+    link: "/projects",
     year: "2024",
-    excerpt: "Heartland television commercial celebrating agricultural purity, farmer commitment, and healthy families.",
   },
   {
     id: "kb-westwalk",
     title: "KB West Walk — Commercial Mall Brand & Digital",
     client: "KB West Walk",
-    categories: ["Branding", "Digital", "Creative"],
-    thumbnail: "/projects/project-thumbnail/kb.png",
+    categories: ["Branding", "Digital & Creative"],
+    thumbnail: "/projects/kb/banner.png",
     link: "/projects/kb-westwalk",
     year: "2024",
-    excerpt: "Identity suite and digital marketing ecosystem driving retail tenant bookings and footfall.",
+  },
+  {
+    id: "ramji-sons",
+    title: "Ramji Sons — Traditional Fabric Heritage Jingles",
+    client: "Ramji Sons",
+    categories: ["Radio", "Digital & Creative", "Branding"],
+    thumbnail: "/projects/project-thumbnail/Ramjisons.png",
+    link: "/projects/ramji-sons/radio-jingles",
+    year: "2024",
   },
   {
     id: "vm-dalia",
@@ -243,27 +312,42 @@ const PORTFOLIO_PROJECTS = [
     thumbnail: "/projects/vikram-mills/creatives/4.jpg",
     link: "/projects/vikram-mills",
     year: "2024",
-    excerpt: "Modern health-forward packaging communicating high fiber, heart health, and traditional roasting.",
   },
   {
     id: "ace-spot",
     title: "Teaser Spot ACE — High Impact Suspense Commercial",
     client: "Teaser Spot ACE",
-    categories: ["Video Production", "Creative"],
+    categories: ["Video Production", "Digital & Creative"],
     thumbnail: "/projects/project-thumbnail/Teaser Spot-ACE.png",
-    link: "/projects/teaser-spot-ace",
+    link: "/projects/ace/radio-jingles",
     year: "2024",
-    excerpt: "Mysterious teaser spot broadcast on national channels building fever-pitch curiosity ahead of launch.",
   },
   {
     id: "lead-kidsmate",
     title: "Kidsmate by Leader Cycles — 360° National Brand Launch",
     client: "Leader Cycles",
-    categories: ["Branding", "Digital", "Creative"],
+    categories: ["Branding", "Digital & Creative"],
     thumbnail: "/projects/1.png",
     link: "/projects",
     year: "2024",
-    excerpt: "Comprehensive brand positioning, packaging, and digital launch capturing active young families.",
+  },
+  {
+    id: "ggit-film",
+    title: "GGIT Technical Education — Institutional Film",
+    client: "GGIT",
+    categories: ["Video Production", "Digital & Creative"],
+    thumbnail: "/projects/project-thumbnail/GGIT.png",
+    link: "/projects/ggit/video-production",
+    year: "2024",
+  },
+  {
+    id: "india-result",
+    title: "India Result — National Portal Digital Video Ad",
+    client: "India Result",
+    categories: ["Video Production", "Digital & Creative"],
+    thumbnail: "/projects/project-thumbnail/INDIA RESULT.png",
+    link: "/projects/india-result/video-production",
+    year: "2024",
   },
 ];
 
@@ -282,21 +366,23 @@ export default function HomeV3WorkPage() {
   }, []);
 
   // Filter projects by category and search
-  const filteredProjects = PORTFOLIO_PROJECTS.filter((project) => {
-    const matchesCategory =
-      selectedCategory === "All Work" ||
-      project.categories.includes(selectedCategory);
+  const filteredProjects = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
 
-    const matchesSearch =
-      searchQuery === "" ||
-      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.categories.some((c) =>
-        c.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+    return PORTFOLIO_PROJECTS.filter((project) => {
+      const matchesCategory =
+        selectedCategory === "All Work" ||
+        project.categories.includes(selectedCategory);
 
-    return matchesCategory && matchesSearch;
-  });
+      const matchesSearch =
+        query === "" ||
+        project.title.toLowerCase().includes(query) ||
+        project.client.toLowerCase().includes(query) ||
+        project.categories.some((c) => c.toLowerCase().includes(query));
+
+      return matchesCategory && matchesSearch;
+    });
+  }, [selectedCategory, searchQuery]);
 
   return (
     <div className="home-v3-full-flow">
@@ -312,48 +398,82 @@ export default function HomeV3WorkPage() {
               <div className="d-flex align-items-center gap-3 mb-3">
                 <Link
                   href="/home-v3"
-                  className="d-inline-flex align-items-center gap-2 text-decoration-none text-muted"
-                  style={{ fontFamily: "Raleway, sans-serif", fontSize: "12px", fontWeight: "700", letterSpacing: "0.14em" }}
+                  className="v3-work-back-link"
+                  aria-label="Back to Home V3"
                 >
-                  <ArrowLeft size={14} />
-                  <span>BACK TO HOME-V3</span>
+                  <ArrowLeft size={13} />
+                  <span>BACK TO HOME</span>
                 </Link>
-                <span className="text-muted">•</span>
+                <span className="text-muted" style={{ opacity: 0.4 }}>•</span>
                 <span
-                  style={{ fontFamily: "Raleway, sans-serif", fontSize: "12px", fontWeight: "700", letterSpacing: "0.18em", color: "#666666" }}
+                  style={{
+                    fontFamily: "Raleway",
+                    fontSize: "11px",
+                    fontWeight: "800",
+                    letterSpacing: "0.24em",
+                    color: "#1e498b",
+                    textTransform: "uppercase",
+                  }}
                 >
-                  CATEGORY ARCHIVE
+                  DISCIPLINE ARCHIVE
                 </span>
               </div>
 
-              <h1 className="v3-craft-heading" style={{ fontSize: "clamp(40px, 4.5vw, 72px)" }}>
-                WORK PORTFOLIO
+              <h1 className="v3-craft-main-heading">
+                WORK ARCHIVE
               </h1>
 
-              <p className="v3-editorial-subtext">
-                Explore our complete archive of commercial campaigns, packaging systems, star endorsements,
-                and digital platforms. Filtered strictly by creative disciplines and delivered with unignorable impact.
+              <p
+                className="v3-editorial-subtext mt-3"
+                style={{
+                  maxWidth: "760px",
+                  fontSize: "clamp(15px, 1.2vw, 18px)",
+                  lineHeight: "1.65",
+                  color: "#4a4a4a",
+                }}
+              >
+                A comprehensive archive of commercial campaigns, high-jewellery photography,
+                national broadcast commercials, primetime radio shows, and bespoke digital platforms.
+                Every piece engineered for unignorable brand recall.
               </p>
             </div>
 
-            <div className="col-12 col-lg-4 text-lg-end">
-              <span
-                style={{
-                  fontFamily: "Raleway, sans-serif",
-                  fontSize: "14px",
-                  fontWeight: "700",
-                  letterSpacing: "0.12em",
-                  color: "#111111",
-                }}
-              >
-                SHOWING {filteredProjects.length} OF {PORTFOLIO_PROJECTS.length} PROJECTS
-              </span>
+            {/* Search Box & Project Count */}
+            <div className="col-12 col-lg-4 d-flex flex-column align-items-lg-end gap-3">
+              <div className="v3-work-count-pill">
+                <Sparkles size={13} />
+                <span>
+                  SHOWING {filteredProjects.length} OF {PORTFOLIO_PROJECTS.length} WORKS
+                </span>
+              </div>
+
+              <div className="v3-work-search-box">
+                <Search size={15} className="search-icon" />
+                <input
+                  type="text"
+                  className="v3-work-search-input"
+                  placeholder="Search client, campaign, discipline..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  aria-label="Search work archive"
+                />
+                {searchQuery && (
+                  <button
+                    type="button"
+                    className="v3-work-search-clear"
+                    onClick={() => setSearchQuery("")}
+                    aria-label="Clear search"
+                  >
+                    <X size={14} />
+                  </button>
+                )}
+              </div>
             </div>
           </div>
 
           {/* 10 Disciplinary Category Filter Tabs */}
-          <div className="v3-craft-filters-bar mb-5 pb-2">
-            <div className="v3-craft-filters-track flex-wrap gap-2" style={{ overflowX: "auto" }}>
+          <div className="v3-craft-filters-bar mb-5 pb-3">
+            <div className="v3-craft-filters-track">
               {CATEGORIES.map((category) => {
                 const isActive = selectedCategory === category;
                 const count =
@@ -370,7 +490,6 @@ export default function HomeV3WorkPage() {
                     className={`v3-craft-filter-btn ${isActive ? "is-active" : ""}`}
                     onClick={() => setSelectedCategory(category)}
                     aria-pressed={isActive}
-                    style={{ whiteSpace: "nowrap" }}
                   >
                     <span>{category}</span>
                     <span className="v3-craft-count-pill">{count}</span>
@@ -380,112 +499,51 @@ export default function HomeV3WorkPage() {
             </div>
           </div>
 
-          {/* Grid of Projects (Ogilvy Luxury Presentation) */}
+          {/* Grid of Projects — Ogilvy True 4-Column Continuous Flow Masonry */}
           {filteredProjects.length === 0 ? (
-            <div className="text-center py-5 my-5">
-              <h3 style={{ fontFamily: "Raleway, sans-serif", fontWeight: "700" }}>
-                No projects found in this category.
-              </h3>
-              <p className="text-muted">Try selecting "All Work" to view our complete archive.</p>
+            <div className="v3-work-empty-state">
+              <h3>No Works Found</h3>
+              <p>
+                No campaigns matched your current search <strong>"{searchQuery}"</strong> in the{" "}
+                <strong>{selectedCategory}</strong> archive.
+              </p>
               <button
                 type="button"
-                className="v3-craft-filter-btn is-active mt-3"
-                onClick={() => setSelectedCategory("All Work")}
+                className="v3-craft-filter-btn is-active"
+                onClick={() => {
+                  setSelectedCategory("All Work");
+                  setSearchQuery("");
+                }}
               >
-                <span>RESET TO ALL WORK</span>
+                <span>RESET ALL FILTERS</span>
               </button>
             </div>
           ) : (
-            <div className="row g-4 v3-craft-grid">
+            <ul className="work__grid js-work-grid">
               {filteredProjects.map((project) => (
-                <div key={project.id} className="col-12 col-md-6 col-lg-4">
+                <li key={project.id} className="work__item js-work-item">
                   <Link
                     href={project.link}
-                    className="v3-craft-card h-100 v3-card-logo-reveal"
-                    aria-label={`${project.client} - ${project.title}`}
+                    aria-label={`${project.title} — ${project.client}`}
                   >
-                    {/* Media Frame with Consistent Aspect Ratio */}
-                    <div className="v3-craft-media-frame">
-                      {/* Actual Project Thumbnail */}
+                    <div className="work__item-media">
                       <img
                         src={project.thumbnail}
                         alt={project.title}
-                        className="v3-craft-creative-img"
                         loading="lazy"
                       />
 
-                      {/* Corner Badge */}
-                      <div className="v3-craft-corner-badge">
-                        <span>{project.categories[0]}</span>
-                      </div>
-
-                      {/* Ogilvy Luxury Hover Effect */}
-                      <div className="v3-craft-hover-overlay">
-                        <div className="v3-craft-hover-content">
-                          <div className="v3-craft-hover-meta">
-                            <span className="v3-craft-client-eyebrow">
-                              {project.client}
-                            </span>
-                            <span className="v3-craft-discipline-pill">
-                              {project.year}
-                            </span>
-                          </div>
-
-                          <h4 className="v3-craft-hover-title">{project.title}</h4>
-
-                          <p
-                            style={{
-                              fontFamily: "Raleway, sans-serif",
-                              fontSize: "13.5px",
-                              lineHeight: "1.5",
-                              color: "rgba(255, 255, 255, 0.85)",
-                              margin: "8px 0 16px 0",
-                            }}
-                          >
-                            {project.excerpt}
-                          </p>
-
-                          <div className="v3-craft-hover-cta">
-                            <span>VIEW COMPLETE WORK</span>
-                            <ArrowUpRight size={14} />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Editorial Caption Strip Below Card */}
-                    <div className="v3-craft-caption">
-                      <div className="v3-craft-caption-top">
-                        <span className="v3-craft-meta-category">
-                          {project.categories.join(" • ")}
+                      <h3 className="work__item-title">
+                        <span>
+                          <span className="work__item-headline">{project.title}</span>
+                          <span className="work__item-client">{project.client}</span>
                         </span>
-                        <span className="v3-craft-meta-client">
-                          {project.client}
-                        </span>
-                      </div>
-
-                      <h3 className="v3-craft-card-headline">{project.title}</h3>
-                      <p className="v3-craft-card-excerpt">{project.excerpt}</p>
-
-                      <div className="v3-craft-card-footer">
-                        <div className="v3-craft-tags-row">
-                          {project.categories.map((cat, idx) => (
-                            <span key={idx} className="v3-craft-tag-pill">
-                              {cat}
-                            </span>
-                          ))}
-                        </div>
-
-                        <div className="v3-craft-view-link">
-                          <span>EXPLORE</span>
-                          <ArrowUpRight size={13} />
-                        </div>
-                      </div>
+                      </h3>
                     </div>
                   </Link>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
 
           {/* Bottom Call to Action */}

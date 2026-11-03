@@ -1,21 +1,105 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowUp, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
-import { FaInstagram, FaLinkedin, FaFacebookF } from "react-icons/fa";
+import { ArrowUp, Mail, Phone, MapPin, ArrowUpRight, Sparkles, Clock } from "lucide-react";
+import { FaInstagram, FaLinkedin, FaFacebookF, FaYoutube } from "react-icons/fa";
 
 export default function HomeV3Footer() {
+  const [timeStr, setTimeStr] = useState("");
+
+  useEffect(() => {
+    const updateTime = () => {
+      try {
+        const now = new Date();
+        const istTime = now.toLocaleTimeString("en-US", {
+          timeZone: "Asia/Kolkata",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+        });
+        setTimeStr(istTime);
+      } catch (e) {
+        setTimeStr("10:00 AM");
+      }
+    };
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const tickerItems = [
+    "NATIONAL TELEVISION COMMERCIALS",
+    "HIGH JEWELLERY EDITORIALS",
+    "CELEBRITY MANAGEMENT",
+    "FMCG PACKAGING ARCHITECTURE",
+    "OTT & CONNECTED TV DOMINANCE",
+    "360° MASTERBRAND STRATEGY",
+    "MEDIA PLANNING & BUYING",
+  ];
+
   return (
     <footer className="v3-footer">
       <div className="container-fluid v3-footer-inner px-3 px-md-5 px-xl-5">
-        {/* Top Grand Brand Bar with Bootstrap row & col */}
-        <div className="row align-items-start align-items-md-center justify-content-between g-4 pb-5 mb-5 v3-footer-brand-bar">
-          <div className="col-12 col-md-8 col-lg-7 v3-footer-brand-left">
+        {/* =====================================================================
+            1. GRAND EYE-CATCHY HERO CTA BANNER
+            ===================================================================== */}
+        <div className="v3-footer-hero-cta mb-5">
+          <div className="row align-items-center justify-content-between g-4">
+            <div className="col-12 col-lg-8">
+              <div className="v3-footer-cta-eyebrow">
+                <span className="v3-badge-pulse" />
+                <span>READY TO DEFINE AN ERA? // STUDIO DESK ACTIVE</span>
+              </div>
+              <h2 className="v3-footer-cta-heading">
+                Have an iconic vision? <br className="d-none d-md-inline" />
+                Let’s engineer your brand’s defining moment.
+              </h2>
+            </div>
+
+            <div className="col-12 col-lg-4 text-lg-end">
+              <div className="v3-footer-cta-actions">
+                <Link href="/home-v3/connect" className="v3-footer-cta-btn-primary">
+                  <span>START A BRIEFING</span>
+                  <div className="v3-btn-arrow-wrap">
+                    <ArrowUpRight size={17} />
+                  </div>
+                </Link>
+
+                <a href="tel:+919891505451" className="v3-footer-cta-btn-secondary">
+                  <Phone size={14} className="me-2" />
+                  <span>DIRECT DESK</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* =====================================================================
+            2. INFINITE KINETIC MARQUEE RIBBON
+            ===================================================================== */}
+        <div className="v3-footer-marquee-strip mb-5" aria-hidden="true">
+          <div className="v3-footer-marquee-track">
+            {[...tickerItems, ...tickerItems].map((item, idx) => (
+              <span key={idx} className="v3-footer-marquee-item">
+                <Sparkles size={11} className="v3-marquee-sparkle" />
+                <span>{item}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* =====================================================================
+            3. MAIN ARCHITECTURAL COLUMNS GRID
+            ===================================================================== */}
+        <div className="row g-4 g-lg-5 pb-5 v3-footer-columns-grid">
+          {/* Column 1: Brand Authority */}
+          <div className="col-12 col-lg-4 v3-footer-col v3-footer-col-brand">
             <Link href="/" className="v3-footer-logo-lockup" aria-label="AdClan Home">
               <svg
                 className="v3-footer-monogram"
@@ -29,117 +113,156 @@ export default function HomeV3Footer() {
               <span className="v3-footer-brand-name">ADCLAN</span>
             </Link>
             <p className="v3-footer-tagline">
-              Ideas. Media. Impact. A 360° creative marketing agency engineering cultural
-              relevance and commercial authority for visionary brands across India.
+              Ideas. Media. Impact. A 360° creative marketing powerhouse engineering cultural
+              authority and commercial scale for visionary brands across India.
             </p>
-          </div>
 
-          <div className="col-12 col-md-4 col-lg-3 text-md-end">
-            <button
-              type="button"
-              className="v3-footer-top-btn"
-              onClick={scrollToTop}
-              aria-label="Back to top"
-            >
-              <span>BACK TO TOP</span>
-              <div className="v3-top-icon-circle">
-                <ArrowUp size={16} />
+            <div className="v3-footer-meta-pills mt-4">
+              <div className="v3-footer-badge">
+                <span className="v3-badge-pulse" />
+                <span>DELHI • MUMBAI • NATIONWIDE</span>
               </div>
-            </button>
+            </div>
           </div>
-        </div>
 
-        {/* Structured Columns via Bootstrap row & col-md / col-lg */}
-        <div className="row g-4 g-lg-5 pb-5 mb-4 v3-footer-columns-grid">
-          {/* Column 1: Navigation */}
-          <div className="col-6 col-md-3 col-lg-2 v3-footer-col">
+          {/* Column 2: Navigation */}
+          <div className="col-6 col-md-4 col-lg-2 v3-footer-col">
             <h5 className="v3-col-title">NAVIGATION</h5>
             <ul className="v3-footer-link-list">
               <li>
-                <a href="#craft">Our Craft</a>
+                <a href="#craft">
+                  <span className="v3-link-dash" />
+                  <span>Our Craft</span>
+                </a>
               </li>
               <li>
-                <Link href="/home-v3/work">Work Portfolio</Link>
+                <Link href="/home-v3/work">
+                  <span className="v3-link-dash" />
+                  <span>Work Portfolio</span>
+                </Link>
               </li>
               <li>
-                <Link href="/home-v3/narrative">Narrative</Link>
+                <Link href="/home-v3/narrative">
+                  <span className="v3-link-dash" />
+                  <span>Brand Narrative</span>
+                </Link>
               </li>
               <li>
-                <Link href="/home-v3/expertise">Expertise</Link>
+                <Link href="/home-v3/expertise">
+                  <span className="v3-link-dash" />
+                  <span>Expertise</span>
+                </Link>
               </li>
               <li>
-                <Link href="/home-v3/brands">Brands</Link>
+                <Link href="/home-v3/brands">
+                  <span className="v3-link-dash" />
+                  <span>Client Roster</span>
+                </Link>
               </li>
               <li>
-                <a href="#stories">Articles</a>
+                <a href="#stories">
+                  <span className="v3-link-dash" />
+                  <span>Journal</span>
+                </a>
               </li>
               <li>
-                <Link href="/home-v3/connect">Reach Us</Link>
+                <Link href="/home-v3/connect">
+                  <span className="v3-link-dash" />
+                  <span>Reach Us</span>
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 2: Capabilities */}
-          <div className="col-6 col-md-4 col-lg-4 v3-footer-col">
-            <h5 className="v3-col-title">EXPERTISE</h5>
+          {/* Column 3: Capabilities */}
+          <div className="col-6 col-md-4 col-lg-3 v3-footer-col">
+            <h5 className="v3-col-title">CAPABILITIES</h5>
             <ul className="v3-footer-link-list">
               <li>
-                <Link href="/services">Brand Strategy & Identity</Link>
+                <Link href="/services">
+                  <span className="v3-link-dash" />
+                  <span>Broadcast TVCs & Films</span>
+                </Link>
               </li>
               <li>
-                <Link href="/services">Broadcast TVCs & Films</Link>
+                <Link href="/services">
+                  <span className="v3-link-dash" />
+                  <span>FMCG Packaging Design</span>
+                </Link>
               </li>
               <li>
-                <Link href="/services">Media Planning & Buying</Link>
+                <Link href="/services">
+                  <span className="v3-link-dash" />
+                  <span>High Jewellery Campaigns</span>
+                </Link>
               </li>
               <li>
-                <Link href="/services">Digital & Performance Media</Link>
+                <Link href="/services">
+                  <span className="v3-link-dash" />
+                  <span>Celebrity PR & Handling</span>
+                </Link>
               </li>
               <li>
-                <Link href="/services">OTT & Connected TV</Link>
+                <Link href="/services">
+                  <span className="v3-link-dash" />
+                  <span>National Media Buying</span>
+                </Link>
               </li>
               <li>
-                <Link href="/services">Celebrity & PR Endorsements</Link>
+                <Link href="/services">
+                  <span className="v3-link-dash" />
+                  <span>Performance Marketing</span>
+                </Link>
               </li>
               <li>
-                <Link href="/services">BTL Experiential Activations</Link>
+                <Link href="/services">
+                  <span className="v3-link-dash" />
+                  <span>BTL & Experiential Events</span>
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Contact & Direct Desk */}
-          <div className="col-12 col-md-5 col-lg-3 v3-footer-col">
-            <h5 className="v3-col-title">DIRECT DESK</h5>
-            <ul className="v3-footer-contact-list">
-              <li>
-                <Phone size={15} className="v3-f-icon" />
-                <div>
-                  <a href="tel:+919891505451">+91-9891505451</a>
-                  <span className="v3-f-sep"> / </span>
-                  <a href="tel:01149573333">011-49573333</a>
+          {/* Column 4: Direct Desk & Concierge */}
+          <div className="col-12 col-md-4 col-lg-3 v3-footer-col v3-footer-col-desk">
+            <h5 className="v3-col-title">DIRECT CONCIERGE</h5>
+
+            <div className="v3-desk-cards-wrap">
+              <a href="tel:+919891505451" className="v3-desk-contact-card">
+                <div className="v3-desk-icon-box">
+                  <Phone size={15} />
                 </div>
-              </li>
-              <li>
-                <Mail size={15} className="v3-f-icon" />
-                <a href="mailto:info@adclan.in">info@adclan.in</a>
-              </li>
-              <li>
-                <MapPin size={15} className="v3-f-icon" />
-                <span>
-                  D-7 & 8, 2nd Floor, Pushpa Bhavan, Alaknanda Commercial Complex, New Delhi 110019
-                </span>
-              </li>
-            </ul>
-          </div>
+                <div>
+                  <div className="v3-desk-label">PRIORITY LINE</div>
+                  <div className="v3-desk-val">+91 98915 05451</div>
+                  <div className="v3-desk-sub">011-49573333</div>
+                </div>
+              </a>
 
-          {/* Column 4: Newsletter / Social Connect */}
-          <div className="col-12 col-md-6 col-lg-3 v3-footer-col">
-            <h5 className="v3-col-title">CONNECT</h5>
-            <p className="v3-connect-note">
-              Follow our latest brand transformations, TVC releases, and industry perspectives.
-            </p>
+              <a href="mailto:info@adclan.in" className="v3-desk-contact-card">
+                <div className="v3-desk-icon-box">
+                  <Mail size={15} />
+                </div>
+                <div>
+                  <div className="v3-desk-label">VIP CORRESPONDENCE</div>
+                  <div className="v3-desk-val">info@adclan.in</div>
+                </div>
+              </a>
 
-            <div className="v3-footer-social-row">
+              <div className="v3-desk-contact-card v3-desk-address-card">
+                <div className="v3-desk-icon-box">
+                  <MapPin size={15} />
+                </div>
+                <div>
+                  <div className="v3-desk-label">FLAGSHIP STUDIO</div>
+                  <div className="v3-desk-address">
+                    Pushpa Bhavan, Alaknanda Commercial Complex, New Delhi 110019
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="v3-footer-social-row mt-4">
               <a
                 href="https://www.instagram.com/adclanmedia/?hl=en"
                 target="_blank"
@@ -147,7 +270,7 @@ export default function HomeV3Footer() {
                 aria-label="Instagram"
                 className="v3-f-social-btn"
               >
-                <FaInstagram size={17} />
+                <FaInstagram size={16} />
               </a>
               <a
                 href="https://in.linkedin.com/company/adclan"
@@ -156,7 +279,7 @@ export default function HomeV3Footer() {
                 aria-label="LinkedIn"
                 className="v3-f-social-btn"
               >
-                <FaLinkedin size={17} />
+                <FaLinkedin size={16} />
               </a>
               <a
                 href="https://www.facebook.com/adclanmedia/"
@@ -165,32 +288,66 @@ export default function HomeV3Footer() {
                 aria-label="Facebook"
                 className="v3-f-social-btn"
               >
-                <FaFacebookF size={17} />
+                <FaFacebookF size={15} />
               </a>
-            </div>
-
-            <div className="v3-footer-badge">
-              <span className="v3-badge-pulse" />
-              <span>DELHI • MUMBAI • NATIONWIDE</span>
+              <a
+                href="https://www.youtube.com/@adclan"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="v3-f-social-btn"
+              >
+                <FaYoutube size={16} />
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom Legal Copyright Bar with Bootstrap row & col */}
-        <div className="row align-items-center justify-content-between g-3 pt-3 v3-footer-bottom-bar">
-          <div className="col-12 col-md-6">
+        {/* =====================================================================
+            4. MONUMENTAL ARCHITECTURAL GHOST WATERMARK
+            ===================================================================== */}
+        <div className="v3-footer-watermark-row" aria-hidden="true">
+          <div className="v3-footer-watermark-text">ADCLAN</div>
+        </div>
+
+        {/* =====================================================================
+            5. BOTTOM LEGAL, LIVE TIME & BACK TO TOP BAR
+            ===================================================================== */}
+        <div className="row align-items-center justify-content-between g-3 pt-4 v3-footer-bottom-bar">
+          <div className="col-12 col-md-5">
             <p className="v3-copy-text mb-0">
-              © {new Date().getFullYear()} AdClan Media Solution Pvt Ltd. All Rights Reserved.
+              © {new Date().getFullYear()} AdClan Media Solution Pvt Ltd. Engineered with precision.
             </p>
           </div>
 
-          <div className="col-12 col-md-6 text-md-end">
-            <div className="v3-legal-links justify-content-md-end">
-              <Link href="/privacy-policy">Privacy Policy</Link>
-              <span className="v3-legal-dot">•</span>
-              <Link href="/term-and-condition">Terms of Service</Link>
-              <span className="v3-legal-dot">•</span>
-              <Link href="/cookie-policy">Cookie Policy</Link>
+          <div className="col-12 col-md-3 text-md-center">
+            {timeStr && (
+              <div className="v3-footer-live-clock">
+                <Clock size={12} className="v3-clock-icon" />
+                <span>NEW DELHI: {timeStr} IST</span>
+              </div>
+            )}
+          </div>
+
+          <div className="col-12 col-md-4 text-md-end">
+            <div className="v3-footer-bottom-actions">
+              <div className="v3-legal-links">
+                <Link href="/privacy-policy">Privacy</Link>
+                <span className="v3-legal-dot">•</span>
+                <Link href="/term-and-condition">Terms</Link>
+              </div>
+
+              <button
+                type="button"
+                className="v3-footer-top-btn"
+                onClick={scrollToTop}
+                aria-label="Back to top"
+              >
+                <span>TOP</span>
+                <div className="v3-top-icon-circle">
+                  <ArrowUp size={14} />
+                </div>
+              </button>
             </div>
           </div>
         </div>

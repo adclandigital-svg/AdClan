@@ -68,8 +68,8 @@ export default function HomeV3Page() {
       {/* 2. Our Craft (Work showcase with category filters & real project images) */}
       <OurCraftSectionV3 />
 
-      {/* 3. Case Studies (Optional section for future use — Cinematic Reels & Studies) */}
-      <WorkSectionV3 />
+      {/* 3. Case Studies (Hidden from Homepage as requested — preserved for dedicated routes/future use) */}
+      {/* <WorkSectionV3 /> */}
 
       {/* 4. Articles ("Stories Behind the Strategy" — Unchanged content & design) */}
       <HomeBlogSectionV3 />
