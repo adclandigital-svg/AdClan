@@ -58,7 +58,7 @@ body.home-v3-active {
 }
 
 .v3-section-eyebrow {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -67,7 +67,7 @@ body.home-v3-active {
 }
 
 .v3-editorial-headline {
-  font-family: "Raleway", sans-serif;
+  
   font-size: clamp(38px, 4vw, 64px);
   font-weight: 800;
   line-height: 1.15;
@@ -85,7 +85,6 @@ body.home-v3-active {
 
 /* Dedicated Clean Header for Our Craft Section */
 .v3-craft-heading {
-  font-family: "Raleway", sans-serif !important;
   font-size: clamp(38px, 4.2vw, 68px) !important;
   font-weight: 800 !important;
   letter-spacing: -0.01em !important;
@@ -96,7 +95,7 @@ body.home-v3-active {
 }
 
 .v3-editorial-subtext {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
@@ -111,7 +110,7 @@ body.home-v3-active {
   align-items: center;
   gap: 16px;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 11.5px;
   font-weight: 600;
   letter-spacing: 0.22em;
@@ -150,7 +149,7 @@ body.home-v3-active {
 
 .v3-sub-eyebrow,
 .v3-work-sub-eyebrow {
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.24em;
@@ -189,7 +188,7 @@ body.home-v3-active {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -233,7 +232,7 @@ body.home-v3-active {
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 30px;
   padding: 10px 22px;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -283,7 +282,6 @@ body.home-v3-active {
 }
 
 .v3-craft-slide-counter {
-  font-family: "Outfit", "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: 500;
   color: #7a7f8d;
@@ -497,7 +495,6 @@ body.home-v3-active {
 
 .work__item-headline {
   display: block !important;
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-size: clamp(14px, 1.1vw, 17px) !important;
   font-weight: 700 !important;
   line-height: 1.35 !important;
@@ -511,7 +508,6 @@ body.home-v3-active {
 
 .work__item-client {
   display: inline-block !important;
-  font-family: "Montserrat", sans-serif !important;
   font-size: 10px !important;
   font-weight: 700 !important;
   letter-spacing: 0.22em !important;
@@ -539,7 +535,7 @@ body.home-v3-active {
 .v3-narrative-section .v3-section-eyebrow,
 .v3-narrative-section .v3-sub-eyebrow {
   color: #1e498b;
-  font-family: "Raleway", sans-serif;
+  
   font-weight: 700;
 }
 
@@ -549,19 +545,19 @@ body.home-v3-active {
 
 .v3-narrative-section .v3-editorial-headline {
   color: #111111;
-  font-family: "Raleway", sans-serif;
+  
   font-weight: 800;
 }
 
 .v3-narrative-section .v3-editorial-headline span {
   color: #666666;
-  font-family: "Raleway", sans-serif;
+  
   font-weight: 700;
 }
 
 .v3-narrative-section .v3-editorial-subtext {
   color: #555555;
-  font-family: "Raleway", sans-serif;
+  
 }
 
 /* Intro Two-Column Spread */
@@ -607,7 +603,7 @@ body.home-v3-active {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  font-family: "Raleway", sans-serif;
+  
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -645,7 +641,7 @@ body.home-v3-active {
 }
 
 .v3-narrative-section .v3-metric-val {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 28px;
   font-weight: 800;
   color: #111111;
@@ -653,7 +649,7 @@ body.home-v3-active {
 }
 
 .v3-narrative-section .v3-metric-name {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 13px;
   font-weight: 600;
   color: #666666;
@@ -674,7 +670,7 @@ body.home-v3-active {
 }
 
 .v3-narrative-section .v3-manifesto-quote {
-  font-family: "Raleway", sans-serif;
+  
   font-size: clamp(22px, 2.2vw, 30px);
   font-style: normal;
   font-weight: 700;
@@ -686,7 +682,7 @@ body.home-v3-active {
 }
 
 .v3-narrative-section .v3-manifesto-body {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 15.5px;
   line-height: 1.72;
   color: #555555;
@@ -739,7 +735,7 @@ body.home-v3-active {
 }
 
 .v3-methodology-heading {
-  font-family: "Raleway", sans-serif;
+  
   font-size: clamp(28px, 3vw, 44px);
   font-weight: 800;
   color: #111111;
@@ -771,14 +767,14 @@ body.home-v3-active {
 }
 
 .v3-pillar-num {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 26px;
   font-weight: 800;
   color: #111111;
 }
 
 .v3-pillar-phase {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -787,7 +783,7 @@ body.home-v3-active {
 }
 
 .v3-pillar-title {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 26px;
   font-weight: 700;
   color: #111111;
@@ -795,7 +791,7 @@ body.home-v3-active {
 }
 
 .v3-pillar-desc {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 15px;
   line-height: 1.68;
   color: #555555;
@@ -965,7 +961,7 @@ body.home-v3-active {
 
 /* Overlay Typography */
 .v3-team-overlay-name {
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  
   font-size: clamp(24px, 1.8vw, 32px);
   font-weight: 700;
   line-height: 1.15;
@@ -980,7 +976,6 @@ body.home-v3-active {
 }
 
 .v3-team-overlay-title {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-size: clamp(18px, 1.35vw, 23px);
   font-style: italic;
   font-weight: 400;
@@ -1067,7 +1062,7 @@ body.home-v3-active {
 .v3-team-location-badge {
   display: inline-block;
   margin-top: 18px;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -1085,7 +1080,7 @@ body.home-v3-active {
 }
 
 .v3-ogilvy-drawer-name {
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  
   font-size: clamp(22px, 1.8vw, 28px);
   font-weight: 700;
   line-height: 1.15;
@@ -1095,7 +1090,6 @@ body.home-v3-active {
 }
 
 .v3-ogilvy-drawer-title {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-size: clamp(17px, 1.3vw, 21px);
   font-style: italic;
   font-weight: 400;
@@ -1105,8 +1099,6 @@ body.home-v3-active {
 }
 
 .v3-ogilvy-drawer-bio {
-  max-height: 400px;
-  overflow-y: auto;
   padding-right: 12px;
 }
 
@@ -1120,9 +1112,8 @@ body.home-v3-active {
 }
 
 .v3-ogilvy-drawer-bio p {
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 13.5px;
-  line-height: 1.68;
+  font-size: 15px;
+  line-height: 1.8;
   color: #d1d1d1;
   margin-bottom: 14px;
 }
@@ -1140,7 +1131,7 @@ body.home-v3-active {
 }
 
 .v3-ogilvy-drawer-meta-title {
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -1155,7 +1146,7 @@ body.home-v3-active {
 }
 
 .v3-ogilvy-drawer-meta-list li {
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  
   font-size: 13px;
   line-height: 1.45;
   color: #b5b5b5;
@@ -1295,7 +1286,7 @@ body.home-v3-active {
 }
 
 .v3-expertise-count-badge {
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -1337,7 +1328,7 @@ body.home-v3-active {
 }
 
 .v3-tab-item-num {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 20px;
   font-weight: 800;
   color: #1e498b;
@@ -1350,7 +1341,7 @@ body.home-v3-active {
 }
 
 .v3-tab-item-discipline {
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -1361,7 +1352,7 @@ body.home-v3-active {
 }
 
 .v3-tab-item-title {
-  font-family: "Outfit", sans-serif;
+  
   font-size: 15.5px;
   font-weight: 600;
   color: #121212;
@@ -1404,14 +1395,14 @@ body.home-v3-active {
 }
 
 .v3-spotlight-num {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 28px;
   font-weight: 800;
   color: #1e498b;
 }
 
 .v3-spotlight-discipline {
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -1420,7 +1411,7 @@ body.home-v3-active {
 }
 
 .v3-spotlight-badge {
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -1432,7 +1423,7 @@ body.home-v3-active {
 }
 
 .v3-spotlight-title {
-  font-family: "Raleway", sans-serif;
+  
   font-size: clamp(26px, 2.5vw, 36px);
   font-weight: 800;
   color: #121212;
@@ -1441,7 +1432,7 @@ body.home-v3-active {
 }
 
 .v3-spotlight-desc {
-  font-family: "Outfit", sans-serif;
+  
   font-size: 16px;
   line-height: 1.7;
   color: #5c554d;
@@ -1453,7 +1444,7 @@ body.home-v3-active {
 }
 
 .v3-spotlight-tags-label {
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -1476,7 +1467,7 @@ body.home-v3-active {
   border-radius: 20px;
   background: #f0f4fa;
   border: 1px solid rgba(30, 73, 139, 0.15);
-  font-family: "Outfit", sans-serif;
+  
   font-size: 13px;
   font-weight: 500;
   color: #121212;
@@ -1531,7 +1522,7 @@ body.home-v3-active {
   background: rgba(18, 18, 18, 0.75);
   backdrop-filter: blur(6px);
   color: #ffffff;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -1556,7 +1547,7 @@ body.home-v3-active {
   background: #121212;
   color: #ffffff;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -1571,7 +1562,7 @@ body.home-v3-active {
 }
 
 .v3-expertise-archive-link {
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -1613,7 +1604,7 @@ body.home-v3-active {
 .v3-work-section .v3-section-eyebrow,
 .v3-work-section .v3-work-sub-eyebrow {
   color: #1e498b;
-  font-family: "Raleway", sans-serif;
+  
   font-weight: 700;
 }
 
@@ -1623,19 +1614,19 @@ body.home-v3-active {
 
 .v3-work-section .v3-editorial-headline {
   color: #111111;
-  font-family: "Raleway", sans-serif;
+  
   font-weight: 800;
 }
 
 .v3-work-section .v3-editorial-headline span {
   color: #666666;
-  font-family: "Raleway", sans-serif;
+  
   font-weight: 700;
 }
 
 .v3-work-section .v3-editorial-subtext {
   color: #555555;
-  font-family: "Raleway", sans-serif;
+  
 }
 
 .v3-work-reels-block {
@@ -1653,7 +1644,7 @@ body.home-v3-active {
   display: flex;
   align-items: center;
   gap: 20px;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 13.5px;
   letter-spacing: 0.08em;
   color: #666666;
@@ -1756,7 +1747,7 @@ body.home-v3-active {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #111111;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -1797,7 +1788,7 @@ body.home-v3-active {
 }
 
 .v3-reel-client-name {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -1808,7 +1799,7 @@ body.home-v3-active {
 }
 
 .v3-reel-headline {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 20px;
   font-weight: 700;
   color: #ffffff;
@@ -1828,7 +1819,7 @@ body.home-v3-active {
 }
 
 .v3-studies-heading {
-  font-family: "Raleway", sans-serif;
+  
   font-size: clamp(26px, 2.6vw, 40px);
   font-weight: 800;
   color: #111111;
@@ -1887,7 +1878,7 @@ body.home-v3-active {
   border-radius: 20px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  font-family: "Raleway", sans-serif;
+  
   font-size: 11px;
   font-weight: 700;
   color: #111111;
@@ -1900,7 +1891,7 @@ body.home-v3-active {
 }
 
 .v3-study-category {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -1909,7 +1900,7 @@ body.home-v3-active {
 }
 
 .v3-study-title {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 20px;
   font-weight: 700;
   color: #111111;
@@ -1926,7 +1917,7 @@ body.home-v3-active {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -2097,7 +2088,7 @@ body.home-v3-active {
 }
 
 .v3-strip-highlight {
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 13.5px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -2106,7 +2097,7 @@ body.home-v3-active {
 }
 
 .v3-strip-caption {
-  font-family: "Outfit", sans-serif;
+  
   font-size: 14px;
   color: #6d6760;
 }
@@ -2171,7 +2162,7 @@ body.home-v3-active {
   background: rgba(18, 18, 18, 0.85);
   backdrop-filter: blur(8px);
   color: #ffffff;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -2188,7 +2179,7 @@ body.home-v3-active {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -2201,7 +2192,7 @@ body.home-v3-active {
 }
 
 .v3-journal-card-title {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 20px;
   font-weight: 700;
   line-height: 1.35;
@@ -2220,7 +2211,7 @@ body.home-v3-active {
 }
 
 .v3-journal-card-excerpt {
-  font-family: "Outfit", sans-serif;
+  
   font-size: 15px;
   line-height: 1.6;
   color: #635d56;
@@ -2236,7 +2227,7 @@ body.home-v3-active {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -2270,7 +2261,7 @@ body.home-v3-active {
 
 .v3-reach-section .v3-section-eyebrow {
   color: #1e498b;
-  font-family: "Raleway", sans-serif;
+  
   font-weight: 700;
 }
 
@@ -2280,19 +2271,19 @@ body.home-v3-active {
 
 .v3-reach-section .v3-editorial-headline {
   color: #111111;
-  font-family: "Raleway", sans-serif;
+  
   font-weight: 800;
 }
 
 .v3-reach-section .v3-editorial-headline span {
   color: #666666;
-  font-family: "Raleway", sans-serif;
+  
   font-weight: 700;
 }
 
 .v3-reach-section .v3-editorial-subtext {
   color: #555555;
-  font-family: "Raleway", sans-serif;
+  
 }
 
 .v3-reach-invite-card {
@@ -2307,7 +2298,7 @@ body.home-v3-active {
 }
 
 .v3-invite-sub {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -2318,7 +2309,7 @@ body.home-v3-active {
 }
 
 .v3-invite-card-title {
-  font-family: "Raleway", sans-serif;
+  
   font-size: clamp(28px, 2.6vw, 38px);
   font-weight: 800;
   color: #111111;
@@ -2326,7 +2317,7 @@ body.home-v3-active {
 }
 
 .v3-invite-card-desc {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 15.5px;
   line-height: 1.68;
   color: #555555;
@@ -2350,7 +2341,7 @@ body.home-v3-active {
   background: #111111;
   color: #ffffff;
   text-decoration: none;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -2378,7 +2369,7 @@ body.home-v3-active {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -2410,7 +2401,7 @@ body.home-v3-active {
 }
 
 .v3-guarantee-text {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 13.5px;
   color: #666666;
 }
@@ -2462,7 +2453,7 @@ body.home-v3-active {
 
 .v3-desk-label {
   display: block;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -2477,7 +2468,7 @@ body.home-v3-active {
 }
 
 .v3-desk-val {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 16px;
   font-weight: 600;
   color: #111111;
@@ -2495,14 +2486,14 @@ body.home-v3-active {
 
 .v3-desk-hint {
   display: block;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 13px;
   color: #777777;
   margin-top: 4px;
 }
 
 .v3-desk-address {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 15px;
   line-height: 1.55;
   color: #555555;
@@ -2565,7 +2556,7 @@ body.home-v3-active {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.22em;
@@ -2575,7 +2566,7 @@ body.home-v3-active {
 }
 
 .v3-footer-cta-heading {
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
   font-size: clamp(24px, 2.7vw, 42px);
   font-weight: 800;
   line-height: 1.25;
@@ -2607,7 +2598,7 @@ body.home-v3-active {
   border-radius: 30px;
   background: #ffffff !important;
   color: #000000 !important;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 11.5px;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -2649,7 +2640,7 @@ body.home-v3-active {
   background: #0e1424 !important;
   border: 1px solid rgba(255, 255, 255, 0.22) !important;
   color: #ffffff !important;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -2700,7 +2691,7 @@ body.home-v3-active {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -2736,7 +2727,7 @@ body.home-v3-active {
 }
 
 .v3-footer-brand-name {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 28px;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -2745,7 +2736,7 @@ body.home-v3-active {
 }
 
 .v3-footer-tagline {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 14.5px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.76) !important; /* High contrast */
@@ -2761,7 +2752,7 @@ body.home-v3-active {
   border-radius: 20px;
   background: #080d1a !important;
   border: 1px solid rgba(255, 255, 255, 0.14) !important;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -2789,7 +2780,7 @@ body.home-v3-active {
 }
 
 .v3-col-title {
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.22em;
@@ -2811,7 +2802,7 @@ body.home-v3-active {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 14.5px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.76) !important; /* Clear, sharp, readable */
@@ -2885,7 +2876,7 @@ body.home-v3-active {
 }
 
 .v3-desk-label {
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -2895,20 +2886,20 @@ body.home-v3-active {
 }
 
 .v3-desk-val {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 14px;
   font-weight: 700;
   color: #ffffff !important;
 }
 
 .v3-desk-sub {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6) !important;
 }
 
 .v3-desk-address {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 12.5px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.76) !important;
@@ -2972,7 +2963,7 @@ body.home-v3-active {
    ========================================================================== */
 .v3-footer-bottom-bar {
   border-top: 1px solid rgba(255, 255, 255, 0.09) !important;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6) !important;
   padding-top: 24px !important;
@@ -2991,7 +2982,7 @@ body.home-v3-active {
   border-radius: 20px;
   background: #080d1a !important;
   border: 1px solid rgba(255, 255, 255, 0.14) !important;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -3048,7 +3039,7 @@ body.home-v3-active {
   align-items: center;
   gap: 10px;
   color: rgba(255, 255, 255, 0.8) !important;
-  font-family: "Montserrat", sans-serif;
+  
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -3180,7 +3171,7 @@ body.home-v3-active {
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -3226,7 +3217,7 @@ body.home-v3-active {
   border: none;
   background: transparent;
   width: 100%;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 13px;
   font-weight: 500;
   color: #111111;
@@ -3257,7 +3248,7 @@ body.home-v3-active {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: "Raleway", sans-serif;
+  
   font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -3276,7 +3267,7 @@ body.home-v3-active {
 }
 
 .v3-work-empty-state h3 {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 26px;
   font-weight: 800;
   color: #111111;
@@ -3284,7 +3275,7 @@ body.home-v3-active {
 }
 
 .v3-work-empty-state p {
-  font-family: "Raleway", sans-serif;
+  
   font-size: 15px;
   color: #666666;
   line-height: 1.6;
