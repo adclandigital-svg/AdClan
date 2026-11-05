@@ -376,35 +376,15 @@ const MARQUEE_PROJECTS = [
   },
 ];
 
-const FILTERS = [
-  { id: "all", label: "All Campaigns" },
-  { id: "vikram-mills", label: "Vikram Mills" },
-  { id: "right-gold", label: "Right Gold" },
-  { id: "big-fm", label: "Big FM" },
-  { id: "elmas-group", label: "Elmas Group" },
-  { id: "aggarwal", label: "Aggarwal" },
-];
-
 export default function OurCraftMarqueeSectionV3() {
-  const [activeFilter, setActiveFilter] = useState("all");
-
-  // Partition projects into 4 rows according to filter
+  // Partition all 36 projects evenly across 4 rows
   const { row1, row2, row3, row4 } = useMemo(() => {
-    let pool = MARQUEE_PROJECTS;
-    if (activeFilter !== "all") {
-      pool = MARQUEE_PROJECTS.filter((p) => p.clientId === activeFilter);
-      // If filtered brand has fewer items, repeat them gracefully across rows
-      if (pool.length < 16) {
-        pool = [...pool, ...pool, ...pool];
-      }
-    }
-
     const r1 = [];
     const r2 = [];
     const r3 = [];
     const r4 = [];
 
-    pool.forEach((item, index) => {
+    MARQUEE_PROJECTS.forEach((item, index) => {
       const target = index % 4;
       if (target === 0) r1.push(item);
       else if (target === 1) r2.push(item);
@@ -413,7 +393,7 @@ export default function OurCraftMarqueeSectionV3() {
     });
 
     return { row1: r1, row2: r2, row3: r3, row4: r4 };
-  }, [activeFilter]);
+  }, []);
 
   // Render a marquee card with name revealed on hover
   const renderCard = (project, uniqueKey) => (
@@ -433,7 +413,7 @@ export default function OurCraftMarqueeSectionV3() {
       {/* Hover Reveal Overlay with Project Name */}
       <div className="v3-craft-card-overlay">
         <span className="v3-craft-card-client-badge">
-          <Sparkles size={11} />
+          <Sparkles size={10} />
           <span>{project.client}</span>
         </span>
 
@@ -442,7 +422,7 @@ export default function OurCraftMarqueeSectionV3() {
         <div className="v3-craft-card-footer">
           <span className="v3-craft-card-category">{project.category}</span>
           <span className="v3-craft-card-arrow" aria-hidden="true">
-            <ArrowUpRight size={13} />
+            <ArrowUpRight size={12} />
           </span>
         </div>
       </div>
@@ -451,57 +431,10 @@ export default function OurCraftMarqueeSectionV3() {
 
   return (
     <section className="v3-craft-marquee-section" id="craft" data-anchor="work">
-      {/* Top Editorial Header */}
+      {/* Top Editorial Header: ONLY "OUR CRAFT" as heading */}
       <div className="container-fluid v3-section-container px-3 px-md-5 px-xl-5">
-        <div className="v3-craft-marquee-header">
-          <div className="row align-items-end justify-content-between g-4 mb-4">
-            <div className="col-12 col-lg-8">
-              <div className="v3-craft-marquee-eyebrow-wrap">
-                <span className="v3-craft-marquee-dash" />
-                <span className="v3-craft-marquee-eyebrow">02 / OUR CRAFT</span>
-              </div>
-
-              <h2 className="v3-craft-marquee-title">
-                Work Engineered for <span>Unignorable Scale.</span>
-              </h2>
-
-              <p className="v3-craft-marquee-subtext">
-                A continuous panorama of transformative brand architecture, cinematic campaigns, 
-                and high-impact cultural moments. Hover to pause and inspect any campaign.
-              </p>
-            </div>
-
-            <div className="col-12 col-lg-4 text-lg-end">
-              <Link href="/home-v3/work" className="v3-craft-marquee-cta-link">
-                <span>EXPLORE FULL ARCHIVE</span>
-                <ArrowRight size={15} />
-              </Link>
-            </div>
-          </div>
-
-          {/* Client Filter Tabs */}
-          <div className="v3-craft-marquee-filters">
-            {FILTERS.map((filter) => {
-              const isActive = activeFilter === filter.id;
-              const count =
-                filter.id === "all"
-                  ? MARQUEE_PROJECTS.length
-                  : MARQUEE_PROJECTS.filter((p) => p.clientId === filter.id).length;
-
-              return (
-                <button
-                  key={filter.id}
-                  type="button"
-                  className={`v3-craft-marquee-filter-btn ${isActive ? "is-active" : ""}`}
-                  onClick={() => setActiveFilter(filter.id)}
-                  aria-pressed={isActive}
-                >
-                  <span>{filter.label}</span>
-                  <span className="v3-craft-marquee-count">{count}</span>
-                </button>
-              );
-            })}
-          </div>
+        <div className="v3-craft-marquee-header-clean">
+          <h2 className="v3-craft-marquee-title-only">OUR CRAFT</h2>
         </div>
       </div>
 

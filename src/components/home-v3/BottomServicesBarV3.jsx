@@ -44,7 +44,7 @@ const SERVICES_ITEMS = [
   },
   {
     id: "celebrity-productions",
-    label: "CELEBRITY PRODUCTIONS",
+    label: "CELEBRITY & INFLUENCER",
     icon: Star,
     href: "/services",
   },

@@ -2,7 +2,9 @@
 
 import React, { useEffect } from "react";
 import HomeV3Navbar from "@/components/home-v3/HomeV3Navbar";
-import HeroBannerSliderV3 from "@/components/home-v3/HeroBannerSliderV3";
+import HeroBannerSliderCenteredV3 from "@/components/home-v3/HeroBannerSliderCenteredV3";
+// Preserved original 2-column hero slider:
+// import HeroBannerSliderV3 from "@/components/home-v3/HeroBannerSliderV3";
 import BottomServicesBarV3 from "@/components/home-v3/BottomServicesBarV3";
 import OurCraftSectionV3 from "@/components/home-v3/OurCraftSectionV3";
 import OurCraftMarqueeSectionV3 from "@/components/home-v3/OurCraftMarqueeSectionV3";
@@ -50,8 +52,9 @@ export default function HomeV3Page() {
         {/* Top Navigation Bar */}
         <HomeV3Navbar />
 
-        {/* Hero Section with Synchronized 3D Card Slider */}
-        <HeroBannerSliderV3 />
+        {/* Hero Section with Centered 3D Card Slider (Duplicated per client feedback) */}
+        <HeroBannerSliderCenteredV3 />
+        {/* Preserved original 2-column hero: <HeroBannerSliderV3 /> */}
 
         {/* Bottom Services Strip with Crisp Iconography */}
         <BottomServicesBarV3 />

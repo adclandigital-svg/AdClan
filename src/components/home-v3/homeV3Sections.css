@@ -2634,20 +2634,33 @@ body.home-v3-active {
 }
 
 /* ==========================================================================
-   7. ULTRA-PREMIUM LUXURY FOOTER — REFINED EDITORIAL LIGHT LUXURY
-   (Updated per client feedback: light, prestigious, perfectly matched with V3 theme)
+   7. ULTRA-PREMIUM LUXURY FOOTER — ROYAL SAPPHIRE BRAND BLUE GRADIENT
+   (Updated per client feedback: subtle royal blue gradient based on #1e498b,
+    distinct from page, avoiding pitch black, with frosted luxury accents)
    ========================================================================== */
 .v3-footer {
   position: relative;
-  background-color: #fafbfc !important;
-  background: #fafbfc !important;
-  color: #111111 !important;
+  background: linear-gradient(150deg, #102d59 0%, #163e78 50%, #1e498b 100%) !important;
+  background-color: #102d59 !important;
+  color: #ffffff !important;
   padding: 85px 0 32px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
   overflow: hidden;
 }
 
-/* Remove milky blurry ambient haze */
+.v3-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 85% 15%, rgba(68, 140, 245, 0.22) 0%, transparent 55%),
+              radial-gradient(circle at 15% 85%, rgba(30, 73, 139, 0.3) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Remove milky blurry ambient haze from previous iteration */
 .v3-footer-glow-1,
 .v3-footer-glow-2 {
   display: none !important;
@@ -2663,14 +2676,16 @@ body.home-v3-active {
 }
 
 /* ==========================================================================
-   HERO CALL-TO-ACTION BANNER (Royal Sapphire & Midnight Luxury Card)
+   HERO CALL-TO-ACTION BANNER (Frosted Glassmorphism Card on Royal Blue)
    ========================================================================== */
 .v3-footer-hero-cta {
-  background: linear-gradient(135deg, #0e1e3e 0%, #1e498b 100%) !important;
-  border: 1px solid rgba(30, 73, 139, 0.3) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
   border-radius: 22px !important;
   padding: 50px 48px !important;
-  box-shadow: 0 24px 60px rgba(30, 73, 139, 0.16) !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18) !important;
   position: relative;
   overflow: hidden;
 }
@@ -2682,7 +2697,7 @@ body.home-v3-active {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
 }
 
 .v3-footer-cta-eyebrow {
@@ -2693,7 +2708,7 @@ body.home-v3-active {
   font-weight: 800;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #90caf9 !important;
+  color: #a5d2ff !important;
   margin-bottom: 16px;
 }
 
@@ -2703,7 +2718,7 @@ body.home-v3-active {
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: #ffffff !important;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
   margin: 0;
 }
 
@@ -2728,7 +2743,7 @@ body.home-v3-active {
   padding: 16px 30px;
   border-radius: 30px;
   background: #ffffff !important;
-  color: #111111 !important;
+  color: #1e498b !important;
   font-size: 11.5px;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -2739,7 +2754,7 @@ body.home-v3-active {
 }
 
 .v3-footer-cta-btn-primary:hover {
-  background: #111111 !important;
+  background: #0f2444 !important;
   color: #ffffff !important;
   transform: translateY(-2px);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
@@ -2749,7 +2764,7 @@ body.home-v3-active {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #111111;
+  background: #1e498b;
   color: #ffffff;
   display: grid;
   place-items: center;
@@ -2758,8 +2773,8 @@ body.home-v3-active {
 
 .v3-footer-cta-btn-primary:hover .v3-btn-arrow-wrap {
   transform: rotate(45deg);
-  background: #1e498b;
-  color: #ffffff;
+  background: #ffffff;
+  color: #1e498b;
 }
 
 .v3-footer-cta-btn-secondary {
@@ -2788,14 +2803,15 @@ body.home-v3-active {
 }
 
 /* ==========================================================================
-   KINETIC MARQUEE RIBBON (Clean Soft Sapphire Strip)
+   KINETIC MARQUEE RIBBON (Luminous Translucent Glass Ribbon)
    ========================================================================== */
 .v3-footer-marquee-strip {
   width: 100%;
   overflow: hidden;
-  background: #eef4fc !important;
-  border-top: 1px solid rgba(30, 73, 139, 0.12) !important;
-  border-bottom: 1px solid rgba(30, 73, 139, 0.12) !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+  backdrop-filter: blur(10px);
   padding: 15px 0;
 }
 
@@ -2824,18 +2840,18 @@ body.home-v3-active {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.22em;
-  color: #1e498b !important;
+  color: rgba(255, 255, 255, 0.95) !important;
 }
 
 .v3-marquee-sparkle {
-  color: #1e498b !important;
+  color: #90caf9 !important;
 }
 
 /* ==========================================================================
    MAIN 4 ARCHITECTURAL COLUMNS
    ========================================================================== */
 .v3-footer-columns-grid {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
   padding-bottom: 40px !important;
 }
 
@@ -2844,14 +2860,14 @@ body.home-v3-active {
   align-items: center;
   gap: 14px;
   text-decoration: none;
-  color: #111111 !important;
+  color: #ffffff !important;
   margin-bottom: 20px;
 }
 
 .v3-footer-monogram {
   width: 36px;
   height: 44px;
-  fill: #111111 !important;
+  fill: #ffffff !important;
   filter: none !important;
 }
 
@@ -2860,13 +2876,13 @@ body.home-v3-active {
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase !important;
-  color: #111111 !important;
+  color: #ffffff !important;
 }
 
 .v3-footer-tagline {
   font-size: 14.5px;
   line-height: 1.7;
-  color: #555555 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
   max-width: 420px;
   margin: 0;
 }
@@ -2877,21 +2893,21 @@ body.home-v3-active {
   gap: 8px;
   padding: 8px 16px;
   border-radius: 20px;
-  background: #ffffff !important;
-  border: 1px solid rgba(0, 0, 0, 0.09) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.18em;
-  color: #1e498b !important;
+  color: #ffffff !important;
 }
 
 .v3-badge-pulse {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #00c853 !important;
-  box-shadow: 0 0 10px #00c853 !important;
+  background-color: #00e676 !important;
+  box-shadow: 0 0 10px #00e676 !important;
   animation: v3PulseGlow 2s infinite ease-in-out;
 }
 
@@ -2910,7 +2926,7 @@ body.home-v3-active {
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.22em;
-  color: #1e498b !important;
+  color: #90caf9 !important;
   margin: 0 0 24px 0;
   text-transform: uppercase;
 }
@@ -2930,7 +2946,7 @@ body.home-v3-active {
   gap: 10px;
   font-size: 14.5px;
   font-weight: 500;
-  color: #444444 !important;
+  color: rgba(255, 255, 255, 0.82) !important;
   text-decoration: none;
   transition: all 0.25s ease;
 }
@@ -2939,12 +2955,12 @@ body.home-v3-active {
   display: inline-block;
   width: 0;
   height: 1px;
-  background: #1e498b;
+  background: #90caf9;
   transition: width 0.25s ease;
 }
 
 .v3-footer-link-list a:hover {
-  color: #1e498b !important;
+  color: #ffffff !important;
   transform: translateX(4px);
 }
 
@@ -2953,7 +2969,7 @@ body.home-v3-active {
 }
 
 /* ==========================================================================
-   DIRECT CONCIERGE CARDS (Solid Light Porcelain Luxury Cards)
+   DIRECT CONCIERGE CARDS (Frosted Glass Luxury Cards on Sapphire)
    ========================================================================== */
 .v3-desk-cards-wrap {
   display: flex;
@@ -2967,45 +2983,47 @@ body.home-v3-active {
   gap: 14px;
   padding: 14px 16px;
   border-radius: 14px;
-  background: #ffffff !important;
-  border: 1px solid rgba(0, 0, 0, 0.08) !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease;
 }
 
 .v3-desk-contact-card:hover {
-  background: #ffffff !important;
-  border-color: #1e498b !important;
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(30, 73, 139, 0.12) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22) !important;
 }
 
 .v3-desk-icon-box {
   width: 34px;
   height: 34px;
   border-radius: 8px;
-  background: #eef4fc !important;
-  border: 1px solid rgba(30, 73, 139, 0.3) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
   display: grid;
   place-items: center;
-  color: #1e498b !important;
+  color: #ffffff !important;
   flex-shrink: 0;
   margin-top: 2px;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .v3-desk-contact-card:hover .v3-desk-icon-box {
-  background: #1e498b !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  color: #1e498b !important;
 }
 
 .v3-footer .v3-desk-label {
   font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.18em;
-  color: #1e498b !important;
+  color: #90caf9 !important;
   margin-bottom: 2px;
   text-transform: uppercase;
 }
@@ -3013,18 +3031,18 @@ body.home-v3-active {
 .v3-footer .v3-desk-val {
   font-size: 14px;
   font-weight: 700;
-  color: #111111 !important;
+  color: #ffffff !important;
 }
 
 .v3-footer .v3-desk-sub {
   font-size: 12px;
-  color: #666666 !important;
+  color: rgba(255, 255, 255, 0.72) !important;
 }
 
 .v3-footer .v3-desk-address {
   font-size: 12.5px;
   line-height: 1.5;
-  color: #555555 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .v3-footer-social-row {
@@ -3037,22 +3055,22 @@ body.home-v3-active {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  background: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
   display: grid;
   place-items: center;
-  color: #333333 !important;
+  color: #ffffff !important;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(8px);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .v3-f-social-btn:hover {
-  background: #1e498b !important;
-  color: #ffffff !important;
-  border-color: #1e498b !important;
+  background: #ffffff !important;
+  color: #1e498b !important;
+  border-color: #ffffff !important;
   transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(30, 73, 139, 0.3);
+  box-shadow: 0 8px 22px rgba(255, 255, 255, 0.25);
 }
 
 /* ==========================================================================
@@ -3075,7 +3093,7 @@ body.home-v3-active {
   line-height: 1;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(30, 73, 139, 0.08) !important;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.14) !important;
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -3085,14 +3103,14 @@ body.home-v3-active {
    BOTTOM LEGAL, LIVE TIME & TOP BAR
    ========================================================================== */
 .v3-footer-bottom-bar {
-  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
   font-size: 13px;
-  color: #666666 !important;
+  color: rgba(255, 255, 255, 0.75) !important;
   padding-top: 24px !important;
 }
 
 .v3-copy-text {
-  color: #666666 !important;
+  color: rgba(255, 255, 255, 0.75) !important;
   font-size: 13px;
 }
 
@@ -3102,21 +3120,21 @@ body.home-v3-active {
   gap: 8px;
   padding: 6px 14px;
   border-radius: 20px;
-  background: #ffffff !important;
-  border: 1px solid rgba(0, 0, 0, 0.09) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: #1e498b !important;
+  color: #90caf9 !important;
 }
 
 .v3-footer-live-clock span {
-  color: #333333 !important;
+  color: #ffffff !important;
 }
 
 .v3-clock-icon {
-  color: #1e498b !important;
+  color: #90caf9 !important;
 }
 
 .v3-footer-bottom-actions {
@@ -3139,18 +3157,18 @@ body.home-v3-active {
 }
 
 .v3-legal-links a {
-  color: #666666 !important;
+  color: rgba(255, 255, 255, 0.75) !important;
   text-decoration: none;
   font-size: 12.5px;
   transition: color 0.25s ease;
 }
 
 .v3-legal-links a:hover {
-  color: #1e498b !important;
+  color: #ffffff !important;
 }
 
 .v3-legal-dot {
-  color: rgba(0, 0, 0, 0.25) !important;
+  color: rgba(255, 255, 255, 0.3) !important;
 }
 
 .v3-footer-top-btn {
@@ -3160,7 +3178,7 @@ body.home-v3-active {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: #444444 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -3169,28 +3187,28 @@ body.home-v3-active {
 }
 
 .v3-footer-top-btn:hover {
-  color: #1e498b !important;
+  color: #ffffff !important;
 }
 
 .v3-top-icon-circle {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
   display: grid;
   place-items: center;
-  color: #1e498b !important;
-  background: #ffffff !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .v3-footer-top-btn:hover .v3-top-icon-circle {
   transform: translateY(-3px);
-  background: #1e498b !important;
-  color: #ffffff !important;
-  border-color: #1e498b !important;
-  box-shadow: 0 6px 20px rgba(30, 73, 139, 0.35);
+  background: #ffffff !important;
+  color: #1e498b !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
 /* ==========================================================================
