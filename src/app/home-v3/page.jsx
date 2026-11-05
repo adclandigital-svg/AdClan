@@ -5,6 +5,7 @@ import HomeV3Navbar from "@/components/home-v3/HomeV3Navbar";
 import HeroBannerSliderV3 from "@/components/home-v3/HeroBannerSliderV3";
 import BottomServicesBarV3 from "@/components/home-v3/BottomServicesBarV3";
 import OurCraftSectionV3 from "@/components/home-v3/OurCraftSectionV3";
+import OurCraftMarqueeSectionV3 from "@/components/home-v3/OurCraftMarqueeSectionV3";
 import NarrativeSectionV3 from "@/components/home-v3/NarrativeSectionV3";
 import ExpertiseSectionV3 from "@/components/home-v3/ExpertiseSectionV3";
 import WorkSectionV3 from "@/components/home-v3/WorkSectionV3";
@@ -65,8 +66,9 @@ export default function HomeV3Page() {
           5. Footer – New light/white design
           ========================================================================= */}
       
-      {/* 2. Our Craft (Work showcase with category filters & real project images) */}
-      <OurCraftSectionV3 />
+      {/* 2. Our Craft (Duplicated 4-Row Continuous Marquee Wall per reference layout) */}
+      <OurCraftMarqueeSectionV3 />
+      {/* Existing section preserved intact: <OurCraftSectionV3 /> */}
 
       {/* 3. Case Studies (Hidden from Homepage as requested — preserved for dedicated routes/future use) */}
       {/* <WorkSectionV3 /> */}

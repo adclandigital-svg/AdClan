@@ -1,0 +1,432 @@
+/* ==========================================================================
+   OUR CRAFT MARQUEE SECTION (Duplicated V3 Section per Reference Layout)
+   - Harmonized with Home V3 Luxury Editorial Theme (Clean Alabaster / White)
+   - 4 horizontal rows of cards continuously scrolling right to left
+   - Automatic pause on hover across the entire carousel
+   - Individual card hover reveals project name, client badge & link
+   ========================================================================== */
+
+.v3-craft-marquee-section {
+  position: relative;
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #111111;
+  padding: 100px 0 110px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Header Container */
+.v3-craft-marquee-header {
+  position: relative;
+  z-index: 5;
+}
+
+.v3-craft-marquee-eyebrow-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.v3-craft-marquee-dash {
+  width: 28px;
+  height: 2px;
+  background-color: #1e498b;
+  display: inline-block;
+}
+
+.v3-craft-marquee-eyebrow {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #1e498b;
+  text-transform: uppercase;
+}
+
+.v3-craft-marquee-title {
+  font-size: clamp(34px, 4.2vw, 56px);
+  font-weight: 850;
+  color: #111111;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin: 0 0 16px 0;
+}
+
+.v3-craft-marquee-title span {
+  color: #666666;
+  font-weight: 700;
+}
+
+.v3-craft-marquee-subtext {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #555555;
+  max-width: 640px;
+  margin: 0;
+}
+
+/* Header Top CTA Link */
+.v3-craft-marquee-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #111111;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.v3-craft-marquee-cta-link:hover {
+  background: #1e498b;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(30, 73, 139, 0.32);
+}
+
+/* Client Filter Tabs */
+.v3-craft-marquee-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.v3-craft-marquee-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #333333;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 11.5px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.v3-craft-marquee-filter-btn:hover {
+  background: #f0f4fa;
+  border-color: #1e498b;
+  color: #1e498b;
+}
+
+.v3-craft-marquee-filter-btn.is-active {
+  background: #1e498b;
+  color: #ffffff;
+  border-color: #1e498b;
+  font-weight: 750;
+  box-shadow: 0 6px 18px rgba(30, 73, 139, 0.32);
+}
+
+.v3-craft-marquee-count {
+  font-size: 9.5px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #eef2f7;
+  color: #1e498b;
+  font-weight: 700;
+}
+
+.v3-craft-marquee-filter-btn.is-active .v3-craft-marquee-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   4-ROW CONTINUOUS MARQUEE WALL (Right-to-Left Scroll)
+   ========================================================================== */
+.v3-craft-marquee-wall {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 40px;
+  overflow: hidden;
+  /* Smooth edge fade mask so cards glide gracefully into viewport edges */
+  mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+}
+
+/* On hover over the wall or any row/card, pause the entire carousel */
+.v3-craft-marquee-wall:hover .v3-craft-marquee-track,
+.v3-craft-marquee-track:hover {
+  animation-play-state: paused !important;
+}
+
+/* Single Marquee Row */
+.v3-craft-marquee-row {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.v3-craft-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: max-content;
+  will-change: transform;
+  /* Right-to-Left Infinite Scroll */
+  animation: v3MarqueeScrollLeft 45s linear infinite;
+}
+
+/* Staggered speed across the 4 rows for rich, natural cinematic cadence */
+.v3-craft-marquee-track--row-1 {
+  animation-duration: 46s;
+}
+
+.v3-craft-marquee-track--row-2 {
+  animation-duration: 52s;
+}
+
+.v3-craft-marquee-track--row-3 {
+  animation-duration: 44s;
+}
+
+.v3-craft-marquee-track--row-4 {
+  animation-duration: 50s;
+}
+
+@keyframes v3MarqueeScrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* ==========================================================================
+   CARD DESIGN (Clean visual thumbnail by default, name reveal on hover)
+   ========================================================================== */
+.v3-craft-marquee-card {
+  position: relative;
+  width: clamp(250px, 19vw, 310px);
+  height: clamp(155px, 12vw, 195px);
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transform: translateZ(0);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+.v3-craft-marquee-card:hover {
+  transform: translateY(-6px) scale(1.035);
+  border-color: #1e498b;
+  box-shadow: 0 20px 45px rgba(30, 73, 139, 0.22);
+  z-index: 10;
+}
+
+.v3-craft-marquee-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.v3-craft-marquee-card:hover .v3-craft-marquee-img {
+  transform: scale(1.08);
+}
+
+/* ==========================================================================
+   CARD HOVER OVERLAY (Reveals name, client, category, and direct action)
+   ========================================================================== */
+.v3-craft-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 15, 15, 0.15) 0%,
+    rgba(15, 15, 15, 0.78) 50%,
+    rgba(10, 10, 10, 0.94) 100%
+  );
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.v3-craft-marquee-card:hover .v3-craft-card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.v3-craft-card-client-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  color: #90caf9; /* Crisp sky blue on dark glass overlay */
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.v3-craft-card-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.v3-craft-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.v3-craft-card-category {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.76);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 170px;
+}
+
+.v3-craft-card-arrow {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #1e498b;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.v3-craft-marquee-card:hover .v3-craft-card-arrow {
+  background: #ffffff;
+  color: #1e498b;
+  transform: translateX(2px) translateY(-2px);
+}
+
+/* ==========================================================================
+   FOOTER CTA STRIP UNDER MARQUEE WALL
+   ========================================================================== */
+.v3-craft-marquee-bottom {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  position: relative;
+  z-index: 5;
+}
+
+.v3-craft-marquee-bottom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 36px;
+  border-radius: 999px;
+  background: #111111;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.v3-craft-marquee-bottom-link:hover {
+  background: #1e498b;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(30, 73, 139, 0.35);
+}
+
+/* ==========================================================================
+   RESPONSIVE OPTIMIZATIONS
+   ========================================================================== */
+@media (max-width: 991px) {
+  .v3-craft-marquee-section {
+    padding: 70px 0 80px 0;
+  }
+
+  .v3-craft-marquee-wall {
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .v3-craft-marquee-track {
+    gap: 18px;
+  }
+
+  .v3-craft-marquee-card {
+    width: 240px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .v3-craft-marquee-section {
+    padding: 55px 0 65px 0;
+  }
+
+  .v3-craft-marquee-wall {
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .v3-craft-marquee-track {
+    gap: 14px;
+  }
+
+  .v3-craft-marquee-card {
+    width: 210px;
+    height: 132px;
+    border-radius: 8px;
+  }
+
+  .v3-craft-card-overlay {
+    padding: 12px 14px;
+  }
+
+  .v3-craft-card-title {
+    font-size: 12px;
+  }
+}

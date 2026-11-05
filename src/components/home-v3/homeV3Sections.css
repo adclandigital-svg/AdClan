@@ -2634,15 +2634,16 @@ body.home-v3-active {
 }
 
 /* ==========================================================================
-   7. ULTRA-PREMIUM LUXURY FOOTER — PURE JET-BLACK OBSIDIAN & RAZOR-SHARP CONTRAST
+   7. ULTRA-PREMIUM LUXURY FOOTER — REFINED EDITORIAL LIGHT LUXURY
+   (Updated per client feedback: light, prestigious, perfectly matched with V3 theme)
    ========================================================================== */
 .v3-footer {
   position: relative;
-  background-color: #000000 !important; /* Pure pitch-black obsidian — ZERO FADE / ZERO MILKY HAZE */
-  background: #000000 !important;
-  color: #ffffff !important;
+  background-color: #fafbfc !important;
+  background: #fafbfc !important;
+  color: #111111 !important;
   padding: 85px 0 32px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
 
@@ -2662,15 +2663,14 @@ body.home-v3-active {
 }
 
 /* ==========================================================================
-   HERO CALL-TO-ACTION BANNER (Deep Rich Midnight Obsidian Card, Ultra-High Contrast)
+   HERO CALL-TO-ACTION BANNER (Royal Sapphire & Midnight Luxury Card)
    ========================================================================== */
 .v3-footer-hero-cta {
-  background: linear-gradient(180deg, #0e1424 0%, #060911 100%) !important; /* Deep solid rich midnight obsidian */
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  border-top: 1px solid #1e498b !important; /* Brand Blue Rim */
-  border-radius: 20px !important;
+  background: linear-gradient(135deg, #0e1e3e 0%, #1e498b 100%) !important;
+  border: 1px solid rgba(30, 73, 139, 0.3) !important;
+  border-radius: 22px !important;
   padding: 50px 48px !important;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 24px 60px rgba(30, 73, 139, 0.16) !important;
   position: relative;
   overflow: hidden;
 }
@@ -2682,30 +2682,28 @@ body.home-v3-active {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent 0%, rgba(30, 73, 139, 0.3) 25%, #1e498b 50%, rgba(30, 73, 139, 0.3) 75%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
 }
 
 .v3-footer-cta-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #1e498b !important; /* Brand Blue */
+  color: #90caf9 !important;
   margin-bottom: 16px;
 }
 
 .v3-footer-cta-heading {
-  
   font-size: clamp(24px, 2.7vw, 42px);
   font-weight: 800;
   line-height: 1.25;
   letter-spacing: -0.02em;
-  color: #ffffff !important; /* Pure brilliant crisp white */
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+  color: #ffffff !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
   margin: 0;
 }
 
@@ -2730,29 +2728,28 @@ body.home-v3-active {
   padding: 16px 30px;
   border-radius: 30px;
   background: #ffffff !important;
-  color: #000000 !important;
-  
+  color: #111111 !important;
   font-size: 11.5px;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .v3-footer-cta-btn-primary:hover {
-  background: #1e498b !important; /* Brand Blue */
+  background: #111111 !important;
   color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 16px 36px rgba(30, 73, 139, 0.55);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
 }
 
 .v3-btn-arrow-wrap {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #000000;
+  background: #111111;
   color: #ffffff;
   display: grid;
   place-items: center;
@@ -2761,8 +2758,8 @@ body.home-v3-active {
 
 .v3-footer-cta-btn-primary:hover .v3-btn-arrow-wrap {
   transform: rotate(45deg);
-  background: #ffffff;
-  color: #1e498b;
+  background: #1e498b;
+  color: #ffffff;
 }
 
 .v3-footer-cta-btn-secondary {
@@ -2770,35 +2767,35 @@ body.home-v3-active {
   align-items: center;
   padding: 16px 26px;
   border-radius: 30px;
-  background: #0e1424 !important;
-  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
   color: #ffffff !important;
-  
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
 }
 
 .v3-footer-cta-btn-secondary:hover {
-  background: #1e498b !important;
-  border-color: #1e498b !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #1e498b !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(30, 73, 139, 0.4);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
 }
 
 /* ==========================================================================
-   KINETIC MARQUEE RIBBON (Solid Deep Pitch-Black, Razor-Sharp)
+   KINETIC MARQUEE RIBBON (Clean Soft Sapphire Strip)
    ========================================================================== */
 .v3-footer-marquee-strip {
   width: 100%;
   overflow: hidden;
-  background: #05070c !important; /* Solid deep obsidian strip */
-  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: #eef4fc !important;
+  border-top: 1px solid rgba(30, 73, 139, 0.12) !important;
+  border-bottom: 1px solid rgba(30, 73, 139, 0.12) !important;
   padding: 15px 0;
 }
 
@@ -2824,22 +2821,21 @@ body.home-v3-active {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.22em;
-  color: rgba(255, 255, 255, 0.9) !important; /* Crisp silver white */
+  color: #1e498b !important;
 }
 
 .v3-marquee-sparkle {
-  color: #1e498b !important; /* Brand Blue */
+  color: #1e498b !important;
 }
 
 /* ==========================================================================
    MAIN 4 ARCHITECTURAL COLUMNS
    ========================================================================== */
 .v3-footer-columns-grid {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
   padding-bottom: 40px !important;
 }
 
@@ -2848,31 +2844,29 @@ body.home-v3-active {
   align-items: center;
   gap: 14px;
   text-decoration: none;
-  color: #ffffff !important;
+  color: #111111 !important;
   margin-bottom: 20px;
 }
 
 .v3-footer-monogram {
   width: 36px;
   height: 44px;
-  fill: #ffffff !important;
-  filter: drop-shadow(0 0 14px rgba(30, 73, 139, 0.7));
+  fill: #111111 !important;
+  filter: none !important;
 }
 
 .v3-footer-brand-name {
-  
   font-size: 28px;
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase !important;
-  color: #ffffff !important;
+  color: #111111 !important;
 }
 
 .v3-footer-tagline {
-  
   font-size: 14.5px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.76) !important; /* High contrast */
+  color: #555555 !important;
   max-width: 420px;
   margin: 0;
 }
@@ -2883,21 +2877,21 @@ body.home-v3-active {
   gap: 8px;
   padding: 8px 16px;
   border-radius: 20px;
-  background: #080d1a !important;
-  border: 1px solid rgba(255, 255, 255, 0.14) !important;
-  
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.18em;
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: #1e498b !important;
 }
 
 .v3-badge-pulse {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #00e676 !important;
-  box-shadow: 0 0 12px #00e676 !important;
+  background-color: #00c853 !important;
+  box-shadow: 0 0 10px #00c853 !important;
   animation: v3PulseGlow 2s infinite ease-in-out;
 }
 
@@ -2913,11 +2907,10 @@ body.home-v3-active {
 }
 
 .v3-col-title {
-  
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.22em;
-  color: #1e498b !important; /* Brand Blue */
+  color: #1e498b !important;
   margin: 0 0 24px 0;
   text-transform: uppercase;
 }
@@ -2935,10 +2928,9 @@ body.home-v3-active {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  
   font-size: 14.5px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.76) !important; /* Clear, sharp, readable */
+  color: #444444 !important;
   text-decoration: none;
   transition: all 0.25s ease;
 }
@@ -2947,12 +2939,12 @@ body.home-v3-active {
   display: inline-block;
   width: 0;
   height: 1px;
-  background: #1e498b; /* Brand Blue */
+  background: #1e498b;
   transition: width 0.25s ease;
 }
 
 .v3-footer-link-list a:hover {
-  color: #ffffff !important;
+  color: #1e498b !important;
   transform: translateX(4px);
 }
 
@@ -2961,7 +2953,7 @@ body.home-v3-active {
 }
 
 /* ==========================================================================
-   DIRECT CONCIERGE CARDS (Solid, Deep, High-Contrast)
+   DIRECT CONCIERGE CARDS (Solid Light Porcelain Luxury Cards)
    ========================================================================== */
 .v3-desk-cards-wrap {
   display: flex;
@@ -2974,30 +2966,31 @@ body.home-v3-active {
   align-items: flex-start;
   gap: 14px;
   padding: 14px 16px;
-  border-radius: 12px;
-  background: #080d1a !important; /* Solid dark obsidian card */
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 14px;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease;
 }
 
 .v3-desk-contact-card:hover {
-  background: #0d1428 !important;
-  border-color: #1e498b !important; /* Brand Blue */
+  background: #ffffff !important;
+  border-color: #1e498b !important;
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6) !important;
+  box-shadow: 0 10px 28px rgba(30, 73, 139, 0.12) !important;
 }
 
 .v3-desk-icon-box {
   width: 34px;
   height: 34px;
   border-radius: 8px;
-  background: #111a33 !important;
-  border: 1px solid rgba(30, 73, 139, 0.6) !important;
+  background: #eef4fc !important;
+  border: 1px solid rgba(30, 73, 139, 0.3) !important;
   display: grid;
   place-items: center;
-  color: #1e498b !important; /* Brand Blue */
+  color: #1e498b !important;
   flex-shrink: 0;
   margin-top: 2px;
   transition: background 0.3s ease, color 0.3s ease;
@@ -3012,7 +3005,7 @@ body.home-v3-active {
   font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.18em;
-  color: #1e498b !important; /* Brand Blue */
+  color: #1e498b !important;
   margin-bottom: 2px;
   text-transform: uppercase;
 }
@@ -3020,18 +3013,18 @@ body.home-v3-active {
 .v3-footer .v3-desk-val {
   font-size: 14px;
   font-weight: 700;
-  color: #ffffff !important;
+  color: #111111 !important;
 }
 
 .v3-footer .v3-desk-sub {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: #666666 !important;
 }
 
 .v3-footer .v3-desk-address {
   font-size: 12.5px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.76) !important;
+  color: #555555 !important;
 }
 
 .v3-footer-social-row {
@@ -3044,21 +3037,22 @@ body.home-v3-active {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.14) !important;
-  background: #080d1a !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  background: #ffffff !important;
   display: grid;
   place-items: center;
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: #333333 !important;
   text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .v3-f-social-btn:hover {
-  background: #ffffff !important;
-  color: #030509 !important;
-  border-color: #ffffff !important;
+  background: #1e498b !important;
+  color: #ffffff !important;
+  border-color: #1e498b !important;
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 22px rgba(30, 73, 139, 0.3);
 }
 
 /* ==========================================================================
@@ -3075,13 +3069,13 @@ body.home-v3-active {
 }
 
 .v3-footer-watermark-text {
-  font-size: clamp(30px, 4.6vw, 80px); /* Perfectly proportioned, smaller, elegant */
+  font-size: clamp(30px, 4.6vw, 80px);
   font-weight: 900;
   letter-spacing: 0.3em;
   line-height: 1;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.12) !important;
+  -webkit-text-stroke: 1.5px rgba(30, 73, 139, 0.08) !important;
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -3091,15 +3085,14 @@ body.home-v3-active {
    BOTTOM LEGAL, LIVE TIME & TOP BAR
    ========================================================================== */
 .v3-footer-bottom-bar {
-  border-top: 1px solid rgba(255, 255, 255, 0.09) !important;
-  
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: #666666 !important;
   padding-top: 24px !important;
 }
 
 .v3-copy-text {
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: #666666 !important;
   font-size: 13px;
 }
 
@@ -3109,21 +3102,21 @@ body.home-v3-active {
   gap: 8px;
   padding: 6px 14px;
   border-radius: 20px;
-  background: #080d1a !important;
-  border: 1px solid rgba(255, 255, 255, 0.14) !important;
-  
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: #ffffff !important; /* Pure White as requested */
+  color: #1e498b !important;
 }
 
 .v3-footer-live-clock span {
-  color: #ffffff !important; /* Pure White as requested */
+  color: #333333 !important;
 }
 
 .v3-clock-icon {
-  color: #ffffff !important; /* Pure White clock icon */
+  color: #1e498b !important;
 }
 
 .v3-footer-bottom-actions {
@@ -3146,18 +3139,18 @@ body.home-v3-active {
 }
 
 .v3-legal-links a {
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: #666666 !important;
   text-decoration: none;
   font-size: 12.5px;
   transition: color 0.25s ease;
 }
 
 .v3-legal-links a:hover {
-  color: #ffffff !important;
+  color: #1e498b !important;
 }
 
 .v3-legal-dot {
-  color: rgba(255, 255, 255, 0.25) !important;
+  color: rgba(0, 0, 0, 0.25) !important;
 }
 
 .v3-footer-top-btn {
@@ -3167,8 +3160,7 @@ body.home-v3-active {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: rgba(255, 255, 255, 0.8) !important;
-  
+  color: #444444 !important;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -3177,27 +3169,126 @@ body.home-v3-active {
 }
 
 .v3-footer-top-btn:hover {
-  color: #ffffff !important;
+  color: #1e498b !important;
 }
 
 .v3-top-icon-circle {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
   display: grid;
   place-items: center;
-  color: #ffffff !important;
-  background: #080d1a !important;
+  color: #1e498b !important;
+  background: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 
 .v3-footer-top-btn:hover .v3-top-icon-circle {
   transform: translateY(-3px);
-  background: #ffffff !important;
-  color: #030509 !important;
-  border-color: #ffffff !important;
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.35);
+  background: #1e498b !important;
+  color: #ffffff !important;
+  border-color: #1e498b !important;
+  box-shadow: 0 6px 20px rgba(30, 73, 139, 0.35);
+}
+
+/* ==========================================================================
+   PRESERVED DARK FOOTER STYLES (.v3-footer-dark)
+   Saved intact as requested so it can be restored or referenced at any time
+   ========================================================================== */
+.v3-footer-dark {
+  position: relative;
+  background-color: #000000 !important;
+  background: #000000 !important;
+  color: #ffffff !important;
+  padding: 85px 0 32px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.v3-footer-dark .v3-footer-hero-cta {
+  background: linear-gradient(180deg, #0e1424 0%, #060911 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-top: 1px solid #1e498b !important;
+}
+
+.v3-footer-dark .v3-footer-marquee-strip {
+  background: #05070c !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.v3-footer-dark .v3-footer-marquee-item {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.v3-footer-dark .v3-footer-columns-grid {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09) !important;
+}
+
+.v3-footer-dark .v3-footer-logo-lockup,
+.v3-footer-dark .v3-footer-brand-name {
+  color: #ffffff !important;
+}
+
+.v3-footer-dark .v3-footer-monogram {
+  fill: #ffffff !important;
+}
+
+.v3-footer-dark .v3-footer-tagline {
+  color: rgba(255, 255, 255, 0.76) !important;
+}
+
+.v3-footer-dark .v3-footer-link-list a {
+  color: rgba(255, 255, 255, 0.76) !important;
+}
+
+.v3-footer-dark .v3-footer-link-list a:hover {
+  color: #ffffff !important;
+}
+
+.v3-footer-dark .v3-desk-contact-card {
+  background: #080d1a !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.v3-footer-dark .v3-desk-val {
+  color: #ffffff !important;
+}
+
+.v3-footer-dark .v3-desk-sub {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.v3-footer-dark .v3-desk-address {
+  color: rgba(255, 255, 255, 0.76) !important;
+}
+
+.v3-footer-dark .v3-f-social-btn {
+  background: #080d1a !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.v3-footer-dark .v3-footer-watermark-text {
+  -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.12) !important;
+}
+
+.v3-footer-dark .v3-footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.09) !important;
+}
+
+.v3-footer-dark .v3-copy-text,
+.v3-footer-dark .v3-legal-links a {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.v3-footer-dark .v3-footer-live-clock,
+.v3-footer-dark .v3-top-icon-circle {
+  background: #080d1a !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
 }
 
 /* ==========================================================================
