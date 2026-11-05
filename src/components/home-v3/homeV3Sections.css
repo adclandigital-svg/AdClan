@@ -550,9 +550,9 @@ body.home-v3-active {
 }
 
 .v3-narrative-section .v3-editorial-headline span {
-  color: #666666;
+  color: #444444;
   
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .v3-narrative-section .v3-editorial-subtext {
@@ -2369,9 +2369,9 @@ body.home-v3-active {
 }
 
 .v3-reach-section .v3-editorial-headline span {
-  color: #666666;
+  color: #444444;
   
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .v3-reach-section .v3-editorial-subtext {
@@ -3608,3 +3608,24 @@ body.home-v3-active {
   line-height: 1.6;
   margin-bottom: 24px;
 }
+
+/* ==========================================================================
+   STANDALONE SUB-PAGES (/home-v3/narrative, /home-v3/expertise, /home-v3/brands)
+   Exact match to /home-v3/work layout, top padding, and alignment
+   ========================================================================== */
+.v3-work-portfolio-page {
+  background-color: #ffffff !important;
+  color: #0e0e0e;
+  min-height: 100vh;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.v3-narrative-section.is-standalone,
+.v3-expertise-section.is-standalone,
+.v3-brands-section.is-standalone,
+.v3-reach-section.is-standalone {
+  padding-top: 0 !important;
+  border-top: none !important;
+}
+

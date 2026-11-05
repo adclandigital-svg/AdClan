@@ -79,7 +79,7 @@ body.home-v3-active::before {
   justify-content: space-between;
   overflow: hidden;
   box-sizing: border-box;
-  padding-top: 85px;
+  padding-top: 50px;
 }
 
 /* Remove decorative grey circles & gradients for pure white top section */
@@ -1096,4 +1096,11 @@ body.home-v3-active::before {
     transition-duration: 0.01s !important;
     transition-delay: 0s !important;
   }
+}
+
+
+
+
+.v3-work-portfolio-page{
+  padding-top: 100px !important;
 }

@@ -127,7 +127,7 @@
 }
 
 .v3-craft-marquee-card:hover {
-  transform: translateY(-5px) scale(1.03);
+  /* transform: translateY(-5px) scale(1.03); */
   border-color: #1e498b;
   box-shadow: 0 16px 36px rgba(30, 73, 139, 0.24);
   z-index: 10;

@@ -91,7 +91,7 @@ const LEADERSHIP_TEAM = [
   },
 ];
 
-export default function NarrativeSectionV3() {
+export default function NarrativeSectionV3({ isStandalone = false }) {
   const [activeLeaderId, setActiveLeaderId] = useState(null);
   const [isClosing, setIsClosing] = useState(false);
   const stageRef = useRef(null);
@@ -128,23 +128,17 @@ export default function NarrativeSectionV3() {
   }, [activeLeaderId, isClosing]);
 
   return (
-    <section className="v3-narrative-section" id="narrative">
-      <div className="container-fluid v3-section-container px-3 px-md-5 px-xl-5">
+    <section className={`v3-narrative-section ${isStandalone ? "is-standalone" : ""}`} id="narrative">
+      <div className={`container-fluid v3-section-container px-3 px-md-5 px-xl-5 ${isStandalone ? "pt-4" : ""}`}>
         {/* =====================================================================
             1. EDITORIAL SPREAD: MANIFESTO & PHILOSOPHY
             ===================================================================== */}
-        <div className="row mb-5">
+        <div className="row mb-4">
           <div className="col-12 col-lg-10 col-xl-8">
-
-            <h2 className="v3-editorial-headline">
+            <h1 className="v3-editorial-headline">
               The Art of Listening. <br />
               <span>The Power of Impact.</span>
-            </h2>
-
-            <p className="v3-editorial-subtext">
-              Adclan Media Services is a premier creative brand consultancy and advertising agency
-              headquartered in New Delhi. We transform ambitious brands into unignorable cultural forces.
-            </p>
+            </h1>
           </div>
         </div>
 

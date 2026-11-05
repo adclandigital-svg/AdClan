@@ -150,12 +150,14 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 48px 32px;
+  align-items: start;
 }
 
 @media (max-width: 1200px) {
   .v3-projects-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px 24px;
+    align-items: start;
   }
 }
 
@@ -164,6 +166,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 20px;
     padding: 32px 0 24px;
+    align-items: start;
   }
 }
 
@@ -182,11 +185,13 @@
   flex-direction: column;
   position: relative;
   outline: none;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  align-self: start;
 }
 
 .v3-project-card:hover {
   transform: translateY(-4px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Card Media */

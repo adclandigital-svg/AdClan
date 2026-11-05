@@ -22,8 +22,8 @@ export default function HomeV3NarrativePage() {
   return (
     <div className="home-v3-full-flow">
       <HomeV3Navbar />
-      <main className="pt-5 mt-5">
-        <NarrativeSectionV3 />
+      <main className="v3-work-portfolio-page pt-5">
+        <NarrativeSectionV3 isStandalone={true} />
       </main>
       <HomeV3Footer />
     </div>

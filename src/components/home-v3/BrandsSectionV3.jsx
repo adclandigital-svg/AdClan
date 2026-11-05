@@ -39,21 +39,17 @@ const ALL_BRANDS = [
   { id: 32, src: "/client-logo/adclan-logo-32.png", alt: "Brand Partner 32" },
 ];
 
-export default function BrandsSectionV3() {
+export default function BrandsSectionV3({ isStandalone = false }) {
   return (
-    <section className="v3-brands-section" id="brands">
-      <div className="container-fluid v3-section-container px-3 px-md-5 px-xl-5">
-        {/* Section Header with Bootstrap row & col */}
-        <div className="row mb-5">
+    <section className={`v3-brands-section ${isStandalone ? "is-standalone" : ""}`} id="brands">
+      <div className={`container-fluid v3-section-container px-3 px-md-5 px-xl-5 ${isStandalone ? "pt-4" : ""}`}>
+        {/* Section Header with Bootstrap row & col (Consistent with /home-v3/work) */}
+        <div className="row mb-4">
           <div className="col-12 col-lg-10 col-xl-8">
-
-            <h2 className="v3-craft-heading">
-              BRANDS
-            </h2>
-            <p className="v3-editorial-subtext">
-              From iconic consumer staples to modern enterprise innovators, leading brands across
-              diverse industries partner with AdClan to command attention and create lasting market impact.
-            </p>
+            <h1 className="v3-editorial-headline">
+              Trusted by Brands, <br />
+              <span>that shape the nation.</span>
+            </h1>
           </div>
         </div>
 

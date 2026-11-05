@@ -86,11 +86,11 @@ function HomeV3WorkContent() {
     initialTab === "All"
       ? projectsData
       : projectsData.filter((p) => {
-          const categories = Array.isArray(p.category)
-            ? p.category
-            : [p.category];
-          return categories.includes(initialTab);
-        });
+        const categories = Array.isArray(p.category)
+          ? p.category
+          : [p.category];
+        return categories.includes(initialTab);
+      });
 
   const [filteredProjects, setFilteredProjects] = useState(initialFiltered);
   const [visibleProjects, setVisibleProjects] = useState(initialFiltered.slice(0, 8));
@@ -155,12 +155,12 @@ function HomeV3WorkContent() {
       activeTab === "All"
         ? projectsData
         : projectsData.filter((p) => {
-            const categories = Array.isArray(p.category)
-              ? p.category
-              : [p.category];
+          const categories = Array.isArray(p.category)
+            ? p.category
+            : [p.category];
 
-            return categories.includes(activeTab);
-          });
+          return categories.includes(activeTab);
+        });
 
     setFilteredProjects(result);
     setVisibleProjects(result.slice(0, 8));
@@ -235,13 +235,16 @@ function HomeV3WorkContent() {
       ).slice(prevCardCountRef.current);
 
       if (newCards.length > 0) {
-        gsap.from(newCards, {
-          opacity: 0,
-          y: 35,
-          stagger: 0.05,
-          duration: 0.5,
-          ease: "power2.out",
-        });
+        gsap.fromTo(
+          newCards,
+          { opacity: 0 },
+          {
+            opacity: 1,
+            duration: 0.35,
+            ease: "power2.out",
+            clearProps: "all",
+          },
+        );
       }
     }
 
@@ -275,7 +278,7 @@ function HomeV3WorkContent() {
       {/* Top Navigation */}
       <HomeV3Navbar />
 
-      <main className="v3-work-portfolio-page pt-5 mt-5">
+      <main className="v3-work-portfolio-page pt-5">
         <div className="container-fluid v3-section-container px-3 px-md-5 px-xl-5 pt-4">
           {/* Section Header: Heading Only */}
           <div className="row mb-4">

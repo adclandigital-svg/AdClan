@@ -79,30 +79,21 @@ const CAPABILITIES = [
   },
 ];
 
-export default function ExpertiseSectionV3() {
+export default function ExpertiseSectionV3({ isStandalone = false }) {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="v3-expertise-section" id="expertise">
-      <div className="container-fluid v3-section-container px-3 px-md-5 px-xl-5">
+    <section className={`v3-expertise-section ${isStandalone ? "is-standalone" : ""}`} id="expertise">
+      <div className={`container-fluid v3-section-container px-3 px-md-5 px-xl-5 ${isStandalone ? "pt-4" : ""}`}>
         {/* =====================================================================
-            SECTION HEADER & INTRO
+            SECTION HEADER & INTRO (Consistent with /home-v3/work)
             ===================================================================== */}
-        <div className="row g-4 g-lg-5 align-items-end mb-5 v3-expertise-header-row">
-          <div className="col-12 col-lg-7 col-xl-8">
-
-            <h2 className="v3-editorial-headline mb-0">
-              Expertise.
-            </h2>
-          </div>
-
-          <div className="col-12 col-lg-5 col-xl-4 text-lg-end d-flex flex-column align-items-lg-end justify-content-end">
-            <div className="v3-expertise-top-actions">
-              <Link href="/services" className="v3-craft-all-link">
-                <span>VIEW ALL CAPABILITIES</span>
-                <ArrowUpRight size={16} />
-              </Link>
-            </div>
+        <div className="row mb-4">
+          <div className="col-12 col-lg-10 col-xl-8">
+            <h1 className="v3-editorial-headline">
+              Strategic Expertise, <br />
+              <span>engineered for scale.</span>
+            </h1>
           </div>
         </div>
 

@@ -51,8 +51,8 @@
 /* 3D Stage */
 .v3-centered-hero-section .stage {
   position: relative;
-  width: min(1280px, 100%);
-  height: min(480px, 62vh);
+  width: 100%;
+  height: min(580px, 65vh);
   min-height: 340px;
   perspective: 1400px;
   touch-action: pan-y;
@@ -454,7 +454,7 @@
 }
 
 .v3-centered-hero-section .nav b {
-  color: var(--ink, #1c1c1c);
+  color: #000000;
   font-weight: 600;
 }
 
@@ -466,7 +466,7 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  color: var(--ink, #1c1c1c);
+  color: #1c1c1c;
   transition: background .25s;
 }
 
@@ -487,7 +487,7 @@
 .v3-centered-hero-section .track i {
   position: absolute;
   inset: 0;
-  background: var(--ink, #1c1c1c);
+  background: #000000;
   transform-origin: left;
   transform: scaleX(var(--p, .14));
   transition: transform var(--dur) var(--ease);

@@ -4,28 +4,17 @@ import React from "react";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Navigation, ExternalLink } from "lucide-react";
 
-export default function ReachUsSectionV3() {
+export default function ReachUsSectionV3({ isStandalone = false }) {
   return (
-    <section className="v3-reach-section" id="reach-us">
-      <div className="container-fluid v3-section-container px-3 px-md-5 px-xl-5">
-        {/* Section Header with Bootstrap row & col */}
-        <div className="row mb-5">
+    <section className={`v3-reach-section ${isStandalone ? "is-standalone" : ""}`} id="reach-us">
+      <div className={`container-fluid v3-section-container px-3 px-md-5 px-xl-5 ${isStandalone ? "pt-4" : ""}`}>
+        {/* Section Header with Bootstrap row & col (Consistent with /home-v3/work) */}
+        <div className="row mb-4">
           <div className="col-12 col-lg-10 col-xl-8">
-            <div className="v3-section-eyebrow-wrap">
-              <span className="v3-eyebrow-dash" />
-              <span className="v3-section-eyebrow">07 / REACH US</span>
-            </div>
-
-            <h2 className="v3-editorial-headline">
-              Ready to Create. <br />
-              <span>Something Unignorable.</span>
-            </h2>
-
-            <p className="v3-editorial-subtext">
-              Whether you are architecting a national TVC campaign, scaling digital performance,
-              or executing a transformative rebrand, let us explore how unified strategic empathy
-              can drive market leadership.
-            </p>
+            <h1 className="v3-editorial-headline">
+              Ready to Create, <br />
+              <span>something unignorable.</span>
+            </h1>
           </div>
         </div>
 
