@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Phone, Mail, MapPin, Navigation, ExternalLink } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ReachUsSectionV3() {
   return (
@@ -121,51 +121,19 @@ export default function ReachUsSectionV3() {
             </div>
           </div>
         </div>
-
-        {/* 3rd Row: Interactive Map Console */}
-        <div className="row mt-4 mt-lg-5" id="v3-map">
-          <div className="col-12">
-            <div className="v3-reach-map-card">
-              <div className="v3-reach-map-header">
-                <div className="v3-reach-map-header-left">
-                  <span className="v3-map-pulse-dot" aria-hidden="true" />
-                  <div>
-                    <span className="v3-map-header-eyebrow">
-                      OFFICE LOCATION & DIRECTIONS
-                    </span>
-                    <h4 className="v3-map-header-title">
-                      Pushpa Bhavan, Alaknanda Commercial Complex, New Delhi
-                    </h4>
-                  </div>
-                </div>
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Adclan+Media+Services+Pvt.+Ltd+Pushpa+Bhavan+Alaknanda+New+Delhi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="v3-map-directions-btn"
-                >
-                  <Navigation size={14} />
-                  <span>GET DIRECTIONS</span>
-                  <ExternalLink size={13} />
-                </a>
-              </div>
-
-              <div className="v3-reach-map-iframe-wrap">
-                <iframe
-                  title="Adclan Media Services Headquarters Google Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.964105688411!2d77.2516698!3d28.5251386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce38dfcb0b2c9%3A0xd29f6ff4fd43fcf9!2sAdclan%20Media%20Services%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                  width="100%"
-                  height="450"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
+
+  <section className="contact-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.964105688411!2d77.2516698!3d28.5251386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce38dfcb0b2c9%3A0xd29f6ff4fd43fcf9!2sAdclan%20Media%20Services%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+      width="100%"
+      height="450"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </section>
   );
 }
