@@ -3,8 +3,8 @@
 import React from "react";
 import Link from "next/link";
 
-// 32 Client Logos
-const TRACK_A = [
+// 32 Client Logos in Exact Unified Roster
+const ALL_BRANDS = [
   { id: 1, src: "/client-logo/adclan-logo-1.png", alt: "Brand Partner 1" },
   { id: 2, src: "/client-logo/adclan-logo-2.png", alt: "Brand Partner 2" },
   { id: 3, src: "/client-logo/adclan-logo-3.png", alt: "Brand Partner 3" },
@@ -21,9 +21,6 @@ const TRACK_A = [
   { id: 14, src: "/client-logo/adclan-logo-14.png", alt: "Brand Partner 14" },
   { id: 15, src: "/client-logo/adclan-logo-15.png", alt: "Brand Partner 15" },
   { id: 16, src: "/client-logo/adclan-logo-16.png", alt: "Brand Partner 16" },
-];
-
-const TRACK_B = [
   { id: 17, src: "/client-logo/adclan-logo-17.png", alt: "Brand Partner 17" },
   { id: 18, src: "/client-logo/adclan-logo-18.png", alt: "Brand Partner 18" },
   { id: 19, src: "/client-logo/adclan-logo-19.png", alt: "Brand Partner 19" },
@@ -49,10 +46,7 @@ export default function BrandsSectionV3() {
         {/* Section Header with Bootstrap row & col */}
         <div className="row mb-5">
           <div className="col-12 col-lg-10 col-xl-8">
-            <div className="v3-section-eyebrow-wrap">
-              <span className="v3-eyebrow-dash" />
-              <span className="v3-section-eyebrow">PARTNERSHIPS</span>
-            </div>
+
             <h2 className="v3-craft-heading">
               BRANDS
             </h2>
@@ -63,33 +57,19 @@ export default function BrandsSectionV3() {
           </div>
         </div>
 
-        {/* Endless Logo Marquee Ribbon with edge feathering */}
-        <div className="v3-brands-ribbon-stage">
-          <div className="v3-ribbon-mask-left" />
-          <div className="v3-ribbon-mask-right" />
-
-          {/* Row 1: Leftward infinite motion */}
-          <div className="v3-marquee-ribbon-row v3-row-scroll-left">
-            {[...TRACK_A, ...TRACK_A].map((brand, idx) => (
-              <div key={`trackA-${brand.id}-${idx}`} className="v3-floating-logo-item">
+        {/* Perfect Aligned Brands Logo Grid (No staggered shift, uniform cells) */}
+        <div className="v3-brands-grid-container">
+          <div className="v3-brands-grid">
+            {ALL_BRANDS.map((brand) => (
+              <div
+                key={`brand-${brand.id}`}
+                className="v3-brand-grid-card"
+                title={brand.alt}
+              >
                 <img
                   src={brand.src}
                   alt={brand.alt}
-                  className="v3-prestigious-logo"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Row 2: Rightward infinite motion */}
-          <div className="v3-marquee-ribbon-row v3-row-scroll-right">
-            {[...TRACK_B, ...TRACK_B].map((brand, idx) => (
-              <div key={`trackB-${brand.id}-${idx}`} className="v3-floating-logo-item">
-                <img
-                  src={brand.src}
-                  alt={brand.alt}
-                  className="v3-prestigious-logo"
+                  className="v3-brand-grid-img"
                   loading="lazy"
                 />
               </div>

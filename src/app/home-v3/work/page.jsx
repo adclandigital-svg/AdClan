@@ -277,39 +277,13 @@ function HomeV3WorkContent() {
 
       <main className="v3-work-portfolio-page pt-5 mt-5">
         <div className="container-fluid v3-section-container px-3 px-md-5 px-xl-5 pt-4">
-          {/* Back link & Eyebrow */}
-          <div className="v3-work-top-nav-bar">
-            <Link
-              href="/home-v3"
-              className="v3-work-back-link"
-              aria-label="Back to Home V3"
-            >
-              <ArrowLeft size={13} />
-              <span>BACK TO HOME</span>
-            </Link>
-            <span className="text-muted" style={{ opacity: 0.4 }}>•</span>
-            <span className="v3-work-header-badge">DISCIPLINE ARCHIVE</span>
-          </div>
-
-          {/* =================================================================
-              STANDARD HOME V3 SECTION HEADER (MATCHING OTHER V3 PAGES)
-              ================================================================= */}
-          <div className="row mb-5">
+          {/* Section Header: Heading Only */}
+          <div className="row mb-4">
             <div className="col-12 col-lg-10 col-xl-8">
-              <div className="v3-section-eyebrow-wrap">
-                <span className="v3-eyebrow-dash" />
-                <span className="v3-section-eyebrow">01 / WORK ARCHIVE</span>
-              </div>
-
               <h1 className="v3-editorial-headline">
                 We design brands, <br />
                 <span>experiences & stories.</span>
               </h1>
-
-              <p className="v3-editorial-subtext">
-                A creative agency crafting brand identities, digital experiences,
-                and campaigns that connect brands with audiences across India.
-              </p>
             </div>
           </div>
 

@@ -135,10 +135,6 @@ export default function NarrativeSectionV3() {
             ===================================================================== */}
         <div className="row mb-5">
           <div className="col-12 col-lg-10 col-xl-8">
-            <div className="v3-section-eyebrow-wrap">
-              <span className="v3-eyebrow-dash" />
-              <span className="v3-section-eyebrow">02 / NARRATIVE</span>
-            </div>
 
             <h2 className="v3-editorial-headline">
               The Art of Listening. <br />
@@ -317,9 +313,8 @@ export default function NarrativeSectionV3() {
 
           {/* In-Place 3-Column Sliding Stage */}
           <div
-            className={`v3-team-stage ${activeLeader ? "is-expanded" : ""} ${
-              isClosing ? "is-closing" : ""
-            }`}
+            className={`v3-team-stage ${activeLeader ? "is-expanded" : ""} ${isClosing ? "is-closing" : ""
+              }`}
           >
             {LEADERSHIP_TEAM.map((leader, index) => {
               const isActive = activeLeader?.id === leader.id;
@@ -328,9 +323,8 @@ export default function NarrativeSectionV3() {
               return (
                 <div
                   key={leader.id}
-                  className={`v3-team-card-slot slot-${index} ${
-                    isActive ? "is-active" : ""
-                  } ${isOther ? "is-hidden" : ""}`}
+                  className={`v3-team-card-slot slot-${index} ${isActive ? "is-active" : ""
+                    } ${isOther ? "is-hidden" : ""}`}
                   onClick={() => (isActive ? handleClose() : handleSelectLeader(leader.id))}
                   role="button"
                   tabIndex={0}
@@ -376,9 +370,8 @@ export default function NarrativeSectionV3() {
             {/* In-Place Details Panel Spanning Columns 2 & 3 */}
             {activeLeader && (
               <div
-                className={`v3-team-details-panel ${
-                  isClosing ? "is-closing" : ""
-                }`}
+                className={`v3-team-details-panel ${isClosing ? "is-closing" : ""
+                  }`}
               >
                 {/* Column 1: Identity */}
                 <div className="v3-ogilvy-col-identity">

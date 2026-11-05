@@ -90,10 +90,6 @@ export default function ExpertiseSectionV3() {
             ===================================================================== */}
         <div className="row g-4 g-lg-5 align-items-end mb-5 v3-expertise-header-row">
           <div className="col-12 col-lg-7 col-xl-8">
-            <div className="v3-section-eyebrow-wrap">
-              <span className="v3-eyebrow-dash" />
-              <span className="v3-section-eyebrow">03 / EXPERTISE</span>
-            </div>
 
             <h2 className="v3-editorial-headline mb-0">
               Expertise.

@@ -305,11 +305,11 @@ export default function HomeV3Footer() {
 
         {/* =====================================================================
             4. MONUMENTAL ARCHITECTURAL GHOST WATERMARK
-            ===================================================================== */}
+            ===================================================================== 
         <div className="v3-footer-watermark-row" aria-hidden="true">
           <div className="v3-footer-watermark-text">ADCLAN</div>
-        </div>
-
+        </div>*/
+        }
         {/* =====================================================================
             5. BOTTOM LEGAL, LIVE TIME & BACK TO TOP BAR
             ===================================================================== */}
