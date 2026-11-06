@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import { Plus, Quote, X } from "lucide-react";
 import Link from "next/link";
-import { Quote, Plus, X } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
 
 const LEADERSHIP_TEAM = [
   {
@@ -52,7 +52,8 @@ const LEADERSHIP_TEAM = [
         url: "/home-v3/work",
       },
       {
-        title: "AdClan Atelier: The Intersection of Haute Joaillerie & High Art",
+        title:
+          "AdClan Atelier: The Intersection of Haute Joaillerie & High Art",
         url: "/home-v3/work",
       },
     ],
@@ -76,7 +77,8 @@ const LEADERSHIP_TEAM = [
     ],
     press: [
       {
-        title: "Rahul Verma on Omnichannel Media Synergy & Primetime Radio Reach",
+        title:
+          "Rahul Verma on Omnichannel Media Synergy & Primetime Radio Reach",
         url: "/home-v3/work",
       },
       {
@@ -128,8 +130,13 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
   }, [activeLeaderId, isClosing]);
 
   return (
-    <section className={`v3-narrative-section ${isStandalone ? "is-standalone" : ""}`} id="narrative">
-      <div className={`container-fluid v3-section-container px-3 px-md-5 px-xl-5 ${isStandalone ? "pt-4" : ""}`}>
+    <section
+      className={`v3-narrative-section ${isStandalone ? "is-standalone" : ""}`}
+      id="narrative"
+    >
+      <div
+        className={`container-fluid v3-section-container px-3 px-md-5 px-xl-5 ${isStandalone ? "pt-4" : ""}`}
+      >
         {/* =====================================================================
             1. EDITORIAL SPREAD: MANIFESTO & PHILOSOPHY
             ===================================================================== */}
@@ -180,22 +187,25 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
             <div className="v3-editorial-quote-card">
               <Quote size={28} className="v3-quote-glyph" />
               <blockquote className="v3-manifesto-quote">
-                “When the creator made us with two ears and one mouth, it was clear that we were
-                meant to listen more and speak less.”
+                “When the creator made us with two ears and one mouth, it was
+                clear that we were meant to listen more and speak less.”
               </blockquote>
             </div>
 
             <div className="v3-manifesto-body">
               <p>
-                At our core, Adclan operates on deep empathy and rigorous inquiry. Most agencies
-                walk into the boardroom with a pre-packaged pitch deck; we walk in with open ears,
-                uncompromising curiosity, and a relentless commitment to understanding your business
-                fundamentals before sketching a single frame.
+                At our core, Adclan operates on deep empathy and rigorous
+                inquiry. Most agencies walk into the boardroom with a
+                pre-packaged pitch deck; we walk in with open ears,
+                uncompromising curiosity, and a relentless commitment to
+                understanding your business fundamentals before sketching a
+                single frame.
               </p>
               <p>
-                Blending brand architecture, cinematic visual storytelling, and surgical media
-                analytics across traditional television, digital networks, OTT platforms, and live
-                arenas, we build comprehensive ecosystems that command attention and drive exponential
+                Blending brand architecture, cinematic visual storytelling, and
+                surgical media analytics across traditional television, digital
+                networks, OTT platforms, and live arenas, we build comprehensive
+                ecosystems that command attention and drive exponential
                 commercial return.
               </p>
             </div>
@@ -204,7 +214,9 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
               <Link href="/about" className="v3-editorial-cta-link">
                 <span className="v3-cta-dash" aria-hidden="true" />
                 <span>EXPLORE OUR PHILOSOPHY</span>
-                <span className="v3-cta-arrow" aria-hidden="true">→</span>
+                <span className="v3-cta-arrow" aria-hidden="true">
+                  →
+                </span>
               </Link>
             </div>
           </div>
@@ -217,7 +229,9 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
           <div className="row mb-4">
             <div className="col-12">
               <span className="v3-sub-eyebrow">OUR METHODOLOGY</span>
-              <h3 className="v3-methodology-heading">The Three Pillars of Brand Evolution</h3>
+              <h3 className="v3-methodology-heading">
+                The Three Pillars of Brand Evolution
+              </h3>
             </div>
           </div>
 
@@ -230,9 +244,10 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
                 </div>
                 <h4 className="v3-pillar-title">Think.</h4>
                 <p className="v3-pillar-desc">
-                  We start with razor-sharp insight and market interrogation. We analyze cultural
-                  undercurrents and audience psychology to ensure every creative initiative has
-                  undeniable commercial intent.
+                  We start with razor-sharp insight and market interrogation. We
+                  analyze cultural undercurrents and audience psychology to
+                  ensure every creative initiative has undeniable commercial
+                  intent.
                 </p>
               </div>
             </div>
@@ -245,8 +260,9 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
                 </div>
                 <h4 className="v3-pillar-title">Create.</h4>
                 <p className="v3-pillar-desc">
-                  We design and build unforgettable brand universes. From broadcast TVCs to digital
-                  growth systems, aesthetic excellence meets modern technology to move audiences deeply.
+                  We design and build unforgettable brand universes. From
+                  broadcast TVCs to digital growth systems, aesthetic excellence
+                  meets modern technology to move audiences deeply.
                 </p>
               </div>
             </div>
@@ -259,8 +275,9 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
                 </div>
                 <h4 className="v3-pillar-title">Deliver.</h4>
                 <p className="v3-pillar-desc">
-                  We execute with precision across media channels. Every project is measured for
-                  performance, engagement, and exponential brand recall that compounds for years.
+                  We execute with precision across media channels. Every project
+                  is measured for performance, engagement, and exponential brand
+                  recall that compounds for years.
                 </p>
               </div>
             </div>
@@ -276,39 +293,44 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
               * Card 3 (Right) photo slides left to Column 1, Details in Columns 2 & 3
               * Close (✕) smoothly slides active photo back to its column
             ===================================================================== */}
-        <div className="v3-team-section pt-4 mt-2" id="leadership" ref={stageRef}>
-          <div className="row mb-4 align-items-end justify-content-between g-4">
-            <div className="col-12 col-lg-8">
-              <div className="v3-section-eyebrow-wrap">
-                <span className="v3-eyebrow-dash" />
-                <span className="v3-section-eyebrow">AGENCY LEADERSHIP</span>
+        <div
+          className="v3-team-section pt-4 mt-2"
+          id="leadership"
+          ref={stageRef}
+        >
+          <div className="v3-team-header-inner">
+            <div className="row mb-4 align-items-end justify-content-between g-4">
+              <div className="col-12 col-lg-8">
+                <div className="v3-section-eyebrow-wrap">
+                  <span className="v3-eyebrow-dash" />
+                  <span className="v3-section-eyebrow">AGENCY LEADERSHIP</span>
+                </div>
+
+                <h2 className="v3-editorial-headline mb-0">Our Leadership.</h2>
               </div>
 
-              <h2 className="v3-editorial-headline mb-0">
-                Our Leadership.
-              </h2>
-            </div>
-
-            <div className="col-12 col-lg-4 text-lg-end">
-              <span
-                style={{
-                  fontFamily: "Raleway",
-                  fontSize: "12px",
-                  fontWeight: "700",
-                  letterSpacing: "0.16em",
-                  color: "#1e498b",
-                  textTransform: "uppercase",
-                }}
-              >
-                EXECUTIVE PARTNERS • ADCLAN
-              </span>
+              <div className="col-12 col-lg-4 text-lg-end">
+                <span
+                  style={{
+                    fontFamily: "Raleway",
+                    fontSize: "12px",
+                    fontWeight: "700",
+                    letterSpacing: "0.16em",
+                    color: "#1e498b",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  EXECUTIVE PARTNERS • ADCLAN
+                </span>
+              </div>
             </div>
           </div>
 
           {/* In-Place 3-Column Sliding Stage */}
           <div
-            className={`v3-team-stage ${activeLeader ? "is-expanded" : ""} ${isClosing ? "is-closing" : ""
-              }`}
+            className={`v3-team-stage ${activeLeader ? "is-expanded" : ""} ${
+              isClosing ? "is-closing" : ""
+            }`}
           >
             {LEADERSHIP_TEAM.map((leader, index) => {
               const isActive = activeLeader?.id === leader.id;
@@ -317,9 +339,12 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
               return (
                 <div
                   key={leader.id}
-                  className={`v3-team-card-slot slot-${index} ${isActive ? "is-active" : ""
-                    } ${isOther ? "is-hidden" : ""}`}
-                  onClick={() => (isActive ? handleClose() : handleSelectLeader(leader.id))}
+                  className={`v3-team-card-slot slot-${index} ${
+                    isActive ? "is-active" : ""
+                  } ${isOther ? "is-hidden" : ""}`}
+                  onClick={() =>
+                    isActive ? handleClose() : handleSelectLeader(leader.id)
+                  }
                   role="button"
                   tabIndex={0}
                   aria-label={`${leader.firstName} ${leader.lastName} - ${leader.role}`}
@@ -364,8 +389,9 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
             {/* In-Place Details Panel Spanning Columns 2 & 3 */}
             {activeLeader && (
               <div
-                className={`v3-team-details-panel ${isClosing ? "is-closing" : ""
-                  }`}
+                className={`v3-team-details-panel ${
+                  isClosing ? "is-closing" : ""
+                }`}
               >
                 {/* Column 1: Identity */}
                 <div className="v3-ogilvy-col-identity">
@@ -386,7 +412,11 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
                 </div>
 
                 {/* Column 2: Biographical Narrative */}
-                <div className="v3-ogilvy-drawer-bio">
+                <div
+                  className="v3-ogilvy-drawer-bio"
+                  data-lenis-prevent
+                  onWheel={(e) => e.stopPropagation()}
+                >
                   {activeLeader.bio.map((paragraph, i) => (
                     <p key={i}>{paragraph}</p>
                   ))}
@@ -395,7 +425,9 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
                 {/* Column 3: Recent Press & Contact */}
                 <div className="v3-ogilvy-col-meta">
                   <div className="v3-ogilvy-drawer-meta-section">
-                    <h5 className="v3-ogilvy-drawer-meta-title">Recent Press</h5>
+                    <h5 className="v3-ogilvy-drawer-meta-title">
+                      Recent Press
+                    </h5>
                     <ul className="v3-ogilvy-drawer-meta-list">
                       {activeLeader.press.map((item, i) => (
                         <li key={i}>
@@ -418,8 +450,14 @@ export default function NarrativeSectionV3({ isStandalone = false }) {
                         <li key={i}>
                           <a
                             href={c.url}
-                            target={c.url.startsWith("http") ? "_blank" : undefined}
-                            rel={c.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                            target={
+                              c.url.startsWith("http") ? "_blank" : undefined
+                            }
+                            rel={
+                              c.url.startsWith("http")
+                                ? "noopener noreferrer"
+                                : undefined
+                            }
                             className="v3-ogilvy-drawer-meta-link"
                           >
                             <span className="v3-ogilvy-drawer-arrow">→</span>

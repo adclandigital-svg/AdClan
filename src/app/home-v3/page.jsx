@@ -1,20 +1,22 @@
 "use client";
 
-import React, { useEffect } from "react";
-import HomeV3Navbar from "@/components/home-v3/HomeV3Navbar";
-import HeroBannerSliderCenteredV3 from "@/components/home-v3/HeroBannerSliderCenteredV3";
+import { useEffect } from "react";
 // Preserved original 2-column hero slider:
 // import HeroBannerSliderV3 from "@/components/home-v3/HeroBannerSliderV3";
 import BottomServicesBarV3 from "@/components/home-v3/BottomServicesBarV3";
-import OurCraftSectionV3 from "@/components/home-v3/OurCraftSectionV3";
-import OurCraftMarqueeSectionV3 from "@/components/home-v3/OurCraftMarqueeSectionV3";
-import NarrativeSectionV3 from "@/components/home-v3/NarrativeSectionV3";
-import ExpertiseSectionV3 from "@/components/home-v3/ExpertiseSectionV3";
-import WorkSectionV3 from "@/components/home-v3/WorkSectionV3";
-import BrandsSectionV3 from "@/components/home-v3/BrandsSectionV3";
+import CaseStudiesSectionV3 from "@/components/home-v3/CaseStudiesSectionV3";
+import HeroBannerSliderCenteredV3 from "@/components/home-v3/HeroBannerSliderCenteredV3";
 import HomeBlogSectionV3 from "@/components/home-v3/HomeBlogSectionV3";
-import ReachUsSectionV3 from "@/components/home-v3/ReachUsSectionV3";
 import HomeV3Footer from "@/components/home-v3/HomeV3Footer";
+import HomeV3Navbar from "@/components/home-v3/HomeV3Navbar";
+import OurCraftMarqueeSectionV3 from "@/components/home-v3/OurCraftMarqueeSectionV3";
+// Preserved sections for dedicated sub-routes:
+// import BrandsSectionV3 from "@/components/home-v3/BrandsSectionV3";
+// import ExpertiseSectionV3 from "@/components/home-v3/ExpertiseSectionV3";
+// import NarrativeSectionV3 from "@/components/home-v3/NarrativeSectionV3";
+// import OurCraftSectionV3 from "@/components/home-v3/OurCraftSectionV3";
+// import ReachUsSectionV3 from "@/components/home-v3/ReachUsSectionV3";
+// import WorkSectionV3 from "@/components/home-v3/WorkSectionV3";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/components/home-v3/homeV3.css";
@@ -44,6 +46,7 @@ export default function HomeV3Page() {
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <title>Decorative background wave</title>
             <path d="M 720 0 Q 400 450 1440 900 L 1440 0 Z" />
           </svg>
           <div className="home-v3-grain" />
@@ -68,13 +71,13 @@ export default function HomeV3Page() {
           4. Articles – Existing content and design same
           5. Footer – New light/white design
           ========================================================================= */}
-      
+
       {/* 2. Our Craft (Duplicated 4-Row Continuous Marquee Wall per reference layout) */}
       <OurCraftMarqueeSectionV3 />
       {/* Existing section preserved intact: <OurCraftSectionV3 /> */}
 
-      {/* 3. Case Studies (Hidden from Homepage as requested — preserved for dedicated routes/future use) */}
-      {/* <WorkSectionV3 /> */}
+      {/* 3. Case Studies — Proven Impact & Benchmark Deployments */}
+      <CaseStudiesSectionV3 />
 
       {/* 4. Articles ("Stories Behind the Strategy" — Unchanged content & design) */}
       <HomeBlogSectionV3 />

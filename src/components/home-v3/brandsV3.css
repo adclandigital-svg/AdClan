@@ -1,0 +1,452 @@
+/* ==========================================================================
+   HOME V3 BRANDS / CLIENTS PAGE (#brands)
+   - Category-wise roster matching main /clients structure
+   - Luxury Alabaster / White Home V3 Editorial Theme
+   - Interactive category filter tabs + full stacked view
+   - Symmetrical 6-column responsive logo card grids
+   ========================================================================== */
+
+.v3-brands-section {
+  position: relative;
+  padding: 60px 0 110px 0;
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #111111;
+  min-height: 80vh;
+}
+
+.v3-brands-section.is-standalone {
+  padding-top: 30px;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.v3-brands-page-header {
+  margin-bottom: 50px;
+}
+
+/* Top Action Button */
+.v3-brands-top-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px 12px 24px;
+  border-radius: 40px;
+  background: #111111;
+  border: 1.5px solid #111111;
+  color: #ffffff !important;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.v3-brands-top-btn:hover {
+  background: #1e498b;
+  border-color: #1e498b;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(30, 73, 139, 0.3);
+}
+
+.v3-brands-top-btn .v3-btn-arrow-wrap {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.v3-brands-top-btn:hover .v3-btn-arrow-wrap {
+  transform: translate(2px, -2px);
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.v3-brands-eyebrow-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.v3-brands-eyebrow-dash {
+  width: 24px;
+  height: 2px;
+  background-color: #1e498b;
+  display: inline-block;
+}
+
+.v3-brands-eyebrow {
+  font-size: 11.5px;
+  font-weight: 750;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1e498b;
+}
+
+.v3-brands-headline {
+  font-size: clamp(34px, 4vw, 54px);
+  font-weight: 850;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: #111111;
+  margin: 0 0 16px 0;
+}
+
+.v3-brands-headline span {
+  color: #666666;
+  font-weight: 700;
+}
+
+.v3-brands-subtext {
+  font-size: clamp(14.5px, 1.15vw, 16.5px);
+  line-height: 1.68;
+  color: #555555;
+  max-width: 720px;
+}
+
+/* ==========================================================================
+   INTERACTIVE CATEGORY FILTER TABS
+   ========================================================================== */
+.v3-brands-tabs-wrapper {
+  margin-bottom: 55px;
+  position: relative;
+}
+
+.v3-brands-tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+
+.v3-brands-tab-btn {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #444444;
+  font-size: 11.5px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.v3-brands-tab-btn:hover {
+  border-color: #1e498b;
+  color: #1e498b;
+  transform: translateY(-1px);
+}
+
+.v3-brands-tab-btn.is-active {
+  background: #1e498b;
+  border-color: #1e498b;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(30, 73, 139, 0.28);
+}
+
+.v3-brands-tab-count {
+  font-size: 10px;
+  font-weight: 750;
+  padding: 2px 7px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.06);
+  color: inherit;
+  transition: background 0.25s ease;
+}
+
+.v3-brands-tab-btn.is-active .v3-brands-tab-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   CATEGORY SECTIONS STACK
+   ========================================================================== */
+.v3-brands-categories-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+}
+
+.v3-brands-cat-block {
+  position: relative;
+}
+
+/* Category Header */
+.v3-brands-cat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.v3-brands-cat-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.v3-brands-cat-indicator {
+  width: 4px;
+  height: 22px;
+  background: #1e498b;
+  border-radius: 3px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.v3-brands-cat-title {
+  font-size: clamp(20px, 2vw, 25px);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: #111111;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.v3-brands-cat-pill {
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1e498b;
+  background: #f0f4fa;
+  border: 1px solid rgba(30, 73, 139, 0.15);
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+/* ==========================================================================
+   SYMMETRICAL LOGO GRID
+   6 columns desktop, 4 columns tablet, 3 columns mobile-md, 2 columns mobile
+   ========================================================================== */
+.v3-brands-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.v3-brand-card {
+  height: 100px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.v3-brand-card:hover {
+  border-color: #1e498b;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(30, 73, 139, 0.22);
+}
+
+.v3-brand-card-img {
+  max-width: 100%;
+  max-height: 65px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  /* filter: grayscale(100%) opacity(0.75); */
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.v3-brand-card:hover .v3-brand-card-img {
+  /* filter: grayscale(0%) opacity(1); */
+  transform: scale(1.06);
+}
+
+/* ==========================================================================
+   TRUST METRICS STRIP
+   ========================================================================== */
+.v3-brands-stats-strip {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.v3-brands-stat-box {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 28px 24px;
+  height: 100%;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.v3-brands-stat-box:hover {
+  border-color: #1e498b;
+  transform: translateY(-3px);
+}
+
+.v3-brands-stat-num {
+  font-size: clamp(26px, 2.5vw, 36px);
+  font-weight: 850;
+  color: #111111;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.v3-brands-stat-label {
+  font-size: 11.5px;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1e498b;
+}
+
+.v3-brands-stat-desc {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   CALL TO ACTION BANNER
+   ========================================================================== */
+.v3-brands-cta-card {
+  margin-top: 60px;
+  padding: 44px 36px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #0e1e38 0%, #173363 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  box-shadow: 0 18px 45px rgba(23, 51, 99, 0.25);
+}
+
+.v3-brands-cta-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #90caf9;
+  margin-bottom: 10px;
+}
+
+.v3-brands-cta-heading {
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: #ffffff;
+}
+
+.v3-brands-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  border-radius: 40px;
+  background: #ffffff;
+  color: #111111;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.v3-brands-cta-btn:hover {
+  background: #90caf9;
+  color: #0e1e38;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(144, 202, 249, 0.35);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .v3-brands-cat-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .v3-brands-cat-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .v3-brand-card {
+    height: 84px;
+    padding: 12px 16px;
+  }
+  .v3-brand-card-img {
+    max-height: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .v3-brands-cat-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .v3-brands-categories-stack {
+    gap: 45px;
+  }
+}
+
+@media (max-width: 520px) {
+  .v3-brands-cat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .v3-brand-card {
+    height: 76px;
+    padding: 10px 14px;
+  }
+  .v3-brand-card-img {
+    max-height: 38px;
+  }
+  .v3-brands-tab-btn {
+    font-size: 10.5px;
+    padding: 6px 12px;
+  }
+  .v3-brands-cta-card {
+    padding: 32px 24px;
+  }
+}

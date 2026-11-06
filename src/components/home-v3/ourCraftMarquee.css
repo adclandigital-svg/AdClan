@@ -51,9 +51,8 @@
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
 }
 
-/* On hover over the wall or any row/card, pause the entire carousel */
-.v3-craft-marquee-wall:hover .v3-craft-marquee-track,
-.v3-craft-marquee-track:hover {
+/* Pause the carousel ONLY when hovering over an individual card, NOT on empty section/wall space */
+.v3-craft-marquee-wall:has(.v3-craft-marquee-card:hover) .v3-craft-marquee-track {
   animation-play-state: paused !important;
 }
 

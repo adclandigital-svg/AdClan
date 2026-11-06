@@ -482,7 +482,7 @@ export default function OurCraftMarqueeSectionV3() {
       <div className="container-fluid v3-section-container px-3 px-md-5 px-xl-5">
         <div className="v3-craft-marquee-bottom">
           <Link href="/home-v3/work" className="v3-craft-marquee-bottom-link">
-            <span>EXPLORE ALL CASE STUDIES</span>
+            <span>EXPLORE ALL CRAFTS</span>
             <ArrowRight size={16} />
           </Link>
         </div>

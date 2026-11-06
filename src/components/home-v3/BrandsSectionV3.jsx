@@ -1,98 +1,268 @@
 "use client";
 
-import React from "react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { useMemo, useState } from "react";
+import "./brandsV3.css";
 
-// 32 Client Logos in Exact Unified Roster
-const ALL_BRANDS = [
-  { id: 1, src: "/client-logo/adclan-logo-1.png", alt: "Brand Partner 1" },
-  { id: 2, src: "/client-logo/adclan-logo-2.png", alt: "Brand Partner 2" },
-  { id: 3, src: "/client-logo/adclan-logo-3.png", alt: "Brand Partner 3" },
-  { id: 4, src: "/client-logo/adclan-logo-4.png", alt: "Brand Partner 4" },
-  { id: 5, src: "/client-logo/adclan-logo-5.png", alt: "Brand Partner 5" },
-  { id: 6, src: "/client-logo/adclan-logo-6.png", alt: "Brand Partner 6" },
-  { id: 7, src: "/client-logo/adclan-logo-7.png", alt: "Brand Partner 7" },
-  { id: 8, src: "/client-logo/adclan-logo-8.png", alt: "Brand Partner 8" },
-  { id: 9, src: "/client-logo/adclan-logo-9.png", alt: "Brand Partner 9" },
-  { id: 10, src: "/client-logo/adclan-logo-10.png", alt: "Brand Partner 10" },
-  { id: 11, src: "/client-logo/adclan-logo-11.png", alt: "Brand Partner 11" },
-  { id: 12, src: "/client-logo/adclan-logo-12.png", alt: "Brand Partner 12" },
-  { id: 13, src: "/client-logo/adclan-logo-13.png", alt: "Brand Partner 13" },
-  { id: 14, src: "/client-logo/adclan-logo-14.png", alt: "Brand Partner 14" },
-  { id: 15, src: "/client-logo/adclan-logo-15.png", alt: "Brand Partner 15" },
-  { id: 16, src: "/client-logo/adclan-logo-16.png", alt: "Brand Partner 16" },
-  { id: 17, src: "/client-logo/adclan-logo-17.png", alt: "Brand Partner 17" },
-  { id: 18, src: "/client-logo/adclan-logo-18.png", alt: "Brand Partner 18" },
-  { id: 19, src: "/client-logo/adclan-logo-19.png", alt: "Brand Partner 19" },
-  { id: 20, src: "/client-logo/adclan-logo-20.png", alt: "Brand Partner 20" },
-  { id: 21, src: "/client-logo/adclan-logo-21.png", alt: "Brand Partner 21" },
-  { id: 22, src: "/client-logo/adclan-logo-22.png", alt: "Brand Partner 22" },
-  { id: 23, src: "/client-logo/adclan-logo-23.png", alt: "Brand Partner 23" },
-  { id: 24, src: "/client-logo/adclan-logo-24.png", alt: "Brand Partner 24" },
-  { id: 25, src: "/client-logo/adclan-logo-25.png", alt: "Brand Partner 25" },
-  { id: 26, src: "/client-logo/adclan-logo-26.png", alt: "Brand Partner 26" },
-  { id: 27, src: "/client-logo/adclan-logo-27.png", alt: "Brand Partner 27" },
-  { id: 28, src: "/client-logo/adclan-logo-28.png", alt: "Brand Partner 28" },
-  { id: 29, src: "/client-logo/adclan-logo-29.png", alt: "Brand Partner 29" },
-  { id: 30, src: "/client-logo/adclan-logo-30.png", alt: "Brand Partner 30" },
-  { id: 31, src: "/client-logo/adclan-logo-31.svg", alt: "Brand Partner 31" },
-  { id: 32, src: "/client-logo/adclan-logo-32.png", alt: "Brand Partner 32" },
+// Exact 8-Category Client Data from Main /clients Roster
+const CLIENT_CATEGORIES = [
+  {
+    id: "real-estate",
+    title: "Real Estate & Infrastructure",
+    shortLabel: "Real Estate",
+    logos: [
+      "/client-logo/adclan-logo-9.png",
+      "/client-logo/adclan-logo-10.png",
+      "/client-logo/adclan-logo-11.png",
+      "/client-logo/adclan-logo-15.png",
+      "/client-logo/adclan-logo-17.png",
+      "/client-logo/adclan-logo-18.png",
+      "/client-logo/adclan-logo-19.png",
+      "/client-logo/adclan-logo-20.png",
+      "/client-logo/adclan-logo-22.png",
+      "/client-logo/adclan-logo-24.png",
+      "/client-logo/adclan-logo-28.png",
+      "/client-logo/adclan-logo-30.png",
+      "/client-logo/adclan-logo-32.png",
+      "/client-logo/adclan-logo-25.png",
+      "/new-clients/2.webp",
+      "/new-clients/3.webp",
+      "/new-clients/4.webp",
+      "/new-clients/6.webp",
+      "/new-clients/8.webp",
+      "/new-clients/13.webp",
+      "/new-clients/14.webp",
+      "/new-clients/16.webp",
+      "/new-clients/17.webp",
+      "/new-clients/20.webp",
+      "/new-clients/22.webp",
+    ],
+  },
+  {
+    id: "fmcg",
+    title: "FMCG & Retail",
+    shortLabel: "FMCG & Retail",
+    logos: [
+      "/client-logo/adclan-logo-3.png",
+      "/client-logo/adclan-logo-4.png",
+      "/client-logo/adclan-logo-8.png",
+      "/new-clients/7.webp",
+      "/new-clients/24.webp",
+    ],
+  },
+  {
+    id: "jewellery",
+    title: "Jewellery & Fashion",
+    shortLabel: "Jewellery & Fashion",
+    logos: [
+      "/client-logo/adclan-logo-13.png",
+      "/client-logo/adclan-logo-27.png",
+      "/client-logo/adclan-logo-29.png",
+      "/client-logo/adclan-logo-14.png",
+      "/new-clients/15.webp",
+    ],
+  },
+  {
+    id: "healthcare",
+    title: "Healthcare & Wellness",
+    shortLabel: "Healthcare",
+    logos: [
+      "/client-logo/adclan-logo-2.png",
+      "/client-logo/adclan-logo-5.png",
+      "/client-logo/adclan-logo-23.png",
+      "/new-clients/5.webp",
+    ],
+  },
+  {
+    id: "manufacturing",
+    title: "Manufacturing & Industrial",
+    shortLabel: "Manufacturing",
+    logos: [
+      "/client-logo/adclan-logo-16.png",
+      "/client-logo/adclan-logo-26.png",
+      "/new-clients/10.webp",
+      "/new-clients/21.webp",
+    ],
+  },
+  {
+    id: "tech",
+    title: "Technology & Electronics",
+    shortLabel: "Tech & Electronics",
+    logos: [
+      "/client-logo/adclan-logo-21.png",
+      "/client-logo/adclan-logo-31.svg",
+    ],
+  },
+  {
+    id: "consulting",
+    title: "Consulting & Services",
+    shortLabel: "Consulting",
+    logos: [
+      "/client-logo/adclan-logo-12.png",
+      "/client-logo/adclan-logo-1.png",
+      "/client-logo/adclan-logo-6.png",
+    ],
+  },
+  {
+    id: "education",
+    title: "Institutes & Education",
+    shortLabel: "Education",
+    logos: [
+      "/new-clients/11.webp",
+      "/new-clients/19.webp",
+      "/new-clients/23.webp",
+    ],
+  },
 ];
 
 export default function BrandsSectionV3({ isStandalone = false }) {
+  const [activeCategory, setActiveCategory] = useState("ALL");
+
+  const totalLogosCount = useMemo(() => {
+    return CLIENT_CATEGORIES.reduce((acc, cat) => acc + cat.logos.length, 0);
+  }, []);
+
+  const displayedCategories = useMemo(() => {
+    if (activeCategory === "ALL") return CLIENT_CATEGORIES;
+    return CLIENT_CATEGORIES.filter((cat) => cat.id === activeCategory);
+  }, [activeCategory]);
+
   return (
-    <section className={`v3-brands-section ${isStandalone ? "is-standalone" : ""}`} id="brands">
-      <div className={`container-fluid v3-section-container px-3 px-md-5 px-xl-5 ${isStandalone ? "pt-4" : ""}`}>
-        {/* Section Header with Bootstrap row & col (Consistent with /home-v3/work) */}
-        <div className="row mb-4">
-          <div className="col-12 col-lg-10 col-xl-8">
-            <h1 className="v3-editorial-headline">
-              Trusted by Brands, <br />
-              <span>that shape the nation.</span>
-            </h1>
+    <section
+      className={`v3-brands-section ${isStandalone ? "is-standalone" : ""}`}
+      id="brands"
+    >
+      <div className="container-fluid v3-section-container px-3 px-md-5 px-xl-5">
+        {/* =====================================================================
+            1. PAGE HEADER
+            ===================================================================== */}
+        <div className="v3-brands-page-header">
+          <div className="row align-items-center justify-content-between g-4">
+            <div className="col-12 col-md-8">
+              <h1 className="v3-brands-headline mb-0">
+                Trusted by Brands, <br />
+                <span>that shape the nation.</span>
+              </h1>
+            </div>
+
+            <div className="col-12 col-md-4 text-start text-md-end">
+              <Link href="/home-v3/connect" className="v3-brands-top-btn">
+                <span>BECOME A PARTNER</span>
+                <div className="v3-btn-arrow-wrap">
+                  <ArrowUpRight size={15} />
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
 
-        {/* Perfect Aligned Brands Logo Grid (No staggered shift, uniform cells) */}
-        <div className="v3-brands-grid-container">
-          <div className="v3-brands-grid">
-            {ALL_BRANDS.map((brand) => (
-              <div
-                key={`brand-${brand.id}`}
-                className="v3-brand-grid-card"
-                title={brand.alt}
+        {/* =====================================================================
+            2. INTERACTIVE CATEGORY FILTER TABS
+            ===================================================================== */}
+        <div className="v3-brands-tabs-wrapper">
+          <div className="v3-brands-tabs">
+            <button
+              type="button"
+              className={`v3-brands-tab-btn ${activeCategory === "ALL" ? "is-active" : ""}`}
+              onClick={() => setActiveCategory("ALL")}
+            >
+              <span>All Categories</span>
+              <span className="v3-brands-tab-count">{totalLogosCount}</span>
+            </button>
+
+            {CLIENT_CATEGORIES.map((cat) => (
+              <button
+                key={cat.id}
+                type="button"
+                className={`v3-brands-tab-btn ${activeCategory === cat.id ? "is-active" : ""}`}
+                onClick={() => setActiveCategory(cat.id)}
               >
-                <img
-                  src={brand.src}
-                  alt={brand.alt}
-                  className="v3-brand-grid-img"
-                  loading="lazy"
-                />
-              </div>
+                <span>{cat.shortLabel}</span>
+                <span className="v3-brands-tab-count">{cat.logos.length}</span>
+              </button>
             ))}
           </div>
         </div>
 
-        {/* Trust Metrics Bar with Bootstrap row & col-md-4 */}
-        <div className="row g-4 v3-brands-bottom-strip mt-5">
+        {/* =====================================================================
+            3. CATEGORY SECTIONS STACK
+            ===================================================================== */}
+        <div className="v3-brands-categories-stack">
+          {displayedCategories.map((section) => (
+            <div
+              key={section.id}
+              className="v3-brands-cat-block"
+              id={`cat-${section.id}`}
+            >
+              {/* Category Header */}
+              <div className="v3-brands-cat-header">
+                <div className="v3-brands-cat-title-wrap">
+                  <span className="v3-brands-cat-indicator" />
+                  <h2 className="v3-brands-cat-title">{section.title}</h2>
+                </div>
+
+                <span className="v3-brands-cat-pill">
+                  {section.logos.length} PARTNERS
+                </span>
+              </div>
+
+              {/* Symmetrical 6-Column Logo Grid */}
+              <div className="v3-brands-cat-grid">
+                {section.logos.map((logo, i) => (
+                  <div
+                    key={`${section.id}-${i}-${logo}`}
+                    className="v3-brand-card"
+                    title={`${section.title} Partner ${i + 1}`}
+                  >
+                    {/* biome-ignore lint/performance/noImgElement: static client logo asset */}
+                    <img
+                      src={logo}
+                      alt={`${section.title} Partner ${i + 1}`}
+                      className="v3-brand-card-img"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* =====================================================================
+            4. TRUST METRICS BAR
+            ===================================================================== */}
+        <div className="row g-4 v3-brands-stats-strip">
           <div className="col-12 col-md-4">
-            <div className="v3-brands-strip-item h-100">
-              <span className="v3-strip-highlight">100+ BRANDS</span>
-              <span className="v3-strip-caption">FMCG, Real Estate, OTT & Consumer Tech</span>
+            <div className="v3-brands-stat-box">
+              <span className="v3-brands-stat-label">MARKET TRUST</span>
+              <span className="v3-brands-stat-num">50+ BRANDS</span>
+              <p className="v3-brands-stat-desc">
+                High-growth consumer brands, legacy conglomerates, and venture
+                enterprises.
+              </p>
             </div>
           </div>
 
           <div className="col-12 col-md-4">
-            <div className="v3-brands-strip-item h-100">
-              <span className="v3-strip-highlight">99.4% ATTENTION</span>
-              <span className="v3-strip-caption">High-impact recall and consumer engagement</span>
+            <div className="v3-brands-stat-box">
+              <span className="v3-brands-stat-label">DIVERSIFICATION</span>
+              <span className="v3-brands-stat-num">8 VERTICALS</span>
+              <p className="v3-brands-stat-desc">
+                Real Estate, FMCG, Luxury Jewellery, Healthcare, Tech &
+                Industrial domains.
+              </p>
             </div>
           </div>
 
           <div className="col-12 col-md-4">
-            <div className="v3-brands-strip-item h-100">
-              <span className="v3-strip-highlight">PAN-INDIA SCALE</span>
-              <span className="v3-strip-caption">Delhi-NCR, Mumbai & Tier-1 Metros</span>
+            <div className="v3-brands-stat-box">
+              <span className="v3-brands-stat-label">GEOGRAPHIC SCALE</span>
+              <span className="v3-brands-stat-num">PAN-INDIA</span>
+              <p className="v3-brands-stat-desc">
+                Campaign deployments active across Delhi-NCR, Mumbai, Bangalore
+                & Tier-1 metros.
+              </p>
             </div>
           </div>
         </div>

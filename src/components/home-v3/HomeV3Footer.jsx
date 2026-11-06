@@ -71,10 +71,10 @@ export default function HomeV3Footer() {
                   </div>
                 </Link>
 
-                <a href="tel:+919891505451" className="v3-footer-cta-btn-secondary">
+                {/* <a href="tel:+919891505451" className="v3-footer-cta-btn-secondary">
                   <Phone size={14} className="me-2" />
                   <span>DIRECT DESK</span>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -97,8 +97,7 @@ export default function HomeV3Footer() {
         {/* =====================================================================
             3. MAIN ARCHITECTURAL COLUMNS GRID
             ===================================================================== */}
-        <div className="row g-4 g-lg-5 pb-5 v3-footer-columns-grid">
-          {/* Column 1: Brand Authority */}
+        {/* <div className="row g-4 g-lg-5 pb-5 v3-footer-columns-grid">
           <div className="col-12 col-lg-4 v3-footer-col v3-footer-col-brand">
             <Link href="/" className="v3-footer-logo-lockup" aria-label="AdClan Home">
               <svg
@@ -125,7 +124,6 @@ export default function HomeV3Footer() {
             </div>
           </div>
 
-          {/* Column 2: Navigation */}
           <div className="col-6 col-md-4 col-lg-2 v3-footer-col">
             <h5 className="v3-col-title">NAVIGATION</h5>
             <ul className="v3-footer-link-list">
@@ -174,7 +172,6 @@ export default function HomeV3Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Capabilities */}
           <div className="col-6 col-md-4 col-lg-3 v3-footer-col">
             <h5 className="v3-col-title">CAPABILITIES</h5>
             <ul className="v3-footer-link-list">
@@ -223,7 +220,6 @@ export default function HomeV3Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Direct Desk & Concierge */}
           <div className="col-12 col-md-4 col-lg-3 v3-footer-col v3-footer-col-desk">
             <h5 className="v3-col-title">DIRECT CONCIERGE</h5>
 
@@ -301,7 +297,7 @@ export default function HomeV3Footer() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* =====================================================================
             4. MONUMENTAL ARCHITECTURAL GHOST WATERMARK
@@ -315,21 +311,61 @@ export default function HomeV3Footer() {
             ===================================================================== */}
         <div className="row align-items-center justify-content-between g-3 pt-4 v3-footer-bottom-bar">
           <div className="col-12 col-md-5">
-            <p className="v3-copy-text mb-0">
-              © {new Date().getFullYear()} AdClan Media Solution Pvt Ltd. Engineered with precision.
-            </p>
+            <div className="v3-footer-contact-links">
+              <a href="tel:+919891505451" className="v3-footer-contact-link">
+                <Phone size={13} />
+                <span>+91 98915 05451</span>
+              </a>
+              <span className="v3-legal-dot">•</span>
+              <a href="mailto:info@adclan.in" className="v3-footer-contact-link">
+                <Mail size={13} />
+                <span>info@adclan.in</span>
+              </a>
+            </div>
           </div>
 
-          <div className="col-12 col-md-3 text-md-center">
-            {timeStr && (
-              <div className="v3-footer-live-clock">
-                <Clock size={12} className="v3-clock-icon" />
-                <span>NEW DELHI: {timeStr} IST</span>
-              </div>
-            )}
+          <div className="col-12 col-md-2 d-flex justify-content-start justify-content-md-center">
+            <div className="v3-footer-social-row">
+              <a
+                href="https://www.instagram.com/adclanmedia/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="v3-f-social-btn"
+              >
+                <FaInstagram size={15} />
+              </a>
+              <a
+                href="https://in.linkedin.com/company/adclan"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="v3-f-social-btn"
+              >
+                <FaLinkedin size={15} />
+              </a>
+              <a
+                href="https://www.facebook.com/adclanmedia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="v3-f-social-btn"
+              >
+                <FaFacebookF size={14} />
+              </a>
+              <a
+                href="https://www.youtube.com/@adclan"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="v3-f-social-btn"
+              >
+                <FaYoutube size={15} />
+              </a>
+            </div>
           </div>
 
-          <div className="col-12 col-md-4 text-md-end">
+          <div className="col-12 col-md-5 text-md-end">
             <div className="v3-footer-bottom-actions">
               <div className="v3-legal-links">
                 <Link href="/privacy-policy">Privacy</Link>
