@@ -8,26 +8,29 @@ import "./heroBannerCentered.css";
 const SLIDES_DATA = [
   {
     id: 1,
-    lines: ["Brands", "that", "move", "people"],
-    cap: "Brands that move people",
+    lines: ["Right", "Gold"],
+    cap: "Right Gold",
     image: "/home-v3/ban-1.webp",
     a: "#f6b24a",
     b: "#3a4252",
     c: "#0e1117",
     sx: "68%",
     sy: "26%",
-    video: "/home/banner1.mp4",
+    // Agar video button chahiye toh 'video' me path de, aur agar link button chahiye toh 'url' ya 'link' me URL de:
+    url: "/projects/right-gold",
+    video: "",
   },
   {
     id: 2,
-    lines: ["Bigger", "bolder", "brands"],
-    cap: "Bigger<br>bolder<br>brands",
+    lines: ["Vikram", "Mills"],
+    cap: "Vikram Mills",
     image: "/home-v3/ban-2.webp",
     a: "#ffd23f",
     b: "#4a4f5a",
     c: "#14161b",
     sx: "30%",
     sy: "22%",
+    url: "",
     video: "/home/22.mp4",
   },
   {
@@ -40,18 +43,20 @@ const SLIDES_DATA = [
     c: "#070b16",
     sx: "50%",
     sy: "18%",
+    url: "",
     video: "/home/23.mp4",
   },
   {
     id: 4,
-    lines: ["Faces", "of", "the", "brand"],
-    cap: "Faces of<br>the brand",
+    lines: ["Revfin"],
+    cap: "Revfin",
     image: "/home-v3/ban-4.webp",
     a: "#d99a7a",
     b: "#2b2326",
     c: "#0a0809",
     sx: "60%",
     sy: "32%",
+    url: "",
     video: "/home/24.mp4",
   },
   {
@@ -64,6 +69,7 @@ const SLIDES_DATA = [
     c: "#0c070c",
     sx: "40%",
     sy: "28%",
+    url: "",
     video: "/home/25.mp4",
   },
   {
@@ -76,6 +82,7 @@ const SLIDES_DATA = [
     c: "#07100f",
     sx: "72%",
     sy: "24%",
+    url: "",
     video: "/home/26.mp4",
   },
   {
@@ -88,6 +95,7 @@ const SLIDES_DATA = [
     c: "#0b080e",
     sx: "55%",
     sy: "20%",
+    url: "",
     video: "/home/banner.mp4",
   },
 ];
@@ -241,27 +249,57 @@ export default function HeroBannerSliderCenteredV3() {
                 <i />
               </div>
 
-              {/* Play Button for video showcase */}
-              <button
-                type="button"
-                className="play"
-                aria-label="Play video"
-                tabIndex={isCenter ? 0 : -1}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  if (isCenter) setVideoModalOpen(true);
-                }}
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.4"
-                  aria-hidden="true"
+              {/* Action Button: Link button if url/link is provided, or Video Play button if video is provided */}
+              {(s.url || s.link) ? (
+                <a
+                  href={s.url || s.link}
+                  className="play slide-link-btn"
+                  aria-label="Visit link"
+                  tabIndex={isCenter ? 0 : -1}
+                  target={(s.url || s.link).startsWith("http") ? "_blank" : undefined}
+                  rel={(s.url || s.link).startsWith("http") ? "noopener noreferrer" : undefined}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (!isCenter) {
+                      e.preventDefault();
+                      go(i);
+                    }
+                  }}
                 >
-                  <path d="M4 2.5v15l13-7.5z" />
-                </svg>
-              </button>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </a>
+              ) : s.video ? (
+                <button
+                  type="button"
+                  className="play"
+                  aria-label="Play video"
+                  tabIndex={isCenter ? 0 : -1}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (isCenter) setVideoModalOpen(true);
+                  }}
+                >
+                  <svg
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.4"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 2.5v15l13-7.5z" />
+                  </svg>
+                </button>
+              ) : null}
             </div>
           );
         })}

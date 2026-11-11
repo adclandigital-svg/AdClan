@@ -412,6 +412,10 @@
   margin-left: 3px;
 }
 
+.v3-centered-hero-section .play.slide-link-btn svg {
+  margin-left: 0;
+}
+
 .v3-centered-hero-section .play::after {
   content: "";
   position: absolute;
