@@ -220,7 +220,7 @@
     radial-gradient(circle at var(--sx, 70%) var(--sy, 30%), var(--a), transparent 46%),
     linear-gradient(165deg, var(--b), var(--c));
   mix-blend-mode: hard-light;
-  opacity: 0.82;
+  opacity: 0.5;
   z-index: 2;
 }
 
