@@ -220,7 +220,7 @@
     radial-gradient(circle at var(--sx, 70%) var(--sy, 30%), var(--a), transparent 46%),
     linear-gradient(165deg, var(--b), var(--c));
   mix-blend-mode: hard-light;
-  opacity: 0.65;
+  opacity: 0.75;
   z-index: 2;
 }
 
@@ -255,14 +255,14 @@
 }
 
 /* Vignette Shades */
-/* .v3-centered-hero-section .shade {
+.v3-centered-hero-section .shade {
   position: absolute;
   inset: 0;
   background:
     linear-gradient(90deg, rgba(0, 0, 0, .62), rgba(0, 0, 0, .08) 60%),
     linear-gradient(0deg, rgba(0, 0, 0, .45), transparent 40%);
   z-index: 3;
-} */
+}
 
 /* Small Caption for Background Cards */
 .v3-centered-hero-section .cap {
