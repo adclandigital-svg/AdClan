@@ -224,7 +224,7 @@
   z-index: 2;
 }
 
-.v3-centered-hero-section .bg::after {
+/* .v3-centered-hero-section .bg::after {
   content: "";
   position: absolute;
   left: 0;
@@ -239,7 +239,7 @@
     100% 34%, 100% 100%, 0 100%
   );
   opacity: .82;
-}
+} */
 
 .v3-centered-hero-section .card[data-pos="0"] .bg {
   animation: v3-centered-drift 16s ease-in-out infinite alternate;
@@ -255,14 +255,14 @@
 }
 
 /* Vignette Shades */
-.v3-centered-hero-section .shade {
+/* .v3-centered-hero-section .shade {
   position: absolute;
   inset: 0;
   background:
     linear-gradient(90deg, rgba(0, 0, 0, .62), rgba(0, 0, 0, .08) 60%),
     linear-gradient(0deg, rgba(0, 0, 0, .45), transparent 40%);
   z-index: 3;
-}
+} */
 
 /* Small Caption for Background Cards */
 .v3-centered-hero-section .cap {

@@ -35,8 +35,8 @@ const SLIDES_DATA = [
   },
   {
     id: 3,
-    lines: ["Live", "at", "scale"],
-    cap: "Live at<br>scale",
+    lines: ["Hyundai"],
+    cap: "Hyundai",
     image: "/home-v3/ban-3.webp",
     a: "#6fb4ff",
     b: "#1d2c52",
@@ -48,8 +48,8 @@ const SLIDES_DATA = [
   },
   {
     id: 4,
-    lines: ["Revfin"],
-    cap: "Revfin",
+    lines: ["Smile", "Train", "India"],
+    cap: "Smile Train India",
     image: "/home-v3/ban-4.webp",
     a: "#d99a7a",
     b: "#2b2326",
@@ -61,8 +61,8 @@ const SLIDES_DATA = [
   },
   {
     id: 5,
-    lines: ["After", "the", "dark"],
-    cap: "After the dark",
+    lines: ["Revfin"],
+    cap: "Revfin",
     image: "/home-v3/ban-5.webp",
     a: "#e86f5c",
     b: "#3a2230",

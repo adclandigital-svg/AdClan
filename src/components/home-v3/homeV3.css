@@ -559,7 +559,7 @@ body.home-v3-active::before {
   opacity: 0.82;
 }
 
-.bg::after {
+/* .bg::after {
   content: "";
   position: absolute;
   left: 0;
@@ -598,16 +598,16 @@ body.home-v3-active::before {
     0 100%
   );
   opacity: 0.82;
-}
+} */
 
 /* Exact Prototype Shade */
-.shade {
+/* .shade {
   position: absolute;
   inset: 0;
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.08) 60%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.45), transparent 40%);
-}
+} */
 
 /* Exact Prototype Caption */
 .cap {
