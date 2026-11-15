@@ -1,5 +1,27 @@
 export const blogListData = [
   {
+    id: 24,
+    title: "SEO Cost in Delhi: 2026 Pricing Guide (Real Numbers)",
+    category: "Blog",
+    desc: "What Delhi businesses actually pay for SEO in 2026. Get transparent pricing bands, what factors change costs, and how to evaluate quotes.",
+    author: "Adclan Media",
+    date: "November 2026",
+    readTime: "5 min read",
+    img: "/blog/seo-cost-in-delhi-2026-pricing-guide.webp",
+    link: "/blogs/seo-cost-in-delhi-2026-pricing-guide",
+  },
+  {
+    id: 23,
+    title: "How Long Does SEO Take? Realistic Timelines for 2026",
+    category: "Blog",
+    desc: "Wondering how long SEO takes to work? Get data-backed timelines, key ranking factors, and actionable strategies to accelerate your results.",
+    author: "Adclan Media",
+    date: "November 2026",
+    readTime: "5 min read",
+    img: "/blog/how-long-does-seo-take-realistic-timelines-for-2026.webp",
+    link: "/blogs/how-long-does-seo-take-realistic-timelines-for-2026",
+  },
+  {
     id: 22,
     title:
       "Marketing Agency in Noida: Your Growth Partner in India's Competitive Market",

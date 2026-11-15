@@ -87,4 +87,20 @@ export const blogs = [
     video: "/home/creatives/Untitled design.mp4",
     content: "Discover proven strategies for lead generation through digital marketing that deliver real business results. Learn actionable techniques used by top agencies.",
   },
+  {
+    id: 11,
+    slug: "how-long-does-seo-take-realistic-timelines-for-2026",
+    title: "How Long Does SEO Take? Realistic Timelines for 2026",
+    date: "November 2026",
+    video: "/home/creatives/Untitled design.mp4",
+    content: "Wondering how long SEO takes to work? Get data-backed timelines, key ranking factors, and actionable strategies to accelerate your results.",
+  },
+  {
+    id: 12,
+    slug: "seo-cost-in-delhi-2026-pricing-guide",
+    title: "SEO Cost in Delhi: 2026 Pricing Guide (Real Numbers)",
+    date: "November 2026",
+    video: "/home/creatives/Untitled design.mp4",
+    content: "What Delhi businesses actually pay for SEO in 2026. Get transparent pricing bands, what factors change costs, and how to evaluate quotes.",
+  },
 ];
