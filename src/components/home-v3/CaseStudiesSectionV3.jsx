@@ -19,7 +19,7 @@ const CASE_STUDIES = [
     image: "/case-studies/Right Gold.webp",
     link: "/case-studies/right-gold-case-study",
     excerpt:
-      "Crafted royal bridal campaign films and multi-city digital storytelling that transformed jewellery heritage into unprecedented retail footfall and sales conversion.",
+      "Crafted royal bridal campaign films and multi-city digital storytelling driving massive footfall and sales conversion.",
   },
   {
     id: "cs-galaxy",
@@ -33,7 +33,7 @@ const CASE_STUDIES = [
     image: "/case-studies/galaxy-case-study.webp",
     link: "/case-studies/galaxy-sawasdee-heights-case-study",
     excerpt:
-      "Targeted high-net-worth property buyers through cinematic architectural unveilings, interactive digital touchpoints, and premium on-ground experiential events.",
+      "Targeted high-net-worth property buyers through cinematic architectural unveilings, interactive digital touchpoints, and premium experiential events.",
   },
   {
     id: "cs-vikram-mills",
@@ -47,7 +47,7 @@ const CASE_STUDIES = [
     image: "/case-studies/vikram-mills.webp",
     link: "/case-studies/vikram-mills-case-study",
     excerpt:
-      "Re-engineered household staple packaging with modern nutritional clarity, accompanied by prime-time broadcast commercials establishing massive shelf presence.",
+      "Re-engineered household staple packaging with modern nutritional clarity, accompanied by high-impact commercials establishing market leadership.",
   },
   {
     id: "cs-ace-hanei",
@@ -61,7 +61,7 @@ const CASE_STUDIES = [
     image: "/case-studies/artboard-4.webp",
     link: "/case-studies/adclan-media-triumph-ace-hanei",
     excerpt:
-      "Delivered an omnichannel marketing masterclass combining celebrity handling, CGI walkthroughs, and high-frequency digital media that fully subscribed the inventory.",
+      "Delivered an omnichannel marketing masterclass combining celebrity handling, CGI walkthroughs, and high-frequency targeted digital media.",
   },
   {
     id: "cs-kidsmate",
@@ -74,7 +74,7 @@ const CASE_STUDIES = [
     image: "/case-studies/artboard-2.webp",
     link: "/case-studies/adclan-onboard-shweta-tiwari",
     excerpt:
-      "Onboarded celebrated actress Shweta Tiwari for an emotional prime-time TV commercial highlighting quality and trust, capturing commanding market share.",
+      "Onboarded celebrated actress Shweta Tiwari for an emotional prime-time TV commercial capturing commanding market share.",
   },
   {
     id: "cs-radio",
@@ -88,9 +88,16 @@ const CASE_STUDIES = [
     image: "/case-studies/artboard-5.webp",
     link: "/case-studies/5-radio-ads-strategies-for-buisness-growth",
     excerpt:
-      "Engineered high-recall signature radio jingles, prime-drive time sponsorships, and multi-station frequency planning driving immediate in-store inquiries.",
+      "Engineered high-recall signature radio jingles, prime-drive time sponsorships, and multi-station frequency planning driving instant inquiries.",
   },
 ];
+
+// Helper to ensure strictly 15 words description
+function get15Words(text) {
+  if (!text) return "";
+  const words = text.trim().split(/\s+/);
+  return words.slice(0, 15).join(" ");
+}
 
 const FILTER_TABS = [
   { id: "ALL", label: "All Case Studies" },
@@ -125,11 +132,6 @@ export default function CaseStudiesSectionV3() {
             <h2 className="v3-cs-headline">
               Case <span>Studies.</span>
             </h2>
-            <p className="v3-cs-subtext mb-0">
-              In-depth dissections of how we engineer cultural dominance, brand
-              authority, and commercially disruptive growth for India&apos;s
-              market leaders.
-            </p>
           </div>
 
           <div className="col-12 col-lg-4 text-lg-end">
@@ -158,6 +160,8 @@ export default function CaseStudiesSectionV3() {
 
         {/* =====================================================================
             3. CASE STUDIES GRID
+            - Front: Only image with minimal info (Client badge & Metric pill)
+            - On Hover: Reveal overlay with Title, 15 words description & Button (like Our Craft)
             ===================================================================== */}
         <div className="row g-4 v3-cs-grid">
           {filteredStudies.map((study) => (
@@ -174,36 +178,33 @@ export default function CaseStudiesSectionV3() {
                   />
                   <div className="v3-cs-media-shade" />
 
-                  {/* Client Badge (Top-Left) */}
+                  {/* Front Minimal Info: Client Badge (Top-Left) */}
                   <div className="v3-cs-client-badge">
                     <Sparkles size={10} />
                     <span>{study.client}</span>
                   </div>
 
-                  {/* Metric Pill (Top-Right) */}
+                  {/* Front Minimal Info: Metric Pill (Top-Right) */}
                   <div className="v3-cs-metric-pill">
                     <TrendingUp size={12} />
                     <span>{study.metric}</span>
                   </div>
-                </div>
 
-                {/* Card Body */}
-                <div className="v3-cs-body">
-                  <div className="v3-cs-category-row">
-                    <span className="v3-cs-category">{study.category}</span>
-                    <span className="v3-cs-tag">{study.tag}</span>
-                  </div>
-
-                  <h3 className="v3-cs-title">{study.title}</h3>
-                  <p className="v3-cs-excerpt">{study.excerpt}</p>
-                </div>
-
-                {/* Card Footer CTA */}
-                <div className="v3-cs-footer">
-                  <div className="v3-cs-cta-link">
-                    <span className="v3-cs-cta-dash" />
-                    <span>READ FULL CASE STUDY</span>
-                    <ArrowUpRight size={14} className="v3-cs-cta-arrow" />
+                  {/* On Hover Reveal Overlay (Title + 15 Words Description + Bottom Button) */}
+                  <div className="v3-cs-hover-overlay">
+                    <h3 className="v3-cs-hover-title">{study.title}</h3>
+                    <p className="v3-cs-hover-desc">
+                      {get15Words(study.excerpt)}
+                    </p>
+                    <div className="v3-cs-hover-btn">
+                      <span>READ CASE STUDY</span>
+                      <span
+                        className="v3-cs-hover-btn-arrow"
+                        aria-hidden="true"
+                      >
+                        <ArrowUpRight size={13} />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -214,12 +215,12 @@ export default function CaseStudiesSectionV3() {
         {/* =====================================================================
             4. SIGNATURE BOTTOM ACTION BAR
             ===================================================================== */}
-        <div className="v3-cs-bottom-cta">
+        {/* <div className="v3-cs-bottom-cta">
           <Link href="/case-studies" className="v3-cs-signature-link">
             <span>EXPLORE COMPLETE ADCLAN CASE STUDY ARCHIVE</span>
             <ArrowRight size={15} />
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
