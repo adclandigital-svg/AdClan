@@ -1,10 +1,14 @@
 "use client";
-
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import VideoModalV3 from "./VideoModalV3";
 import "./heroBannerCentered.css";
-
 // 7 Portfolio Slides with High-End Photography from the Original Slider
+// - 'url' ya 'link': Pure active slide aur title pe clickable link banata hai (button ki jagah)
+// - 'video': Button place pe Video play button show karta hai
+// - 'video' ya 'videos': Single ya multiple videos (local MP4 ya YouTube link). Multiple hone par popup me slider chalega.
+// - 'audio' ya 'mp3' ya 'music': Button place pe MP3 audio play/pause button show karta hai
 const SLIDES_DATA = [
   {
     id: 1,
@@ -16,9 +20,9 @@ const SLIDES_DATA = [
     c: "#0e1117",
     sx: "68%",
     sy: "26%",
-    // Agar video button chahiye toh 'video' me path de, aur agar link button chahiye toh 'url' ya 'link' me URL de:
     url: "/projects/right-gold",
     video: "",
+    audio: "",
   },
   {
     id: 2,
@@ -30,8 +34,10 @@ const SLIDES_DATA = [
     c: "#14161b",
     sx: "30%",
     sy: "22%",
-    url: "",
+    url: "/projects/vikram-mills",
     video: "/home/22.mp4",
+    videos: ["/home/22.mp4", "https://www.youtube.com/watch?v=dQw4w9WgXcQ"],
+    audio: "",
   },
   {
     id: 3,
@@ -43,8 +49,9 @@ const SLIDES_DATA = [
     c: "#070b16",
     sx: "50%",
     sy: "18%",
-    url: "",
-    video: "/home/23.mp4",
+    url: "/projects/smile-train",
+    video: "",
+    audio: "/projects/smile_train/RJM-Cut-Smile-train-India.mp3",
   },
   {
     id: 4,
@@ -56,8 +63,10 @@ const SLIDES_DATA = [
     c: "#0a0809",
     sx: "60%",
     sy: "32%",
-    url: "",
-    video: "/home/24.mp4",
+    url: "/projects/revfin",
+    video: "/home/revfin.mp4",
+    videos: ["/home/24.mp4", "/home/25.mp4"],
+    audio: "",
   },
   {
     id: 5,
@@ -69,8 +78,10 @@ const SLIDES_DATA = [
     c: "#0c070c",
     sx: "40%",
     sy: "28%",
-    url: "",
+    url: "/projects/hyundai",
     video: "/home/25.mp4",
+    videos: ["/home/25.mp4", "/home/banner.mp4"],
+    audio: "",
   },
   {
     id: 6,
@@ -82,8 +93,9 @@ const SLIDES_DATA = [
     c: "#07100f",
     sx: "72%",
     sy: "24%",
-    url: "",
-    video: "/home/26.mp4",
+    url: "/projects/aggarwal-namkeen",
+    video: "",
+    audio: "/projects/clear_dekho/Cleardekho-New-retail.mp3",
   },
   {
     id: 7,
@@ -95,17 +107,73 @@ const SLIDES_DATA = [
     c: "#0b080e",
     sx: "55%",
     sy: "20%",
-    url: "",
+    url: "/projects/ashiana-housing",
     video: "/home/banner.mp4",
+    videos: ["/home/banner.mp4", "/home/26.mp4"],
+    audio: "",
   },
+  {
+    id: 8,
+    lines: ["Dayal", "Opticals"],
+    cap: "Dayal Opticals",
+    image: "/home-v3/ban-8.webp",
+    a: "#4da8ff",
+    b: "#1a2c42",
+    c: "#08101a",
+    sx: "62%",
+    sy: "24%",
+    url: "/projects",
+    video: "/home/26.mp4",
+    videos: ["/home/26.mp4", "/home/22.mp4"],
+    audio: "",
+  },
+  {
+    id: 9,
+    lines: ["Astrosage"],
+    cap: "Astrosage",
+    image: "/home-v3/ban-9.webp",
+    a: "#a855f7",
+    b: "#2e1b4d",
+    c: "#0e071a",
+    sx: "50%",
+    sy: "20%",
+    url: "/projects",
+    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    videos: ["https://www.youtube.com/watch?v=dQw4w9WgXcQ", "/home/banner.mp4"],
+    audio: "",
+  }
 ];
 
+// Helper to extract videos array from a slide (handles single string or array, mp4 or YouTube)
+const getSlideVideos = (slide) => {
+  if (!slide) return [];
+  const list = [];
+  if (Array.isArray(slide.videos)) {
+    list.push(...slide.videos);
+  } else if (typeof slide.videos === "string" && slide.videos.trim()) {
+    list.push(slide.videos.trim());
+  }
+  if (Array.isArray(slide.video)) {
+    list.push(...slide.video);
+  } else if (typeof slide.video === "string" && slide.video.trim()) {
+    list.push(slide.video.trim());
+  }
+  return Array.from(new Set(list.filter(Boolean)));
+};
+
 export default function HeroBannerSliderCenteredV3() {
+  const router = useRouter();
   const [active, setActive] = useState(0);
   const [videoModalOpen, setVideoModalOpen] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
+  // Audio playback state
+  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+  const [activeAudioSlide, setActiveAudioSlide] = useState(null);
+  const audioRef = useRef(null);
+
   const sxRef = useRef(null);
+  const isDraggingRef = useRef(false);
   const n = SLIDES_DATA.length;
   const pad = (v) => String(v).padStart(2, "0");
 
@@ -116,9 +184,7 @@ export default function HeroBannerSliderCenteredV3() {
     [n],
   );
 
-  // Exact Positional calculation from user reference prototype:
-  // p = ((i - active) % n + n) % n; if (p > Math.floor(n / 2)) p -= n;
-  // hid = Math.abs(p) > 3; data-pos = hid ? 'hidden' : p
+  // Positional calculation from user reference prototype:
   const getPos = useCallback(
     (i) => {
       let p = (((i - active) % n) + n) % n;
@@ -128,6 +194,24 @@ export default function HeroBannerSliderCenteredV3() {
     },
     [active, n],
   );
+
+  // Stop audio playback when slide changes
+  useEffect(() => {
+    if (audioRef.current && isPlayingAudio) {
+      audioRef.current.pause();
+      setIsPlayingAudio(false);
+      setActiveAudioSlide(null);
+    }
+  }, [active]);
+
+  // Stop audio playback when video modal opens
+  useEffect(() => {
+    if (videoModalOpen && audioRef.current && isPlayingAudio) {
+      audioRef.current.pause();
+      setIsPlayingAudio(false);
+      setActiveAudioSlide(null);
+    }
+  }, [videoModalOpen]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -139,24 +223,28 @@ export default function HeroBannerSliderCenteredV3() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [active, go]);
 
-  // Autoplay functionality with pause on hover
+  // Autoplay functionality with pause on hover, video open, or audio playing
   useEffect(() => {
-    if (isPaused || videoModalOpen) return;
+    if (isPaused || videoModalOpen || isPlayingAudio) return;
     const interval = setInterval(() => {
       go(active + 1);
     }, 6000);
     return () => clearInterval(interval);
-  }, [isPaused, videoModalOpen, active, go]);
+  }, [isPaused, videoModalOpen, isPlayingAudio, active, go]);
 
-  // Pointer swipe gestures (from reference)
+  // Pointer swipe gestures
   const handlePointerDown = (e) => {
     sxRef.current = e.clientX;
+    isDraggingRef.current = false;
   };
 
   const handlePointerUp = (e) => {
     if (sxRef.current === null) return;
     const d = e.clientX - sxRef.current;
     sxRef.current = null;
+    if (Math.abs(d) > 20) {
+      isDraggingRef.current = true;
+    }
     if (Math.abs(d) > 50) {
       go(active + (d < 0 ? 1 : -1));
     }
@@ -164,6 +252,53 @@ export default function HeroBannerSliderCenteredV3() {
 
   const handlePointerCancel = () => {
     sxRef.current = null;
+    isDraggingRef.current = false;
+  };
+
+  // Toggle MP3 audio playback
+  const handleToggleAudio = (e, audioSrc, slideIndex) => {
+    e.stopPropagation();
+    if (!audioSrc || !audioRef.current) return;
+
+    if (activeAudioSlide === slideIndex && isPlayingAudio) {
+      audioRef.current.pause();
+      setIsPlayingAudio(false);
+    } else {
+      if (
+        !audioRef.current.src.endsWith(audioSrc) &&
+        audioRef.current.src !== audioSrc
+      ) {
+        audioRef.current.src = audioSrc;
+      }
+      audioRef.current
+        .play()
+        .then(() => {
+          setActiveAudioSlide(slideIndex);
+          setIsPlayingAudio(true);
+        })
+        .catch((err) => {
+          console.error("Audio playback error:", err);
+          setIsPlayingAudio(false);
+        });
+    }
+  };
+
+  // Handle slide card click: if center & has url -> navigate; if side card -> center it
+  const handleCardClick = (i, isCenter, isHidden, slide) => {
+    if (isDraggingRef.current) {
+      isDraggingRef.current = false;
+      return;
+    }
+    if (!isCenter && !isHidden) {
+      go(i);
+    } else if (isCenter && (slide.url || slide.link)) {
+      const targetUrl = slide.url || slide.link;
+      if (targetUrl.startsWith("http")) {
+        window.open(targetUrl, "_blank", "noopener,noreferrer");
+      } else {
+        router.push(targetUrl);
+      }
+    }
   };
 
   const currentSlide = SLIDES_DATA[active];
@@ -192,7 +327,7 @@ export default function HeroBannerSliderCenteredV3() {
           return (
             <div
               key={s.id}
-              className="card"
+              className={`card ${isCenter && (s.url || s.link) ? "has-link" : ""}`}
               data-pos={pos}
               tabIndex={isCenter || isHidden ? -1 : 0}
               role="group"
@@ -205,9 +340,7 @@ export default function HeroBannerSliderCenteredV3() {
                 "--sx": s.sx,
                 "--sy": s.sy,
               }}
-              onClick={() => {
-                if (!isCenter && !isHidden) go(i);
-              }}
+              onClick={() => handleCardClick(i, isCenter, isHidden, s)}
               onKeyDown={(e) => {
                 if (
                   (e.key === "Enter" || e.key === " ") &&
@@ -216,6 +349,18 @@ export default function HeroBannerSliderCenteredV3() {
                 ) {
                   e.preventDefault();
                   go(i);
+                } else if (
+                  e.key === "Enter" &&
+                  isCenter &&
+                  (s.url || s.link)
+                ) {
+                  e.preventDefault();
+                  const targetUrl = s.url || s.link;
+                  if (targetUrl.startsWith("http")) {
+                    window.open(targetUrl, "_blank", "noopener,noreferrer");
+                  } else {
+                    router.push(targetUrl);
+                  }
                 }
               }}
             >
@@ -239,54 +384,53 @@ export default function HeroBannerSliderCenteredV3() {
                 dangerouslySetInnerHTML={{ __html: s.cap }}
               />
 
-              {/* Headline Copy for active center card with staggered entrance */}
+              {/* Headline Copy for active center card: title is link if url is provided */}
               <div className="copy">
-                <h2>
-                  {s.lines.map((word) => (
-                    <span key={word}>{word}</span>
-                  ))}
-                </h2>
-                <i />
+                {isCenter && (s.url || s.link) ? (
+                  <Link
+                    href={s.url || s.link}
+                    className="copy-link"
+                    target={(s.url || s.link).startsWith("http") ? "_blank" : undefined}
+                    rel={(s.url || s.link).startsWith("http") ? "noopener noreferrer" : undefined}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <h2>
+                      {s.lines.map((word) => (
+                        <span key={word}>{word}</span>
+                      ))}
+                    </h2>
+                    <i />
+                  </Link>
+                ) : (
+                  <>
+                    <h2>
+                      {s.lines.map((word) => (
+                        <span key={word}>{word}</span>
+                      ))}
+                    </h2>
+                    <i />
+                  </>
+                )}
               </div>
 
-              {/* Action Button: Link button if url/link is provided, or Video Play button if video is provided */}
-              {(s.url || s.link) ? (
-                <a
-                  href={s.url || s.link}
-                  className="play slide-link-btn"
-                  aria-label="Visit link"
-                  tabIndex={isCenter ? 0 : -1}
-                  target={(s.url || s.link).startsWith("http") ? "_blank" : undefined}
-                  rel={(s.url || s.link).startsWith("http") ? "noopener noreferrer" : undefined}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    if (!isCenter) {
-                      e.preventDefault();
-                      go(i);
-                    }
-                  }}
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                  </svg>
-                </a>
-              ) : s.video ? (
+              {/* Action Button: Video Play button if video is provided, or Audio/MP3 button if audio is provided */}
+              {getSlideVideos(s).length > 0 ? (
                 <button
                   type="button"
-                  className="play"
+                  className="play slide-media-btn slide-video-btn"
                   aria-label="Play video"
                   tabIndex={isCenter ? 0 : -1}
                   onClick={(e) => {
                     e.stopPropagation();
-                    if (isCenter) setVideoModalOpen(true);
+                    if (isCenter) {
+                      if (audioRef.current && isPlayingAudio) {
+                        audioRef.current.pause();
+                        setIsPlayingAudio(false);
+                      }
+                      setVideoModalOpen(true);
+                    } else if (!isHidden) {
+                      go(i);
+                    }
                   }}
                 >
                   <svg
@@ -298,6 +442,50 @@ export default function HeroBannerSliderCenteredV3() {
                   >
                     <path d="M4 2.5v15l13-7.5z" />
                   </svg>
+                </button>
+              ) : (s.audio || s.mp3 || s.music) ? (
+                <button
+                  type="button"
+                  className={`play slide-media-btn slide-audio-btn ${isPlayingAudio && activeAudioSlide === i ? "is-playing" : ""
+                    }`}
+                  aria-label={
+                    isPlayingAudio && activeAudioSlide === i
+                      ? "Pause music"
+                      : "Play music"
+                  }
+                  tabIndex={isCenter ? 0 : -1}
+                  onClick={(e) =>
+                    handleToggleAudio(e, s.audio || s.mp3 || s.music, i)
+                  }
+                >
+                  {isPlayingAudio && activeAudioSlide === i ? (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      width="20"
+                      height="20"
+                      aria-hidden="true"
+                    >
+                      <rect x="6" y="5" width="4" height="14" rx="1.5" />
+                      <rect x="14" y="5" width="4" height="14" rx="1.5" />
+                    </svg>
+                  ) : (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      width="22"
+                      height="22"
+                      aria-hidden="true"
+                    >
+                      <path d="M9 18V5l12-2v13" />
+                      <circle cx="6" cy="18" r="3" />
+                      <circle cx="18" cy="16" r="3" />
+                    </svg>
+                  )}
                 </button>
               ) : null}
             </div>
@@ -380,8 +568,22 @@ export default function HeroBannerSliderCenteredV3() {
       <VideoModalV3
         isOpen={videoModalOpen}
         onClose={() => setVideoModalOpen(false)}
-        videoSrc={currentSlide.video}
-        title={currentSlide.lines.join(" ")}
+        videoSrc={currentSlide?.video}
+        videos={getSlideVideos(currentSlide)}
+        title={currentSlide?.lines ? currentSlide.lines.join(" ") : ""}
+      />
+
+      {/* Hidden Audio Player for MP3 slides */}
+      <audio
+        ref={audioRef}
+        onEnded={() => {
+          setIsPlayingAudio(false);
+          setActiveAudioSlide(null);
+        }}
+        onPause={() => {
+          setIsPlayingAudio(false);
+        }}
+        preload="none"
       />
     </section>
   );

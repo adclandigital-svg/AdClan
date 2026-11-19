@@ -408,8 +408,9 @@ export default function HeroBannerSliderV3() {
       <VideoModalV3
         isOpen={videoModalOpen}
         onClose={() => setVideoModalOpen(false)}
-        videoSrc={currentSlide.video}
-        title={currentSlide.headingLines.join(" ")}
+        videoSrc={currentSlide?.video}
+        videos={currentSlide?.videos || (currentSlide?.video ? [currentSlide.video] : [])}
+        title={currentSlide?.headingLines ? currentSlide.headingLines.join(" ") : ""}
       />
     </section>
   );
