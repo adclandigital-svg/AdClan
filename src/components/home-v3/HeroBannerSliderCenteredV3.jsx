@@ -2,48 +2,149 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import AudioModalV3 from "./AudioModalV3";
 import VideoModalV3 from "./VideoModalV3";
 import "./heroBannerCentered.css";
-// 7 Portfolio Slides with High-End Photography from the Original Slider
 // - 'url' ya 'link': Pure active slide aur title pe clickable link banata hai (button ki jagah)
 // - 'video': Button place pe Video play button show karta hai
 // - 'video' ya 'videos': Single ya multiple videos (local MP4 ya YouTube link). Multiple hone par popup me slider chalega.
-// - 'audio' ya 'mp3' ya 'music': Button place pe MP3 audio play/pause button show karta hai
+// - 'audio' ya 'audios' ya 'mp3': Single ya multiple audios (MP3/MPEG). Multiple hone par popup me audio slider chalega.
 const SLIDES_DATA = [
   {
     id: 1,
-    lines: ["Right", "Gold"],
-    cap: "Right Gold",
-    image: "/home-v3/ban-1.webp",
-    a: "#f6b24a",
-    b: "#3a4252",
-    c: "#0e1117",
+    lines: ["Hilary", "Rodha"],
+    cap: "Hilary Rodha",
+    image: "/home-v3/hilary-rodha.jpg",
+    a: "#e85d9e",
+    b: "#3a2030",
+    c: "#0e0712",
     sx: "68%",
     sy: "26%",
-    url: "/projects/right-gold",
-    video: "",
+    url: "/projects",
+    videos: [
+      "https://youtube.com/shorts/NiCmOvYI2LQ?feature=share",
+      "https://youtube.com/shorts/BuRKhRih77o?feature=share",
+    ],
     audio: "",
   },
   {
     id: 2,
+    lines: ["Anytime", "Fitness"],
+    cap: "Anytime Fitness",
+    image: "/home/main_banner/placeholder.webp",
+    a: "#8b5cf6",
+    b: "#2c1c4d",
+    c: "#0b0616",
+    sx: "55%",
+    sy: "28%",
+    url: "/projects",
+    video: "",
+    videos: [""],
+    audio: "/home/main_banner/audio/anytimefitness.mp3",
+  },
+  {
+    id: 3,
+    lines: ["Hyundai"],
+    cap: "Hyundai",
+    image: "/home/main_banner/ban-5.webp",
+    a: "#00aad2",
+    b: "#0f2f45",
+    c: "#05111c",
+    sx: "40%",
+    sy: "28%",
+    url: "/projects/hyundai",
+    video: "",
+    videos: [""],
+    audios: [
+      "/home/main_banner/audio/hyundai/Hyundai_ICC_T20-spot-1.mp3",
+      "/home/main_banner/audio/hyundai/Hyundai_ICC_T20-spot-2.mp3",
+      "/home/main_banner/audio/hyundai/Hyundai_ICC_T20-spot-3.mp3",
+      "/home/main_banner/audio/hyundai/Hyundai_ICC_T20-spot-4.mp3",
+    ],
+  },
+  {
+    id: 4,
+    lines: ["Pathkind"],
+    cap: "Pathkind",
+    image: "/home/main_banner/placeholder.webp",
+    a: "#00b4d8",
+    b: "#123b4e",
+    c: "#051117",
+    sx: "65%",
+    sy: "24%",
+    url: "/projects",
+    video: "",
+    videos: [""],
+    audio: "/home/main_banner/audio/pathkind.mp3",
+  },
+  {
+    id: 5,
+    lines: ["Valvoline"],
+    cap: "Valvoline",
+    image: "/home/main_banner/placeholder.webp",
+    a: "#e63946",
+    b: "#1d3557",
+    c: "#080f1a",
+    sx: "58%",
+    sy: "25%",
+    url: "/projects",
+    video: "",
+    videos: [""],
+    audios: [
+      "/home/main_banner/audio/Valvoline_Brand_Spot.mp3",
+      "/home/main_banner/audio/Valvoline_NEW_HOURLEY_TAG.mp3",
+    ],
+  },
+  {
+    id: 6,
+    lines: ["Ashiana", "Housing"],
+    cap: "Ashiana Housing",
+    image: "/home/main_banner/ban-7.webp",
+    a: "#ffb36b",
+    b: "#33283a",
+    c: "#0b080e",
+    sx: "55%",
+    sy: "20%",
+    url: "/projects/ashiana-housing",
+    video: "",
+    videos: [""],
+    audio: "",
+  },
+  {
+    id: 7,
+    lines: ["Astrosage"],
+    cap: "Astrosage",
+    image: "/home/main_banner/ban-9.webp",
+    a: "#a855f7",
+    b: "#2e1b4d",
+    c: "#0e071a",
+    sx: "50%",
+    sy: "20%",
+    url: "/projects",
+    video: "",
+    videos: [""],
+    audio: "",
+  },
+  {
+    id: 8,
     lines: ["Vikram", "Mills"],
     cap: "Vikram Mills",
-    image: "/home-v3/ban-2.webp",
+    image: "/home/main_banner/ban-2.webp",
     a: "#ffd23f",
     b: "#4a4f5a",
     c: "#14161b",
     sx: "30%",
     sy: "22%",
     url: "/projects/vikram-mills",
-    video: "/home/22.mp4",
-    videos: ["/home/22.mp4", "https://www.youtube.com/watch?v=dQw4w9WgXcQ"],
+    video: "",
+    videos: [""],
     audio: "",
   },
   {
-    id: 3,
+    id: 9,
     lines: ["Smile", "Train", "India"],
     cap: "Smile Train India",
-    image: "/home-v3/ban-3.webp",
+    image: "/home/main_banner/ban-3.webp",
     a: "#6fb4ff",
     b: "#1d2c52",
     c: "#070b16",
@@ -51,97 +152,8 @@ const SLIDES_DATA = [
     sy: "18%",
     url: "/projects/smile-train",
     video: "",
-    audio: "/projects/smile_train/RJM-Cut-Smile-train-India.mp3",
-  },
-  {
-    id: 4,
-    lines: ["Revfin"],
-    cap: "Revfin",
-    image: "/home-v3/ban-4.webp",
-    a: "#d99a7a",
-    b: "#2b2326",
-    c: "#0a0809",
-    sx: "60%",
-    sy: "32%",
-    url: "/projects/revfin",
-    video: "/home/revfin.mp4",
-    videos: ["/home/24.mp4", "/home/25.mp4"],
     audio: "",
   },
-  {
-    id: 5,
-    lines: ["Hyundai"],
-    cap: "Hyundai",
-    image: "/home-v3/ban-5.webp",
-    a: "#e86f5c",
-    b: "#3a2230",
-    c: "#0c070c",
-    sx: "40%",
-    sy: "28%",
-    url: "/projects/hyundai",
-    video: "/home/25.mp4",
-    videos: ["/home/25.mp4", "/home/banner.mp4"],
-    audio: "",
-  },
-  {
-    id: 6,
-    lines: ["Aggarwal", "Namkeen"],
-    cap: "Aggarwal Namkeen",
-    image: "/home-v3/ban-6.webp",
-    a: "#8fd9b6",
-    b: "#1f3a3a",
-    c: "#07100f",
-    sx: "72%",
-    sy: "24%",
-    url: "/projects/aggarwal-namkeen",
-    video: "",
-    audio: "/projects/clear_dekho/Cleardekho-New-retail.mp3",
-  },
-  {
-    id: 7,
-    lines: ["Ashiana", "Housing"],
-    cap: "Ashiana Housing",
-    image: "/home-v3/ban-7.webp",
-    a: "#ffb36b",
-    b: "#33283a",
-    c: "#0b080e",
-    sx: "55%",
-    sy: "20%",
-    url: "/projects/ashiana-housing",
-    video: "/home/banner.mp4",
-    videos: ["/home/banner.mp4", "/home/26.mp4"],
-    audio: "",
-  },
-  {
-    id: 8,
-    lines: ["Dayal", "Opticals"],
-    cap: "Dayal Opticals",
-    image: "/home-v3/ban-8.webp",
-    a: "#4da8ff",
-    b: "#1a2c42",
-    c: "#08101a",
-    sx: "62%",
-    sy: "24%",
-    url: "/projects",
-    video: "/home/26.mp4",
-    videos: ["/home/26.mp4", "/home/22.mp4"],
-    audio: "",
-  },
-  {
-    id: 9,
-    lines: ["Astrosage"],
-    cap: "Astrosage",
-    image: "/home-v3/ban-9.webp",
-    a: "#a855f7",
-    b: "#2e1b4d",
-    c: "#0e071a",
-    sx: "50%",
-    sy: "20%",
-    url: "/projects",
-    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    videos: ["https://www.youtube.com/watch?v=dQw4w9WgXcQ", "/home/banner.mp4"],
-    audio: "",
-  }
 ];
 
 // Helper to extract videos array from a slide (handles single string or array, mp4 or YouTube)
@@ -161,10 +173,48 @@ const getSlideVideos = (slide) => {
   return Array.from(new Set(list.filter(Boolean)));
 };
 
+// Helper to extract audios array from a slide (handles single string or array, mp3, mpeg, etc.)
+const getSlideAudios = (slide) => {
+  if (!slide) return [];
+  const list = [];
+  if (Array.isArray(slide.audios)) {
+    list.push(...slide.audios);
+  } else if (typeof slide.audios === "string" && slide.audios.trim()) {
+    list.push(slide.audios.trim());
+  }
+  if (Array.isArray(slide.audio)) {
+    list.push(...slide.audio);
+  } else if (typeof slide.audio === "string" && slide.audio.trim()) {
+    list.push(slide.audio.trim());
+  }
+  if (Array.isArray(slide.mp3)) {
+    list.push(...slide.mp3);
+  } else if (typeof slide.mp3 === "string" && slide.mp3.trim()) {
+    list.push(slide.mp3.trim());
+  }
+  if (Array.isArray(slide.mp3s)) {
+    list.push(...slide.mp3s);
+  } else if (typeof slide.mp3s === "string" && slide.mp3s.trim()) {
+    list.push(slide.mp3s.trim());
+  }
+  if (Array.isArray(slide.music)) {
+    list.push(...slide.music);
+  } else if (typeof slide.music === "string" && slide.music.trim()) {
+    list.push(slide.music.trim());
+  }
+  if (Array.isArray(slide.musics)) {
+    list.push(...slide.musics);
+  } else if (typeof slide.musics === "string" && slide.musics.trim()) {
+    list.push(slide.musics.trim());
+  }
+  return Array.from(new Set(list.filter(Boolean)));
+};
+
 export default function HeroBannerSliderCenteredV3() {
   const router = useRouter();
   const [active, setActive] = useState(0);
   const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const [audioModalOpen, setAudioModalOpen] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
   // Audio playback state
@@ -204,14 +254,14 @@ export default function HeroBannerSliderCenteredV3() {
     }
   }, [active]);
 
-  // Stop audio playback when video modal opens
+  // Stop audio playback when video or audio modal opens
   useEffect(() => {
-    if (videoModalOpen && audioRef.current && isPlayingAudio) {
+    if ((videoModalOpen || audioModalOpen) && audioRef.current && isPlayingAudio) {
       audioRef.current.pause();
       setIsPlayingAudio(false);
       setActiveAudioSlide(null);
     }
-  }, [videoModalOpen]);
+  }, [videoModalOpen, audioModalOpen]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -223,14 +273,14 @@ export default function HeroBannerSliderCenteredV3() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [active, go]);
 
-  // Autoplay functionality with pause on hover, video open, or audio playing
+  // Autoplay functionality with pause on hover, video open, audio open, or audio playing
   useEffect(() => {
-    if (isPaused || videoModalOpen || isPlayingAudio) return;
+    if (isPaused || videoModalOpen || audioModalOpen || isPlayingAudio) return;
     const interval = setInterval(() => {
       go(active + 1);
     }, 6000);
     return () => clearInterval(interval);
-  }, [isPaused, videoModalOpen, isPlayingAudio, active, go]);
+  }, [isPaused, videoModalOpen, audioModalOpen, isPlayingAudio, active, go]);
 
   // Pointer swipe gestures
   const handlePointerDown = (e) => {
@@ -443,51 +493,81 @@ export default function HeroBannerSliderCenteredV3() {
                     <path d="M4 2.5v15l13-7.5z" />
                   </svg>
                 </button>
-              ) : (s.audio || s.mp3 || s.music) ? (
+              ) : getSlideAudios(s).length > 0 ? (
                 <button
                   type="button"
-                  className={`play slide-media-btn slide-audio-btn ${isPlayingAudio && activeAudioSlide === i ? "is-playing" : ""
+                  className={`play slide-media-btn slide-audio-btn ${(isPlayingAudio && activeAudioSlide === i) ||
+                    (audioModalOpen && active === i)
+                    ? "is-playing"
+                    : ""
                     }`}
-                  aria-label={
-                    isPlayingAudio && activeAudioSlide === i
-                      ? "Pause music"
-                      : "Play music"
-                  }
+                  aria-label="Play audio showcase"
                   tabIndex={isCenter ? 0 : -1}
-                  onClick={(e) =>
-                    handleToggleAudio(e, s.audio || s.mp3 || s.music, i)
-                  }
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (isCenter) {
+                      if (audioRef.current && isPlayingAudio) {
+                        audioRef.current.pause();
+                        setIsPlayingAudio(false);
+                      }
+                      setAudioModalOpen(true);
+                    } else if (!isHidden) {
+                      go(i);
+                    }
+                  }}
                 >
-                  {isPlayingAudio && activeAudioSlide === i ? (
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      width="20"
-                      height="20"
-                      aria-hidden="true"
-                    >
-                      <rect x="6" y="5" width="4" height="14" rx="1.5" />
-                      <rect x="14" y="5" width="4" height="14" rx="1.5" />
-                    </svg>
-                  ) : (
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      width="22"
-                      height="22"
-                      aria-hidden="true"
-                    >
-                      <path d="M9 18V5l12-2v13" />
-                      <circle cx="6" cy="18" r="3" />
-                      <circle cx="18" cy="16" r="3" />
-                    </svg>
-                  )}
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    width="22"
+                    height="22"
+                    aria-hidden="true"
+                  >
+                    <path d="M9 18V5l12-2v13" />
+                    <circle cx="6" cy="18" r="3" />
+                    <circle cx="18" cy="16" r="3" />
+                  </svg>
                 </button>
-              ) : null}
+              ) : (
+                <button
+                  type="button"
+                  className="play slide-media-btn slide-link-btn"
+                  aria-label={`View ${s.lines.join(" ")} project`}
+                  tabIndex={isCenter ? 0 : -1}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (isCenter) {
+                      const dest = s.url || s.link || "/projects";
+                      if (dest.startsWith("http")) {
+                        window.open(dest, "_blank", "noopener,noreferrer");
+                      } else {
+                        router.push(dest);
+                      }
+                    } else if (!isHidden) {
+                      go(i);
+                    }
+                  }}
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    width="20"
+                    height="20"
+                    aria-hidden="true"
+                  >
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </button>
+              )}
             </div>
           );
         })}
@@ -571,6 +651,17 @@ export default function HeroBannerSliderCenteredV3() {
         videoSrc={currentSlide?.video}
         videos={getSlideVideos(currentSlide)}
         title={currentSlide?.lines ? currentSlide.lines.join(" ") : ""}
+      />
+
+      {/* Audio Modal for Single & Multiple Audio Tracks */}
+      <AudioModalV3
+        isOpen={audioModalOpen}
+        onClose={() => setAudioModalOpen(false)}
+        audioSrc={currentSlide?.audio}
+        audios={getSlideAudios(currentSlide)}
+        title={currentSlide?.lines ? currentSlide.lines.join(" ") : ""}
+        image={currentSlide?.image}
+        accentColor={currentSlide?.a}
       />
 
       {/* Hidden Audio Player for MP3 slides */}

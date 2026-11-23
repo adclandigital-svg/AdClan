@@ -214,13 +214,13 @@
 
 /* Background Scene: Radial Flare + Linear Gradient + Skyline Silhouette */
 .v3-centered-hero-section .bg {
-  position: absolute;
+  /* position: absolute;
   inset: 0;
   background:
     radial-gradient(circle at var(--sx, 70%) var(--sy, 30%), var(--a), transparent 46%),
     linear-gradient(165deg, var(--b), var(--c));
   mix-blend-mode: hard-light;
-  opacity: 0.75;
+  opacity: 0.75; */
   z-index: 2;
 }
 
@@ -255,14 +255,6 @@
 }
 
 /* Vignette Shades */
-.v3-centered-hero-section .shade {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, .62), rgba(0, 0, 0, .08) 60%),
-    linear-gradient(0deg, rgba(0, 0, 0, .45), transparent 40%);
-  z-index: 3;
-}
 
 /* Small Caption for Background Cards */
 .v3-centered-hero-section .cap {
@@ -436,6 +428,11 @@
 .v3-centered-hero-section .play.slide-audio-btn svg,
 .v3-centered-hero-section .play.slide-link-btn svg {
   margin-left: 0;
+  transition: transform 0.25s ease;
+}
+
+.v3-centered-hero-section .play.slide-link-btn:hover svg {
+  transform: translate(2px, -2px);
 }
 
 /* Audio Button Playing State */

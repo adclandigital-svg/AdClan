@@ -550,13 +550,9 @@ body.home-v3-active::before {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(
-      circle at var(--sx, 70%) var(--sy, 30%),
-      var(--a),
-      transparent 46%
-    ), linear-gradient(165deg, var(--b), var(--c));
+    #000000;
   mix-blend-mode: hard-light;
-  opacity: 0.82;
+  opacity: 0.25;
 }
 
 /* .bg::after {
@@ -1223,4 +1219,383 @@ body.home-v3-active::before {
 
 .v3-work-portfolio-page{
   padding-top: 100px !important;
+}
+
+/* =========================================================================
+   AUDIO MODAL V3 (Single & Multiple Track Showcase)
+   ========================================================================= */
+.v3-audio-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  animation: v3FadeIn 0.3s ease forwards;
+}
+
+.v3-audio-modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  background: linear-gradient(145deg, #161822 0%, #0d0e15 100%);
+  padding: 40px 32px 32px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.v3-audio-modal-glow {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 220px;
+  background: radial-gradient(circle, var(--modal-accent, #ffd23f) 0%, transparent 70%);
+  opacity: 0.18;
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.v3-audio-modal-header {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.v3-audio-modal-title {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.v3-audio-modal-counter {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--modal-accent, #ffd23f);
+  letter-spacing: 0.04em;
+}
+
+.v3-audio-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 12;
+  transition: all 0.25s ease;
+}
+
+.v3-audio-close-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: scale(1.08);
+}
+
+.v3-audio-player-body {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* Vinyl Disc & Artwork */
+.v3-audio-artwork-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.v3-audio-disc {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 0 6px rgba(255, 255, 255, 0.08), 0 0 25px var(--modal-accent, #ffd23f);
+  background: #111;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  place-items: center;
+}
+
+.v3-audio-disc.is-spinning {
+  animation: v3DiscSpin 18s linear infinite;
+}
+
+@keyframes v3DiscSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.v3-audio-disc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.v3-audio-disc-fallback {
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v3-audio-disc-center {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #0d0e15;
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Equalizer Bars */
+.v3-audio-equalizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  height: 42px;
+  margin-top: 18px;
+}
+
+.v3-eq-bar {
+  width: 3px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--modal-accent, #ffd23f);
+  opacity: 0.5;
+  transition: height 0.2s ease, opacity 0.2s ease;
+}
+
+.v3-audio-equalizer.is-playing .v3-eq-bar {
+  opacity: 0.95;
+  animation: v3EqBounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes v3EqBounce {
+  0% {
+    height: 4px;
+  }
+  50% {
+    height: var(--bar-height, 22px);
+  }
+  100% {
+    height: 8px;
+  }
+}
+
+/* Track Meta */
+.v3-audio-meta {
+  text-align: center;
+  margin-bottom: 22px;
+  max-width: 90%;
+}
+
+.v3-audio-track-name {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  text-transform: capitalize;
+}
+
+.v3-audio-brand-subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* Progress Bar */
+.v3-audio-progress-section {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.v3-audio-progress-track {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  transition: height 0.15s ease;
+}
+
+.v3-audio-progress-track:hover {
+  height: 8px;
+}
+
+.v3-audio-progress-fill {
+  position: relative;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), var(--modal-accent, #ffd23f));
+  transition: width 0.08s linear;
+}
+
+.v3-audio-progress-handle {
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.v3-audio-progress-track:hover .v3-audio-progress-handle {
+  opacity: 1;
+}
+
+.v3-audio-time-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+/* Controls Toolbar */
+.v3-audio-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.v3-audio-play-master {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--modal-accent, #ffd23f);
+  color: #0b0c10;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 20px var(--modal-accent, #ffd23f);
+  transition: all 0.25s ease;
+}
+
+.v3-audio-play-master:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 28px var(--modal-accent, #ffd23f);
+}
+
+.v3-audio-sec-btn,
+.v3-audio-step-btn,
+.v3-audio-mute-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.v3-audio-sec-btn:hover,
+.v3-audio-step-btn:hover,
+.v3-audio-mute-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.v3-audio-btn-label {
+  font-size: 8px;
+  line-height: 1;
+  font-weight: 700;
+  margin-top: -2px;
+}
+
+.v3-audio-mute-btn.is-muted {
+  color: #ff6b6b;
+  border-color: rgba(255, 107, 107, 0.4);
+}
+
+@media (max-width: 640px) {
+  .v3-audio-modal-container {
+    padding: 32px 20px 24px;
+    border-radius: 20px;
+  }
+  .v3-audio-disc {
+    width: 130px;
+    height: 130px;
+  }
+  .v3-audio-controls-row {
+    gap: 10px;
+  }
+  .v3-audio-play-master {
+    width: 54px;
+    height: 54px;
+  }
+  .v3-audio-sec-btn,
+  .v3-audio-step-btn,
+  .v3-audio-mute-btn {
+    width: 36px;
+    height: 36px;
+  }
 }
