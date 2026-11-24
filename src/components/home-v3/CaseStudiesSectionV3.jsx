@@ -90,6 +90,34 @@ const CASE_STUDIES = [
     excerpt:
       "Engineered high-recall signature radio jingles, prime-drive time sponsorships, and multi-station frequency planning driving instant inquiries.",
   },
+  {
+    id: "cs-digital-growth",
+    title:
+      "Digital Marketing Agency in Delhi NCR — Hyperlocal Omnichannel Scale",
+    client: "AdClan Digital Desk",
+    category: "DIGITAL MARKETING",
+    filterCat: "DIGITAL MARKETING",
+    metric: "5X Conversions",
+    tag: "Hyperlocal Strategy",
+    image: "/case-studies/artboard-1.webp",
+    link: "/case-studies/Digital-Marketing-Agencyin-Delhi-NCR",
+    excerpt:
+      "Engineered full-funnel digital strategy, intent mapping, and multi-channel performance marketing to scale conversions and online dominance.",
+  },
+  {
+    id: "cs-360-branding",
+    title:
+      "AdClan Media — Full-Funnel Growth & 360° Marketing Engine for Brands",
+    client: "AdClan Growth Lab",
+    category: "DIGITAL MARKETING",
+    filterCat: "DIGITAL MARKETING",
+    metric: "10X Reach",
+    tag: "360° Brand Strategy",
+    image: "/case-studies/artboard-3.webp",
+    link: "/case-studies/adclan-media-marketing-agency-delhi",
+    excerpt:
+      "Delivered end-to-end multi-channel branding, high-visibility digital campaigns, and targeted media positioning across major NCR hubs.",
+  },
 ];
 
 // Helper to ensure strictly 15 words description
@@ -105,6 +133,8 @@ const FILTER_TABS = [
   { id: "REAL ESTATE", label: "Real Estate" },
   { id: "FMCG PACKAGING", label: "FMCG Packaging" },
   { id: "CELEBRITY PR", label: "Celebrity PR" },
+  { id: "MEDIA BUYING", label: "Media Buying" },
+  { id: "DIGITAL MARKETING", label: "Digital Marketing" },
 ];
 
 export default function CaseStudiesSectionV3() {
@@ -165,7 +195,7 @@ export default function CaseStudiesSectionV3() {
             ===================================================================== */}
         <div className="row g-4 v3-cs-grid">
           {filteredStudies.map((study) => (
-            <div key={study.id} className="col-12 col-md-6 col-lg-4 d-flex">
+            <div key={study.id} className="col-12 col-md-6 col-lg-3 d-flex">
               <Link href={study.link} className="v3-cs-card w-100">
                 {/* Media Image Frame */}
                 <div className="v3-cs-media">
