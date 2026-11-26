@@ -180,12 +180,12 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 750;
   letter-spacing: 0.14em;
   color: #90caf9; /* Crisp sky blue on dark glass overlay */
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
 }
 
 .v3-craft-card-title {
@@ -199,6 +199,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: none;
 }
 
 .v3-craft-card-footer {
@@ -210,7 +211,7 @@
 }
 
 .v3-craft-card-category {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.76);
   white-space: nowrap;
